@@ -112,11 +112,11 @@
         <sidebyside width="45%">
             <figure xml:id="Fig-Linear_approximation_of_exponential">
                 <caption></caption>
-                <image source="Linear_approximation_of_exponential.png"/>
+                <image source="Calculus/Images/1/Linear_approximation_of_exponential.png"/>
             </figure>
             <figure xml:id="Fig-Quadratic_approximation_of_exponential">
                 <caption></caption>
-                <image source="Images/1/Quadratic_approximation_of_exponential.png"/>
+                <image source="Calculus/Images/1/Quadratic_approximation_of_exponential.png"/>
             </figure>
         </sidebyside>
 
