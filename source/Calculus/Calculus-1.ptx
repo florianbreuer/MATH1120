@@ -30,7 +30,7 @@
 <!-- =================================================================================================== -->
 <!-- Title and Other Preliminaries -->
 <!-- =================================================================================================== -->
-        <title>CA1: Maclaurin Series</title>
+        <title>CA1: Taylor Series</title>
 
         <!-- <frontmatter> -->
 
@@ -60,6 +60,41 @@
 <!-- =================================================================================================== -->
     <section xml:id="Sec-Introduction">
         <title>Introduction</title>
+
+        <p>
+            Have you ever wondered how computers actually calculate things? 
+            Computers can only ever do finitely many steps with finitely many bits of information.
+            The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example <m>x=0.3</m> and <m>y=1.744</m>. 
+            You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute <m>x+y = 2.044</m> in a finite number of steps.
+            (actually, there are more sophisticated multiplication algorithms! See...)
+            But then how does it calculate <m>e^x</m> or <m>\sin(x)</m>, or other non-polynomial functions?
+        </p>
+
+        <p>
+            The solution is to <em>approximate</em> the function using a <em>power series</em>. For example, the computer approximates <m>e^{0.3313}</m> by adding finitely many terms of 
+            <me>
+                e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots 
+            </me>
+            in other words, it approximates the <em>function</em> <m>e^x</m> via the <em>power series</em> 
+            <md>
+                <mrow> e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  </mrow>
+                <mrow>     \amp = \sum_{n=0}^{\infty} \frac{1}{n!}x^n.</mrow>
+            </md>
+        </p>
+
+        <p>
+            How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. 
+            The long answer is much more complicated, and is the subject of a whole other area of Mathematics called <em>Numerical Analysis</em>.  
+        </p>
+
+        <p>
+            How does the computer know to use this particular series? And what even <em>is</em> a series? That's what we'll learn in this chapter!
+        </p>
+
+    </section>
+
+    <section xml:id="Sec-intor-old">
+        <title>Older stuff - Ignore</title>
 
         <p>Have you ever wondered how your calculator actually calculates <m>e^x</m> or <m>\sin(x)</m> (or other non-polynomial functions) for particular values of <m>x</m>? Essentially, the way it is done is to write the function as an infinite series and then use as many terms of this series as necessary to obtain a value accurate to the number of digits in the calculator's display. For example, (as we will learn later on) the function <m>e^x</m> can be represented by the infinite series <me>1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots</me>.</p>
 
