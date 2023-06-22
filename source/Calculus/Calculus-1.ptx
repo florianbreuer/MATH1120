@@ -61,26 +61,67 @@
     <section xml:id="Sec-Introduction">
         <title>Introduction</title>
 
+        <aside>
+                <title>Faster multiplication</title>
+                <p>
+                    There are actually multiplication algorithms which are significantly faster than long multiplication.
+                    Long multiplication of of two <m>n</m>-digit numbers will typically take <m>n^2</m> single-digit multiplications 
+                    (and another <m>n</m> <m>n</m>-digit additions). 
+
+                    The  
+                    <url href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/"> fastest known algorithm </url>
+                    is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <m>n\ln(n)</m>, which for large value of <m>n</m>
+                    is a significant improvement.
+                </p>
+                
+            </aside>
+
         <p>
             Have you ever wondered how computers actually calculate things? 
             Computers can only ever do finitely many steps with finitely many bits of information.
             The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example <m>x=0.3</m> and <m>y=1.744</m>. 
             You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute <m>x+y = 2.044</m> in a finite number of steps.
-            (actually, there are more sophisticated multiplication algorithms! See...)
+            
             But then how does it calculate <m>e^x</m> or <m>\sin(x)</m>, or other non-polynomial functions?
         </p>
 
         <p>
             The solution is to <em>approximate</em> the function using a <em>power series</em>. For example, the computer approximates <m>e^{0.3313}</m> by adding finitely many terms of 
-            <me>
+            <men xml:id="eq-e0.3">
                 e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots 
-            </me>
+            </men>
             in other words, it approximates the <em>function</em> <m>e^x</m> via the <em>power series</em> 
             <md>
                 <mrow> e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  </mrow>
                 <mrow>     \amp = \sum_{n=0}^{\infty} \frac{1}{n!}x^n.</mrow>
             </md>
         </p>
+
+        <aside>
+            <title>Factorials</title>
+            <p>
+                Here <m>n! = 1\cdot 2 \cdot 3 \cdots n</m> is <m>n</m> <term>factorial</term>. 
+                It grows really fast:
+                <md>
+                <mrow> 0! \amp = 1</mrow>
+                <mrow> 1! \amp = 1</mrow>
+                <mrow> 2! \amp = 2</mrow>
+                <mrow> 3! \amp = 6</mrow>
+                <mrow> 4! \amp = 24</mrow>
+                <mrow> 5! \amp = 120</mrow>
+                <mrow> 6! \amp = 720</mrow>
+                <mrow> \amp \ldots </mrow>
+                <mrow> 20! \amp = 2432902008176640000 </mrow>
+                </md>
+                The factorial satifies the useful property that <m>(n+1)! = (n+1)n!</m>, meaning that fractions with factorials in the numerator and denominator will often allow lots of cancellation.
+            </p>
+
+            <p>
+                <term>Challenge:</term> How many zeroes are at the end of <m>100!</m> ?
+            </p>
+        </aside>
+            
+    
 
         <p>
             How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. 
@@ -92,6 +133,153 @@
         </p>
 
     </section>
+
+<!-- =================================================================================================== -->
+<!-- Section 2: Infinite Series-->
+<!-- =================================================================================================== -->
+
+    <section xml:id="Sec-Infinite_Series">
+        <title>Infinite Series</title>
+
+        <p>
+            Let's look carefully at the calculation <xref ref="eq-e0.3"/>. We will add the terms one by one and keep an eye on the cumulative total, more formally known as the <term>partial sums</term>:
+        </p>
+
+        <tabular top="minor">
+            <row header="yes" bottom="minor" left="minor">
+                <cell halign="center" right="minor">Number of Terms</cell>
+                <cell halign="center" right="minor">Partial Sum</cell>
+                <cell halign="center" right="minor">Value</cell>
+            </row>
+            <row bottom="minor" left="minor">
+                <cell halign="center" right="minor"><m>1</m></cell>
+                <cell right="minor"><m>1</m></cell>
+                <cell right="minor"><m>1</m></cell>
+            </row>
+            <row bottom="minor" left="minor">
+                <cell halign="center" right="minor"><m>2</m></cell>
+                <cell right="minor"><m>1+0.3</m></cell>
+                <cell right="minor"><m>1.3</m></cell>
+            </row>
+            <row bottom="minor" left="minor">
+                <cell halign="center" right="minor"><m>3</m></cell>
+                <cell right="minor"><m>1+0.3+\dfrac{0.3^2}{2!}</m></cell>
+                <cell right="minor"><m>1.345</m></cell>
+            </row>
+            <row bottom="minor" left="minor">
+                <cell halign="center" right="minor"><m>4</m></cell>
+                <cell right="minor"><m>1+0.3+\dfrac{0.3^2}{2!}+\dfrac{0.3^3}{3!}</m></cell>
+                <cell right="minor"><m>1.3495</m></cell>
+            </row>
+            <row bottom="minor" left="minor">
+                <cell halign="center" right="minor"><m>5</m></cell>
+                <cell right="minor"><m>1+0.3+\dfrac{0.3^2}{2!}+\dfrac{0.3^3}{3!}+\dfrac{0.3^4}{4!}</m></cell>
+                <cell right="minor"><m>1.3498375</m></cell>
+            </row>
+            <row bottom="minor" left="minor">
+                <cell halign="center" right="minor"><m>6</m></cell>
+                <cell right="minor"><m>1+0.3+\dfrac{0.3^2}{2!}+\dfrac{0.3^3}{3!}+\dfrac{0.3^4}{4!}+\dfrac{0.3^5}{5!}</m></cell>
+                <cell right="minor"><m>1.3498775</m></cell>
+            </row>
+        </tabular>
+
+        <p>
+            If you're viewing this online, you can compute this yourself by running the following Sage cell:
+        </p>
+
+        <sage>
+            <input>
+                x = 0.3
+                answer = 0
+                for k in range(10):
+                    answer = answer + x^k/factorial(k)
+                    print(n(answer))
+            </input>
+            <output>
+            </output>
+        </sage>
+
+        <p> 
+            This computation is actually quite inefficient, since we're calculating each term from scratch. 
+            Notice that the <m>k^{\mathrm{th}}</m> term is obtained by multiplying the previous term by <m>\frac{x}{k}</m>:
+            <me>
+                \frac{x^k}{k!} = \left(\frac{x^{k-1}}{(k-1)!}  \right) \cdot \frac{x}{k}.
+            </me>
+            
+            Firstly, this allows us to calculate the sum more efficiently:
+            <aside>
+                <title>Efficiency</title>
+                <p>
+                    We do we care about efficiency? Aren't modern computers plenty fast enough? For this example, yes. 
+                    But there are often cases where we need to compute efficiently, for example in mobile devices with limited power,
+                    or calculations that need to be repeated millions of times per second, for example in computer graphics.
+                </p>
+            </aside>
+
+            <sage>
+                <input>
+                    N = 10        # the highest power of x we will include in our sum
+                    x = 0.3
+                    t = 1         # the zeroth term
+                    answer = 1    # we start with the first term, then compute additional terms:
+                    for k in range(1, N+1):
+                        t = t * x / k    # calculate the kth term
+                        answer = answer +  t
+                        print('k = ', k, '; partial sum = ', n(answer))
+                </input>
+                <output>
+                </output>
+            </sage>
+
+            Secondly, as we add more terms, <m>k</m> gets ever bigger while <m>x</m> stays the same, so the multiplier <m>\frac{x}{k}</m> we use to get from one term to the next gets ever smaller. 
+            This means that the terms shrink to zero exponentially and we will see in the next chapter <term>LINK!</term> that the sum <em>converges</em> for every value of <m>x</m>.
+            
+        </p>    
+
+        <p>
+            In the above calculation, we have only computed finitely many terms, which is all one ever needs for applications. 
+            Mathematically, however, <xref ref="eq-e0.3"/> is an <em>infinite</em> series, and its value represents the sum of all infinitely many terms. 
+            What can this mean? 
+        </p>
+        <p>
+            We have seen that the partial sums tend to <m>1.34985880757600\ldots</m>, and this limit is defined to the be sum of the infinite series:
+            <me>
+                e^{0.3} = \sum_{k=0}^{\infty} \frac{(0.3)^k}{k!} := \lim_{N\rightarrow\infty} \sum_{k=0}^{N} \frac{(0.3)^k}{k!}
+            </me>
+        </p>
+
+        <definition xml:id="def-series">
+            <statement>
+                <p>
+                    Given a <term>sequence</term> <m>a_0, a_1, a_2, \ldots</m> of real numbers (the terms), we define the <term>series</term>
+                    <men xml:id="eq-series">
+                        \sum_{k=0}^{\infty} a_k := \lim_{N\rightarrow\infty} \sum_{k=0}^N a_k
+                    </men>
+                    to be the limit of the partial sums (running totals) of the terms, provided that this limit exists.
+                </p>
+                <p>
+                    If the limit <xref ref="eq-series"/> exists, we say that the series <term>converges</term>, otherwise it <term>diverges.</term>                    
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            We will learn more about convergence and divergence in the next chapter. For now, we're interested in using infinite series to represent useful functions, like <m>e^x</m>, <m>\sin(x)</m> or <m>\cos(x)</m>.
+        </p>
+        
+
+    </section>
+
+<!-- =================================================================================================== -->
+<!-- Section 3: Power Series-->
+<!-- =================================================================================================== -->
+
+
+    <section xml:id="sec-Power-Series">
+        <title>Power Series</title>
+        
+    </section>
+
 
     <section xml:id="Sec-intor-old">
         <title>Older stuff - Ignore</title>
@@ -171,7 +359,7 @@
 <!-- =================================================================================================== -->
 <!-- Section 2: Infinite Series-->
 <!-- =================================================================================================== -->
-    <section xml:id="Sec-Infinite_Series">
+    <section xml:id="Sec-Infinite_Series_old">
         <title>Infinite Series</title>
 
         <p>In this section we will discuss the concepts and terminology associated with infinite series that we will need in order to discuss representing functions by infinite series. </p>
