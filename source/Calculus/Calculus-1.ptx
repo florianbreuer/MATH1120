@@ -285,14 +285,12 @@
             </men>
             Note that each term consists of a <em>coefficient</em> multiplied by some power of the variable, so this is an example of what we call a <term>power series</term>.
             Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We're very comfortable with polynomials.
+            Figure <xref ref="fig-exp-plot"/> shows how the first few partial sums of the series <xref ref="eq-exp-series"/> approximate the function <m>e^x</m>.
 
             <figure width="50%" xml:id="fig-exp-plot">
                 <caption>Approximation to <m>e^x</m> by various partial sums of its power series</caption>
-                <image xml:id="sage-exp-plot" source="Calculus/Images/1/">
+                <image xml:id="sage-exp-plot" source="Calculus/Images/1/exp-power-series-plot" width="50%">
                     <description>A plot of <m>y=e^x</m> together with plots of the partial sums of its power series of degrees <m>0, 1, 2</m> and <m>3</m>.</description>
-                    
-                    
-                
                 </image>
             </figure>
             
@@ -306,6 +304,17 @@
         <p>
             Assuming for now that the series <xref ref="eq-exp-series" /> converges, how do we know this is even true? How does one find such a series?
         </p>
+
+    </section>
+
+<!-- =================================================================================================== -->
+<!-- Section 4: Maclaurin Series-->
+<!-- =================================================================================================== -->
+
+    <section xml:id="sec-Maclaurin-Series">
+        <title>Maclaurin Series</title>
+        
+    
         <p>
         
             Let's suppose for the moment that a power series representation for a function <m>f(x)</m> <em>exists</em>, but we don't know what the coefficients should be:
@@ -335,15 +344,277 @@
             <statement>
                 <p>
                     Let <m>I</m> be an open interval, and suppose that the power series <xref ref="eq-fx-power-series"/> converges to <m>f(x)</m> for <m>x\in I</m>. 
-                    Then 
-                    <me>
+                    Then, for <m>x\in I</m>, 
+                    <men xml:id="eq-Maclaurin">
                         f(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(0)}{k!}x^k
+                    </men>
+                    
+                </p>
+            </statement>
+        </theorem>
+
+        <exercise>
+            <statement>
+                <p>
+                    Use induction on <m>k</m> to prove that the expression in <xref ref="thm-Maclaurin"/> is correct.
+                </p>
+            </statement>
+            
+        </exercise>
+
+        <p>
+            The series expansion <xref ref="eq-Maclaurin"/> is called the <term>Maclaurin series</term> for the function <m>f(x)</m>.
+        </p>
+
+        <p>
+            So now that we know how to create power series for functions using their derivatives, let's do the same for two more important functions:
+        </p>
+        
+        <example>
+            <statement>
+                <p>
+                    Compute the Maclaurin series for <m>\sin(x)</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <me>
+                        \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots 
+                        = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{(2k+1)!}
+                    </me>
+                    
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    We compute the derivatives of <m>f(x)=\sin(x)</m>:                    
+                    <md>
+                        <mrow>f(x) \amp = \sin(x) \amp  f'(x) \amp = \cos(x) </mrow>
+                        <mrow>f''(x) \amp = -\sin(x) \amp  f'''(x) \amp = -\cos(x) </mrow>
+                    </md>
+                    thereafter, the pattern repeats, so <m>f^{(4)}(x) = \sin(x)</m> again, etc. 
+                </p>
+                <p>
+                    Plugging in <m>x=0</m>, we get
+                    <md>
+                        <mrow>f(0) \amp = 0 \amp  f'(0) \amp = 1 </mrow>
+                        <mrow>f''(0) \amp = 0 \amp  f'''(0) \amp = -1, \quad\text{etc.}</mrow>
+                    </md>
+                </p>
+                <p>
+                    Now we put it all together:
+                    <md>
+                        <mrow>f(x) \amp = f(0) + f'(0)x + \frac{f''(0)'x^2}{2!} + \cdots </mrow>
+                        <mrow> \amp = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots </mrow>
+                        <mrow> \amp = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{(2k+1)!}. </mrow>
+                    </md> 
+                    To get the last expression, note that the non-zero terms correspond to odd powers of <m>x</m>, and odd numbers are of the form <m>2k+1</m>. 
+                    The <m>(-1)^k</m> then ensures the alternating signs.
+                </p>
+            </solution>
+        </example>
+
+        <example>
+            <statement>
+                <p>
+                    Compute the Maclaurin series for <m>\cos(x)</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <me>
+                        \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots 
+                        = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k}}{(2k)!}
+                    </me>
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    We compute the derivatives of <m>f(x)=\cos(x)</m>:                    
+                    <md>
+                        <mrow>f(x) \amp = \cos(x) \amp  f'(x) \amp = -\sin(x) </mrow>
+                        <mrow>f''(x) \amp = -\cos(x) \amp  f'''(x) \amp = \sin(x) </mrow>
+                    </md>
+                    thereafter, the pattern repeats, so <m>f^{(4)}(x) = \cos(x)</m> again, etc. 
+                </p>
+                <p>
+                    Plugging in <m>x=0</m>, we get
+                    <md>
+                        <mrow>f(0) \amp = 1 \amp  f'(0) \amp = 0 </mrow>
+                        <mrow>f''(0) \amp = -1 \amp  f'''(0) \amp = 0, \quad\text{etc.}</mrow>
+                    </md>
+                </p>
+                <p>
+                    Now we put it all together:
+                    <md>
+                        <mrow>f(x) \amp = f(0) + f'(0)x + \frac{f''(0)'x^2}{2!} + \cdots </mrow>
+                        <mrow> \amp = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots </mrow>
+                        <mrow> \amp = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k}}{(2k)!}. </mrow>
+                    </md> 
+                    To get the last expression, note that the non-zero terms correspond to even powers of <m>x</m>, and even numbers are of the form <m>2k</m>. 
+                    The <m>(-1)^k</m> then ensures the alternating signs.
+                </p>
+            </solution>
+        </example>
+
+        <p>
+            We record the Maclaurin series we have found thus far:
+            <md>
+                <mrow>e^x \amp = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{k=0}^{\infty} \frac{x^k}{k!}</mrow>
+                <mrow>\sin(x) \amp =  x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots 
+                        = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{(2k+1)!} </mrow>
+                <mrow> \cos(x) \amp =  1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots 
+                        = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k}}{(2k)!}. </mrow>
+            </md>
+        </p>
+        
+    </section>
+
+<!-- =================================================================================================== -->
+<!-- Section 5: Euler's Formula -->
+<!-- =================================================================================================== -->
+
+    <section xml:id="sec-Eulers-Formula">
+        <title>Eulers Formula</title>
+        
+    
+
+    <p>
+        You may have noticed that the Maclaurin series for <m>e^x, \sin(x)</m> and <m>\cos(x)</m> all look very similar - 
+        the series for <m>\sin(x) + \cos(x)</m> has exactly the same terms as the series for <m>e^x</m>, except for the differences in signs.
+    </p>
+    <p>
+        It turns out we can fix these signs if we subsitute <m>x = i\theta</m>, where <m>i=\sqrt{-1}</m> is the imaginary unit.
+        Using the fact that
+        <md>
+            <mrow>\amp i^0 = 1, \amp \amp i^1 = i, \amp \amp i^2 = -1, \amp \amp i^3 = -i, \amp \amp i^4 = i^0 = 1, \amp \amp i^5 = i^1 = i, \; \text{etc.} </mrow>
+        </md>
+        we find that 
+        <md>
+            <mrow>e^{i\theta} \amp = 1 + i\theta + i^2\frac{\theta^2}{2!} + i^3\frac{\theta^3}{3!} + i^4\frac{\theta^4}{4!} + \cdots  </mrow>
+            <mrow> 
+              \amp = \big[1 -  \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \cdots\big]
+              + i\big[\theta -  \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots\big]
+            </mrow>
+            <mrow> \amp = \cos(\theta) + i\sin(\theta).</mrow>
+        </md>
+    </p>
+
+    <p>
+        <theorem xml:id="thm-eulers-formula">
+            <creator>Euler</creator>
+            <statement>
+                <p>
+                    <me>
+                        e^{i\theta} = \cos(\theta) + i\sin(\theta)
                     </me>
                     
                 </p>
             </statement>
         </theorem>
+
+        In particular, if we set <m>\theta = \pi</m>, we obtain the following amazing formula, which combines the five most important constants in Mathematics: 
+        <men xml:id="eqn-Euler">
+            e^{\pi i} + 1 = 0
+        </men>
         
+
+        <aside>
+            <title>The most beautiful formula</title>
+            <p>
+                A survey at the 2006 International Congress of Mathematicians in Madrid, Spain, asked delegates from all over the world what they thought was the most beautiful mathematical formula.
+                The winner, by far, was Euler's formula <xref ref="eqn-Euler"/>.
+            </p>
+        </aside>
+        
+    </p>
+
+    </section>
+
+<!-- =================================================================================================== -->
+<!-- Section 6: Maclaurin Polynomials-->
+<!-- =================================================================================================== -->
+
+    <section xml:id="sec-Maclaurin-Polynomials">
+        <title>Maclaurin Polynomials</title>
+        <p>
+            Now we have a method for obtaining power series expressions for functions. 
+            But these are infinite series, and for most applications we want to approximate our functions with finite polynomials. 
+            That's really easy - we just cut off the series after a finite number of terms:
+        </p>
+        <p>
+            <definition xml:id="def-Maclaurin-polynomial">
+                <statement>
+                    <p>
+                        The <term>degree <m>n</m> Maclaurin polynomial</term> of a function <m>f(x)</m> is 
+                        <me>
+                            T_n f(x) := f(0) + f'(0)x + \frac{f''(0)x^2}{2!} + \cdots + \frac{f^{(n)}x^n}{n!}.
+                        </me>
+                    </p>
+                </statement>
+            </definition>
+        </p>
+        <p>
+            Note that the degree <m>n</m> Maclaurin polynomial will generally consist of <m>n+1</m> terms. 
+            However, it will have degree less than <m>n</m> if the coefficient of <m>x^n</m> equals zero, for example
+            <me>
+                T_3\cos(x) = 1 - \frac{1}{2}x^2.
+            </me>
+            
+        </p>
+        <p>
+            The degree 0 Maclaurin polynomial of <m>f(x)</m> is not very interesting, it's the just the constant function <m>f(0)</m>.
+        </p>
+        <p>
+            You'll recognise the degree 1 Maclaurin polynomial <m>T_1f(x) = f(0) + f'(0)x</m>: it's graph is the tangent to <m>y=f(x)</m> at <m>x=0</m>. 
+            We also call it the <term>linear approximation</term> to <m>f(x)</m>, it is the linear function that most closely approximates <m>f(x)</m> near <m>x=0</m>. 
+        </p>
+        <p>
+            Similarly, the degree 2 Maclaurin polynomial <m>T_2f(x) = f(0) + f'(0)x + \frac{f''(0)}{2}x^2</m> is called the <term>quadratic approximation</term> to <m>f(x)</m>.
+            It is the quadratic function closest to <m>f(x)</m> near <m>x=0</m>.
+        </p>
+
+        <p>
+            The following Sage cell let's you plot the Maclaurin polynomials for <m>e^x, \sin(x)</m> and <m>\cos(x)</m>:
+        </p>
+
+        <sage>
+            <input>
+                x   = var('x')
+                x0  = 0
+
+                @interact
+                def _(order=slider([1 .. 12]),
+                    f=selector([exp(x), sin(x), cos(x)])
+                    ):
+                    p = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$f(x) = '+latex(f)+'$')
+                    dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
+                    ft = f.taylor(x, x0, order)
+                    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = r'$T_{%s}f(x)\;=\;%s$'%(order, latex(ft)))
+                    G = dot + p + pt
+                    G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
+                    show(G, ymin=-2, ymax=2, figsize=5)
+            </input>
+            <output>
+            </output>
+        </sage>
+        
+    </section>
+
+
+
+<!-- =================================================================================================== -->
+<!-- Section ??: Advanced topics-->
+<!-- =================================================================================================== -->
+
+    <section xml:id="sec-Advanced-Topics">
+        <title>Advanced Topics</title>
+
+        <p>
+            Here we mention more advanced topics, not for exam purposes: Functions without Maclaurin series: <m>f(x)=e^{-1/x^2}</m>, infinite products, other series.
+
+            Advanced exercises: factorials... 
+        </p>
         
     </section>
 
