@@ -631,7 +631,7 @@
         <figure xml:id="fig-exp-minus-1-over-x-squared">
             <caption>Plot of <m>e^{-1/x^2}</m></caption>
             <image source="exp-minus-one-over-x-plot" width="50%">
-                <description>Plot of <m>y=e^{-1/x^2</m></description>
+                <description>Plot of <m>y=e^{-1/x^2}</m></description>
             </image>
         </figure>
         <p>
