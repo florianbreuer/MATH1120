@@ -54,12 +54,99 @@
 
 
 
+    <section xml:id="sec-Taylor-series">
+        <title>Taylor series</title>
+
+        <p>
+            The Maclaurin series for <m>e^x</m> etc. aren't very useful for large <m>x</m>... 
+            So we just shift functions to <m>x=a</m>, compute Maclaurin series, then shift back.
+        </p>
+        
+        
+    </section>
+
+
+    <section xml:id="sec-Convergence-issues">
+        <title>Convergence issues</title>
+
+        <p>
+            <m>f(x) = \frac{1}{1-x}</m> has a singularity at <m>x=1</m>, so we don't expect convergence everywhere. 
+        </p>
+
+        <p>
+            But what's wrong with <m>f(x) = \frac{1}{1+x^2}</m>??
+        </p>
+
+        <p>
+            How can we determine for which values of <m>x</m> a given power series converges? 
+        </p>
+
+        <p>
+            Obviously, if the terms don't tend to zero, the series will never converge ... <term>Divergence Test</term>
+        </p>
+    </section>
+
+    <section xml:id="sec-Geometric-series">
+        <title>Geometric series</title>
+        
+        <p>
+            We'll start with a particularly simple case... <term>geometric series</term>
+        </p>
+    </section>
+
+    <section xml:id="sec-Ratio-test">
+        <title>Ratio test</title>
+
+        <p>
+            Most series aren't obligingly geometric series, but a similar principle applies: if the ratios of consecutive terms remain below 1, we can expect convergence:
+        </p>
+        
+    </section>
+
+
+    <section xml:id="sec-Algebra-of-infinite-series">
+        <title>Algebra of infinite series</title>
+        <p>
+            Computing repeated derivatives gets old really quickly. 
+            Often a much quicker way to get power series expansions for given functions is to manipulate know series algebraically... or by differentiating term-by-term.
+        </p>
+    </section>
+
+
+    <section xml:id="sec-Advanced-topics2">
+        <title>Advanced topics</title>
+        
+        <subsection xml:id="subsec-Integral-test">
+            <title>Integral test</title>
+            
+        </subsection>
+
+        <subsection xml:id="subsec-Absolute-conditional-convergence">
+            <title>Absolute vs. conditional convergence</title>
+            <p>
+                Rearrangement of conditionally convergent series can make your head explode.
+            </p>
+        </subsection>
+
+        <subsection xml:id="subsec-Convergence-complex">
+            <title>Convergence in the complex plane</title>
+            
+        </subsection>
+
+        <subsection xml:id="subsec-Euler-product">
+            <title>The Euler product of the zeta function</title>
+            
+        </subsection>
+
+    </section>
+
+
 
 <!-- =================================================================================================== -->
 <!-- Section 1: Partial Differentiation -->
 <!-- =================================================================================================== -->
         <section xml:id="Generating-New-Series-from-Known-Series">
-            <title>Generating New Series from Known Series</title>
+            <title>OLD STUFF - Generating New Series from Known Series</title>
             <p>In <xref ref="Table_Maclaurin"/> below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques.</p>
 
             <p>
