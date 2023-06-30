@@ -617,9 +617,61 @@
             Advanced exercises: factorials... 
         </p>
 
+        <p>
+            Consider the function
+            <me>
+                f(x) = \begin{cases} e^{-1/x^2} \amp \text{if} \; x\neq 0 \\
+                0 \amp \text{if} \; x=0.
+            </me>
+            This function is well-defined and continuous at <m>x=0</m> - you can use l'Hôspital's rule to compute the limit
+            <me>
+                \lim_{\x \rightarrow 0} e^{-1/x^2} = 0.
+            </me>
+        </p>
+        <figure xml:id="fig-exp-minus-1-over-x-squared">
+            <caption>Plot of <m>e^{-1/x^2}</m></caption>
+            <image source="exp-minus-one-over-x-plot" width="50%">
+                <description>Plot of <m>y=e^{-1/x^2</m></description>
+            </image>
+        </figure>
+        <p>
         
+
+            One can show that this function is well-defined and differentiable, in fact for <m>x\neq 0</m> we have (check this yourself):
+            <md>
+                <mrow>\frac{d}{dx} f(x) \amp = \frac{2 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{3}} </mrow>
+                <mrow>\frac{d^{ 2 }}{dx^{ 2 }} f(x) \amp = -\frac{6 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{4}} + \frac{4 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{6}}</mrow>
+                <mrow>\frac{d^{ 3 }}{dx^{ 3 }} f(x) \amp = \frac{24 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{5}} - \frac{36 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{7}} 
+                + \frac{8 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{9}}, </mrow>
+            </md>
+            but 
+        </p>
         
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section xml:id="Sec-intor-old">
