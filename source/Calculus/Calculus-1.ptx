@@ -475,7 +475,7 @@
 <!-- =================================================================================================== -->
 
     <section xml:id="sec-Eulers-Formula">
-        <title>Eulers Formula</title>
+        <title>Euler's Formula</title>
         
     
 
@@ -599,6 +599,30 @@
             <output>
             </output>
         </sage>
+
+        <remark>
+            <title>Computer algebra systems</title>
+                <p>
+                    Computer Algebra Systems usually have a command for calculating Maclaurin series. 
+                    For example, the following shows part of the output from a <url href="https://www.wolframalpha.com/">Wolfram Alpha</url> query.
+                </p>
+                <figure xml:id="Fig-C1_WA_3">
+                    <image source="Calculus/Images/1/C1_WA_3.png" width="90%"/>
+                </figure>
+
+                <p>
+                    We have already seen Sage code to compute Maclaurin series, here is the simplest code:
+                </p>
+
+                <sage>
+                    <input>
+                        taylor(cos(x), x, 0, 10)
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+                
+        </remark>
         
     </section>
 
@@ -611,44 +635,243 @@
     <section xml:id="sec-Advanced-Topics">
         <title>Advanced Topics</title>
 
-        <p>
-            Here we mention more advanced topics, not for exam purposes: Functions without Maclaurin series: <m>f(x)=e^{-1/x^2}</m>, infinite products, other series.
 
-            Advanced exercises: factorials... 
-        </p>
+        <subsection xml:id="subsec-Computing-pi">
+            <title>Computing <m>\pi</m></title>
 
-        <p>
-            Consider the function
-            <me>
-                f(x) = \begin{cases} e^{-1/x^2} \amp \text{if} \; x\neq 0 \\
-                0 \amp \text{if} \; x=0.
-            </me>
-            This function is well-defined and continuous at <m>x=0</m> - you can use l'Hôspital's rule to compute the limit
-            <me>
-                \lim_{\x \rightarrow 0} e^{-1/x^2} = 0.
-            </me>
-        </p>
-        <figure xml:id="fig-exp-minus-1-over-x-squared">
-            <caption>Plot of <m>e^{-1/x^2}</m></caption>
-            <image source="exp-minus-one-over-x-plot" width="50%">
-                <description>Plot of <m>y=e^{-1/x^2}</m></description>
-            </image>
-        </figure>
-        <p>
+            <p>
+                It's not hard to show, using repeated differentiation, that the Maclaurin series for <m>\arctan(x)</m> is
+                <men xml:id="eqn-arctan">
+                    \arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{2k+1}.
+                </men>
+                Since <m>\arctan(1) = \frac{\pi}{4}</m>, this gives us an infinite series converging to <m>\pi</m>:
+                <men xml:id="eqn-pi1">
+                    \pi = 4 - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \cdots.
+                </men>
+            </p>
+
+            <sage>
+                <input>
+                    N = 100
+                    s = 0
+                    for k in range(N):
+                        s = s + (-1)^k*4/(2*k+1)
+                        print(n(s))
+                </input>
+                <output>
+                </output>
+            </sage>
+
+            <p>
+                As you can see from this computation, convergence is extremely slow. 
+                See how big you must make N in the above code before you get two correct digits after the decimal point.
+            </p>
+
+            <p>
+                One can compute <m>\pi</m> much faster by using identities such as the following, due to John Machin (in 1706):
+                <men xml:id="eqn-arctan2">
+                    \frac{\pi}{4} = 4\arctan\frac{1}{5} - \arctan\frac{1}{239}.
+                </men>
+            </p>
+            
+            <sage>
+                <input>
+                    N = 10
+                    s = 0
+                    for k in range(N):
+                        s = s + n( (-1)^k * ( (16*(1/5)^(2*k+1))/(2*k+1) - (4*(1/239)^(2*k+1))/(2*k+1) ), 200)
+                        print(s)
+                </input>
+                <output>
+                </output>
+            </sage>
+
+            <p>
+                Modern algorithms to compute <m>\pi</m> are more sophisticated and much faster still, see <url href="https://en.wikipedia.org/wiki/Pi" />.
+            </p>
+            
+            
+        </subsection>
+
+        <subsection xml:id="subsec-A-function-without-Maclaurin-series">
+            <title>A function without Maclaurin series</title>
+            
+            
+            <p>
+                Consider the function
+                <me>
+                    f(x) = \begin{cases} e^{-1/x^2} \amp \text{if} \; x\neq 0 \\
+                    0 \amp \text{if} \; x=0. \end{cases}
+                </me>
+                This function is well-defined and continuous at <m>x=0</m> - you can compute the limit
+                <me>
+                    \lim_{x \rightarrow 0} e^{-1/x^2} = 0.
+                </me>
+            </p>
+
+            <figure width="50%" xml:id="fig-exp-minus-1-over-x-squared">
+                <caption>Plot of <m>e^{-1/x^2}</m></caption>
+                <image source="Calculus/Images/1/exp-minus-one-over-x-square-plot" width="50%">
+                    <description>Plot of <m>y=e^{-1/x^2}</m></description>
+                </image>
+            </figure>
+            
+            
+            <p>
+                One can show that this function is well-defined and differentiable, in fact for <m>x\neq 0</m> we have (check this yourself):
+                <md>
+                    <mrow>\frac{d}{dx} f(x) \amp = \frac{2 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{3}} </mrow>
+                    <mrow>\frac{d^{ 2 }}{dx^{ 2 }} f(x) \amp = -\frac{6 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{4}} + \frac{4 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{6}}</mrow>
+                    <mrow>\frac{d^{ 3 }}{dx^{ 3 }} f(x) \amp = \frac{24 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{5}} - \frac{36 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{7}} 
+                    + \frac{8 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{9}} </mrow>
+                </md>
+                The plot in <xref ref="fig-exp-minus-1-over-x-squared"/> is suspiciously flat near <m>x=0</m>, and in fact we have
+                <me>
+                    \left.\frac{d^k}{dx^k}f(x)\right|_{x=0} = 0, \quad \text{for all} \; k \geq 0.
+                </me>
+                Therefore, the Maclaurin series for <m>f(x)</m> is identically zero! So this function does not equal its Maclaurin series.
+            </p>
+            <p>
+                Replacing <m>x</m> by <m>-1/x^2</m> in the power series for <m>e^x</m>, we get
+                <me>
+                    e^{-1/x^2} = \sum_{k=0}^{\infty} (-1)^k\frac{x^{-2k}}{k!} = 1 - x^{-2} + \frac{1}{2}x^{-4} - \frac{1}{6}x^{-6} + \cdots
+                </me>
+                This is not strictly a power series, but a <term>Laurent series</term>, which converges for <m>x\neq 0</m>.
+            </p>
+
+            <sage>
+                <input>
+                    x   = var('x')
+                    f = exp(-1/x^2)
+                    p = plot(f, -2, 2, thickness=2, legend_label='$f(x) = '+latex(f)+'$')
+
+                    @interact
+                    def _(order=slider([1 .. 12])
+                        ):
+                        ft = taylor(exp(x), x, 0, order)
+                        g = ft(x=-1/x^2)
+                        pt = plot(g, -2, 2, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(g) +'$' )
+                        G = p + pt
+                        G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
+                        show(G, ymin=-2, ymax=2, figsize=8)
+                </input>
+                <output>
+                </output>
+            </sage>
+
+            <p>
+                Here we see that the partial sums approximate <m>f(x)</m> well for large <m>x</m>, but not for small <m>x</m>.
+            </p>
+            
+        </subsection>
+
+
+        <subsection xml:id="subsec-Other-types-of-series">
+            <title>Other types of series</title>
+            
+            <p>
+                For <m>s\gt 1</m> one can show that the following infinite series converges:
+                <me>
+                    \zeta(s) := \sum_{n=1}^{\infty} \frac{1}{n^s} = \frac{1}{1^s} + \frac{1}{2^s} + \frac{1}{3^s} + \cdots,
+                </me>
+                This defines the <term>zeta-function</term>, a fascinating function defined by a series other than a power series. 
+                Later we will see that <m>\zeta(s)</m> is related to the distribution of prime numbers. 
+                When <m>s</m> is an even integer, it takes on very interesting values:
+                <md>
+                    <mrow>\zeta(2) \amp = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \cdots = \frac{\pi^2}{6} </mrow>
+                    <mrow>\zeta(4) \amp = \frac{1}{1^4} + \frac{1}{2^4} + \frac{1}{3^4} + \cdots = \frac{\pi^4}{90}</mrow>
+                    <mrow>\zeta(6) \amp = \frac{1}{1^6} + \frac{1}{2^6} + \frac{1}{3^6} + \cdots = \frac{\pi^6}{945}. \amp </mrow>
+                </md>
+                Its values at the odd integers are much more mysterious.
+                
+            </p>
+
+            <exercise>
+                <statement>
+                    <p>
+                        [Put in CA2??]
+                        Show that 
+                        <me>
+                            \lim_{s \rightarrow 1^-} \zeta(s) = \infty,
+                        </me>
+                        in other words, the <term>harmonic series</term>
+                        <me>
+                            \frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \cdots 
+                        </me>
+                        diverges.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Show that the partial sum <m>\sum_{k=1}^N \frac{1}{k}</m> is greater than the integral <m>\int_1^{N-1}\frac{1}{x}dx = \ln(N-1)</m>.
+                    </p>
+                </hint>
+                
+            </exercise>
+
+        </subsection>
+
+
+        <subsection xml:id="subsec-Infinite-products">
+            <title>Infinite products</title>
+
+            <p>
+                Instead of adding infinitely many terms, one might also multiply them. 
+                Thus one may express some functions as infinite products, for example
+                <md>
+                    <mrow>\sin x \amp = x\prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2n^2}\right) </mrow>
+                    <mrow>\cos x \amp = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2\left(n-\frac{1}{2}\right)^2}\right)</mrow>
+                </md>
+                You can plot the finite products against <m>\sin(x)</m> and <m>\cos(x)</m> in the following Sage cells:
+
+
+            </p>
+
+            <sage>
+                <input>
+                    x   = var('x')
+                    f = sin(x)
+                    pf = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
+
+                    @interact
+                    def _(order=slider([1 .. 12])
+                        ):
+                        fp = x*product([1-x^2/(pi^2*k^2) for k in range(1, order+1)])
+                        pt = plot(fp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(fp) + '$')
+                        G = pf + pt
+                        G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
+                        show(G, ymin=-2, ymax=2, figsize=8)
+                </input>
+                <output>
+                </output>
+            </sage>
+            
+            <sage>
+                <input>
+                    x   = var('x')
+                    g = cos(x)
+                    pg = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
+
+                    @interact
+                    def _(order=slider([1 .. 12])
+                        ):
+                        gp = product([1-x^2/(pi^2*(k-1/2)^2) for k in range(1, order+1)])
+                        pt = plot(gp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(fp) + '$')
+                        G = pg + pt
+                        G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
+                        show(G, ymin=-2, ymax=2, figsize=8)
+                </input>
+                <output>
+                </output>
+            </sage>
+
+        </subsection>
+
         
-
-            One can show that this function is well-defined and differentiable, in fact for <m>x\neq 0</m> we have (check this yourself):
-            <md>
-                <mrow>\frac{d}{dx} f(x) \amp = \frac{2 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{3}} </mrow>
-                <mrow>\frac{d^{ 2 }}{dx^{ 2 }} f(x) \amp = -\frac{6 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{4}} + \frac{4 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{6}}</mrow>
-                <mrow>\frac{d^{ 3 }}{dx^{ 3 }} f(x) \amp = \frac{24 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{5}} - \frac{36 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{7}} 
-                + \frac{8 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{9}}, </mrow>
-            </md>
-            but 
-        </p>
         
     </section>
 
+</chapter>
 
 
 
@@ -670,8 +893,7 @@
 
 
 
-
-
+<!-- 
 
 
     <section xml:id="Sec-intor-old">
@@ -749,9 +971,7 @@
         <p>(See <xref ref="Fig-Quadratic_approximation_of_exponential"/>.) By using more terms from the infinite expansion we can obtain higher order polynomial approximations which we hope will be more accurate over a greater interval around the point of tangency. The idea of approximating a function by a polynomial has many uses in mathematics besides that of being used in calculators.</p>
     </section>
 
-<!-- =================================================================================================== -->
-<!-- Section 2: Infinite Series-->
-<!-- =================================================================================================== -->
+
     <section xml:id="Sec-Infinite_Series_old">
         <title>Infinite Series</title>
 
@@ -944,9 +1164,6 @@
 
 
 
-<!-- =================================================================================================== -->
-<!-- Section 3: Maclaurin Series-->
-<!-- =================================================================================================== -->
     <section xml:id="Sec-Maclaurin_Series">
         <title>Maclaurin Series</title>
 
@@ -1085,5 +1302,6 @@
         </remark>
 
     </section>
-<!-- =================================================================================================== -->
 </chapter>
+
+-->
