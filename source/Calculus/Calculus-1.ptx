@@ -687,8 +687,30 @@
             </sage>
 
             <p>
-                Modern algorithms to compute <m>\pi</m> are more sophisticated and much faster still, see <url href="https://en.wikipedia.org/wiki/Pi" />.
+                Modern algorithms to compute <m>\pi</m> are more sophisticated and much faster still, 
+                see <url href="https://en.wikipedia.org/wiki/Pi" />. 
+                We mention only one method, the BBP (Bailey-Borwein-Plouffe) Algorithm:
+                <men xml:id="eqn-BBP">
+                    \pi = \sum_{k=0}^{\infty} \frac{1}{16^k} \left( 
+                        \frac{4}{8k+1} - \frac{2}{8k+4} - \frac{1}{8k+5} - \frac{1}{8k+6}
+                        \right)
+                </men>
+                This formula not only converges extremely quickly, but it also also you to compute specific 
+                hexadecimal digits of <m>\pi</m> without first computing the previous digits.
             </p>
+
+            <sage>
+                <input>
+                    N = 10
+                    s = 0
+                    for k in range(N):
+                        s = s + (1/16^k)*( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6) )
+                        print(n(s, 200))
+                </input>
+                <output>
+                </output>
+            </sage>
+            
             
             
         </subsection>
