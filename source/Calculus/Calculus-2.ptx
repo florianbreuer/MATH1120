@@ -57,9 +57,41 @@
     <section xml:id="sec-Taylor-series">
         <title>Taylor series</title>
 
+        <figure xml:id="fig-plot-sin-T5">
+            <caption>Plot of <m>\sin(x)</m> and its degree 5 Maclaurin polynomial.</caption>
+            <image source="Calculus/Images/2/sin-vs-T5-plot" width="50%">
+                <description>Plot of <m>\sin(x)</m> and its degree 5 Maclaurin polynomial.
+                The polynomial starts diverging visibly from the plot of <m>\sin(x)</m> when <m>|x|\gt 2</m>.
+                </description>
+            </image>
+        </figure>
+
         <p>
-            The Maclaurin series for <m>e^x</m> etc. aren't very useful for large <m>x</m>... 
-            So we just shift functions to <m>x=a</m>, compute Maclaurin series, then shift back.
+            <xref ref="fig-plot-sin-T5"/> compares <m>\sin(x)</m> to its degree 5 Maclaurin polynomial. 
+            We notice that the polynomial is a poor approximation of <m>\sin(x)</m> when <m>|x| \gt 2</m>. 
+            What can we do about this? We could use Maclaurin polynomials of ever higher degree, 
+            but these get ever more complicated.
+        </p>
+
+        <p>
+            The issue is that Maclaurin series and polynomials are computed based on the value of the function and its 
+            derivatives around <m>x=0</m>, so it's not surprising that they best approximate the function at <m>x=0.</m>
+            If for some reason we're more interested in the function near another <m>x</m> value, say near <m>x=2</m>,
+            then instead of computing Maclaurin polynomials of high dgree, we can simply shift our function by 2 along 
+            the <m>x</m>-axis, compute the Maclaurin polynomials, and then shift back.
+        </p>
+
+        <p>
+            In other words, we consider the shifted function <m>g(x) = f(x+2)</m>, then compute the Maclaurin series 
+            for <m>g(x)</m>: 
+            <me>
+                g(x) = \sum_{k=0}^{\infty} \frac{g^{(k)}(0)}{k!}x^k = \sum_{k=0}^{\infty} \frac{f^{(k)}(2)}{k!}x^k
+            </me>
+            Finally, we obtain a power series for <m>f(x) = g(x-2</m>: 
+            <me>
+                f(x) = g(x-2) = \sum_{k=0}^{\infty} \frac{f^{(k)}(2)}{k!}(x-2)^k.
+            </me>
+            This is the <term>Taylor series</term> for <m>f(x)</m> <term>centred at</term> <m>x=2</m>. 
         </p>
         
         

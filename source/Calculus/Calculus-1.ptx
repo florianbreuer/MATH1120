@@ -775,7 +775,7 @@
                         pt = plot(g, -2, 2, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(g) +'$' )
                         G = p + pt
                         G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
-                        show(G, ymin=-2, ymax=2, figsize=8)
+                        show(G, ymin=-2, ymax=2, figsize=5)
                 </input>
                 <output>
                 </output>
@@ -862,7 +862,7 @@
                         pt = plot(fp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(fp) + '$')
                         G = pf + pt
                         G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
-                        show(G, ymin=-2, ymax=2, figsize=8)
+                        show(G, ymin=-2, ymax=2, figsize=5)
                 </input>
                 <output>
                 </output>
@@ -878,10 +878,10 @@
                     def _(order=slider([1 .. 12])
                         ):
                         gp = product([1-x^2/(pi^2*(k-1/2)^2) for k in range(1, order+1)])
-                        pt = plot(gp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(fp) + '$')
+                        pt = plot(gp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(gp) + '$')
                         G = pg + pt
                         G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
-                        show(G, ymin=-2, ymax=2, figsize=8)
+                        show(G, ymin=-2, ymax=2, figsize=5)
                 </input>
                 <output>
                 </output>
