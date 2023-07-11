@@ -74,25 +74,68 @@
         </p>
 
         <p>
-            The issue is that Maclaurin series and polynomials are computed based on the value of the function and its 
-            derivatives around <m>x=0</m>, so it's not surprising that they best approximate the function at <m>x=0.</m>
-            If for some reason we're more interested in the function near another <m>x</m> value, say near <m>x=2</m>,
-            then instead of computing Maclaurin polynomials of high dgree, we can simply shift our function by 2 along 
-            the <m>x</m>-axis, compute the Maclaurin polynomials, and then shift back.
+            The issue is that Maclaurin series are computed based on the value of the function and its 
+            derivatives around <m>x=0</m>, so it's not surprising that they best approximate the function near <m>x=0.</m>
+            If for some reason we're more interested in the function near another value, say near <m>x=a</m>,
+            then instead of computing Maclaurin polynomials of high degree, we can simply shift our function along 
+            the <m>x</m>-axis until the point of interest lies above <m>x=0</m>, 
+            compute the Maclaurin polynomials of the shifted function, and then shift back.
         </p>
 
         <p>
-            In other words, we consider the shifted function <m>g(x) = f(x+2)</m>, then compute the Maclaurin series 
+            In other words, we consider the shifted function <m>g(x) = f(x+a)</m>, then compute the Maclaurin series 
             for <m>g(x)</m>: 
             <me>
-                g(x) = \sum_{k=0}^{\infty} \frac{g^{(k)}(0)}{k!}x^k = \sum_{k=0}^{\infty} \frac{f^{(k)}(2)}{k!}x^k
+                g(x) = \sum_{k=0}^{\infty} \frac{g^{(k)}(0)}{k!}x^k = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}x^k
             </me>
-            Finally, we obtain a power series for <m>f(x) = g(x-2</m>: 
+            Finally, we obtain a power series for <m>f(x) = g(x-a)</m>: 
             <me>
-                f(x) = g(x-2) = \sum_{k=0}^{\infty} \frac{f^{(k)}(2)}{k!}(x-2)^k.
+                f(x) = g(x-a) = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k.
             </me>
-            This is the <term>Taylor series</term> for <m>f(x)</m> <term>centred at</term> <m>x=2</m>. 
+            This is the <term>Taylor series</term> for <m>f(x)</m> <term>centred at</term> <m>x=a</m>. 
         </p>
+
+        <definition>
+            <title>Taylor Series</title>
+            <statement>
+                <p>The series, </p>
+                 <p>   <me>\sum_{k=0}^{\infty}\dfrac{f^{(k)}(a)}{k!}(x-a)^k=f(a)+f'(a)(x-a)+\dfrac{f''(a)}{2!}(x-a)^{2}+\dfrac{f'''(a)}{3!}(x-a)^3+ \dots </me>.</p>
+                <p>is called the <term>Taylor series</term> for <m> f(x) </m> about   <m> x=a. </m>  </p>
+            </statement>
+        </definition>
+
+        <example>
+            <statement>
+                <p>
+                    Compute the Taylor series of the function <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    We compute the derivatives of <m>f(x) = \cos(x)</m> at <m>x=\frac{\pi}{4}</m>:
+                    <md>
+                        <mrow>f(x) \amp = \cos(x), \amp f\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}}</mrow>
+                        <mrow>f'(x) \amp = -\sin(x), \amp f'\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} </mrow>
+                        <mrow>f''(x) \amp = -\cos(x), \amp f''\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} </mrow>
+                        <mrow>f'''(x) \amp = \sin(x), \amp f'''\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}} </mrow>
+                        <mrow>f^{(4)}(x) \amp = f(x), \amp f^{(4)}\left(\frac{\pi}{4}\right) \amp = f\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}} </mrow>
+                    </md>
+                    Thus 
+                    <md>
+                        <mrow>\cos(x) \amp = \frac{1}{\sqrt{2}} -\frac{1}{\sqrt{2}}\left(x-\frac{\pi}{4}\right) 
+                            -\frac{1}{2!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^2 + \frac{1}{3!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^3 + \cdots
+                        </mrow>
+                    </md>
+                </p>
+            </solution>
+        </example>
+
+        <figure xml:id="fig-plot-cos-T3">
+            <caption>Degree Taylor polynomial of <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m></caption>
+            <image source="Calculus/Images/2/cos-vs-T3-pi4-plot" width="50%">
+                <description>Plot of <m>\cos(x)</m> and its degree 3 Taylor polynomial centered at <m>x=\frac{\pi}{4}</m>.</description>
+            </image>
+        </figure>
         
         
     </section>
@@ -390,7 +433,7 @@
  <p >Maclaurin series are power series about <m> x=0. </m>  However we can follow exactly the same process to find a power series expansion for a function   <m> f(x) </m> about any point   <m> x=a. </m>  We call these power series Taylor Series. </p>
 
 
-                      <definition>
+        <definition>
             <title>Taylor Series</title>
             <statement>
                 <p>The series, </p>
