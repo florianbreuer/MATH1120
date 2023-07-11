@@ -219,7 +219,7 @@
                         Take the limit as <m>n \rightarrow \infty</m>.
                     </p>
                 </hint>
-                <solution>
+                <answer>
                     <p>
                         We compute
                         <md>
@@ -229,7 +229,7 @@
                         </md>
                         since <m>x^N \rightarrow 0</m> as <m>N\rightarrow\infty</m> because <m>|x| \lt 1</m>. 
                     </p>
-                </solution>
+                </answer>
             </task>
         </exercise>
 
