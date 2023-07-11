@@ -131,7 +131,7 @@
         </example>
 
         <figure xml:id="fig-plot-cos-T3">
-            <caption>Degree Taylor polynomial of <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m></caption>
+            <caption>Degree 3 Taylor polynomial of <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m></caption>
             <image source="Calculus/Images/2/cos-vs-T3-pi4-plot" width="50%">
                 <description>Plot of <m>\cos(x)</m> and its degree 3 Taylor polynomial centered at <m>x=\frac{\pi}{4}</m>.</description>
             </image>
