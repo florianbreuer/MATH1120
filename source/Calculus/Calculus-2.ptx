@@ -104,6 +104,10 @@
             </statement>
         </definition>
 
+        <p>
+            Note that a Maclaurin series is simply a Taylor series centred at <m>x=0.</m>
+        </p>
+
         <example>
             <statement>
                 <p>
@@ -140,6 +144,120 @@
         
     </section>
 
+    <section xml:id="sec-Geometric-series">
+        <title>Geometric series</title>
+        
+        <p>
+            So far, we have succeeded in finding various useful power series expressions for the functions <m>\sin(x)</m>, <m>\cos(x)</m> and <m>e^x</m>. 
+            What about other functions? 
+            A particularly instructive case is the function 
+            <me>
+                f(x) = \frac{1}{1-x}.
+            </me>
+        </p>
+        <p>
+            We can compute its derivatives by hand, but that quickly gets old, so we'll ask the computer instead:
+        </p>
+        <sage>
+            <input>
+                f = 1/(1-x)
+                N = 10
+                for k in range(N):
+                    print(diff(f, x, k))
+            </input>
+        </sage>
+        <p>
+            We notice that
+            <men xml:id="eq-GS1">
+                \frac{d^n}{dx^n} \frac{1}{1-x} = \frac{n!}{(1-x)^{n+1}} \quad \text{for}\quad n \ge 0.
+            </men>
+            (Note that Sage often formats the answer differently, swapping the <m>x</m> and <m>1</m> around, leading to alternating signs.)
+        </p>
+        <exercise>
+            <statement>
+                <p>
+                    Use induction on <m>n</m> to prove that the formula in <xref ref="eq-GS1"/> is correct.
+                </p>
+            </statement>
+        </exercise>
+        <p>
+            This allows us to write down the Maclaurin series for <m>f(x) = \frac{1}{1-x}</m>:
+            <men xml:id="eq-GS2">
+                \frac{1}{1-x} = 1 + x + x^2 + x^3 + \cdots = \sum_{k=0}^\infty x^k.
+            </men>
+        </p>
+        
+
+        <exercise>
+            <task>
+                <statement>
+                    <p>
+                        Prove that, for every <m>n \ge 0</m>,
+                        <me>
+                            x^{n+1} - 1 = (x-1)(x^n + x^{n-1} + \cdots + x + 1).
+                        </me>
+                        Deduce that
+                        <men xml:id="eq-GS3">
+                            1 + x + x^2 + \cdots + x^n = \frac{1-x^{n+1}}{1-x}.
+                        </men>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        You can use induction on <m>n</m>, or just multiply out and cancel terms.
+                    </p>
+                </hint>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Assuming that <m>|x| \lt 1</m>, deduce <xref ref="eq-GS2"/> from <xref ref="eq-GS3"/>.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Take the limit as <m>n \rightarrow \infty</m>.
+                    </p>
+                </hint>
+                <solution>
+                    <p>
+                        We compute
+                        <md>
+                            <mrow>\sum_{k=0}^\infty x^k \amp = \lim_{N\rightarrow\infty} \sum_{k=0}^N x^k </mrow>
+                            <mrow> \amp = \lim_{N\rightarrow\infty} \frac{1-x^{N+1}}{1-x} </mrow>
+                            <mrow> \amp = \frac{1}{1-x}</mrow>
+                        </md>
+                        since <m>x^N \rightarrow 0</m> as <m>N\rightarrow\infty</m> because <m>|x| \lt 1</m>. 
+                    </p>
+                </solution>
+            </task>
+        </exercise>
+
+        <p>
+            The series <xref ref="eq-GS2"/> is very neat, and interesting for a variety of reasons. 
+        </p>
+
+
+        <p>
+            Let's plot the various Maclaurin polynomials for <m>f(x)=1/(1-x)</m>:
+        </p>
+
+        <figure xml:id="fig-plot-GS">
+            <caption>Maclaurin polynomials for <m>f(x)=1/(1-x)</m></caption>
+            <image source="Calculus/Images/2/GS-plot" width="50%">
+                <description>Plot of the Maclaurin polynomials for <m>f(x)=1/(1-x)</m>. Note how they only approximate <m>1/(1-x)</m> when <m>|x| \lt 1</m>.</description>
+            </image>
+        </figure>
+
+        <p>
+            We immediately notice that the Maclaurin polynomials are wildy different from <m>1/(1-x)</m> when <m>|x| \geq 1</m>.
+            
+        </p>
+
+        
+        
+    </section>
+
 
     <section xml:id="sec-Convergence-issues">
         <title>Convergence issues</title>
@@ -161,13 +279,7 @@
         </p>
     </section>
 
-    <section xml:id="sec-Geometric-series">
-        <title>Geometric series</title>
-        
-        <p>
-            We'll start with a particularly simple case... <term>geometric series</term>
-        </p>
-    </section>
+    
 
     <section xml:id="sec-Ratio-test">
         <title>Ratio test</title>
