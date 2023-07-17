@@ -289,7 +289,7 @@
 
             <figure width="50%" xml:id="fig-exp-plot">
                 <caption>Approximation to <m>e^x</m> by various partial sums of its power series</caption>
-                <image xml:id="sage-exp-plot" source="Calculus/Images/1/exp-power-series-plot" width="50%">
+                <image xml:id="sage-exp-plot" source="Calculus/Images/1/exp-power-series-plot.svg" width="50%">
                     <description>A plot of <m>y=e^x</m> together with plots of the partial sums of its power series of degrees <m>0, 1, 2</m> and <m>3</m>.</description>
                 </image>
             </figure>
