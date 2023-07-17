@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">In matrix notation this system is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\dot{\mathbf{x}} = \begin{pmatrix} 1 \amp 2 \\ 2 \amp 1 \end{pmatrix} \mathbf{x}, \quad \mathbf{x}(0) = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">The eigenvalues of <span class="process-math">\(\begin{pmatrix} 1 \amp 2 \\ 2 \amp 1 \end{pmatrix}\)</span> turn out to be <span class="process-math">\(\lambda_1 = -1\)</span> and <span class="process-math">\(\lambda_2 = 3\)</span> with associated eigenvectors <span class="process-math">\(\mathbf{v_1} = \begin{pmatrix} 1 \\ -1 \end{pmatrix}\)</span> and <span class="process-math">\(\mathbf{v_2} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\text{.}\)</span> Thus, from <a href="" class="xref" data-knowl="./knowl/Eq-general_solution_coupled_linear_DEs.html" title="Equation 20.2">(20.2)</a> the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\mathbf{x} = C_1 e^{-t} \begin{pmatrix} 1 \\ -1 \end{pmatrix} + C_2 e^{3t} \begin{pmatrix} 1 \\ 1 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">From the initial conditions we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\begin{pmatrix} 2 \\ 3 \end{pmatrix} = C_1 \begin{pmatrix} 1 \\ -1 \end{pmatrix} + C_2 \begin{pmatrix} 1 \\ 1 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Solving this system of linear equations (by Gauss-Jordan elimination say) gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+C_1 = -\dfrac{1}{2} \, \text{ and } \, C_2 = \dfrac{5}{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, the solution to the initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\mathbf{x} = \dfrac{5}{2} e^{3t} \begin{pmatrix} 1 \\ 1 \end{pmatrix} - \dfrac{1}{2} e^{-t} \begin{pmatrix} 1 \\ -1 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{align*}
+x_1(t) \amp = \dfrac{5}{2} e^{3t} - \dfrac{1}{2} e^{-t}\\
+x_2(t) \amp = \dfrac{5}{2} e^{3t} + \dfrac{1}{2} e^{-t}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="Linear_Algebra_6.html#p-1311" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Consider the system of coupled linear differential equations</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation}
+\dot{\mathbf{x}} = A \mathbf{x}\tag{20.3}
+\end{equation}
+</div>
+<div class="para">where the entries in <span class="process-math">\(A\)</span> are all real. Now imagine that this system has a complex solution given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation}
+\mathbf{x}(t) = \mathbf{x_1}(t) + i \mathbf{x_2}(t)\text{.}\tag{20.4}
+\end{equation}
+</div>
+<div class="para">Taking the complex conjugates of both sides of <a href="" class="xref" data-knowl="./knowl/Eq3-matri_form_for_system_linear_DEs.html" title="Equation 20.3">(20.3)</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation*}
+\bar{\dot{\mathbf{x}}} = \overline{A \mathbf{x}} = \bar{A} \bar{\mathbf{x}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\bar{\dot{\mathbf{x}}} = \dot{\bar{\mathbf{x}}}\)</span> and <span class="process-math">\(\bar{A} = A\)</span> (as the entries in <span class="process-math">\(A\)</span> are all real),</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation*}
+\dot{\bar{\mathbf{x}}} = A \bar{\mathbf{x}}
+\end{equation*}
+</div>
+<div class="para">i.e.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation}
+\bar{\mathbf{x}}(t) =\mathbf{x_1}(t) - i \mathbf{x_2} (t)\tag{20.5}
+\end{equation}
+</div>
+<div class="para">will also be a solution to <a href="" class="xref" data-knowl="./knowl/Eq3-matri_form_for_system_linear_DEs.html" title="Equation 20.3">(20.3)</a>. Substituting <a href="" class="xref" data-knowl="./knowl/Eq4-complex_solution.html" title="Equation 20.4">(20.4)</a> into <a href="" class="xref" data-knowl="./knowl/Eq3-matri_form_for_system_linear_DEs.html" title="Equation 20.3">(20.3)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation}
+\dot{\mathbf{x}}_1 + i \dot{\mathbf{x}}_2 = A \mathbf{x_1} + i A \mathbf{x_2}\tag{20.6}
+\end{equation}
+</div>
+<div class="para">while substituting <a href="" class="xref" data-knowl="./knowl/Eq5-complex_conjugate_solution.html" title="Equation 20.5">(20.5)</a> into <a href="" class="xref" data-knowl="./knowl/Eq3-matri_form_for_system_linear_DEs.html" title="Equation 20.3">(20.3)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation}
+\dot{\mathbf{x}}_1 - i \dot{\mathbf{x}}_2 = A \mathbf{x_1} - i A \mathbf{x_2}\text{.}\tag{20.7}
+\end{equation}
+</div>
+<div class="para">Now, adding equations <a href="" class="xref" data-knowl="./knowl/Eq6-substituting_4_into_3.html" title="Equation 20.6">(20.6)</a> and <a href="" class="xref" data-knowl="./knowl/Eq7-substituting_5_into_3.html" title="Equation 20.7">(20.7)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation*}
+\dot{\mathbf{x}}_1 = A \mathbf{x_1}\text{,}
+\end{equation*}
+</div>
+<div class="para">while subtracting <a href="" class="xref" data-knowl="./knowl/Eq7-substituting_5_into_3.html" title="Equation 20.7">(20.7)</a> from <a href="" class="xref" data-knowl="./knowl/Eq6-substituting_4_into_3.html" title="Equation 20.6">(20.6)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation*}
+\dot{\mathbf{x}}_2 = A \mathbf{x_2}
+\end{equation*}
+</div>
+<div class="para">Thus if we have a complex solution to <a href="" class="xref" data-knowl="./knowl/Eq3-matri_form_for_system_linear_DEs.html" title="Equation 20.3">(20.3)</a> then both the real and imaginary parts of this complex solution must separately be solutions and hence a general solution to <a href="" class="xref" data-knowl="./knowl/Eq3-matri_form_for_system_linear_DEs.html" title="Equation 20.3">(20.3)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq4-complex_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq5-complex_conjugate_solution.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq7-substituting_5_into_3.html ./knowl/Eq6-substituting_4_into_3.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html ./knowl/Eq3-matri_form_for_system_linear_DEs.html">
+\begin{equation*}
+\mathbf{x}(t) = C_1 \mathbf{x}(t) + C_2 \mathbf{x_2}(t)\text{.}
+\end{equation*}
+</div>
+<div class="para">This gives us another way of proceeding when the eigenvalues of <span class="process-math">\(A\)</span> are complex.</div>
+</div>
+<span class="incontext"><a href="Linear_Algebra_6.html#p-1318" class="internal">in-context</a></span>
+</body>
+</html>

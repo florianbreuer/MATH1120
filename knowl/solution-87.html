@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">10.13.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(T(t)\)</span> be the temperature of the cup of coffee at time <span class="process-math">\(t\)</span> min after it was poured and let <span class="process-math">\(T_a\)</span> be the room (ambient) temperature. Now, Newton’s law of cooling says that the rate at which the temperature of an object falls is proportional to the difference in the temperature of the object and the temperature of its surroundings. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dT}{dt}=-k(T-T_a), \hspace{5mm} T(0)=95, \hspace{5mm} T(2)=90
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\gt 0\)</span> is the constant of proportionality. This is a first order separable DE and on separating the variables and integrating both sides with respect to <span class="process-math">\(t\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{T-T_a}\hspace{2mm}dT=\int -k\hspace{2mm}dt
+\end{equation*}
+</div>
+<div class="para">Evaluating the integrals gives <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\ln(\vert T-T_a\vert) \amp=-kt+C\\
+T(t) \amp =Ae^{-kt}+T_a
+\end{align*}
+</div></div> Since <span class="process-math">\(T_a=20\text{,}\)</span> using <span class="process-math">\(T(0)=95\)</span> gives <span class="process-math">\(A=75\text{.}\)</span> Using <span class="process-math">\(T(2)=90\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+90=75e^{-2k}+20
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k=-\frac{\ln(\frac{14}{15})}{2}\approx 0.034
+\end{equation*}
+</div>
+<div class="para">Thus, according to Newton’s law of cooling the coffee will have cooled to <span class="process-math">\(25^oC\)</span> at the value of <span class="process-math">\(t\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+25=75e^{-kt}+20
+\end{equation*}
+</div>
+<div class="para">from which we find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t=-\frac{\ln(\frac{1}{15})}{k}\approx 78.5 \textrm{ min}
+\end{equation*}
+</div>
+</div>
+</div>
+<span class="incontext"><a href="Differential_Equations_2.html#solution-87" class="internal">in-context</a></span>
+</body>
+</html>

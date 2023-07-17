@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CA7: Local and Global Extrema</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2</span></a></h1>
+<p class="byline">Edited by: Florian Breuer</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Calculus_6.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Calculus.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="Chap-Calculus_8.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Integral-test" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Integral test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Absolute-conditional-convergence" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Absolute vs. conditional convergence</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Convergence-complex" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Convergence in the complex plane</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Euler-product" class="internal"><span class="codenumber">2.7.4</span> <span class="title">The Euler product of the zeta function</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#Generating-New-Series-from-Known-Series" class="internal"><span class="codenumber">2.8</span> <span class="title">OLD STUFF - Generating New Series from Known Series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-1" class="internal"><span class="codenumber">2.8</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#Taylor_Series" class="internal"><span class="codenumber">2.9</span> <span class="title">Taylor Series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-2" class="internal"><span class="codenumber">2.9</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_3.html#exercises-3" class="internal"><span class="codenumber">3.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.2</span> <span class="title">Level Curves</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_3.html#exercises-4" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.3</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_3.html#exercises-5" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.4</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_4.html#exercises-6" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_4.html#exercises-7" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_5.html#exercises-8" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_5.html#exercises-9" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_5.html#exercises-10" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_6.html#exercises-11" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_6.html#exercises-12" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_7.html#exercises-13" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_7.html#exercises-14" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_7.html#exercises-15" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_8.html#exercises-16" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_8.html#section-33" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_8.html#exercises-17" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Part-Differenial_Equations.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Equations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html" class="internal"><span class="codenumber">9</span> <span class="title">DE1: Introduction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html#introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_1.html#exercises-18" class="internal"><span class="codenumber">9.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html#direction-fields-and-eulers-method" class="internal"><span class="codenumber">9.2</span> <span class="title">Direction Fields and Euler’s Method</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Differential_Equations_1.html#direction-fields" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html#eulers-method" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Euler’s Method</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_1.html#exercises-19" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html" class="internal"><span class="codenumber">10</span> <span class="title">DE2: First Order Separable DEs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs" class="internal"><span class="codenumber">10.1</span> <span class="title">First Order Separable DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_2.html#exercises-20" class="internal"><span class="codenumber">10.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" class="internal"><span class="codenumber">10.2</span> <span class="title">Some Simple Applications of First Order Separable DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_2.html#exercises-21" class="internal"><span class="codenumber">10.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html#appendix-1" class="internal"><span class="codenumber">10.A</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_2.html#exercises-22" class="internal"><span class="codenumber">10.A</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_3.html" class="internal"><span class="codenumber">11</span> <span class="title">DE3: First Order Linear DEs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Differential_Equations_3.html#Exact_First_Order_DEs" class="internal"><span class="codenumber">11.1</span> <span class="title">Exact First Order DEs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_3.html#First_Order_Linear_DEs" class="internal"><span class="codenumber">11.2</span> <span class="title">First Order Linear DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_3.html#exercises-23" class="internal"><span class="codenumber">11.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs" class="internal"><span class="codenumber">11.3</span> <span class="title">Some Simple Applications of First Order Linear DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_3.html#exercises-24" class="internal"><span class="codenumber">11.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_4.html" class="internal"><span class="codenumber">12</span> <span class="title">DE4: Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients" class="internal"><span class="codenumber">12.1</span> <span class="title">Homogeneous Second Order Linear DEs With Constant Coefficients</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_4.html#exercises-25" class="internal"><span class="codenumber">12.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_5.html" class="internal"><span class="codenumber">13</span> <span class="title">DE5: Non-Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs" class="internal"><span class="codenumber">13.1</span> <span class="title">Non-Homogeneous First Order Linear DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_5.html#exercises-26" class="internal"><span class="codenumber">13.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients" class="internal"><span class="codenumber">13.2</span> <span class="title">The Method of Undetermined Coefficients</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_5.html#exercises-27" class="internal"><span class="codenumber">13.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
+<li><div class="toc-item"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_6.html#Adding_an_External_Force" class="internal"><span class="codenumber">14.3</span> <span class="title">Adding an External Force</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_6.html#exercises-28" class="internal"><span class="codenumber">14.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Part-Linear_Algebra.html" class="internal"><span class="codenumber">III</span> <span class="title">Linear Algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra_1.html" class="internal"><span class="codenumber">15</span> <span class="title">LA1: Systems of Linear Equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Linear_Algebra_1.html#Sec-LA_Introduction" class="internal"><span class="codenumber">15.1</span> <span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="Linear_Algebra_1.html#Sec-LA_Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.2</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.3</span> <span class="title">Solving Systems of Linear Equations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_1.html#exercises-29" class="internal"><span class="codenumber">15.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra__2.html" class="internal"><span class="codenumber">16</span> <span class="title">LA2: Geometric Interpretations of Linear Equations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows" class="internal"><span class="codenumber">16.1</span> <span class="title">Interpretation Via Rows</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra__2.html#exercises-30" class="internal"><span class="codenumber">16.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns" class="internal"><span class="codenumber">16.2</span> <span class="title">Interpretation Via Columns</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra__2.html#exercises-31" class="internal"><span class="codenumber">16.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html" class="internal"><span class="codenumber">17</span> <span class="title">LA3: Matrix Algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication" class="internal"><span class="codenumber">17.1</span> <span class="title">Addition and Scalar Multiplication</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-32" class="internal"><span class="codenumber">17.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication" class="internal"><span class="codenumber">17.2</span> <span class="title">Matrix Multiplication</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-33" class="internal"><span class="codenumber">17.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">17.3</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-34" class="internal"><span class="codenumber">17.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations" class="internal"><span class="codenumber">17.4</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-35" class="internal"><span class="codenumber">17.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_4.html" class="internal"><span class="codenumber">18</span> <span class="title">LA4: Square Matrices</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra_4.html#Inverse_Matrices" class="internal"><span class="codenumber">18.1</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_4.html#exercises-36" class="internal"><span class="codenumber">18.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_4.html#Determinants" class="internal"><span class="codenumber">18.2</span> <span class="title">Determinants</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_4.html#exercises-37" class="internal"><span class="codenumber">18.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_5.html" class="internal"><span class="codenumber">19</span> <span class="title">LA5: Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Linear_Algebra_5.html#Sec-LA_5_Introduction" class="internal"><span class="codenumber">19.1</span> <span class="title">Introduction</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" class="internal"><span class="codenumber">19.2</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_5.html#exercises-38" class="internal"><span class="codenumber">19.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Linear_Algebra_5.html#Sec-LA_5_A_Simple_Application" class="internal"><span class="codenumber">19.3</span> <span class="title">A Simple Application</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_6.html" class="internal"><span class="codenumber">20</span> <span class="title">LA6: Some Applications of Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra_6.html#Powers_of_Matrices" class="internal"><span class="codenumber">20.1</span> <span class="title">Powers of Matrices</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_6.html#exercises-39" class="internal"><span class="codenumber">20.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations" class="internal"><span class="codenumber">20.2</span> <span class="title">Coupled Linear Differential Equations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_6.html#exercises-40" class="internal"><span class="codenumber">20.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Calculus_7"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span>
+</h2>
+<section class="section" id="Critical-Points"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Critical Points</span>
+</h3>
+<div class="para" id="p-511">Recall  that  a  function  of  one  variable, <span class="process-math">\(f(x)\)</span>  has  a  “critical  point” at <span class="process-math">\(x=x_0\)</span> if  the tangent line to the curve at <span class="process-math">\(x=x_0\)</span> is horizontal or if the derivative does not exist at that point. This critical point can be either a (local) maximum, minimum or horizontal point of inflection or vertical point of inflection.  (The first three possibilities are shown in <a href="" class="xref" data-knowl="./knowl/Fig_max_min_inflection.html" title="Figure 7.1">Figure 7.1</a> below.)</div>
+<figure class="figure figure-like" id="Fig_max_min_inflection"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/7/Fig1_max_min_inflection.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-512">The idea of critical points can be applied to functions of two variables.</div>
+<article class="definition definition-like" id="definition-15"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Critical Point.</span>
+</h4> <div class="para" id="p-513">The function <span class="process-math">\(z=f(x,y)\)</span> has a <em class="emphasis">critical point</em> at <span class="process-math">\((x_0,y_0)\)</span> if the tangent plane to the surface at the point <span class="process-math">\((x_0,y_0,z_0)\)</span> is horizontal or if one of the directional derivatives does not exist.</div></article><div class="para" id="p-514">As with functions of one variable, critical points of functions of two variables will be one of three types.</div>
+<div class="para logical" id="p-515"><ol class="decimal">
+<li id="li-75"><div class="para" id="p-derived-li-75">If at a critical point <span class="process-math">\(f(x,y) \leq f(x_0,y_0)\)</span> for all points in some open disk centred on <span class="process-math">\((x_0,y_0)\)</span> then the critical point is a <em class="alert">local maximum</em>.</div></li>
+<li id="li-76"><div class="para" id="p-derived-li-76">If at a critical point <span class="process-math">\(f(x,y) \geq f(x_0,y_0)\)</span> for all points in some open disk centred on <span class="process-math">\((x_0,y_0)\)</span> then the critical point is a <em class="alert">local minimum</em>.</div></li>
+<li id="li-77"><div class="para" id="p-derived-li-77">For a smooth function (i.e. a function for which all derivatives exist) if a critical point is not a local maximum or a local minimum then it is a <em class="alert">saddle point</em>.</div></li>
+</ol></div>
+<article class="example example-like" id="Ex-Local_max_and_min"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-516">
+<div class="para">The graph of the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x,y) = x(5x+2)(3y-2)e^{-\left( \frac{x^2+y^2}{5} \right)}
+\end{equation*}
+</div>
+<div class="para">is given below with local maxima and local minima labelled.</div>
+</div> <figure class="figure figure-like" id="Fig_Local_max_min"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/7/Fig2_Local_max_and_min.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><article class="example example-like" id="Ex-Saddle_point"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-517">The graph of the function <span class="process-math">\(f(x,y) = x^2-y^2\)</span> is given below with a saddle point labelled.</div> <figure class="figure figure-like" id="Fig_Saddle_point"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/7/Fig3_Saddle_point.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.6<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><div class="para" id="p-518">For smooth functions we can find the critical points by looking for those points where the tangent plane is horizontal. If the function <span class="process-math">\(z=f(x,y)\)</span> has a tangent plane at the point <span class="process-math">\((x_0,y_0,z_0)\)</span> we can determine algebraically that it is horizontal by checking that:</div>
+<div class="para logical" id="p-519"><ul class="disc">
+<li id="li-78"><div class="para" id="p-derived-li-78">The normal vector for the plane is parallel to the vector <span class="process-math">\(\langle 0,0,1 \rangle\text{,}\)</span> or</div></li>
+<li id="li-79"><div class="para" id="p-derived-li-79">The directional derivative at <span class="process-math">\((x_0,y_0)\)</span> is zero in every direction, or</div></li>
+<li id="li-80"><div class="para" id="p-derived-li-80">The gradient vector at <span class="process-math">\((x_0,y_0)\)</span> is <span class="process-math">\(\langle 0,0 \rangle\text{.}\)</span>
+</div></li>
+</ul></div>
+<div class="para" id="p-520">These conditions are all equivalent and they lead us to the following theorem.</div>
+<article class="theorem theorem-like" id="theorem-9"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Critical Point.</span>
+</h4>
+<div class="para logical" id="p-521">
+<div class="para">The point <span class="process-math">\((x_0,y_0)\)</span> is a critical point of the function <span class="process-math">\(z = f(x,y)\)</span> if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_x(x_0,y_0) = f_y (x_0,y_0) = 0\text{,}
+\end{equation*}
+</div>
+<div class="para">or, if at least one of these derivatives does not exist.</div>
+</div></article><div class="para" id="p-522">
+<em class="alert">Note:</em> For the most part, we will assume that the function is smooth, i.e. has derivatives of all orders.  In particular a smooth function does not have any discontinuities or cusps. Such critical points will occur for functions of two variables when at least one of the partial derivatives does not exist at the critical point.</div>
+<article class="example example-like" id="Ex-Locate_critical_points"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-523">
+<div class="para">Locate, and determine the nature of, the critical points of the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = 2x^3 + (x+1)y^2 + 5x^2\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><div class="para" id="p-524">
+<span class="process-math">\(\left(0,0\right)\)</span> is a local minimum; <span class="process-math">\(\left(-\dfrac{5}{3},0\right)\)</span> is a local maximum; <span class="process-math">\(\left(-1,2\right)\)</span> and <span class="process-math">\(\left(-1,-2\right)\)</span> are saddle points.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like">
+<div class="para logical" id="p-525">
+<div class="para">To locate the critical points we solve the equations <span class="process-math">\(z_x = z_y = 0\text{,}\)</span> and check for any points where they do not exist. Since this function is given by a polynomial, the partial derivatives exist.  We set them to zero below.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-Partial_eq2.html ./knowl/Eq-Partial_eq1.html ./knowl/Eq-Partial_eq1.html" id="mdn-1">
+\begin{align}
+6x^2 + y^2 + 10x \amp = 0\tag{7.1}\\
+2(x+1)y \amp = 0\tag{7.2}
+\end{align}
+</div>
+<div class="para">From <a href="" class="xref" data-knowl="./knowl/Eq-Partial_eq2.html" title="Equation 7.2">(7.2)</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-Partial_eq2.html ./knowl/Eq-Partial_eq1.html ./knowl/Eq-Partial_eq1.html">
+\begin{equation*}
+x=-1 \: \text{ or } \: y=0\text{.}
+\end{equation*}
+</div>
+<div class="para">Putting <span class="process-math">\(y=0\)</span> into <a href="" class="xref" data-knowl="./knowl/Eq-Partial_eq1.html" title="Equation 7.1">(7.1)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-Partial_eq2.html ./knowl/Eq-Partial_eq1.html ./knowl/Eq-Partial_eq1.html">
+\begin{equation*}
+x=0 \: \text{ or } \: x=-\dfrac{5}{3}\text{.}
+\end{equation*}
+</div>
+<div class="para">Putting <span class="process-math">\(x=-1\)</span> into <a href="" class="xref" data-knowl="./knowl/Eq-Partial_eq1.html" title="Equation 7.1">(7.1)</a> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-Partial_eq2.html ./knowl/Eq-Partial_eq1.html ./knowl/Eq-Partial_eq1.html">
+\begin{equation*}
+y=2 \: \text{ or } \: y=-2\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus there are 4 critical points at</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-Partial_eq2.html ./knowl/Eq-Partial_eq1.html ./knowl/Eq-Partial_eq1.html">
+\begin{equation*}
+\left( 0, 0 \right), \left( -\dfrac{5}{3}, 0 \right), \left( -1, 2 \right) \: \text{ and } \left( -1, -2 \right)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-526">If we have the graph of the function then we can usually determine the nature of these critical points by inspection. From the (computer generated) graph shown below we can see with very careful inspection that the critical point at <span class="process-math">\((0,0)\)</span> is a local minimum, the critical point at <span class="process-math">\(\left( -\dfrac{5}{3}, 0 \right)\)</span> is a local maximum and the critical points at <span class="process-math">\((-1,2)\)</span> and <span class="process-math">\((-1,-2)\)</span> are saddle points.</div> <figure class="figure figure-like" id="Fig-Locate_critical_points"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/./Calculus/Images/7/Fig4-Locate_critical_points.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para" id="p-527">Sometimes the nature of the critical points is not clear on such graphs or we don’t have access to the graph. Another approach to determining the nature of the critical points is to sketch the level curves for the function.</div> <figure class="figure figure-like" id="Fig-Locate_critical_points2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/./Calculus/Images/7/Fig5-Locate_critical_points.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para" id="p-528">From this diagram we can see that as we move away from the critical points at <span class="process-math">\(\left(0,0\right)\)</span> in any direction the function value is increasing and hence <span class="process-math">\(\left(0,0\right)\)</span> is local minimum. Similarly as we move away from the critical point at <span class="process-math">\(\left(-\dfrac{5}{3},0\right)\)</span> in any direction the function value is decreasing is hence <span class="process-math">\(\left(-\dfrac{5}{3},0\right)\)</span> is a local maximum. For the critical points at <span class="process-math">\(\left(-1,2\right)\)</span> and <span class="process-math">\(\left(-1,-2\right)\)</span> we can move away in some directions and have the function value increase while in other directions the function value will decrease. Hence these critical points are saddle points.</div>
+</div></div>
+</div></article><section class="exercises" id="exercises-13"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-46"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-529">Find the critical points of the function <span class="process-math">\(f(x,y) = 3x-x^3-2y^2+y^4\)</span> and use the plot of level curves given below to determine the nature of each critical point.</div> <figure class="figure figure-like" id="Fig-Ex_task_section_1"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/7/Ex_task_section_1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.11<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article></section></section><section class="section" id="Second-Derivative-Test"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span>
+</h3>
+<div class="para" id="p-530">An algebraic method for determining what type of critical points a function has is given by the following theorem.</div>
+<article class="theorem theorem-like" id="theorem-10"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Second Derivative Test.</span>
+</h4>
+<div class="para logical" id="p-531">
+<div class="para">Let the function <span class="process-math">\(z=f(x,y)\)</span> have continuous 2nd partial derivatives and let <span class="process-math">\((x_0,y_0)\)</span> be a critical point of the function. Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = f_{xx} (x_0,y_0) f_{yy} (x_0,y_0) - \left[ f_{xy} (x_0,y_0) \right]^2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-532"><ul class="disc">
+<li id="li-81"><div class="para" id="p-derived-li-81">If <span class="process-math">\(D&gt;0\)</span> and <span class="process-math">\(f_{xx} (x_0,y_0) &gt;0\)</span> then <span class="process-math">\(f\)</span> has a local minimum at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="li-82"><div class="para" id="p-derived-li-82">If <span class="process-math">\(D&gt;0\)</span> and <span class="process-math">\(f_{xx} (x_0,y_0) &lt; 0\)</span> then <span class="process-math">\(f\)</span> has a local maximum at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="li-83"><div class="para" id="p-derived-li-83">If <span class="process-math">\(D &lt; 0\)</span> then <span class="process-math">\(f\)</span> has a saddle point at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="li-84"><div class="para" id="p-derived-li-84">If <span class="process-math">\(D=0\)</span> then the 2nd derivative test is inconclusive.</div></li>
+</ul></div></article><article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h4 class="heading"><span class="title">Outline of Proof.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"> <div class="para logical" id="p-533">
+<div class="para">For the sake of simplicity assume that the critical point is at the point <span class="process-math">\((x_0,y_0)=(0,0)\text{.}\)</span> Now using a Taylor expansion for functions of two variables about <span class="process-math">\((a,b) = (0,0)\)</span> we have (up to the quadratic terms)</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x,y); f(0,0) + f_x (0,0)x + f_y (0,0) y + \dfrac{f_{xx}(0,0)}{2} x^2 + f_{xy} (0,0) xy + \dfrac{f_{yy}(0,0)}{2} y^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\((x_0,y_0) = (0,0)\)</span> is a critical point of the function <span class="process-math">\(f_x (0,0) = f_y (0,0) = 0\text{.}\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x,y); f(0,0) + \dfrac{f_{xx}(0,0)}{2}x^2 + f_{xy} (0,0) xy + \dfrac{f_{yy} (0,0)}{2}y^2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-534">
+<div class="para">On completing the square (and dropping the evaluation at <span class="process-math">\((0,0)\)</span> for brevity)</div>
+<div class="displaymath process-math" id="md-65">
+\begin{align*}
+f(x,y) \amp \simeq f + \dfrac{f_{xx}}{2} \left \{x^2 + \dfrac{2f_{xy}}{f_{xx}} + \left( \dfrac{f_{xy}}{f_{xx}} \right)^2 y^2 \right \} - \dfrac{f_{xx}}{2} \left( \dfrac{f_{xy}}{f_{xx}} \right)^2 y^2 + \dfrac{f_{yy}}{2}y^2\\
+\amp = f + \dfrac{f_{xx}}{2} \left( x + \dfrac{f_{xy}}{f_{xx}} y \right)^2 + \dfrac{1}{2 f_{xx}} y^2 \left( f_{xx} f_{yy} - f_{xy}^2 \right)\text{.}
+\end{align*}
+</div>
+</div> <div class="para" id="p-535">From this we can see that if <span class="process-math">\(f_{xx} &gt; 0\)</span> and <span class="process-math">\(D = f_{xx} f_{yy} - f_{xy}^2 &gt; 0\)</span> then when <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are varied from <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\(f(x,y)\)</span> increases and so <span class="process-math">\((x_0,y_0) = (0,0)\)</span> will be a local minimum.</div></article></div>
+<article class="example example-like" id="Ex-Locate_critical_points_2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.13</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-536">Locate and identify the critical points of the function <span class="process-math">\(f(x,y) = 2x^3 + (x+1)y^2 + 5x^2\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-44" id="answer-44"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-44"><div class="answer solution-like"><div class="para" id="p-537">
+<span class="process-math">\(\left(0,0\right)\)</span> is a local minimum; <span class="process-math">\(\left(-\dfrac{5}{3},0\right)\)</span> is a local maximum; <span class="process-math">\(\left(-1,2\right)\)</span> and <span class="process-math">\(\left(-1,-2\right)\)</span> are saddle points.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like">
+<div class="para logical" id="p-538">
+<div class="para">We located the critical points of this function in an earlier example. We found that there are 4 critical points at</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( 0, 0 \right), \left( -\dfrac{5}{3}, 0 \right), \left( -1, 2 \right) \: \text{ and } \left( -1, -2 \right)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-539">
+<div class="para">To determine the nature of these critical points, in this example we will use the second derivative test. To this end, note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_{xx} = 12x+10, \: f_{xy} = 2y, \: \text{ and } f_{yy} = 2x+2\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" id="md-66">
+\begin{align*}
+D \amp = f_{xx} f_{yy} - f_{xy}^2 = (12x+10)(2x+2) - (2y)^2\\
+\amp = 24x^2 + 44x -4y^2+20\text{.}
+\end{align*}
+</div>
+<div class="para">Now, applying the second derivative test:</div>
+</div> <div class="para logical" id="p-540"><ul class="disc">
+<li id="li-85"><div class="para" id="p-derived-li-85">At <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\(D=20&gt;0\text{,}\)</span> <span class="process-math">\(f_{xx}=10&gt;0\)</span> and so <span class="process-math">\((0,0)\)</span> is a local minimum.</div></li>
+<li id="li-86"><div class="para" id="p-derived-li-86">At <span class="process-math">\((-\dfrac{5}{3},0)\text{,}\)</span> <span class="process-math">\(D=\dfrac{40}{3}&gt;0\text{,}\)</span> <span class="process-math">\(f_{xx}=-10 &lt; 0\)</span> and so <span class="process-math">\((-\dfrac{5}{3},0)\)</span> is a local maximum.</div></li>
+<li id="li-87"><div class="para" id="p-derived-li-87">At <span class="process-math">\((-1,2)\text{,}\)</span> <span class="process-math">\(D=-16 &lt; 0\)</span> and so <span class="process-math">\((-1,2)\)</span> is a saddle point.</div></li>
+<li id="li-88"><div class="para" id="p-derived-li-88">At <span class="process-math">\((-1,-2)\text{,}\)</span> <span class="process-math">\(D=-16 &lt; 0\)</span> and so <span class="process-math">\((-1,-2)\)</span> is also a saddle point.</div></li>
+</ul></div> <div class="para" id="p-541">This is in agreement with the conclusions we made on the nature of these critical pointson the basis of the level curves of the function.</div>
+</div></div>
+</div></article><article class="example example-like" id="Ex-Locate_critical_points_3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.14</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-542">
+<div class="para">Locate and identify the critical points of the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x,y) = 2 - \sqrt{x^2+y^2}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-45" id="answer-45"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-45"><div class="answer solution-like"><div class="para" id="p-543">
+<span class="process-math">\((0,0)\)</span> is a local maximum.</div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like">
+<div class="para logical" id="p-544">
+<div class="para">Here</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g_x = \dfrac{-x}{\sqrt{x^2+y^2}} \: \text{ and } \: g_y = \dfrac{-y}{\sqrt{x^2+y^2}}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-545">For this function both partial derivatives are undefined at <span class="process-math">\((x, y) = (0,0)\)</span> and so this point will be a critical point. However we cannot use the second derivative test to determine the nature of this critical point. In this case we can see from the graph of the function that the critical point at <span class="process-math">\((x, y) = (0,0)\)</span> is a local maximum.</div> <figure class="figure figure-like" id="Fig-Loc_and_identify_critical_points"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/7/Fig6_Loc_and_identify_critical_points.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.15<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div></div>
+</div></article><section class="exercises" id="exercises-14"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-47"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-546">Locate and identify the critical points of the function <span class="process-math">\(z=3x-x^3-2y^2+y^4\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-48"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-547">Locate and identify the critical points of the function <span class="process-math">\(z=\exp \left(xy-\frac{2}{3}x^3 - \frac{2}{3}y^3 \right)\text{.}\)</span>
+</div> <figure class="figure figure-like" id="Ex2_crit_points"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/7/Ex2_crit_points.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article></section></section><section class="section" id="Global-Extrema"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">Global Extrema</span>
+</h3>
+<article class="definition definition-like" id="definition-16"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.17</span><span class="period">.</span><span class="space"> </span><span class="title">Global Extrema.</span>
+</h4> <div class="para" id="p-548">Consider the function of two variables <span class="process-math">\(f(x,y)\)</span> on the domain D.</div> <div class="para logical" id="p-549"><ul class="disc">
+<li id="li-89"><div class="para" id="p-derived-li-89">If there exists some point <span class="process-math">\((x_0,y_0)\)</span> in <span class="process-math">\(D\)</span> such that <span class="process-math">\(f(x,y) \leq f(x_0,y_0)\)</span> for all points <span class="process-math">\((x,y)\)</span> in <span class="process-math">\(D\)</span> then the function has a <em class="emphasis">global maximum</em> at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="li-90"><div class="para" id="p-derived-li-90">Similarly, if there exists some point <span class="process-math">\((x_0,y_0)\)</span> in <span class="process-math">\(D\)</span> such that <span class="process-math">\(f(x,y) \geq f(x_0,y_0)\)</span> for all points <span class="process-math">\((x,y)\)</span> in <span class="process-math">\(D\)</span> then the function has a <em class="emphasis">global minimum</em> at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+</ul></div></article><article class="example example-like" id="example-68"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.18</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-550">
+<div class="para">The graph of the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x,y) = x(5x+2)(3y-2)e^{-\left(\frac{x^2+y^2}{5} \right)}
+\end{equation*}
+</div>
+<div class="para">over the domain <span class="process-math">\(D = \left \{ (x,y): -5 \leq x \leq 5, \, -5 \leq y \leq 5 \right \}\)</span> is shown below.</div>
+</div> <figure class="figure figure-like" id="Fig7_Global_Extrema"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/./Calculus/Images/7/Fig7_Global_Extrema.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><div class="para" id="p-551">Before discussing global extrema for functions of two variables, recall the situation for a function of one variable <span class="process-math">\(y=f(x)\text{.}\)</span> If <span class="process-math">\(f(x)\)</span> is continuous on the closed interval <span class="process-math">\(I=[a,b]\)</span> then <span class="process-math">\(f(x)\)</span> is guaranteed to have both a global maximum and a global minimum on <span class="process-math">\(I\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="Fig8_Global_Extrema_1D"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/./Calculus/Images/7/Fig8_Global_Extrema_1D.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-552">These global extrema can be found by evaluating <span class="process-math">\(f(x)\)</span> at</div>
+<div class="para logical" id="p-553"><ul class="disc">
+<li id="li-91"><div class="para" id="p-derived-li-91">All of the critical points of <span class="process-math">\(f(x)\)</span> in <span class="process-math">\(I\text{,}\)</span> and</div></li>
+<li id="li-92"><div class="para" id="p-derived-li-92">The endpoints of <span class="process-math">\(L\text{.}\)</span>
+</div></li>
+</ul></div>
+<div class="para" id="p-554">The procedure for finding the global extrema of functions of two variables is very similar and is based on the following theorem.</div>
+<article class="theorem theorem-like" id="theorem-11"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.21</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme Value Theorem.</span>
+</h4>
+<div class="para" id="p-555">If <span class="process-math">\(f(x,y)\)</span> is a continuous function on the closed and bounded domain <span class="process-math">\(D \subset \mathbb{R}^2\)</span> then <span class="process-math">\(f(x,y)\)</span> has both a global maximum and a global minimum on <span class="process-math">\(D\text{.}\)</span>
+</div></article><div class="para" id="p-556">Note that a <em class="emphasis">closed</em> region, <span class="process-math">\(D \subset \mathbb{R}^2\text{,}\)</span> is a region in the plane that contains its boundary. For example in the diagram below Region <span class="process-math">\(D_1\)</span> would be a closed region whereas Region <span class="process-math">\(D_2\)</span> is not closed.</div>
+<figure class="figure figure-like" id="Fig9_closed_region"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/./Calculus/Images/7/Fig9_closed_region.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.22<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-557">A <em class="emphasis">bounded</em> region, <span class="process-math">\(D \subset \mathbb{R}^2\text{,}\)</span> is a region in the plane that doesn’t extend to infinity in any direction. For example in the diagram below Region <span class="process-math">\(D_1\)</span> would be a bounded region whereas Region <span class="process-math">\(D_2\)</span> is not bounded.</div>
+<figure class="figure figure-like" id="Fig10_bounded_region"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/./Calculus/Images/7/Fig10_bounded_region.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.23<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="remark remark-like" id="remark-4"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.24</span><span class="period">.</span><span class="space"> </span><span class="title">Locating Global Extrema.</span>
+</h4> <div class="para" id="p-558">To locate the global extrema of the continuous function <span class="process-math">\(f(x,y)\)</span> on the closed and bounded domain <span class="process-math">\(D \subset \mathbb{R}^2\text{:}\)</span>
+</div> <div class="para logical" id="p-559"><ul class="disc">
+<li id="li-93"><div class="para" id="p-derived-li-93">Find all of the critical points in the interior of <span class="process-math">\(D\text{;}\)</span>
+</div></li>
+<li id="li-94"><div class="para" id="p-derived-li-94">Find the maximum and minimum values of <span class="process-math">\(f(x,y)\)</span> on the boundary of <span class="process-math">\(D\text{;}\)</span>
+</div></li>
+<li id="li-95"><div class="para" id="p-derived-li-95">Evaluate <span class="process-math">\(f(x,y)\)</span> at each of the above points and compare.</div></li>
+</ul></div></article><article class="example example-like" id="example-69"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.25</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-560">Find the global extrema of the function <span class="process-math">\(z(x,y) = x^2 + 2xy + 3y^2\)</span> on the closed triangular region <span class="process-math">\(D\)</span> with vertices <span class="process-math">\((-1,1)\text{,}\)</span> <span class="process-math">\((2,1)\)</span> and <span class="process-math">\((-1,-2)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-46" id="answer-46"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like">
+<div class="para" id="p-561">Global maximum: <span class="process-math">\(17\)</span> at <span class="process-math">\((x,y) = (-1,2)\)</span>
+</div> <div class="para" id="p-562">Global minimum: <span class="process-math">\(0\)</span> at <span class="process-math">\((x,y)=(0,0)\text{.}\)</span>
+</div>
+</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like">
+<figure class="figure figure-like" id="Fig11_Example7"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./Calculus/Images/7/Fig11_Example7.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.26<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para logical" id="p-563">
+<div class="para">Firstly note that <span class="process-math">\(D\)</span> is a closed and bounded region in the plane and so we can use the method outlined above. So begin by finding the critical points of <span class="process-math">\(z\text{.}\)</span> Here</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z_x = 2x+2y \: \text{ and } \: z_y = 2x+6y\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-564">
+<div class="para">Critical points occur when <span class="process-math">\(z_x = z_y = 0\)</span> and so this function has only one critical point at <span class="process-math">\((x,y) = (0,0)\text{.}\)</span> This is inside <span class="process-math">\(D\)</span> and so we evaluate the function at this point, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z(0,0) = 0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-565">
+<div class="para">To find the maximum and minimum values of the function on the boundary we will have to consider the 3 sides of the triangle separately. Firstly, consider the side of the triangle defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=1, \: -1 \leq x \leq 2\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-566">
+<div class="para">On this interval we think of <span class="process-math">\(z\)</span> as a function of <span class="process-math">\(x\)</span> only, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z(x) = x^2 + 2x + 3\text{.}
+\end{equation*}
+</div>
+</div> <figure class="figure figure-like" id="Fig12_Example7_z_function"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./Calculus/Images/7/Fig12_Example7_z_function.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.27<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para" id="p-567">This has a maximum value <span class="process-math">\(11\)</span> at <span class="process-math">\(x=2\)</span> and minimum value <span class="process-math">\(2\)</span> at <span class="process-math">\(x=-1\text{.}\)</span>
+</div> <div class="para logical" id="p-568">
+<div class="para">Next consider the side of the triangle defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=-1, \: -2 \leq y \leq 1\text{.}
+\end{equation*}
+</div>
+<div class="para">On this interval we think of <span class="process-math">\(z\)</span> as a function of <span class="process-math">\(y\)</span> only, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z(y) = 1-2y+3y^2\text{.}
+\end{equation*}
+</div>
+</div> <figure class="figure figure-like" id="Fig13_Example7_z_function_2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./Calculus/Images/7/Fig13_Example7_z_function_2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.28<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para" id="p-569">Again, using the technique given above for locating the global extrema for a function of one variable (or by looking at the graph) we find that the largest value of <span class="process-math">\(z\)</span> occurs at <span class="process-math">\(y=-2\)</span> (giving <span class="process-math">\(z=17\)</span>) and the smallest value of <span class="process-math">\(z\)</span> occurs at <span class="process-math">\(y=1/3\text{,}\)</span> (giving <span class="process-math">\(z=2/3\)</span>).</div> <div class="para logical" id="p-570">
+<div class="para">Finally on the interval defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=x-1, \: -1 \leq x \leq 2\text{,}
+\end{equation*}
+</div>
+<div class="para">we can think of <span class="process-math">\(z\)</span> as a function of <span class="process-math">\(x\)</span> only, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z(x) = 6x^2-8x+3\text{.}
+\end{equation*}
+</div>
+</div> <figure class="figure figure-like" id="Fig14_Example7_z_function_3"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./Calculus/Images/7/Fig14_Example7_z_function_3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.29<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para" id="p-571">For this function the global maximum is <span class="process-math">\(17\)</span> at <span class="process-math">\(x=-1\)</span> and the global minimum is <span class="process-math">\(1/3\)</span> at <span class="process-math">\(x=2/3\text{.}\)</span>
+</div> <div class="para" id="p-572">On comparing the value of the function <span class="process-math">\(z(x,y) = x^2 + 2xy + 3y^2\)</span> at each of the global extrema on the sides of the triangle and at the critical point inside the region we conclude that the function has a global maximum of <span class="process-math">\(17\)</span> at <span class="process-math">\((x,y) = (-1,2)\)</span> and a global minimum of <span class="process-math">\(0\)</span> at <span class="process-math">\((x,y)=(0,0)\text{.}\)</span>
+</div>
+</div></div>
+</div></article><section class="exercises" id="exercises-15"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-49"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-573">Find the global extrema of <span class="process-math">\(z=2x^2 + x +y^2 - 2\)</span> on <span class="process-math">\(D = \left \{ (x,y): x^2+y^2 \leq 4 \right \}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-50"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-574">Find the global extrema of <span class="process-math">\(R(x,y) = x \sqrt{8-x^2-y^2}\)</span> on <span class="process-math">\(D = \left \{ (x,y): x^2+y^2 \leq 8 \right \}\text{.}\)</span>
+</div></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Calculus_6.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="Chap-Calculus_8.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

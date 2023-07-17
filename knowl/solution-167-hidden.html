@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">The eigenvalues of <span class="process-math">\(A\)</span> turn out to be purely complex with <span class="process-math">\(\lambda_1 = i\)</span> and <span class="process-math">\(\lambda_2 = -i\text{.}\)</span> The associated eigenvectors are <span class="process-math">\(\mathbf{v_1} = \begin{pmatrix} -i \\ 1 \end{pmatrix}\)</span> and <span class="process-math">\(\mathbf{v_2}= \begin{pmatrix} i \\ 1 \end{pmatrix}\text{.}\)</span> Thus, from <a href="" class="xref" data-knowl="./knowl/Eq-general_solution_coupled_linear_DEs.html" title="Equation 20.2">(20.2)</a> the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\mathbf{x} = C_1 e^{it} \begin{pmatrix} -i \\ 1 \end{pmatrix} + C_2 e^{-it} \begin{pmatrix} i \\ 1 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">From the initial conditions we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\begin{pmatrix} -4 \\ 8 \end{pmatrix} = C_1 \begin{pmatrix} -i \\ 1 \end{pmatrix} + C_2 \begin{pmatrix} i \\ 1 \end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">which upon solving gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+C_1 = 4-2i \, \text{ and } \, C_2 = 4+2i\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, the solution to the initial value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\mathbf{x} = (4-2i) e^{it} \begin{pmatrix} -i \\ 1 \end{pmatrix} + (4+2i) e^{-it} \begin{pmatrix} i \\ 1 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">We can simplify this solution by using Euler’s equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+e^{i \theta} = \cos( \theta ) + i \sin( \theta )\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\mathbf{x} = (4-2i) \left( \cos(t) + i\sin(t) \right) \begin{pmatrix} -i \\ 1 \end{pmatrix} + (4+2i) \left( \cos(t) - i \sin(t) \right) \begin{pmatrix} i \\ 1 \end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">which simplifies to</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Eq-general_solution_coupled_linear_DEs.html">
+\begin{equation*}
+\mathbf{x} = \begin{pmatrix} 8 \sin(t) - 4 \cos(t) \\ 8 \cos(t) + 4 \sin(t) \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">This is a real solution! As explained below, because all of the entries in <span class="process-math">\(A\)</span> are real and the initial conditions are real the solution will also be real.</div>
+</div> <div class="para">As shown in <a href="" class="xref" data-knowl="./knowl/Fig-Coupled_DEs_Solutions_Plotted_2.html" title="Figure 20.7">Figure 20.7</a> where these solutions are graphed, purely complex eigenvalues are associated with periodic solutions. The period of these solutions is <span class="process-math">\(\dfrac{2 \pi}{| \operatorname{Im}(\lambda) |}\text{.}\)</span>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./LinearAlgebra/Images/6/Fig2-solution_curves_plotted_2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">20.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div></body>
+</html>

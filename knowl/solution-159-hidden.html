@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{align*}
+\det\begin{pmatrix} 1-\lambda \amp 2 \\ 3\amp 4-\lambda \end{pmatrix} \amp =0\\
+(1-\lambda)(4-\lambda)-6 \amp =0\\
+\lambda^2-5\lambda-2 \amp =0
+\end{align*}
+</div>
+<div class="para">Thus the eigenvalues for <span class="process-math">\(A\)</span> are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda=\frac{5\pm\sqrt{33}}{2}\approx 5.37, -0.37
+\end{equation*}
+</div>
+<div class="para">Clearly the eigenvalues don’t always turn out to be nice numbers, even when the matrix is quite simple. The eigenvectors will also turn out to be rather complicated.</div>
+</div> <div class="para logical">
+<div class="para">When <span class="process-math">\(\lambda=\dfrac{5+\sqrt{33}}{2}\)</span> the augmented matrix and its reduced row echelon form are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} 1-\left(\frac{5+\sqrt{33}}{2} \right) \amp 2 \amp 0 \\ 3 \amp 4-\left(\frac{5+\sqrt{33}}{2} \right) \amp 0 \end{pmatrix} \sim \begin{pmatrix} \frac{-3-\sqrt{33}}{2} \amp 2 \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">Thus, the eigenvectors take the form</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathbf{x} \amp =\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \textrm{ where } \left(\frac{-3-\sqrt{33}}{2}\right)x_1+2x_2=0 \\
+\Rightarrow \mathbf{x} \amp =\begin{pmatrix} 4t \\ t(3+\sqrt{33}) \end{pmatrix} = t\begin{pmatrix} 4 \\ 3+\sqrt{33} \end{pmatrix}
+\end{align*}
+</div>
+<div class="para">When <span class="process-math">\(\lambda=\dfrac{5-\sqrt{33}}{2}\)</span> the augmented matrix and its reduced row echelon form are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} 1-\left(\frac{5-\sqrt{33}}{2} \right) \amp 2 \amp 0 \\ 3 \amp 4-\left(\frac{5-\sqrt{33}}{2} \right) \amp 0 \end{pmatrix} \sim \begin{pmatrix} \frac{-3+\sqrt{33}}{2} \amp 2 \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">Thus, the eigenvectors take the form</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathbf{x} \amp =\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \textrm{ where } \left(\frac{-3+\sqrt{33}}{2}\right)x_1+2x_2=0 \\
+\Rightarrow \mathbf{x} \amp =\begin{pmatrix} 4t \\ t(3-\sqrt{33}) \end{pmatrix} = t\begin{pmatrix} 4 \\ 3-\sqrt{33} \end{pmatrix}
+\end{align*}
+</div>
+</div>
+</div></body>
+</html>

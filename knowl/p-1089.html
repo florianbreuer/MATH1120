@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">The span of the set <span class="process-math">\(\{\mathbf{v_1, v_2}\}\)</span> is the set of vectors <span class="process-math">\(\mathbf{u}\)</span> of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{u}=x \begin{pmatrix} 2 \\ 2 \end{pmatrix}+y \begin{pmatrix} -3 \\ 2 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are scalars. From what we learnt about vectors in Math1110 we know that any vector in the plane will be able to be written as linear combination of these two vectors and hence the span of <span class="process-math">\(\{\mathbf{v_1, v_2}\}\)</span> will be all vectors in <span class="process-math">\(\mathbb{R}^2\text{.}\)</span> Alternatively, we could approach this problem algebraically. Let <span class="process-math">\(\mathbf{u}=\begin{pmatrix} a \\ b \end{pmatrix}\)</span> be a vector in the span of <span class="process-math">\(\{\mathbf{v_1, v_2}\}\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} a \\ b \end{pmatrix}=x \begin{pmatrix} 2 \\ 2 \end{pmatrix}+y \begin{pmatrix} -3 \\ 2 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">Using Gauss Jordon elimination gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} 2 \amp -3 \amp a \\ 2 \amp 2 \amp b \end{pmatrix} \sim \begin{pmatrix} 1 \amp 0 \amp \frac{a}{5}+\frac{3b}{10} \\ 0 \amp 1 \amp \frac{b}{5}-\frac{a}{5} \end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">and so the solution is <span class="process-math">\((x,y)=\left(\frac{a}{5}+\frac{3b}{10},\frac{b}{5}-\frac{a}{5}\right)\text{.}\)</span> Thus, no matter which vector, <span class="process-math">\(\mathbf{u}\text{,}\)</span> in <span class="process-math">\(\mathbb{R}^2\)</span> we choose we can find the scalars so that <span class="process-math">\(\mathbf{u}\)</span> is a linear combination of <span class="process-math">\(\mathbf{v_1}\)</span> and <span class="process-math">\(\mathbf{v_2}\)</span> and hence in the span of <span class="process-math">\(\{\mathbf{v_1, v_2}\}\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="Linear_Algebra__2.html#p-1089" class="internal">in-context</a></span>
+</body>
+</html>

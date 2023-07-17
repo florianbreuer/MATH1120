@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like"><div class="para logical">
+<div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
+<div class="displaymath process-math">
+\begin{align*}
+\det\begin{pmatrix} 0-\lambda \amp 1 \\ -1 \amp 0-\lambda \end{pmatrix} \amp =0 \\
+\lambda^2+1 \amp =0 
+\end{align*}
+</div>
+<div class="para">This equation has no real solutions and so <span class="process-math">\(A\)</span> does not have any real eigenvalues. (Notice that <span class="process-math">\(A\)</span> is the matrix for a rotation in the plane about the origin and through <span class="process-math">\(-\frac{\pi}{2}^c\text{.}\)</span>) However there are applications where it is advantageous to allow the eigenvalues and eigenvectors to be complex. So, proceeding as before, the eigenvalues for <span class="process-math">\(A\)</span> are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda=\pm i
+\end{equation*}
+</div>
+<div class="para">When <span class="process-math">\(\lambda=i\)</span> the augmented matrix and its reduced row echelon form are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} -i \amp 1 \amp 0 \\ -1 \amp -i \amp 0 \end{pmatrix} \sim \begin{pmatrix} 1 \amp i \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">Thus, the eigenvectors take the form</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathbf{x} \amp =\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \textrm{ where } x_1+ix_2=0 \\
+\Rightarrow \mathbf{x} \amp =\begin{pmatrix} t \\ ti \end{pmatrix} = t\begin{pmatrix} 1 \\ i \end{pmatrix}
+\end{align*}
+</div>
+<div class="para">When <span class="process-math">\(\lambda=-i\)</span> the augmented matrix and its reduced row echelon form are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} i \amp 1 \amp 0 \\ -1 \amp i \amp 0 \end{pmatrix} \sim \begin{pmatrix} 1 \amp -i \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">Thus, the eigenvectors take the form</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathbf{x} \amp =\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \textrm{ where } x_1-ix_2=0 \\
+\Rightarrow \mathbf{x} \amp =\begin{pmatrix} -t \\ ti \end{pmatrix} = t\begin{pmatrix} -1 \\ i \end{pmatrix}
+\end{align*}
+</div>
+</div></div></body>
+</html>

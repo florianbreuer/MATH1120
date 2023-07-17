@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DE5: Non-Homogeneous Second Order Linear DEs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2</span></a></h1>
+<p class="byline">Edited by: Florian Breuer</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Differential_Equations_4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Differenial_Equations.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="Differential_Equations_6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Integral-test" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Integral test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Absolute-conditional-convergence" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Absolute vs. conditional convergence</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Convergence-complex" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Convergence in the complex plane</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Euler-product" class="internal"><span class="codenumber">2.7.4</span> <span class="title">The Euler product of the zeta function</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#Generating-New-Series-from-Known-Series" class="internal"><span class="codenumber">2.8</span> <span class="title">OLD STUFF - Generating New Series from Known Series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-1" class="internal"><span class="codenumber">2.8</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#Taylor_Series" class="internal"><span class="codenumber">2.9</span> <span class="title">Taylor Series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-2" class="internal"><span class="codenumber">2.9</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_3.html#exercises-3" class="internal"><span class="codenumber">3.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.2</span> <span class="title">Level Curves</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_3.html#exercises-4" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.3</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_3.html#exercises-5" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.4</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_4.html#exercises-6" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_4.html#exercises-7" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_5.html#exercises-8" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_5.html#exercises-9" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_5.html#exercises-10" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_6.html#exercises-11" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_6.html#exercises-12" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_7.html#exercises-13" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_7.html#exercises-14" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_7.html#exercises-15" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_8.html#exercises-16" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_8.html#section-33" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_8.html#exercises-17" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Part-Differenial_Equations.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Equations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html" class="internal"><span class="codenumber">9</span> <span class="title">DE1: Introduction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html#introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_1.html#exercises-18" class="internal"><span class="codenumber">9.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html#direction-fields-and-eulers-method" class="internal"><span class="codenumber">9.2</span> <span class="title">Direction Fields and Euler’s Method</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Differential_Equations_1.html#direction-fields" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_1.html#eulers-method" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Euler’s Method</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_1.html#exercises-19" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html" class="internal"><span class="codenumber">10</span> <span class="title">DE2: First Order Separable DEs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs" class="internal"><span class="codenumber">10.1</span> <span class="title">First Order Separable DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_2.html#exercises-20" class="internal"><span class="codenumber">10.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" class="internal"><span class="codenumber">10.2</span> <span class="title">Some Simple Applications of First Order Separable DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_2.html#exercises-21" class="internal"><span class="codenumber">10.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_2.html#appendix-1" class="internal"><span class="codenumber">10.A</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_2.html#exercises-22" class="internal"><span class="codenumber">10.A</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_3.html" class="internal"><span class="codenumber">11</span> <span class="title">DE3: First Order Linear DEs</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Differential_Equations_3.html#Exact_First_Order_DEs" class="internal"><span class="codenumber">11.1</span> <span class="title">Exact First Order DEs</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_3.html#First_Order_Linear_DEs" class="internal"><span class="codenumber">11.2</span> <span class="title">First Order Linear DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_3.html#exercises-23" class="internal"><span class="codenumber">11.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs" class="internal"><span class="codenumber">11.3</span> <span class="title">Some Simple Applications of First Order Linear DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_3.html#exercises-24" class="internal"><span class="codenumber">11.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_4.html" class="internal"><span class="codenumber">12</span> <span class="title">DE4: Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients" class="internal"><span class="codenumber">12.1</span> <span class="title">Homogeneous Second Order Linear DEs With Constant Coefficients</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_4.html#exercises-25" class="internal"><span class="codenumber">12.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="Differential_Equations_5.html" class="internal"><span class="codenumber">13</span> <span class="title">DE5: Non-Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs" class="internal"><span class="codenumber">13.1</span> <span class="title">Non-Homogeneous First Order Linear DEs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_5.html#exercises-26" class="internal"><span class="codenumber">13.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients" class="internal"><span class="codenumber">13.2</span> <span class="title">The Method of Undetermined Coefficients</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_5.html#exercises-27" class="internal"><span class="codenumber">13.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
+<li><div class="toc-item"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Differential_Equations_6.html#Adding_an_External_Force" class="internal"><span class="codenumber">14.3</span> <span class="title">Adding an External Force</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Differential_Equations_6.html#exercises-28" class="internal"><span class="codenumber">14.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Part-Linear_Algebra.html" class="internal"><span class="codenumber">III</span> <span class="title">Linear Algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra_1.html" class="internal"><span class="codenumber">15</span> <span class="title">LA1: Systems of Linear Equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Linear_Algebra_1.html#Sec-LA_Introduction" class="internal"><span class="codenumber">15.1</span> <span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="Linear_Algebra_1.html#Sec-LA_Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.2</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.3</span> <span class="title">Solving Systems of Linear Equations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_1.html#exercises-29" class="internal"><span class="codenumber">15.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra__2.html" class="internal"><span class="codenumber">16</span> <span class="title">LA2: Geometric Interpretations of Linear Equations</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows" class="internal"><span class="codenumber">16.1</span> <span class="title">Interpretation Via Rows</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra__2.html#exercises-30" class="internal"><span class="codenumber">16.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns" class="internal"><span class="codenumber">16.2</span> <span class="title">Interpretation Via Columns</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra__2.html#exercises-31" class="internal"><span class="codenumber">16.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html" class="internal"><span class="codenumber">17</span> <span class="title">LA3: Matrix Algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication" class="internal"><span class="codenumber">17.1</span> <span class="title">Addition and Scalar Multiplication</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-32" class="internal"><span class="codenumber">17.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication" class="internal"><span class="codenumber">17.2</span> <span class="title">Matrix Multiplication</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-33" class="internal"><span class="codenumber">17.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">17.3</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-34" class="internal"><span class="codenumber">17.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations" class="internal"><span class="codenumber">17.4</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Chap-Linear_Algebra_3.html#exercises-35" class="internal"><span class="codenumber">17.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_4.html" class="internal"><span class="codenumber">18</span> <span class="title">LA4: Square Matrices</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra_4.html#Inverse_Matrices" class="internal"><span class="codenumber">18.1</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_4.html#exercises-36" class="internal"><span class="codenumber">18.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_4.html#Determinants" class="internal"><span class="codenumber">18.2</span> <span class="title">Determinants</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_4.html#exercises-37" class="internal"><span class="codenumber">18.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_5.html" class="internal"><span class="codenumber">19</span> <span class="title">LA5: Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Linear_Algebra_5.html#Sec-LA_5_Introduction" class="internal"><span class="codenumber">19.1</span> <span class="title">Introduction</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" class="internal"><span class="codenumber">19.2</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_5.html#exercises-38" class="internal"><span class="codenumber">19.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Linear_Algebra_5.html#Sec-LA_5_A_Simple_Application" class="internal"><span class="codenumber">19.3</span> <span class="title">A Simple Application</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_6.html" class="internal"><span class="codenumber">20</span> <span class="title">LA6: Some Applications of Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Linear_Algebra_6.html#Powers_of_Matrices" class="internal"><span class="codenumber">20.1</span> <span class="title">Powers of Matrices</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_6.html#exercises-39" class="internal"><span class="codenumber">20.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations" class="internal"><span class="codenumber">20.2</span> <span class="title">Coupled Linear Differential Equations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Linear_Algebra_6.html#exercises-40" class="internal"><span class="codenumber">20.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Differential_Equations_5"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">13</span> <span class="title">DE5: Non-Homogeneous Second Order Linear DEs</span>
+</h2>
+<section class="introduction" id="introduction-5"><div class="para logical" id="p-888">
+<div class="para">Recall that a 2nd order linear DE is a differential equation of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Differential_Equations_4.html">
+\begin{equation*}
+P(x)y''+Q(x)y'+R(x)y=f(x)
+\end{equation*}
+</div>
+<div class="para">If the functions <span class="process-math">\(P\text{,}\)</span> <span class="process-math">\(Q\)</span> and <span class="process-math">\(R\)</span> are all constant functions then the DE is said to have constant coefficients. If <span class="process-math">\(f(x)=0\)</span> then the DE is said to be homogeneous. In the previous lecture (i.e. <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a>) we discussed how to find solutions to a second order linear homogeneous DE with constant coefficients, i.e. to a DE of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Differential_Equations_4.html">
+\begin{equation*}
+ay''+by'+c=0
+\end{equation*}
+</div>
+<div class="para">In this lecture we are going to look at solving some non-homogeneous second order linear DEs with constant coefficients, i.e. DEs of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Differential_Equations_4.html">
+\begin{equation*}
+ay''+by'+c=f(x)
+\end{equation*}
+</div>
+<div class="para">Some insight into how we might solve such DEs can be gained by revisiting some relevant first order examples.</div>
+</div></section><section class="section" id="Non-Homogeneous_First_Order_Linear_DEs"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.1</span> <span class="title">Non-Homogeneous First Order Linear DEs</span>
+</h3>
+<div class="para logical" id="p-889">
+<div class="para">Non-homogeneous first order linear DEs with constant coefficients take the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Differential_Equations_3.html">
+\begin{equation*}
+ay'+by=f(x)
+\end{equation*}
+</div>
+<div class="para">We know that we can solve these DEs via an integrating factor, (see section <a href="Differential_Equations_3.html" class="internal" title="Chapter 11: DE3: First Order Linear DEs">Chapter 11</a>).</div>
+</div>
+<article class="example example-like" id="example-123"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-890">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'-y=x
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-90" id="answer-90"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-90"><div class="answer solution-like"><div class="para" id="p-891"><span class="process-math">\(y(x)=Ae^x-x-1\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like"><div class="para logical" id="p-892">
+<div class="para">Multiplying both sides of this DE via the integrating factor <span class="process-math">\(I(x)=e^{\int -1\hspace{2mm}dx}=e^{-x}\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dx}(e^{-x}y)=xe^{-x}
+\end{equation*}
+</div>
+<div class="para">Using integration by parts gives the general solution as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=Ae^x-x-1
+\end{equation*}
+</div>
+<div class="para">There are two interesting facts about this general solution. To discuss these facts write the solution as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=y_c(x)+y_p(x)
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_c(x)=Ae^x \textrm{ and } y_p(x)=-x-1
+\end{equation*}
+</div>
+<div class="para">The first fact to note is that <span class="process-math">\(y_c(x)\)</span> is the general solution to the homogeneous equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'-y=0
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(y_p(x)\)</span> is one particular solution to the original non-homogeneous DE. The second fact to note is that the form of the particular solution <span class="process-math">\(y_p(x)=-x-1\)</span> is the same as that of the non-homogeneous term <span class="process-math">\(f(x)=x\text{,}\)</span> that is they are both polynomials of degree <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div></div></div></article><article class="example example-like" id="example-124"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-893">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'-y=\cos(x)
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><div class="para" id="p-894"><span class="process-math">\(y(x)=Ae^x+\dfrac{1}{2}\sin(x)-\dfrac{1}{2}\cos(x)\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like"><div class="para logical" id="p-895">
+<div class="para">Solving via an integrating factor gives the general solution as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=Ae^x+\frac{1}{2}\sin(x)-\frac{1}{2}\cos(x)
+\end{equation*}
+</div>
+<div class="para">Once again writing this as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=y_c(x)+y_p(x)
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_c(x)=Ae^x \textrm{ and } y_p(x)=\frac{1}{2}\sin(x)-\frac{1}{2}\cos(x)
+\end{equation*}
+</div>
+<div class="para">we see that <span class="process-math">\(y_c(x)\)</span> is the general solution to the associated homogeneous DE and that <span class="process-math">\(y_p(x)\)</span> and <span class="process-math">\(f(x)\)</span> are both trigonometric functions. In this case it seems reasonable that <span class="process-math">\(y_c(x)\)</span> contains both a <span class="process-math">\(\cos(x)\)</span> term and a <span class="process-math">\(\sin(x)\)</span> since to satisfy the DE we would expect the particular solution to contain terms like <span class="process-math">\(f(x)=\cos(x)\)</span> and its derivative <span class="process-math">\(f'(x)=-\sin(x)\text{.}\)</span>
+</div>
+</div></div></div></article><article class="example example-like" id="Example_13_1_3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-896">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'-y=e^x
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><div class="para" id="p-897"><span class="process-math">\(y(x)=Ae^x+xe^x\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-111" id="solution-111"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-111"><div class="solution solution-like"><div class="para logical" id="p-898">
+<div class="para">The general solution to this DE, found via an integrating factor, is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=Ae^x+xe^x
+\end{equation*}
+</div>
+<div class="para">Letting</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_c(x)=Ae^x \textrm{ and } y_p(x)=xe^x
+\end{equation*}
+</div>
+<div class="para">we see that, once again, <span class="process-math">\(y_c(x)\)</span> is the general solution to the associated homogeneous DE but this time <span class="process-math">\(y_p(x)\)</span> is not quite the same form as <span class="process-math">\(f(x)\text{.}\)</span> The difference in this case from the previous two examples is that here <span class="process-math">\(f(x)\)</span> is the same form as <span class="process-math">\(y_c(x)\text{,}\)</span> the solution to the homogeneous DE and hence <span class="process-math">\(y_p(x)\)</span> can’t also be of this form.</div>
+</div></div></div></article><div class="para" id="p-899">The above examples all illustrate the following more general result.</div>
+<article class="definition definition-like" id="definition-25"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-900">
+<div class="para">The general solution to the non-homogeneous first order linear DE with constant coefficients</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay'+by=f(x)
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=y_c(x)+y_p(x)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y_c(x)\)</span> is the general solution to the associated homogeneous DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay'+by=0
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(y_p(x)\)</span> is any particular solution to non-homogeneous DE.</div>
+</div></article><section class="exercises" id="exercises-26"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-76"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para logical" id="p-901">
+<div class="para">If <span class="process-math">\(y_c(x)\)</span> is the general solution to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay'+by=0
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(y_p(x)\)</span> is any particular solution to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay'+by=f(x)
+\end{equation*}
+</div>
+<div class="para">show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=y_c(x)+y_p(x)
+\end{equation*}
+</div>
+<div class="para">is also a solution to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay'+by=f(x)
+\end{equation*}
+</div>
+</div></article></section></section><section class="section" id="The_Method_of_Undetermined_Coefficients"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.2</span> <span class="title">The Method of Undetermined Coefficients</span>
+</h3>
+<div class="para logical" id="p-902">
+<div class="para">We return now to the problem of finding solutions to non-homogeneous second order linear DEs with constant coefficients, i.e. to DEs of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay''+by'+cy=f(x)
+\end{equation*}
+</div>
+<div class="para">Since we don’t have any alternative method (such as using an integrating factor) for finding a solution to this class of DE we are forced to use the method suggested by the previous section.</div>
+</div>
+<article class="definition definition-like" id="definition-26"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-903">
+<div class="para">The <dfn class="terminology">general solution</dfn> to the non-homogeneous second order linear DE with constant coefficients</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay''+by'+cy=f(x)
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=y_c(x)+y_p(x)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y_c(x)\text{,}\)</span> the <dfn class="terminology">complementary solution</dfn>, is the general solution to the associated homogeneous DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay''+by'+cy=0
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(y_p(x)\)</span> is any <dfn class="terminology">particular solution</dfn> to non-homogeneous DE.</div>
+</div></article><div class="para logical" id="p-904">
+<div class="para">It is easy to show that <span class="process-math">\(y(x)=y_c(x)+y_p(x)\)</span> is a solution to the non-homogeneous DE but how do we know that we have found all such solutions, i.e. that we have found the general solution? (After all, <span class="process-math">\(y_p(x)\)</span> is just one particular solution.) Let <span class="process-math">\(\phi(x)\)</span> be any solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay''+by'+cy=f(x)
+\end{equation*}
+</div>
+<div class="para">Then the function <span class="process-math">\(g(x)=\phi(x)-y_p(x)\)</span> is a solution to the homogeneous DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ay''+by'+cy=0
+\end{equation*}
+</div>
+<div class="para">since</div>
+</div>
+<div class="para logical" id="p-905"><div class="displaymath process-math" id="md-105">
+\begin{align*}
+ag''+bg'+cg \amp = a(\phi''-y_p'')+b(\phi'-y_p')+c(\phi-y_p)\\
+\amp = (a\phi''+b\phi'+c\phi)-(ay_p''+by_p'+cy_p)\\
+\amp = f(x)-f(x)\\
+\amp =0
+\end{align*}
+</div></div>
+<div class="para" id="p-906">Now since <span class="process-math">\(y_c(x)\)</span> is the general solution to the homogeneous DE, <span class="process-math">\(g(x)\)</span> must be one of the solutions in <span class="process-math">\(y_c(x)\text{.}\)</span> Thus <span class="process-math">\(\phi(x)=g(x)+y_p(x)\)</span> must be one of the solutions in <span class="process-math">\(y(x)=y_c(x)+y_p(x)\text{,}\)</span> or to put it the other way, <span class="process-math">\(y(x)=y_c(x)+y_p(x)\)</span> contains all solutions to the non-homogeneous DE.</div>
+<div class="para" id="p-907">Thus to solve a non-homogeneous second order DE with constant coefficients we have to first find the complementary solution, then find any particular solution and then add these solutions together. We already know how to find the complementary solution (see <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a>) so all that remains is to work out how to find a particular solution, <span class="process-math">\(y_p\text{.}\)</span> The <dfn class="terminology">method of undetermined coefficients</dfn> tries to find <span class="process-math">\(y_p\)</span> by guessing that the form that <span class="process-math">\(y_p\)</span> should take is a linear combination of the non-homogeneous term, <span class="process-math">\(f(x)\text{,}\)</span> and its derivatives.</div>
+<article class="example example-like" id="example-126"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-908">
+<div class="para">Find a particular solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+2y'-3y=4x^2
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like"><div class="para" id="p-909"><span class="process-math">\(y_p(x)=-\dfrac{4}{3}x^2-\dfrac{16}{9}x-\dfrac{56}{27}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-112" id="solution-112"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-112"><div class="solution solution-like">
+<div class="para logical" id="p-910">
+<div class="para">Here the non-homogeneous term is <span class="process-math">\(f(x)=4x^2\text{.}\)</span> This is a 2nd degree polynomial. The first and second derivatives of this will be a linear polynomial and a constant respectively. Thus we guess that a particular solution can found of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/DEs_5_Example_4_1.html" id="DEs_5_Example_4_1">
+\begin{equation}
+y_p(x)=Ax^2+Bx+C\tag{13.1}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are coefficients to be determined by substituting into the DE. Now, from <a href="" class="xref" data-knowl="./knowl/DEs_5_Example_4_1.html" title="Equation 13.1">(13.1)</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/DEs_5_Example_4_1.html">
+\begin{equation*}
+y_p'=2Ax+B
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/DEs_5_Example_4_1.html">
+\begin{equation*}
+y_p''=2A
+\end{equation*}
+</div>
+<div class="para">Substituting into the DE gives</div>
+</div> <div class="para logical" id="p-911"><div class="displaymath process-math" id="md-106">
+\begin{align*}
+y_p''+2y_p'-3y_p \amp = 4x^2\\
+(2A)+2(2Ax+B)-3(Ax^2+Bx+C)\amp = 4x^2\\
+(-3A)x^2+(4A-3B)x+(2A+2B-3C)\amp = 4x^2
+\end{align*}
+</div></div> <div class="para" id="p-912">Thus for <span class="process-math">\(y_p\)</span> to be a solution</div> <div class="para logical" id="p-913"><div class="displaymath process-math" id="md-107">
+\begin{align*}
+-3A \amp = 4\\
+4A-3B \amp = 0\\
+2A+2B-3C \amp = 0
+\end{align*}
+</div></div> <div class="para logical" id="p-914">
+<div class="para">Solving these equations gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=-\frac{4}{3}, \hspace{5mm} B=-\frac{16}{9}, \hspace{5mm} C=-\frac{56}{27}
+\end{equation*}
+</div>
+<div class="para">Thus a particular solution to the DE is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=-\frac{4}{3}x^2-\frac{16}{9}x-\frac{56}{27}
+\end{equation*}
+</div>
+</div>
+</div></div></article><div class="para" id="p-915">The method of undetermined coefficients is only useful for finding the particular solution when the non-homogeneous term is fairly simple. <a href="" class="xref" data-knowl="./knowl/DEs_5_table.html" title="Table 13.7">Table 13.7</a> gives a guide to the form of the particular solution, <span class="process-math">\(y_p\text{,}\)</span> to try for various non-homogeneous terms <span class="process-math">\(f\text{.}\)</span> <figure class="table table-like" id="DEs_5_table"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">13.7<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r0 l0 t0 lines">Non-Homogenous Term</th>
+<th scope="col" class="c m b1 r0 l0 t0 lines">Form of Particular Solution</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f(x)=ae^{kx}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y_p(x)=Ce^{kx}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f(x)=a\sin(kx)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y_p(x)=C_1\sin(kx)+C_2\cos(kx)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f(x)=a\cos(kx)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y_p(x)=C_1\sin(kx)+C_2\cos(kx)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f(x)=\sum_{i=0}^{n} a_{n-i}x^{n-i}\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(y_p(x)=\sum_{i=0}^{n} C_{n-i}x^{n-i}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(f(x)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(y_p(x)\)</span> is a linear combination of <span class="process-math">\(f(x)\)</span> and its derivatives, i.e. <span class="process-math">\(y_p(x)=\sum_{k=0} C_kf^{(k)}(x)\)</span>
+</td>
+</tr>
+</table></div></figure>
+</div>
+<article class="example example-like" id="example-127"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-916">
+<div class="para">Find the general solution to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x''+6x'+8x=8\sin(2t)
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like"><div class="para" id="p-917"><span class="process-math">\(x(t)=Ae^{-2t}+Be^{-4t}+\dfrac{1}{5}\sin(2t)-\dfrac{3}{5}\cos(2t)\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like">
+<div class="para logical" id="p-918">
+<div class="para">The first step is to find the general solution to the homogeneous DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x''+6x'+8x=0
+\end{equation*}
+</div>
+<div class="para">The characteristic equation for this DE is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r^2+6r+8=0
+\end{equation*}
+</div>
+<div class="para">which has solutions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r=-2, -4
+\end{equation*}
+</div>
+<div class="para">Thus the complementary solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_c(t)=Ae^{-2t}+Be^{-4t}
+\end{equation*}
+</div>
+<div class="para">The next step is to find a particular solution to the non-homogeneous DE. Using the method of undetermined coefficients we try a particular solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_p(t)=C_1\sin(2t)+C_2\cos(2t)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\)</span> are the coefficients to be determined. Now</div>
+</div> <div class="para logical" id="p-919"><div class="displaymath process-math" id="md-108">
+\begin{align*}
+x_p'(t) \amp = 2C_1\cos(2t)-2C_2\sin(2t)\\
+x_p''(t) \amp = -4C_1\sin(2t)-4C_2\cos(2t)
+\end{align*}
+</div></div> <div class="para logical" id="p-920">
+<div class="para">For <span class="process-math">\(x_p(t)\)</span> to be a solution</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_p''+6x_p'+8x_p=8\sin(2t)
+\end{equation*}
+</div>
+<div class="para">and so, on substituting</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(-4C_1\sin(2t)-4C_2\cos(2t))+6(2C_1\cos(2t)-2C_2\sin(2t))+8(C_1\sin(2t)+C_2\cos(2t)) = 8\sin(2t)
+\end{equation*}
+</div>
+<div class="para">which simplifies to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(4C_1-12C_2)\sin(2t)+(12C_1+4C_2)\cos(2t) = 8\sin(2t)
+\end{equation*}
+</div>
+<div class="para">Equating coefficients on each side of the equation gives</div>
+</div> <div class="para logical" id="p-921"><div class="displaymath process-math" id="md-109">
+\begin{align*}
+4C_1-12C_2 \amp = 8\\
+12C_1+4C_2 \amp = 0
+\end{align*}
+</div></div> <div class="para logical" id="p-922">
+<div class="para">Solving these equations gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_1=\frac{1}{5}, \hspace{5mm} C_2=-\frac{3}{5}
+\end{equation*}
+</div>
+<div class="para">and so a particular solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x_p(t)=\frac{1}{5}\sin(2t)-\frac{3}{5}\cos(2t)
+\end{equation*}
+</div>
+<div class="para">Combining the particular solution with the complementary solution gives the general solution</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t)=Ae^{-2t}+Be^{-4t}+\frac{1}{5}\sin(2t)-\frac{3}{5}\cos(2t)
+\end{equation*}
+</div>
+</div>
+</div></div></article><article class="example example-like" id="example-128"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.9</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-923">
+<div class="para">Solve the initial-value problem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+3y'=5e^{2x}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(0)=1,\hspace{5mm} y'(0)=-2
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like"><div class="para" id="p-924"><span class="process-math">\(y(x)=e^{-3x}+\dfrac{1}{2}e^{2x}-\dfrac{1}{2}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-114" id="solution-114"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-114"><div class="solution solution-like">
+<div class="para logical" id="p-925">
+<div class="para">To solve the initial-value problem we have to begin by finding the general solution to the DE. Since this DE is a non-homogeneous second order DE with constant coefficients we have to first find the general solution to the associated homogeneous DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+3y'=0
+\end{equation*}
+</div>
+<div class="para">The characteristic equation for this DE is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r^2+3r=0
+\end{equation*}
+</div>
+<div class="para">which has solutions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r=0, -3
+\end{equation*}
+</div>
+<div class="para">Thus the complementary solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_c(x)=A+Be^{-3x}
+\end{equation*}
+</div>
+<div class="para">For the particular solution try a function of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=Ce^{2x}
+\end{equation*}
+</div>
+<div class="para">Then</div>
+</div> <div class="para logical" id="p-926"><div class="displaymath process-math" id="md-110">
+\begin{align*}
+y_p'(x) \amp =2Ce^{2x}\\
+y_p''(x) \amp=4Ce^{2x}
+\end{align*}
+</div></div> <div class="para logical" id="p-927">
+<div class="para">For this to be a solution</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p''+3y_p'=5e^{2x}
+\end{equation*}
+</div>
+<div class="para">and so</div>
+</div> <div class="para logical" id="p-928"><div class="displaymath process-math" id="md-111">
+\begin{align*}
+4Ce^{2x}+3(2Ce^{2x}) \amp =5e^{2x}\\
+10Ce^{2x} \amp=5e^{2x}
+\end{align*}
+</div></div> <div class="para logical" id="p-929">
+<div class="para">On equating coefficients on both sides of this equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+10C=5\Rightarrow C=\frac{1}{2}
+\end{equation*}
+</div>
+<div class="para">Combining the complementary solution and this particular solution gives the general solution as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=A+Be^{-3x}+\frac{1}{2}e^{2x}
+\end{equation*}
+</div>
+<div class="para">On using the initial condition <span class="process-math">\(y(0)=1\)</span> we find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A+B=\frac{1}{2}
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'(x)=-3Be^{-3x}+e^{2x}
+\end{equation*}
+</div>
+<div class="para">on using the initial condition <span class="process-math">\(y'(0)=2\)</span> we find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=1
+\end{equation*}
+</div>
+<div class="para">Thus <span class="process-math">\(A=-\frac{1}{2}, B=1\)</span> and the solution to the initial-value problem is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=e^{-3x}+\frac{1}{2}e^{2x}-\frac{1}{2}
+\end{equation*}
+</div>
+</div>
+</div></div></article><div class="para" id="p-930">If the non-homogeneous term <span class="process-math">\(f\)</span> is itself a solution to the associated homogeneous DE then the form that we guess for the particular solution has to change. Guided by our experience from non-homogeneous first order constant coefficient DEs (see <a href="" class="xref" data-knowl="./knowl/Example_13_1_3.html" title="Example 13.3">Example 13.3</a>) what we try for the particular solution is to multiply the usual form by <span class="process-math">\(x\)</span> (or <span class="process-math">\(x^2\text{,}\)</span> <span class="process-math">\(x^3\)</span> etc. if necessary) so that no term in the particular solution is itself a solution to the homogeneous DE.</div>
+<article class="example example-like" id="example-129"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-931">
+<div class="para">Find the general solution to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2u}{dt^2}+\frac{du}{dt}-2u=e^t
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><div class="para" id="p-932"><span class="process-math">\(u(t)=Ae^t+Be^{-2t}+\dfrac{1}{3}te^t\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like">
+<div class="para logical" id="p-933">
+<div class="para">The general solution to the associated homogeneous DE, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2u}{dt^2}+\frac{du}{dt}-2u=0
+\end{equation*}
+</div>
+<div class="para">is the complementary solution to the given DE. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_c(t)=Ae^t+Be^{-2t}
+\end{equation*}
+</div>
+<div class="para">We can see here that the non-homogeneous term <span class="process-math">\(f(x)=e^x\)</span> is a solution to the homogeneous DE (put <span class="process-math">\(A=1\)</span> and <span class="process-math">\(B=0\)</span> into <span class="process-math">\(u_c(t)\)</span>). Obviously then, trying a particular solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_p(t)=Ce^t
+\end{equation*}
+</div>
+<div class="para">will not work. Thus we try instead a solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_p(t)=Cte^t
+\end{equation*}
+</div>
+<div class="para">For this function, using the product rule</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du_p}{dt}=Cte^t+Ce^t
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2u_p}{dt^2}=Cte^t+2Ce^t
+\end{equation*}
+</div>
+<div class="para">Substituting into the DE gives</div>
+</div> <div class="para logical" id="p-934"><div class="displaymath process-math" id="md-112">
+\begin{align*}
+(Cte^t+2Ce^t)+(Cte^t+Ce^t)-2(Cte^t) \amp =e^t\\
+3Ce^t \amp =e^t
+\end{align*}
+</div></div> <div class="para logical" id="p-935">
+<div class="para">Notice that the <span class="process-math">\(te^t\)</span> terms will cancel out and so on equating the coefficients of the <span class="process-math">\(e^t\)</span> terms gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=\frac{1}{3}
+\end{equation*}
+</div>
+<div class="para">Thus, a particular solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_p(t)=\frac{1}{3}te^t
+\end{equation*}
+</div>
+<div class="para">and hence the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(t)=Ae^t+Be^{-2t}+\frac{1}{3}te^t
+\end{equation*}
+</div>
+</div>
+</div></div></article><article class="example example-like" id="example-130"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-936">
+<div class="para">Solve the initial-value problem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+y'=x
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(0)=1,\hspace{5mm} y'(0)=1
+\end{equation*}
+</div>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><div class="para" id="p-937"><span class="process-math">\(y(x)=3-2e^{-x}+\dfrac{1}{2}x^2-x\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like">
+<div class="para logical" id="p-938">
+<div class="para">The associated homogeneous DE is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+y'=0
+\end{equation*}
+</div>
+<div class="para">Thus the complementary solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_c(x)=Ae^{-x}+B
+\end{equation*}
+</div>
+<div class="para">Since the non-homogeneous term is <span class="process-math">\(f(x)=x\)</span> the usual form that we would try for the particular solution would be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=C_1x+C_2
+\end{equation*}
+</div>
+<div class="para">However this contains a constant term and we can see from the complementary solution (put <span class="process-math">\(A=0\)</span>) that a constant will satisfy the homogeneous DE. Thus the constant term in the particular solution will not work and we must modify the particular solution. So instead try a particular solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=C_1x^2+C_2x
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+</div> <div class="para logical" id="p-939"><div class="displaymath process-math" id="md-113">
+\begin{align*}
+y_p'(x) \amp=2C_1x+C_2\\
+y_p''(x) \amp=2C_1
+\end{align*}
+</div></div> <div class="para" id="p-940">Substituting into the DE gives</div> <div class="para logical" id="p-941"><div class="displaymath process-math" id="md-114">
+\begin{align*}
+(2C_1)+(2C_1x+C_2) \amp =x\\
+(2C_1)x+(2C_1+C_2) \amp =x
+\end{align*}
+</div></div> <div class="para" id="p-942">Equating coefficients yields</div> <div class="para logical" id="p-943"><div class="displaymath process-math" id="md-115">
+\begin{align*}
+2C_1 \amp =1\\
+2C_1+C_2 \amp =0
+\end{align*}
+</div></div> <div class="para logical" id="p-944">
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_1=\frac{1}{2},\hspace{5mm} C_2=-1
+\end{equation*}
+</div>
+<div class="para">Thus, a particular solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=\frac{1}{2}x^2-x
+\end{equation*}
+</div>
+<div class="para">and hence the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=Ae^{-x}+B+\frac{1}{2}x^2-x
+\end{equation*}
+</div>
+<div class="para">To solve the initial-value problem we need the derivative of <span class="process-math">\(y\)</span> which is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'(x)=-Ae^{-x}+2x-1
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(y(0)=1\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A+B=1
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(y'(0)=1\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-A-1=1
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=-2,\hspace{5mm} B=3
+\end{equation*}
+</div>
+<div class="para">and the solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=3-2e^{-x}+\frac{1}{2}x^2-x
+\end{equation*}
+</div>
+</div>
+</div></div></article><section class="exercises" id="exercises-27"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-77"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para logical" id="p-945">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+3y'-10y=10x^2+4x
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-78"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para logical" id="p-946">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r''+r=\sin(x)
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-79"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para logical" id="p-947">
+<div class="para">Solve the initial value problem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''-y'-6y=\sinh(x),\hspace{5mm}y(0)=1,\hspace{5mm}y'(0)=0
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-80"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para logical" id="p-948">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u''+u'=xe^x+3\sin(x)
+\end{equation*}
+</div>
+</div></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Differential_Equations_4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="Differential_Equations_6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

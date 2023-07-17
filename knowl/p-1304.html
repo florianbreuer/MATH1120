@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(w_n\)</span> denote the number of people in the town who are well after <span class="process-math">\(n\)</span> months and let <span class="process-math">\(s_n\)</span> denote the number of people in the town who are sick after <span class="process-math">\(n\)</span> months. Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+w_0 \amp = 49000, \, \, s_0 = 2000 \, \text{ and}\\
+w_n \amp = \frac{3}{4}w_{n-1} + \frac{1}{2} s_{n-1}, \, \, s_n = \frac{1}{4} w_{n-1} + \frac{1}{2} s_{n-1}\text{,}
+\end{align*}
+</div>
+<div class="para">or in matrix notation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{w_n} = A \mathbf{w_{n-1}}, \, \, \mathbf{w_0} = \begin{pmatrix} 49000 \\ 2000 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{w_n} = \begin{pmatrix} w_n \\ s_n \end{pmatrix}, \, \, A = \begin{pmatrix} 3/4 \amp 1/2 \\ 1/4 \amp 1/2 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{w_n} = A \mathbf{w_{n-1}} = A \left( A \mathbf{w_{n-2}} \right) = A \left( A \left( A \mathbf{w_{n-3}} \right) \right) = \ldots = A^n \mathbf{w_0}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus we need to calculate powers of <span class="process-math">\(A\text{.}\)</span> The eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(1\)</span> and <span class="process-math">\(1/4\)</span> with corresponding eigenvectors <span class="process-math">\(\begin{pmatrix} 2 \\ 1 \end{pmatrix}\)</span> and <span class="process-math">\(\begin{pmatrix} -1 \\ 1 \end{pmatrix}\text{,}\)</span> and so</div>
+<div class="displaymath process-math">
+\begin{align*}
+A^n \amp = P D^n P^{-1}\\
+\amp = \begin{pmatrix} 2 \amp -1 \\ 1 \amp 1 \end{pmatrix} \begin{pmatrix} 1^n \amp 0 \\ 0 \amp (1/4)^n \end{pmatrix} \dfrac{1}{3} \begin{pmatrix} 1 \amp 1 \\ -1 \amp 2 \end{pmatrix}\\
+\amp = \dfrac{1}{3} \begin{pmatrix} 2+(1/4)^n \amp 2-2(1/4)^n \\ 1-(1/4)^n \amp 1+2(1/4)^n \end{pmatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">Notice that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{n \to \infty} A^n \amp = \lim_{n \to \infty} \dfrac{1}{3} \begin{pmatrix} 2+(1/4)^n \amp 2-2(1/4)^n \\ 1-(1/4)^n \amp 1+2(1/4)^n \end{pmatrix}\\
+\amp = \dfrac{1}{3} \begin{pmatrix} 2 \amp 2 \\ 1 \amp 1 \end{pmatrix}
+\end{align*}
+</div>
+<div class="para">so that as <span class="process-math">\(n \to \infty\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w_n \to \dfrac{1}{3} \begin{pmatrix} 2 \amp 1 \\ 1 \amp 1 \end{pmatrix} \begin{pmatrix} 49000 \\ 2000 \end{pmatrix} = \begin{pmatrix} 34000 \\ 17000 \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">We conclude that the long term prognosis for the town is that there will be twice as many well people as sick people.</div>
+</div>
+<span class="incontext"><a href="Linear_Algebra_6.html#p-1304" class="internal">in-context</a></span>
+</body>
+</html>

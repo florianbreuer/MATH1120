@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">20.8.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Here the eigenvalues of <span class="process-math">\(A\)</span> are complex with <span class="process-math">\(\lambda_1 = 2+3i\)</span> and <span class="process-math">\(\lambda_2 = 2-3i\text{.}\)</span> The eigenvector associated with <span class="process-math">\(\lambda_1\)</span> is <span class="process-math">\(\mathbf{v_1} = \begin{pmatrix} -5 \\ 1+3i \end{pmatrix}\text{.}\)</span> Thus, one solution to the system is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Fig-Coupled_DEs_Solutions_Plotted_3.html">
+\begin{equation*}
+\mathbf{x} = e^{(2+3i)t} \begin{pmatrix} -5 \\ 1+3i \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Simplifying this solution using Euler’s equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Fig-Coupled_DEs_Solutions_Plotted_3.html">
+\begin{equation*}
+\mathbf{x} = e^{2t} \left \{ \begin{pmatrix} -5\cos(3t) \\ \cos(3t) - 3 \sin(3t) \end{pmatrix} + i \begin{pmatrix} -5\sin(3t) \\ \sin(3t) + 3\cos(3t) \end{pmatrix} \right \}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since we know that both the real part and the imaginary part are solutions to the system we know that the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Fig-Coupled_DEs_Solutions_Plotted_3.html">
+\begin{equation*}
+\mathbf{x} = C_1 e^{2t} \begin{pmatrix} -5\cos(3t) \\ \cos(3t) - 3 \sin(3t) \end{pmatrix} + C_2 e^{2t} \begin{pmatrix} -5\sin(3t) \\ \sin(3t) + 3\cos(3t) \end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/Fig-Coupled_DEs_Solutions_Plotted_3.html" title="Figure 20.9">Figure 20.9</a> shows a plot of this solution when <span class="process-math">\(C_1 = C_2 = 1\text{.}\)</span>
+</div>
+</div> <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./LinearAlgebra/Images/6/Fig3-solution_curves_plotted_3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">20.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para">Note the solutions to the system are periodic with the period determined from the imaginary part of the eigenvalue. However, since the real part of the eigenvalue is positive the amplitude of the solutions grows without bound.</div>
+</div>
+<span class="incontext"><a href="Linear_Algebra_6.html#solution-168" class="internal">in-context</a></span>
+</body>
+</html>

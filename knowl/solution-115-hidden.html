@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">The general solution to the associated homogeneous DE, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2u}{dt^2}+\frac{du}{dt}-2u=0
+\end{equation*}
+</div>
+<div class="para">is the complementary solution to the given DE. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_c(t)=Ae^t+Be^{-2t}
+\end{equation*}
+</div>
+<div class="para">We can see here that the non-homogeneous term <span class="process-math">\(f(x)=e^x\)</span> is a solution to the homogeneous DE (put <span class="process-math">\(A=1\)</span> and <span class="process-math">\(B=0\)</span> into <span class="process-math">\(u_c(t)\)</span>). Obviously then, trying a particular solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_p(t)=Ce^t
+\end{equation*}
+</div>
+<div class="para">will not work. Thus we try instead a solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_p(t)=Cte^t
+\end{equation*}
+</div>
+<div class="para">For this function, using the product rule</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{du_p}{dt}=Cte^t+Ce^t
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d^2u_p}{dt^2}=Cte^t+2Ce^t
+\end{equation*}
+</div>
+<div class="para">Substituting into the DE gives</div>
+</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+(Cte^t+2Ce^t)+(Cte^t+Ce^t)-2(Cte^t) \amp =e^t\\
+3Ce^t \amp =e^t
+\end{align*}
+</div></div> <div class="para logical">
+<div class="para">Notice that the <span class="process-math">\(te^t\)</span> terms will cancel out and so on equating the coefficients of the <span class="process-math">\(e^t\)</span> terms gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=\frac{1}{3}
+\end{equation*}
+</div>
+<div class="para">Thus, a particular solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u_p(t)=\frac{1}{3}te^t
+\end{equation*}
+</div>
+<div class="para">and hence the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(t)=Ae^t+Be^{-2t}+\frac{1}{3}te^t
+\end{equation*}
+</div>
+</div>
+</div></body>
+</html>

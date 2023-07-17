@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><div class="solution solution-like">
+<div class="para logical">
+<div class="para">The eigenvalues, <span class="process-math">\(\lambda\text{,}\)</span> of <span class="process-math">\(A\)</span> satisfy the characteristic equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A-\lambda I)=0
+\end{equation*}
+</div>
+<div class="para">Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A-\lambda I=\begin{pmatrix} 2\amp 1 \\ 1\amp 2 \end{pmatrix}-\lambda \begin{pmatrix} 1\amp 0 \\ 0\amp 1 \end{pmatrix}=\begin{pmatrix} 2-\lambda \amp 1 \\ 1\amp 2-\lambda \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">the characteristic equation is</div>
+<div class="displaymath process-math">
+\begin{align*}
+\det\begin{pmatrix} 2-\lambda \amp 1 \\ 1\amp 2-\lambda \end{pmatrix} \amp =0\\
+(2-\lambda)^2-1 \amp =0\\
+\lambda^2-4\lambda+3 \amp =0
+\end{align*}
+</div>
+<div class="para">Thus the eigenvalues for <span class="process-math">\(A\)</span> are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lambda=1 \textrm{ and } \lambda=3
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">To find the eigenvectors associated with each of these eigenvalues we follow the procedure illustrated in <a href="" class="xref" data-knowl="./knowl/Ex-Find_all_eigenvectors_given_eigenvalue.html" title="Example 19.5">Example 19.5</a>, i.e. solve the homogeneous system of linear equations</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Ex-Find_all_eigenvectors_given_eigenvalue.html">
+\begin{equation*}
+(A-\lambda I)\mathbf{x}=\mathbf{0}
+\end{equation*}
+</div>
+<div class="para">for each eigenvalue.</div>
+</div> <div class="para logical">
+<div class="para">When <span class="process-math">\(\lambda=1\)</span> the augmented matrix and its reduced row echelon form are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} 1 \amp 1 \amp 0 \\ 1 \amp 1 \amp 0 \end{pmatrix} \sim \begin{pmatrix} 1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix}  \begin{matrix} \\ \hspace{5mm} R_2'=R_2-R_1 \end{matrix}
+\end{equation*}
+</div>
+<div class="para">Thus, the eigenvectors take the form</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathbf{x} \amp =\begin{pmatrix}x_1 \\ x_2\end{pmatrix} \textrm{ where } x_1+x_2=0\\
+\Rightarrow \mathbf{x} \amp =\begin{pmatrix} -t \\ t \end{pmatrix}=t\begin{pmatrix} -1 \\ 1 \end{pmatrix} 
+\end{align*}
+</div>
+<div class="para">When <span class="process-math">\(\lambda=3\)</span> the augmented matrix and its reduced row echelon form are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} -1 \amp 1 \amp 0 \\ 1 \amp -1 \amp 0 \end{pmatrix} \sim \begin{pmatrix} -1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix}  \begin{matrix} \\ \hspace{5mm} R_2'=R_2+R_1 \end{matrix}
+\end{equation*}
+</div>
+<div class="para">Thus, the eigenvectors take the form</div>
+<div class="displaymath process-math">
+\begin{align*}
+\mathbf{x} \amp =\begin{pmatrix}x_1 \\ x_2\end{pmatrix} \textrm{ where } -x_1+x_2=0\\
+\Rightarrow \mathbf{x} \amp =\begin{pmatrix} t \\ t \end{pmatrix}=t\begin{pmatrix} 1 \\ 1 \end{pmatrix} 
+\end{align*}
+</div>
+<div class="para">As always, you can very easily check that these vectors are indeed eigenvectors by performing the matrix multiplication <span class="process-math">\(A\mathbf{x}\text{.}\)</span>
+</div>
+</div> <div class="para">As an aside, we can get some geometric insight if we consider <span class="process-math">\(A\)</span> as the matrix of a plane transformation, (even though <span class="process-math">\(A\)</span> isn’t the matrix for any well known transformation). <a href="" class="xref" data-knowl="./knowl/Fig-Transformation_visualised.html" title="Figure 19.8">Figure 19.8</a> shows the result of applying <span class="process-math">\(A\)</span> to a square centred on the origin. <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./LinearAlgebra/Images/5/figure2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">19.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Informally, the effect of <span class="process-math">\(A\)</span> is to pull the square out along the diagonal joining vertices <span class="process-math">\(B\)</span> and <span class="process-math">\(D\text{.}\)</span> Thus vectors along this diagonal will be mapped to scalar multiples of themselves while vectors along the diagonal joining vertices <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> will be left unchanged.</div>
+</div></body>
+</html>

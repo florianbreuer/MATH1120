@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">13.11.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">The associated homogeneous DE is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y''+y'=0
+\end{equation*}
+</div>
+<div class="para">Thus the complementary solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_c(x)=Ae^{-x}+B
+\end{equation*}
+</div>
+<div class="para">Since the non-homogeneous term is <span class="process-math">\(f(x)=x\)</span> the usual form that we would try for the particular solution would be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=C_1x+C_2
+\end{equation*}
+</div>
+<div class="para">However this contains a constant term and we can see from the complementary solution (put <span class="process-math">\(A=0\)</span>) that a constant will satisfy the homogeneous DE. Thus the constant term in the particular solution will not work and we must modify the particular solution. So instead try a particular solution of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=C_1x^2+C_2x
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+y_p'(x) \amp=2C_1x+C_2\\
+y_p''(x) \amp=2C_1
+\end{align*}
+</div></div> <div class="para">Substituting into the DE gives</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+(2C_1)+(2C_1x+C_2) \amp =x\\
+(2C_1)x+(2C_1+C_2) \amp =x
+\end{align*}
+</div></div> <div class="para">Equating coefficients yields</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+2C_1 \amp =1\\
+2C_1+C_2 \amp =0
+\end{align*}
+</div></div> <div class="para logical">
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C_1=\frac{1}{2},\hspace{5mm} C_2=-1
+\end{equation*}
+</div>
+<div class="para">Thus, a particular solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y_p(x)=\frac{1}{2}x^2-x
+\end{equation*}
+</div>
+<div class="para">and hence the general solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=Ae^{-x}+B+\frac{1}{2}x^2-x
+\end{equation*}
+</div>
+<div class="para">To solve the initial-value problem we need the derivative of <span class="process-math">\(y\)</span> which is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'(x)=-Ae^{-x}+2x-1
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(y(0)=1\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A+B=1
+\end{equation*}
+</div>
+<div class="para">Using <span class="process-math">\(y'(0)=1\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-A-1=1
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=-2,\hspace{5mm} B=3
+\end{equation*}
+</div>
+<div class="para">and the solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=3-2e^{-x}+\frac{1}{2}x^2-x
+\end{equation*}
+</div>
+</div>
+</div>
+<span class="incontext"><a href="Differential_Equations_5.html#solution-116" class="internal">in-context</a></span>
+</body>
+</html>

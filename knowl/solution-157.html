@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="solution solution-like">
+<h4 class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">19.5.1</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">An eigenvector, <span class="process-math">\(\mathbf{x}\text{,}\)</span> associated with the eigenvalue <span class="process-math">\(\lambda=5\)</span> will satisfy the system of linear equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\mathbf{x}=5\mathbf{x}
+\end{equation*}
+</div>
+<div class="para">which can be rewritten as</div>
+<div class="displaymath process-math">
+\begin{align*}
+\begin{pmatrix} 1 \amp 2 \\ 4 \amp 3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} -5\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \amp =\begin{pmatrix} 0 \\ 0 \end{pmatrix}\\
+\begin{pmatrix} x_1+2x_2-5x_1 \\ 4x_1+3x_2-5x_2 \end{pmatrix} \amp =\begin{pmatrix} 0 \\ 0 \end{pmatrix}\\
+\begin{pmatrix} -4 \amp 2 \\ 4 \amp -2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \amp =\begin{pmatrix} 0 \\ 0 \end{pmatrix}
+\end{align*}
+</div>
+<div class="para">Now, using Gauss Jordon elimination to solve this homogeneous system</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} -4 \amp 2 \amp 0 \\ 4 \amp -2 \amp 0 \end{pmatrix} \sim \begin{pmatrix} 2 \amp -1 \amp 0 \\ 0 \amp 0 \amp 0 \end{pmatrix}  \begin{matrix} \hspace{5mm} R_1'=\frac{R_1}{-2} \\ \hspace{5mm} R_2'=R_2+R_1 \end{matrix}
+\end{equation*}
+</div>
+<div class="para">we see that this system has an infinite number of solutions which take the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{x}=\begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \textrm{ where } 2x_1-x_2=0
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{x}=\begin{pmatrix} t \\ 2t \end{pmatrix}=t\begin{pmatrix} 1 \\ 2 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">Thus the eigenvectors associated with the eigenvalue <span class="process-math">\(\lambda=5\)</span> are all scalar multiples of the vector <span class="process-math">\(\begin{pmatrix} 1 \amp 2 \end{pmatrix}^T\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Of course, it is a good idea to check this result. Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\mathbf{x}=\begin{pmatrix} 1 \amp 2 \\ 4 \amp 3 \end{pmatrix} \begin{pmatrix} 1 \\ 2 \end{pmatrix}=\begin{pmatrix} 5 \\ 10 \end{pmatrix}=5\begin{pmatrix} 1 \\ 2 \end{pmatrix}=\lambda\mathbf{x}
+\end{equation*}
+</div>
+<div class="para">it is correct.</div>
+</div>
+</div>
+<span class="incontext"><a href="Linear_Algebra_5.html#solution-157" class="internal">in-context</a></span>
+</body>
+</html>

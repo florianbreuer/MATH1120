@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CA1: Maclaurin Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
+                       linked: true,
+                       languages: ['sage'],
+                       evalButtonText: 'Evaluate (Sage)'});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2</span></a></h1>
+<p class="byline">Edited by: Florian Breuer</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Part-Calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Calculus.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="Calculus_2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Integral-test" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Integral test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Absolute-conditional-convergence" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Absolute vs. conditional convergence</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Convergence-complex" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Convergence in the complex plane</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#subsec-Euler-product" class="internal"><span class="codenumber">2.7.4</span> <span class="title">The Euler product of the zeta function</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#Generating-New-Series-from-Known-Series" class="internal"><span class="codenumber">2.8</span> <span class="title">OLD STUFF - Generating New Series from Known Series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-1" class="internal"><span class="codenumber">2.8</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#Taylor_Series" class="internal"><span class="codenumber">2.9</span> <span class="title">Taylor Series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-2" class="internal"><span class="codenumber">2.9</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="chapter" id="Chap-Calculus_1"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span>
+</h2>
+<section class="section" id="Sec-Introduction"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Introduction</span>
+</h3>
+<aside class="aside aside-like" id="aside-1"><h4 class="heading"><span class="title">Faster multiplication.</span></h4>
+<div class="para" id="p-2">There are actually multiplication algorithms which are significantly faster than long multiplication. Long multiplication of of two <span class="process-math">\(n\)</span>-digit numbers will typically take <span class="process-math">\(n^2\)</span> single-digit multiplications (and another <span class="process-math">\(n\)</span> <span class="process-math">\(n\)</span>-digit additions). The <a class="external" href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/" target="_blank">fastest known algorithm</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <span class="process-math">\(n\ln(n)\text{,}\)</span> which for large value of <span class="process-math">\(n\)</span> is a significant improvement.</div></aside><div class="para" id="p-3">Have you ever wondered how computers actually calculate things? Computers can only ever do finitely many steps with finitely many bits of information. The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example <span class="process-math">\(x=0.3\)</span> and <span class="process-math">\(y=1.744\text{.}\)</span> You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute <span class="process-math">\(x+y = 2.044\)</span> in a finite number of steps. But then how does it calculate <span class="process-math">\(e^x\)</span> or <span class="process-math">\(\sin(x)\text{,}\)</span> or other non-polynomial functions?</div>
+<div class="para logical" id="p-4">
+<div class="para">The solution is to <em class="emphasis">approximate</em> the function using a <em class="emphasis">power series</em>. For example, the computer approximates <span class="process-math">\(e^{0.3}\)</span> by adding finitely many terms of</div>
+<div class="displaymath process-math" id="eq-e0.3">
+\begin{equation}
+e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots \tag{1.1}
+\end{equation}
+</div>
+<div class="para">in other words, it approximates the <em class="emphasis">function</em> <span class="process-math">\(e^x\)</span> via the <em class="emphasis">power series</em>
+</div>
+<div class="displaymath process-math" id="md-1">
+\begin{align*}
+e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  \\
+\amp = \sum_{n=0}^{\infty} \frac{1}{n!}x^n.
+\end{align*}
+</div>
+</div>
+<aside class="aside aside-like" id="aside-2"><h4 class="heading"><span class="title">Factorials.</span></h4>
+<div class="para logical" id="p-5">
+<div class="para">Here <span class="process-math">\(n! = 1\cdot 2 \cdot 3 \cdots n\)</span> is <span class="process-math">\(n\)</span> <dfn class="terminology">factorial</dfn>. It grows really fast:</div>
+<div class="displaymath process-math" id="md-2">
+\begin{align*}
+0! \amp = 1\\
+1! \amp = 1\\
+2! \amp = 2\\
+3! \amp = 6\\
+4! \amp = 24\\
+5! \amp = 120\\
+6! \amp = 720\\
+\amp \vdots \\
+10! \amp = 3628800 
+\end{align*}
+</div>
+<div class="para">The factorial satifies the useful property that <span class="process-math">\((n+1)! = (n+1)n!\text{,}\)</span> meaning that fractions with factorials in the numerator and denominator will often allow lots of cancellation.</div>
+</div>
+<div class="para" id="p-6">
+<dfn class="terminology">Challenge:</dfn> Determine the number of zeroes at the end of the decimal expression for <span class="process-math">\(100!\)</span>
+</div></aside><div class="para" id="p-7">How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. The long answer is much more complicated, and is the subject of a whole other area of Mathematics called <em class="emphasis">Numerical Analysis</em>.</div>
+<div class="para" id="p-8">How does the computer know to use this particular series? And what even <em class="emphasis">is</em> a series? That’s what we’ll learn in this chapter!</div></section><section class="section" id="Sec-Infinite_Series"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Infinite Series</span>
+</h3>
+<div class="para" id="p-9">Let’s look carefully at the calculation <a href="" class="xref" data-knowl="./knowl/eq-e0.3.html" title="Equation 1.1">(1.1)</a>. We will add the terms one by one and keep an eye on the cumulative total, more formally known as the <dfn class="terminology">partial sums</dfn>:</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines">Number of Terms</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Partial Sum</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">Value</th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1+0.3\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1.3\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1+0.3+\dfrac{0.3^2}{2!}\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1.345\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1+0.3+\dfrac{0.3^2}{2!}+\dfrac{0.3^3}{3!}\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1.3495\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1+0.3+\dfrac{0.3^2}{2!}+\dfrac{0.3^3}{3!}+\dfrac{0.3^4}{4!}\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1.3498375\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1+0.3+\dfrac{0.3^2}{2!}+\dfrac{0.3^3}{3!}+\dfrac{0.3^4}{4!}+\dfrac{0.3^5}{5!}\)</span></td>
+<td class="l m b1 r1 l0 t0 lines"><span class="process-math">\(1.3498775\)</span></td>
+</tr>
+</table></div>
+<div class="para" id="p-10">If you’re viewing this online, you can compute this yourself by running the following Sage cell:</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-1"><script type="text/x-sage">x = 0.3
+answer = 0
+for k in range(10):
+    answer = answer + x^k/factorial(k)
+    print(n(answer))
+</script></pre>
+<div class="para logical" id="p-11">
+<div class="para">This computation is actually quite inefficient, since we’re calculating each term from scratch. Notice that the <span class="process-math">\(k^{\mathrm{th}}\)</span> term is obtained by multiplying the previous term by <span class="process-math">\(\frac{x}{k}\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{x^k}{k!} = \left(\frac{x^{k-1}}{(k-1)!}  \right) \cdot \frac{x}{k}.
+\end{equation*}
+</div>
+<div class="para">Firstly, this allows us to calculate the sum more efficiently: <aside class="aside aside-like" id="aside-3"><h4 class="heading"><span class="title">Efficiency.</span></h4>
+<div class="para" id="p-12">We do we care about efficiency? Aren’t modern computers plenty fast enough? For this example, yes. But there are often cases where we need to compute efficiently, for example in mobile devices with limited power, or calculations that need to be repeated millions of times per second, for example in computer graphics.</div></aside> <pre class="ptx-sagecell sagecell-sage" id="sage-2"><script type="text/x-sage">N = 10        # the highest power of x we will include in our sum
+x = 0.3
+t = 1         # the zeroth term
+answer = 1    # we start with the first term, then compute additional terms:
+for k in range(1, N+1):
+    t = t * x / k    # calculate the kth term
+    answer = answer +  t
+    print('k = ', k, '; partial sum = ', n(answer))
+</script></pre> Secondly, as we add more terms, <span class="process-math">\(k\)</span> gets ever bigger while <span class="process-math">\(x\)</span> stays the same, so the multiplier <span class="process-math">\(\frac{x}{k}\)</span> we use to get from one term to the next gets ever smaller. This means that the terms shrink to zero exponentially and we will see in the next chapter <dfn class="terminology">LINK!</dfn> that the sum <em class="emphasis">converges</em> for every value of <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-13">In the above calculation, we have only computed finitely many terms, which is all one ever needs for applications. Mathematically, however, <a href="" class="xref" data-knowl="./knowl/eq-e0.3.html" title="Equation 1.1">(1.1)</a> is an <em class="emphasis">infinite</em> series, and its value represents the sum of all infinitely many terms. What can this mean?</div>
+<div class="para logical" id="p-14">
+<div class="para">We have seen that the partial sums tend to <span class="process-math">\(1.34985880757600\ldots\text{,}\)</span> and this <em class="emphasis">limit</em> is defined to the be sum of the infinite series:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{0.3} = \sum_{k=0}^{\infty} \frac{(0.3)^k}{k!} := \lim_{N\rightarrow\infty} \sum_{k=0}^{N} \frac{(0.3)^k}{k!}
+\end{equation*}
+</div>
+</div>
+<article class="definition definition-like" id="def-series"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-15">
+<div class="para">Given a <dfn class="terminology">sequence</dfn> <span class="process-math">\(a_0, a_1, a_2, \ldots\)</span> of real numbers (the terms), we define the <dfn class="terminology">series</dfn>
+</div>
+<div class="displaymath process-math" id="eq-series">
+\begin{equation}
+\sum_{k=0}^{\infty} a_k := \lim_{N\rightarrow\infty} \sum_{k=0}^N a_k\tag{1.2}
+\end{equation}
+</div>
+<div class="para">to be the limit of the partial sums (running totals) of the terms, provided that this limit exists.</div>
+</div> <div class="para" id="p-16">If the limit <a href="" class="xref" data-knowl="./knowl/eq-series.html" title="Equation 1.2">(1.2)</a> exists, we say that the series <dfn class="terminology">converges</dfn>, otherwise it <dfn class="terminology">diverges.</dfn>
+</div></article><div class="para" id="p-17">We will learn more about convergence and divergence in the next chapter. For now, we’re interested in using infinite series to represent useful functions, like <span class="process-math">\(e^x\text{,}\)</span> <span class="process-math">\(\sin(x)\)</span> or <span class="process-math">\(\cos(x)\text{.}\)</span>
+</div></section><section class="section" id="sec-Power-Series"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Power Series</span>
+</h3>
+<div class="para logical" id="p-18">
+<div class="para">Our first example above shows that the function <span class="process-math">\(e^x\)</span> can be expressed as an infinite series in the following form:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-exp-plot.html ./knowl/eq-exp-series.html" id="eq-exp-series">
+\begin{equation}
+e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{k=0}^{\infty} \frac{x^k}{k!}.\tag{1.3}
+\end{equation}
+</div>
+<div class="para">Note that each term consists of a <em class="emphasis">coefficient</em> multiplied by some power of the variable, so this is an example of what we call a <dfn class="terminology">power series</dfn>. Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We’re very comfortable with polynomials. Figure <a href="" class="xref" data-knowl="./knowl/fig-exp-plot.html" title="Figure 1.2">Figure 1.2</a> shows how the first few partial sums of the series <a href="" class="xref" data-knowl="./knowl/eq-exp-series.html" title="Equation 1.3">(1.3)</a> approximate the function <span class="process-math">\(e^x\text{.}\)</span> <figure class="figure figure-like" id="fig-exp-plot"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Calculus/Images/1/exp-power-series-plot.svg" class="contained" alt="A plot of \(y=e^x\) together with plots of the partial sums of its power series of degrees \(0, 1, 2\) and \(3\text{.}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2<span class="period">.</span></span><span class="space"> </span>Approximation to <span class="process-math">\(e^x\)</span> by various partial sums of its power series</figcaption></figure> <aside class="aside aside-like" id="aside-4"><div class="para" id="p-19">Power series aren’t the only way to represent interesting functions: there are also other types of series, infinite products, continued fractions...</div></aside>
+</div>
+</div>
+<div class="para" id="p-20">Assuming for now that the series <a href="" class="xref" data-knowl="./knowl/eq-exp-series.html" title="Equation 1.3">(1.3)</a> converges, how do we know this is even true? How does one find such a series?</div></section><section class="section" id="sec-Maclaurin-Series"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span>
+</h3>
+<div class="para logical" id="p-21">
+<div class="para">Let’s suppose for the moment that a power series representation for a function <span class="process-math">\(f(x)\)</span> <em class="emphasis">exists</em>, but we don’t know what the coefficients should be:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-fx-power-series.html" id="eq-fx-power-series">
+\begin{equation}
+f(x) = c_0 + c_1x + c_2x^2 + \cdots.\tag{1.4}
+\end{equation}
+</div>
+<div class="para">We can find the value of the first coefficient by the clever trick of plugging <span class="process-math">\(x=0\)</span> into <a href="" class="xref" data-knowl="./knowl/eq-fx-power-series.html" title="Equation 1.4">(1.4)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-fx-power-series.html">
+\begin{equation*}
+f(0) = c_0 + c_10 + c_20^2 + c\dots = c_0.
+\end{equation*}
+</div>
+<div class="para">What about the next coefficient? We use an even cleverer trick: <em class="emphasis">differentiating</em> the series kills the first coefficient and decreases the exponent in all other coefficients:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-fx-power-series.html" id="md-3">
+\begin{align*}
+f'(x) \amp = \frac{d}{dx} \big( c_0 + c_1x + c_2x^2 + c_3x^3 + \cdots \big) \\
+\amp = c_1 + 2c_2x + 3c_3x^2 + \cdots.
+\end{align*}
+</div>
+<div class="para">Plugging <span class="process-math">\(x=0\)</span> into this gives us <span class="process-math">\(c_1 = f'(0)\text{.}\)</span> Let’s differentiate another time:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-fx-power-series.html" id="md-4">
+\begin{align*}
+f''(x) \amp = \frac{d}{dx} \big( c_1 + 2c_2x + 3c_3x^2 + 4c_4x^3 + \cdots \big)\\
+\amp = 2c_2 + 6c_3 + 12 c_4 + \cdots\\
+\Rightarrow f''(0) \amp = 2c_2
+\end{align*}
+</div>
+<div class="para">so <span class="process-math">\(c_2 = \frac{1}{2}f''(0)\text{,}\)</span> next <span class="process-math">\(c_3 = \frac{1}{6}f'''(0)\text{,}\)</span> etc. In general, we find</div>
+</div>
+<article class="theorem theorem-like" id="thm-Maclaurin"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="creator">(Maclaurin)</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-22">
+<div class="para">Let <span class="process-math">\(I\)</span> be an open interval, and suppose that the power series <a href="" class="xref" data-knowl="./knowl/eq-fx-power-series.html" title="Equation 1.4">(1.4)</a> converges to <span class="process-math">\(f(x)\)</span> for <span class="process-math">\(x\in I\text{.}\)</span> Then, for <span class="process-math">\(x\in I\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-fx-power-series.html" id="eq-Maclaurin">
+\begin{equation}
+f(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(0)}{k!}x^k.\tag{1.5}
+\end{equation}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-1"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-1"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><div class="para" id="p-23">Use induction on <span class="process-math">\(k\)</span> to prove that the expression in <a href="" class="xref" data-knowl="./knowl/thm-Maclaurin.html" title="Theorem 1.3">Theorem 1.3</a> is correct.</div></article></div>
+<div class="para" id="p-24">The series expansion <a href="" class="xref" data-knowl="./knowl/eq-Maclaurin.html" title="Equation 1.5">(1.5)</a> is called the <dfn class="terminology">Maclaurin series</dfn> for the function <span class="process-math">\(f(x)\text{.}\)</span>
+</div>
+<div class="para" id="p-25">So now that we know how to create power series for functions using their derivatives, let’s do the same for two more important functions:</div>
+<article class="example example-like" id="example-1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-26">Compute the Maclaurin series for <span class="process-math">\(\sin(x)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like"><div class="para logical" id="p-27"><div class="displaymath process-math">
+\begin{equation*}
+\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots 
+= \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{(2k+1)!}
+\end{equation*}
+</div></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<div class="para logical" id="p-28">
+<div class="para">We compute the derivatives of <span class="process-math">\(f(x)=\sin(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-5">
+\begin{align*}
+f(x) \amp = \sin(x) \amp  f'(x) \amp = \cos(x) \\
+f''(x) \amp = -\sin(x) \amp  f'''(x) \amp = -\cos(x) 
+\end{align*}
+</div>
+<div class="para">thereafter, the pattern repeats, so <span class="process-math">\(f^{(4)}(x) = \sin(x)\)</span> again, etc.</div>
+</div> <div class="para logical" id="p-29">
+<div class="para">Plugging in <span class="process-math">\(x=0\text{,}\)</span> we get</div>
+<div class="displaymath process-math" id="md-6">
+\begin{align*}
+f(0) \amp = 0 \amp  f'(0) \amp = 1 \\
+f''(0) \amp = 0 \amp  f'''(0) \amp = -1, \quad\text{etc.}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-30">
+<div class="para">Now we put it all together:</div>
+<div class="displaymath process-math" id="md-7">
+\begin{align*}
+f(x) \amp = f(0) + f'(0)x + \frac{f''(0)'x^2}{2!} + \cdots \\
+\amp = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \\
+\amp = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{(2k+1)!}. 
+\end{align*}
+</div>
+<div class="para">To get the last expression, note that the non-zero terms correspond to odd powers of <span class="process-math">\(x\text{,}\)</span> and odd numbers are of the form <span class="process-math">\(2k+1\text{.}\)</span> The <span class="process-math">\((-1)^k\)</span> then ensures the alternating signs.</div>
+</div>
+</div></div>
+</div></article><article class="example example-like" id="example-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-31">Compute the Maclaurin series for <span class="process-math">\(\cos(x)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like"><div class="para logical" id="p-32"><div class="displaymath process-math">
+\begin{equation*}
+\cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots 
+= \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k}}{(2k)!}
+\end{equation*}
+</div></div></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<div class="para logical" id="p-33">
+<div class="para">We compute the derivatives of <span class="process-math">\(f(x)=\cos(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-8">
+\begin{align*}
+f(x) \amp = \cos(x) \amp  f'(x) \amp = -\sin(x) \\
+f''(x) \amp = -\cos(x) \amp  f'''(x) \amp = \sin(x) 
+\end{align*}
+</div>
+<div class="para">thereafter, the pattern repeats, so <span class="process-math">\(f^{(4)}(x) = \cos(x)\)</span> again, etc.</div>
+</div> <div class="para logical" id="p-34">
+<div class="para">Plugging in <span class="process-math">\(x=0\text{,}\)</span> we get</div>
+<div class="displaymath process-math" id="md-9">
+\begin{align*}
+f(0) \amp = 1 \amp  f'(0) \amp = 0 \\
+f''(0) \amp = -1 \amp  f'''(0) \amp = 0, \quad\text{etc.}
+\end{align*}
+</div>
+</div> <div class="para logical" id="p-35">
+<div class="para">Now we put it all together:</div>
+<div class="displaymath process-math" id="md-10">
+\begin{align*}
+f(x) \amp = f(0) + f'(0)x + \frac{f''(0)'x^2}{2!} + \cdots \\
+\amp = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \\
+\amp = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k}}{(2k)!}. 
+\end{align*}
+</div>
+<div class="para">To get the last expression, note that the non-zero terms correspond to even powers of <span class="process-math">\(x\text{,}\)</span> and even numbers are of the form <span class="process-math">\(2k\text{.}\)</span> The <span class="process-math">\((-1)^k\)</span> then ensures the alternating signs.</div>
+</div>
+</div></div>
+</div></article><div class="para logical" id="p-36">
+<div class="para">We record the Maclaurin series we have found thus far:</div>
+<div class="displaymath process-math" id="md-11">
+\begin{align*}
+e^x \amp = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{k=0}^{\infty} \frac{x^k}{k!}\\
+\sin(x) \amp =  x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots 
+= \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{(2k+1)!} \\
+\cos(x) \amp =  1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots 
+= \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k}}{(2k)!}. 
+\end{align*}
+</div>
+</div></section><section class="section" id="sec-Eulers-Formula"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span>
+</h3>
+<div class="para" id="p-37">You may have noticed that the Maclaurin series for <span class="process-math">\(e^x, \sin(x)\)</span> and <span class="process-math">\(\cos(x)\)</span> all look very similar - the series for <span class="process-math">\(\sin(x) + \cos(x)\)</span> has exactly the same terms as the series for <span class="process-math">\(e^x\text{,}\)</span> except for the differences in signs.</div>
+<div class="para logical" id="p-38">
+<div class="para">It turns out we can fix these signs if we subsitute <span class="process-math">\(x = i\theta\text{,}\)</span> where <span class="process-math">\(i=\sqrt{-1}\)</span> is the imaginary unit. Using the fact that</div>
+<div class="displaymath process-math" id="md-12">
+\begin{align*}
+\amp i^0 = 1, \amp \amp i^1 = i, \amp \amp i^2 = -1, \amp \amp i^3 = -i, \amp \amp i^4 = i^0 = 1, \amp \amp i^5 = i^1 = i, \; \text{etc.} 
+\end{align*}
+</div>
+<div class="para">we find that</div>
+<div class="displaymath process-math" id="md-13">
+\begin{align*}
+e^{i\theta} \amp = 1 + i\theta + i^2\frac{\theta^2}{2!} + i^3\frac{\theta^3}{3!} + i^4\frac{\theta^4}{4!} + \cdots  \\
+\amp = \big[1 -  \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \cdots\big]
++ i\big[\theta -  \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots\big]\\
+\amp = \cos(\theta) + i\sin(\theta).
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-39">
+<div class="para">
+<article class="theorem theorem-like" id="thm-eulers-formula"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.7</span><span class="space"> </span><span class="creator">(Euler)</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-40">
+<div class="para">For <span class="process-math">\(\theta\in\mathbb{R}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{i\theta} = \cos(\theta) + i\sin(\theta).
+\end{equation*}
+</div>
+</div></article> In particular, if we set <span class="process-math">\(\theta = \pi\text{,}\)</span> we obtain the following amazing formula, which combines the five most important constants in Mathematics:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eqn-Euler.html" id="eqn-Euler">
+\begin{equation}
+e^{\pi i} + 1 = 0\tag{1.6}
+\end{equation}
+</div>
+<div class="para"><aside class="aside aside-like" id="aside-5"><h4 class="heading"><span class="title">The most beautiful formula.</span></h4>
+<div class="para" id="p-41">A survey at the 2006 International Congress of Mathematicians in Madrid, Spain, asked delegates from all over the world what they thought was the most beautiful mathematical formula. The winner, by far, was Euler’s formula <a href="" class="xref" data-knowl="./knowl/eqn-Euler.html" title="Equation 1.6">(1.6)</a>.</div></aside></div>
+</div></section><section class="section" id="sec-Maclaurin-Polynomials"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span>
+</h3>
+<div class="para" id="p-42">Now we have a method for obtaining power series expressions for functions. But these are infinite series, and for most applications we want to approximate our functions with finite polynomials. That’s really easy - we just cut off the series after a finite number of terms:</div>
+<div class="para" id="p-43"><article class="definition definition-like" id="def-Maclaurin-polynomial"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-44">
+<div class="para">The <dfn class="terminology">degree <span class="process-math">\(n\)</span> Maclaurin polynomial</dfn> of a function <span class="process-math">\(f(x)\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_n f(x) := f(0) + f'(0)x + \frac{f''(0)x^2}{2!} + \cdots + \frac{f^{(n)}x^n}{n!}.
+\end{equation*}
+</div>
+</div></article></div>
+<div class="para logical" id="p-45">
+<div class="para">Note that the degree <span class="process-math">\(n\)</span> Maclaurin polynomial will generally consist of <span class="process-math">\(n+1\)</span> terms. However, it will have degree less than <span class="process-math">\(n\)</span> if the coefficient of <span class="process-math">\(x^n\)</span> equals zero, for example</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T_3\cos(x) = 1 - \frac{1}{2}x^2.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-46">The degree 0 Maclaurin polynomial of <span class="process-math">\(f(x)\)</span> is not very interesting, it’s the just the constant function <span class="process-math">\(f(0)\text{.}\)</span>
+</div>
+<div class="para" id="p-47">You’ll recognise the degree 1 Maclaurin polynomial <span class="process-math">\(T_1f(x) = f(0) + f'(0)x\text{:}\)</span> its graph is the tangent to <span class="process-math">\(y=f(x)\)</span> at <span class="process-math">\(x=0\text{.}\)</span> We also call it the <dfn class="terminology">linear approximation</dfn> to <span class="process-math">\(f(x)\text{,}\)</span> it is the linear function that most closely approximates <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=0\text{.}\)</span>
+</div>
+<div class="para" id="p-48">Similarly, the degree 2 Maclaurin polynomial <span class="process-math">\(T_2f(x) = f(0) + f'(0)x + \frac{f''(0)}{2}x^2\)</span> is called the <dfn class="terminology">quadratic approximation</dfn> to <span class="process-math">\(f(x)\text{.}\)</span> It is the quadratic function closest to <span class="process-math">\(f(x)\)</span> near <span class="process-math">\(x=0\text{.}\)</span>
+</div>
+<div class="para" id="p-49">The following Sage cell let’s you plot the Maclaurin polynomials for <span class="process-math">\(e^x, \sin(x)\)</span> and <span class="process-math">\(\cos(x)\text{:}\)</span>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-3"><script type="text/x-sage">x   = var('x')
+x0  = 0
+
+@interact
+def _(order=slider([1 .. 12]),
+    f=selector([exp(x), sin(x), cos(x)])
+    ):
+    p = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$f(x) = '+latex(f)+'$')
+    dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
+    ft = f.taylor(x, x0, order)
+    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = r'$T_{%s}f(x)\;=\;%s$'%(order, latex(ft)))
+    G = dot + p + pt
+    G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
+    show(G, ymin=-2, ymax=2, figsize=5)
+</script></pre>
+<article class="remark remark-like" id="remark-1"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Computer algebra systems.</span>
+</h4> <div class="para" id="p-50">Computer Algebra Systems usually have a command for calculating Maclaurin series. For example, the following shows part of the output from a <a class="external" href="https://www.wolframalpha.com/" target="_blank">Wolfram Alpha</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a> query.</div> <figure class="figure figure-like" id="Fig-C1_WA_3"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/Calculus/Images/1/C1_WA_3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para" id="p-51">We have already seen Sage code to compute Maclaurin series, here is the simplest code:</div> <pre class="ptx-sagecell sagecell-sage" id="sage-4"><script type="text/x-sage">taylor(cos(x), x, 0, 10)
+</script></pre></article></section><section class="section" id="sec-Advanced-Topics"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.7</span> <span class="title">Advanced Topics</span>
+</h3>
+<section class="subsection" id="subsec-Computing-pi"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span>
+</h4>
+<div class="para logical" id="p-52">
+<div class="para">It’s not hard to show, using repeated differentiation, that the Maclaurin series for <span class="process-math">\(\arctan(x)\)</span> is</div>
+<div class="displaymath process-math" id="eqn-arctan">
+\begin{equation}
+\arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{2k+1}.\tag{1.7}
+\end{equation}
+</div>
+<div class="para">Since <span class="process-math">\(\arctan(1) = \frac{\pi}{4}\text{,}\)</span> this gives us an infinite series converging to <span class="process-math">\(\pi\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="eqn-pi1">
+\begin{equation}
+\pi = 4 - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \cdots.\tag{1.8}
+\end{equation}
+</div>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-5"><script type="text/x-sage">N = 100
+s = 0
+for k in range(N):
+    s = s + (-1)^k*4/(2*k+1)
+    print(n(s))
+</script></pre>
+<div class="para" id="p-53">As you can see from this computation, convergence is extremely slow. See how big you must make N in the above code before you get two correct digits after the decimal point.</div>
+<div class="para logical" id="p-54">
+<div class="para">One can compute <span class="process-math">\(\pi\)</span> much faster by using identities such as the following, due to John Machin (in 1706):</div>
+<div class="displaymath process-math" id="eqn-arctan2">
+\begin{equation}
+\frac{\pi}{4} = 4\arctan\frac{1}{5} - \arctan\frac{1}{239}.\tag{1.9}
+\end{equation}
+</div>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-6"><script type="text/x-sage">N = 10
+s = 0
+for k in range(N):
+    s = s + n( (-1)^k * ( (16*(1/5)^(2*k+1))/(2*k+1) - (4*(1/239)^(2*k+1))/(2*k+1) ), 200)
+    print(s)
+</script></pre>
+<div class="para logical" id="p-55">
+<div class="para">Modern algorithms to compute <span class="process-math">\(\pi\)</span> are more sophisticated and much faster still, see <a class="external" href="https://en.wikipedia.org/wiki/Pi" target="_blank"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Pi</code></a>. We mention only one method, the BBP (Bailey-Borwein-Plouffe) Algorithm:</div>
+<div class="displaymath process-math" id="eqn-BBP">
+\begin{equation}
+\pi = \sum_{k=0}^{\infty} \frac{1}{16^k} \left( 
+\frac{4}{8k+1} - \frac{2}{8k+4} - \frac{1}{8k+5} - \frac{1}{8k+6}
+\right)\tag{1.10}
+\end{equation}
+</div>
+<div class="para">This formula not only converges extremely quickly, but it also also you to compute specific hexadecimal digits of <span class="process-math">\(\pi\)</span> without first computing the previous digits.</div>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-7"><script type="text/x-sage">N = 10
+s = 0
+for k in range(N):
+    s = s + (1/16^k)*( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6) )
+    print(n(s, 200))
+</script></pre></section><section class="subsection" id="subsec-A-function-without-Maclaurin-series"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span>
+</h4>
+<div class="para logical" id="p-56">
+<div class="para">Consider the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = \begin{cases} e^{-1/x^2} \amp \text{if} \; x\neq 0 \\
+0 \amp \text{if} \; x=0. \end{cases}
+\end{equation*}
+</div>
+<div class="para">This function is well-defined and continuous at <span class="process-math">\(x=0\)</span> - you can compute the limit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x \rightarrow 0} e^{-1/x^2} = 0.
+\end{equation*}
+</div>
+</div>
+<figure class="figure figure-like" id="fig-exp-minus-1-over-x-squared"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Calculus/Images/1/exp-minus-one-over-x-square-plot.svg" role="img" class="contained" alt="Plot of \(y=e^{-1/x^2}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.11<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(e^{-1/x^2}\)</span></figcaption></figure><div class="para logical" id="p-57">
+<div class="para">One can show that this function is well-defined and differentiable, in fact for <span class="process-math">\(x\neq 0\)</span> we have (check this yourself):</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-exp-minus-1-over-x-squared.html" id="md-14">
+\begin{align*}
+\frac{d}{dx} f(x) \amp = \frac{2 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{3}} \\
+\frac{d^{ 2 }}{dx^{ 2 }} f(x) \amp = -\frac{6 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{4}} + \frac{4 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{6}}\\
+\frac{d^{ 3 }}{dx^{ 3 }} f(x) \amp = \frac{24 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{5}} - \frac{36 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{7}} 
++ \frac{8 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{9}} 
+\end{align*}
+</div>
+<div class="para">The plot in <a href="" class="xref" data-knowl="./knowl/fig-exp-minus-1-over-x-squared.html" title="Figure 1.11">Figure 1.11</a> is suspiciously flat near <span class="process-math">\(x=0\text{,}\)</span> and in fact we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-exp-minus-1-over-x-squared.html">
+\begin{equation*}
+\left.\frac{d^k}{dx^k}f(x)\right|_{x=0} = 0, \quad \text{for all} \; k \geq 0.
+\end{equation*}
+</div>
+<div class="para">Therefore, the Maclaurin series for <span class="process-math">\(f(x)\)</span> is identically zero! So this function does not equal its Maclaurin series.</div>
+</div>
+<div class="para logical" id="p-58">
+<div class="para">Replacing <span class="process-math">\(x\)</span> by <span class="process-math">\(-1/x^2\)</span> in the power series for <span class="process-math">\(e^x\text{,}\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{-1/x^2} = \sum_{k=0}^{\infty} (-1)^k\frac{x^{-2k}}{k!} = 1 - x^{-2} + \frac{1}{2}x^{-4} - \frac{1}{6}x^{-6} + \cdots
+\end{equation*}
+</div>
+<div class="para">This is not strictly a power series, but a <dfn class="terminology">Laurent series</dfn>, which converges for <span class="process-math">\(x\neq 0\text{.}\)</span>
+</div>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-8"><script type="text/x-sage">x   = var('x')
+f = exp(-1/x^2)
+p = plot(f, -2, 2, thickness=2, legend_label='$f(x) = '+latex(f)+'$')
+
+@interact
+def _(order=slider([1 .. 12])
+    ):
+    ft = taylor(exp(x), x, 0, order)
+    g = ft(x=-1/x^2)
+    pt = plot(g, -2, 2, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(g) +'$' )
+    G = p + pt
+    G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
+    show(G, ymin=-2, ymax=2, figsize=5)
+</script></pre>
+<div class="para" id="p-59">Here we see that the partial sums approximate <span class="process-math">\(f(x)\)</span> well for large <span class="process-math">\(x\text{,}\)</span> but not for small <span class="process-math">\(x\text{.}\)</span>
+</div></section><section class="subsection" id="subsec-Other-types-of-series"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.3</span> <span class="title">Other types of series</span>
+</h4>
+<div class="para logical" id="p-60">
+<div class="para">For <span class="process-math">\(s\gt 1\)</span> one can show that the following infinite series converges:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta(s) := \sum_{n=1}^{\infty} \frac{1}{n^s} = \frac{1}{1^s} + \frac{1}{2^s} + \frac{1}{3^s} + \cdots,
+\end{equation*}
+</div>
+<div class="para">This defines the <dfn class="terminology">zeta-function</dfn>, a fascinating function defined by a series other than a power series. Later we will see that <span class="process-math">\(\zeta(s)\)</span> is related to the distribution of prime numbers. When <span class="process-math">\(s\)</span> is an even integer, it takes on very interesting values:</div>
+<div class="displaymath process-math" id="md-15">
+\begin{align*}
+\zeta(2) \amp = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \cdots = \frac{\pi^2}{6} \\
+\zeta(4) \amp = \frac{1}{1^4} + \frac{1}{2^4} + \frac{1}{3^4} + \cdots = \frac{\pi^4}{90}\\
+\zeta(6) \amp = \frac{1}{1^6} + \frac{1}{2^6} + \frac{1}{3^6} + \cdots = \frac{\pi^6}{945}. \amp 
+\end{align*}
+</div>
+<div class="para">Its values at the odd integers are much more mysterious.</div>
+</div>
+<article class="exercise exercise-like" id="exercise-2"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-2"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
+</h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><div class="para logical" id="p-61">
+<div class="para">[Put in CA2??] Show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{s \rightarrow 1^-} \zeta(s) = \infty,
+\end{equation*}
+</div>
+<div class="para">in other words, the <dfn class="terminology">harmonic series</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{1} + \frac{1}{2} + \frac{1}{3} + \cdots 
+\end{equation*}
+</div>
+<div class="para">diverges.</div>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><div class="para" id="p-62">Show that the partial sum <span class="process-math">\(\sum_{k=1}^N \frac{1}{k}\)</span> is greater than the integral <span class="process-math">\(\int_1^{N-1}\frac{1}{x}dx = \ln(N-1)\text{.}\)</span>
+</div></div></div>
+</div></article></div></section><section class="subsection" id="subsec-Infinite-products"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.4</span> <span class="title">Infinite products</span>
+</h4>
+<div class="para logical" id="p-63">
+<div class="para">Instead of adding infinitely many terms, one might also multiply them. Thus one may express some functions as infinite products, for example</div>
+<div class="displaymath process-math" id="md-16">
+\begin{align*}
+\sin x \amp = x\prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2n^2}\right) \\
+\cos x \amp = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2\left(n-\frac{1}{2}\right)^2}\right)
+\end{align*}
+</div>
+<div class="para">You can plot the finite products against <span class="process-math">\(\sin(x)\)</span> and <span class="process-math">\(\cos(x)\)</span> in the following Sage cells:</div>
+</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">x   = var('x')
+f = sin(x)
+pf = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
+
+@interact
+def _(order=slider([1 .. 12])
+    ):
+    fp = x*product([1-x^2/(pi^2*k^2) for k in range(1, order+1)])
+    pt = plot(fp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(fp) + '$')
+    G = pf + pt
+    G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
+    show(G, ymin=-2, ymax=2, figsize=5)
+</script></pre>
+<pre class="ptx-sagecell sagecell-sage" id="sage-10"><script type="text/x-sage">x   = var('x')
+g = cos(x)
+pg = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
+
+@interact
+def _(order=slider([1 .. 12])
+    ):
+    gp = product([1-x^2/(pi^2*(k-1/2)^2) for k in range(1, order+1)])
+    pt = plot(gp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(gp) + '$')
+    G = pg + pt
+    G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
+    show(G, ymin=-2, ymax=2, figsize=5)
+</script></pre></section></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">www.wolframalpha.com/</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Part-Calculus.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="Calculus_2.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
