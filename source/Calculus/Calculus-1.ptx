@@ -719,6 +719,24 @@
             </image>
         </figure>
 
+        <sage>
+            <input>
+                x   = var('x')
+
+                @interact
+                def _(f = input_box(default='sin(x)', label='f(x)='),
+                    x0=input_box(default=pi/4, label='centre'),
+                    order=slider([1 .. 12])):
+                    p   = plot(f, -2*pi, 2*pi, thickness=2, legend_label='f(x)')
+                    dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
+                    ft = f.taylor(x, x0, order)
+                    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=2, legend_label=r'T_'+str(order)+'f(x)')
+                    pretty_print(html(r'$f(x)\;=\;%s$' % latex(f)))
+                    pretty_print(html(r'$T_{%s}f(x)\;=\;%s$' % (order, latex(ft))))
+                    show(dot + p + pt, ymin=-1, ymax=1)
+            </input>
+        </sage>
+
         <example xml:id="Second_order_approximation_e_power_minus_x_on_3">
 
             <p>Find the second order approximation to   <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2. </m>  </p>
@@ -738,7 +756,10 @@
                         <mrow> \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} </mrow>
                         </md></p>
                 </solution>
-</example>
+        </example>
+
+        
+        
 
  <example xml:id="Fourth_order_approximation_e_power_minus_x_on_3">
 
