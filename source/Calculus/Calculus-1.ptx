@@ -232,7 +232,7 @@
             </sage>
 
             Secondly, as we add more terms, <m>k</m> gets ever bigger while <m>x</m> stays the same, so the multiplier <m>\frac{x}{k}</m> we use to get from one term to the next gets ever smaller. 
-            This means that the terms shrink to zero exponentially and we will see in the next chapter <term>LINK!</term> that the sum <em>converges</em> for every value of <m>x</m>.
+            This means that the terms shrink to zero exponentially and we will see in the next chapter (<xref ref="Calculus_2"/>) that the sum <em>converges</em> for every value of <m>x</m>.
             
         </p>    
 
@@ -264,7 +264,8 @@
         </definition>
 
         <p>
-            We will learn more about convergence and divergence in the next chapter. For now, we're interested in using infinite series to represent useful functions, like <m>e^x</m>, <m>\sin(x)</m> or <m>\cos(x)</m>.
+            We will learn more about convergence and divergence in the next chapter. 
+            For now, we're interested in using infinite series to represent useful functions, like <m>e^x</m>, <m>\sin(x)</m> or <m>\cos(x)</m>.
         </p>
         
 
@@ -811,7 +812,7 @@
             <exercise>
                 <statement>
                     <p>
-                        [Put in CA2??]
+                        <!-- [Put in CA2??] -->
                         Show that 
                         <me>
                             \lim_{s \rightarrow 1^-} \zeta(s) = \infty,
