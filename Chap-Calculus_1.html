@@ -688,7 +688,21 @@ f^{(4)}(x) \amp = f(x), \amp f^{(4)}\left(\frac{\pi}{4}\right) \amp = f\left(\fr
 </div>
 </div></div></div>
 </div></article><figure class="figure figure-like" id="fig-plot-cos-T3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Calculus/Images/2/cos-vs-T3-pi4-plot.svg" role="img" class="contained" alt="Plot of \(\cos(x)\) and its degree 3 Taylor polynomial centered at \(x=\frac{\pi}{4}\text{.}\)"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.14<span class="period">.</span></span><span class="space"> </span>Degree 3 Taylor polynomial of <span class="process-math">\(\cos(x)\)</span> centred at <span class="process-math">\(x=\frac{\pi}{4}\)</span></figcaption></figure><article class="example example-like" id="Second_order_approximation_e_power_minus_x_on_3"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.14<span class="period">.</span></span><span class="space"> </span>Degree 3 Taylor polynomial of <span class="process-math">\(\cos(x)\)</span> centred at <span class="process-math">\(x=\frac{\pi}{4}\)</span></figcaption></figure><pre class="ptx-sagecell sagecell-sage" id="sage-5"><script type="text/x-sage">x   = var('x')
+
+@interact
+def _(f = input_box(default='sin(x)', label='f(x)='),
+    x0=input_box(default=pi/4, label='centre'),
+    order=slider([1 .. 12])):
+    p   = plot(f, -2*pi, 2*pi, thickness=2, legend_label='f(x)')
+    dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
+    ft = f.taylor(x, x0, order)
+    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=2, legend_label=r'T_'+str(order)+'f(x)')
+    pretty_print(html(r'$f(x)\;=\;%s$' % latex(f)))
+    pretty_print(html(r'$T_{%s}f(x)\;=\;%s$' % (order, latex(ft))))
+    show(dot + p + pt, ymin=-1, ymax=1)
+</script></pre>
+<article class="example example-like" id="Second_order_approximation_e_power_minus_x_on_3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h4>
 <div class="para" id="p-62">Find the second order approximation to   <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2. \)</span>
@@ -757,7 +771,7 @@ T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi
 \end{equation}
 </div>
 </div>
-<pre class="ptx-sagecell sagecell-sage" id="sage-5"><script type="text/x-sage">N = 100
+<pre class="ptx-sagecell sagecell-sage" id="sage-6"><script type="text/x-sage">N = 100
 s = 0
 for k in range(N):
     s = s + (-1)^k*4/(2*k+1)
@@ -772,7 +786,7 @@ for k in range(N):
 \end{equation}
 </div>
 </div>
-<pre class="ptx-sagecell sagecell-sage" id="sage-6"><script type="text/x-sage">N = 10
+<pre class="ptx-sagecell sagecell-sage" id="sage-7"><script type="text/x-sage">N = 10
 s = 0
 for k in range(N):
     s = s + n( (-1)^k * ( (16*(1/5)^(2*k+1))/(2*k+1) - (4*(1/239)^(2*k+1))/(2*k+1) ), 200)
@@ -789,7 +803,7 @@ for k in range(N):
 </div>
 <div class="para">This formula not only converges extremely quickly, but it also also you to compute specific hexadecimal digits of <span class="process-math">\(\pi\)</span> without first computing the previous digits.</div>
 </div>
-<pre class="ptx-sagecell sagecell-sage" id="sage-7"><script type="text/x-sage">N = 10
+<pre class="ptx-sagecell sagecell-sage" id="sage-8"><script type="text/x-sage">N = 10
 s = 0
 for k in range(N):
     s = s + (1/16^k)*( 4/(8*k+1) - 2/(8*k+4) - 1/(8*k+5) - 1/(8*k+6) )
@@ -841,7 +855,7 @@ e^{-1/x^2} = \sum_{k=0}^{\infty} (-1)^k\frac{x^{-2k}}{k!} = 1 - x^{-2} + \frac{1
 <div class="para">This is not strictly a power series, but a <dfn class="terminology">Laurent series</dfn>, which converges for <span class="process-math">\(x\neq 0\text{.}\)</span>
 </div>
 </div>
-<pre class="ptx-sagecell sagecell-sage" id="sage-8"><script type="text/x-sage">x   = var('x')
+<pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">x   = var('x')
 f = exp(-1/x^2)
 p = plot(f, -2, 2, thickness=2, legend_label='$f(x) = '+latex(f)+'$')
 
@@ -910,7 +924,7 @@ def _(order=slider([1 .. 12])
 </div>
 <div class="para">You can plot the finite products against <span class="process-math">\(\sin(x)\)</span> and <span class="process-math">\(\cos(x)\)</span> in the following Sage cells:</div>
 </div>
-<pre class="ptx-sagecell sagecell-sage" id="sage-9"><script type="text/x-sage">x   = var('x')
+<pre class="ptx-sagecell sagecell-sage" id="sage-10"><script type="text/x-sage">x   = var('x')
 f = sin(x)
 pf = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
 
@@ -923,7 +937,7 @@ def _(order=slider([1 .. 12])
     G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
     show(G, ymin=-2, ymax=2, figsize=5)
 </script></pre>
-<pre class="ptx-sagecell sagecell-sage" id="sage-10"><script type="text/x-sage">x   = var('x')
+<pre class="ptx-sagecell sagecell-sage" id="sage-11"><script type="text/x-sage">x   = var('x')
 g = cos(x)
 pg = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
 
