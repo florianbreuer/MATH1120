@@ -13,9 +13,10 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-\frac{x^2}{2-5x} \amp =\dfrac{x^{2}}{2}\left(\dfrac{1}{1-(\frac{5x}{2})}\right)\\
-\amp = \dfrac{x^2}{2}\left(1+\left(\frac{5x}{2}\right)+\left(\frac{5x}{2}\right)^{2}+\left(\frac{5x}{2}\right)^{3}+\cdots\right)\\
-\amp = \dfrac{x^2}{2}\sum_{k=0}^{\infty}\left(\dfrac{5x}{2}\right)^{k}
+\lim_{k\rightarrow\infty} \left| \frac{\frac{1}{(k+1)!}(x-a)^{k+1}}{\frac{1}{k!}(x-a)^k} \right| \amp =  \lim_{k\to\infty}\left|\frac{k!}{(k+1)!} \right| \cdot|x| \\
+\amp =  \lim_{k\to\infty}\left|\frac{k!}{k!(k+1)} \right| \cdot|x| \\
+\amp =  \lim_{k\to\infty}\left|\frac{1}{k+1} \right| \cdot|x| \\
+\amp = 0. 
 \end{align*}
 </div>
 <span class="incontext"><a href="Calculus_2.html#md-26" class="internal">in-context</a></span>

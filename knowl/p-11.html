@@ -22,7 +22,7 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <div class="para logical">
 <div class="para">This computation is actually quite inefficient, since we’re calculating each term from scratch. Notice that the <span class="process-math">\(k^{\mathrm{th}}\)</span> term is obtained by multiplying the previous term by <span class="process-math">\(\frac{x}{k}\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \frac{x^k}{k!} = \left(\frac{x^{k-1}}{(k-1)!}  \right) \cdot \frac{x}{k}.
 \end{equation*}
@@ -36,7 +36,7 @@ for k in range(1, N+1):
     t = t * x / k    # calculate the kth term
     answer = answer +  t
     print('k = ', k, '; partial sum = ', n(answer))
-</script></pre> Secondly, as we add more terms, <span class="process-math">\(k\)</span> gets ever bigger while <span class="process-math">\(x\)</span> stays the same, so the multiplier <span class="process-math">\(\frac{x}{k}\)</span> we use to get from one term to the next gets ever smaller. This means that the terms shrink to zero exponentially and we will see in the next chapter <dfn class="terminology">LINK!</dfn> that the sum <em class="emphasis">converges</em> for every value of <span class="process-math">\(x\text{.}\)</span>
+</script></pre> Secondly, as we add more terms, <span class="process-math">\(k\)</span> gets ever bigger while <span class="process-math">\(x\)</span> stays the same, so the multiplier <span class="process-math">\(\frac{x}{k}\)</span> we use to get from one term to the next gets ever smaller. This means that the terms shrink to zero exponentially and we will see in the next chapter (<code class="code-inline tex2jax_ignore">[cross-reference to target(s) "Calculus_2" missing or not unique]</code>) that the sum <em class="emphasis">converges</em> for every value of <span class="process-math">\(x\text{.}\)</span>
 </div>
 </div>
 <span class="incontext"><a href="Chap-Calculus_1.html#p-11" class="internal">in-context</a></span>

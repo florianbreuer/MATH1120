@@ -13,24 +13,21 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.12.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.16.1</span><span class="period">.</span>
 </h4>
-<div class="para logical">
-<div class="para">To use the ratio test consider</div>
-<div class="displaymath process-math">
+<div class="para">Since we already know the Taylor series for  <span class="process-math">\(\cos(x) \)</span>  about  <span class="process-math">\(x=\frac{\pi}{2}  \)</span>   we can obtain the <span class="process-math">\(4^{\text{th}} \)</span> degree Taylor polynomial for <span class="process-math">\(f(x)=x\cos(x) \)</span> about <span class="process-math">\(x=\frac{\pi}{2} \)</span> as follows</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+f(x) \amp = x\cos(x)  \\
+\amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) \\
+\amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] \\
+\amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. 
+\end{align*}
+</div></div> <div class="para">Thus the <span class="process-math">\(4^{\text{th}} \)</span> degree Taylor polynomial is</div> <div class="para logical"><div class="displaymath process-math">
 \begin{equation*}
-\dfrac{t_{k+1}}{t_k} = \dfrac{k+2}{2^{k+1}}\cdot\dfrac{2^k}{k+1} = \dfrac{1}{2}\left(\dfrac{k+2}{k+1}\right).
+T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi}{2} \frac{(x-\frac{\pi}{2})^3}{3!}  + \frac{(x-\frac{\pi}{2})^4}{3!}.
 \end{equation*}
+</div></div>
 </div>
-</div> <div class="para logical">
-<div class="para">Thus</div>
-<div class="displaymath process-math">
-\begin{equation*}
-L=\lim_{k\to\infty}\left|\dfrac{1}{2}\left(\dfrac{k+2}{k+1}\right)\right|=\dfrac{1}{2}.
-\end{equation*}
-</div>
-</div> <div class="para">Since <span class="process-math">\(L&lt;1\text{,}\)</span> by the ratio test this series converges. (Notice that the ratio test doesn’t tell us to what number the series converges to. In this case it is <span class="process-math">\(3\text{.}\)</span>)</div>
-</div>
-<span class="incontext"><a href="Calculus_2.html#solution-5" class="internal">in-context</a></span>
+<span class="incontext"><a href="Chap-Calculus_1.html#solution-5" class="internal">in-context</a></span>
 </body>
 </html>

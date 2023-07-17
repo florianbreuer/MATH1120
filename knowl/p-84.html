@@ -11,9 +11,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Let’s plot the various Maclaurin polynomials for <span class="process-math">\(f(x)=1/(1-x)\text{:}\)</span>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<div class="para logical">
+<div class="para">One can show that this function is well-defined and differentiable, in fact for <span class="process-math">\(x\neq 0\)</span> we have (check this yourself):</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-exp-minus-1-over-x-squared.html">
+\begin{align*}
+\frac{d}{dx} f(x) \amp = \frac{2 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{3}} \\
+\frac{d^{ 2 }}{dx^{ 2 }} f(x) \amp = -\frac{6 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{4}} + \frac{4 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{6}}\\
+\frac{d^{ 3 }}{dx^{ 3 }} f(x) \amp = \frac{24 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{5}} - \frac{36 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{7}} 
++ \frac{8 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{9}} 
+\end{align*}
 </div>
-<span class="incontext"><a href="Calculus_2.html#p-84" class="internal">in-context</a></span>
+<div class="para">The plot in <a href="" class="xref" data-knowl="./knowl/fig-exp-minus-1-over-x-squared.html" title="Figure 1.19">Figure 1.19</a> is suspiciously flat near <span class="process-math">\(x=0\text{,}\)</span> and in fact we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/fig-exp-minus-1-over-x-squared.html">
+\begin{equation*}
+\left.\frac{d^k}{dx^k}f(x)\right|_{x=0} = 0, \quad \text{for all} \; k \geq 0.
+\end{equation*}
+</div>
+<div class="para">Therefore, the Maclaurin series for <span class="process-math">\(f(x)\)</span> is identically zero! So this function does not equal its Maclaurin series.</div>
+</div>
+<span class="incontext"><a href="Chap-Calculus_1.html#p-84" class="internal">in-context</a></span>
 </body>
 </html>

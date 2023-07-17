@@ -11,14 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><div class="solution solution-like">
-<div class="para logical"><ol class="lower-alpha">
-<li><div class="para">Since we can calculate <span class="process-math">\(f\)</span> for all values of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> the domain of <span class="process-math">\(f\)</span> is <span class="process-math">\(\mathbb{R}^2\)</span>
-</div></li>
-<li><div class="para"></div></li>
-</ol></div> <div class="para logical"><ol class="lower-roman">
-<li><div class="para"><span class="process-math">\(\displaystyle f(3,1)=1-3\times 1=-2\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})=-\sqrt{5}+\frac{1}{2}\times\sqrt{5}=-\frac{\sqrt{5}}{2}\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle f(1,3)=3-1\times 3=0\)</span></div></li>
-</ol></div>
+<div class="para">In order to find the second order approximation for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2 \)</span> we need to evaluate <span class="process-math">\(f \)</span> and its first two derivatives at <span class="process-math">\(x=2\text{.}\)</span>  So,</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+f(x) \amp =e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f(2)=e^{-\frac{2}{3}}  \\
+f'(x) \amp =-\frac{1}{3}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f'(2)=-\frac{1}{3}e^{-\frac{2}{3}} \\
+f''(x) \amp =\frac{1}{9}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f''(2)=\frac{1}{9}e^{-\frac{2}{3}}   
+\end{align*}
+</div></div> <div class="para">Thus the second order approximation for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2, \)</span> (or the Taylor polynomial of degree <span class="process-math">\(2, \)</span> for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2\)</span>), is</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+T_{2}(x) \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{9}e^{-\frac{2}{3}}\dfrac{(x-2)^{2}}{2}  \\
+\amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} 
+\end{align*}
+</div></div>
 </div></body>
 </html>

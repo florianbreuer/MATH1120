@@ -13,10 +13,12 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-e^{-x^2} \amp =\sum_{k=0}^{\infty}\dfrac{(-x^2)^{k}}{k!}=\sum_{k=0}^{\infty}(-1)^{k}\dfrac{x^{2k}}{k!}\\
-\amp = 1- x^{2}+\frac{x^{4}}{2!}-\frac{x^{6}}{3!}+\cdots
+\lim_{k\rightarrow\infty} \left| \frac{\frac{1}{(k+1)!}(x-a)^{k+1}}{\frac{1}{k!}(x-a)^k} \right| \amp =  \lim_{k\to\infty}\left|\frac{k!}{(k+1)!} \right| \cdot|x| \\
+\amp =  \lim_{k\to\infty}\left|\frac{k!}{k!(k+1)} \right| \cdot|x| \\
+\amp =  \lim_{k\to\infty}\left|\frac{1}{k+1} \right| \cdot|x| \\
+\amp = 0. 
 \end{align*}
 </div>
-<span class="incontext"><a href="Calculus_2.html#md-27" class="internal">in-context</a></span>
+<span class="incontext"><a href="Calculus_2.html#md-26" class="internal">in-context</a></span>
 </body>
 </html>

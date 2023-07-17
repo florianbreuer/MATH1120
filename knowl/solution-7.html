@@ -13,16 +13,23 @@
 <body class="ignore-math">
 <div class="solution solution-like">
 <h4 class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.16.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.8.1</span><span class="period">.</span>
 </h4>
-<div class="para">Once again we will use the Maclaurin series for <span class="process-math">\(f(x)=\dfrac{1}{1-x}\)</span> on <span class="process-math">\(\lvert x\rvert &lt; 1. \)</span> Now</div> <div class="para logical"><div class="displaymath process-math">
-\begin{align*}
-\frac{x^2}{2-5x} \amp =\dfrac{x^{2}}{2}\left(\dfrac{1}{1-(\frac{5x}{2})}\right)\\
-\amp = \dfrac{x^2}{2}\left(1+\left(\frac{5x}{2}\right)+\left(\frac{5x}{2}\right)^{2}+\left(\frac{5x}{2}\right)^{3}+\cdots\right)\\
-\amp = \dfrac{x^2}{2}\sum_{k=0}^{\infty}\left(\dfrac{5x}{2}\right)^{k}
-\end{align*}
-</div></div> <div class="para">which will converge on the interval <span class="process-math">\(\lvert \frac{5x}{2}\rvert &lt; 1, \)</span> i.e., <span class="process-math">\(-\frac{2}{5}&lt; x &lt; \frac{2}{5}. \)</span>
+<div class="para logical">
+<div class="para">To use the ratio test consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{t_{k+1}}{t_k} = \dfrac{k+2}{2^{k+1}}\cdot\dfrac{2^k}{k+1} = \dfrac{1}{2}\left(\dfrac{k+2}{k+1}\right).
+\end{equation*}
 </div>
+</div> <div class="para logical">
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L=\lim_{k\to\infty}\left|\dfrac{1}{2}\left(\dfrac{k+2}{k+1}\right)\right|=\dfrac{1}{2}.
+\end{equation*}
+</div>
+</div> <div class="para">Since <span class="process-math">\(L&lt;1\text{,}\)</span> by the ratio test this series converges. (Notice that the ratio test doesn’t tell us to what number the series converges to. In this case it happens to be <span class="process-math">\(3\text{.}\)</span>)</div>
 </div>
 <span class="incontext"><a href="Calculus_2.html#solution-7" class="internal">in-context</a></span>
 </body>
