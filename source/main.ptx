@@ -13,7 +13,7 @@
 
   <book xml:id="MATH1120-Course-Notes">
     <title>Mathematics 1120</title>
-    <subtitle>Mathematics for Engineering, Science and Technology 2</subtitle>
+    <subtitle>Mathematics for Engineering, Science and Technology 2 [Revised Notes]</subtitle>
 
     <frontmatter xml:id="frontmatter">
       <titlepage>
@@ -55,9 +55,10 @@
     <part xml:id="Part-Calculus">
       <title>Calculus</title>
       <xi:include href="./Calculus/Calculus-1.ptx" />
-      <xi:include href="./Calculus/Calculus-2.ptx" />
     </part>
 <!--
+    
+      <xi:include href="./Calculus/Calculus-2.ptx" />
       <xi:include href="./Calculus/Calculus-3.ptx" /> 
       <xi:include href="./Calculus/Calculus-4.ptx" />
       <xi:include href="./Calculus/Calculus-5.ptx" />    
