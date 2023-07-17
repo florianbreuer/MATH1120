@@ -11,7 +11,7 @@
     </latex-image-preamble>
   </docinfo>
 
-  <book xml:id="my-great-book">
+  <book xml:id="MATH1120-Course-Notes">
     <title>Mathematics 1120</title>
     <subtitle>Mathematics for Engineering, Science and Technology 2</subtitle>
 
@@ -31,6 +31,7 @@
         To add: introduction about maths and computers, Sage etc.
       </p>
 
+      <!--
       <colophon>
 
         <website>
@@ -48,6 +49,7 @@
           </shortlicense>
         </copyright>
       </colophon>
+    -->
     </frontmatter>
 
     <part xml:id="Part-Calculus">
