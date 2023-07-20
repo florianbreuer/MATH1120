@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>CA2: Convergence of Series</title>
+<title>CA2: Taylor Series</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -212,7 +212,7 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <div class="toc-item"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
 <ul class="structural">
 <li>
-<div class="toc-item"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin and Taylor Series</span></a></div>
+<div class="toc-item"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
 <li><div class="toc-item"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
@@ -221,44 +221,34 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 <li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
 <li><div class="toc-item"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
 <li>
-<div class="toc-item"><a href="Chap-Calculus_1.html#sec-Taylor-series" class="internal"><span class="codenumber">1.7</span> <span class="title">Taylor series</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Chap-Calculus_1.html#exercises-1" class="internal"><span class="codenumber">1.7</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.8</span> <span class="title">Advanced Topics</span></a></div>
+<div class="toc-item"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.8.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
-<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.8.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
-<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.8.3</span> <span class="title">Other types of series</span></a></div></li>
-<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.8.4</span> <span class="title">Infinite products</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li><div class="toc-item"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="active">
-<div class="toc-item"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Convergence of Series</span></a></div>
+<div class="toc-item"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Geometric series</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.2</span> <span class="title">Convergence issues</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.3</span> <span class="title">Ratio test</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.4</span> <span class="title">Convergence of power series</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Algebra of infinite series</span></a></div></li>
 <li>
-<div class="toc-item"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.6</span> <span class="title">Advanced topics</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Calculus_2.html#subsec-Integral-test" class="internal"><span class="codenumber">2.6.1</span> <span class="title">Integral test</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#subsec-Absolute-conditional-convergence" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Absolute vs. conditional convergence</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#subsec-Convergence-complex" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Convergence in the complex plane</span></a></div></li>
-<li><div class="toc-item"><a href="Calculus_2.html#subsec-Euler-product" class="internal"><span class="codenumber">2.6.4</span> <span class="title">The Euler product of the zeta function</span></a></div></li>
-</ul>
+<div class="toc-item"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-1" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li><div class="toc-item"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-2" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
 <li>
-<div class="toc-item"><a href="Calculus_2.html#Generating-New-Series-from-Known-Series" class="internal"><span class="codenumber">2.7</span> <span class="title">OLD STUFF - Generating New Series from Known Series</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-2" class="internal"><span class="codenumber">2.7</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="Calculus_2.html#Taylor_Series" class="internal"><span class="codenumber">2.8</span> <span class="title">Taylor Series</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#exercises-3" class="internal"><span class="codenumber">2.8</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-item"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -266,12 +256,136 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-sage',
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Calculus_2"><h2 class="heading">
-<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">CA2: Convergence of Series</span>
+<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span>
 </h2>
-<section class="section" id="sec-Geometric-series"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Geometric series</span>
+<section class="section" id="sec-Taylor-series"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Taylor series</span>
 </h3>
-<div class="para logical" id="p-91">
+<figure class="figure figure-like" id="fig-plot-sin-T5"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/Calculus/Images/2/sin-vs-T5-plot.svg" role="img" class="contained" alt="Plot of \(\sin(x)\) and its degree 5 Maclaurin polynomial. The polynomial starts diverging visibly from the plot of \(\sin(x)\) when \(|x|\gt 2\text{.}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(\sin(x)\)</span> and its degree 5 Maclaurin polynomial.</figcaption></figure><div class="para" id="p-67">
+<a href="" class="xref" data-knowl="./knowl/fig-plot-sin-T5.html" title="Figure 2.1">Figure 2.1</a> compares <span class="process-math">\(\sin(x)\)</span> to its degree 5 Maclaurin polynomial. We notice that the polynomial is a poor approximation of <span class="process-math">\(\sin(x)\)</span> when <span class="process-math">\(|x| \gt 2\text{.}\)</span> What can we do about this? We could use Maclaurin polynomials of ever higher degree, but these get ever more complicated.</div>
+<div class="para" id="p-68">The issue is that Maclaurin series are computed based on the value of the function and its derivatives around <span class="process-math">\(x=0\text{,}\)</span> so it’s not surprising that they best approximate the function near <span class="process-math">\(x=0.\)</span> If for some reason we’re more interested in the function near another value, say near <span class="process-math">\(x=a\text{,}\)</span> then instead of computing Maclaurin polynomials of high degree, we can simply shift our function along the <span class="process-math">\(x\)</span>-axis until the point of interest lies above <span class="process-math">\(x=0\text{,}\)</span> compute the Maclaurin polynomials of the shifted function, and then shift back.</div>
+<div class="para logical" id="p-69">
+<div class="para">In other words, we consider the shifted function <span class="process-math">\(g(x) = f(x+a)\text{,}\)</span> then compute the Maclaurin series for <span class="process-math">\(g(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) = \sum_{k=0}^{\infty} \frac{g^{(k)}(0)}{k!}x^k = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}x^k
+\end{equation*}
+</div>
+<div class="para">Finally, we shift back to obtain a power series for <span class="process-math">\(f(x) = g(x-a)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = g(x-a) = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k.
+\end{equation*}
+</div>
+<div class="para">This is the <dfn class="terminology">Taylor series</dfn> for <span class="process-math">\(f(x)\)</span> <dfn class="terminology">centred at</dfn> <span class="process-math">\(x=a\text{.}\)</span>
+</div>
+</div>
+<article class="definition definition-like" id="definition-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor Series.</span>
+</h4> <div class="para" id="p-70">The series,</div> <div class="para logical" id="p-71"><div class="displaymath process-math">
+\begin{equation*}
+\sum_{k=0}^{\infty}\dfrac{f^{(k)}(a)}{k!}(x-a)^k=f(a)+f'(a)(x-a)+\dfrac{f''(a)}{2!}(x-a)^{2}+\dfrac{f'''(a)}{3!}(x-a)^3+ \dots \text{.}
+\end{equation*}
+</div></div> <div class="para" id="p-72">is called the <dfn class="terminology">Taylor series</dfn> for <span class="process-math">\(f(x) \)</span> about   <span class="process-math">\(x=a. \)</span>
+</div></article><div class="para" id="p-73">Note that a Maclaurin series is simply a Taylor series centred at <span class="process-math">\(x=0.\)</span>
+</div>
+<div class="para" id="p-74">The degree <span class="process-math">\(n\)</span> <dfn class="terminology">Taylor polynomial</dfn> of <span class="process-math">\(f(x)\)</span> centred at <span class="process-math">\(x=a\)</span> is - you guessed it - the sum of the terms of the Taylor series of degree at most <span class="process-math">\(n\text{.}\)</span> The degree <span class="process-math">\(n\)</span> Taylor polynomial of a function is also called its <dfn class="terminology">nth order approximation</dfn>.</div>
+<article class="example example-like" id="example-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-75">Compute the Taylor series of the function <span class="process-math">\(\cos(x)\)</span> centred at <span class="process-math">\(x=\frac{\pi}{4}\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><div class="para logical" id="p-76">
+<div class="para">We compute the derivatives of <span class="process-math">\(f(x) = \cos(x)\)</span> at <span class="process-math">\(x=\frac{\pi}{4}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-17">
+\begin{align*}
+f(x) \amp = \cos(x), \amp f\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}}\\
+f'(x) \amp = -\sin(x), \amp f'\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} \\
+f''(x) \amp = -\cos(x), \amp f''\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} \\
+f'''(x) \amp = \sin(x), \amp f'''\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}} \\
+f^{(4)}(x) \amp = f(x), \amp f^{(4)}\left(\frac{\pi}{4}\right) \amp = f\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}} 
+\end{align*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" id="md-18">
+\begin{align*}
+\cos(x) \amp = \frac{1}{\sqrt{2}} -\frac{1}{\sqrt{2}}\left(x-\frac{\pi}{4}\right) 
+-\frac{1}{2!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^2 + \frac{1}{3!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^3 + \cdots
+\end{align*}
+</div>
+</div></div></div>
+</div></article><figure class="figure figure-like" id="fig-plot-cos-T3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/Calculus/Images/2/cos-vs-T3-pi4-plot.svg" role="img" class="contained" alt="Plot of \(\cos(x)\) and its degree 3 Taylor polynomial centered at \(x=\frac{\pi}{4}\text{.}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.4<span class="period">.</span></span><span class="space"> </span>Degree 3 Taylor polynomial of <span class="process-math">\(\cos(x)\)</span> centred at <span class="process-math">\(x=\frac{\pi}{4}\)</span></figcaption></figure><pre class="ptx-sagecell sagecell-sage" id="sage-12"><script type="text/x-sage">x   = var('x')
+
+@interact
+def _(f = input_box(default='sin(x)', label='f(x)='),
+    x0=input_box(default=pi/4, label='centre'),
+    order=slider([1 .. 12])):
+    p   = plot(f, -2*pi, 2*pi, thickness=2, legend_label='f(x)')
+    dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
+    ft = f.taylor(x, x0, order)
+    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=2, legend_label=r'T_'+str(order)+'f(x)')
+    pretty_print(html(r'$f(x)\;=\;%s$' % latex(f)))
+    pretty_print(html(r'$T_{%s}f(x)\;=\;%s$' % (order, latex(ft))))
+    show(dot + p + pt, ymin=-1, ymax=1)
+</script></pre>
+<article class="example example-like" id="Second_order_approximation_e_power_minus_x_on_3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-77">Find the second order approximation to   <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2. \)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><div class="para" id="p-78"><span class="process-math">\(T_{2}(x)=e^{-\frac{2}{3}}-\dfrac{1}{3}e^{-\frac{2}{3}}(x-2)+\dfrac{1}{18}e^{-\frac{2}{3}}(x-2)^{2}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<div class="para" id="p-79">In order to find the second order approximation for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2 \)</span> we need to evaluate <span class="process-math">\(f \)</span> and its first two derivatives at <span class="process-math">\(x=2\text{.}\)</span>  So,</div> <div class="para logical" id="p-80"><div class="displaymath process-math" id="md-19">
+\begin{align*}
+f(x) \amp =e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f(2)=e^{-\frac{2}{3}}  \\
+f'(x) \amp =-\frac{1}{3}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f'(2)=-\frac{1}{3}e^{-\frac{2}{3}} \\
+f''(x) \amp =\frac{1}{9}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f''(2)=\frac{1}{9}e^{-\frac{2}{3}}   
+\end{align*}
+</div></div> <div class="para" id="p-81">Thus the second order approximation for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2, \)</span> (or the Taylor polynomial of degree <span class="process-math">\(2, \)</span> for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2\)</span>), is</div> <div class="para logical" id="p-82"><div class="displaymath process-math" id="md-20">
+\begin{align*}
+T_{2}(x) \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{9}e^{-\frac{2}{3}}\dfrac{(x-2)^{2}}{2}  \\
+\amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} 
+\end{align*}
+</div></div>
+</div></div></article><article class="example example-like" id="Fourth_order_approximation_e_power_minus_x_on_3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-83">Find the Taylor polynomial of degree <span class="process-math">\(4 \)</span> for <span class="process-math">\(f(x)=x\cos(x) \)</span>  about <span class="process-math">\(x=\frac{\pi}{2}. \)</span>
+</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><div class="para" id="p-84"><span class="process-math">\(T_{4}(x) = -\dfrac{\pi}{2}  (x-\dfrac{\pi}{2}) -  (x-\dfrac{\pi}{2})^2 +  \dfrac{\pi}{2} \dfrac{(x-\dfrac{\pi}{2})^3}{3!}  + \dfrac{(x-\dfrac{\pi}{2})^4}{3!}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<div class="para" id="p-85">Since we already know the Taylor series for  <span class="process-math">\(\cos(x) \)</span>  about  <span class="process-math">\(x=\frac{\pi}{2}  \)</span>   we can obtain the <span class="process-math">\(4^{\text{th}} \)</span> degree Taylor polynomial for <span class="process-math">\(f(x)=x\cos(x) \)</span> about <span class="process-math">\(x=\frac{\pi}{2} \)</span> as follows</div> <div class="para logical" id="p-86"><div class="displaymath process-math" id="md-21">
+\begin{align*}
+f(x) \amp = x\cos(x)  \\
+\amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) \\
+\amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] \\
+\amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. 
+\end{align*}
+</div></div> <div class="para" id="p-87">Thus the <span class="process-math">\(4^{\text{th}} \)</span> degree Taylor polynomial is</div> <div class="para logical" id="p-88"><div class="displaymath process-math">
+\begin{equation*}
+T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi}{2} \frac{(x-\frac{\pi}{2})^3}{3!}  + \frac{(x-\frac{\pi}{2})^4}{3!}.
+\end{equation*}
+</div></div>
+</div></div></article><section class="exercises" id="exercises-1"><h4 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="p-89">Find the Taylor series for  <span class="process-math">\(f(x)=\ln(x). \)</span> about <span class="process-math">\(x=e. \)</span>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="p-90">Find the Taylor polynomial of degree  <span class="process-math">\(3 \)</span> for   <span class="process-math">\(f(x)=\dfrac{1}{1-x} \)</span> about <span class="process-math">\(x=2. \)</span>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="p-91">Find the Taylor polynomial of degree  <span class="process-math">\(4 \)</span> for   <span class="process-math">\(f(x)=x\ln(x) \)</span> about <span class="process-math">\(x=e. \)</span>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="p-92">Find the <span class="process-math">\(3\)</span>rd degree Taylor polynomial for <span class="process-math">\(f(x)=x^2 e^{x} \)</span> about <span class="process-math">\(x=1. \)</span>
+</div></article></section><article class="remark remark-like" id="remark-2"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">A little remark.</span>
+</h4> <div class="para" id="p-93">Computer algebra systems usually have commands for Taylor series. For example, here in <a href="" class="xref" data-knowl="./knowl/Fig-Taylor_series_cos_Mathematica.html" title="Figure 2.8">Figure 2.8</a> is an example of a query to Wolfram Alpha that will work.</div> <figure class="figure figure-like" id="Fig-Taylor_series_cos_Mathematica"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/2/Taylor_series_cos_Mathematica.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article></section><section class="section" id="sec-Geometric-series"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Geometric series</span>
+</h3>
+<div class="para logical" id="p-94">
 <div class="para">So far, we have succeeded in finding various useful power series expressions for the functions <span class="process-math">\(\sin(x)\text{,}\)</span> <span class="process-math">\(\cos(x)\)</span> and <span class="process-math">\(e^x\text{.}\)</span> What about other functions? A particularly instructive case is the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -279,13 +393,13 @@ f(x) = \frac{1}{1-x}.
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-92">We can compute its derivatives by hand, but that quickly gets old, so we’ll ask the computer instead:</div>
-<pre class="ptx-sagecell sagecell-sage" id="sage-11"><script type="text/x-sage">f = 1/(1-x)
+<div class="para" id="p-95">We can compute its derivatives by hand, but that quickly gets old, so we’ll ask the computer instead:</div>
+<pre class="ptx-sagecell sagecell-sage" id="sage-13"><script type="text/x-sage">f = 1/(1-x)
 N = 10
 for k in range(N):
     print(diff(f, x, k))
 </script></pre>
-<div class="para logical" id="p-93">
+<div class="para logical" id="p-96">
 <div class="para">We notice that</div>
 <div class="displaymath process-math" id="eq-GS1">
 \begin{equation}
@@ -295,9 +409,9 @@ for k in range(N):
 <div class="para">(Note that Sage often formats the answer differently, swapping the <span class="process-math">\(x\)</span> and <span class="process-math">\(1\)</span> around, leading to alternating signs.)</div>
 </div>
 <article class="exercise exercise-like" id="exercise-7"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-7"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><div class="para" id="p-94">Use induction on <span class="process-math">\(n\)</span> to prove that the formula in <a href="" class="xref" data-knowl="./knowl/eq-GS1.html" title="Equation 2.1">(2.1)</a> is correct.</div></article></div>
-<div class="para logical" id="p-95">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-7"><article class="exercise exercise-like"><div class="para" id="p-97">Use induction on <span class="process-math">\(n\)</span> to prove that the formula in <a href="" class="xref" data-knowl="./knowl/eq-GS1.html" title="Equation 2.1">(2.1)</a> is correct.</div></article></div>
+<div class="para logical" id="p-98">
 <div class="para">This allows us to write down the Maclaurin series for <span class="process-math">\(f(x) = \frac{1}{1-x}\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="eq-GS2">
@@ -307,9 +421,9 @@ for k in range(N):
 </div>
 </div>
 <article class="exercise exercise-like" id="ex-GS"><a href="" data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex-GS"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-GS"><article class="exercise exercise-like"><article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para logical" id="p-96">
+<div class="para logical" id="p-99">
 <div class="para">Prove that, for every <span class="process-math">\(n \ge 0\text{,}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -325,14 +439,14 @@ x^{n+1} - 1 = (x-1)(x^n + x^{n-1} + \cdots + x + 1).
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para" id="p-97">You can use induction on <span class="process-math">\(n\text{,}\)</span> or just multiply out and cancel terms.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><div class="para" id="p-100">You can use induction on <span class="process-math">\(n\text{,}\)</span> or just multiply out and cancel terms.</div></div></div>
 </div></article><article class="task exercise-like" id="task-2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-98">Assuming that <span class="process-math">\(|x| \lt 1\text{,}\)</span> deduce <a href="" class="xref" data-knowl="./knowl/eq-GS2.html" title="Equation 2.2">(2.2)</a> from <a href="" class="xref" data-knowl="./knowl/eq-GS3.html" title="Equation 2.3">(2.3)</a>.</div>
+<div class="para" id="p-101">Assuming that <span class="process-math">\(|x| \lt 1\text{,}\)</span> deduce <a href="" class="xref" data-knowl="./knowl/eq-GS2.html" title="Equation 2.2">(2.2)</a> from <a href="" class="xref" data-knowl="./knowl/eq-GS3.html" title="Equation 2.3">(2.3)</a>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><div class="para" id="p-99">Take the limit as <span class="process-math">\(n \rightarrow \infty\text{.}\)</span>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><div class="para" id="p-102">Take the limit as <span class="process-math">\(n \rightarrow \infty\text{.}\)</span>
 </div></div></div>
 </div></article></article></div>
-<div class="para logical" id="p-101">
+<div class="para logical" id="p-104">
 <div class="para">The series in <a href="" class="xref" data-knowl="./knowl/eq-GS2.html" title="Equation 2.2">(2.2)</a> is an example of a <dfn class="terminology">geometric series</dfn> (sometimes also called a <em class="emphasis">geometric progression</em>). More generally, a geometric series is one of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-GS2.html" id="def-GS">
 \begin{equation}
@@ -341,23 +455,24 @@ x^{n+1} - 1 = (x-1)(x^n + x^{n-1} + \cdots + x + 1).
 </div>
 <div class="para">Here <span class="process-math">\(a\)</span> is the starting term, and each subsequent term equals the previous terms multiplied by <span class="process-math">\(r\text{;}\)</span> we call <span class="process-math">\(r\)</span> the <dfn class="terminology">common ratio</dfn>.</div>
 </div>
-<div class="para" id="p-102">Let’s plot the various Maclaurin polynomials for <span class="process-math">\(f(x)=1/(1-x)\text{:}\)</span>
+<div class="para" id="p-105">Let’s plot the various Maclaurin polynomials for <span class="process-math">\(f(x)=1/(1-x)\text{:}\)</span>
 </div>
-<figure class="figure figure-like" id="fig-plot-GS"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/Calculus/Images/2/GS-plot.svg" role="img" class="contained" alt="Plot of the Maclaurin polynomials for \(f(x)=1/(1-x)\text{.}\) Note how they only approximate \(1/(1-x)\) when \(|x| \lt 1\text{.}\)"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span>Maclaurin polynomials for <span class="process-math">\(f(x)=1/(1-x)\)</span></figcaption></figure><div class="para" id="p-103">We immediately notice that the Maclaurin polynomials are wildy different from <span class="process-math">\(1/(1-x)\)</span> when <span class="process-math">\(|x| \geq 1\text{.}\)</span>
+<figure class="figure figure-like" id="fig-plot-GS"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/Calculus/Images/2/GS-plot.svg" role="img" class="contained" alt="Plot of the Maclaurin polynomials for \(f(x)=1/(1-x)\text{.}\) Note how they only approximate \(1/(1-x)\) when \(|x| \lt 1\text{.}\)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.11<span class="period">.</span></span><span class="space"> </span>Maclaurin polynomials for <span class="process-math">\(f(x)=1/(1-x)\)</span></figcaption></figure><div class="para" id="p-106">We immediately notice that the Maclaurin polynomials are wildy different from <span class="process-math">\(1/(1-x)\)</span> when <span class="process-math">\(|x| \geq 1\text{.}\)</span>
 </div></section><section class="section" id="sec-Convergence-issues"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Convergence issues</span>
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Convergence issues</span>
 </h3>
-<div class="para" id="p-104">Of course, the problem is that the series <a href="" class="xref" data-knowl="./knowl/eq-GS2.html" title="Equation 2.2">(2.2)</a> does not converge unless <span class="process-math">\(|x| \lt 1\)</span> - after all, if <span class="process-math">\(|x| \geq 1\text{,}\)</span> then the individual terms <span class="process-math">\(x^k\)</span> do not shrink to zero, and the partial sums cannot converge to a limit. This is true for all series:</div>
+<div class="para" id="p-107">Of course, the problem is that the series <a href="" class="xref" data-knowl="./knowl/eq-GS2.html" title="Equation 2.2">(2.2)</a> does not converge unless <span class="process-math">\(|x| \lt 1\)</span> - after all, if <span class="process-math">\(|x| \geq 1\text{,}\)</span> then the individual terms <span class="process-math">\(x^k\)</span> do not shrink to zero, and the partial sums cannot converge to a limit. This is true for all series:</div>
 <article class="theorem theorem-like" id="theorem-3"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">The Divergence Test.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Divergence Test.</span>
 </h4>
-<div class="para" id="p-105">If the terms <span class="process-math">\(t_k\)</span> of the series <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty}t_k\)</span> do not approach <span class="process-math">\(0\)</span> as <span class="process-math">\(k\to\infty\)</span> then the series diverges.</div></article><div class="para" id="p-106">We will soon see that the converse is not true: there are series, whose terms tend to zero, but which nevertheless diverge. One can think of this problem as the terms not tending to zero <em class="emphasis">fast enough.</em>
+<div class="para" id="p-108">If the terms <span class="process-math">\(t_k\)</span> of the series <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty}t_k\)</span> do not approach <span class="process-math">\(0\)</span> as <span class="process-math">\(k\to\infty\)</span> then the series diverges.</div></article><div class="para" id="p-109">This is obvious if you think about it: if the series converges, then the partial sums (running totals) tend to some fixed limit. But this means that the changes from one partial sum to the next (i.e. the terms of the series) must shrink to zero.</div>
+<div class="para" id="p-110">We will soon see that the converse is not true: there are series, whose terms tend to zero, but which nevertheless diverge. One can think of this problem as the terms not tending to zero <em class="emphasis">fast enough.</em>
 </div>
 <article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric Series.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Geometric Series.</span>
 </h4>
-<div class="para logical" id="p-107">
+<div class="para logical" id="p-111">
 <div class="para">A geometric series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -370,8 +485,8 @@ x^{n+1} - 1 = (x-1)(x^n + x^{n-1} + \cdots + x + 1).
 S=\frac{a}{1-r}.
 \end{equation*}
 </div>
-</div></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="para" id="p-108">If <span class="process-math">\(|r| \geq 1\text{,}\)</span> then <span class="process-math">\(\lim_{k\rightarrow\infty}ar^k\)</span> does not equal zero, so by the Divergence Test, the series diverges.</div> <div class="para logical" id="p-109">
-<div class="para">Now suppose that <span class="process-math">\(|r| \lt 1\text{.}\)</span> By the result of <a href="" class="xref" data-knowl="./knowl/ex-GS.html" title="Checkpoint 2.2">Checkpoint 2.2</a>, we have</div>
+</div></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><div class="para" id="p-112">If <span class="process-math">\(|r| \geq 1\text{,}\)</span> then <span class="process-math">\(\lim_{k\rightarrow\infty}ar^k\)</span> does not equal zero, so by the Divergence Test, the series diverges.</div> <div class="para logical" id="p-113">
+<div class="para">Now suppose that <span class="process-math">\(|r| \lt 1\text{.}\)</span> By the result of <a href="" class="xref" data-knowl="./knowl/ex-GS.html" title="Checkpoint 2.10">Checkpoint 2.10</a>, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex-GS.html">
 \begin{equation*}
 a + ar + ar^2 + \cdots + ar^N = a(1 + r + r^2 + \cdots + r^N) = a\frac{1-r^{N+1}}{1-r},
@@ -385,13 +500,13 @@ a + ar + ar^2 + \cdots + ar^N = a(1 + r + r^2 + \cdots + r^N) = a\frac{1-r^{N+1}
 \amp = a \frac{1}{1-r}
 \end{align*}
 </div>
-<div class="para">since <span class="process-math">\(r^{N+1} \rightarrow 0\)</span> as <span class="process-math">\(N\rightarrow\infty\)</span> as <span class="process-math">\(|r| \lt 1\text{.}\)</span>
+<div class="para">since <span class="process-math">\(r^{N+1} \rightarrow 0\)</span> as <span class="process-math">\(N\rightarrow\infty\)</span> because <span class="process-math">\(|r| \lt 1\text{.}\)</span>
 </div>
 </div></article></div>
 <article class="example example-like" id="example-6"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-110">
+<div class="para logical" id="p-114">
 <div class="para">Repeating decimals are also geometric series:</div>
 <div class="displaymath process-math" id="md-24">
 \begin{align*}
@@ -400,13 +515,13 @@ a + ar + ar^2 + \cdots + ar^N = a(1 + r + r^2 + \cdots + r^N) = a\frac{1-r^{N+1}
 \end{align*}
 </div>
 </div></article></section><section class="section" id="sec-Ratio-test"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Ratio test</span>
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Ratio test</span>
 </h3>
-<div class="para" id="p-111">Most series aren’t obligingly geometric series, but a similar principle applies: if the ratios of consecutive terms stay small (specifically, tend to a value strictly between <span class="process-math">\(1\)</span> and <span class="process-math">\(-1\)</span>), then we can expect convergence:</div>
+<div class="para" id="p-115">Most series aren’t obligingly geometric series, but a similar principle applies: if the ratios of consecutive terms stay small (specifically, tend to a value strictly between <span class="process-math">\(1\)</span> and <span class="process-math">\(-1\)</span>), then we can expect convergence:</div>
 <article class="theorem theorem-like" id="theorem-5"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">The Ratio Test.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span><span class="space"> </span><span class="title">The Ratio Test.</span>
 </h4>
-<div class="para logical" id="p-112">
+<div class="para logical" id="p-116">
 <div class="para">For the series <span class="process-math">\(\displaystyle \sum_{k=1}^{\infty}t_k\text{,}\)</span> let <span class="process-math">\(\displaystyle L=\lim_{k\to \infty}\left|\dfrac{t_{k+1}}{t_k}\right|\text{.}\)</span> If</div>
 <ul class="disc">
 <li id="li-1"><div class="para" id="p-derived-li-1">
@@ -416,14 +531,14 @@ a + ar + ar^2 + \cdots + ar^N = a(1 + r + r^2 + \cdots + r^N) = a\frac{1-r^{N+1}
 <li id="li-3"><div class="para" id="p-derived-li-3">
 <span class="process-math">\(L=1\)</span> then the test is inconclusive</div></li>
 </ul>
-</div></article><aside class="aside aside-like" id="aside-6"><div class="para" id="p-113">We can actually do slightly better: in the Ratio Test we can replace <span class="process-math">\(\displaystyle L=\lim_{k\to \infty}\left|\dfrac{t_{k+1}}{t_k}\right|\)</span> by <span class="process-math">\(\displaystyle L=\limsup_{k\to \infty}\left|\dfrac{t_{k+1}}{t_k}\right|\text{.}\)</span>
+</div></article><aside class="aside aside-like" id="aside-6"><div class="para" id="p-117">We can actually do slightly better: in the Ratio Test we can replace <span class="process-math">\(\displaystyle L=\lim_{k\to \infty}\left|\dfrac{t_{k+1}}{t_k}\right|\)</span> by <span class="process-math">\(\displaystyle L=\limsup_{k\to \infty}\left|\dfrac{t_{k+1}}{t_k}\right|\text{.}\)</span>
 </div>
-<div class="para" id="p-114">If you don’t yet know what a limsup is, here is another way of putting it: If there exists a number <span class="process-math">\(L \lt 1\text{,}\)</span> such that <span class="process-math">\(\displaystyle \left|\dfrac{t_{k+1}}{t_k}\right| \leq L\)</span> for all sufficiently large <span class="process-math">\(k\text{,}\)</span> then the series converges.</div>
-<div class="para" id="p-115">The idea is simply that, in this case, the terms in the series shrink to zero faster than the terms of a (convergent) geometric series with common ratio <span class="process-math">\(L \lt 1\text{,}\)</span> and thus it must also converge.</div></aside><div class="para" id="p-116">In other courses you will learn more about convergence of series and in particular you will see more convergence tests. Annoyingly, all convergence tests have cases in which they’re inconclusive. One can actually prove that, in a suitable technical sense, a universal convergence test cannot exist.</div>
+<div class="para" id="p-118">If you don’t yet know what a limsup is, here is another way of putting it: If there exists a number <span class="process-math">\(L \lt 1\text{,}\)</span> such that <span class="process-math">\(\displaystyle \left|\dfrac{t_{k+1}}{t_k}\right| \leq L\)</span> for all sufficiently large <span class="process-math">\(k\text{,}\)</span> then the series converges.</div>
+<div class="para" id="p-119">The idea is simply that, in this case, the terms in the series shrink to zero faster than the terms of a (convergent) geometric series with common ratio <span class="process-math">\(L \lt 1\text{,}\)</span> and thus it must also converge.</div></aside><div class="para" id="p-120">In other courses you will learn more about convergence of series and in particular you will see more convergence tests. Annoyingly, all convergence tests have cases in which they’re inconclusive. One can actually prove that, in a suitable technical sense, a universal convergence test cannot exist.</div>
 <article class="example example-like" id="Ex-Ratio_test"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-117">
+<div class="para logical" id="p-121">
 <div class="para">Determine the nature of the series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -432,28 +547,28 @@ a + ar + ar^2 + \cdots + ar^N = a(1 + r + r^2 + \cdots + r^N) = a\frac{1-r^{N+1}
 </div>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><div class="para" id="p-118">Convergent.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like"><div class="para" id="p-122">Convergent.</div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<div class="para logical" id="p-119">
+<div class="para logical" id="p-123">
 <div class="para">To use the ratio test consider</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfrac{t_{k+1}}{t_k} = \dfrac{k+2}{2^{k+1}}\cdot\dfrac{2^k}{k+1} = \dfrac{1}{2}\left(\dfrac{k+2}{k+1}\right).
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-120">
+</div> <div class="para logical" id="p-124">
 <div class="para">Thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
 L=\lim_{k\to\infty}\left|\dfrac{1}{2}\left(\dfrac{k+2}{k+1}\right)\right|=\dfrac{1}{2}.
 \end{equation*}
 </div>
-</div> <div class="para" id="p-121">Since <span class="process-math">\(L&lt;1\text{,}\)</span> by the ratio test this series converges. (Notice that the ratio test doesn’t tell us to what number the series converges to. In this case it happens to be <span class="process-math">\(3\text{.}\)</span>)</div>
+</div> <div class="para" id="p-125">Since <span class="process-math">\(L = \frac{1}{2} \lt 1\text{,}\)</span> by the ratio test this series converges. (Notice that the ratio test doesn’t tell us to what number the series converges to. In this case it happens to be <span class="process-math">\(3\text{.}\)</span>)</div>
 </div></div>
 </div></article></section><section class="section" id="sec-Convergence-of-power-series"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Convergence of power series</span>
+<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Convergence of power series</span>
 </h3>
-<div class="para logical" id="p-122">
+<div class="para logical" id="p-126">
 <div class="para">It turns out that the Ratio Test is well suited for testing the convergence of power series. Consider a general power series, of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -463,9 +578,9 @@ f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots = \sum_{k=0}^\infty c_k(x-a)^k.
 <div class="para">We’d like to know for which values of <span class="process-math">\(x\)</span> this series converges. After all, if the series doesn’t converge for a particular <span class="process-math">\(x\text{,}\)</span> then it tells us nothing about the value of the function at <span class="process-math">\(x\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-123">Firstly, when <span class="process-math">\(x=a\text{,}\)</span> then <span class="process-math">\(f(a) = c_0 + 0 + 0 + \cdots\)</span> obviously converges to the first term <span class="process-math">\(c_0\text{.}\)</span> In other words, <em class="emphasis">a power series always converges at its centre.</em>
+<div class="para" id="p-127">Firstly, when <span class="process-math">\(x=a\text{,}\)</span> then <span class="process-math">\(f(a) = c_0 + 0 + 0 + \cdots\)</span> obviously converges to the first term <span class="process-math">\(c_0\text{.}\)</span> In other words, <em class="emphasis">a power series always converges at its centre.</em>
 </div>
-<div class="para logical" id="p-124">
+<div class="para logical" id="p-128">
 <div class="para">For other values of <span class="process-math">\(x\text{,}\)</span> we apply the Ratio Test. To do so, we check the (absolute values of) ratios of consecutive terms, and try to determine if they converge to something smaller than 1. Due to the nature of power series, there is some cancellation in this ratio:</div>
 <div class="displaymath process-math" id="md-25">
 \begin{align*}
@@ -474,7 +589,7 @@ f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots = \sum_{k=0}^\infty c_k(x-a)^k.
 </div>
 <div class="para">For the Ratio Test to apply, this must converge to some <span class="process-math">\(L\)</span> as <span class="process-math">\(k \rightarrow \infty\text{.}\)</span> This depends on the ratios of the coefficients <span class="process-math">\(c_k\)</span> of the power series. Assuming the ratios converge to something, we find three possibilities.</div>
 </div>
-<div class="para logical" id="p-125">
+<div class="para logical" id="p-129">
 <div class="para">
 <dfn class="terminology">Case 1.</dfn> If <span class="process-math">\(\displaystyle \lim_{k\rightarrow\infty} \frac{c_{k+1}}{c_k} = 0\)</span> then the series converges for all <span class="process-math">\(x\text{:}\)</span>
 </div>
@@ -484,9 +599,9 @@ L = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right| = \lim
 \end{equation*}
 </div>
 <div class="para"><article class="example example-like" id="example-8"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
 </h4>
-<div class="para logical" id="p-126">
+<div class="para logical" id="p-130">
 <div class="para">Consider the Maclaurin series for <span class="process-math">\(e^x\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -497,7 +612,7 @@ e^x = \sum_{k=0}^{\infty} \frac{1}{k!}x^k.
 <div class="para">Here</div>
 <div class="displaymath process-math" id="md-26">
 \begin{align*}
-\lim_{k\rightarrow\infty} \left| \frac{\frac{1}{(k+1)!}(x-a)^{k+1}}{\frac{1}{k!}(x-a)^k} \right| \amp =  \lim_{k\to\infty}\left|\frac{k!}{(k+1)!} \right| \cdot|x| \\
+L = \lim_{k\rightarrow\infty} \left| \frac{\frac{1}{(k+1)!}(x-a)^{k+1}}{\frac{1}{k!}(x-a)^k} \right| \amp =  \lim_{k\to\infty}\left|\frac{k!}{(k+1)!} \right| \cdot|x| \\
 \amp =  \lim_{k\to\infty}\left|\frac{k!}{k!(k+1)} \right| \cdot|x| \\
 \amp =  \lim_{k\to\infty}\left|\frac{1}{k+1} \right| \cdot|x| \\
 \amp = 0. 
@@ -505,25 +620,25 @@ e^x = \sum_{k=0}^{\infty} \frac{1}{k!}x^k.
 </div>
 <div class="para">Thus the Maclaurin series for <span class="process-math">\(e^x\)</span> converges for all values of <span class="process-math">\(x\text{.}\)</span>
 </div>
-</div> <div class="para" id="p-127">It’s not hard to show that the same holds for the Taylor series of <span class="process-math">\(f(x) = e^x\text{,}\)</span> <span class="process-math">\(\cos(x)\)</span> and <span class="process-math">\(\sin(x)\)</span> about any centre. The reason is that the derivatives <span class="process-math">\(f^{(n)}(a)\)</span> are bounded (by <span class="process-math">\(e^a\)</span> in the case of <span class="process-math">\(f(x)=e^x\text{,}\)</span> and by <span class="process-math">\(1\)</span> in the case of <span class="process-math">\(f(x)=\cos(x)\)</span> or <span class="process-math">\(f(x)=\sin(x)\)</span>), thus in the Ratio Test calculation, the factorials in the denominators dominate everything.</div></article></div>
+</div> <div class="para" id="p-131">It’s not hard to show that the same holds for the Taylor series of <span class="process-math">\(f(x) = e^x\text{,}\)</span> <span class="process-math">\(\cos(x)\)</span> and <span class="process-math">\(\sin(x)\)</span> about any centre. The reason is that the derivatives <span class="process-math">\(f^{(n)}(a)\)</span> are bounded (by <span class="process-math">\(e^a\)</span> in the case of <span class="process-math">\(f(x)=e^x\text{,}\)</span> and by <span class="process-math">\(1\)</span> in the case of <span class="process-math">\(f(x)=\cos(x)\)</span> or <span class="process-math">\(f(x)=\sin(x)\)</span>), thus in the Ratio Test calculation, the factorials in the denominators dominate everything.</div></article></div>
 </div>
-<div class="para logical" id="p-128">
+<div class="para logical" id="p-132">
 <div class="para">
 <dfn class="terminology">Case 2.</dfn> If <span class="process-math">\(\displaystyle \lim_{k\rightarrow\infty} \frac{c_{k+1}}{c_k} = C \neq 0, \infty\)</span> then the series converges for <span class="process-math">\(|x-a| \lt R = \frac{1}{C}\)</span> and diverges if <span class="process-math">\(|x-a| \gt R\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="md-27">
 \begin{align*}
 L = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right| \amp = \lim_{k\to\infty}\left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a|\\
-\amp = C |x-a| = L. 
+\amp = C |x-a|. 
 \end{align*}
 </div>
 <div class="para">This will converge if <span class="process-math">\(C |x-a| = L \lt 1\text{,}\)</span> i.e. when <span class="process-math">\(|x-a| \lt \frac{1}{C}\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-129">In this case, we call <span class="process-math">\(R\)</span> the <dfn class="terminology">radius of convergence</dfn> of the power series. Basically, the series converges if the distance from <span class="process-math">\(x\)</span> to the centre <span class="process-math">\(a\)</span> is less than the radius of convergence <span class="process-math">\(R\text{.}\)</span> If this distance is greater than <span class="process-math">\(R\text{,}\)</span> then the series diverges.</div>
-<div class="para" id="p-130">In other words, the series converges for <span class="process-math">\(x\)</span> inside the open interval <span class="process-math">\((a-R, a+R)\text{,}\)</span> and diverges outside the closed interval <span class="process-math">\([a-R, a+R]\text{.}\)</span>
+<div class="para" id="p-133">In this case, we call <span class="process-math">\(R\)</span> the <dfn class="terminology">radius of convergence</dfn> of the power series. Basically, the series converges if the distance from <span class="process-math">\(x\)</span> to the centre <span class="process-math">\(a\)</span> is less than the radius of convergence <span class="process-math">\(R\text{.}\)</span> If this distance is greater than <span class="process-math">\(R\text{,}\)</span> then the series diverges.</div>
+<div class="para" id="p-134">In other words, the series converges for <span class="process-math">\(x\)</span> inside the open interval <span class="process-math">\((a-R, a+R)\text{,}\)</span> and diverges outside the closed interval <span class="process-math">\([a-R, a+R]\text{.}\)</span>
 </div>
-<div class="para logical" id="p-131">
+<div class="para logical" id="p-135">
 <div class="para">What happens on the endpoints of these intervals, i.e. when <span class="process-math">\(x = a \pm R\text{?}\)</span> The Ratio Test tells us nothing. All we know at this point is that there is an <dfn class="terminology">interval of convergence</dfn>, of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -533,15 +648,15 @@ L = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right| \amp =
 <div class="para">But we won’t worry about convergence at the endpoints in this course.</div>
 </div>
 <aside class="aside aside-like" id="aside-7"><h4 class="heading"><span class="title">Where’s the circle?</span></h4>
-<div class="para" id="p-132">Why is the radius of convergence called a <em class="emphasis">radius?</em> Where’s the circle?</div>
-<div class="para" id="p-133">The answer becomes clear when we consider the variable <span class="process-math">\(x\)</span> to be a <em class="emphasis">complex</em> number, rather than just a real number. Everything we’ve done up to now also makes sense over complex number, especially power series, and in this case the interval of convergence turns out to be a <em class="emphasis">disk</em> of convergence. The series will converge for <span class="process-math">\(|x-a| \lt R\text{,}\)</span> and this region defines a disk in the complex plane, centered at <span class="process-math">\(x=a\text{,}\)</span> with radius <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="p-136">Why is the radius of convergence called a <em class="emphasis">radius?</em> Where’s the circle?</div>
+<div class="para" id="p-137">The answer becomes clear when we consider the variable <span class="process-math">\(x\)</span> to be a <em class="emphasis">complex</em> number, rather than just a real number. Everything we’ve done up to now also makes sense over complex number, especially power series, and in this case the interval of convergence turns out to be a <em class="emphasis">disk</em> of convergence. The series will converge for <span class="process-math">\(|x-a| \lt R\text{,}\)</span> and this region defines a disk in the complex plane, centered at <span class="process-math">\(x=a\text{,}\)</span> with radius <span class="process-math">\(R\text{.}\)</span>
 </div></aside><article class="example example-like" id="example-9"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-134">Compute the radius of convergence of <span class="process-math">\(\sum_{k=0}^{\infty}\frac{3^k}{k}(x-1)^k\text{.}\)</span>
+<div class="para" id="p-138">Compute the radius of convergence of <span class="process-math">\(\sum_{k=0}^{\infty}\frac{3^k}{k}(x-1)^k\text{.}\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para logical" id="p-135">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like"><div class="para logical" id="p-139">
 <div class="para">We use the Ratio Test:</div>
 <div class="displaymath process-math" id="md-28">
 \begin{align*}
@@ -553,13 +668,13 @@ L \amp = \lim_{k\rightarrow\infty} \left|\frac{\frac{3^{k+1}}{k+1}(x-1)^{k+1}}{\
 <div class="para">because</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\lim_{k\rightarrow\infty} \frac{k}{k+1} = \lim_{k\rightarrow\infty} \frac{1}{1 + \frac{1}{k}} = \frac{1}{1+0} 1.
+\lim_{k\rightarrow\infty} \frac{k}{k+1} = \lim_{k\rightarrow\infty} \frac{1}{1 + \frac{1}{k}} = \frac{1}{1+0} = 1.
 \end{equation*}
 </div>
 <div class="para">Now <span class="process-math">\(L \lt 1\)</span> when <span class="process-math">\(|x-1| \lt \frac{1}{3}\text{.}\)</span> So we find that the series converges for <span class="process-math">\(|x-1| \lt \frac{1}{3}\text{,}\)</span> i.e. on the interval <span class="process-math">\((\frac{2}{3}, \frac{4}{3})\text{,}\)</span> and the radius of convergence is <span class="process-math">\(R=\frac{1}{3}\text{.}\)</span>
 </div>
 </div></div></div>
-</div></article><div class="para logical" id="p-136">
+</div></article><div class="para logical" id="p-140">
 <div class="para">
 <dfn class="terminology">Case 3.</dfn> If <span class="process-math">\(\displaystyle \lim_{k\rightarrow\infty} \frac{c_{k+1}}{c_k} = \infty,\)</span> then the series diverges for all <span class="process-math">\(x\neq a\text{:}\)</span>
 </div>
@@ -567,36 +682,22 @@ L \amp = \lim_{k\rightarrow\infty} \left|\frac{\frac{3^{k+1}}{k+1}(x-1)^{k+1}}{\
 \begin{align*}
 L \amp = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right|\\
 \amp = \lim_{k\to\infty}\left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a|\\
-= \infty, 
+\amp = \infty, 
 \end{align*}
 </div>
 <div class="para">so <span class="process-math">\(L = 3|x-1| \gt 1\)</span> unless <span class="process-math">\(x = a\text{.}\)</span> In this case we say the radius of convergence is zero: <span class="process-math">\(R=0\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-137">Just to round things off, in the first case, where the series converges for all <span class="process-math">\(x\text{,}\)</span> we say that it has <dfn class="terminology">infinite radius of convergence</dfn>.</div></section><section class="section" id="sec-Algebra-of-infinite-series"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Algebra of infinite series</span>
+<div class="para" id="p-141">Just to round things off, in the first case, where the series converges for all <span class="process-math">\(x\text{,}\)</span> we say that it has <dfn class="terminology">infinite radius of convergence</dfn>.</div></section><section class="section" id="sec-Algebra-of-infinite-series"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span>
 </h3>
-<div class="para" id="p-138">Computing repeated derivatives gets old really quickly. Often a much quicker way to get power series expansions for given functions is to manipulate know series algebraically... or by differentiating term-by-term.</div></section><section class="section" id="sec-Advanced-topics2"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Advanced topics</span>
-</h3>
-<section class="subsection" id="subsec-Integral-test"><h4 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.6.1</span> <span class="title">Integral test</span>
-</h4></section><section class="subsection" id="subsec-Absolute-conditional-convergence"><h4 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.6.2</span> <span class="title">Absolute vs. conditional convergence</span>
-</h4>
-<div class="para" id="p-139">Rearrangement of conditionally convergent series can make your head explode.</div></section><section class="subsection" id="subsec-Convergence-complex"><h4 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.6.3</span> <span class="title">Convergence in the complex plane</span>
-</h4></section><section class="subsection" id="subsec-Euler-product"><h4 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.6.4</span> <span class="title">The Euler product of the zeta function</span>
-</h4></section></section><section class="section" id="Generating-New-Series-from-Known-Series"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.7</span> <span class="title">OLD STUFF - Generating New Series from Known Series</span>
-</h3>
-<div class="para" id="p-140">In <a href="" class="xref" data-knowl="./knowl/Table_Maclaurin.html" title="Table 2.11: Some Important Maclaurin Series:">Table 2.11</a> below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques.</div>
-<div class="para logical" id="p-141"><ul class="disc">
+<div class="para" id="p-142">Computing repeated derivatives gets old really quickly. Often a much quicker way to get power series expansions for given functions is to manipulate a known series.</div>
+<div class="para" id="p-143">In <a href="" class="xref" data-knowl="./knowl/Table_Maclaurin.html" title="Table 2.19: Some Important Maclaurin Series (and their intervals of convergence):">Table 2.19</a> below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques:</div>
+<div class="para logical" id="p-144"><ul class="disc">
 <li id="li-4"><div class="para" id="p-derived-li-4">Manipulating/Substituting into known series.</div></li>
-<li id="li-5"><div class="para" id="p-142">Differentiating/Integrating known series.</div></li>
+<li id="li-5"><div class="para" id="p-derived-li-5">Differentiating/Integrating known series.</div></li>
 </ul></div>
-<figure class="table table-like" id="Table_Maclaurin"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.11<span class="period">.</span></span><span class="space"> </span>Some Important Maclaurin Series:</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="Table_Maclaurin"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.19<span class="period">.</span></span><span class="space"> </span>Some Important Maclaurin Series (and their intervals of convergence):</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\dfrac{1}{1-x}=\sum_{k=0}^{\infty}x^{k}=1+x+x^{2}+x^{3}+\cdots\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\lvert x\rvert &lt; 1\)</span></td>
@@ -630,83 +731,83 @@ L \amp = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right|\\
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mathbb{R}\)</span></td>
 </tr>
 </table></div></figure><section class="paragraphs" id="paragraphs-1"><h4 class="heading"><span class="title">Manipulating/Substituting into Known Series.</span></h4></section><article class="example example-like" id="Maclaurin_series_1_on_1_plus_x2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-143">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1}{1+x^{2}}. \)</span>
+<div class="para" id="p-145">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1}{1+x^{2}}. \)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><div class="para" id="p-144"><span class="process-math">\(\dfrac{1}{1+x^{2}}=\displaystyle\sum_{k=0}^{\infty}(-1)^{k}x^{2k}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-6" id="answer-6"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-6"><div class="answer solution-like"><div class="para" id="p-146"><span class="process-math">\(\dfrac{1}{1+x^{2}}=\displaystyle\sum_{k=0}^{\infty}(-1)^{k}x^{2k}\)</span></div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<div class="para" id="p-145">We know that the Maclaurin series for<span class="process-math">\(f(x)=\dfrac{1}{1-x}\)</span> on <span class="process-math">\(\lvert x\rvert &lt; 1 \)</span> is</div>
+<div class="para" id="p-147">We know that the Maclaurin series for<span class="process-math">\(f(x)=\dfrac{1}{1-x}\)</span> on <span class="process-math">\(\lvert x\rvert &lt; 1 \)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \dfrac{1}{1-x}=\sum_{k=0}^{\infty}x^{k}=1+x+x^{2}+x^{3}+\cdots \cdot 
 \end{equation*}
 </div>
-<div class="para" id="p-146">We can use this series by replacing <span class="process-math">\(x \)</span> with <span class="process-math">\(-x^{2} \)</span> to obtain</div> <div class="para logical" id="p-147"><div class="displaymath process-math" id="md-30">
+<div class="para" id="p-148">We can use this series by replacing <span class="process-math">\(x \)</span> with <span class="process-math">\(-x^{2} \)</span> to obtain</div> <div class="para logical" id="p-149"><div class="displaymath process-math" id="md-30">
 \begin{align*}
 \dfrac{1}{1+x^{2}} \amp =\dfrac{1}{1-(-x^{2})}\\
 \amp = 1+(-x^{2})+(-x^{2})^{2}+(-x^{2})^{3}+\cdots\\
 \amp = 1-x^{2} +x^{4}-x^6+\cdots\\
 \amp = \sum_{k=0}^{\infty}(-1)^{k}x^{2k}
 \end{align*}
-</div></div> <div class="para" id="p-148">which will converge on the interval <span class="process-math">\(\lvert -x^{2}\rvert &lt; 1, \)</span> i.e., <span class="process-math">\(-1&lt; x &lt; 1. \)</span>
+</div></div> <div class="para" id="p-150">which will converge on the interval <span class="process-math">\(\lvert -x^{2}\rvert &lt; 1, \)</span> i.e., <span class="process-math">\(-1&lt; x &lt; 1. \)</span>
 </div>
 </div></div>
 </div></article><article class="example example-like" id="Maclaurin_series_x_on_2_minus_5x"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-149">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{x^2}{2-5x}. \)</span>
+<div class="para" id="p-151">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{x^2}{2-5x}. \)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><div class="para" id="p-150"><span class="process-math">\(\dfrac{x^2}{2-5x}=\dfrac{x^2}{2}\displaystyle\sum_{k=0}^{\infty}\left(\dfrac{5x}{2}\right)^{k}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-7" id="answer-7"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-7"><div class="answer solution-like"><div class="para" id="p-152"><span class="process-math">\(\dfrac{x^2}{2-5x}=\dfrac{x^2}{2}\displaystyle\sum_{k=0}^{\infty}\left(\dfrac{5x}{2}\right)^{k}\)</span></div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<div class="para" id="p-151">Once again we will use the Maclaurin series for <span class="process-math">\(f(x)=\dfrac{1}{1-x}\)</span> on <span class="process-math">\(\lvert x\rvert &lt; 1. \)</span> Now</div> <div class="para logical" id="p-152"><div class="displaymath process-math" id="md-31">
+<div class="para" id="p-153">Once again we will use the Maclaurin series for <span class="process-math">\(f(x)=\dfrac{1}{1-x}\)</span> on <span class="process-math">\(\lvert x\rvert &lt; 1. \)</span> Now</div> <div class="para logical" id="p-154"><div class="displaymath process-math" id="md-31">
 \begin{align*}
 \frac{x^2}{2-5x} \amp =\dfrac{x^{2}}{2}\left(\dfrac{1}{1-(\frac{5x}{2})}\right)\\
 \amp = \dfrac{x^2}{2}\left(1+\left(\frac{5x}{2}\right)+\left(\frac{5x}{2}\right)^{2}+\left(\frac{5x}{2}\right)^{3}+\cdots\right)\\
 \amp = \dfrac{x^2}{2}\sum_{k=0}^{\infty}\left(\dfrac{5x}{2}\right)^{k}
 \end{align*}
-</div></div> <div class="para" id="p-153">which will converge on the interval <span class="process-math">\(\lvert \frac{5x}{2}\rvert &lt; 1, \)</span> i.e., <span class="process-math">\(-\frac{2}{5}&lt; x &lt; \frac{2}{5}. \)</span>
+</div></div> <div class="para" id="p-155">which will converge on the interval <span class="process-math">\(\lvert \frac{5x}{2}\rvert &lt; 1, \)</span> i.e., <span class="process-math">\(-\frac{2}{5}&lt; x &lt; \frac{2}{5}. \)</span>
 </div>
 </div></div>
 </div></article><article class="example example-like" id="Maclaurin_series_e_minus_x_2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-154">Find the Maclaurin series for  <span class="process-math">\(f(x)=e^{-x^2}. \)</span>
+<div class="para" id="p-156">Find the Maclaurin series for  <span class="process-math">\(f(x)=e^{-x^2}. \)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><div class="para" id="p-155"><span class="process-math">\(e^{-x^2}=\displaystyle\sum_{k=0}^{\infty}(-1)^{k}\dfrac{x^{2k}}{k!}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-8" id="answer-8"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-8"><div class="answer solution-like"><div class="para" id="p-157"><span class="process-math">\(e^{-x^2}=\displaystyle\sum_{k=0}^{\infty}(-1)^{k}\dfrac{x^{2k}}{k!}\)</span></div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<div class="para" id="p-156">Substituting into the Maclaurin series for  <span class="process-math">\(f(x)=e^{x}\text{,}\)</span> we obtain</div> <div class="para logical" id="p-157"><div class="displaymath process-math" id="md-32">
+<div class="para" id="p-158">Substituting into the Maclaurin series for  <span class="process-math">\(f(x)=e^{x}\text{,}\)</span> we obtain</div> <div class="para logical" id="p-159"><div class="displaymath process-math" id="md-32">
 \begin{align*}
 e^{-x^2} \amp =\sum_{k=0}^{\infty}\dfrac{(-x^2)^{k}}{k!}=\sum_{k=0}^{\infty}(-1)^{k}\dfrac{x^{2k}}{k!}\\
 \amp = 1- x^{2}+\frac{x^{4}}{2!}-\frac{x^{6}}{3!}+\cdots
 \end{align*}
-</div></div> <div class="para" id="p-158">which will converge for all real values of <span class="process-math">\(x. \)</span>
+</div></div> <div class="para" id="p-160">which will converge for all real values of <span class="process-math">\(x. \)</span>
 </div>
 </div></div>
-</div></article><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Differentiating/Integrating Known Series.</span></h4></section><div class="para" id="p-159">As the theorem below says, we can also use differentiation and integration to work out new Maclaurin series expansions from ones that we already know. The proof of this theorem is beyond the scope of this course.</div>
+</div></article><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">Differentiating/Integrating Known Series.</span></h4></section><div class="para" id="p-161">As the theorem below says, we can also use differentiation and integration to work out new Maclaurin series expansions from ones that we already know. The proof of this theorem is beyond the scope of this course.</div>
 <article class="theorem theorem-like" id="theorem-6"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-160">If  <span class="process-math">\(f(x)=\sum\limits_{k=0}^{\infty}c_{k}x^{k}\)</span> with radius of convergence <span class="process-math">\(R\)</span> then</div> <div class="para logical" id="p-161"><ul class="disc">
-<li id="li-6"><div class="para" id="p-162">
+<div class="para" id="p-162">If  <span class="process-math">\(f(x)=\sum\limits_{k=0}^{\infty}c_{k}x^{k}\)</span> with radius of convergence <span class="process-math">\(R\)</span> then</div> <div class="para logical" id="p-163"><ul class="disc">
+<li id="li-6"><div class="para" id="p-164">
 <span class="process-math">\(f'(x)=\sum\limits_{k=0}^{\infty}k c_{k}x^{k-1}\)</span> with radius of convergence <span class="process-math">\(R\text{,}\)</span>
 </div></li>
-<li id="li-7"><div class="para" id="p-163">
+<li id="li-7"><div class="para" id="p-165">
 <span class="process-math">\(\int f(x)dx=K+ \sum\limits_{k=0}^{\infty} \dfrac{c_{k}}{k+1}x^{k-1}\)</span> with radius of convergence <span class="process-math">\(R\)</span> (where <span class="process-math">\(K\in\mathbb{R}\)</span>).</div></li>
-</ul></div></article><div class="para" id="p-164">Note that the behaviour of the series (i.e. whether it converges or diverges) at the endpoints may change when it is differentiated or integrated.</div>
+</ul></div></article><div class="para" id="p-166">Note that the behaviour of the series (i.e. whether it converges or diverges) at the endpoints may change when it is differentiated or integrated.</div>
 <article class="example example-like" id="Maclaurin_series_1_on_1_minus_x_power_2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-165">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1}{(1-x)^{2}}.\)</span>
+<div class="para" id="p-167">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1}{(1-x)^{2}}.\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="para" id="p-166"><span class="process-math">\(\dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{k=1}^{\infty} k x^{k-1}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-9" id="answer-9"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-9"><div class="answer solution-like"><div class="para" id="p-168"><span class="process-math">\(\dfrac{1}{(1-x)^{2}}=\displaystyle\sum_{k=1}^{\infty} k x^{k-1}\)</span></div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
-<div class="para" id="p-167">Notice that <span class="process-math">\(\int \frac{1}{(1-x)^{2}} dx=\frac{1}{1-x}, \)</span> or put the other way, <span class="process-math">\(\frac{1}{(1-x)^{2}}=\frac{d}{dx} \left(\frac{1}{1-x}\right). \)</span> Since we know the Maclaurin series for <span class="process-math">\(\frac{1}{1-x} \)</span> we can differentiate this series to obtain the Maclaurin series for <span class="process-math">\(\frac{1}{(1-x)^{2}}. \)</span> So, on <span class="process-math">\(\lvert x\rvert &lt; 1, \)</span>
-</div> <div class="para logical" id="p-168"><div class="displaymath process-math" id="md-33">
+<div class="para" id="p-169">Notice that <span class="process-math">\(\int \frac{1}{(1-x)^{2}} dx=\frac{1}{1-x}, \)</span> or put the other way, <span class="process-math">\(\frac{1}{(1-x)^{2}}=\frac{d}{dx} \left(\frac{1}{1-x}\right). \)</span> Since we know the Maclaurin series for <span class="process-math">\(\frac{1}{1-x} \)</span> we can differentiate this series to obtain the Maclaurin series for <span class="process-math">\(\frac{1}{(1-x)^{2}}. \)</span> So, on <span class="process-math">\(\lvert x\rvert &lt; 1, \)</span>
+</div> <div class="para logical" id="p-170"><div class="displaymath process-math" id="md-33">
 \begin{align*}
 \frac{1}{(1-x)^{2}} \amp =\frac{d}{dx}\left(\sum_{k=0}^{\infty} x^{k}\right)\\
 \amp = \sum_{k=1}^{\infty} k x^{k-1}\\
@@ -715,21 +816,21 @@ e^{-x^2} \amp =\sum_{k=0}^{\infty}\dfrac{(-x^2)^{k}}{k!}=\sum_{k=0}^{\infty}(-1)
 </div></div>
 </div></div>
 </div></article><article class="example example-like" id="Maclaurin_series_ln_1_plus_x"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-169">Find the Maclaurin series for  <span class="process-math">\(f(x)=\ln(1+x).\)</span>
+<div class="para" id="p-171">Find the Maclaurin series for  <span class="process-math">\(f(x)=\ln(1+x).\)</span>
 </div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><div class="para" id="p-170"><span class="process-math">\(\ln(1+x)=\displaystyle\sum_{k=1}^{\infty}(-1)^{k-1}\dfrac{x^{k}}{k}\)</span></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><div class="para" id="p-172"><span class="process-math">\(\ln(1+x)=\displaystyle\sum_{k=1}^{\infty}(-1)^{k-1}\dfrac{x^{k}}{k}\)</span></div></div></div>
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<div class="para" id="p-171">Notice that <span class="process-math">\(\frac{d}{dx}(\ln(1+x)), \)</span> or put the other way, <span class="process-math">\(\ln(1+x)=K+\int \frac{1}{1+x} dx\text{.}\)</span> Since we know the Maclaurin series for <span class="process-math">\(\frac{1}{1+x} \)</span> we can integrate this series to obtain the Maclaurin series for <span class="process-math">\(\ln(1+x).\)</span> So, on <span class="process-math">\(\lvert x\rvert &lt; 1, \)</span>
-</div> <div class="para logical" id="p-172"><div class="displaymath process-math" id="md-34">
+<div class="para" id="p-173">Notice that <span class="process-math">\(\frac{d}{dx}(\ln(1+x)), \)</span> or put the other way, <span class="process-math">\(\ln(1+x)=K+\int \frac{1}{1+x} dx\text{.}\)</span> Since we know the Maclaurin series for <span class="process-math">\(\frac{1}{1+x} \)</span> we can integrate this series to obtain the Maclaurin series for <span class="process-math">\(\ln(1+x).\)</span> So, on <span class="process-math">\(\lvert x\rvert &lt; 1, \)</span>
+</div> <div class="para logical" id="p-174"><div class="displaymath process-math" id="md-34">
 \begin{align*}
 \ln(1+x) \amp = K+\int \left(\sum_{k=0}^{\infty} (-x)^{k}\right)dx\\
 \amp = K+\sum_{k=0}^{\infty} (-1)^{k}\frac{x^{k+1}}{k+1}\\
 \amp = K + x - \frac{1}{2}x^{2} +\frac{1}{3}x^{3} - \dots
 \end{align*}
-</div></div> <div class="para" id="p-173">Since <span class="process-math">\(\ln(1+x)\)</span> is <span class="process-math">\(0 \)</span> when <span class="process-math">\(x=0 \)</span> we have <span class="process-math">\(K=0. \)</span> Thus on <span class="process-math">\(\lvert x\rvert &lt; 1 \)</span>
+</div></div> <div class="para" id="p-175">Since <span class="process-math">\(\ln(1+x)\)</span> is <span class="process-math">\(0 \)</span> when <span class="process-math">\(x=0 \)</span> we have <span class="process-math">\(K=0. \)</span> Thus on <span class="process-math">\(\lvert x\rvert &lt; 1 \)</span>
 </div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -741,113 +842,27 @@ e^{-x^2} \amp =\sum_{k=0}^{\infty}\dfrac{(-x^2)^{k}}{k!}=\sum_{k=0}^{\infty}(-1)
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="exercise-9"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-174">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1}{3+2x}. \)</span>
+<div class="para" id="p-176">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1}{3+2x}. \)</span>
 </div></article><article class="exercise exercise-like" id="exercise-10"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-175">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1-x^2}{5-3x^2}. \)</span>
+<div class="para" id="p-177">Find the Maclaurin series for  <span class="process-math">\(f(x)=\dfrac{1-x^2}{5-3x^2}. \)</span>
 </div></article><article class="exercise exercise-like" id="exercise-11"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-176">Find the Maclaurin series for <span class="process-math">\(f(x)=\dfrac{1}{(1-2x)^2}. \)</span>
+<div class="para" id="p-178">Find the Maclaurin series for <span class="process-math">\(f(x)=\dfrac{1}{(1-2x)^2}. \)</span>
 </div></article><article class="exercise exercise-like" id="exercise-12"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="p-177">Find the Maclaurin series for <span class="process-math">\(f(x)=\tan^{-1}(x). \)</span>
+<div class="para" id="p-179">Find the Maclaurin series for <span class="process-math">\(f(x)=\tan^{-1}(x). \)</span>
 </div></article><article class="exercise exercise-like" id="exercise-13"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="p-178">Use a sixth degree Maclaurin polynomial to estimate  <span class="process-math">\(f(x)=\displaystyle\int_{0}^{1}e^{-x^{2}}dx. \)</span>
-</div></article></section></section><section class="section" id="Taylor_Series"><h3 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.8</span> <span class="title">Taylor Series</span>
+<div class="para" id="p-180">Use a sixth degree Maclaurin polynomial to estimate  <span class="process-math">\(f(x)=\displaystyle\int_{0}^{1}e^{-x^{2}}dx. \)</span>
+</div></article></section></section><section class="section" id="sec-Advanced-topics2"><h3 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.7</span> <span class="title">Advanced topics</span>
 </h3>
-<div class="para" id="p-179">Maclaurin series are power series about <span class="process-math">\(x=0. \)</span>  However we can follow exactly the same process to find a power series expansion for a function   <span class="process-math">\(f(x) \)</span> about any point   <span class="process-math">\(x=a. \)</span>  We call these power series Taylor Series.</div>
-<article class="definition definition-like" id="definition-4"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor Series.</span>
-</h4> <div class="para" id="p-180">The series,</div> <div class="para logical" id="p-181"><div class="displaymath process-math">
-\begin{equation*}
-\sum_{k=0}^{\infty}\dfrac{f^{(k)}(a)}{k!}(x-a)^k=f(a)+f'(a)(x-a)+\dfrac{f''(a)}{2!}(x-a)^{2}+\dfrac{f'''(a)}{3!}(x-a)^3+ \dots \text{.}
-\end{equation*}
-</div></div> <div class="para" id="p-182">is called the <dfn class="terminology">Taylor series</dfn> for <span class="process-math">\(f(x) \)</span> about   <span class="process-math">\(x=a. \)</span>
-</div></article><div class="para" id="p-183">Note that:</div>
-<div class="para logical" id="p-184"><ol class="decimal">
-<li id="li-8"><div class="para" id="p-derived-li-8">We can construct the Taylor series about  <span class="process-math">\(x=a.  \)</span>  for any function that is infinitely differentiable at  <span class="process-math">\(x=a.  \)</span>
-</div></li>
-<li id="li-9"><div class="para" id="p-185">The Taylor series for <span class="process-math">\(f\)</span> about <span class="process-math">\(x=a \)</span> always converges to <span class="process-math">\(f(a)\)</span> at <span class="process-math">\(x=a. \)</span>
-</div></li>
-<li id="li-10"><div class="para" id="p-186">If the Taylor series converges for other values of <span class="process-math">\(x \)</span> these will be in an interval centred on <span class="process-math">\(x=a. \)</span>
-</div></li>
-<li id="li-11"><div class="para" id="p-187">It is possible that a Taylor series may converge to a value other than the function value.</div></li>
-<li id="li-12"><div class="para" id="p-188">A Maclaurin series is just a Taylor series about  <span class="process-math">\(x=0.  \)</span>
-</div></li>
-<li id="li-13"><div class="para" id="p-189">The <span class="process-math">\(n^{\text{th}} \)</span>  partial sum of the Taylor series for <span class="process-math">\(f \)</span> about <span class="process-math">\(x=a \)</span>  is called the <dfn class="terminology"><span class="process-math">\(n^{\text{th}} \)</span> degree Taylor polynomial</dfn> for <span class="process-math">\(f \)</span> about  <span class="process-math">\(x=a. \)</span>
-</div></li>
-</ol></div>
-<article class="example example-like" id="Taylor_series_cos"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span>
+<section class="subsection" id="subsec-Why-radius-1"><h4 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span>
 </h4>
-<div class="para" id="p-190">Find the Taylor series for   <span class="process-math">\(f(x)=\cos(x) \)</span> about <span class="process-math">\(x=\frac{\pi}{2} \)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><div class="para" id="p-191"><span class="process-math">\(\displaystyle\sum_{k=1}^{\infty}(-1)^{k}\dfrac{(x-\frac{\pi}{2})^{2k-1}}{(2k-1)!}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original has-image" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like">
-<div class="para" id="p-192">In order to find the Taylor series for   <span class="process-math">\(f(x)=\cos(x) \)</span> about <span class="process-math">\(x=\frac{\pi}{2} \)</span>   we need to evaluate <span class="process-math">\(f \)</span> and its derivatives at  <span class="process-math">\(x=\frac{\pi}{2}. \)</span>  So,</div> <div class="para logical" id="p-193"><div class="displaymath process-math" id="md-35">
-\begin{align*}
-f(x) \amp =\cos(x)  \,\, \text{and hence}\,\,   f\left(\frac{\pi}{2}\right)=0  \\
-f'(x) \amp =-\sin(x)  \,\, \text{and hence}\,\,   f'\left(\frac{\pi}{2}\right)=-1 \\
-f''(x) \amp =-\cos(x)  \,\, \text{and hence}\,\,   f''\left(\frac{\pi}{2}\right)=0  \\
-f'''(x) \amp =\sin(x)  \,\, \text{and hence}\,\,   f'''\left(\frac{\pi}{2}\right)=1 \\
-\amp \hspace{5.5cm}  \vdots \\
-\amp \hspace{4.6cm}  f^{(k)}\left(\frac{\pi}{2}\right)=\begin{cases} 0 \amp k\;\, \text{even} \\
-(-1)^{\frac{k+1}{2}} \amp  k \;\, \text{odd} \end{cases} 
-\end{align*}
-</div></div> <div class="para" id="p-194">Thus the Taylor series for  <span class="process-math">\(f(x)=\cos(x) \)</span> about <span class="process-math">\(x=\frac{\pi}{2} \)</span>  is</div> <div class="para logical" id="p-195"><div class="displaymath process-math" id="md-36">
-\begin{align*}
-\amp = 0-(x-\frac{\pi}{2})+0+\frac{1}{3!}(x-\frac{\pi}{2})^{3}-\frac{1}{5!}(x-\frac{\pi}{2})^{5}+\dots\\
-\amp =-(x-\frac{\pi}{2})+\frac{(x-\frac{\pi}{2})^{3}}{3!}-\frac{(x-\frac{\pi}{2})^{5}}{5!}+\dots\\
-\amp = \sum_{k=1}^{\infty}(-1)^{k}\dfrac{(x-\frac{\pi}{2})^{2k-1}}{(2k-1)!}.
-\end{align*}
-</div></div> <div class="para" id="p-196">It turns out that this series converges to  <span class="process-math">\(f(x)=\cos(x) \)</span> for all values of <span class="process-math">\(x. \)</span>  <a href="" class="xref" data-knowl="./knowl/Fig-Taylor_series_cos.html" title="Figure 2.20">Figure 2.20</a> shows the graph of <span class="process-math">\(f(x)=\cos(x) \)</span> and the Taylor polynomials of degree <span class="process-math">\(1 \)</span>  and degree <span class="process-math">\(3    \)</span> about <span class="process-math">\(x=\frac{\pi}{2} .\)</span>
-</div> <figure class="figure figure-like" id="Fig-Taylor_series_cos"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/./Calculus/Images/2/Taylor_series_cos.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.20<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
-</div></div></article><article class="example example-like" id="Second_order_approximation_e_power_minus_x_on_3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span>
-</h4>
-<div class="para" id="p-197">Find the second order approximation to   <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2. \)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><div class="para" id="p-198"><span class="process-math">\(T_{2}(x)=e^{-\frac{2}{3}}-\dfrac{1}{3}e^{-\frac{2}{3}}(x-2)+\dfrac{1}{18}e^{-\frac{2}{3}}(x-2)^{2}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like">
-<div class="para" id="p-199">In order to find the second order approximation for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2 \)</span> we need to evaluate <span class="process-math">\(f \)</span> and its first two derivatives at <span class="process-math">\(x=2\text{.}\)</span>  So,</div> <div class="para logical" id="p-200"><div class="displaymath process-math" id="md-37">
-\begin{align*}
-f(x) \amp =e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f(2)=e^{-\frac{2}{3}}  \\
-f'(x) \amp =-\frac{1}{3}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f'(2)=-\frac{1}{3}e^{-\frac{2}{3}} \\
-f''(x) \amp =\frac{1}{9}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f''(2)=\frac{1}{9}e^{-\frac{2}{3}}   
-\end{align*}
-</div></div> <div class="para" id="p-201">Thus the second order approximation for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2, \)</span> (or the Taylor polynomial of degree <span class="process-math">\(2, \)</span> for <span class="process-math">\(f(x)=e^{-\frac{x}{3}} \)</span> about <span class="process-math">\(x=2\)</span>), is</div> <div class="para logical" id="p-202"><div class="displaymath process-math" id="md-38">
-\begin{align*}
-T_{2}(x) \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{9}e^{-\frac{2}{3}}\dfrac{(x-2)^{2}}{2}  \\
-\amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} 
-\end{align*}
-</div></div>
-</div></div></article><article class="example example-like" id="Fourth_order_approximation_e_power_minus_x_on_3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
-</h4>
-<div class="para" id="p-203">Find the Taylor polynomial of degree <span class="process-math">\(4 \)</span> for <span class="process-math">\(f(x)=x\cos(x) \)</span>  about <span class="process-math">\(x=\frac{\pi}{2}. \)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><div class="para" id="p-204"><span class="process-math">\(T_{4}(x) = -\dfrac{\pi}{2}  (x-\dfrac{\pi}{2}) -  (x-\dfrac{\pi}{2})^2 +  \dfrac{\pi}{2} \dfrac{(x-\dfrac{\pi}{2})^3}{3!}  + \dfrac{(x-\dfrac{\pi}{2})^4}{3!}\)</span></div></div></div> <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like">
-<div class="para" id="p-205">Since we already know the Taylor series for  <span class="process-math">\(\cos(x) \)</span>  about  <span class="process-math">\(x=\frac{\pi}{2}  \)</span>   we can obtain the <span class="process-math">\(4^{\text{th}} \)</span> degree Taylor polynomial for <span class="process-math">\(f(x)=x\cos(x) \)</span> about <span class="process-math">\(x=\frac{\pi}{2} \)</span> as follows</div> <div class="para logical" id="p-206"><div class="displaymath process-math" id="md-39">
-\begin{align*}
-f(x) \amp = x\cos(x)  \\
-\amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) \\
-\amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] \\
-\amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. 
-\end{align*}
-</div></div> <div class="para" id="p-207">Thus the <span class="process-math">\(4^{\text{th}} \)</span> degree Taylor polynomial is</div> <div class="para logical" id="p-208"><div class="displaymath process-math">
-\begin{equation*}
-T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi}{2} \frac{(x-\frac{\pi}{2})^3}{3!}  + \frac{(x-\frac{\pi}{2})^4}{3!}.
-\end{equation*}
-</div></div>
-</div></div></article><section class="exercises" id="exercises-3"><h4 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Example Tasks</span>
-</h4>
-<article class="exercise exercise-like" id="exercise-14"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="p-209">Find the Taylor series for  <span class="process-math">\(f(x)=\ln(x). \)</span> about <span class="process-math">\(x=e. \)</span>
-</div></article><article class="exercise exercise-like" id="exercise-15"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="p-210">Find the Taylor polynomial of degree  <span class="process-math">\(3 \)</span> for   <span class="process-math">\(f(x)=\dfrac{1}{1-x} \)</span> about <span class="process-math">\(x=2. \)</span>
-</div></article><article class="exercise exercise-like" id="exercise-16"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="p-211">Find the Taylor polynomial of degree  <span class="process-math">\(4 \)</span> for   <span class="process-math">\(f(x)=x\ln(x) \)</span> about <span class="process-math">\(x=e. \)</span>
-</div></article><article class="exercise exercise-like" id="exercise-17"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="p-212">Find the <span class="process-math">\(3\)</span>rd degree Taylor polynomial for <span class="process-math">\(f(x)=x^2 e^{x} \)</span> about <span class="process-math">\(x=1. \)</span>
-</div></article></section><article class="remark remark-like" id="remark-3"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span><span class="space"> </span><span class="title">A little remark.</span>
-</h4> <div class="para" id="p-213">Computer algebra systems usually have commands for Taylor series. For example, here in <a href="" class="xref" data-knowl="./knowl/Fig-Taylor_series_cos_Mathematica.html" title="Figure 1.18">Figure 1.18</a> is an example of a query to Wolfram Alpha that will work.</div> <figure class="figure figure-like" id="Fig-Taylor_series_cos_Mathematica"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/2/Taylor_series_cos_Mathematica.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.24<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article></section></section></div>
+<div class="para" id="p-181">In <a href="" class="xref" data-knowl="./knowl/Maclaurin_series_1_on_1_plus_x2.html" title="Example 2.20">Example 2.20</a> we worked out the Maclaurin series of <span class="process-math">\(f(x)=\dfrac{1}{1+x^{2}} \)</span> and found that it has radius of convergence <span class="process-math">\(R=1\text{.}\)</span>
+</div>
+<div class="para" id="p-182">What’s wrong with this function? The plot in <a href="" class="xref" data-knowl="./knowl/fig-1-over-x-squared.html" title="Figure 2.26">Figure 2.26</a> shows a perfectly well-behaved function, defined on all of <span class="process-math">\(\R\text{,}\)</span> but its Maclaurin polynomials are all over the place when <span class="process-math">\(|x| \gt 1\text{.}\)</span> Why is the radius of convergence so small?</div>
+<figure class="figure figure-like" id="fig-1-over-x-squared"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/Calculus/Images/2/plot-1-over-x-squared.svg" class="contained" alt="A plot of \(y=\frac{1}{1+x^2}\) together with plots of its Maclaurin polynomials up to degree 30."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.26<span class="period">.</span></span><span class="space"> </span>Approximations to <span class="process-math">\(\frac{1}{1+x^2}\)</span> by its Maclaurin polynomials up to degree 30.</figcaption></figure><div class="para" id="p-183">The answer becomes clear if we view <span class="process-math">\(f(x)=\frac{1}{1+x^2}\)</span> as a function of a <em class="emphasis">complex</em> variable! Over the complex numbers, the denominator vanishes at <span class="process-math">\(x = \pm i\text{,}\)</span> so the function blows up at these values. These are at distance 1 from the origin, so the disc of convergence in the complex plane cannot include these points, and so the radius of this disc (the radius of convergence!) cannot be larger than 1.</div>
+<div class="para" id="p-184">In fact, it is a result from <em class="emphasis">Complex Analysis</em> that the radius of convergence of the Taylor series of an <em class="emphasis">analytic</em> function is always the distance from the centre of the Taylor series to the nearest singularity of the function. In our case, this distance is 1.</div></section></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="Chap-Calculus_1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
 </div></main>

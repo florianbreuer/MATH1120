@@ -12,7 +12,20 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">In <a href="" class="xref" data-knowl="./knowl/Table_Maclaurin.html" title="Table 2.11: Some Important Maclaurin Series:">Table 2.11</a> below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques.</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case 3.</dfn> If <span class="process-math">\(\displaystyle \lim_{k\rightarrow\infty} \frac{c_{k+1}}{c_k} = \infty,\)</span> then the series diverges for all <span class="process-math">\(x\neq a\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+L \amp = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right|\\
+\amp = \lim_{k\to\infty}\left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a|\\
+\amp = \infty, 
+\end{align*}
+</div>
+<div class="para">so <span class="process-math">\(L = 3|x-1| \gt 1\)</span> unless <span class="process-math">\(x = a\text{.}\)</span> In this case we say the radius of convergence is zero: <span class="process-math">\(R=0\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="Calculus_2.html#p-140" class="internal">in-context</a></span>
 </body>
 </html>

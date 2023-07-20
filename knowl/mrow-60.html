@@ -13,10 +13,12 @@
 <body class="ignore-math">
 <div class="displaymath process-math">
 \begin{align*}
-\sin x \amp = x\prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2n^2}\right) \\
-\cos x \amp = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2\left(n-\frac{1}{2}\right)^2}\right)
+f(x) \amp = x\cos(x)  \\
+\amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) \\
+\amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] \\
+\amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. 
 \end{align*}
 </div>
-<span class="incontext"><a href="Chap-Calculus_1.html#md-21" class="internal">in-context</a></span>
+<span class="incontext"><a href="Calculus_2.html#md-21" class="internal">in-context</a></span>
 </body>
 </html>

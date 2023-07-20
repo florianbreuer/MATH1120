@@ -13,17 +13,13 @@
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
 <div class="para logical">
-<div class="para">
-<dfn class="terminology">Case 2.</dfn> If <span class="process-math">\(\displaystyle \lim_{k\rightarrow\infty} \frac{c_{k+1}}{c_k} = C \neq 0, \infty\)</span> then the series converges for <span class="process-math">\(|x-a| \lt R = \frac{1}{C}\)</span> and diverges if <span class="process-math">\(|x-a| \gt R\text{:}\)</span>
-</div>
+<div class="para">For other values of <span class="process-math">\(x\text{,}\)</span> we apply the Ratio Test. To do so, we check the (absolute values of) ratios of consecutive terms, and try to determine if they converge to something smaller than 1. Due to the nature of power series, there is some cancellation in this ratio:</div>
 <div class="displaymath process-math">
 \begin{align*}
-L = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right| \amp = \lim_{k\to\infty}\left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a|\\
-\amp = C |x-a| = L. 
+\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right| \amp = \left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a| 
 \end{align*}
 </div>
-<div class="para">This will converge if <span class="process-math">\(C |x-a| = L \lt 1\text{,}\)</span> i.e. when <span class="process-math">\(|x-a| \lt \frac{1}{C}\text{.}\)</span>
-</div>
+<div class="para">For the Ratio Test to apply, this must converge to some <span class="process-math">\(L\)</span> as <span class="process-math">\(k \rightarrow \infty\text{.}\)</span> This depends on the ratios of the coefficients <span class="process-math">\(c_k\)</span> of the power series. Assuming the ratios converge to something, we find three possibilities.</div>
 </div>
 <span class="incontext"><a href="Calculus_2.html#p-128" class="internal">in-context</a></span>
 </body>
