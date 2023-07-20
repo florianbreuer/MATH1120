@@ -918,14 +918,12 @@
                 Why is the radius of convergence so small?
             </p>
 
-            <sage>
-                <input>
-                    
-                </input>
-                <output>
-                    (for static output)
-                </output>
-            </sage>
+            <figure width="%" xml:id="">
+                <caption>Approximations to <m>\frac{1}{1+x^2}</m> by its first 30 Maclaurin polynomials</caption>
+                <image xml:id="sage-exp-plot" source="Calculus/Images/2/plot-1-over-x-squared.svg" width="100%">
+                    <description>A plot of <m>y=\frac{1}{1+x^2}</m> together with plots of its first 30 Maclaurin polynomials.</description>
+                </image>
+            </figure>
             
             
         </subsection>
