@@ -55,10 +55,11 @@
     <part xml:id="Part-Calculus">
       <title>Calculus</title>
       <xi:include href="./Calculus/Calculus-1.ptx" />
-    </part>
-<!--
+
     
       <xi:include href="./Calculus/Calculus-2.ptx" />
+    </part>
+    <!--
       <xi:include href="./Calculus/Calculus-3.ptx" /> 
       <xi:include href="./Calculus/Calculus-4.ptx" />
       <xi:include href="./Calculus/Calculus-5.ptx" />    

@@ -30,7 +30,7 @@
 <!-- =================================================================================================== -->
 <!-- Title and Other Preliminaries -->
 <!-- =================================================================================================== -->
-        <title>CA1: Maclaurin and Taylor Series</title>
+        <title>CA1: Maclaurin Series</title>
 
         <!-- <frontmatter> -->
 
@@ -288,9 +288,9 @@
             Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We're very comfortable with polynomials.
             Figure <xref ref="fig-exp-plot"/> shows how the first few partial sums of the series <xref ref="eq-exp-series"/> approximate the function <m>e^x</m>.
 
-            <figure width="50%" xml:id="fig-exp-plot">
+            <figure width="100%" xml:id="fig-exp-plot">
                 <caption>Approximation to <m>e^x</m> by various partial sums of its power series</caption>
-                <image xml:id="sage-exp-plot" source="Calculus/Images/1/exp-power-series-plot.svg" width="50%">
+                <image xml:id="sage-exp-plot" source="Calculus/Images/1/exp-power-series-plot.svg" width="100%">
                     <description>A plot of <m>y=e^x</m> together with plots of the partial sums of its power series of degrees <m>0, 1, 2</m> and <m>3</m>.</description>
                 </image>
             </figure>
@@ -589,10 +589,12 @@
                 def _(order=slider([1 .. 12]),
                     f=selector([exp(x), sin(x), cos(x)])
                     ):
-                    p = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$f(x) = '+latex(f)+'$')
+                    p = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$f(x)$')
                     dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
                     ft = f.taylor(x, x0, order)
-                    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = r'$T_{%s}f(x)\;=\;%s$'%(order, latex(ft)))
+                    pretty_print(html(fr'$f(x) = {latex(f)}$'))
+                    pretty_print(html(fr'$T_{{{order}}}f(x) = {latex(ft)}$')) 
+                    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = fr'$T_{order}f(x)$')
                     G = dot + p + pt
                     G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
                     show(G, ymin=-2, ymax=2, figsize=5)
@@ -608,7 +610,7 @@
                     For example, the following shows part of the output from a <url href="https://www.wolframalpha.com/">Wolfram Alpha</url> query.
                 </p>
                 <figure xml:id="Fig-C1_WA_3">
-                    <image source="Calculus/Images/1/C1_WA_3.png" width="90%"/>
+                    <image source="Calculus/Images/1/C1_WA_3.png" width="100%"/>
                 </figure>
 
                 <p>
@@ -627,202 +629,7 @@
         
     </section>
 
-    <section xml:id="sec-Taylor-series">
-        <title>Taylor series</title>
 
-        <figure xml:id="fig-plot-sin-T5">
-            <caption>Plot of <m>\sin(x)</m> and its degree 5 Maclaurin polynomial.</caption>
-            <image source="Calculus/Images/2/sin-vs-T5-plot" width="50%">
-                <description>Plot of <m>\sin(x)</m> and its degree 5 Maclaurin polynomial.
-                The polynomial starts diverging visibly from the plot of <m>\sin(x)</m> when <m>|x|\gt 2</m>.
-                </description>
-            </image>
-        </figure>
-
-        <p>
-            <xref ref="fig-plot-sin-T5"/> compares <m>\sin(x)</m> to its degree 5 Maclaurin polynomial. 
-            We notice that the polynomial is a poor approximation of <m>\sin(x)</m> when <m>|x| \gt 2</m>. 
-            What can we do about this? We could use Maclaurin polynomials of ever higher degree, 
-            but these get ever more complicated.
-        </p>
-
-        <p>
-            The issue is that Maclaurin series are computed based on the value of the function and its 
-            derivatives around <m>x=0</m>, so it's not surprising that they best approximate the function near <m>x=0.</m>
-            If for some reason we're more interested in the function near another value, say near <m>x=a</m>,
-            then instead of computing Maclaurin polynomials of high degree, we can simply shift our function along 
-            the <m>x</m>-axis until the point of interest lies above <m>x=0</m>, 
-            compute the Maclaurin polynomials of the shifted function, and then shift back.
-        </p>
-
-        <p>
-            In other words, we consider the shifted function <m>g(x) = f(x+a)</m>, then compute the Maclaurin series 
-            for <m>g(x)</m>: 
-            <me>
-                g(x) = \sum_{k=0}^{\infty} \frac{g^{(k)}(0)}{k!}x^k = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}x^k
-            </me>
-            Finally, we shift back to obtain a power series for <m>f(x) = g(x-a)</m>: 
-            <me>
-                f(x) = g(x-a) = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k.
-            </me>
-            This is the <term>Taylor series</term> for <m>f(x)</m> <term>centred at</term> <m>x=a</m>. 
-        </p>
-
-        <definition>
-            <title>Taylor Series</title>
-            <statement>
-                <p>The series, </p>
-                 <p>   <me>\sum_{k=0}^{\infty}\dfrac{f^{(k)}(a)}{k!}(x-a)^k=f(a)+f'(a)(x-a)+\dfrac{f''(a)}{2!}(x-a)^{2}+\dfrac{f'''(a)}{3!}(x-a)^3+ \dots </me>.</p>
-                <p>is called the <term>Taylor series</term> for <m> f(x) </m> about   <m> x=a. </m>  </p>
-            </statement>
-        </definition>
-
-        <p>
-            Note that a Maclaurin series is simply a Taylor series centred at <m>x=0.</m>
-        </p>
-
-        <p>
-            The degree <m>n</m> <term>Taylor polynomial</term> of <m>f(x)</m> centred at <m>x=a</m> is - you guessed it - the sum of the terms of the 
-            Taylor series of degree at most <m>n</m>. 
-        </p>
-
-        <example>
-            <statement>
-                <p>
-                    Compute the Taylor series of the function <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m>.
-                </p>
-            </statement>
-            <solution>
-                <p>
-                    We compute the derivatives of <m>f(x) = \cos(x)</m> at <m>x=\frac{\pi}{4}</m>:
-                    <md>
-                        <mrow>f(x) \amp = \cos(x), \amp f\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}}</mrow>
-                        <mrow>f'(x) \amp = -\sin(x), \amp f'\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} </mrow>
-                        <mrow>f''(x) \amp = -\cos(x), \amp f''\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} </mrow>
-                        <mrow>f'''(x) \amp = \sin(x), \amp f'''\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}} </mrow>
-                        <mrow>f^{(4)}(x) \amp = f(x), \amp f^{(4)}\left(\frac{\pi}{4}\right) \amp = f\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}} </mrow>
-                    </md>
-                    Thus 
-                    <md>
-                        <mrow>\cos(x) \amp = \frac{1}{\sqrt{2}} -\frac{1}{\sqrt{2}}\left(x-\frac{\pi}{4}\right) 
-                            -\frac{1}{2!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^2 + \frac{1}{3!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^3 + \cdots
-                        </mrow>
-                    </md>
-                </p>
-            </solution>
-        </example>
-
-        <figure xml:id="fig-plot-cos-T3">
-            <caption>Degree 3 Taylor polynomial of <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m></caption>
-            <image source="Calculus/Images/2/cos-vs-T3-pi4-plot" width="50%">
-                <description>Plot of <m>\cos(x)</m> and its degree 3 Taylor polynomial centered at <m>x=\frac{\pi}{4}</m>.</description>
-            </image>
-        </figure>
-
-        <sage>
-            <input>
-                x   = var('x')
-
-                @interact
-                def _(f = input_box(default='sin(x)', label='f(x)='),
-                    x0=input_box(default=pi/4, label='centre'),
-                    order=slider([1 .. 12])):
-                    p   = plot(f, -2*pi, 2*pi, thickness=2, legend_label='f(x)')
-                    dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
-                    ft = f.taylor(x, x0, order)
-                    pt = plot(ft, -2*pi, 2*pi, color='green', thickness=2, legend_label=r'T_'+str(order)+'f(x)')
-                    pretty_print(html(r'$f(x)\;=\;%s$' % latex(f)))
-                    pretty_print(html(r'$T_{%s}f(x)\;=\;%s$' % (order, latex(ft))))
-                    show(dot + p + pt, ymin=-1, ymax=1)
-            </input>
-        </sage>
-
-        <example xml:id="Second_order_approximation_e_power_minus_x_on_3">
-
-            <p>Find the second order approximation to   <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2. </m>  </p>
-            <answer>
-                <p><m>T_{2}(x)=e^{-\frac{2}{3}}-\dfrac{1}{3}e^{-\frac{2}{3}}(x-2)+\dfrac{1}{18}e^{-\frac{2}{3}}(x-2)^{2}</m></p>
-            </answer>
-             <solution>
-                    <p> In order to find the second order approximation for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2 </m> we need to evaluate <m> f </m> and its first two derivatives at <m> x=2</m>.  So,  </p>
-                        <p><md>
-                        <mrow> f(x) \amp =e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f(2)=e^{-\frac{2}{3}}  </mrow>
-                        <mrow> f'(x) \amp =-\frac{1}{3}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f'(2)=-\frac{1}{3}e^{-\frac{2}{3}} </mrow>
-                        <mrow> f''(x) \amp =\frac{1}{9}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f''(2)=\frac{1}{9}e^{-\frac{2}{3}}   </mrow>
-                        </md></p>
-                    <p> Thus the second order approximation for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2, </m> (or the Taylor polynomial of degree <m> 2, </m> for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2</m>), is </p>
-                   <p><md>
-                        <mrow> T_{2}(x) \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{9}e^{-\frac{2}{3}}\dfrac{(x-2)^{2}}{2}  </mrow>
-                        <mrow> \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} </mrow>
-                        </md></p>
-                </solution>
-        </example>
-
-        
-        
-
- <example xml:id="Fourth_order_approximation_e_power_minus_x_on_3">
-
-            <p> Find the Taylor polynomial of degree <m> 4 </m> for <m> f(x)=x\cos(x) </m>  about <m> x=\frac{\pi}{2}. </m>  </p>
-            <answer>
-                <p><m>T_{4}(x) = -\dfrac{\pi}{2}  (x-\dfrac{\pi}{2}) -  (x-\dfrac{\pi}{2})^2 +  \dfrac{\pi}{2} \dfrac{(x-\dfrac{\pi}{2})^3}{3!}  + \dfrac{(x-\dfrac{\pi}{2})^4}{3!}</m></p>
-            </answer>
-            
-             <solution>
-                    <p> Since we already know the Taylor series for  <m> \cos(x) </m>  about  <m> x=\frac{\pi}{2}  </m>   we can obtain the <m> 4^{\text{th}} </m> degree Taylor polynomial for <m> f(x)=x\cos(x) </m> about <m> x=\frac{\pi}{2} </m> as follows </p>
-                        <p><md>
-                        <mrow> f(x) \amp = x\cos(x)  </mrow>
-                        <mrow>  \amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) </mrow>
-                        <mrow>   \amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] </mrow>
-                        <mrow>   \amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. </mrow>
-                        </md></p>
-                    <p> Thus the <m> 4^{\text{th}} </m> degree Taylor polynomial is </p>
-                   <p><me>
-                      T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi}{2} \frac{(x-\frac{\pi}{2})^3}{3!}  + \frac{(x-\frac{\pi}{2})^4}{3!}.
-                        </me></p>
-                </solution>
-</example>
-
-              <exercises>
-            <title>Example Tasks</title>
-
-            <exercise>
-                <statement>
-                    <p> Find the Taylor series for  <m> f(x)=\ln(x). </m> about <m> x=e. </m> </p>
-                </statement>
-            </exercise>
-
-                <exercise>
-                <statement>
-                    <p> Find the Taylor polynomial of degree  <m> 3 </m> for   <m> f(x)=\dfrac{1}{1-x} </m> about <m> x=2. </m>  </p>
-                </statement>
-            </exercise>
-
-                <exercise>
-                <statement>
-                    <p> Find the Taylor polynomial of degree  <m> 4 </m> for   <m> f(x)=x\ln(x) </m> about <m> x=e. </m>  </p>
-                </statement>
-            </exercise>
-
-                <exercise>
-                <statement>
-                    <p>  Find the <m>3</m>rd degree Taylor polynomial for <m> f(x)=x^2 e^{x} </m> about <m> x=1. </m>  </p>
-                </statement>
-            </exercise>
- </exercises>
-             <remark>
-            <title>A little remark</title>
-                <p>
-                    Computer algebra systems usually have commands for Taylor series. For example, here in <xref ref="Fig-Taylor_series_cos_Mathematica"/> is an example of a query to Wolfram Alpha that will work.
-                </p>
-                <figure xml:id="Fig-Taylor_series_cos_Mathematica">
-                    <image source="./Calculus/Images/2/Taylor_series_cos_Mathematica.png" width="90%"/>
-                </figure>
-            </remark>
-
-        
-        
-    </section>
 
 
 
@@ -836,6 +643,9 @@
 
         <subsection xml:id="subsec-Computing-pi">
             <title>Computing <m>\pi</m></title>
+            <p>
+                <m>\pi = 3.14159265358979323846264338327950288419716939937510582097\ldots</m>
+            </p>
 
             <p>
                 It's not hard to show, using repeated differentiation, that the Maclaurin series for <m>\arctan(x)</m> is
@@ -850,7 +660,7 @@
 
             <sage>
                 <input>
-                    N = 100
+                    N = 20
                     s = 0
                     for k in range(N):
                         s = s + (-1)^k*4/(2*k+1)
@@ -929,9 +739,9 @@
                 </me>
             </p>
 
-            <figure width="50%" xml:id="fig-exp-minus-1-over-x-squared">
+            <figure width="100%" xml:id="fig-exp-minus-1-over-x-squared">
                 <caption>Plot of <m>e^{-1/x^2}</m></caption>
-                <image source="Calculus/Images/1/exp-minus-one-over-x-square-plot" width="50%">
+                <image source="Calculus/Images/1/exp-minus-one-over-x-square-plot" width="100%">
                     <description>Plot of <m>y=e^{-1/x^2}</m></description>
                 </image>
             </figure>
@@ -970,7 +780,9 @@
                         ):
                         ft = taylor(exp(x), x, 0, order)
                         g = ft(x=-1/x^2)
-                        pt = plot(g, -2, 2, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(g) +'$' )
+                        pretty_print(html(fr'$f(x) = {latex(f)}$'))
+                        pretty_print(html(fr'$L_{{{order}}}f(x) = {latex(g)}$')) 
+                        pt = plot(g, -2, 2, color='green', thickness=1, linestyle='--', legend_label = fr'$L_{{{order}}}f(x)$' )
                         G = p + pt
                         G.set_legend_options(font_size='x-large', loc='lower right', handlelength=0.01)
                         show(G, ymin=-2, ymax=2, figsize=5)
@@ -1042,6 +854,9 @@
                     <mrow>\sin x \amp = x\prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2n^2}\right) </mrow>
                     <mrow>\cos x \amp = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2\left(n-\frac{1}{2}\right)^2}\right)</mrow>
                 </md>
+                Such products can only converge if the factors tend to <m>1</m> (not 0!) as <m>n</m> tends to infinity.
+            </p>
+            <p>
                 You can plot the finite products against <m>\sin(x)</m> and <m>\cos(x)</m> in the following Sage cells:
 
 
@@ -1057,7 +872,9 @@
                     def _(order=slider([1 .. 12])
                         ):
                         fp = x*product([1-x^2/(pi^2*k^2) for k in range(1, order+1)])
-                        pt = plot(fp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(fp) + '$')
+                        pretty_print(html(fr'$f(x) = {latex(f)}$'))
+                        pretty_print(html(fr'$P_{{{order}}}f(x) = {latex(fp)}$'))
+                        pt = plot(fp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = fr'$P_{{{order}}}(x)$')
                         G = pf + pt
                         G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
                         show(G, ymin=-2, ymax=2, figsize=5)
@@ -1070,13 +887,15 @@
                 <input>
                     x   = var('x')
                     g = cos(x)
-                    pg = plot(f, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(f)+'$')
+                    pg = plot(g, -2*pi, 2*pi, thickness=2, legend_label='$'+latex(g)+'$')
 
                     @interact
                     def _(order=slider([1 .. 12])
                         ):
                         gp = product([1-x^2/(pi^2*(k-1/2)^2) for k in range(1, order+1)])
-                        pt = plot(gp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = '$' + latex(gp) + '$')
+                        pretty_print(html(fr'$g(x) = {latex(g)}$'))
+                        pretty_print(html(fr'$P_{{{order}}}g(x) = {latex(gp)}$'))
+                        pt = plot(gp, -2*pi, 2*pi, color='green', thickness=1, linestyle='--', legend_label = fr'$P_{{{order}}}g(x)$')
                         G = pg + pt
                         G.set_legend_options(font_size='x-large', loc='lower left', handlelength=0.01)
                         show(G, ymin=-2, ymax=2, figsize=5)
@@ -1086,6 +905,18 @@
             </sage>
 
         </subsection>
+
+        <p>
+            Try out your own Sage computations here:
+        </p>
+        <sage>
+            <input>
+                factorial(100)
+            </input>
+            <output>
+            </output>
+        </sage>
+        
 
         
         

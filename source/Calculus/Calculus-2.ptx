@@ -30,7 +30,7 @@
 <!-- =================================================================================================== -->
 <!-- Title and Other Preliminaries -->
 <!-- =================================================================================================== -->
-        <title>CA2: Convergence of Series</title>
+        <title>CA2: Taylor Series</title>
 
         <!-- <frontmatter> -->
 
@@ -52,7 +52,204 @@
         </introduction> -->
 <!-- =================================================================================================== -->
 
+<section xml:id="sec-Taylor-series">
+    <title>Taylor series</title>
 
+    <figure xml:id="fig-plot-sin-T5">
+        <caption>Plot of <m>\sin(x)</m> and its degree 5 Maclaurin polynomial.</caption>
+        <image source="Calculus/Images/2/sin-vs-T5-plot" width="100%">
+            <description>Plot of <m>\sin(x)</m> and its degree 5 Maclaurin polynomial.
+            The polynomial starts diverging visibly from the plot of <m>\sin(x)</m> when <m>|x|\gt 2</m>.
+            </description>
+        </image>
+    </figure>
+
+    <p>
+        <xref ref="fig-plot-sin-T5"/> compares <m>\sin(x)</m> to its degree 5 Maclaurin polynomial. 
+        We notice that the polynomial is a poor approximation of <m>\sin(x)</m> when <m>|x| \gt 2</m>. 
+        What can we do about this? We could use Maclaurin polynomials of ever higher degree, 
+        but these get ever more complicated.
+    </p>
+
+    <p>
+        The issue is that Maclaurin series are computed based on the value of the function and its 
+        derivatives around <m>x=0</m>, so it's not surprising that they best approximate the function near <m>x=0.</m>
+        If for some reason we're more interested in the function near another value, say near <m>x=a</m>,
+        then instead of computing Maclaurin polynomials of high degree, we can simply shift our function along 
+        the <m>x</m>-axis until the point of interest lies above <m>x=0</m>, 
+        compute the Maclaurin polynomials of the shifted function, and then shift back.
+    </p>
+
+    <p>
+        In other words, we consider the shifted function <m>g(x) = f(x+a)</m>, then compute the Maclaurin series 
+        for <m>g(x)</m>: 
+        <me>
+            g(x) = \sum_{k=0}^{\infty} \frac{g^{(k)}(0)}{k!}x^k = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}x^k
+        </me>
+        Finally, we shift back to obtain a power series for <m>f(x) = g(x-a)</m>: 
+        <me>
+            f(x) = g(x-a) = \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k.
+        </me>
+        This is the <term>Taylor series</term> for <m>f(x)</m> <term>centred at</term> <m>x=a</m>. 
+    </p>
+
+    <definition>
+        <title>Taylor Series</title>
+        <statement>
+            <p>The series, </p>
+             <p>   <me>\sum_{k=0}^{\infty}\dfrac{f^{(k)}(a)}{k!}(x-a)^k=f(a)+f'(a)(x-a)+\dfrac{f''(a)}{2!}(x-a)^{2}+\dfrac{f'''(a)}{3!}(x-a)^3+ \dots </me>.</p>
+            <p>is called the <term>Taylor series</term> for <m> f(x) </m> about   <m> x=a. </m>  </p>
+        </statement>
+    </definition>
+
+    <p>
+        Note that a Maclaurin series is simply a Taylor series centred at <m>x=0.</m>
+    </p>
+
+    <p>
+        The degree <m>n</m> <term>Taylor polynomial</term> of <m>f(x)</m> centred at <m>x=a</m> is - you guessed it - the sum of the terms of the 
+        Taylor series of degree at most <m>n</m>. 
+        The degree <m>n</m> Taylor polynomial of a function is also called its <term>nth order approximation</term>.
+    </p>
+
+
+    <example>
+        <statement>
+            <p>
+                Compute the Taylor series of the function <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We compute the derivatives of <m>f(x) = \cos(x)</m> at <m>x=\frac{\pi}{4}</m>:
+                <md>
+                    <mrow>f(x) \amp = \cos(x), \amp f\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}}</mrow>
+                    <mrow>f'(x) \amp = -\sin(x), \amp f'\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} </mrow>
+                    <mrow>f''(x) \amp = -\cos(x), \amp f''\left(\frac{\pi}{4}\right) \amp = -\frac{1}{\sqrt{2}} </mrow>
+                    <mrow>f'''(x) \amp = \sin(x), \amp f'''\left(\frac{\pi}{4}\right) \amp = \frac{1}{\sqrt{2}} </mrow>
+                    <mrow>f^{(4)}(x) \amp = f(x), \amp f^{(4)}\left(\frac{\pi}{4}\right) \amp = f\left(\frac{\pi}{4}\right) = \frac{1}{\sqrt{2}} </mrow>
+                </md>
+                Thus 
+                <md>
+                    <mrow>\cos(x) \amp = \frac{1}{\sqrt{2}} -\frac{1}{\sqrt{2}}\left(x-\frac{\pi}{4}\right) 
+                        -\frac{1}{2!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^2 + \frac{1}{3!\sqrt{2}}\left(x-\frac{\pi}{4}\right)^3 + \cdots
+                    </mrow>
+                </md>
+            </p>
+        </solution>
+    </example>
+
+    <figure xml:id="fig-plot-cos-T3">
+        <caption>Degree 3 Taylor polynomial of <m>\cos(x)</m> centred at <m>x=\frac{\pi}{4}</m></caption>
+        <image source="Calculus/Images/2/cos-vs-T3-pi4-plot" width="100%">
+            <description>Plot of <m>\cos(x)</m> and its degree 3 Taylor polynomial centered at <m>x=\frac{\pi}{4}</m>.</description>
+        </image>
+    </figure>
+
+    <sage>
+        <input>
+            x   = var('x')
+
+            @interact
+            def _(f = input_box(default='sin(x)', label='f(x)='),
+                x0=input_box(default=pi/4, label='centre'),
+                order=slider([1 .. 12])):
+                p   = plot(f, -2*pi, 2*pi, thickness=2, legend_label='f(x)')
+                dot = point((x0, f(x=x0)), pointsize=80, rgbcolor=(1, 0, 0))
+                ft = f.taylor(x, x0, order)
+                pt = plot(ft, -2*pi, 2*pi, color='green', thickness=2, legend_label=r'T_'+str(order)+'f(x)')
+                pretty_print(html(r'$f(x)\;=\;%s$' % latex(f)))
+                pretty_print(html(r'$T_{%s}f(x)\;=\;%s$' % (order, latex(ft))))
+                show(dot + p + pt, ymin=-1, ymax=1)
+        </input>
+    </sage>
+
+    <example xml:id="Second_order_approximation_e_power_minus_x_on_3">
+
+        <p>Find the second order approximation to   <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2. </m>  </p>
+        <answer>
+            <p><m>T_{2}(x)=e^{-\frac{2}{3}}-\dfrac{1}{3}e^{-\frac{2}{3}}(x-2)+\dfrac{1}{18}e^{-\frac{2}{3}}(x-2)^{2}</m></p>
+        </answer>
+         <solution>
+                <p> In order to find the second order approximation for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2 </m> we need to evaluate <m> f </m> and its first two derivatives at <m> x=2</m>.  So,  </p>
+                    <p><md>
+                    <mrow> f(x) \amp =e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f(2)=e^{-\frac{2}{3}}  </mrow>
+                    <mrow> f'(x) \amp =-\frac{1}{3}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f'(2)=-\frac{1}{3}e^{-\frac{2}{3}} </mrow>
+                    <mrow> f''(x) \amp =\frac{1}{9}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f''(2)=\frac{1}{9}e^{-\frac{2}{3}}   </mrow>
+                    </md></p>
+                <p> Thus the second order approximation for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2, </m> (or the Taylor polynomial of degree <m> 2, </m> for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2</m>), is </p>
+               <p><md>
+                    <mrow> T_{2}(x) \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{9}e^{-\frac{2}{3}}\dfrac{(x-2)^{2}}{2}  </mrow>
+                    <mrow> \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} </mrow>
+                    </md></p>
+            </solution>
+    </example>
+
+    
+    
+
+<example xml:id="Fourth_order_approximation_e_power_minus_x_on_3">
+
+        <p> Find the Taylor polynomial of degree <m> 4 </m> for <m> f(x)=x\cos(x) </m>  about <m> x=\frac{\pi}{2}. </m>  </p>
+        <answer>
+            <p><m>T_{4}(x) = -\dfrac{\pi}{2}  (x-\dfrac{\pi}{2}) -  (x-\dfrac{\pi}{2})^2 +  \dfrac{\pi}{2} \dfrac{(x-\dfrac{\pi}{2})^3}{3!}  + \dfrac{(x-\dfrac{\pi}{2})^4}{3!}</m></p>
+        </answer>
+        
+         <solution>
+                <p> Since we already know the Taylor series for  <m> \cos(x) </m>  about  <m> x=\frac{\pi}{2}  </m>   we can obtain the <m> 4^{\text{th}} </m> degree Taylor polynomial for <m> f(x)=x\cos(x) </m> about <m> x=\frac{\pi}{2} </m> as follows </p>
+                    <p><md>
+                    <mrow> f(x) \amp = x\cos(x)  </mrow>
+                    <mrow>  \amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) </mrow>
+                    <mrow>   \amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] </mrow>
+                    <mrow>   \amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. </mrow>
+                    </md></p>
+                <p> Thus the <m> 4^{\text{th}} </m> degree Taylor polynomial is </p>
+               <p><me>
+                  T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi}{2} \frac{(x-\frac{\pi}{2})^3}{3!}  + \frac{(x-\frac{\pi}{2})^4}{3!}.
+                    </me></p>
+            </solution>
+</example>
+
+          <exercises>
+        <title>Example Tasks</title>
+
+        <exercise>
+            <statement>
+                <p> Find the Taylor series for  <m> f(x)=\ln(x). </m> about <m> x=e. </m> </p>
+            </statement>
+        </exercise>
+
+            <exercise>
+            <statement>
+                <p> Find the Taylor polynomial of degree  <m> 3 </m> for   <m> f(x)=\dfrac{1}{1-x} </m> about <m> x=2. </m>  </p>
+            </statement>
+        </exercise>
+
+            <exercise>
+            <statement>
+                <p> Find the Taylor polynomial of degree  <m> 4 </m> for   <m> f(x)=x\ln(x) </m> about <m> x=e. </m>  </p>
+            </statement>
+        </exercise>
+
+            <exercise>
+            <statement>
+                <p>  Find the <m>3</m>rd degree Taylor polynomial for <m> f(x)=x^2 e^{x} </m> about <m> x=1. </m>  </p>
+            </statement>
+        </exercise>
+</exercises>
+         <remark>
+        <title>A little remark</title>
+            <p>
+                Computer algebra systems usually have commands for Taylor series. For example, here in <xref ref="Fig-Taylor_series_cos_Mathematica"/> is an example of a query to Wolfram Alpha that will work.
+            </p>
+            <figure xml:id="Fig-Taylor_series_cos_Mathematica">
+                <image source="./Calculus/Images/2/Taylor_series_cos_Mathematica.png" width="90%"/>
+            </figure>
+        </remark>
+
+    
+    
+</section>
 
     
 
@@ -164,7 +361,7 @@
 
         <figure xml:id="fig-plot-GS">
             <caption>Maclaurin polynomials for <m>f(x)=1/(1-x)</m></caption>
-            <image source="Calculus/Images/2/GS-plot" width="50%">
+            <image source="Calculus/Images/2/GS-plot" width="100%">
                 <description>Plot of the Maclaurin polynomials for <m>f(x)=1/(1-x)</m>. Note how they only approximate <m>1/(1-x)</m> when <m>|x| \lt 1</m>.</description>
             </image>
         </figure>
@@ -196,6 +393,11 @@
                     </p>
                 </statement>
         </theorem>
+
+        <p>
+            This is obvious if you think about it: if the series converges, then the partial sums (running totals) tend to some fixed limit. 
+            But this means that the changes from one partial sum to the next (i.e. the terms of the series) must shrink to zero.
+        </p>
 
         <p>
             We will soon see that the converse is not true: there are series, whose terms tend to zero, but which nevertheless diverge. 
@@ -232,7 +434,7 @@
                     <mrow> \amp = a \lim_{N\rightarrow\infty} \frac{1-r^{N+1}}{1-r} </mrow>
                     <mrow> \amp = a \frac{1}{1-r}</mrow>
                 </md>
-                since <m>r^{N+1} \rightarrow 0</m> as <m>N\rightarrow\infty</m> as <m>|r| \lt 1</m>. 
+                since <m>r^{N+1} \rightarrow 0</m> as <m>N\rightarrow\infty</m> because <m>|r| \lt 1</m>. 
             </p>
         </proof>
         <example>
@@ -322,7 +524,7 @@
                     </me>
                 </p>
                 <p>
-                    Since <m>L&lt;1</m>, by the ratio test this series converges. 
+                    Since <m>L = \frac{1}{2} \lt 1</m>, by the ratio test this series converges. 
                     (Notice that the ratio test doesn't tell us to what number the series converges to. In this case it happens to be <m>3</m>.)
                 </p>
             </solution>
@@ -376,7 +578,7 @@
                     </me>
                     Here
                     <md>
-                        <mrow>\lim_{k\rightarrow\infty} \left| \frac{\frac{1}{(k+1)!}(x-a)^{k+1}}{\frac{1}{k!}(x-a)^k} \right| \amp =  \lim_{k\to\infty}\left|\frac{k!}{(k+1)!} \right| \cdot|x| </mrow>
+                        <mrow>L = \lim_{k\rightarrow\infty} \left| \frac{\frac{1}{(k+1)!}(x-a)^{k+1}}{\frac{1}{k!}(x-a)^k} \right| \amp =  \lim_{k\to\infty}\left|\frac{k!}{(k+1)!} \right| \cdot|x| </mrow>
                         <mrow> \amp =  \lim_{k\to\infty}\left|\frac{k!}{k!(k+1)} \right| \cdot|x| </mrow>
                         <mrow> \amp =  \lim_{k\to\infty}\left|\frac{1}{k+1} \right| \cdot|x| </mrow>
                         <mrow> \amp = 0. </mrow>
@@ -399,7 +601,7 @@
             <m>|x-a| \gt R</m>:
             <md>
                 <mrow>L = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right| \amp = \lim_{k\to\infty}\left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a|</mrow>
-                <mrow> \amp = C |x-a| = L. </mrow>
+                <mrow> \amp = C |x-a|. </mrow>
             </md>
             This will converge if <m>C |x-a| = L \lt 1</m>, i.e. when <m>|x-a| \lt \frac{1}{C}</m>. 
         </p>
@@ -450,7 +652,7 @@
                     </md>
                     because 
                     <me>
-                        \lim_{k\rightarrow\infty} \frac{k}{k+1} = \lim_{k\rightarrow\infty} \frac{1}{1 + \frac{1}{k}} = \frac{1}{1+0} 1.
+                        \lim_{k\rightarrow\infty} \frac{k}{k+1} = \lim_{k\rightarrow\infty} \frac{1}{1 + \frac{1}{k}} = \frac{1}{1+0} = 1.
                     </me>
                     
                     Now <m>L \lt 1</m> when <m>|x-1| \lt \frac{1}{3}</m>. 
@@ -469,7 +671,7 @@
             <md>
                 <mrow>L \amp = \lim_{k\to\infty}\left| \frac{c_{k+1}(x-a)^{k+1}}{c_k(x-a)^k} \right|</mrow> 
                 <mrow> \amp = \lim_{k\to\infty}\left|\frac{c_{k+1}}{c_k} \right| \cdot |x-a|</mrow>
-                <mrow> = \infty, </mrow>
+                <mrow> \amp = \infty, </mrow>
             </md>
             so <m>L = 3|x-1| \gt 1</m> unless <m>x = a</m>. 
             In this case we say the radius of convergence is zero: <m>R=0</m>.
@@ -481,64 +683,34 @@
     </section>
 
 
+<!-- =================================================================================================== -->
+<!--  -->
+<!-- =================================================================================================== -->
+
+
     <section xml:id="sec-Algebra-of-infinite-series">
         <title>Algebra of infinite series</title>
         <p>
             Computing repeated derivatives gets old really quickly. 
-            Often a much quicker way to get power series expansions for given functions is to manipulate know series algebraically... or by differentiating term-by-term.
+            Often a much quicker way to get power series expansions for given functions is to manipulate a known series.
         </p>
-    </section>
+ 
+        <p>
+            In <xref ref="Table_Maclaurin"/> below we have listed the Maclaurin series for a small set of basic functions of science and engineering. 
+            These series can all be relatively easily derived from first principals as discussed in previous lectures. 
+            However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. 
+            We will look at two commonly used techniques:
+        </p>
 
-
-    <section xml:id="sec-Advanced-topics2">
-        <title>Advanced topics</title>
-        
-        <subsection xml:id="subsec-Integral-test">
-            <title>Integral test</title>
-            
-        </subsection>
-
-        <subsection xml:id="subsec-Absolute-conditional-convergence">
-            <title>Absolute vs. conditional convergence</title>
-            <p>
-                Rearrangement of conditionally convergent series can make your head explode.
-            </p>
-        </subsection>
-
-        <subsection xml:id="subsec-Convergence-complex">
-            <title>Convergence in the complex plane</title>
-            
-        </subsection>
-
-        <subsection xml:id="subsec-Euler-product">
-            <title>The Euler product of the zeta function</title>
-            
-        </subsection>
-
-    </section>
-
-
-
-<!-- =================================================================================================== -->
-<!-- Section 1: Partial Differentiation -->
-<!-- =================================================================================================== -->
-        <section xml:id="Generating-New-Series-from-Known-Series">
-            <title>OLD STUFF - Generating New Series from Known Series</title>
-            <p>In <xref ref="Table_Maclaurin"/> below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques.</p>
-
-            <p>
+        <p>
             <ul>
-            <li>  Manipulating/Substituting into known series. </li >
-            <li>
-            <p>
-            Differentiating/Integrating known series.
-            </p>
-            </li>
+                <li>  Manipulating/Substituting into known series. </li >
+                <li>  Differentiating/Integrating known series.   </li>
             </ul>
-            </p>
+        </p>
 
 <table xml:id="Table_Maclaurin">
-  <title>Some Important Maclaurin Series:</title>
+  <title>Some Important Maclaurin Series (and their intervals of convergence):</title>
   <tabular>
     <row>
       <cell><m>\dfrac{1}{1-x}=\sum_{k=0}^{\infty}x^{k}=1+x+x^{2}+x^{3}+\cdots</m></cell>
@@ -729,6 +901,67 @@
 
 
 
+     <section xml:id="sec-Advanced-topics2">
+        <title>Advanced topics</title>
+
+        <subsection xml:id="subsec-Why-radius-1?">
+            <title>Why radius 1?</title>
+
+            <p>
+                In <xref ref="Maclaurin_series_1_on_1_plus_x2"/> we worked out the Maclaurin series of 
+                <m> f(x)=\dfrac{1}{1+x^{2}} </m> and found that it has radius of convergence <m>R=1</m>.
+            </p>
+
+            <p>
+                What's wrong with this function? 
+                The plot in [figure] shows a perfectly well-behaved function, defined on all of <m>\R</m>.
+                Why is the radius of convergence so small?
+            </p>
+
+            <sage>
+                <input>
+                    
+                </input>
+                <output>
+                    (for static output)
+                </output>
+            </sage>
+            
+            
+        </subsection>
+
+
+     </section>
+
+     <!--
+        
+        <subsection xml:id="subsec-Integral-test">
+            <title>Integral test</title>
+            
+        </subsection>
+
+        <subsection xml:id="subsec-Absolute-conditional-convergence">
+            <title>Absolute vs. conditional convergence</title>
+            <p>
+                Rearrangement of conditionally convergent series can make your head explode.
+            </p>
+        </subsection>
+
+        <subsection xml:id="subsec-Convergence-complex">
+            <title>Convergence in the complex plane</title>
+            
+        </subsection>
+
+        <subsection xml:id="subsec-Euler-product">
+            <title>The Euler product of the zeta function</title>
+            
+        </subsection>
+
+    </section>
+
+
+
+
            <section xml:id="Taylor_Series">
             <title>Taylor Series</title>
 
@@ -809,90 +1042,12 @@ The <m> n^{\text{th}} </m>  partial sum of the Taylor series for <m> f </m> abou
 
 
 
-    <example xml:id="Second_order_approximation_e_power_minus_x_on_3">
-
-            <p>Find the second order approximation to   <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2. </m>  </p>
-            <answer>
-                <p><m>T_{2}(x)=e^{-\frac{2}{3}}-\dfrac{1}{3}e^{-\frac{2}{3}}(x-2)+\dfrac{1}{18}e^{-\frac{2}{3}}(x-2)^{2}</m></p>
-            </answer>
-             <solution>
-                    <p> In order to find the second order approximation for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2 </m> we need to evaluate <m> f </m> and its first two derivatives at <m> x=2</m>.  So,  </p>
-                        <p><md>
-                        <mrow> f(x) \amp =e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f(2)=e^{-\frac{2}{3}}  </mrow>
-                        <mrow> f'(x) \amp =-\frac{1}{3}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f'(2)=-\frac{1}{3}e^{-\frac{2}{3}} </mrow>
-                        <mrow> f''(x) \amp =\frac{1}{9}e^{-\frac{x}{3}}  \,\, \text{and hence}\,\,   f''(2)=\frac{1}{9}e^{-\frac{2}{3}}   </mrow>
-                        </md></p>
-                    <p> Thus the second order approximation for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2, </m> (or the Taylor polynomial of degree <m> 2, </m> for <m> f(x)=e^{-\frac{x}{3}} </m> about <m> x=2</m>), is </p>
-                   <p><md>
-                        <mrow> T_{2}(x) \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{9}e^{-\frac{2}{3}}\dfrac{(x-2)^{2}}{2}  </mrow>
-                        <mrow> \amp =e^{-\frac{2}{3}}-\frac{1}{3}e^{-\frac{2}{3}}(x-2)+\frac{1}{18}e^{-\frac{2}{3}}(x-2)^{2} </mrow>
-                        </md></p>
-                </solution>
-</example>
-
- <example xml:id="Fourth_order_approximation_e_power_minus_x_on_3">
-
-            <p> Find the Taylor polynomial of degree <m> 4 </m> for <m> f(x)=x\cos(x) </m>  about <m> x=\frac{\pi}{2}. </m>  </p>
-            <answer>
-                <p><m>T_{4}(x) = -\dfrac{\pi}{2}  (x-\dfrac{\pi}{2}) -  (x-\dfrac{\pi}{2})^2 +  \dfrac{\pi}{2} \dfrac{(x-\dfrac{\pi}{2})^3}{3!}  + \dfrac{(x-\dfrac{\pi}{2})^4}{3!}</m></p>
-            </answer>
-            
-             <solution>
-                    <p> Since we already know the Taylor series for  <m> \cos(x) </m>  about  <m> x=\frac{\pi}{2}  </m>   we can obtain the <m> 4^{\text{th}} </m> degree Taylor polynomial for <m> f(x)=x\cos(x) </m> about <m> x=\frac{\pi}{2} </m> as follows </p>
-                        <p><md>
-                        <mrow> f(x) \amp = x\cos(x)  </mrow>
-                        <mrow>  \amp = (x-\frac{\pi}{2})\cos(x)+\frac{\pi}{2}\cos(x) </mrow>
-                        <mrow>   \amp = (x-\frac{\pi}{2})  \left[-(x-\frac{\pi}{2}) + \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] + \frac{\pi}{2}\left[ -(x-\frac{\pi}{2}) +  \frac{(x-\frac{\pi}{2})^3}{3!} -  \frac{(x-\frac{\pi}{2})^5}{5!} + \dots   \right] </mrow>
-                        <mrow>   \amp = \left[-(x-\frac{\pi}{2})^2 + \frac{(x-\frac{\pi}{2})^4}{3!} - \dots   \right] + \left[ -\frac{\pi}{2}(x-\frac{\pi}{2}) + \frac{\pi}{2}\frac{(x-\frac{\pi}{2})^3}{3!} - \dots   \right]. </mrow>
-                        </md></p>
-                    <p> Thus the <m> 4^{\text{th}} </m> degree Taylor polynomial is </p>
-                   <p><me>
-                      T_{4}(x) = -\frac{\pi}{2}  (x-\frac{\pi}{2}) -  (x-\frac{\pi}{2})^2 +  \frac{\pi}{2} \frac{(x-\frac{\pi}{2})^3}{3!}  + \frac{(x-\frac{\pi}{2})^4}{3!}.
-                        </me></p>
-                </solution>
-</example>
-
-              <exercises>
-            <title>Example Tasks</title>
-
-            <exercise>
-                <statement>
-                    <p> Find the Taylor series for  <m> f(x)=\ln(x). </m> about <m> x=e. </m> </p>
-                </statement>
-            </exercise>
-
-                <exercise>
-                <statement>
-                    <p> Find the Taylor polynomial of degree  <m> 3 </m> for   <m> f(x)=\dfrac{1}{1-x} </m> about <m> x=2. </m>  </p>
-                </statement>
-            </exercise>
-
-                <exercise>
-                <statement>
-                    <p> Find the Taylor polynomial of degree  <m> 4 </m> for   <m> f(x)=x\ln(x) </m> about <m> x=e. </m>  </p>
-                </statement>
-            </exercise>
-
-                <exercise>
-                <statement>
-                    <p>  Find the <m>3</m>rd degree Taylor polynomial for <m> f(x)=x^2 e^{x} </m> about <m> x=1. </m>  </p>
-                </statement>
-            </exercise>
- </exercises>
-             <remark>
-            <title>A little remark</title>
-                <p>
-                    Computer algebra systems usually have commands for Taylor series. For example, here in <xref ref="Fig-Taylor_series_cos_Mathematica"/> is an example of a query to Wolfram Alpha that will work.
-                </p>
-                <figure xml:id="Fig-Taylor_series_cos_Mathematica">
-                    <image source="./Calculus/Images/2/Taylor_series_cos_Mathematica.png" width="90%"/>
-                </figure>
-            </remark>
 
 
 
 
 
         </section>
+    -->
 <!-- =================================================================================================== -->
 </chapter>
