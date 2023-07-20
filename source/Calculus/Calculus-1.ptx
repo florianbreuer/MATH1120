@@ -703,7 +703,7 @@
                         \frac{4}{8k+1} - \frac{2}{8k+4} - \frac{1}{8k+5} - \frac{1}{8k+6}
                         \right)
                 </men>
-                This formula not only converges extremely quickly, but it also also you to compute specific 
+                This formula not only converges extremely quickly, but it also allows you to compute specific 
                 hexadecimal digits of <m>\pi</m> without first computing the previous digits.
             </p>
 
