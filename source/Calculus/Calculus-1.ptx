@@ -284,7 +284,8 @@
             <men xml:id="eq-exp-series">
                 e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{k=0}^{\infty} \frac{x^k}{k!}.
             </men>
-            Note that each term consists of a <em>coefficient</em> multiplied by some power of the variable, so this is an example of what we call a <term>power series</term>.
+            Note that each term consists of a <em>coefficient</em> (for example <m>\frac{1}{3!}</m>) multiplied by some power of the variable (for example <m>x^3</m>), 
+            so this is an example of what we call a <term>power series</term>.
             Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We're very comfortable with polynomials.
             Figure <xref ref="fig-exp-plot"/> shows how the first few partial sums of the series <xref ref="eq-exp-series"/> approximate the function <m>e^x</m>.
 
