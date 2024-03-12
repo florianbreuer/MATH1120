@@ -172,7 +172,7 @@
 
       <figure width="100%" xml:id="fig-domain1">
         <caption>Domain of the function <m>f(x,y)=\ln(x-y-1)</m></caption>
-        <image xml:id="domain_y_lt_x-1.svg" source="Calculus/Images/3/domain_y_lt_x-1.svg" width="100%">
+        <image xml:id="domain_y_lt_x-1" source="Calculus/Images/3/domain_y_lt_x-1.svg" width="100%">
             <description>A plot of the domain of the function <m>f(x,y)=\ln(x-y-1)</m>.</description>
         </image>
       </figure>
