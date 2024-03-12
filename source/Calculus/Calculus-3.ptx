@@ -76,6 +76,27 @@
           and say that <m>T</m> is a function of two variables.
         </p>
       </example>
+      <example>
+        <p>
+          Many of the formulas you've come across in school are actually functions of several variables, such as:
+          <ol>
+            <li>
+              <p>
+                The kinetic energy of an object of mass <m>m</m> and velocity <m>v</m> is given by the two-variable function <m>E(m,v) = \frac{1}{2}mv^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The gravitational attraction between two objects of masses <m>m_1</m> and <m>m_2</m>, separated by a distance of <m>r</m>, is given by the three variable function
+                <me>
+                  F(m_1, m_2, r) = G\frac{m_1 m_2}{r^2},
+                </me>
+                where <m>G \approx 6.674\times 10^{-11} </m> is the <em>universal gravitational constant</em>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </example>
       <p>
          Note that functions of two variables are of the form
           <me>f:D\rightarrow\mathbb{R}^2</me>

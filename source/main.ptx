@@ -58,6 +58,7 @@
 
     
       <xi:include href="./Calculus/Calculus-2.ptx" />
+      <xi:include href="./Calculus/Calculus-3.ptx" /> 
     </part>
     <!--
       <xi:include href="./Calculus/Calculus-3.ptx" /> 
