@@ -98,7 +98,7 @@
             </li>
             <li>
               <p>
-                The gravitational attraction between two objects of masses <m>m_1</m> and <m>m_2</m>, separated by a distance of <m>r</m>, is given by the three variable function
+                The magnitude of the gravitational attraction between two objects of masses <m>m_1</m> and <m>m_2</m>, separated by a distance of <m>r</m>, is given by the three variable function
                 <me>
                   F(m_1, m_2, r) = G\frac{m_1 m_2}{r^2},
                 </me>
@@ -118,7 +118,8 @@
       </definition>
       <p>
         Thus,
-        <me>g(s,t)=\frac{\sin(t+1)}{s^2+t^2}, h(x,y)=(x-y)^2e^{-(x+y)}+6</me>
+        <me>g(s,t)=\frac{\sin(t+1)}{s^2+t^2},</me> 
+        <me>h(x,y)=(x-y)^2e^{-(x+y)}+6</me>
         are examples of functions of two variables.
       </p>
       <p>
@@ -215,20 +216,89 @@
           </ol></p>
         </solution>
       </example>
+    </section>
 
+    <!-- =================================================================================================== -->
+
+
+    <!-- =================================================================================================== -->
+    <!-- Section 2: Graphs -->
+    <!-- =================================================================================================== -->
+
+    <section xml:id="graphs">
+      <title>Graphing functions of two variables</title>
       <p>
-        The graph of a function of two variables is a surface in <m>\mathbb{R}^3</m> which passes the vertical line test. In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. The following plots have been done using the specialist mathematical software Maple but Wolfram Alpha will produce such plots too.
+        Now that we have an idea of what a function of two variables is and what its domain is, we would like a way to visualise it, similar to how we can visualise functions of a single variable
+        by graphing them in the plane.
+      </p>
+      <p>
+        The two main visualisations are graphs and contour plots. We deal with contour plots in the next section.
+        The graph of a function of two variables <m>f(x,y)</m> is the surface in <m>\mathbb{R}^3</m> defined by
+        <me>
+          z = f(x,y).
+        </me>
+        Thus, we imagine the "floor" to be the <m>xy</m>-plane of inputs <m>(x,y)</m> to the function, and the height of the surface above (or below) this floor is the output <m>z=f(x,y)</m>.
+      </p>
+      <p>
+        A surface in <m>\mathbb{R}^3</m> is the graph of a function if and only if it passes the vertical line test, since a function only produces one output <m>z=f(x,y)</m>
+        for each input <m>(x,y)</m> in its domain.
+      </p>
+      <p>
+        In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. 
+        Various computer packages can produce such plots, such as Maple, Mathematica, Matlab, Wolfram Alpha and even GPT4 (which runs python code to produce the plots).
+        The following plots are produced by SageMath - you can run the code cells to produce 3D plots which you can manipulate yourself.
       </p>
       <example>
         <p>
           Produce the graph of the function <m>z=f(x,y)=x^2+y^2</m>
         </p>
         <solution>
+          <sage>
+            <input>
+              x,y = var('x y')
+              f = x^2+y^2
+              plot3d(f, (x,-1,1), (y,-1,1))
+            </input>
+            <output>
+            </output>
+          </sage>
+          <!--
           <p>
             <figure>
               <image source="./Calculus/Images/3/1_example4.png" width="75%"/>
             </figure>
 
+          </p>
+          -->
+          <p>
+            This surface is an example of a <term>paraboloid</term>. It is used for satellite antennas.
+          </p>
+        </solution>
+      </example>
+      <example>
+        <p>
+          Produce the graph of the function <m>z=f(x,y)=xy</m>
+        </p>
+        <solution>
+          <sage>
+            <input>
+              x,y = var('x y')
+              f = x*y
+              plot3d(f, (x,-1,1), (y,-1,1))
+            </input>
+            <output>
+            </output>
+          </sage>
+          <!--
+          <p>
+            <figure>
+              <image source="./Calculus/Images/3/1_example4.png" width="75%"/>
+            </figure>
+
+          </p>
+          -->
+          <p>
+            This surface is an example of a <term>hyperbolic paraboloid</term>. 
           </p>
         </solution>
       </example>
@@ -237,6 +307,15 @@
           Produce the graph of the function <m>f(x,y)=x(3y-2)(5x+2)e^{-(x^2+y^2)/5}</m>
         </p>
         <solution>
+          <sage>
+            <input>
+              x,y = var('x y')
+              f = x*(3*y-2)*(5*x+1)*exp(-(x^2+y^2)/5)
+              plot3d(f, (x,-4,4), (y,-4,4), aspect_ratio=(5,5,1) )
+            </input>
+            <output>
+            </output>
+          </sage>
           <p>
             <figure>
               <image source="./Calculus/Images/3/1_example5.png" width="75%"/>
@@ -249,6 +328,15 @@
           Produce the graph of the function <m>f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m>
         </p>
         <solution>
+          <sage>
+            <input>
+              x,y = var('x y')
+              f = sqrt(x^2+y^2)*exp(-(x^2+y^2))
+              plot3d(f, (x,-4,4), (y,-4,4), aspect_ratio=(1,1,5) )
+            </input>
+            <output>
+            </output>
+          </sage>
           <p>
             <figure>
               <image source="./Calculus/Images/3/1_example6.png" width="100%"/>
@@ -286,11 +374,6 @@
             </ol></p>
           </statement>
         </exercise>
-        <exercise>
-          <statement>
-            <p>Sketch the surface associated with the equation <m>f(x,y)=x^2+y^2-4</m>. Could the surface be the graph of a function of two variables?</p>
-          </statement>
-        </exercise>
 
       </exercises>
 
@@ -300,14 +383,20 @@
 
 
 <!-- =================================================================================================== -->
-<!-- Section 2: Level Curves -->
+<!-- Section 3: Level Curves -->
 <!-- =================================================================================================== -->
 
     <section xml:id="level-curves">
-      <title>Level Curves</title>
+      <title>Level Curves and Contour Plots</title>
 
       <p>
-        As we have seen, visualising the surface corresponding to the function <m>z=f(x,y)</m> can be quite difficult. One method that aids in this task is to draw level curves (sometimes known as contours). Level curves are the equivalent of contours on a topographical map. In such a map the terrain is shown by drawing curves through all points which have the same height above sea level. The numbers on the curves in the map shown below are the heights above sea level in metres.
+        As we have seen, visualising the surface corresponding to the function <m>z=f(x,y)</m> can be quite difficult, in particular if you're limited to a static image in two dimensions (such as printed on paper). 
+        Another way to visualise a function of two variables is to use a <term>contour plot</term>. 
+        Here one plots contours, also known as level curves, each of which consists of all the input points for which the output is a certain constant value.
+        This is commonly used in topographic maps, where the contours show points on the map of a given altitude. 
+        With a bit of practise, you can visualise the shape of the landscape just from a topographic map.
+
+
         <figure>
           <caption> Sample Topographic Map (Part of the Watagan Mountains) </caption>
           <image source="./Calculus/Images/3/2_topographicmap.png" width="75%"/>
@@ -320,7 +409,7 @@
         Note:
         <p><ol label="1.">
           <li><p>Each point in the domain of the function lies on exactly one level curve.</p></li>
-          <li><p>When a collection of level curves for a function are drawn on the same plane it is sometimes called a contour plot.</p></li>
+          <li><p>When a collection of level curves for a function are drawn on the same plane it is also called a contour plot.</p></li>
           <li><p>We can also think of level curves as the intersection of the surface and the horizontal plane <m>z=k</m>.</p></li>
         </ol></p>
       </p>
@@ -338,6 +427,7 @@
               <image source="./Calculus/Images/3/2_example8.png" width="75%"/>
             </figure>
           </p>
+
         </solution>
       </example>
       <example>
@@ -356,6 +446,38 @@
           </p>
         </solution>
       </example>
+      <p>
+        Here is a SageMath cell that lets you compare graphs and contour plots of different functions.
+        Note that if you fill in the regions between the contours with colours related to the output values you get a colourful plot known as a <term>heat map</term>.
+        <sage>
+          <input>
+            x, y = var('x','y')
+            Mx = 5
+            My = 5
+            colormaps = sage.plot.colors.colormaps.keys()
+
+            @interact
+            def _(f=selector([x^2+y^2, x*y, sin(y)*exp(x/5)]),
+                colours=selector(colormaps, default='jet'),
+                fill=False,
+                labels=False,
+                contours=slider([1..100], default=50)):
+                show(plot3d(f, (x,-Mx,Mx), (y,-My,My),
+                        plot_points=100))
+                show(contour_plot(f,(x,-Mx,Mx),(y,-My,My),
+                                  colorbar=True,
+                                  labels=labels,
+                                  contours=contours,
+                                  plot_points=500,
+                                  cmap=colours,
+                                  fill=fill))
+          </input>
+          <output>
+          </output>
+        </sage>
+      </p>
+
+
       <exercises>
         <title>Example Tasks</title>
 
@@ -388,42 +510,67 @@
 
 
 <!-- =================================================================================================== -->
-<!-- Section 3: Surfaces of Revolution -->
+<!-- Section 4: Surfaces of Revolution -->
 <!-- =================================================================================================== -->
 
     <section xml:id="surfaces-of-revolution">
       <title>Surfaces of Revolution</title>
 
       <p>
-        The surface associated with the graph of <m>f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m> (see <xref ref="Example-6-Calc-3"/>) is an example of a special kind of surface...a surface of revolution.
+        The surface associated with the graph of <m>f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m> (see <xref ref="Example-6-Calc-3"/>) is an example of a special kind of surface... a surface of revolution.
         <definition>
           A <term>surface of revolution</term> is a surface in <m>\mathbb{R}^3</m> obtained by rotating a curve about an axis.
         </definition>
       </p>
+      <p>
+        Suppose we have a curve <m>z = g(x), \; x\geq 0</m> in the <m>xz</m>-plane, and we rotate this curve above the <m>z</m>-axis.
+        What would be an equation for the resulting surface of revolution?
+      </p>
+      <p>
+        Consider a point <m>P=(x,0,z)</m> on the curve above the <m>x</m>-axis in 3D space. Its height above the <m>xy</m>-plane is <m>z = g(x)</m>.
+        As we rotate the curve about the <m>z</m>-axis, the point <m>P</m> traces out a horizontal circle on the resulting surface of revolution. 
+        The radius <m>r</m> of this circle equals the original <m>x</m>-coordinate of the point when it started above the <m>x</m>-axis, and the 
+        height of the circle above the <m>xy</m>-plane equals <m>g(r)</m>.
 
+        The height of an arbitrary point <m>Q=(x,y,z)</m> on the surface of revolution is thus <m>z=g(r)</m>, where <m>r=\sqrt{x^2+y^2}</m> is the radius of the 
+        circle on which the point <m>Q</m> lies. This tells us that an equation for the surface of revolution is
+        <me>
+          z = g(\sqrt{x^2+y^2}).
+        </me>
+
+        Another way to see this is that, as a result of the rotational symmetry of the surface, the height of the surface above a point <m>(x,y)</m> on the <m>xy</m>-plane 
+        depends only on the distance <m>r=\sqrt{x^2+y^2}</m> of the point <m>(x,y)</m> from the origin.
+      </p>
+      <p>
+        The following SageMath code shows the partial surface of revolution obtained by rotating the curve <m>z = g(x) = \sin(x)</m> about the <m>z</m>-axis.
+      </p>
+      <sage>
+        <input>
+          t, r, x = var('t r x')
+          g = sin(x)
+          R = 10
+          p = line3d([(x,0,g(x=x)) for x in srange(0,R,0.1)], thickness=5, color='red')
+          @interact
+          def _(theta=slider(0.0, 2*pi, 0.1, default = 1.0)):
+              if theta > 0:
+                  q = p + parametric_plot3d((r*cos(-t), r*sin(-t), g(x=r)), (r,0,R), (t,0,theta))
+              else:
+                  q = p
+              show(q, frame=False)
+        </input>
+      </sage>
       <example>
         <p>
-          Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane <m>z=2-3x, x\geq 0</m> about the <m>z</m>-axis.
+          Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane <m>z=g(x)=2-3x, x\geq 0</m> about the <m>z</m>-axis.
         </p>
+        <figure>
+          <image source="./Calculus/Images/3/3_example10.png" width="75%"/>
+        </figure>
         <answer>
         <p><m>f(x,y)=2-3\sqrt{x^2+y^2}</m></p>
         </answer>
-        <solution>
-          <p>
-            <figure>
-              <image source="./Calculus/Images/3/3_example10.png" width="75%"/>
-            </figure>
-            Let the equation of the surface be <m>z=f(x,y)</m>. Then the equation of the level curves of the surface will be
-            <me>f(x,y)=k</me>
-            Now, note that the cross-sections of the surface of revolution perpendicular to the <m>z</m>-axis (i.e. the level curves) will be circles. For example the cross section at <m>z=k</m> will be a circle with centre <m>(0,0)</m> and radius <m>\frac{2-k}{3}</m> and hence has equation
-            <me>x^2+y^2=\left(\frac{2-k}{3}\right)^2</me>
-            On re-arranging this equation we obtain
-            <me>k=2-3\sqrt{x^2+y^2}</me>
-            Putting this into <m>f(x,y)=k</m> gives
-            <me>f(x,y)=2-3\sqrt{x^2+y^2}</me>
-          </p>
-        </solution>
       </example>
+      <!--
       <p>
         On repeating what we did in the above example in general gives:
         <definition>
@@ -431,6 +578,7 @@
           <me>z=f(\sqrt{x^2+y^2})</me>
         </definition>
       </p>
+    -->
       <example>
         <p>
           Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane
@@ -506,7 +654,31 @@
         </p>
       </example>
       <p>
-        Of course, for such functions geometric representations are somewhat impractical.
+        Visualising such functions is difficult. 
+        One option to visualise a function <m>f(x,y,z)</m> of three variables is to make 3D plots of its <term>level surfaces</term>. 
+        These are the surfaces defined by <m>f(x,y,z) = k</m> for various values of the constant <m>k</m>.
+        This is the same idea as plotting level curves, except now we're in one dimension higher.
+      </p>
+      <example>
+        <p>
+          The following SageMath cell displays three level surfaces of the function
+          <me>
+            f(x,y,z) = x^2 + 3y^2 + 5z^3
+          </me>
+          for <m>k=-5,0,5.</m>
+        </p>
+        <sage>
+          <input>
+            x,y,z = var('x y z')
+            f = x^2 + 3*y^2 + 5*z^3
+            M = 2
+            Ks = [0, 5, -5]
+            sum([implicit_plot3d(f == k, (x,-M,M), (y,-M,M), (z,-M,M), plot_points=100, opacity=0.6) for k in Ks])
+          </input>
+        </sage>
+      </example>
+      <p>
+        We will see later in the course that, rather than using level surfaces to gain understanding a given function, we can gain understanding of a given surface by viewing it as the level surface of a function.
       </p>
 
     </section>

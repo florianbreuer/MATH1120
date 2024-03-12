@@ -1,0 +1,15 @@
+INFO    : PreTeXt project found in `/workspaces/MATH1120`.
+WARNING : Using CLI version 2.3.6 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.6.
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Staging latest build located in `/workspaces/MATH1120/output/web` at `/workspaces/MATH1120/output/stage`.
+INFO    : 
+INFO    : Deployment is now staged at `/workspaces/MATH1120/output/stage`.
+INFO    : Preparing to deploy from active `main` git branch.
+INFO    : 
+INFO    : Changes to project source since last commit detected.
+INFO    : Add/committing these changes to local Git repository.
+INFO    : 
