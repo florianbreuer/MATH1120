@@ -82,7 +82,18 @@
           <ol>
             <li>
               <p>
-                The kinetic energy of an object of mass <m>m</m> and velocity <m>v</m> is given by the two-variable function <m>E(m,v) = \frac{1}{2}mv^2</m>.
+                The kinetic energy of an object of mass <m>m</m> and velocity <m>v</m> is given by the two-variable function 
+                <me>
+                  E(m,v) = \frac{1}{2}mv^2.
+                </me>
+              </p>
+            </li>
+            <li>
+              <p>
+                The value of a <m>\$100</m> investment compounded continuously at an annual rate of <m>r</m> after <m>t</m> years is given by the two-variable function
+                <me>
+                  V(t,r) = 100 e^{rt}.
+                </me>
               </p>
             </li>
             <li>
@@ -91,7 +102,7 @@
                 <me>
                   F(m_1, m_2, r) = G\frac{m_1 m_2}{r^2},
                 </me>
-                where <m>G \approx 6.674\times 10^{-11} </m> is the <em>universal gravitational constant</em>.
+                where <m>G \approx 6.674\times 10^{-11} \mathrm{N}\mathrm{m}^2\mathrm{kg}^{-2}</m> is the <em>universal gravitational constant</em>.
               </p>
             </li>
           </ol>
@@ -111,7 +122,8 @@
         are examples of functions of two variables.
       </p>
       <p>
-        The set <m>D</m> is called the <term>domain</term> of the function. Unless specified otherwise, we take <m>D</m> to be the largest possible set of ordered pairs for which we can calculate <m>f</m>. The <term>range</term> of <m>f</m> is the associated set of values that <m>f</m> takes on.
+        The set <m>D</m> is called the <term>domain</term> of the function. Unless specified otherwise, we take <m>D</m> to be the largest possible set of inputs for which we can calculate <m>f</m>. 
+        The <term>range</term> of <m>f</m> is the associated set of values that <m>f</m> takes on.
       </p>
       <example>
         <p>
@@ -141,8 +153,13 @@
 
         <solution>
           <p><ol label="a.">
-            <li><p>Since the argument of the log function has to be positive, the domain <m>D</m> is the set of points in the plane satisfying
-            <me>D=\{(x,y):y \lt x-1\}</me></p></li>
+            <li>
+              <p>
+                Since the argument of the log function has to be positive, the domain <m>D</m> is the set of points in the plane satisfying
+                <me>D=\{(x,y):y \lt x-1\}</me>. 
+                Figure <xref ref="fig-domain1"/> shows a plot of this domain in <m>\mathbb{R}^2</m>.
+              </p>
+            </li>
             <li><p> </p></li>
           </ol></p>
           <p><ol label="i.">
@@ -152,6 +169,13 @@
           </ol></p>
         </solution>
       </example>
+
+      <figure width="100%" xml:id="fig-domain1">
+        <caption>Domain of the function <m>f(x,y)=\ln(x-y-1)</m></caption>
+        <image xml:id="domain_y_lt_x-1.svg" source="Calculus/Images/3/domain_y_lt_x-1.svg" width="100%">
+            <description>A plot of the domain of the function <m>f(x,y)=\ln(x-y-1)</m>.</description>
+        </image>
+      </figure>
 
       <example>
         <p>
@@ -191,6 +215,7 @@
           </ol></p>
         </solution>
       </example>
+
       <p>
         The graph of a function of two variables is a surface in <m>\mathbb{R}^3</m> which passes the vertical line test. In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. The following plots have been done using the specialist mathematical software Maple but Wolfram Alpha will produce such plots too.
       </p>

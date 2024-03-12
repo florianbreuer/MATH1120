@@ -1,0 +1,7 @@
+INFO    : PreTeXt project found in `/workspaces/MATH1120`.
+WARNING : Using CLI version 2.3.6 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.6.
+INFO    : Server is already available at https://ideal-guacamole-wx4r6rv7p66f97xx-8128.app.github.dev
+INFO    : Now opening browser for target `web` at https://ideal-guacamole-wx4r6rv7p66f97xx-8128.app.github.dev/output/web
