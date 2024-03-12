@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span>
+</h4>
+<div class="para">Produce the graph of the function <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span>
+</div> <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<pre id="Example-6-Calc-3-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
+f = sqrt(x^2+y^2)*exp(-(x^2+y^2))
+plot3d(f, (x,-4,4), (y,-4,4), aspect_ratio=(1,1,5) )
+</script></pre> <div class="para"><figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./Calculus/Images/3/1_example6.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+</div></details></article><span class="incontext"><a class="internal" href="Calculus_3.html#Example-6-Calc-3">in-context</a></span>
+</body>
+</html>
