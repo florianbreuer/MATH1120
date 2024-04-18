@@ -158,7 +158,7 @@
               <p>
                 Since the argument of the log function has to be positive, the domain <m>D</m> is the set of points in the plane satisfying
                 <me>D=\{(x,y):y \lt x-1\}</me>. 
-                Figure <xref ref="fig-domain1"/> shows a plot of this domain in <m>\mathbb{R}^2</m>.
+                <xref ref="fig-domain1"/> shows a plot of this domain in <m>\mathbb{R}^2</m>.
               </p>
             </li>
             <li><p> </p></li>

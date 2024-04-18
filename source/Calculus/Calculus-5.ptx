@@ -378,7 +378,7 @@
                     <p>In the figure below a rectangle initially with sides <m>x</m> and <m>y</m> has been made larger so that the sides are now <m>x + \Delta x</m> and <m> y + \Delta y</m>.
                     <figure xml:id="Fig-Task_4_Figure">
                         <caption></caption>
-                        <image source="./Calculus/Images/5/Task_4_Figure.png" width="60%"/>
+                        <image source="./Calculus/Images/5/Task_4_Figure.PNG" width="60%"/>
                     </figure>
                     Shade on the diagram the regions that represent:
                     <ol label="a">

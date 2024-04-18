@@ -55,18 +55,15 @@
     <part xml:id="Part-Calculus">
       <title>Calculus</title>
       <xi:include href="./Calculus/Calculus-1.ptx" />
-
-    
       <xi:include href="./Calculus/Calculus-2.ptx" />
       <xi:include href="./Calculus/Calculus-3.ptx" /> 
-    </part>
-    <!--
-      <xi:include href="./Calculus/Calculus-3.ptx" /> 
+
       <xi:include href="./Calculus/Calculus-4.ptx" />
-      <xi:include href="./Calculus/Calculus-5.ptx" />    
+      <xi:include href="./Calculus/Calculus-5.ptx" />
       <xi:include href="./Calculus/Calculus-6.ptx" />
-      <xi:include href="./Calculus/Calculus-7.ptx" /> 
-      <xi:include href="./Calculus/Calculus-8.ptx" />              
+      <xi:include href="./Calculus/Calculus-7.ptx" />
+      <xi:include href="./Calculus/Calculus-8.ptx" />
+
     </part>
 
     <part xml:id="Part-Differenial_Equations">
@@ -90,7 +87,7 @@
     </part>
 
 
-    <chapter xml:id="chapter-title">
+    <!-- <chapter xml:id="chapter-title">
       <title>Chapter title</title>
 
       <section xml:id="section-title">
@@ -98,16 +95,16 @@
         <p>Hello</p>
       </section>
 
-    </chapter>
+    </chapter> -->
 
-    <backmatter xml:id="backmatter">
+    <!-- <backmatter xml:id="backmatter">
       <title>Backmatter</title>
 
       <colophon>
         <p> This book was authored in <pretext />. </p>
       </colophon>
 
-    </backmatter>
--->
+    </backmatter> -->
+
   </book>
 </pretext>

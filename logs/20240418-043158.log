@@ -1,0 +1,8 @@
+INFO    : PreTeXt-CLI version: 2.3.10
+
+INFO    : PreTeXt project found in `/workspaces/MATH1120`.
+WARNING : Using CLI version 2.3.10 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.10.
+INFO    : Run `pretext --help` for help.

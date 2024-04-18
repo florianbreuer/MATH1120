@@ -287,7 +287,7 @@
             Note that each term consists of a <em>coefficient</em> (for example <m>\frac{1}{3!}</m>) multiplied by some power of the variable (for example <m>x^3</m>), 
             so this is an example of what we call a <term>power series</term>.
             Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We're very comfortable with polynomials.
-            Figure <xref ref="fig-exp-plot"/> shows how the first few partial sums of the series <xref ref="eq-exp-series"/> approximate the function <m>e^x</m>.
+            <xref ref="fig-exp-plot"/> shows how the first few partial sums of the series <xref ref="eq-exp-series"/> approximate the function <m>e^x</m>.
 
             <figure width="100%" xml:id="fig-exp-plot">
                 <caption>Approximation to <m>e^x</m> by various partial sums of its power series</caption>

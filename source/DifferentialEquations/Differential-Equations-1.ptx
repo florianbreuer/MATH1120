@@ -104,6 +104,7 @@
                 <p>
                     We could do this geometrically by plotting the graphs of <m>y=x</m> and <m>y=\tan(x)</m> and looking at the points of intersection.
                     <figure xml:id="Fig_1_example2">
+                        <caption></caption>
                         <image source="./DifferentialEquations/Images/1/1_example2.png" width="75%"/>
                     </figure>
                     As can be seen in <xref ref="Fig_1_example2"/>, there will be an infinite number of solutions to this equation. One solution is <m>x=0</m>. There is another solution between <m>x=4</m> and <m>x=5</m> and so on.
