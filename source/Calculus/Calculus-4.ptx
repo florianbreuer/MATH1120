@@ -115,9 +115,55 @@
             </figure>
         </example>
 
+        <p>
+            Consider a function of two variables, for example: <me>f(x,y)=x^2(\sin(x+5y))</me>. The following plots the graph of <m>z=f(x,y)</m>, together with the vertical planes defined by <m>y=y_0</m> (in orange) and <m>x=x_0</m> (in red), and arrows representing the slope of the surface inside these planes. 
+        </p>
+            <sage>
+            <input>
+                x,y,z = var('x y z')
+                f = x^2*sin(x+5*y)
+                M = 1
+                h = 0.5
+                
+                fx = diff(f,x)
+                fy = diff(f,y)
+                
+                @interact
+                def _(
+                    x0 = slider(-M, M, default=0, step_size=0.05),
+                    y0 = slider(-M, M, default=0, step_size=0.05),
+                        show_x_arrow = true,
+                        show_y_arrow = true,
+                        show_x_plane = true,
+                        show_y_plane = true,
+                        show_tangent_plane = false,
+                    auto_update=False
+                    ):
+                    z0 = f(x=x0,y=y0)
+                    show('f(x,y) = '+latex(f))
+                    p = plot3d(f,(x,-M,M),(y,-M,M))+sphere((x0,y0,z0),0.05,color='black')
+                    if show_x_arrow:
+                        p = p+arrow3d((x0,y0,z0),(x0+h,y0,z0+fx(x=x0,y=y0)*h),color='black')
+                        <!-- show(r'f_x(x,y) = '+latex(fx)+r';\qquad f_x('+str(n(x0,3))+','+str(n(y0,3))+') = '+latex(n(fx(x=x0,y=y0)))) -->
+                    if show_x_plane:
+                        p = p+implicit_plot3d(y==y0, (x,-M,M), (y,-M,M), (z,-M,M), color='orange', opacity=0.9)
+                    if show_y_arrow:
+                        p = p+arrow3d((x0,y0,z0),(x0,y0+h,z0+fy(x=x0,y=y0)*h),color='gray')
+                        <!-- show(r'f_y(x,y) = '+latex(fy)+r';\qquad f_y('+str(n(x0,3))+','+str(n(y0,3))+') = '+latex(n(fy(x=x0,y=y0)))) -->
+                    if show_y_plane:
+                        p = p+implicit_plot3d(x==x0, (x,-M,M), (y,-M,M), (z,-M,M), color='red', opacity=0.9)
+                    if show_tangent_plane:
+                        p = p+plot3d(z0+fx(x=x0,y=y0)*(x-x0)+fy(x=x0,y=y0)*(y-y0), (x,x0-h,x0+h), (y,y0-h,y0+h), color='green', opacity=0.5)
+                    show(p)
+            </input>
+            <output>
+            </output>
+            </sage>
 
-        <p>The above example provided an illustration of calculating what are called partial derivatives. Formally partial derivatives are defined as follows.</p>
-
+        <!-- <p><xref ref="Ex-Direction_and_instantaneous_rate_of_change"/> provided an illustration of calculating what are called partial derivatives. Formally partial derivatives are defined as follows.</p> -->
+        <p> 
+            The slopes of the surface inside the planes above are given by what is known as the <term>partial derivatives</term> of the function. Where <m>y=y_0</m> is kept constant (in the orange plane), the slope is given by the partial derivative <m>f_x(x,y)</m>. Where <m>x=x_0</m> is kept constant (in the red plane), the slope is given by the partial derivative <m>f_y(x,y)</m>. Formally, partial derivatives are defined as follows.
+        </p>
 
         <definition>
             <title>Partial Derivative</title>
@@ -132,7 +178,13 @@
             </statement>
         </definition>
 
-
+        <remark>
+            <title>Notation</title>
+            <p>
+                The notation <m>f_x</m> is often used to denote <m>\dfrac{\partial f}{\partial x}</m>. Similarly, <m>f_y</m> is often used to denote <m>\dfrac{\partial f}{\partial y}</m>.
+            </p>
+        </remark>
+        
         <example xml:id="Ex-Calculating_partial_derivatives_at_particular_point">
             <!-- <title>Calculating Partial Derivatives at a Particular Point</title> -->
                 <statement>
@@ -532,9 +584,29 @@
         </exercises>
 
         <remark>
+            <p>
+                The following Sage code computes the partial derivatives of the function <m>f(x,y)=x^2(\sin(x+5y))</m>.
+            </p>
+            <sage>
+            <input>
+                x,y,z = var('x y z')
+                f = x^2*sin(x+5*y)
+                
+                fx = diff(f,x)
+                fy = diff(f,y)
+
+                show(r'f_x(x,y) = '+latex(fx)+r'')
+                show(r'f_y(x,y) = '+latex(fy)+r'')
+            </input>
+            <output>
+            </output>
+            </sage>
+        </remark>
+
+        <remark>
             <title>A little remark</title>
                 <p>
-                    Computer algebra systems can find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.
+                    Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.
                 </p>
                 <figure xml:id="Fig-WA_1">
                     <image source="./Calculus/Images/4/WA_1.png" width="90%"/>
