@@ -98,6 +98,42 @@
                 </figure>
             </example>
 
+            <example>
+                <p>
+                    The below Sage code computes the tangent plane to the surface 
+                    <me>xy+yz^2+xz^3=54</me>
+                    at the point <m>(2,0,3)</m>. The tangent plane at this point is shown in red. 
+                </p>
+                <sage>
+                    <input>
+                        x,y,z = var('x','y','z')
+
+                        f=x*y+y*z^2+x*z^3
+                        (x0,y0,z0) = (2,0,3)
+
+                        M=5
+                        fx=diff(f,x)
+                        fy=diff(f,y)
+                        fz=diff(f,z)
+
+                        L = fx(x=x0,y=y0,z=z0)*(x-x0)+fy(x=x0,y=y0,z=z0)*(y-y0)+fz(x=x0,y=y0,z=z0)*(z-z0)
+
+                        show("f(x,y,z)="+latex(f))
+                        show(r"\nabla f(x,y,z) = "+latex(f.gradient()))
+                        show(r"(x_0,y_0,z_0) = "+latex((x0,y0,z0)))
+                        show(r"\text{Tangent plane: }"+latex(L)+" = 0")
+
+                        show(
+                            implicit_plot3d(f==f(x=x0,y=y0,z=z0),(x,-M,M),(y,-M,M),(z,-M,M),plot_points=100)+\
+                            implicit_plot3d(L==0,(x,-M,M),(y,-M,M),(z,-M,M),plot_points=100,color='red')+\
+                            sphere((x0,y0,z0),0.1,color='black')
+                        )
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </example>
+
             <p>To summarise:</p>
 
             <definition>
@@ -157,6 +193,71 @@
                 </md>
             </p>
 
+            <example>
+                <p>
+                    The Sage code below computes the gradient vector <m>\nabla f(x,y)</m> (shown by the orange arrow) at some location <m>(x,y)</m> for the function
+                    <me>f(x,y)=\cos(x)\sin(y).</me> 
+                    The gradient vector points in the direction of steepest ascent on the surface <m>z=f(x,y)</m>. The unit vector <m>\mathbf{\hat{u}}</m> in the direction of some angle is shown by the red arrow. (Note that when the angle is zero, the unit vector is parallel to the gradient vector.) The tangent line to the surface is plotted in green. The gradient of that tangent line is the directional derivative.
+                </p>
+                <sage>
+                    <input>
+                        var('x,y,t,z')
+                        f(x,y)=sin(x)*cos(y)
+
+                        pif = float(pi)
+
+                        line_thickness=3
+                        surface_color='blue'
+                        plane_color='purple'
+                        line_color='red'
+                        tangent_color='green'
+                        gradient_color='orange'
+
+                        @interact
+                        def myfun(location=input_grid(1, 2, default=[0,0], label = "Location (x,y)", width=2),
+                        angle=slider(0, 2*pif, label = "Angle", step_size=0.01),
+                        auto_update=false,
+                        show_surface=("Show surface", True),
+                        show_plane=("Show plane", True)):
+
+                            location3d = vector(location[0]+[f(x=location[0][0],y=location[0][1])])
+                            location = location3d[0:2]
+                            direction3d = vector(RDF, [cos(angle), sin(angle), 0])
+                            direction=direction3d[0:2]
+                            cos_angle = math.cos(angle)
+                            sin_angle = math.sin(angle)
+                            df = f.gradient()
+                            direction_vector=line3d([location3d, location3d+direction3d], arrow_head=True, rgbcolor=line_color, thickness=line_thickness)
+                            curve_point = (location+t*direction).list()
+                            curve = parametric_plot(curve_point+[f(*curve_point)], (t,-3,3),color=line_color,thickness=line_thickness)
+                            plane = parametric_plot((cos_angle*x+location[0],sin_angle*x+location[1],t), (x, -3,3), (t,-3,3),opacity=0.8, color=plane_color)
+                            pt = point3d(location3d.list(),color='green', size=10)
+
+                            tangent_line = parametric_plot((location[0]+t*cos_angle, location[1]+t*sin_angle, f(*location)+t*df(*location)*(direction)), (t, -3,3), thickness=5, color=tangent_color)
+                            picture3d = direction_vector+curve+pt+tangent_line
+                            if show_plane:
+                                picture3d += plane
+
+                            if show_surface:
+                                picture3d += plot3d(f, (x,-3,3),(y,-3,3),opacity=0.7)
+
+                            dff = df(location[0], location[1])
+                            dff3d = vector(RDF,dff.list()+[0])
+                            picture3d += line3d([location3d, location3d+dff3d], arrow_head=True, rgbcolor=gradient_color, thickness=line_thickness)
+
+                            show('f(x,y) = '+latex(f(x,y)))
+                            show(r'\nabla f(x,y) = \langle'+latex(df(x,y)[0])+','+latex(df(x,y)[1])+r'\rangle')
+                            show(r'\nabla f'+latex(vector(location))+r' = \langle'+latex(n(dff[0], digits=2))+','+latex(n(dff[1], digits=2))+r'\rangle')
+                            show(r'\hat{u} = \langle'+latex(n(direction[0], digits=2))+','+latex(n(direction[1], digits=2))+r'\rangle')
+                            show(r'D_{\hat{u}}\,f'+latex(vector(location))+' = '+latex(n(dff[0]*direction[0]+dff[1]*direction[1], digits=2)))
+
+                            show(picture3d,aspect=[1,1,1], axes=True)
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </example>
+
             <example xml:id="Ex-Find_Gradient_Vector">
             <!-- <title>Calculating Partial Derivatives at a Particular Point</title> -->
                 <statement>
@@ -176,7 +277,7 @@
             </example>
 
 
-            <p>The gradient vector has some interesting facts associated with it. Note in the following we are assuming that <m>\nabla f \neq \langle 0, 0 \rangle</m>.</p>
+            <!-- <p>The gradient vector has some interesting facts associated with it. Note in the following we are assuming that <m>\nabla f \neq \langle 0, 0 \rangle</m>.</p>
 
             <p><ol label="1">
 
@@ -213,9 +314,110 @@
                         <caption></caption>
                         <image source="./Calculus/Images/6/Fig4_Contour_Plot.png" width="70%"/>
                     </figure>
+                    
                 </li>
 
-            </ol></p>
+            </ol></p> -->
+
+
+
+            <p>The gradient vector has some interesting facts associated with it. Note that in the following remarks, we are assuming that <m>\nabla f \neq \langle 0, 0 \rangle</m>.</p>
+
+            <remark>
+                <p><m>\nabla f</m> points in the direction in which the directional derivative takes on its largest value. To see this, note that
+                <md>
+                    <mrow>D_{\mathbf{u}} f(x,y) \amp = \nabla f(x,y) \cdot \hat{\mathbf{u}}</mrow>
+                    <mrow>\amp = \| \nabla f \| \| \hat{\mathbf{u}} \| \cos(\theta)</mrow>
+                    <mrow>\amp = \| \nabla f \| \cos(\theta)</mrow>
+                </md>
+                At a given point <m>\| \nabla f \|</m> is fixed and so the largest value of <m>D_{\mathbf{u}} f(x,y)</m> will occur when <m>\cos(\theta) = 1</m>, i.e. when <m>\theta = 0</m> or put another way, when <m>\hat{\mathbf{u}}</m> is parallel to <m>\nabla f</m>. We can also see from this that the largest value that the directional derivative can take is <m>\| \nabla f \|</m>.</p>
+
+                <p>Similarly, the directional derivative takes on its smallest value in the direction of <m>-\nabla f</m> and has value <m>- \| \nabla f \|</m>.</p>
+            </remark>
+
+            <definition xml:id="def-level_curves">
+                <statement>
+                    <p>
+                        For the function <m>z=f(x,y)</m>, the level curve passing through the point <m>(x_0,y_0)</m> is given by
+                        <me>f(x,y)=f(x_0,y_0).</me>
+                    </p>
+                </statement>
+            </definition>
+
+            <remark>
+                <p>
+                    <m>\nabla f(x_0,y_0)</m> is orthogonal (i.e. at right angles) to the level curve passing through <m>(x_0,y_0)</m>. To see this, run the Sage code below which plots the level curves of the function <m>f(x,y)=xy+y^2-x^3</m> and the corresponding gradient vectors <m>\nabla f(x,y)</m> in red.
+                </p>
+                <sage>
+                    <input>
+                        x,y=var('x','y')
+                        M=1
+                        f=x*y+y^2-x^3
+                        #f=x*y
+                        show('f(x,y)='+latex(f))
+                        show(r'\nabla f(x,y) = '+latex(f.gradient()))
+                        show(contour_plot(f,(x,-M,M),(y,-M,M),contours=30,fill=false)+\
+                            plot_vector_field(f.gradient(),(x,-M,M),(y,-M,M),color='red'))
+                        <!-- show(plot3d(f,(x,-M,M),(y,-M,M))) -->
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </remark>
+
+            <remark>
+                <p> As shown in <xref ref= "Fig_tangent_vector"/>, a vector parallel to the tangent to this curve at the point <m>(x_0,y_0)</m> will be <m> \left \langle 1, \dfrac{dy}{dx} \right \rangle</m>.
+                    </p>
+
+                    <figure xml:id="Fig_tangent_vector">
+                        <caption></caption>
+                        <image source="./Calculus/Images/6/Fig3_tangent_vector.png" width="70%"/>
+                    </figure>
+
+                    <p>Thus a vector normal to the curve at the point <m>(x_0,y_0)</m> will be <m>\left\langle -\dfrac{dy}{dx},1\right\rangle</m>. We will see subsequently, via implicit differentiation, that for the curve <m>f(x,y)=k</m>, <me>\frac{dy}{dx}=-\frac{f_x}{f_y}</me> and so a vector normal to the curve at the point <m>(x_0,y_0)</m> will be <m>\left \langle \dfrac{f_x(x_0,y_0)}{f_y(x_0,y_0)}, 1 \right \rangle</m>, which is parallel to <m>\nabla f(x_0,y_0)</m>. </p>
+
+                    <p>Notice that since <m>\nabla f(x_0,y_0)</m> is orthogonal to the level curve passing through the point <m>(x_0,y_0)</m> and that <m>\nabla f (x_0,y_0)</m> is the direction in which the directional derivative takes on its largest value, the <q>path of steepest ascent</q> on any surface <m>z=f(x,y)</m> is always at right angles to its contours. To see this, run the Sage code below. This generates a 2D contour plot of <m>z=f(x,y)</m> with the gradient vector at the point <m>(x,y)</m> shown in orange.  
+                </p>
+                <sage>
+                    <input>
+                    var('x,y,t,z')
+                    f(x,y)=sin(x)*cos(y)
+
+                    pif = float(pi)
+
+                    line_thickness=3
+                    gradient_color='orange'
+
+                    @interact
+                    def myfun(location=input_grid(1, 2, default=[0,0], label = "Location (x,y)", width=2),
+                    angle=slider(0, 2*pif, label = "Angle", step_size=0.01),
+                    auto_update=false):
+
+                        location3d = vector(location[0]+[f(x=location[0][0],y=location[0][1])])
+                        location = location3d[0:2]
+                        direction3d = vector(RDF, [cos(angle), sin(angle), 0])
+                        direction=direction3d[0:2]
+                        df = f.gradient()
+                        dff = df(location[0], location[1])
+
+                        picture2d = contour_plot(f(x,y), (x,-3,3),(y,-3,3), plot_points=100)
+                        picture2d += arrow(location.list(), (location+direction).list(), color='red')
+                        picture2d += point(location.list(),color='black',pointsize=40)
+                        picture2d += arrow(location.list(), (location+dff).list(), rgbcolor=gradient_color, width=line_thickness)
+
+                        show('f(x,y) = '+latex(f(x,y)))
+                        show(r'\nabla f(x,y) = \langle'+latex(df(x,y)[0])+','+latex(df(x,y)[1])+r'\rangle')
+                        show(r'\nabla f'+latex(vector(location))+r' = \langle'+latex(n(dff[0], digits=2))+','+latex(n(dff[1], digits=2))+r'\rangle')
+                        show(r'\hat{u} = \langle'+latex(n(direction[0], digits=2))+','+latex(n(direction[1], digits=2))+r'\rangle')
+                        show(r'D_{\hat{u}}\,f'+latex(vector(location))+' = '+latex(n(dff[0]*direction[0]+dff[1]*direction[1], digits=2)))
+
+                        show(picture2d, aspect_ratio=1)
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+
+            </remark>
 
 
             <example xml:id="Ex-Find_Max_Min_Directional_Derivative">
