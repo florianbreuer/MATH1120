@@ -536,6 +536,180 @@
                 </solution>
             </example>
 
+            <!-- BELOW SAGE CODE NOT PRODUCING CORRECT OUTPUT - NEED TO FIX -->
+
+            <!-- <p>
+                The below Sage code can be used to solve the system
+                <me>A\mathbf{x}=\mathbf{b}</me> 
+                using Gauss-Jordan elimination, where <m>A</m> is an <m>m\times n</m> matrix, <m>\mathbf{x}=\{x_1,x_2,...,x_m\}</m> and <m>\mathbf{b}</m> is an <m>m\times 1</m> matrix where <m>\mathbf{b}\neq 0</m>.
+            </p>
+            <sage> 
+                <input>
+                    # Based on code by Pablo Angulo
+
+                    # Coefficients are introduced as a matrix in a single text box,
+                    # and independent terms as a vector in a separate text box. The number of equations and unknowns are arbitrary
+
+                    from sage.misc.html import HtmlFragment
+
+                    def SLE_as_latex(A, b, variables):
+                        nvars = A.ncols()
+                        pretty_print(HtmlFragment(
+                        r'$$\bigg\{\begin{array}{%s}'%('r'*(nvars+1))+
+                        r'\\'.join('%s \\; =\amp%s'%(
+                            (' \amp '.join((r'%s%s\cdot %s'%('+' if c>0 else '',c,v) if c else '') for c,v in zip(row, variables))
+                            if not row.is_zero() else '\amp'*(nvars-1)+'0',y)
+                                ) for row,y in zip(A,b))+
+                        r'\end{array}\right.$$'))
+
+                    def extended_matrix_as_latex(M):
+                        A = M[:,:-1]
+                        b = M.column(-1)
+                        nvars = A.ncols()
+                        pretty_print(HtmlFragment(
+                        r'$$\left(\begin{array}{%s}'%('r'*nvars+ '|r')+
+                        r'\\'.join('%s\amp%s'%(
+                            ' \amp '.join('%s'%c for c in row)
+                            ,y) for row,y in zip(A,b))+
+                        r'\end{array}\right)$$'))
+
+                    @interact
+                    def SEL(A_text='[(0,0,-1,2),(-1,0,2,4), (0,0,1,-2)]',
+                            b_text='[2,1,-2]',
+                            auto_update=False
+                        ):
+                        A = matrix(QQ,eval(A_text))
+                        b = vector(eval(b_text))
+                        M = A.augment(b)
+                        neqs = len(b)
+                        nvars = A.ncols()
+                        var_names = ', '.join('x_%d'%j for j in [1..nvars])
+                        variables = var(var_names)
+                        pretty_print('Variables: %s' %var_names)
+                    #    pretty_print(HtmlFragment('Variables: '+',\\;'.join([latex(v) for v in variables])))
+                    #     for row,y in zip(A,b):
+                    #         pretty_print(latex(sum(c*v for c,v in zip(row, variables))==y))
+
+                        pretty_print( HtmlFragment("Equations:"))
+                        SLE_as_latex(A, b, variables)
+                        pretty_print(HtmlFragment( 'We construct the augmented matrix:'))
+                        extended_matrix_as_latex(M)
+
+                        pivot = {}
+                        ibound_variables = []
+                        for m,row in enumerate(A):
+                            for k in range(m,nvars):
+                                lista = [(abs(M[j,k]),j) for j in range(m,neqs)]
+                                maxi, c = max(lista)
+                                if maxi > 0:
+                                    ibound_variables.append(k)
+                                    if M[m,k]==0:
+                                        M[c,:],M[m,:]=M[m,:],M[c,:]
+                                        pretty_print( HtmlFragment('We permute rows %d and %d:'%(m+1,c+1)))
+                                        extended_matrix_as_latex(M)
+                                    pivot[m] = k
+                                    break
+
+                            a=M[m,k]
+                            for n in range(m+1,neqs):
+                                if M[n,k]!=0:
+                                    pretty_print( HtmlFragment("We add %s times row %d to row %d:"%(-M[n,k]/a, m+1, n+1)))
+                                    M=M.with_added_multiple_of_row(n,m,-M[n,k]/a)
+                                    extended_matrix_as_latex(M)
+
+                        for m,row in enumerate(M):
+                            k = 0
+                            while nvars-1 > k and row[k]==0:
+                                k = k+1
+                            if row[k]!=0 and row[k]!=0:
+                                pretty_print( HtmlFragment("We multiply row %d by %s:"%(m+1, 1/row[k])))
+                                M[m,:] = M[m,:]/row[k]
+                                extended_matrix_as_latex(M)
+                                for l in range(m):
+                                    if M[l,k] != 0:
+                                        pretty_print( HtmlFragment("We add %s times row %d to row %d:"%(-M[l,k], m+1, l+1)))
+                                        M = M.with_added_multiple_of_row(l, m, -M[l,k])
+                                        extended_matrix_as_latex(M)
+
+                        pretty_print( HtmlFragment("Now our matrix is in reduced row-echelon form and our systems of equations is"))
+                        A = M[:,:-1]
+                        b = M.column(-1)
+                        SLE_as_latex(A, b, variables)
+                        SEL_type = 'compatible'
+                        null_rows = None
+                        for k,(row,y) in enumerate(zip(A,b)):
+                            if row.is_zero():
+                                if y==0 and null_rows is None:
+                                    null_rows = k
+                                    break
+                                elif y!=0:
+                                    SEL_type = 'incompatible'
+                        if SEL_type == 'incompatible':
+                            pretty_print( HtmlFragment('The system has no solutions.'))
+                            return
+                        if null_rows:
+                            pretty_print(HtmlFragment('We remove trivial 0=0 equations:'))
+                            A = A[:null_rows,:]
+                            b = b[:null_rows]
+                            SLE_as_latex(A, b, variables)
+
+                        ifree_variables = [k for k in range(nvars) if k not in ibound_variables]
+                        bound_variables = [variables[k] for k in ibound_variables]
+                        free_variables = [variables[k] for k in ifree_variables]
+                        par_names = ', '.join('t_%d'%j for j in [1..len(free_variables)])
+                        if len(free_variables) > 0:
+                            if len(free_variables) > 1:
+                                params = list(var(par_names))
+                            else:
+                                params = [var('t_1')]
+                        if len(free_variables) > 0:
+                            pretty_print( 'Free variables: %s = %s'%(free_variables, params))
+                        pretty_print('Bound variables: %s'% bound_variables)
+
+                        reduced_eqs = [
+                            sum(c*v for c,v in zip(row, variables))==y
+                            for row,y in zip(A,b)
+                        ]
+                        xvector = vector(variables)
+                        if len(bound_variables)==1:
+                            soldict = solve(reduced_eqs, bound_variables[0], solution_dict=True)[0]
+                        else:
+                            soldict = solve(reduced_eqs, bound_variables, solution_dict=True)[0]
+                    #     pretty_print( HtmlFragment('Solution in parametric form:'))
+                        parametric_sol = matrix(
+                            xvector.apply_map(lambda s:s.subs(soldict))
+                        ).transpose()
+                    #     show(parametric_sol)
+                        pretty_print( 'Solution:')
+                    #     pretty_print( HtmlFragment(
+                    #         r'$$ %s + \left\langle %s\right\rangle$$'%(
+                    #             latex(parametric_sol.subs(dict(zip(free_variables, [0]*len(free_variables))))),
+                    #             ','.join(latex(
+                    #             parametric_sol.apply_map(lambda s:s.diff(v))
+                    #         ) for v in free_variables) if free_variables else latex(matrix([0]*nvars).transpose()))
+                    #     ))
+                        if len(free_variables)>0:
+                            pretty_print( HtmlFragment(
+                                r'$$%s = %s + %s, \quad %s$$'%(
+                                    latex(matrix(variables).transpose()),
+                                    latex(parametric_sol.subs(dict(zip(free_variables, [0]*len(free_variables))))),
+                                    '+'.join(latex(
+                                    parametric_sol.apply_map(lambda s:s.diff(v))
+                                )+latex(params[j]) for j,v in enumerate(free_variables)),
+                                ',\\;'.join(latex(p) for p in params)+r'\in\mathbb{R}')
+                            ))
+                        else:
+                            pretty_print( HtmlFragment(
+                                r'$$%s = %s$$'%(
+                                    latex(matrix(variables).transpose()),
+                                    latex(parametric_sol.subs(dict(zip(free_variables, [0]*len(free_variables))))))
+                            ))
+                    #     pretty_print( HtmlFragment('Dimension is %d'%len(free_variables)))
+                </input>
+                <output>
+                </output>
+            </sage> -->
+
             <exercises>
                 <title>Example Tasks</title>
 

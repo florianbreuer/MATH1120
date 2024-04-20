@@ -348,6 +348,52 @@
         </solution>
     </example>
 
+    <p>
+        For the example above, we can construct the surface
+        <me>f(x,y)=x\cos(y)-y\cos(x)-x</me>
+        In the Sage code below, you can choose the value of the constant <m>c</m> with the slider. The code then plots the curves <m>f(x,y)=c</m> in blue, and the slopes given by <m>\dfrac{dy}{dx}</m> as little grey line segments. The slope of each segment is given by evaluating <m>\dfrac{dy}{dx}</m> at its <m>(x,y)</m> position. (Note that these slopes are tangential to the curve, as they must be.) Furthermore:
+        <ol>
+            <li>
+                by selecting the "show3d" option, you can also see the 3D plot of <m>z=f(x,y)</m> and a "water level" of <m>z=c</m>. In this case, the curves <m>f(x,y)=c</m> represent the "shoreline"; 
+            </li>
+            <li>
+                by selecting the "gradient" option, you can show the gradient vectors <m>\nabla f(x,y)</m> (red arrows), which are of course perpendicular to the level curves (and thus the grey slopes).
+            </li>
+        </ol>
+        <sage> 
+            <input>
+                x,y = var('x y')
+                M = 5
+
+                f = x*cos(y)+y*cos(x)-x
+
+                fx = diff(f,x)
+                fy = diff(f,y)
+
+                show(r"\frac{dy}{dx} = "+latex(-fx/fy))
+
+                @interact
+                def _(c=slider(-5,5,step_size=0.1,default=0),
+                    auto_update=true,
+                    slopes = true,
+                    gradient = false,
+                    show3d = false):
+                    show(r"f(x,y) = "+latex(f)+r" = "+latex(N(c,digits=3)))
+                    P = implicit_plot(f==c,(x,-M,M),(y,-M,M))
+                    if slopes:
+                        P=P+plot_slope_field(-fx/fy,(x,-M,M),(y,-M,M),plot_points=30,color='gray')
+                    if gradient:
+                        P=P+plot_vector_field(f.gradient(),(x,-M,M),(y,-M,M),plot_points=30,color='red')
+                    show(P)
+                    if show3d:
+                        show(plot3d(f,(x,-M,M),(y,-M,M),aspect_ratio=[1,1,0.5], color='green')+plot3d(c,(x,-M,M),(y,-M,M),opacity=0.5,color='blue'))
+            </input>
+            <output>
+            </output>
+        </sage>
+    </p>
+
+
     <p>To use the chain rules to find a formula for <m>\dfrac{dy}{dx}</m> for the function implicitly defined by the equation <men xml:id="Eqn-Implicit_function"> F(x,y)=0</men> let <me>z=F(x,y) \text{ and }  x=x(t), \quad y=y(t).</me> Thus we can think of <m>F</m> as being a function of the one variable <m>t</m>, and so, by Chain Rule 1, <me>\dfrac{dz}{dt} = \dfrac{\partial F}{\partial x}\dfrac{dx}{dt} + \dfrac{\partial F}{\partial y}\dfrac{dy}{dt}.</me> Now we are thinking of equation <xref ref="Eqn-Implicit_function"/> as defining a function of one variable <m>y=y(x)</m>, so let <m>x=x</m> and <m>y=y(x)</m> and hence <men>\dfrac{dz}{dx} = \dfrac{\partial F}{\partial x}\times (1) + \dfrac{\partial F}{\partial y}\dfrac{dy}{dx} = F_x + F_y \dfrac{dy}{dx}.</men>
     </p>
     <p>

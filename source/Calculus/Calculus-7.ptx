@@ -111,6 +111,64 @@
                 </statement>
             </example>
 
+            <example>
+                <p>
+                    The below Sage code computes the critical points of the function
+                    <me>f(x,y)=2x^3+(x+1)y^2+5x^2.</me>
+                    The critical points are shown on the surface and the 2D contour plot in red. 
+                </p>
+                <sage>
+                    <input>
+                        x,y = var('x','y')
+                        f=2*x^3+(x+1)*y^2+5*x^2
+                        show("f(x,y) = "+latex(f))
+                        show(
+                            plot3d(f,(x,-2,1),(y,-3,3),plot_points=100,aspect_ratio=[1,1,0.2])+\
+                            sphere((0,0,f(x=0,y=0)),0.1,color='red')+\
+                            sphere((-5/3,0,f(x=-5/3,y=0)),0.1,color='red')+\
+                            sphere((-1,2,f(x=-1,y=2)),0.1,color='red')+\
+                            sphere((-1,-2,f(x=-1,y=-2)),0.1,color='red')
+                        )
+                        show(
+                            contour_plot(f,(x,-2,1),(y,-3,3),plot_points=100,contours=40,fill=false)+\
+                            circle((0,0),0.01,color='red')+\
+                            circle((-5/3,0),0.01,color='red')+\
+                            circle((-1,2),0.01,color='red')+\
+                            circle((-1,-2),0.01,color='red')
+                        )
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </example>
+
+
+            <example>
+                <p>
+                    The below Sage code computes the critical points of the function
+                    <me>f(x,y)=3x-x^3-2y^2+y^4.</me>
+                    The critical points are shown on the surface and the 2D contour plot in red. 
+                </p>
+                <sage>
+                    <input>
+                        x,y=var('x y')
+                        f=3*x-x^3-2*y^2+y^4
+                        crits = [(1,0),(1,1),(1,-1),(-1,0),(-1,1),(-1,-1)]
+                        M=2
+                        show(
+                            plot3d(f,(x,-M,M),(y,-M,M),plot_points=100,aspect_ratio=[1,1,0.3],opacity=0.9)+\
+                            sum(sphere((P[0],P[1],f(x=P[0],y=P[1])),0.1,color='red') for P in crits)
+                        )
+                        show(
+                            contour_plot(f,(x,-M,M),(y,-M,M),plot_points=500,contours=40,fill=false)+\
+                            sum([circle(P,0.02,color='red') for P in crits])
+                        )
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </example>
+
 
             <p>For smooth functions we can find the critical points by looking for those points where the tangent plane is horizontal. If the function <m>z=f(x,y)</m> has a tangent plane at the point <m>(x_0,y_0,z_0)</m> we can determine algebraically that it is horizontal by checking that:</p>
 
@@ -396,6 +454,25 @@
                 <caption></caption>
                 <image source="./Calculus/Images/7/Fig10_bounded_region.png" width="45%"/>
             </figure>
+
+            <example>
+                <p>
+                    The below Sage code plots the global maximum and global minimum (shown in red) of the surface
+                    <me>f(x,y)=2x^2+x+y^2-2</me>
+                    on the disc <m>D=\{(x,y)\in\mathbb{R}^2\big\vert x^2+y^2\leq 4\}</m> (shown in green). 
+                </p>
+                <sage>
+                    <input>
+                        r,t=var('r t')
+                        parametric_plot3d((r*cos(t),r*sin(t),2*(r*cos(t))^2+r*cos(t)+(r*sin(t))^2-2),(t,0,2*pi),(r,0,2),
+                        opacity=1,aspect_ratio=[1,1,0.3])+sphere((-1/4,0,-17/8),0.1,color='red')+sphere((2,0,8),0.1,color='red')+\
+                        parametric_plot3d((r*cos(t),r*sin(t),0),(t,0,2*pi),(r,0,2),
+                        opacity=0.6,color='green')
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </example>
 
 
             <remark>

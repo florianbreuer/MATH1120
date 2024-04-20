@@ -211,6 +211,24 @@
                 </solution>
             </example>
 
+            <p>
+                For the DE in the above example, the Sage code below can be used to plot the direction field of <m>\dfrac{dy}{dx}</m> as well as the solution <m>y(x)</m> for a given constant of integration <m>c</m>.
+            </p>
+            <sage> 
+                <input>
+                    x,y = var('x y')
+                    M=4
+                    VF = plot_slope_field(-4*x*y^2,(x,-M,M),(y,-M,M),aspect_ratio=1)
+
+                    @interact
+                    def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
+                        show(r'y(x) = '+latex(1/(2*x^2+N(c,digits=3))))
+                        show(VF+plot(1/(2*x^2+c),(x,-M,M),ymin=-M,ymax=M))
+                </input>
+                <output>
+                </output>
+            </sage>
+
             <example>
                 <p>
                     Find the solution to the initial-value problem
@@ -243,6 +261,25 @@
                 </solution>
             </example>
 
+            <p>
+                For the DE in the above example, the Sage code below can be used to plot the direction field of <m>\dfrac{dy}{dx}</m> as well as the solution <m>y(x)</m> for a given constant of integration <m>c</m>.
+            </p>
+            <sage> 
+                <input>
+                    t,y = var('t y')
+                    M=4
+                    VF = plot_slope_field(3*t^2/(4*y-cos(y)),(t,-M,M),(y,-M,M),aspect_ratio=1)
+
+                    @interact
+                    def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
+                        show(r'2y^2-\sin(y)=t^3 + '+latex(N(c,digits=3)))
+                        show(VF+implicit_plot(2*y^2-sin(y)==t^3+c,(t,-M,M),(y,-M,M)))
+                </input>
+                <output>
+                </output>
+            </sage>
+
+
             <example>
                 <p>
                     Find the general solution to the DE
@@ -274,6 +311,25 @@
                     </p>
                 </solution>
             </example>
+
+            <p>
+                For the DE in the above example, the Sage code below can be used to plot the direction field of <m>\dfrac{dy}{dx}</m> as well as the solution <m>y(x)</m> for a given constant of integration <m>A</m>.
+            </p>
+            <sage> 
+                <input>
+                    x,y = var('x y')
+                    M=4
+                    VF = plot_slope_field(y*(1-y),(x,-M,M),(y,-M,M),aspect_ratio=1)
+
+                    @interact
+                    def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
+                        show(r'y(x) = '+latex(N(A,digits=3)*exp(x)/(1+N(A,digits=3)*exp(x))))
+                        show(VF+plot(A*exp(x)/(1+A*exp(x)),(x,-M,M),ymin=-M,ymax=M))
+                </input>
+                <output>
+                </output>
+            </sage>
+
 
             <example>
                 <p>

@@ -1,0 +1,22 @@
+INFO    : PreTeXt-CLI version: 2.3.10
+
+INFO    : PreTeXt project found in `/workspaces/MATH1120`.
+WARNING : Using CLI version 2.3.10 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.10.
+INFO    : Since no target was supplied, we will use "web".
+
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx:557:46:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx:558:33:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx:559:57:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx:569:40:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx:570:32:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx:620:38:FATAL:PARSER:ERR_NAME_REQUIRED: StartTag: invalid element name
+/workspaces/MATH1120/source/main.ptx:81:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /workspaces/MATH1120/source/LinearAlgebra/Linear-Algebra-1.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : While running pretext, the following errors occurred:
+

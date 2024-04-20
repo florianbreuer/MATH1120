@@ -191,6 +191,45 @@
                 The critically-damped case is of practical interest. Often we want to add damping to a system so that it returns close to its equilibrium position "as quickly as possible", (for example in the shock absorber of a car). It turns out that this is achieved by critical damping.
             </p>
 
+            <example>
+                <p>
+                    Consider the second-order linear homogeneous differential equation
+                    <me>\dfrac{d^2x}{dt^2}+\dfrac{D}{m}\dfrac{dx}{dt}+\dfrac{k}{m}x=0</me>
+                    which has the damping parameter 
+                    <me>\delta = \dfrac{p}{q} = \dfrac{\frac{D}{2m}}{\sqrt{\frac{k}{m}}}=\dfrac{D}{2\sqrt{km}}.</me>
+                    The Sage code below considers the case where <m>m=0.5</m>kg and <m>k=0.5</m> (i.e. <m>\delta = D</m>) and plots the solution <m>x(t)</m> for various <m>\delta</m>.
+                </p>
+                <sage> 
+                    <input>
+                        A = 1   # parameters in general solution
+                        B = 0
+                        m = 0.5   # mass 0.5kg
+                        k = 0.5   # spring constant
+
+                        t = var('t')
+
+                        @interact
+                        def _(D = slider(0,4,default=1,step_size=0.2), auto_update=false):
+                            p = D/(2*m)
+                            q = sqrt(k/m)
+                            d = p/q           # damping parameter
+                            w = abs(sqrt(q^2-p^2)) # frequency
+                            if d > 1:   # over-damped
+                                print("Over-damped: delta = ", d)
+                                x = A*exp((-p + w)*t) + B*exp((-p - w)*t)
+                            elif d == 1: # critcally damped
+                                print("Critically damped: delta = 1")
+                                x = (A+B*t)*exp(-p*t)
+                            else: # under-damped
+                                print("Under-damped: delta = ", d)
+                                x = exp(-p*t)*(A*cos(w*t) + B*sin(w*t))
+                            show(plot(x,(t,0,4*pi),aspect_ratio=6))
+                    </input>
+                    <output>
+                    </output>
+                </sage>
+            </example>
+
         </section>
 
 <!-- =================================================================================================== -->
@@ -229,14 +268,89 @@
                 <me>C=\frac{A}{\sqrt{4p^2\alpha^2+(\alpha^2-q^2)^2}}</me>
                 that is the amplitude of the external force multiplied by the factor
                 <me>M=\frac{1}{\sqrt{4p^2\alpha^2+(\alpha^2-q^2)^2}}</me>
-                Notice that, since for a given object-spring system <m>p</m> and <m>q</m> are fixed values, this factor <m>M</m> is a function of the forcing angular frequency <m>\alpha</m>. <xref ref="Fig_14_3_2"/> shows graphs of <m>M(\alpha)</m> for various values of <m>p</m> (which relates to the damping coefficient) when <m>q</m> (which relates to the stiffness coefficient) is held constant at <m>q=1</m>. In fact, it can be shown that if the damping parameter <m>\delta</m> (<m>=\frac{p}{q}</m>) is small then <m>M</m> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <m>\delta\rightarrow 0</m>.
+                Notice that, since for a given object-spring system <m>p</m> and <m>q</m> are fixed values, this factor <m>M</m> is a function of the forcing angular frequency <m>\alpha</m>. 
+            </p>
+                <!-- <xref ref="Fig_14_3_2"/> shows graphs of <m>M(\alpha)</m> for various values of <m>p</m> (which relates to the damping coefficient) when <m>q</m> (which relates to the stiffness coefficient) is held constant at <m>q=1</m>. In fact, it can be shown that if the damping parameter <m>\delta</m> (<m>=\frac{p}{q}</m>) is small then <m>M</m> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <m>\delta\rightarrow 0</m>.
                 <figure xml:id="Fig_14_3_2">
                     <image source="./DifferentialEquations/Images/6/figure_9.png" width="60%"/>
-                </figure>
+                </figure> -->
+            <p>
+                Run the Sage code below to plot the graphs of <m>M(\alpha)</m> for various values of <m>p</m> (which relates to the damping coefficient) when <m>q</m> (which relates to the stiffness coefficient) is held constant at <m>q=1</m>. In fact, it can be shown that if the damping parameter <m>\delta</m> (<m>=\frac{p}{q}</m>) is small then <m>M</m> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <m>\delta\rightarrow 0</m>.
             </p>
+            <sage>
+                <input>
+                    q = 1
+                    a = var('a')
+                    plist = [0.1, 0.2, 0.5, 1, 2]
+                    legends = ['p = '+str(p)[0:3] for p in plist]
+
+                    plot([1/sqrt(4*p^2*a^2+(a^2-q^2)^2) for p in plist], (a, 0, 3),
+                        legend_label = legends, axes_labels = ['applied frequency', 'response'])
+                </input>
+                <output>
+                </output>
+            </sage>
             <p>
                 The significance of this analysis is the insight that if our damped object-spring system is subjected to an external oscillatory force near the natural frequency of the system it will respond with large amplitude motion unless the system is sufficiently damped. This phenomenon is known as <term>resonance</term>.
             </p>
+
+            <p>
+                Using the Sage code below, you can play with a damped oscillator with applied external force <m>F_e(t)=B\cos(\alpha t)</m>. (Note: <m>x_c(t)</m> here is actually the solution to the IVP with the right hand side set to zero, and <m>x_p(t)=x(t)-x_c(t)</m> is not the same as the particular solution guessed earlier.)
+            </p>
+            <sage> 
+                <input>
+                    t = var('t')
+                    x = function('x')(t)
+                    alpha = var('alpha')
+                    a = var('a')
+                    B = var('B')
+
+                    show(r"\frac{d^2x}{dt^2}+\frac{D}{m}\frac{dx}{dt}+\frac{k}{m}x=B\cos(\alpha t)")
+                    @interact
+                    def _(D = ('damping D = ', slider(0, 5, default=1, step_size=0.1)),
+                        m = ('mass m = ', slider(0.1, 5, default=1, step_size=0.1)),
+                        k = ('spring k = ', slider(0.1, 5, default=1, step_size=0.1)),
+                        B = ('B = ', slider(0, 5, default=1, step_size=0.1)),
+                        alpha = ('alpha = ', slider(0, 5, default=1, step_size=0.1)),
+                        x0 = ('initial x(0) = ', slider(-5, 5, default=0, step_size=0.1)),
+                        xx0 = ("initial x'(0) = ", slider(-5, 5, default=0, step_size=0.1)),
+                        tmax = ('t_max ', slider(1, 100, default=20, step_size=1)),
+                        plotforce = ('show F_e(t)', true),
+                        plotxc = ('show x_c(t)', false),
+                        plotxp = ('show x_p(t)', false),
+                        plotfr = ('frequency response', true)
+                        ):
+                        sol = desolve(diff(x,t,2)+(D/m)*diff(x,t)+(k/m)*x == B*cos(alpha*t), x, ics=[0,x0,xx0])
+                        solc = desolve(diff(x,t,2)+(D/m)*diff(x,t)+(k/m)*x == 0, x, ics=[0,x0,xx0])
+                        solp = sol - solc
+                        p = D/(2*m)
+                        q = sqrt(k/m)
+                        d = p/q
+                        show('d = '+latex(N(d,digits=3)))
+                        show('x(t) = '+latex(sol))
+                        L = [sol]
+                        legend = ['x(t)']
+                        if plotforce:
+                            L.append(B*cos(alpha*t))
+                            legend.append('F_e(t)')
+                        if plotxc:
+                            L.append(solc)
+                            legend.append('x_c(t)')
+                            show('x_c(t) = '+latex(solc))
+                        if plotxp:
+                            L.append(solp)
+                            legend.append('x_p(t)')
+                            show('x_p(t) = '+latex(solp))
+                        show(plot(L, 0, tmax, axes_labels = ['t','x'], legend_label = legend))
+                        frcurve = plot(1/sqrt(4*p^2*a^2+(a^2-q^2)^2), (a, 0, 5*alpha),
+                            axes_labels = ['applied frequency w', 'response'])
+                        if plotfr:
+                            show(frcurve+line([(alpha,0),(alpha,frcurve.get_minmax_data()['ymax'])], color='red'),
+                                legend_label = ['amplitude', 'alpha = '+str(alpha)[0:3]])
+                </input>
+                <output>
+                </output>
+            </sage>
 
             <exercises>
                 <title>Example Tasks</title>
