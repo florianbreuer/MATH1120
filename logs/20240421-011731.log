@@ -1,0 +1,113 @@
+INFO    : PreTeXt-CLI version: 2.3.10
+
+INFO    : PreTeXt project found in `/workspaces/MATH1120`.
+WARNING : Using CLI version 2.3.10 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.10.
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Preparing to build into /workspaces/MATH1120/output/web.
+INFO    : discovering source file's directory name: /workspaces/MATH1120/source
+INFO    : verifying and expanding input directory: /workspaces/MATH1120/source/../generated-assets
+INFO    : input directory expanded to absolute path: /workspaces/MATH1120/generated-assets
+INFO    : verifying and expanding input directory: /workspaces/MATH1120/source/../external
+INFO    : input directory expanded to absolute path: /workspaces/MATH1120/external
+INFO    : Runestone Services (via PreTeXt repository): version 7.2.9
+INFO    : Runestone Services (using newer, via online CDN query): version 7.2.15
+INFO    : converting /workspaces/MATH1120/source/main.ptx to HTML in /tmp/ptx-rd3umh9m
+INFO    : XSL conversion of /workspaces/MATH1120/source/main.ptx by /home/vscode/.ptx/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing (indented):
+INFO    :     * PTX:ERROR: the @xml:id value "sage-exp-plot" should be unique, but is authored 2 times.
+INFO    :     *            Results will be unpredictable, and likely incorrect.  Information on the locations follows:
+INFO    :     *              located within: "sage-exp-plot" (xml:id)
+INFO    :     *              located within: "sage-exp-plot" (xml:id)
+INFO    :     * PTX:ERROR:      The @xml:id "eq-e0.3" is invalid.  Use only letters, numbers, hyphens and underscores.
+INFO    :     * PTX:DEPRECATE: (2022-04-25) a "@label" attribute (on a "ul" or "ol" element) has been deprecated and should be replaced by the functionally equivalent "@marker".  We will attempt to honor your request (82 times)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Functions-of-Two-Variables" (xml:id), "Functions of Two Variables" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "level-curves" (xml:id), "Level Curves and Contour Plots" (title)
+INFO    :     *              located within: "Sec-Partial_Differentiation" (xml:id), "Partial Differentiation" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Ex-Hill_Climbing" (xml:id)
+INFO    :     *              located within: "Ex-Hill_Climbing" (xml:id)
+INFO    :     *              located within: "Ex-Hill_Climbing" (xml:id)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Ex-Temperature" (xml:id)
+INFO    :     *              located within: "Ex-Temperature" (xml:id)
+INFO    :     *              located within: "Ex-Temperature" (xml:id)
+INFO    :     *              located within: "Critical-Points" (xml:id), "Critical Points" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "introduction" (xml:id), "Introduction" (title)
+INFO    :     *              located within: "introduction" (xml:id), "Introduction" (title)
+INFO    :     *              located within: "introduction" (xml:id), "Introduction" (title)
+INFO    :     *              located within: "eulers-method" (xml:id), "Euler's Method" (title)
+INFO    :     *              located within: "eulers-method" (xml:id), "Euler's Method" (title)
+INFO    :     *              located within: "eulers-method" (xml:id), "Euler's Method" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Sec-First_Order_Separable_DEs" (xml:id), "First Order Separable DEs " (title)
+INFO    :     *              located within: "Sec-First_Order_Separable_DEs" (xml:id), "First Order Separable DEs " (title)
+INFO    :     *              located within: "Which_Are_First_Order_Linear_DEs" (xml:id)
+INFO    :     *              located within: "Which_Are_First_Order_Linear_DEs" (xml:id)
+INFO    :     *              located within: "Solving a First Order Linear DE" (title)
+INFO    :     *              located within: "Radioactive Decay" (title)
+INFO    :     *              located within: "Radioactive Decay" (title)
+INFO    :     *              located within: "Radioactive Decay" (title)
+INFO    :     *              located within: "Two_simple_example_homogeneous" (xml:id)
+INFO    :     *              located within: "Two_simple_example_homogeneous" (xml:id)
+INFO    :     *              located within: "Two_simple_example_homogeneous" (xml:id)
+INFO    :     *              located within: "Ex-Write_down_the_system_of_equations" (xml:id)
+INFO    :     *              located within: "Ex-Write_down_the_system_of_equations" (xml:id)
+INFO    :     *              located within: "Sec-LA_Solving_Systems_of_Linear_Equations" (xml:id), "Solving Systems of Linear Equations" (title)
+INFO    :     *              located within: "Sec-LA_Solving_Systems_of_Linear_Equations" (xml:id), "Solving Systems of Linear Equations" (title)
+INFO    :     *              located within: "Sec-LA_Solving_Systems_of_Linear_Equations" (xml:id), "Solving Systems of Linear Equations" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Interpretation_Via_Columns" (xml:id), "Interpretation Via Columns" (title)
+INFO    :     *              located within: "Interpretation_Via_Columns" (xml:id), "Interpretation Via Columns" (title)
+INFO    :     *              located within: "Interpretation_Via_Columns" (xml:id), "Interpretation Via Columns" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Ex-Matrix_equality" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_equality" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_equality" (xml:id)
+INFO    :     *              located within: "Matrix addition and scalar multiplication" (title)
+INFO    :     *              located within: "Ex-Matrix_addition_and_scalar_multiplication" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_addition_and_scalar_multiplication" (xml:id)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Sec-Matrix_multiplication" (xml:id), "Matrix Multiplication" (title)
+INFO    :     *              located within: "Ex-Matrix_multiplication_not_commutative" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_multiplication_not_commutative" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_multiplication_not_commutative" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_multiplication_associative" (xml:id)
+INFO    :     *              located within: "Ex-Matrix_multiplication_associative" (xml:id)
+INFO    :     *              located within: "Properties of Matrix Multiplication" (title)
+INFO    :     *              located within: "Properties of Matrix Transpose" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Sec-Matrices_and_Systems_of_Linear_Equations" (xml:id), "Matrices and Systems of Linear Equations" (title)
+INFO    :     *              located within: "Sec-Matrices_and_Systems_of_Linear_Equations" (xml:id), "Matrices and Systems of Linear Equations" (title)
+INFO    :     *              located within: "Sec-Matrices_and_Systems_of_Linear_Equations" (xml:id), "Matrices and Systems of Linear Equations" (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Linear_Algebra_4" (xml:id), "LA4: Square Matrices " (title)
+INFO    :     *              located within: "Inverse_Matrices" (xml:id), " Inverse Matrices " (title)
+INFO    :     *              located within: "Ex-Matrix_multiplication_inverse" (xml:id)
+INFO    :     *              located within: "Determinants" (xml:id), " Determinants " (title)
+INFO    :     *              located within: "Example Tasks" (title)
+INFO    :     *              located within: "Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" (xml:id), "Finding Eigenvalues and Eigenvectors" (title)
+INFO    :     * --------------
+INFO    : successful application of /home/vscode/.ptx/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

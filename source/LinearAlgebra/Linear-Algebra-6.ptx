@@ -118,7 +118,7 @@
                             <me>
                                 A^3 = \begin{pmatrix} 3 \amp 1 \\ 1 \amp 3 \end{pmatrix} \begin{pmatrix} 3 \amp 1 \\ 1 \amp 3 \end{pmatrix} \begin{pmatrix} 3 \amp 1 \\ 1 \amp 3 \end{pmatrix} = \begin{pmatrix} 3 \amp 1 \\ 1 \amp 3 \end{pmatrix} \begin{pmatrix} 10 \amp 6 \\ 6 \amp 10 \end{pmatrix} = \begin{pmatrix} 36 \amp 28 \\ 28 \amp 36 \end{pmatrix}
                             </me>
-                        However,  let's  illustrate  the  above  method  (admittedly  leaving  out  the  working  of finding  eigenvalues,  eigenvectors  and  matrix  inverse).  <m>A</m>  has  two  distinct  eigenvalues <m>\lambda_1 = 2</m> and <m>\lambda_2 = 4</m> with corresponding eigenvectors <m>\bm{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}</m> and <m>\bm{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}</m>, so let
+                        However,  let's  illustrate  the  above  method  (admittedly  leaving  out  the  working  of finding  eigenvalues,  eigenvectors  and  matrix  inverse).  <m>A</m>  has  two  distinct  eigenvalues <m>\lambda_1 = 2</m> and <m>\lambda_2 = 4</m> with corresponding eigenvectors <m>\mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}</m> and <m>\mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}</m>, so let
                             <me>
                                 P = \begin{pmatrix} 1 \amp 1 \\ -1 \amp 1 \end{pmatrix}
                             </me>.
@@ -652,7 +652,7 @@
                 <exercise>
                     <statement>
                         <p>
-                            Describe the long term behaviour of the solutions to the system <m>\dot{\mathbf{x}} = A \bm{x}</m>, where
+                            Describe the long term behaviour of the solutions to the system <m>\dot{\mathbf{x}} = A \mathbf{x}</m>, where
                                 <me>
                                     A = \begin{pmatrix} -1 \amp 2 \amp 3 \\ 0 \amp -2 \amp 4 \\ 0 \amp 0 \amp 0 \end{pmatrix}
                                 </me>.

@@ -405,7 +405,7 @@
 
         <example>
             <p>
-                The Sage code below can be used to plot the direction field of <m>\dfrac{dy}{dx}=f(x,y)</m>, as well as a particular solution for some initial point.
+                The Sage cell below can be used to plot the direction field of <m>\dfrac{dy}{dx}=f(x,y)</m>, as well as a particular solution for some initial point.
             </p>
             <sage> 
                 <input>
@@ -651,7 +651,7 @@
 
             <example>
                 <p>
-                    The Sage code below can be used to approximate <m>f(x,y)</m> using Euler's method for some step-size <m>h</m> and initial point <m>(x_0,y_0)</m>. 
+                    The Sage cell below can be used to approximate <m>f(x,y)</m> using Euler's method for some step-size <m>h</m> and initial point <m>(x_0,y_0)</m>. 
                 </p>
                 <sage> 
                     <input>

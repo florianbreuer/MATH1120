@@ -412,7 +412,7 @@
                     </p>
 
                     <figure xml:id="Fig-Mixing_Tank_Example">
-                        <caption></caption>
+                        <caption>Graph of <m>C(t) = 25 - 25 \exp \left(- \dfrac{3}{200}t \right)</m>.</caption>
                         <image source="./DifferentialEquations/Images/3/Fig1_Mixing_Tank.png" width="70%"/>
                     </figure>
 
@@ -494,7 +494,7 @@
                     </p>
 
                     <figure xml:id="Fig-Motion_in_one_dim">
-                        <caption></caption>
+                        <caption>Graph of <m>s(t) = 98t + 1080e^{-t/10} -1180</m>.</caption>
                         <image source="./DifferentialEquations/Images/3/Fig3_motion_in_one_dim.png" width="70%"/>
                     </figure>
 

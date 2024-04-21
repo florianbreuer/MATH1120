@@ -56,7 +56,7 @@
                 <p>Consider the function <m>f(x,y) = x^2-y^2</m>. The graph of this function is shown below. At <m>(x,y)=(0,0)</m>, <m>f=0</m>. As we can see by looking at the graph, as we move away from the origin along the positive <m>x</m>-axis the value of <m>f</m> is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive <m>y</m>-axis the value of <m>f</m> is decreasing, i.e. the rate of change of the function will be negative.</p>
 
                 <figure xml:id="Fig-Example_1_Contour_Plot_Copy">
-                    <caption></caption>
+                    <caption>3D plot of <m>f(x,y) = x^2-y^2</m>.</caption>
                     <image source="./Calculus/Images/6/Ex1_Contour_Plot_Fig_1.png" width="70%"/>
                 </figure>
             </example>
@@ -93,14 +93,14 @@
                 <p>Consider the function <m>z(x,y) = 5 - \dfrac{x^2+y^2}{2}</m>. <xref ref="Fig-Example_2-Directional-Derivative"/> shows the graph of this function along with its the tangent plane at <m>(x,y) = (2,1)</m>. Also shown on the diagram are the vectors <m>\mathbf{u} = \langle 2,2 \rangle</m> and <m>\mathbf{v} = \langle 2,-1 \rangle</m> drawn in the <m>xy</m>-plane with their tails at the point <m>(x,y) = (2,1)</m>. Then the directional derivative <m>D_{\mathbf{u}}(f(2,1))</m> will be the slope of the line joining the points <m>(2,1,z(2,1))</m> and <m>(4,3,L(4,3))</m> while the directional derivative <m>D_{\mathbf{v}}(f(2,1))</m> will be the slope of the line joining the points <m>(2,1,z(2,1))</m> and <m>(4,0,L(4,0))</m>.</p>
 
                 <figure xml:id="Fig-Example_2-Directional-Derivative">
-                    <caption></caption>
+                    <caption>3D plot of <m>z(x,y) = 5 - \dfrac{x^2+y^2}{2}</m> and the tangent plane at <m>(2,1)</m>.</caption>
                     <image source="./Calculus/Images/6/Directional_Derivative_Example.png" width="70%"/>
                 </figure>
             </example>
 
             <example>
                 <p>
-                    The below Sage code computes the tangent plane to the surface
+                    The below Sage cell computes the tangent plane to the surface
                     <me>xy+yz^2+xz^3=54</me>
                     at the point <m>(2,0,3)</m> (shown in red). This surface is a level surface of the function <m>f(x,y,z)=xy+yz^2+xz^3</m>. The gradient vector is then a normal vector for the surface. Since we have a point on the surface, we can then determine an equation for the tangent surface:
                     <me>L:f_x(2,0,3)(x-2)+f_y(2,0,3)(y-0)+f_z(2,0,3)(z-3)=0</me>
@@ -137,7 +137,7 @@
 
             <example>
                 <p>
-                    The below Sage code computes the tangent plane to a "rugby ball" at the point <m>(x_0,y_0)</m> and the corresponding normal vector to the surface at this point (shown in red). 
+                    The below Sage cell computes the tangent plane to a "rugby ball" at the point <m>(x_0,y_0)</m> and the corresponding normal vector to the surface at this point (shown in red). 
                 </p>
                 <sage>
                     <input>
@@ -224,7 +224,7 @@
 
             <example>
                 <p>
-                    The Sage code below computes the gradient vector <m>\nabla f(x,y)</m> (shown by the orange arrow) at some location <m>(x,y)</m> for the function
+                    The Sage cell below computes the gradient vector <m>\nabla f(x,y)</m> (shown by the orange arrow) at some location <m>(x,y)</m> for the function
                     <me>f(x,y)=\cos(x)\sin(y).</me> 
                     The gradient vector points in the direction of steepest ascent on the surface <m>z=f(x,y)</m>. The unit vector <m>\mathbf{\hat{u}}</m> in the direction of some angle is shown by the red arrow. (Note that when the angle is zero, the unit vector is parallel to the gradient vector.) The tangent line to the surface is plotted in green. The gradient of that tangent line is the directional derivative.
                 </p>
@@ -375,7 +375,7 @@
 
             <remark>
                 <p>
-                    <m>\nabla f(x_0,y_0)</m> is orthogonal (i.e. at right angles) to the level curve passing through <m>(x_0,y_0)</m>. To see this, run the Sage code below, which plots the level curves of the function <m>f(x,y)=xy+y^2-x^3</m> and the corresponding gradient vectors <m>\nabla f(x,y)</m> in red.
+                    <m>\nabla f(x_0,y_0)</m> is orthogonal (i.e. at right angles) to the level curve passing through <m>(x_0,y_0)</m>. To see this, run the Sage cell below, which plots the level curves of the function <m>f(x,y)=xy+y^2-x^3</m> and the corresponding gradient vectors <m>\nabla f(x,y)</m> in red.
                 </p>
                 <sage>
                     <input>
@@ -399,13 +399,13 @@
                     </p>
 
                     <figure xml:id="Fig_tangent_vector">
-                        <caption></caption>
+                        <caption>Plot of <m>f(x,y) = k</m> (blue) and the tangent vector (red) at the point <m>(x_0,y_0)</m>.</caption>
                         <image source="./Calculus/Images/6/Fig3_tangent_vector.png" width="70%"/>
                     </figure>
 
                     <p>Thus a vector normal to the curve at the point <m>(x_0,y_0)</m> will be <m>\left\langle -\dfrac{dy}{dx},1\right\rangle</m>. We will see subsequently, via implicit differentiation, that for the curve <m>f(x,y)=k</m>, <me>\frac{dy}{dx}=-\frac{f_x}{f_y}</me> and so a vector normal to the curve at the point <m>(x_0,y_0)</m> will be <m>\left \langle \dfrac{f_x(x_0,y_0)}{f_y(x_0,y_0)}, 1 \right \rangle</m>, which is parallel to <m>\nabla f(x_0,y_0)</m>. </p>
 
-                    <p>Notice that since <m>\nabla f(x_0,y_0)</m> is orthogonal to the level curve passing through the point <m>(x_0,y_0)</m> and that <m>\nabla f (x_0,y_0)</m> is the direction in which the directional derivative takes on its largest value, the <q>path of steepest ascent</q> on any surface <m>z=f(x,y)</m> is always at right angles to its contours. To see this, run the Sage code below. This generates a 2D contour plot of <m>z=f(x,y)</m>. The unit vector <m>\mathbf{hat{u}}</m> starting at some point <m>(x,y)</m> and pointing in the direction of some angle is shown by the red arrow. The gradient vector at the point <m>(x,y)</m> is shown in orange.
+                    <p>Notice that since <m>\nabla f(x_0,y_0)</m> is orthogonal to the level curve passing through the point <m>(x_0,y_0)</m> and that <m>\nabla f (x_0,y_0)</m> is the direction in which the directional derivative takes on its largest value, the <q>path of steepest ascent</q> on any surface <m>z=f(x,y)</m> is always at right angles to its contours. To see this, run the Sage cell below. This generates a 2D contour plot of <m>z=f(x,y)</m>. The unit vector <m>\mathbf{hat{u}}</m> starting at some point <m>(x,y)</m> and pointing in the direction of some angle is shown by the red arrow. The gradient vector at the point <m>(x,y)</m> is shown in orange.
                 </p>
                 <sage>
                     <input>

@@ -522,7 +522,7 @@
 
             <remark>
                 <p>
-                    We can visualise the relationship between a square matrix <m>A</m> and its eigenvectors using the Sage code below. This code plots the unit vector with angle <m>\theta</m> in blue, i.e. the vector <m>\mathbf{v}=(\cos(\theta),\sin(\theta))^T</m>. It also plots in red the vector <m>A\mathbf{v}</m>. When these vectors are parallel, <m>\mathbf{v}</m> is an eigenvector of <m>A</m>.
+                    We can visualise the relationship between a square matrix <m>A</m> and its eigenvectors using the Sage cell below. This code plots the unit vector with angle <m>\theta</m> in blue, i.e. the vector <m>\mathbf{v}=(\cos(\theta),\sin(\theta))^T</m>. It also plots in red the vector <m>A\mathbf{v}</m>. When these vectors are parallel, <m>\mathbf{v}</m> is an eigenvector of <m>A</m>.
                 </p>
                 <sage> 
                     <input>
@@ -577,7 +577,7 @@
                     </output>
                 </sage>
                 <p>
-                    The Sage code below shows this same concept in three dimensions.
+                    The Sage cell below shows this same concept in three dimensions.
                 </p>
                 <sage> 
                     <input>

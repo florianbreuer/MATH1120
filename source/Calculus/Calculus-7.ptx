@@ -64,7 +64,7 @@
             <p>Recall  that  a  function  of  one  variable, <m>f(x)</m>  has  a  <q>critical  point</q> at <m>x=x_0</m> if  the tangent line to the curve at <m>x=x_0</m> is horizontal or if the derivative does not exist at that point. This critical point can be either a (local) maximum, minimum or horizontal point of inflection or vertical point of inflection.  (The first three possibilities are shown in <xref ref="Fig_max_min_inflection"/> below.)</p>
 
             <figure xml:id="Fig_max_min_inflection">
-                <caption></caption>
+                <caption>A plot of <m>y=f(x)</m> with stationary points labelled.</caption>
                 <image source="./Calculus/Images/7/Fig1_max_min_inflection.png" width="70%"/>
             </figure>
 
@@ -93,7 +93,7 @@
                     <p>The graph of the function <me>f(x,y) = x(5x+2)(3y-2)e^{-\left( \frac{x^2+y^2}{5} \right)}</me> is given below with local maxima and local minima labelled.</p>
 
                     <figure xml:id="Fig_Local_max_min">
-                        <caption></caption>
+                        <caption>3D plot of <m>f(x,y) = x(5x+2)(3y-2)e^{-\left( \frac{x^2+y^2}{5} \right)}</m> with local minima and maxima labelled.</caption>
                         <image source="./Calculus/Images/7/Fig2_Local_max_and_min.png" width="90%"/>
                     </figure>
                 </statement>
@@ -105,71 +105,13 @@
                     <p>The graph of the function <m>f(x,y) = x^2-y^2</m> is given below with a saddle point labelled.</p>
 
                     <figure xml:id="Fig_Saddle_point">
-                        <caption></caption>
+                        <caption>3D plot of <m>f(x,y) = x^2-y^2</m> with a saddle point labelled.</caption>
                         <image source="./Calculus/Images/7/Fig3_Saddle_point.png" width="90%"/>
                     </figure>
                 </statement>
             </example>
 
-            <example>
-                <p>
-                    The below Sage code computes the critical points of the function
-                    <me>f(x,y)=2x^3+(x+1)y^2+5x^2.</me>
-                    The critical points are shown on the surface and the 2D contour plot in red. 
-                </p>
-                <sage>
-                    <input>
-                        x,y = var('x','y')
-                        f=2*x^3+(x+1)*y^2+5*x^2
-                        show("f(x,y) = "+latex(f))
-                        show(
-                            plot3d(f,(x,-2,1),(y,-3,3),plot_points=100,aspect_ratio=[1,1,0.2])+\
-                            sphere((0,0,f(x=0,y=0)),0.1,color='red')+\
-                            sphere((-5/3,0,f(x=-5/3,y=0)),0.1,color='red')+\
-                            sphere((-1,2,f(x=-1,y=2)),0.1,color='red')+\
-                            sphere((-1,-2,f(x=-1,y=-2)),0.1,color='red')
-                        )
-                        show(
-                            contour_plot(f,(x,-2,1),(y,-3,3),plot_points=100,contours=40,fill=false)+\
-                            circle((0,0),0.01,color='red')+\
-                            circle((-5/3,0),0.01,color='red')+\
-                            circle((-1,2),0.01,color='red')+\
-                            circle((-1,-2),0.01,color='red')
-                        )
-                    </input>
-                    <output>
-                    </output>
-                </sage>
-            </example>
-
-
-            <example>
-                <p>
-                    The below Sage code computes the critical points of the function
-                    <me>f(x,y)=3x-x^3-2y^2+y^4.</me>
-                    The critical points are shown on the surface and the 2D contour plot in red. 
-                </p>
-                <sage>
-                    <input>
-                        x,y=var('x y')
-                        f=3*x-x^3-2*y^2+y^4
-                        crits = [(1,0),(1,1),(1,-1),(-1,0),(-1,1),(-1,-1)]
-                        M=2
-                        show(
-                            plot3d(f,(x,-M,M),(y,-M,M),plot_points=100,aspect_ratio=[1,1,0.3],opacity=0.9)+\
-                            sum(sphere((P[0],P[1],f(x=P[0],y=P[1])),0.1,color='red') for P in crits)
-                        )
-                        show(
-                            contour_plot(f,(x,-M,M),(y,-M,M),plot_points=500,contours=40,fill=false)+\
-                            sum([circle(P,0.02,color='red') for P in crits])
-                        )
-                    </input>
-                    <output>
-                    </output>
-                </sage>
-            </example>
-
-
+            
             <p>For smooth functions we can find the critical points by looking for those points where the tangent plane is horizontal. If the function <m>z=f(x,y)</m> has a tangent plane at the point <m>(x_0,y_0,z_0)</m> we can determine algebraically that it is horizontal by checking that:</p>
 
             <p><ul>
@@ -212,20 +154,76 @@
                     <p>If we have the graph of the function then we can usually determine the nature of these critical points by inspection. From the (computer generated) graph shown below we can see with very careful inspection that the critical point at <m>(0,0)</m> is a local minimum, the critical point at <m>\left( -\dfrac{5}{3}, 0 \right)</m> is a local maximum and the critical points at <m>(-1,2)</m> and <m>(-1,-2)</m> are saddle points.</p>
 
                     <figure xml:id="Fig-Locate_critical_points">
-                        <caption></caption>
+                        <caption>3D plot of <m>z = 2x^3 + (x+1)y^2 + 5x^2</m>.</caption>
                         <image source="./Calculus/Images/7/Fig4-Locate_critical_points.png" width="80%"/>
                     </figure>
 
                     <p>Sometimes the nature of the critical points is not clear on such graphs or we don't have access to the graph. Another approach to determining the nature of the critical points is to sketch the level curves for the function.</p>
 
                     <figure xml:id="Fig-Locate_critical_points2">
-                        <caption></caption>
+                        <caption>Sketch of the level curves <m>z = k</m> for various <m>k</m>.</caption>
                         <image source="./Calculus/Images/7/Fig5-Locate_critical_points.png" width="80%"/>
                     </figure>
 
                     <p>From this diagram we can see that as we move away from the critical points at <m>\left(0,0\right)</m> in any direction the function value is increasing and hence <m>\left(0,0\right)</m> is local minimum. Similarly as we move away from the critical point at <m>\left(-\dfrac{5}{3},0\right)</m> in any direction the function value is decreasing is hence <m>\left(-\dfrac{5}{3},0\right)</m> is a local maximum. For the critical points at <m>\left(-1,2\right)</m> and <m>\left(-1,-2\right)</m> we can move away in some directions and have the function value increase while in other directions the function value will decrease. Hence these critical points are saddle points.</p>
+                    <p>
+                        The below Sage cell plots the critical points (in red) of the function
+                        <me>f(x,y)=2x^3+(x+1)y^2+5x^2</me> 
+                        on the 3D surface plot and on the 2D contour plot. 
+                    </p>
+                    <sage>
+                        <input>
+                            x,y = var('x','y')
+                            f=2*x^3+(x+1)*y^2+5*x^2
+                            show("f(x,y) = "+latex(f))
+                            show(
+                                plot3d(f,(x,-2,1),(y,-3,3),plot_points=100,aspect_ratio=[1,1,0.2])+\
+                                sphere((0,0,f(x=0,y=0)),0.1,color='red')+\
+                                sphere((-5/3,0,f(x=-5/3,y=0)),0.1,color='red')+\
+                                sphere((-1,2,f(x=-1,y=2)),0.1,color='red')+\
+                                sphere((-1,-2,f(x=-1,y=-2)),0.1,color='red')
+                            )
+                            show(
+                                contour_plot(f,(x,-2,1),(y,-3,3),plot_points=100,contours=40,fill=false)+\
+                                circle((0,0),0.01,color='red')+\
+                                circle((-5/3,0),0.01,color='red')+\
+                                circle((-1,2),0.01,color='red')+\
+                                circle((-1,-2),0.01,color='red')
+                            )
+                        </input>
+                        <output>
+                        </output>
+                    </sage>
+                
                 </solution>
             </example>
+
+            
+            <!-- <p>
+                The below Sage cell plots the critical points (in red) of the function
+                <me>f(x,y)=3x-x^3-2y^2+y^4</me>
+                from the above example. 
+            </p>
+            <sage>
+                <input>
+                    x,y = var('x','y')
+                    f=3*x-x^3-2*y^2+y^4
+                    show("f(x,y) = "+latex(f))
+                    crits = [(1,0),(1,1),(1,-1),(-1,0),(-1,1),(-1,-1)]
+                    M=2
+                    show(
+                        plot3d(f,(x,-M,M),(y,-M,M),plot_points=100,aspect_ratio=[1,1,0.3],opacity=0.9)+\
+                        sum(sphere((P[0],P[1],f(x=P[0],y=P[1])),0.1,color='red') for P in crits)
+                    )
+                    show(
+                        contour_plot(f,(x,-M,M),(y,-M,M),plot_points=500,contours=40,fill=false)+\
+                        sum([circle(P,0.02,color='red') for P in crits])
+                    )
+                </input>
+                <output>
+                </output>
+            </sage> -->
+        
 
             <exercises>
             <title>Example Tasks</title>
@@ -408,7 +406,7 @@
                     <p>The graph of the function <me>f(x,y) = x(5x+2)(3y-2)e^{-\left(\frac{x^2+y^2}{5} \right)}</me> over the domain <m>D = \left \{ (x,y): -5 \leq x \leq 5, \, -5 \leq y \leq 5 \right \}</m> is shown below.</p>
 
                     <figure xml:id="Fig7_Global_Extrema">
-                        <caption></caption>
+                        <caption>3D plot of <m>f(x,y) = x(5x+2)(3y-2)e^{-\left(\frac{x^2+y^2}{5} \right)}</m> with global maximum and minimum labelled.</caption>
                         <image source="./Calculus/Images/7/Fig7_Global_Extrema.png" width="80%"/>
                     </figure>
                 </statement>
@@ -418,7 +416,7 @@
             <p>Before discussing global extrema for functions of two variables, recall the situation for a function of one variable <m>y=f(x)</m>. If <m>f(x)</m> is continuous on the closed interval <m>I=[a,b]</m> then <m>f(x)</m> is guaranteed to have both a global maximum and a global minimum on <m>I</m>.</p>
 
             <figure xml:id="Fig8_Global_Extrema_1D">
-                <caption></caption>
+                <caption>Plot of <m>y=f(x)</m> with global maximum and minimum, and critical points labelled.</caption>
                 <image source="./Calculus/Images/7/Fig8_Global_Extrema_1D.png" width="80%"/>
             </figure>
 
@@ -444,20 +442,33 @@
             <p>Note that a <em>closed</em> region, <m>D \subset \mathbb{R}^2</m>, is a region in the plane that contains its boundary. For example in the diagram below Region <m>D_1</m> would be a closed region whereas Region <m>D_2</m> is not closed.</p>
 
             <figure xml:id="Fig9_closed_region">
-                <caption></caption>
+                <caption>Example of a region <m>D_1</m> which is closed, and a region <m>D_2</m> which is not closed.</caption>
                 <image source="./Calculus/Images/7/Fig9_closed_region.png" width="45%"/>
             </figure>
 
-            <p>A <em>bounded</em> region, <m>D \subset \mathbb{R}^2</m>, is a region in the plane that doesn’t extend to infinity in any direction. For example in the diagram below Region <m>D_1</m> would be a bounded region whereas Region <m>D_2</m> is not bounded.</p>
+            <p>A <em>bounded</em> region, <m>D \subset \mathbb{R}^2</m>, is a region in the plane that doesn't extend to infinity in any direction. For example in the diagram below Region <m>D_1</m> would be a bounded region whereas Region <m>D_2</m> is not bounded.</p>
 
             <figure xml:id="Fig10_bounded_region">
-                <caption></caption>
+                <caption>Example of a region <m>D_1</m> which is bounded, and a region <m>D_2</m> which is not bounded.</caption>
                 <image source="./Calculus/Images/7/Fig10_bounded_region.png" width="45%"/>
             </figure>
 
+            
+            <remark>
+                <title>Locating Global Extrema</title>
+                <statement>
+                    <p>To locate the global extrema of the continuous function <m>f(x,y)</m> on the closed and bounded domain <m>D \subset \mathbb{R}^2</m>:</p>
+                    <p><ul>
+                        <li>Find all of the critical points in the interior of <m>D</m>;</li>
+                        <li>Find the maximum and minimum values of <m>f(x,y)</m> on the boundary of <m>D</m>;</li>
+                        <li>Evaluate <m>f(x,y)</m> at each of the above points and compare.</li>
+                    </ul></p>
+                </statement>
+            </remark>
+
             <example>
                 <p>
-                    The below Sage code plots the global maximum and global minimum (shown in red) of the surface
+                    The below Sage cell plots the global maximum and global minimum (shown in red) of the surface
                     <me>f(x,y)=2x^2+x+y^2-2</me>
                     on the disc <m>D=\{(x,y)\in\mathbb{R}^2\big\vert x^2+y^2\leq 4\}</m> (shown in green). 
                 </p>
@@ -473,19 +484,6 @@
                     </output>
                 </sage>
             </example>
-
-
-            <remark>
-                <title>Locating Global Extrema</title>
-                <statement>
-                    <p>To locate the global extrema of the continuous function <m>f(x,y)</m> on the closed and bounded domain <m>D \subset \mathbb{R}^2</m>:</p>
-                    <p><ul>
-                        <li>Find all of the critical points in the interior of <m>D</m>;</li>
-                        <li>Find the maximum and minimum values of <m>f(x,y)</m> on the boundary of <m>D</m>;</li>
-                        <li>Evaluate <m>f(x,y)</m> at each of the above points and compare.</li>
-                    </ul></p>
-                </statement>
-            </remark>
 
 
             <example>
@@ -541,6 +539,7 @@
                 </solution>
             </example>
 
+            
 
             <exercises>
             <title>Example Tasks</title>

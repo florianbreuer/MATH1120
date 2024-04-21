@@ -577,65 +577,64 @@
                             </md>
                         which we can write via matrices as <me>\mathbf{b} = \begin{pmatrix}b_1 \\ b_2 \end{pmatrix} = \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix} = A\mathbf{x}.</me>
                     </p>
+                    <p>
+                        Run the Sage cell below to see the effect of the transformation matrix <m>A</m> on some input (a sketch of a house).
+                    </p>
+                    <sage> 
+                        <input>
+L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
+example = [[0,1],[1,0]]
+
+@interact
+def _(A=input_grid(2,2, default = example,
+                label='A=', to_value=matrix),
+    auto_update=false):
+    print('det(A) = ',det(A))
+    LA = list(map(lambda v: vector(A*matrix(2,1,list(v))), L))
+    show(line(L, color='blue'), aspect_ratio=1, frame=true, title='Input')
+    show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
+    show(line(L, color='blue')+line(LA, color='red'),
+        aspect_ratio=1, frame=true, title='Both')
+                        </input>
+                        <output>
+                        </output>
+                    </sage>        
                 </statement>
             </example>
 
             
-            <p>
-                The following Sage code can be used to see the effect of a transformation matrix <m>A</m> on some input.
-            </p>
-            <sage> 
-                <input>
-                    L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
-                    example = [[1,0],[0,1]]
-
-                    @interact
-                    def _(A=input_grid(2,2, default = example,
-                                    label='A=', to_value=matrix),
-                        auto_update=false):
-                        print('det(A) = ',det(A))
-                        LA = list(map(lambda v: vector(A*matrix(2,1,list(v))), L))
-                        show(line(L, color='blue'), aspect_ratio=1, frame=true, title='Input')
-                        show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
-                        show(line(L, color='blue')+line(LA, color='red'),
-                            aspect_ratio=1, frame=true, title='Both')
-                </input>
-                <output>
-                </output>
-            </sage>
-
+            
             <example xml:id="Ex-Linear_transformation_rotation">
                 <statement>
                     <p>It can be shown that a rotation (in the plane) about the origin through angle <m>\theta</m> can be represented by the matrix <me>A = \begin{pmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta)\end{pmatrix}.</me></p>
                     <p>For example the matrix for a rotation about the origin through <m>\pi^{c}</m> (or <m>180^{\circ}</m>) is <me>A = \begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix}.</me></p>
+                    <p>
+                        Run the Sage cell below to see the effect of the rotation matrix <m>A</m> on some input (a sketch of a house).
+                    </p>
+                    <sage> 
+                        <input>
+L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
+
+@interact
+def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
+    auto_update=false):
+    A = matrix(2,2,[cos(theta), -sin(theta), sin(theta), cos(theta)])
+    show('A = '+latex(A))
+    print('det(A) = ',det(A))
+    LA = list(map(lambda v: vector(A*matrix(2,1,list(v))), L))
+    show(line(L, color='blue'), aspect_ratio=1, frame=true, title='Input')
+    show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
+    show(line(L, color='blue')+line(LA, color='red'),
+        aspect_ratio=1, frame=true, title='Both')
+                        </input>
+                        <output>
+                        </output>
+                    </sage>
+                
                 </statement>
             </example>
 
-            <p>
-                The following Sage code can be used to see the effect on some input of the rotation matrix <m>A</m> given in the above example.
-            </p>
-            <sage> 
-                <input>
-                    L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
-                    example = [[1,0],[0,1]]
-
-                    @interact
-                    def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi/3,label=r'\(\theta =\)'),
-                        auto_update=false):
-                        A = matrix(2,2,[cos(theta), -sin(theta), sin(theta), cos(theta)])
-                        show('A = '+latex(A))
-                        print('det(A) = ',det(A))
-                        LA = list(map(lambda v: vector(A*matrix(2,1,list(v))), L))
-                        show(line(L, color='blue'), aspect_ratio=1, frame=true, title='Input')
-                        show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
-                        show(line(L, color='blue')+line(LA, color='red'),
-                            aspect_ratio=1, frame=true, title='Both')
-                </input>
-                <output>
-                </output>
-            </sage>
-
-
+            
             <example xml:id="Ex-Linear_transformation_reflection_rotation">
                 <statement>
                     <p>Determine the matrix for the transformation in which a reflection in the line <m>y = x</m> is followed by a rotation about the origin through <m>\pi^c</m>.</p>
@@ -662,7 +661,7 @@
 
             <remark>
                 <p>
-                    Linear transformations in 3 dimensions are also possible. The Sage code below plots the effect of a linear transformation on three unit vectors and the parallelepiped spanned by them.
+                    Linear transformations in 3 dimensions are also possible. The Sage cell below plots the effect of a linear transformation on three unit vectors and the parallelepiped spanned by them.
                 </p>
                 <sage> 
                     <input>

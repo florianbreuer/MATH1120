@@ -65,12 +65,12 @@
                 <title>Faster multiplication</title>
                 <p>
                     There are actually multiplication algorithms which are significantly faster than long multiplication.
-                    Long multiplication of of two <m>n</m>-digit numbers will typically take <m>n^2</m> single-digit multiplications 
+                    Long multiplication of two <m>n</m>-digit numbers will typically take <m>n^2</m> single-digit multiplications 
                     (and another <m>n</m> <m>n</m>-digit additions). 
 
                     The  
                     <url href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/"> fastest known algorithm </url>
-                    is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <m>n\ln(n)</m>, which for large value of <m>n</m>
+                    is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <m>n\ln(n)</m>, which for large values of <m>n</m>
                     is a significant improvement.
                 </p>
                 
@@ -90,7 +90,7 @@
             <men xml:id="eq-e0.3">
                 e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots 
             </men>
-            in other words, it approximates the <em>function</em> <m>e^x</m> via the <em>power series</em> 
+            In other words, it approximates the <em>function</em> <m>e^x</m> via the <em>power series</em> 
             <md>
                 <mrow> e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  </mrow>
                 <mrow>     \amp = \sum_{n=0}^{\infty} \frac{1}{n!}x^n.</mrow>
@@ -258,7 +258,7 @@
                     to be the limit of the partial sums (running totals) of the terms, provided that this limit exists.
                 </p>
                 <p>
-                    If the limit <xref ref="eq-series"/> exists, we say that the series <term>converges</term>, otherwise it <term>diverges.</term>                    
+                    If the limit <xref ref="eq-series"/> exists, we say that the series <term>converges</term>. Otherwise, it <term>diverges.</term>                    
                 </p>
             </statement>
         </definition>
@@ -325,7 +325,7 @@
             </men>
             We can find the value of the first coefficient by the clever trick of plugging <m>x=0</m> into <xref ref="eq-fx-power-series" />:
             <me>
-                f(0) = c_0 + c_10 + c_20^2 + c\dots = c_0.
+                f(0) = c_0 + c_10 + c_20^2 + \dots = c_0.
             </me>
             What about the next coefficient? We use an even cleverer trick: <em>differentiating</em> the series kills the first coefficient and decreases the exponent in all other coefficients:
             <md>
@@ -460,7 +460,7 @@
         </example>
 
         <p>
-            We record the Maclaurin series we have found thus far:
+            Let's record the Maclaurin series we have found thus far:
             <md>
                 <mrow>e^x \amp = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{k=0}^{\infty} \frac{x^k}{k!}</mrow>
                 <mrow>\sin(x) \amp =  x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots 
@@ -578,7 +578,7 @@
         </p>
 
         <p>
-            The following Sage cell let's you plot the Maclaurin polynomials for <m>e^x, \sin(x)</m> and <m>\cos(x)</m>:
+            The following Sage cell let's you plot the Maclaurin polynomials for <m>e^x, \sin(x)</m> and <m>\cos(x)</m>. Notice that when we increase the order (i.e. the number of terms in the Maclaurin polynomial), the approximation of the function about <m>x=0</m> improves:
         </p>
 
         <sage>
@@ -653,7 +653,7 @@
                 <men xml:id="eqn-arctan">
                     \arctan(x) = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots = \sum_{k=0}^{\infty} (-1)^k\frac{x^{2k+1}}{2k+1}.
                 </men>
-                Since <m>\arctan(1) = \frac{\pi}{4}</m>, this gives us an infinite series converging to <m>\pi</m>:
+                Since <m>\arctan(1) = \frac{\pi}{4}</m>, this gives us an infinite series converging to <m>\pi</m>. The Sage cell below computes the partial sums of this series up to some <m>N</m>:
                 <men xml:id="eqn-pi1">
                     \pi = 4 - \frac{4}{3} + \frac{4}{5} - \frac{4}{7} + \cdots.
                 </men>
@@ -734,7 +734,7 @@
                     f(x) = \begin{cases} e^{-1/x^2} \amp \text{if} \; x\neq 0 \\
                     0 \amp \text{if} \; x=0. \end{cases}
                 </me>
-                This function is well-defined and continuous at <m>x=0</m> - you can compute the limit
+                This function is well-defined and continuous at <m>x=0</m>. You can compute the limit
                 <me>
                     \lim_{x \rightarrow 0} e^{-1/x^2} = 0.
                 </me>
@@ -749,7 +749,7 @@
             
             
             <p>
-                One can show that this function is well-defined and differentiable, in fact for <m>x\neq 0</m> we have (check this yourself):
+                One can show that this function is well-defined and differentiable. In fact, for <m>x\neq 0</m> we have (check this yourself):
                 <md>
                     <mrow>\frac{d}{dx} f(x) \amp = \frac{2 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{3}} </mrow>
                     <mrow>\frac{d^{ 2 }}{dx^{ 2 }} f(x) \amp = -\frac{6 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{4}} + \frac{4 \, e^{\left(-\frac{1}{x^{2}}\right)}}{x^{6}}</mrow>
@@ -767,7 +767,7 @@
                 <me>
                     e^{-1/x^2} = \sum_{k=0}^{\infty} (-1)^k\frac{x^{-2k}}{k!} = 1 - x^{-2} + \frac{1}{2}x^{-4} - \frac{1}{6}x^{-6} + \cdots
                 </me>
-                This is not strictly a power series, but a <term>Laurent series</term>, which converges for <m>x\neq 0</m>.
+                This is not strictly a power series, but a <term>Laurent series</term>, which converges for <m>x\neq 0</m>. The Sage cell belows plots the Laurent polynomial for <m>e^{-1/x^2}</m>.
             </p>
 
             <sage>
@@ -855,7 +855,7 @@
                     <mrow>\sin x \amp = x\prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2n^2}\right) </mrow>
                     <mrow>\cos x \amp = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{\pi^2\left(n-\frac{1}{2}\right)^2}\right)</mrow>
                 </md>
-                Such products can only converge if the factors tend to <m>1</m> (not 0!) as <m>n</m> tends to infinity.
+                Such products can only converge if the factors tend to <m>1</m> (not <m>0!</m>) as <m>n</m> tends to infinity.
             </p>
             <p>
                 You can plot the finite products against <m>\sin(x)</m> and <m>\cos(x)</m> in the following Sage cells:

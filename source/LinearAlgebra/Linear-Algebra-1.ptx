@@ -118,6 +118,7 @@
                     <p>
                         As shown in <xref ref="Fig-Intersection_of_two_lines"/>, we can interpret the solution <m>(x,y)=(2,-3)</m> as the point in the plane at which the straight lines represented by the equations <m>2x-3y=13</m> and <m>x-y=5</m> intersect.
                         <figure xml:id="Fig-Intersection_of_two_lines">
+                            <caption>Plots of <m>2x-3y=13</m> (blue) and <m>x-y=5</m> (red).</caption>
                             <image source="./LinearAlgebra/Images/1/figure1.png" width="60%"/>
                         </figure>
                     </p>
@@ -146,6 +147,7 @@
                     <p>
                         The geometric interpretation of this system of linear equations is that both equations represent the same line (as shown in <xref ref="Fig-Same_line"/>).
                         <figure xml:id="Fig-Same_line">
+                            <caption>Plots of <m>2x+3y=4</m> (blue) and <m>4x+6y=8</m> (red).</caption>
                             <image source="./LinearAlgebra/Images/1/figure2.png" width="60%"/>
                         </figure>
                         Note that the solution written in terms of the parameter <m>t</m> can be interpreted as a vector equation for the line. By writing the solution as
@@ -173,6 +175,7 @@
                     <p>
                         Geometrically, this system of linear equations can be interpreted as two parallel lines in the plane, as shown in <xref ref="Fig-Parallel_lines"/>.
                         <figure xml:id="Fig-Parallel_lines">
+                            <caption>Plots of <m>2x-3y=13</m> (blue) and <m>4x-6y=5</m> (red).</caption>
                             <image source="./LinearAlgebra/Images/1/figure3.png" width="60%"/>
                         </figure>
                     </p>

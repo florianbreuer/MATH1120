@@ -67,6 +67,7 @@
             <p>
                 In this section we are going to model the motion of an object attached to the free end of a spring which has its other end fixed as shown in <xref ref="DE_6_Figure_1"/>. To construct this model set up an axis with its origin at the centre of the object when the object-spring system is in equilibrium and with the positive direction going upward. With respect to this axis assume that without the object attached the end of the spring is at <m>y=N</m>. Now, imagine that the object is pulled down <m>L</m> units (with respect to the axis) and then let go.
                 <figure xml:id="DE_6_Figure_1">
+                    <caption>Representation of an object-spring system.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_1.png" width="75%"/>
                 </figure>
                 Our models for the motion of the object will be based Hooke's Law and Newton's second law of motion.
@@ -95,6 +96,7 @@
             <p>
                 So, now consider the forces acting on the object at any time <m>t</m> after the object has been pulled down and released. In our initial model we will assume that there are just two forces acting on the object as shown in <xref ref="DE_6_Figure_2"/>: firstly the force due to gravity, <m>\mathbf{F_g}</m>, and secondly the restoring force, <m>\mathbf{F_r}</m>, due to the spring.
                 <figure xml:id="DE_6_Figure_2">
+                    <caption>Forces in an object-spring system.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_2.png" width="60%"/>
                 </figure>
                 With the axis as set up in <xref ref="DE_6_Figure_2"/> (or <xref ref="DE_6_Figure_1"/>), <m>\mathbf{F_g}</m> will always act in the negative direction. However, <m>\mathbf{F_r}</m> will be positive when the displacement of the object is less than <m>N</m> and negative when the displacement of the object is greater than <m>N</m> (i.e. the restoring force always acts in the direction of the natural position of the spring). Notice that since the motion of the object is one dimensional we can represent the relevant vector quantities by real numbers. The sign of the number will give us the direction of the vector.
@@ -130,6 +132,7 @@
                 <me>y(t)=-L\cos(qt)</me>
                 As shown in <xref ref="Fig_14_1_5"/>, this solution is telling us that (under the assumptions of the model) the motion of the object will be periodic about the equilibrium position i.e. will be simple harmonic motion.
                 <figure xml:id="Fig_14_1_5">
+                    <caption>Plot of <m>y(t)=-L\cos(qt)</m>.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_3.png" width="60%"/>
                 </figure>
                 Of course real springs do not oscillate forever and so we conclude that our model must have ignored some important details (e.g. air resistance, frictional forces etc.) Despite this obvious shortcoming we will use this simple model as the basis for looking at more complicated contexts.
@@ -149,6 +152,7 @@
             <p>
                 Imagine now that some sort of damping mechanism is added to the object-spring system as shown in <xref ref="Fig_14_2_1"/>. (Such a system might be used as a simple model of a car shock absorber for example.)
                 <figure xml:id="Fig_14_2_1">
+                    <caption>Representation of an object-spring system with a damping mechanism.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_4.png" width="60%"/>
                 </figure>
                 So long as the speed of the object is not too fast then a reasonable assumption is that the damping force acting on the object, <m>\mathbf{F_d}</m>,  is proportional to the speed and acts in the direction opposing  the motion of the object. Thus
@@ -172,6 +176,7 @@
                 <me>y(t)=e^{-pt}(C_1\cos(\omega t)+C_2\sin(\omega t))</me>
                 where <m>\omega=\sqrt{q^2-p^2}</m> and hence the function will be like that shown in <xref ref="Fig_14_2_2"/>. In this case the system is called <term>under-damped</term>.
                 <figure xml:id="Fig_14_2_2">
+                    <caption>Plot of under-damped solution <m>y(t)</m>.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_5.png" width="60%"/>
                 </figure>
             </p>
@@ -180,12 +185,14 @@
                 <me>y(t)=C_1e^{r_1t}+C_2e^{r_2t}</me>
                 where both <m>r_1</m> and <m>r_2</m> are negative and hence the function will be like that shown in <xref ref="Fig_14_2_3"/>. In this case the system is called <term>over-damped</term>.
                 <figure xml:id="Fig_14_2_3">
+                    <caption>Plot of over-damped solution <m>y(t)</m>.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_6.png" width="60%"/>
                 </figure>
                 Finally if <m>p^2-q^2=0</m> (or equivalently <m>\delta=\frac{p}{q}=1</m>) then the general solution is
                 <me>y(t)=(C_1+C_2t)e^{-pt}</me>
                 and hence the function will be like that shown in <xref ref="Fig_14_2_4"/>. In this case the system is called <term>critically-damped</term>.
                 <figure xml:id="Fig_14_2_4">
+                    <caption>Plot of critically-damped solution <m>y(t)</m>.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_7.png" width="60%"/>
                 </figure>
                 The critically-damped case is of practical interest. Often we want to add damping to a system so that it returns close to its equilibrium position "as quickly as possible", (for example in the shock absorber of a car). It turns out that this is achieved by critical damping.
@@ -197,7 +204,7 @@
                     <me>\dfrac{d^2x}{dt^2}+\dfrac{D}{m}\dfrac{dx}{dt}+\dfrac{k}{m}x=0</me>
                     which has the damping parameter 
                     <me>\delta = \dfrac{p}{q} = \dfrac{\frac{D}{2m}}{\sqrt{\frac{k}{m}}}=\dfrac{D}{2\sqrt{km}}.</me>
-                    The Sage code below considers the case where <m>m=0.5</m>kg and <m>k=0.5</m> (i.e. <m>\delta = D</m>) and plots the solution <m>x(t)</m> for various <m>\delta</m>.
+                    The Sage cell below considers the case where <m>m=0.5</m>kg and <m>k=0.5</m> (i.e. <m>\delta = D</m>) and plots the solution <m>x(t)</m> for various <m>\delta</m>.
                 </p>
                 <sage> 
                     <input>
@@ -244,6 +251,7 @@
             <p>
                 In our final model we will look at the situation where some other external force, <m>\mathbf{F_e}</m>, is also acting on the object along the <m>y</m>-axis, as shown in <xref ref="Fig_14_3_1"/>. This context has many applications, especially in engineering, although in most applications the context doesn't actually look like the diagram shown in <xref ref="Fig_14_3_1"/>. For example if the top of a power pole is pulled to one side and let go it will behave like an object-spring system with damping. Now when a wind blows past the pole it is possible that aerodynamic effects can result in an oscillating side force acting on the pole.
                 <figure xml:id="Fig_14_3_1">
+                    <caption>Representation of object-spring system with a damping mechanism and an external force.</caption>
                     <image source="./DifferentialEquations/Images/6/figure_8.png" width="60%"/>
                 </figure>
                 Assume that the external force is oscillatory and hence can be represented by
@@ -275,7 +283,7 @@
                     <image source="./DifferentialEquations/Images/6/figure_9.png" width="60%"/>
                 </figure> -->
             <p>
-                Run the Sage code below to plot the graphs of <m>M(\alpha)</m> for various values of <m>p</m> (which relates to the damping coefficient) when <m>q</m> (which relates to the stiffness coefficient) is held constant at <m>q=1</m>. In fact, it can be shown that if the damping parameter <m>\delta</m> (<m>=\frac{p}{q}</m>) is small then <m>M</m> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <m>\delta\rightarrow 0</m>.
+                Run the Sage cell below to plot the graphs of <m>M(\alpha)</m> for various values of <m>p</m> (which relates to the damping coefficient) when <m>q</m> (which relates to the stiffness coefficient) is held constant at <m>q=1</m>. In fact, it can be shown that if the damping parameter <m>\delta</m> (<m>=\frac{p}{q}</m>) is small then <m>M</m> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <m>\delta\rightarrow 0</m>.
             </p>
             <sage>
                 <input>
@@ -295,7 +303,7 @@
             </p>
 
             <p>
-                Using the Sage code below, you can play with a damped oscillator with applied external force <m>F_e(t)=B\cos(\alpha t)</m>. (Note: <m>x_c(t)</m> here is actually the solution to the IVP with the right hand side set to zero, and <m>x_p(t)=x(t)-x_c(t)</m> is not the same as the particular solution guessed earlier.)
+                Using the Sage cell below, you can play with a damped oscillator with applied external force <m>F_e(t)=B\cos(\alpha t)</m>. (Note: <m>x_c(t)</m> here is actually the solution to the IVP with the right hand side set to zero, and <m>x_p(t)=x(t)-x_c(t)</m> is not the same as the particular solution guessed earlier.)
             </p>
             <sage> 
                 <input>
@@ -367,6 +375,7 @@
                         <p>
                             A beam that is fixed rigidly at one end and designed to support a load at the other end is called a <term>cantilever</term>. If the cantilever is designed only to deflect a "small" amount under its load then it is reasonable to assume that the size of the deflection of the tip of the cantilever is proportional to the load applied. When such a cantilever is deflected beyond (or less than) its equilibrium position the cantilever exerts a restoring force toward the equilibrium position. So long as the deflection is reasonably small and the mass of the object is large compared to the mass of the cantilever this restoring force is proportional to the deflection. Show that the resulting motion of the tip of the cantilever can be modelled under these assumptions via a homogeneous 2nd order linear DE.
                             <figure>
+                                <caption>A cantilever.</caption>
                                 <image source="./DifferentialEquations/Images/6/figure_cantilever.png" width="40%"/>
                             </figure>
                         </p>

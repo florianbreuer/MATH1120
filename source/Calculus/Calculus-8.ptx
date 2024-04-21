@@ -351,7 +351,7 @@
     <p>
         For the example above, we can construct the surface
         <me>f(x,y)=x\cos(y)-y\cos(x)-x</me>
-        In the Sage code below, you can choose the value of the constant <m>c</m> with the slider. The code then plots the curves <m>f(x,y)=c</m> in blue, and the slopes given by <m>\dfrac{dy}{dx}</m> as little grey line segments. The slope of each segment is given by evaluating <m>\dfrac{dy}{dx}</m> at its <m>(x,y)</m> position. (Note that these slopes are tangential to the curve, as they must be.) Furthermore:
+        and plot this using the Sage cell below. The constant <m>c</m> that determines the level curves <m>f(x,y)=c</m> can be varied with the slider. The level curves are shown in blue, and the slopes given by <m>\dfrac{dy}{dx}</m> are shown as little grey line segments. The slope of each segment is given by evaluating <m>\dfrac{dy}{dx}</m> at its <m>(x,y)</m> position. (Note that these slopes are tangential to the curve, as they must be.) Furthermore:
         <ol>
             <li>
                 by selecting the "show3d" option, you can also see the 3D plot of <m>z=f(x,y)</m> and a "water level" of <m>z=c</m>. In this case, the curves <m>f(x,y)=c</m> represent the "shoreline"; 

@@ -80,6 +80,7 @@
                         <me>\begin{pmatrix} 2 \amp 3 \amp 6 \\ -1 \amp 2 \amp 2 \\ 3 \amp -2 \amp -3 \end{pmatrix} \sim \begin{pmatrix} 1 \amp 0 \amp \frac{6}{7} \\ 0 \amp 1 \amp \frac{10}{7} \\ 0 \amp 0 \amp -\frac{19}{7} \end{pmatrix} </me>
                         We can see from the reduced row-echelon form that this system of equations is inconsistent. The geometric interpretation of this is that there is no point in the plane that lies on all three lines, as can be seen in <xref ref="Fig-Inconsistent_set_of_linear_equations"/>.
                         <figure xml:id="Fig-Inconsistent_set_of_linear_equations">
+                            <caption>Plots of <m>3x-2y=-3</m> (blue), <m>2x+3y=6</m> (red) and <m>-x+2y=2</m> (green).</caption>
                             <image source="./LinearAlgebra/Images/2/figure1.png" width="60%"/>
                         </figure>
                     </p>
@@ -111,6 +112,7 @@
                         <me>(x,y,z)=(5,-4,0)+t(1,-2,1)</me>
                         i.e. the line passing through the point <m>(5,-4,0)</m> and parallel to the vector <m>(1,-2,1)</m>
                         <figure xml:id="Fig-Intersection_of_planes">
+                            <caption>Intersection of planes.</caption>
                             <image source="./LinearAlgebra/Images/2/figure2.png" width="60%"/>
                         </figure>
                     </p>
@@ -182,6 +184,7 @@
                 <p>
                     The vector represented by <m>\begin{pmatrix} 3 \\ 2 \end{pmatrix} </m> is sketched in <xref ref="Fig-Vector_sketch"/>.
                     <figure xml:id="Fig-Vector_sketch">
+                        <caption>Sketch of the vector <m>\begin{pmatrix} 3 \\ 2 \end{pmatrix} </m>.</caption>
                         <image source="./LinearAlgebra/Images/2/figure3.png" width="60%"/>
                     </figure>
                 </p>
@@ -211,6 +214,7 @@
                         <me>\frac{3}{2} \begin{pmatrix} 2 \\ 2 \end{pmatrix} +2 \begin{pmatrix} -3 \\ 2 \end{pmatrix} </me>
                         See <xref ref="Fig-Vector_sum_parallelogram"/>. Note that the solution is also saying that there is only one way in which <m>\begin{pmatrix} -3 \\ 7 \end{pmatrix}</m> can be written in terms of <m>\begin{pmatrix} 2 \\ 2 \end{pmatrix}</m> and <m>\begin{pmatrix} -3 \\ 2 \end{pmatrix}</m>.
                         <figure xml:id="Fig-Vector_sum_parallelogram">
+                            <caption>Sum of vectors</caption>
                             <image source="./LinearAlgebra/Images/2/figure4.png" width="60%"/>
                         </figure>
                     </p>
@@ -274,6 +278,7 @@
                         <me>\mathbf{u}=x \begin{pmatrix} 2 \\ 2 \\ 1 \end{pmatrix} +y \begin{pmatrix} -3 \\ 2 \\ -1 \end{pmatrix}</me>
                         We recognise this as the vector equation of the plane through the origin and with direction vectors <m>\mathbf{v_1}</m> and <m>\mathbf{v_2}</m>, as shown in <xref ref="Fig-Vector_equation_of_plane"/>.
                         <figure xml:id="Fig-Vector_equation_of_plane">
+                            <caption>3D plot of the plane given by <m>\mathbf{u}</m> with normal vector shown in blue.</caption>
                             <image source="./LinearAlgebra/Images/2/figure5.png" width="60%"/>
                         </figure>
                         Recall that the normal to this plane (shown in blue in <xref ref="Fig-Vector_equation_of_plane"/>) is given by <m>\mathbf{n=v_1\times v_2}</m> and so here (using the column vector notation) is

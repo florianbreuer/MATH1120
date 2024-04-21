@@ -318,6 +318,7 @@
           </sage>
           <p>
             <figure>
+              <caption>3D plot of <m>f(x,y)=x(3y-2)(5x+1)e^{-(x^2+y^2)/5}</m></caption>
               <image source="./Calculus/Images/3/1_example5.png" width="75%"/>
             </figure>
           </p>
@@ -339,6 +340,7 @@
           </sage>
           <p>
             <figure>
+              <caption>3D plot of <m>f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m></caption>
               <image source="./Calculus/Images/3/1_example6.png" width="100%"/>
             </figure>
           </p>
@@ -349,8 +351,9 @@
       </p>
       <example>
         <p>
-          The surface associated the equation <m>x^2+y^2+z^2=4</m> is a sphere of radius <m>2</m> and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when <m>(x,y)=(0,0)</m>, <m>z</m> could be either <m>+2</m> or <m>-2</m>.
+          The surface associated with the equation <m>x^2+y^2+z^2=4</m> is a sphere of radius <m>2</m> and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when <m>(x,y)=(0,0)</m>, <m>z</m> could be either <m>+2</m> or <m>-2</m>.
           <figure>
+            <caption>3D plot of <m>x^2+y^2+z^2=4</m></caption>
             <image source="./Calculus/Images/3/1_example7.png" width="75%"/>
           </figure>
         </p>
@@ -424,6 +427,7 @@
             <me>xy=k \textrm{ or }y=\frac{k}{x}</me>
             Thus the level curves are rectangular hyperbolae (except for <m>k=0</m>).  The level curves for <m>k=-2,-1,0,1,2</m> are shown in following diagram.
             <figure>
+              <caption>Rectangular hyperbolae <m>y=\frac{k}{x}</m> for various values of <m>k</m></caption>
               <image source="./Calculus/Images/3/2_example8.png" width="75%"/>
             </figure>
           </p>
@@ -440,6 +444,7 @@
             <me>x^2+y^2=k</me>
             that is, circles centred on the origin and whose radius is <m>\sqrt{k}</m>.
             <figure>
+              <caption>Circles <m>x^2+y^2=k</m> for various values of <m>k</m></caption>
               <image source="./Calculus/Images/3/2_example9.png" width="75%"/>
             </figure>
             Notice that there are no level curves when <m>k\lt 0</m>. This tells us that the surface does not go below the <m>xy</m>-plane.
@@ -564,6 +569,7 @@
           Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane <m>z=g(x)=2-3x, x\geq 0</m> about the <m>z</m>-axis.
         </p>
         <figure>
+          <caption>Plot of <m>z=2-3x</m> in the <m>xz</m>-plane for <m>x\geq 0</m>.</caption>
           <image source="./Calculus/Images/3/3_example10.png" width="75%"/>
         </figure>
         <answer>

@@ -146,6 +146,10 @@
         </image>
     </figure>
 
+    <p>
+        The Sage cell below plots the Taylor polynomial for a function <m>f(x)</m> centred at some <m>x=a</m>.
+    </p>
+
     <sage>
         <input>
             x   = var('x')
@@ -215,7 +219,7 @@
 
         <exercise>
             <statement>
-                <p> Find the Taylor series for  <m> f(x)=\ln(x). </m> about <m> x=e. </m> </p>
+                <p> Find the Taylor series for <m>f(x)=\ln(x)</m> about <m>x=e.</m> </p>
             </statement>
         </exercise>
 
@@ -353,7 +357,7 @@
             <men xml:id="def-GS">
                 \sum_{k=0}^\infty ar^k = a + ar + ar^2 + \cdots, \qquad\text{where}\quad |r|\lt 1.
             </men>
-            Here <m>a</m> is the starting term, and each subsequent term equals the previous terms multiplied by <m>r</m>; we call <m>r</m> the <term>common ratio</term>.
+            Here <m>a</m> is the starting term, and each subsequent term equals the previous terms multiplied by <m>r</m>, which we call the <term>common ratio</term>.
         </p>
         <p>
             Let's plot the various Maclaurin polynomials for <m>f(x)=1/(1-x)</m>:

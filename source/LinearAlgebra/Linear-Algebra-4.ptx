@@ -382,9 +382,9 @@ Since the coefficient part of the reduced row echelon matrix is not the identity
 
 </example>
 
-
-<p>
-  The below Sage code can be used to invert a <m>3\times 3</m> matrix using row reduction.
+<!-- NEED TO FIX BELOW. TEXT NOT PRINTING CORRECTLY -->
+<!-- <p>
+  The below Sage cell can be used to invert a <m>3\times 3</m> matrix using row reduction.
 </p>
 <sage> 
   <input>
@@ -446,7 +446,7 @@ Since the coefficient part of the reduced row echelon matrix is not the identity
   </input>
   <output>
   </output>
-</sage>
+</sage> -->
 
 <p> For later reference, some properties of the inverse of a matrix are listed below. </p>
 
@@ -522,18 +522,18 @@ a_{n1} x_{1}+a_{n2}x_{2} + \dots +a_{nn} x_{n}= \amp b_{n}
 </md>
 using matrix notation as
 <men xml:id="Ax_equal_b">
-A \bm{x} = \bm{b}
+A \mathbf{x} = \mathbf{b}
 </men>
-where <m> A </m> is the <m> n\times n </m> coefficient matrix, <m> \bm{x} </m> is the <m> n\times 1 </m>  column vector of variables and <m> \bm{b} </m> is the column vector of the constants. If the coefficient matrix <m> A </m> has an inverse, then from  <xref ref="Ax_equal_b"/>
+where <m> A </m> is the <m> n\times n </m> coefficient matrix, <m> \mathbf{x} </m> is the <m> n\times 1 </m>  column vector of variables and <m> \mathbf{b} </m> is the column vector of the constants. If the coefficient matrix <m> A </m> has an inverse, then from  <xref ref="Ax_equal_b"/>
 <md>
 <mrow>
-A^{-1}(A \bm{x})= \amp A^{-1} \bm{b},
+A^{-1}(A \mathbf{x})= \amp A^{-1} \mathbf{b},
 </mrow>
 <mrow>
-(A^{-1}A) \bm{x}= \amp A^{-1} \bm{b},
+(A^{-1}A) \mathbf{x}= \amp A^{-1} \mathbf{b},
 </mrow>
 <mrow>
-\bm{x}= \amp A^{-1}\bm{b}.
+\mathbf{x}= \amp A^{-1}\mathbf{b}.
 </mrow>
 </md>
 
@@ -610,7 +610,7 @@ Of course, the work involved finding the inverse of a matrix is (basically) the 
 <statement>
 Consider the non-homogenous system of <m> n </m> linear equations in <m> n </m> variables
 <me>
-A \bm{x} = \bm{b} ,\; \bm{b} \neq 0.
+A \mathbf{x} = \mathbf{b} ,\; \mathbf{b} \neq 0.
 </me>
 The following statements are equivalent:
 <p><ol>
@@ -619,7 +619,7 @@ The system has a unique solution,
 </p></li>
 
 <li><p>
-<m> A \bm{x} =0 </m>  has only the trivial solution  <m> \bm{x} =0, </m>
+<m> A \mathbf{x} =0 </m>  has only the trivial solution  <m> \mathbf{x} =0, </m>
 </p></li>
 
 <li><p>
@@ -676,7 +676,8 @@ Find the matrix for a rotation in the plane about the origin through <m> \frac{\
 
 <section xml:id="Determinants">
 <title> Determinants </title>
-If we attempted to find the inverse of the general <m> 2\times 2 </m> matrix
+<p>
+    If we attempted to find the inverse of the general <m>2\times 2 </m> matrix
 <me> A= \begin{pmatrix}
 a \amp b  \\
 c \amp d
@@ -690,6 +691,7 @@ and if <m> ad-bc=0 </m>  then <m> A </m> does not have an inverse. Thus for a  <
 <me>
 \det(A) \;\text{or}\; \vert A\vert.
 </me>
+</p>
 
 <example xml:id="Ex-determinant_2_by_2_matrix">
 <p> Find the determinant of
@@ -701,6 +703,7 @@ and if <m> ad-bc=0 </m>  then <m> A </m> does not have an inverse. Thus for a  <
 </answer>
 
 <solution>
+<p>
 <me>
 \begin{vmatrix}
 2 \amp -1 \\
@@ -708,17 +711,20 @@ and if <m> ad-bc=0 </m>  then <m> A </m> does not have an inverse. Thus for a  <
 \end{vmatrix}=2\times 1 -(3\times (-1))=5.
 </me>
 Note that since the determinant is not zero this matrix is invertible.
+</p>
 </solution>
 </example>
 
+<p>
 We can also think about the determinant of a <m> 2\times 2</m>  matrix geometrically. We know (see <xref ref="Th-non_homogeneous_system"/>) that a matrix has an inverse when its column vectors are linearly independent. Thus, the <m> 2\times 2</m>  matrix
 <me> A= \begin{pmatrix}
 a \amp b  \\
 c \amp d
 \end{pmatrix} </me>
-will have an inverse when the vectors <m> (a,c)^{T} </m> and <m> (b,d)^{T} </m>  are linearly independent. Now we also know (from <xref ref="Linear_Algebra__2"/>) that two vectors in the plane are linearly independent if they define a parallelogram with non-zero area. Finally, from Math1110, we know that the area of the parallelogram defined by the vectors  <m> \bm{u} = (u_{1},u_{2})^{T} </m> and <m> \bm{v} = (v_{1},v_{2})^{T} </m>   is
+will have an inverse when the vectors <m> (a,c)^{T} </m> and <m> (b,d)^{T} </m>  are linearly independent. Now we also know (from <xref ref="Linear_Algebra__2"/>) that two vectors in the plane are linearly independent if they define a parallelogram with non-zero area. Finally, from Math1110, we know that the area of the parallelogram defined by the vectors  <m> \mathbf{u} = (u_{1},u_{2})^{T} </m> and <m> \mathbf{v} = (v_{1},v_{2})^{T} </m>   is
 <me> Area=\vert u_{1}v_{2} - u_{2}v_{1}\vert. </me>
 Thus matrix <m> A </m> will have an inverse when <m> ad-bc\neq 0 </m> , i.e.  <m> \det(A)\neq 0. </m>
+</p>
 
 <p>
 Let's now apply the same geometric argument to the general <m> 3 \times 3</m> matrix
@@ -727,15 +733,15 @@ A=\begin{pmatrix}
 u_{1} \amp v_{1} \amp w_{1}  \\
 u_{2} \amp v_{2} \amp w_{2} \\
 u_{3} \amp v_{3} \amp w_{3}
-\end{pmatrix}=(\bm{u}, \bm{v}, \bm{w}).
+\end{pmatrix}=(\mathbf{u}, \mathbf{v}, \mathbf{w}).
 </me>
 </p>
 <p>
-Three vectors in space are linearly independent if they define a parallelepiped with non-zero volume. Now, the volume of the parallelepiped formed by the vectors <me> \bm{u} = (u_{1},u_{2},u_{3})^{T} ,\;  \bm{v} = (v_{1},v_{2},v_{3})^{T}, \; \text{and} \; \bm{w} =(w_{1},w_{2},w_{3})^{T} </me> is
-<me> Volume=\vert \bm{u} \cdot \bm{v} \times \bm{w} \vert, </me>
-i.e. the absolute values of the scalar triple product of the vectors, (again see Math1110). Thus the matrix <m> A </m> will have an inverse when <m> \bm{u} \cdot \bm{v} \times \bm{w} \neq 0. </m> Hence for a <m> 3\times 3 </m> matrix its determinant is defined as
+Three vectors in space are linearly independent if they define a parallelepiped with non-zero volume. Now, the volume of the parallelepiped formed by the vectors <me> \mathbf{u} = (u_{1},u_{2},u_{3})^{T} ,\;  \mathbf{v} = (v_{1},v_{2},v_{3})^{T}, \; \text{and} \; \mathbf{w} =(w_{1},w_{2},w_{3})^{T} </me> is
+<me> Volume=\vert \mathbf{u} \cdot \mathbf{v} \times \mathbf{w} \vert, </me>
+i.e. the absolute values of the scalar triple product of the vectors, (again see Math1110). Thus the matrix <m> A </m> will have an inverse when <m> \mathbf{u} \cdot \mathbf{v} \times \mathbf{w} \neq 0. </m> Hence for a <m> 3\times 3 </m> matrix its determinant is defined as
 <men xml:id="Eq-det_with_three_vectors">
- \det(A)=\vert  \bm{u} \cdot \bm{v} \times \bm{w} \vert
+ \det(A)=\vert  \mathbf{u} \cdot \mathbf{v} \times \mathbf{w} \vert
 </men>
 </p>
 
@@ -753,9 +759,9 @@ A= \begin{pmatrix}
 <p><m>\det(A)=-8</m></p>
 </answer>
 <solution>
-Let <m> \bm{u}=(2,3,1)^{T},\;  \bm{v}=(4,2,1)^{T},\; \bm{w}=(6,1,2)^{T}. </m> Then
+Let <m> \mathbf{u}=(2,3,1)^{T},\;  \mathbf{v}=(4,2,1)^{T},\; \mathbf{w}=(6,1,2)^{T}. </m> Then
 <me>
-\bm{v} \times \bm{w}=(4,3,1) ^{T} \times (6,1,2)^{T}=(3,-2,-8)^{T}
+\mathbf{v} \times \mathbf{w}=(4,3,1) ^{T} \times (6,1,2)^{T}=(3,-2,-8)^{T}
 </me>
 and hence
 <me>
@@ -764,7 +770,9 @@ and hence
 </solution>
 </example>
 
-While we can calculate the determinant of a <m> 3\times 3</m> matrix using formula <xref ref="Eq-det_with_three_vectors"/> other algorithms have been derived and have the advantage that they easily generalise to matrices of orders higher than <m> 3 </m>.
+<p>
+    While we can calculate the determinant of a <m> 3\times 3</m> matrix using formula <xref ref="Eq-det_with_three_vectors"/> other algorithms have been derived and have the advantage that they easily generalise to matrices of orders higher than <m> 3 </m>.
+</p>
 
 <theorem>
 <statement>
@@ -846,6 +854,7 @@ A=\begin{pmatrix}
 </answer>
 
 <solution>
+<p>
 Using the second of the formulas given above with <m> j=1: </m>
 <md>
 <mrow> \det(A) = \amp (-1)^{1+1} 2 \begin{vmatrix}
@@ -863,12 +872,14 @@ Using the second of the formulas given above with <m> j=1: </m>
 <mrow>  =\amp -24. </mrow>
 </md>
 Notice that for a matrix that is upper triangular the determinant is just the product of the entries on the main diagonal.
+</p>
 </solution>
 </example>
 
 
-
+<p>
 Calculating the determinant of a <m> 3 \times 3 </m> matrix via minors is relatively easy. However for matrices of higher orders the calculation can become very tedious. For example, to calculate the determinant of a <m> 4\times 4 </m> matrix potentially involves calculating the determinants of four <m> 3\times 3</m> matrices. Thus for large matrices the preferred strategy for calculating its determinant is based on the observation that for an upper triangular matrix the determinant is just the product of the entries on the main diagonal.
+</p>
 
 <theorem>
 <statement>
@@ -1037,7 +1048,7 @@ To close this section, note that we can now add one more statement to our theore
 <statement>
 Consider the non-homogenous system of <m> n </m> linear equations in <m> n </m> variables
 <me>
-A \bm{x} = \bm{b},\; \bm{b} \neq 0.
+A \mathbf{x} = \mathbf{b},\; \mathbf{b} \neq 0.
 </me>
 The following statements are equivalent:
 <p><ol>
@@ -1046,7 +1057,7 @@ The system has a unique solution,
 </p></li>
 
 <li><p>
-<m> A \bm{x} =0 </m>  has only the trivial solution  <m> \bm{x} =0, </m>
+<m> A \mathbf{x} =0 </m>  has only the trivial solution  <m> \mathbf{x} =0, </m>
 </p></li>
 
 <li><p>
