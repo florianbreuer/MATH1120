@@ -1,0 +1,10 @@
+INFO    : PreTeXt-CLI version: 2.4.1
+
+INFO    : PreTeXt project found in `/workspaces/MATH1120`.
+WARNING : Using CLI version 2.4.1 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.4.1.
+INFO    : Running in a codespace, so using the codespace server instead of the standard python server.
+INFO    : Server will soon be available at https://orange-spork-q6x7r7vq5v5cxpjx-8580.app.github.dev
+INFO    : Opening browser for target `web` at https://orange-spork-q6x7r7vq5v5cxpjx-8580.app.github.dev/output/web in 2 seconds
