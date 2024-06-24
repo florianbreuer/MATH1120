@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DE2: First Order Separable DEs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<p class="byline">Edited by: Florian Breuer</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Differential_Equations_1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Differenial_Equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Differential_Equations_3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">3.2</span> <span class="title">Graphing functions of two variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.4</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.5</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="Part-Differenial_Equations.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Equations</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_1.html" class="internal"><span class="codenumber">9</span> <span class="title">DE1: Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_1.html#introduction-17" class="internal"><span class="codenumber">9.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#direction-fields-and-eulers-method" class="internal"><span class="codenumber">9.2</span> <span class="title">Direction Fields and Euler’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_1.html#direction-fields" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#eulers-method" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Euler’s Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_1.html#eulers-method-8" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="Differential_Equations_2.html" class="internal"><span class="codenumber">10</span> <span class="title">DE2: First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs" class="internal"><span class="codenumber">10.1</span> <span class="title">First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs-12" class="internal"><span class="codenumber">10.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" class="internal"><span class="codenumber">10.2</span> <span class="title">Some Simple Applications of First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5" class="internal"><span class="codenumber">10.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5" class="internal"><span class="codenumber">10.A</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5-8" class="internal"><span class="codenumber">10.A</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_3.html" class="internal"><span class="codenumber">11</span> <span class="title">DE3: First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_3.html#Exact_First_Order_DEs" class="internal"><span class="codenumber">11.1</span> <span class="title">Exact First Order DEs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_3.html#First_Order_Linear_DEs" class="internal"><span class="codenumber">11.2</span> <span class="title">First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_3.html#First_Order_Linear_DEs-10" class="internal"><span class="codenumber">11.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs" class="internal"><span class="codenumber">11.3</span> <span class="title">Some Simple Applications of First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs-5" class="internal"><span class="codenumber">11.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_4.html" class="internal"><span class="codenumber">12</span> <span class="title">DE4: Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients" class="internal"><span class="codenumber">12.1</span> <span class="title">Homogeneous Second Order Linear DEs With Constant Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25" class="internal"><span class="codenumber">12.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_5.html" class="internal"><span class="codenumber">13</span> <span class="title">DE5: Non-Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs" class="internal"><span class="codenumber">13.1</span> <span class="title">Non-Homogeneous First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs-8" class="internal"><span class="codenumber">13.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients" class="internal"><span class="codenumber">13.2</span> <span class="title">The Method of Undetermined Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients-15" class="internal"><span class="codenumber">13.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_an_External_Force" class="internal"><span class="codenumber">14.3</span> <span class="title">Adding an External Force</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_an_External_Force-8" class="internal"><span class="codenumber">14.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-Linear_Algebra.html" class="internal"><span class="codenumber">III</span> <span class="title">Linear Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_1.html" class="internal"><span class="codenumber">15</span> <span class="title">LA1: Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Introduction" class="internal"><span class="codenumber">15.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.2</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.3</span> <span class="title">Solving Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations-17" class="internal"><span class="codenumber">15.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html" class="internal"><span class="codenumber">16</span> <span class="title">LA2: Geometric Interpretations of Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows" class="internal"><span class="codenumber">16.1</span> <span class="title">Interpretation Via Rows</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows-7" class="internal"><span class="codenumber">16.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns" class="internal"><span class="codenumber">16.2</span> <span class="title">Interpretation Via Columns</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns-20" class="internal"><span class="codenumber">16.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html" class="internal"><span class="codenumber">17</span> <span class="title">LA3: Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication" class="internal"><span class="codenumber">17.1</span> <span class="title">Addition and Scalar Multiplication</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication-7" class="internal"><span class="codenumber">17.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication" class="internal"><span class="codenumber">17.2</span> <span class="title">Matrix Multiplication</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication-11" class="internal"><span class="codenumber">17.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">17.3</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations-9" class="internal"><span class="codenumber">17.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations" class="internal"><span class="codenumber">17.4</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations-8" class="internal"><span class="codenumber">17.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html" class="internal"><span class="codenumber">18</span> <span class="title">LA4: Square Matrices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html#Inverse_Matrices" class="internal"><span class="codenumber">18.1</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_4.html#Inverse_Matrices-31" class="internal"><span class="codenumber">18.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html#Determinants" class="internal"><span class="codenumber">18.2</span> <span class="title">Determinants</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_4.html#Determinants-18" class="internal"><span class="codenumber">18.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_5.html" class="internal"><span class="codenumber">19</span> <span class="title">LA5: Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Introduction" class="internal"><span class="codenumber">19.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" class="internal"><span class="codenumber">19.2</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-16" class="internal"><span class="codenumber">19.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_A_Simple_Application" class="internal"><span class="codenumber">19.3</span> <span class="title">A Simple Application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html" class="internal"><span class="codenumber">20</span> <span class="title">LA6: Some Applications of Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html#Powers_of_Matrices" class="internal"><span class="codenumber">20.1</span> <span class="title">Powers of Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_6.html#Powers_of_Matrices-10" class="internal"><span class="codenumber">20.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations" class="internal"><span class="codenumber">20.2</span> <span class="title">Coupled Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations-12" class="internal"><span class="codenumber">20.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Differential_Equations_2"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">10</span><span class="space"> </span><span class="title">DE2: First Order Separable DEs</span>
+</h2>
+<section class="introduction" id="Differential_Equations_2-2"><div class="para logical" id="Differential_Equations_2-2-1">
+<div class="para">In <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a> we discussed the concept of a differential equation and saw how to check if a function is a solution of a given DE. However, except for the case where the DE is of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_1.html">
+\begin{equation*}
+y^{(n)}(x)=f(x)
+\end{equation*}
+</div>
+<div class="para">(where we can find the solutions just by integration) we have not yet seen any algebraic methods for finding the solutions to a DE. (We did see that for first order DEs we can obtain a graphical representation of the solutions via a direction field and a numerical approximation to a particular solution via Euler’s method.)</div>
+</div> <div class="para" id="Differential_Equations_2-2-2">As mentioned in <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a> there is no one general method that will solve all possible DEs. However, for various classes of DEs methods have been found that will find their solution. In this lecture we are going to look at an algebraic method for finding the solutions to the class of DEs called first order separable DEs.</div></section><section class="section" id="Sec-First_Order_Separable_DEs"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.1</span><span class="space"> </span><span class="title">First Order Separable DEs</span>
+</h3>
+<article class="definition definition-like" id="Sec-First_Order_Separable_DEs-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-2-1">
+<div class="para">A differential equation of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx}=f(x)g(y)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(g(y)\neq 0\)</span> is called a <dfn class="terminology">first order separable DE</dfn>.</div>
+</div></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="Sec-First_Order_Separable_DEs-3-1">Which of the following DEs are first order separable DEs?</div> <div class="para logical" id="Sec-First_Order_Separable_DEs-3-2"><ol class="lower-alpha">
+<li id="Sec-First_Order_Separable_DEs-3-2-1-1"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-1"><span class="process-math">\(\displaystyle y^2y'=x \)</span></div></li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-2"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-2"><span class="process-math">\(\displaystyle y''+2y=0 \)</span></div></li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-3"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-3"><span class="process-math">\(\displaystyle \frac{dy}{dt}+3e^t=ye^t \)</span></div></li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-4"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-4"><span class="process-math">\(\displaystyle \frac{dy}{dt}+ty=2 \)</span></div></li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-5"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-5"><span class="process-math">\(\displaystyle y'=y(1-y) \)</span></div></li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-6"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-6"><span class="process-math">\(\displaystyle y'=y(x-y) \)</span></div></li>
+</ol></div> <details id="Sec-First_Order_Separable_DEs-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-3-3-1">
+<span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(c\)</span> and <span class="process-math">\(e\)</span>
+</div></div></details> <details id="Sec-First_Order_Separable_DEs-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-First_Order_Separable_DEs-3-4-1"><ol class="lower-alpha">
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-1"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-1">This DE can be written as<div class="displaymath process-math">
+\begin{equation*}
+y'=\frac{x}{y^2} 
+\end{equation*}
+</div>Thus it is a first order separable DE with <span class="process-math">\(f(x)=x\)</span> and <span class="process-math">\(g(y)=\frac{1}{y^2}\text{.}\)</span>
+</div></li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-2"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-2">This DE is a second order DE (due to the <span class="process-math">\(y''\)</span> term) and hence cannot be a first order separable DE.</div></li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-3"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-3">This DE can be rearranged as<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dt}=e^t(y-3)
+\end{equation*}
+</div>and hence is a first order separable DE with <span class="process-math">\(f(t)=e^t\)</span> and <span class="process-math">\(g(y)=y-3\text{.}\)</span>
+</div></li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-4"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-4">When we try to rearrange this DE in the same manner as we did in part (c) we obtain<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dt}=2-ty
+\end{equation*}
+</div>This is not of the form <span class="process-math">\(y'=f(t)g(y)\)</span> and hence this first order DE is not separable.</div></li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-5"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-5">This DE is already in the form of a first order separable DE with <span class="process-math">\(f(x)=1\)</span> and <span class="process-math">\(g(y)=y(1-y)\text{.}\)</span>
+</div></li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-6"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-6">The right hand side of this DE can’t be rearranged into the form <span class="process-math">\(y'=f(x)g(y)\)</span> and so this DE is not a first order separable DE.</div></li>
+</ol></div></div></details></article><div class="para" id="Sec-First_Order_Separable_DEs-4">The method for solving first order separable DEs is based on integration by substitution. This integration technique was covered in Math1110 but the following example is given as a reminder.</div>
+<article class="example example-like" id="Sec-First_Order_Separable_DEs-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="Sec-First_Order_Separable_DEs-5-1">Evaluate the integral <span class="process-math">\(\displaystyle\int 2x\sin(x^2) \hspace{2mm} dx\text{.}\)</span>
+</div> <details id="Sec-First_Order_Separable_DEs-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-5-2-1"><span class="process-math">\(\displaystyle\int 2x\sin(x^2)\hspace{2mm} dx=-\cos(x^2)+C\)</span></div></div></details> <details id="Sec-First_Order_Separable_DEs-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-First_Order_Separable_DEs-5-3-1">
+<div class="para">Since the integrand is of the form <span class="process-math">\(g'(x)\sin(g(x))\)</span> (or, in Leibniz notation <span class="process-math">\(\sin(g(x))\frac{dg}{dx}\)</span>) make the substitution</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u=g(x)=x^2
+\end{equation*}
+</div>
+<div class="para">Then <div class="para logical" id="Sec-First_Order_Separable_DEs-5-3-1-4"><div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-5-3-1-4-1">
+\begin{align*}
+\int 2x\sin(x^2)\hspace{2mm} dx \amp =\int \sin(u)\hspace{2mm} du\\
+\amp =-\cos(u)+C
+\end{align*}
+</div></div> Using <span class="process-math">\(u=x^2\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int 2x\sin(x^2)\hspace{2mm} dx=-\cos(x^2)+C
+\end{equation*}
+</div>
+</div></div></details></article><div class="para logical" id="Sec-First_Order_Separable_DEs-6">
+<div class="para">In general, the integration by substitution method says that for an integral of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int f(g(x))\frac{dg}{dx}\hspace{2mm} dx
+\end{equation*}
+</div>
+<div class="para">the substitution</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u=g(x)
+\end{equation*}
+</div>
+<div class="para">transforms the integral to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int f(u)\hspace{2mm} du
+\end{equation*}
+</div>
+<div class="para">More succinctly, we can write this as </div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int f(u)\frac{du}{dx}\hspace{2mm} dx=\int f(u)\hspace{2mm} du
+\end{equation*}
+</div>
+<div class="para">(As an aside, we saw in Math1110 that this formula follows directly from the chain rule of differentiation.)</div>
+</div>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-7">
+<div class="para">Returning now to the problem of solving first order separable DEs, i.e. to solving DEs of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx}=f(x)g(y)
+\end{equation*}
+</div>
+<div class="para">Assuming that <span class="process-math">\(g(y)\neq 0\text{,}\)</span> rearrange the DE as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{g(y)}\frac{dy}{dx}=f(x)
+\end{equation*}
+</div>
+<div class="para">Note that in this step we are "separating the variables". Now integrate both sides with respect to <span class="process-math">\(x\)</span> to obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{g(y)}\frac{dy}{dx}\hspace{2mm} dx=\int f(x) \hspace{2mm} dx
+\end{equation*}
+</div>
+<div class="para">Using the integration by substitution formula on the left hand side gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{g(y)}\hspace{2mm} dy=\int f(x) \hspace{2mm} dx
+\end{equation*}
+</div>
+<div class="para">So long as we can actually perform the integrals on both sides of this equation we will have an equation which will implicitly define <span class="process-math">\(y\)</span> (the unknown function) in terms of <span class="process-math">\(x\)</span> (the independent variable). If we can further make <span class="process-math">\(y\)</span> the subject of this equation then we will have found an explicit formula for the solution to the separable DE.</div>
+</div>
+<article class="example example-like" id="Sec-First_Order_Separable_DEs-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-8-1">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx}=-4xy^2
+\end{equation*}
+</div>
+</div> <details id="Sec-First_Order_Separable_DEs-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-8-2-1"><span class="process-math">\(y(x)=\dfrac{1}{2x^2+C}, \hspace{5mm} y(x)=0 \hspace{5mm} \textrm{ for } C\in\mathbb{R}\)</span></div></div></details> <details id="Sec-First_Order_Separable_DEs-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-First_Order_Separable_DEs-8-3-1">
+<div class="para">This is a first order separable DE so begin by separating the variables, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{y^2}\frac{dy}{dx}=-4x
+\end{equation*}
+</div>
+<div class="para">Now integrate both sides with respect to <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{y^2}\frac{dy}{dx}\hspace{2mm} dx=\int -4x\hspace{2mm} dx
+\end{equation*}
+</div>
+<div class="para">Using the integration by substitution formula this becomes</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{y^2}\hspace{2mm} dy=\int -4x\hspace{2mm} dx
+\end{equation*}
+</div>
+<div class="para">Evaluating the integrals on both sides (and combining the two constants of integration) gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{y}=-2x^2+C
+\end{equation*}
+</div>
+<div class="para">Here we can make <span class="process-math">\(y\)</span> the subject of the resulting equation and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=\frac{1}{2x^2+C}
+\end{equation*}
+</div>
+<div class="para">Note that we can check whether this function is a solution to the DE by substituting back into the original DE. On the left hand side, using the chain rule to differentiate <span class="process-math">\(y\)</span> we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dy}{dx}=-\frac{1}{(2x^2+C)^2}\times (4x)=\frac{-4x}{(2x^2+C)^2}
+\end{equation*}
+</div>
+<div class="para">On the right hand side</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-4xy^2=(-4x)\left(\frac{1}{2x^2+C}\right)^2=\frac{-4x}{(2x^2+C)^2}
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(y\)</span> does indeed satisfy the DE.</div>
+</div> <div class="para logical" id="Sec-First_Order_Separable_DEs-8-3-2">
+<div class="para">The working so far has assumed that <span class="process-math">\(y^2\neq 0\)</span> and hence that <span class="process-math">\(y\neq 0\text{.}\)</span> Thus to check that we have found all of the solutions to the DE we must check whether the function <span class="process-math">\(y(x)=0\)</span> is also a solution. Clearly it is. Thus the set of all solutions to the DE is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example3_DEs.html">
+\begin{equation*}
+y(x)=\frac{1}{2x^2+C}, \hspace{5mm} y(x)=0 \hspace{5mm} \textrm{ for } C\in\mathbb{R}
+\end{equation*}
+</div>
+<div class="para">See <a href="Differential_Equations_2.html#Fig_1_example3_DEs" class="xref" data-knowl="./knowl/xref/Fig_1_example3_DEs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.5">Figure 10.5</a> for a sketch of these solutions for various values of <span class="process-math">\(C\text{.}\)</span> <figure class="figure figure-like" id="Fig_1_example3_DEs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.5<span class="period">.</span></span><span class="space"> </span>A sketch of <span class="process-math">\(y(x)=\frac{1}{2x^2+C}\)</span> for various values of <span class="process-math">\(C\text{.}\)</span></figcaption></figure>
+</div>
+</div> <div class="para" id="Sec-First_Order_Separable_DEs-8-3-3">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dx}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(c\text{.}\)</span>
+</div> <pre id="Sec-First_Order_Separable_DEs-8-3-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
+M=4
+VF = plot_slope_field(-4*x*y^2,(x,-M,M),(y,-M,M),aspect_ratio=1)
+
+@interact
+def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
+    show(r'y(x) = '+latex(1/(2*x^2+N(c,digits=3))))
+    show(VF+plot(1/(2*x^2+c),(x,-M,M),ymin=-M,ymax=M))
+</script></pre>
+</div></details></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-9-1">
+<div class="para">Find the solution to the initial-value problem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(4y-\cos(y))\frac{dy}{dt}-3t^2=0, \hspace{5mm} y(0)=0
+\end{equation*}
+</div>
+</div> <details id="Sec-First_Order_Separable_DEs-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-9-2-1"><span class="process-math">\(2y^2-\sin(y)=t^3\)</span></div></div></details> <details id="Sec-First_Order_Separable_DEs-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-First_Order_Separable_DEs-9-3-1">
+<div class="para">This is a first order separable DE so begin by separating the variables, i.e.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
+\begin{equation*}
+(4y-\cos(y))\frac{dy}{dt}=3t^2
+\end{equation*}
+</div>
+<div class="para">Integrating both sides with respect to <span class="process-math">\(t\)</span> and applying the integration by substitution formula to the left hand side gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
+\begin{equation*}
+\int 4y-\cos(y)\hspace{2mm} dy=\int 3t^2\hspace{2mm} dt
+\end{equation*}
+</div>
+<div class="para">Evaluating the integrals on both sides (and combining the two constants of integration) gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
+\begin{equation*}
+2y^2-\sin(y)=t^3+C
+\end{equation*}
+</div>
+<div class="para">We can’t make <span class="process-math">\(y\)</span> the subject of this equation and so in this case we can’t find an explicit formula for the general solution to the DE. Substituting the initial condition into the implicit equation gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
+\begin{equation*}
+2\times 0^2-\sin(0)=0^3+C
+\end{equation*}
+</div>
+<div class="para">i.e.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
+\begin{equation*}
+C=0
+\end{equation*}
+</div>
+<div class="para">Thus the solution to the initial-value problem is the relevant function <span class="process-math">\(y(t)\)</span> defined implicitly by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
+\begin{equation*}
+2y^2-\sin(y)=t^3
+\end{equation*}
+</div>
+<div class="para">The curve defined implicitly by this equation is shown in <a href="Differential_Equations_2.html#Fig_1_example4" class="xref" data-knowl="./knowl/xref/Fig_1_example4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.7">Figure 10.7</a> and from this we can see that the "bottom" part of the curve will be the function that is the solution to the initial-value problem. <figure class="figure figure-like" id="Fig_1_example4"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example4.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div>
+</div> <div class="para" id="Sec-First_Order_Separable_DEs-9-3-2">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dt}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(c\text{.}\)</span>
+</div> <pre id="Sec-First_Order_Separable_DEs-9-3-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t,y = var('t y')
+M=4
+VF = plot_slope_field(3*t^2/(4*y-cos(y)),(t,-M,M),(y,-M,M),aspect_ratio=1)
+
+@interact
+def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
+    show(r'2y^2-\sin(y)=t^3 + '+latex(N(c,digits=3)))
+    show(VF+implicit_plot(2*y^2-sin(y)==t^3+c,(t,-M,M),(y,-M,M)))
+</script></pre>
+</div></details></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-10"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-10-1">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_1.html">
+\begin{equation*}
+\frac{dy}{dx}=y(1-y)
+\end{equation*}
+</div>
+<div class="para">
+<dfn class="terminology">Note</dfn>: We looked at this example in <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a>. There we sketched a direction field for the DE.</div>
+</div> <details id="Sec-First_Order_Separable_DEs-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-10-2-1"><span class="process-math">\(y(x)=\dfrac{Ae^x}{1+Ae^x}\)</span></div></div></details> <details id="Sec-First_Order_Separable_DEs-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-First_Order_Separable_DEs-10-3-1">
+<div class="para">This is a first order separable DE with <span class="process-math">\(f(x)=1\)</span> (i.e. it is autonomous) and <span class="process-math">\(g(y)=y(1-y)\text{.}\)</span> On separating the variables and integrating both sides with respect to <span class="process-math">\(x\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example5_DEs.html">
+\begin{equation*}
+\int \frac{1}{y(1-y)}\hspace{2mm}dy=\int 1\hspace{2mm}dx
+\end{equation*}
+</div>
+<div class="para">To evaluate the integral on the left hand side we have to use partial fraction decomposition, by which we can determine that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example5_DEs.html">
+\begin{equation*}
+\frac{1}{y(1-y)}=\frac{1}{y}+\frac{1}{1-y}
+\end{equation*}
+</div>
+<div class="para">Thus <div class="para logical" id="Sec-First_Order_Separable_DEs-10-3-1-6"><div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-10-3-1-6-1">
+\begin{align*}
+\int \frac{1}{y(1-y)}\hspace{2mm}dy \amp=\int \frac{1}{y}\hspace{2mm}dy +\int \frac{1}{1-y}\hspace{2mm}dy\\
+\amp =\ln(\vert y\vert)-\ln(\vert 1-y\vert)+C
+\end{align*}
+</div></div> (Some more detail on partial fraction decomposition can be found in an appendix to this lecture.) So, on evaluating the integral on the right hand side and combining the two constants of integration we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example5_DEs.html">
+\begin{equation*}
+\ln(\vert y\vert)-\ln(\vert 1-y\vert)=x+K
+\end{equation*}
+</div>
+<div class="para">This can be rearranged as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example5_DEs.html">
+\begin{equation*}
+y(x)=\frac{Ae^x}{1+Ae^x}
+\end{equation*}
+</div>
+<div class="para">
+<a href="Differential_Equations_2.html#Fig_1_example5_DEs" class="xref" data-knowl="./knowl/xref/Fig_1_example5_DEs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.9">Figure 10.9</a> shows this curve when <span class="process-math">\(A=1\)</span> superimposed on top of the direction field for the DE. Also shown in the figure are the solutions <span class="process-math">\(y(x)=0\)</span> and <span class="process-math">\(y(x)=1\)</span> which come from checking separately the cases where <span class="process-math">\(g(y)=0\text{.}\)</span> <figure class="figure figure-like" id="Fig_1_example5_DEs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example5.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div>
+</div> <div class="para" id="Sec-First_Order_Separable_DEs-10-3-2">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dx}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(A\text{.}\)</span>
+</div> <pre id="Sec-First_Order_Separable_DEs-10-3-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
+M=4
+VF = plot_slope_field(y*(1-y),(x,-M,M),(y,-M,M),aspect_ratio=1)
+
+@interact
+def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
+    show(r'y(x) = '+latex(N(A,digits=3)*exp(x)/(1+N(A,digits=3)*exp(x))))
+    show(VF+plot(A*exp(x)/(1+A*exp(x)),(x,-M,M),ymin=-M,ymax=M))
+</script></pre>
+</div></details></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-11-1">
+<div class="para">Find the solution to the initial-value problem</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_1.html">
+\begin{equation*}
+\frac{dy}{dx}=xy+x, \hspace{5mm} y(0)=1
+\end{equation*}
+</div>
+<div class="para">
+<dfn class="terminology">Note</dfn>: We looked at this example in section <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a> where we used Euler’s method with <span class="process-math">\(\Delta x=0.1\)</span> to approximate the value of the solution at <span class="process-math">\(x=0.3\text{.}\)</span>
+</div>
+</div> <details id="Sec-First_Order_Separable_DEs-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-11-2-1"><span class="process-math">\(y(x)=2e^{x^2/2}-1\)</span></div></div></details> <details id="Sec-First_Order_Separable_DEs-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-First_Order_Separable_DEs-11-3-1">
+<div class="para">This is a first order separable DE with <span class="process-math">\(f(x)=x\)</span> and <span class="process-math">\(g(y)=y+1\text{.}\)</span> On separating the variables and integrating both sides with respect to <span class="process-math">\(x\)</span> we obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
+\begin{equation*}
+\int \frac{1}{y+1}\hspace{2mm}dy=\int x\hspace{2mm}dx
+\end{equation*}
+</div>
+<div class="para">Evaluating the integrals and rearranging gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
+\begin{equation*}
+y(x)=Ce^{x^2/2}-1
+\end{equation*}
+</div>
+<div class="para">To satisfy the initial condition <div class="para logical" id="Sec-First_Order_Separable_DEs-11-3-1-6"><div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-11-3-1-6-1">
+\begin{align*}
+1 \amp=Ce^0-1\\
+C \amp =2
+\end{align*}
+</div></div> Thus the solution to the initial-value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
+\begin{equation*}
+y(x)=2e^{x^2/2}-1
+\end{equation*}
+</div>
+<div class="para">
+<dfn class="terminology">Note</dfn>: From this solution</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
+\begin{equation*}
+y(0.3)=2e^{(0.3)^2/2}-1=1.0921 \textrm{ to 4.d.p.}
+\end{equation*}
+</div>
+<div class="para">The Euler method approximation was</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
+\begin{equation*}
+y(0.3)=1.0604 \textrm{ to 4.d.p.}
+\end{equation*}
+</div>
+<div class="para">
+<a href="Differential_Equations_2.html#Fig_1_example6_DEs" class="xref" data-knowl="./knowl/xref/Fig_1_example6_DEs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.11">Figure 10.11</a> shows both the analytic solution and the Euler approximation over the domain <span class="process-math">\(0\leq x\leq 0.3\text{.}\)</span> <figure class="figure figure-like" id="Fig_1_example6_DEs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example6.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.11<span class="period">.</span></span><span class="space"> </span>Plot of the analytic solution (blue) and Euler approximation (red) for <span class="process-math">\(\frac{dy}{dx}=xy+x\text{.}\)</span></figcaption></figure>
+</div>
+</div></div></details></article><section class="exercises" id="Sec-First_Order_Separable_DEs-12"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="Sec-First_Order_Separable_DEs-12-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-12-2-1-1">
+<div class="para">Find the general solution to the DE</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\sqrt{1+x^2}}{y+1}\frac{dy}{dx}=-x
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="Sec-First_Order_Separable_DEs-12-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-12-3-1-1">
+<div class="para">Solve the initial-value problem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'=-\frac{x}{y+1}, \hspace{5mm} y(0)=2
+\end{equation*}
+</div>
+</div></article></section></section><section class="section" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Some Simple Applications of First Order Separable DEs</span>
+</h3>
+<article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.12</span><span class="period">.</span>
+</h4>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-1">Find a curve in the <span class="process-math">\(xy\)</span>-plane that passes through the point <span class="process-math">\((0,3)\)</span> and whose tangent line at any point <span class="process-math">\((x,y)\)</span> has its slope given by <span class="process-math">\(\frac{2x}{y^2}\text{.}\)</span>
+</div> <details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2-1"><span class="process-math">\(y(x)=(3x^2+27)^{1/3}\)</span></div></div></details> <details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3-1">
+<div class="para">Let the curve be <span class="process-math">\(y(x)\text{.}\)</span> Then we know</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y'=\frac{2x}{y^2}, \hspace{5mm} y(0)=3
+\end{equation*}
+</div>
+<div class="para">i.e. <span class="process-math">\(y\)</span> is the solution to an initial-value problem involving a first order separable DE. From the DE, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int y^2 \hspace{2mm}dy=\int 2x\hspace{2mm}dx
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{3}y^3=x^2+C
+\end{equation*}
+</div>
+<div class="para">Using the initial condition gives <span class="process-math">\(C=9\)</span> and hence the required curve is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(x)=(3x^2+27)^{1/3}
+\end{equation*}
+</div>
+</div></div></details></article><article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.13</span><span class="period">.</span>
+</h4>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-1">Suppose that the temperature a cup of coffee when it is poured is <span class="process-math">\(95^oC\text{.}\)</span> The cup is left to stand in a room where the temperature is <span class="process-math">\(20^oC\text{.}\)</span> If the temperature of the coffee is <span class="process-math">\(90^oC\)</span> after <span class="process-math">\(2\)</span> min, how long will it take for the temperature of the coffee in the cup to reach <span class="process-math">\(25^oC\)</span> according to Newton’s law of cooling?</div> <details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2-1"><span class="process-math">\(t\approx 78.5 \textrm{ min}\)</span></div></div></details> <details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1">
+<div class="para">Let <span class="process-math">\(T(t)\)</span> be the temperature of the cup of coffee at time <span class="process-math">\(t\)</span> min after it was poured and let <span class="process-math">\(T_a\)</span> be the room (ambient) temperature. Now, Newton’s law of cooling says that the rate at which the temperature of an object falls is proportional to the difference in the temperature of the object and the temperature of its surroundings. Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dT}{dt}=-k(T-T_a), \hspace{5mm} T(0)=95, \hspace{5mm} T(2)=90
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\gt 0\)</span> is the constant of proportionality. This is a first order separable DE and on separating the variables and integrating both sides with respect to <span class="process-math">\(t\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{1}{T-T_a}\hspace{2mm}dT=\int -k\hspace{2mm}dt
+\end{equation*}
+</div>
+<div class="para">Evaluating the integrals gives <div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8"><div class="displaymath process-math" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8-1">
+\begin{align*}
+\ln(\vert T-T_a\vert) \amp=-kt+C\\
+T(t) \amp =Ae^{-kt}+T_a
+\end{align*}
+</div></div> Since <span class="process-math">\(T_a=20\text{,}\)</span> using <span class="process-math">\(T(0)=95\)</span> gives <span class="process-math">\(A=75\text{.}\)</span> Using <span class="process-math">\(T(2)=90\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+90=75e^{-2k}+20
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k=-\frac{\ln(\frac{14}{15})}{2}\approx 0.034
+\end{equation*}
+</div>
+<div class="para">Thus, according to Newton’s law of cooling the coffee will have cooled to <span class="process-math">\(25^oC\)</span> at the value of <span class="process-math">\(t\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+25=75e^{-kt}+20
+\end{equation*}
+</div>
+<div class="para">from which we find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+t=-\frac{\ln(\frac{1}{15})}{k}\approx 78.5 \textrm{ min}
+\end{equation*}
+</div>
+</div></div></details></article><article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-1">Consider a <span class="process-math">\(100\)</span>L tank which contains pure water. At time <span class="process-math">\(t=0\)</span> salt water begins to flow into the tank at a rate of <span class="process-math">\(2\)</span>L/min and the mixed water flows out of the tank at the same rate. If the concentration of the salt in the inflowing water is <span class="process-math">\(35\)</span>g/L determine the concentration, <span class="process-math">\(C(t)\text{,}\)</span> of the salt in the tank as a function of time. <figure class="figure figure-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-1-6"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="external/./DifferentialEquations/Images/2/1_example9.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.15<span class="period">.</span></span><span class="space"> </span>Flow of water in and out of a tank.</figcaption></figure>
+</div> <details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2-1"><span class="process-math">\(C(t)=35-35e^{-t/50}\)</span></div></div></details> <details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3-1">
+<div class="para">Let <span class="process-math">\(A(t)\)</span> be the amount of salt in the tank (in grams) at time <span class="process-math">\(t\text{.}\)</span> Then, since there is <span class="process-math">\(100\)</span>L of water in the tank</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html" id="Eqn_example9_1">
+\begin{equation}
+A(t)=100\times C(t)\tag{10.1}
+\end{equation}
+</div>
+<div class="para">Now, since the water in the tank is initially pure, we have the initial condition <span class="process-math">\(A(0)=0\)</span> or equivalently <span class="process-math">\(C(0)=0\text{.}\)</span> Finally, the rate at which the amount of salt in the tank is changing is given by the difference of the rate at which the amount of salt is increasing (due to the salt water entering the tank) and the rate at which the amount is decreasing (due to the mixed water flowing out). Since salt water is entering the tank at a rate of <span class="process-math">\(2\)</span>L/min and each litre contains <span class="process-math">\(35\)</span>g of salt, the rate at which the amount of salt is increasing is <span class="process-math">\(70\)</span>g/min. Since the mixed water is flowing out of the tank at the rate of <span class="process-math">\(2\)</span>L/min and each litre contains <span class="process-math">\(C(t)\)</span>g the rate at which the amount of salt is decreasing is <span class="process-math">\(2C\)</span>g/min. Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html" id="Eqn_example9_2">
+\begin{equation}
+\frac{dA}{dt}=70-2C\tag{10.2}
+\end{equation}
+</div>
+<div class="para">From <a href="Differential_Equations_2.html#Eqn_example9_1" class="xref" data-knowl="./knowl/xref/Eqn_example9_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.1">(10.1)</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html" id="Eqn_example9_3">
+\begin{equation}
+\frac{dA}{dt}=100\frac{dC}{dt}\tag{10.3}
+\end{equation}
+</div>
+<div class="para">Putting <a href="Differential_Equations_2.html#Eqn_example9_3" class="xref" data-knowl="./knowl/xref/Eqn_example9_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.3">(10.3)</a> into <a href="Differential_Equations_2.html#Eqn_example9_2" class="xref" data-knowl="./knowl/xref/Eqn_example9_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.2">(10.2)</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html">
+\begin{equation*}
+100\frac{dC}{dt}=70-2C
+\end{equation*}
+</div>
+<div class="para">which is a first order separable DE. Separating the variables and integrating both sides with respect <span class="process-math">\(t\)</span> gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html">
+\begin{equation*}
+\int \frac{1}{70-2C}\hspace{2mm} dC=\int \frac{1}{100}\hspace{2mm}dt
+\end{equation*}
+</div>
+<div class="para">Evaluating the integrals gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html">
+\begin{equation*}
+-\frac{1}{2}\ln(70-2C)=\frac{1}{100}t+K
+\end{equation*}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html">
+\begin{equation*}
+C(t)=35-ke^{-t/50}
+\end{equation*}
+</div>
+<div class="para">Using the initial condition <span class="process-math">\(C(0)=0\)</span> gives <span class="process-math">\(k=35\)</span> and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html">
+\begin{equation*}
+C(t)=35-35e^{-t/50}
+\end{equation*}
+</div>
+</div></div></details></article><section class="exercises" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2-1-1">An ingot of gold is placed into a furnace which has a temperature of <span class="process-math">\(1200^oC\text{.}\)</span>  After <span class="process-math">\(3\)</span> min the temperature of the ingot has risen from <span class="process-math">\(40^oC\)</span> to <span class="process-math">\(610^oC\text{.}\)</span> Assuming Newton’s Law of Cooling how long before the ingot reaches the melting temperature of <span class="process-math">\(1064^oC\text{?}\)</span>
+</div></article><article class="exercise exercise-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3-1-1">Consider a <span class="process-math">\(50\)</span>L tank which contains salt water with concentration of <span class="process-math">\(20\)</span>g/L. At time <span class="process-math">\(t=0\)</span> more salt water begins to flow into the tank at the rate of <span class="process-math">\(3\)</span>L/min and the mixed water flows out of the tank at the same rate. Assuming that the concentration of salt in the inflowing water is <span class="process-math">\(30\)</span>g/L how long will it take for the concentration of the water in the tank to reach <span class="process-math">\(25\)</span>g/L?</div></article></section></section><section class="appendix" id="Differential_Equations_2-5"><h3 class="heading">
+<span class="type">Appendix</span><span class="space"> </span><span class="codenumber">10.A</span><span class="space"> </span><span class="title">Partial Fraction Decomposition</span>
+</h3>
+<div class="para" id="Differential_Equations_2-5-2">
+<dfn class="terminology">Partial fraction decomposition</dfn> is, essentially, the inverse operation of combining fractions by putting them over a common denominator. More formally, partial fraction decomposition expresses a proper rational function (i.e. a function that is the ratio of two polynomials where the degree of the polynomial in the denominator is greater that the degree of the polynomial in the numerator) as the sum of proper rational functions of lesser degree.</div>
+<article class="example example-like" id="Differential_Equations_2-5-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.16</span><span class="period">.</span>
+</h4>
+<div class="para" id="Differential_Equations_2-5-3-1">Write <span class="process-math">\(\dfrac{2}{x+2}-\dfrac{3}{2x-1}\)</span> as a single fraction.</div> <details id="Differential_Equations_2-5-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Differential_Equations_2-5-3-2-1"><span class="process-math">\(=\dfrac{x-8}{(x+2)(2x-1)}\)</span></div></div></details> <details id="Differential_Equations_2-5-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="Differential_Equations_2-5-3-3-1">Using <span class="process-math">\((x+2)(2x-1)\)</span> as the common denominator we get <div class="para logical" id="Differential_Equations_2-5-3-3-1-2"><div class="displaymath process-math" id="Differential_Equations_2-5-3-3-1-2-1">
+\begin{align*}
+\frac{2}{x+2}-\frac{3}{2x-1} \amp=\frac{2(2x-1)}{(x+2)(2x-1)}-\frac{3(x+2)}{(x+2)(2x-1)}\\
+\amp =\frac{4x-2-3x-6}{(x+2)(2x-1)}\\
+\amp =\frac{x-8}{(x+2)(2x-1)}
+\end{align*}
+</div></div>
+</div></div></details></article><div class="para" id="Differential_Equations_2-5-4">In partial fraction decomposition, for each distinct linear factor <span class="process-math">\((ax+b)\)</span> in the denominator include a term <span class="process-math">\(\dfrac{A}{ax+b}\)</span> in the decomposition, where <span class="process-math">\(A\)</span> is a value we have to determine.</div>
+<article class="example example-like" id="Differential_Equations_2-5-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.17</span><span class="period">.</span>
+</h4>
+<div class="para" id="Differential_Equations_2-5-5-1">Find the partial fraction decomposition of <span class="process-math">\(\dfrac{x-8}{(x+2)(2x-1)}\text{.}\)</span>
+</div> <details id="Differential_Equations_2-5-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\dfrac{x-8}{(x+2)(2x-1)}=\dfrac{2}{x+2}-\dfrac{3}{2x-1}\)</span></div></details> <details id="Differential_Equations_2-5-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Differential_Equations_2-5-5-3-1">
+<div class="para">Because the denominator of this rational function contains two linear polynomial terms the partial fraction decomposition takes the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example11_4.html" id="Eqn_example11_4">
+\begin{equation}
+\frac{x-8}{(x+2)(2x-1)}=\frac{A}{x+2}+\frac{B}{2x-1}\tag{10.4}
+\end{equation}
+</div>
+<div class="para">To determine the values for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> multiply both sides of <a href="Differential_Equations_2.html#Eqn_example11_4" class="xref" data-knowl="./knowl/xref/Eqn_example11_4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.4">(10.4)</a> by <span class="process-math">\((x+2)(2x-1)\text{.}\)</span> This gives <div class="para logical" id="Differential_Equations_2-5-5-3-1-6"><div class="displaymath process-math" id="Differential_Equations_2-5-5-3-1-6-1">
+\begin{align*}
+x-8 \amp=A(2x-1)+B(x+2)\\
+\amp =(2A+B)x+(2B-A)
+\end{align*}
+</div></div> For the polynomials on both sides of the equation to be equal they must have the same coefficients and so <div class="para logical" id="Differential_Equations_2-5-5-3-1-7"><div class="displaymath process-math" id="Differential_Equations_2-5-5-3-1-7-1">
+\begin{align*}
+2A+B \amp=1\\
+-A+2B \amp=-8
+\end{align*}
+</div></div> Solving these simultaneous equations gives <span class="process-math">\(A=2,\hspace{2mm} B=-3\)</span> and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example11_4.html">
+\begin{equation*}
+\frac{x-8}{(x+2)(2x-1)}=\frac{2}{x+2}-\frac{3}{2x-1}
+\end{equation*}
+</div>
+</div></div></details></article><div class="para logical" id="Differential_Equations_2-5-6">
+<div class="para">If the denominator of the rational function contains a linear factor to some power, i.e. <span class="process-math">\((ax+b)^n\text{,}\)</span> then the partial fraction decomposition should contain the terms</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{A_1}{ax+b}+\frac{A_2}{(ax+b)^2}+...+\frac{A_n}{(ax+b)^n}
+\end{equation*}
+</div>
+<div class="para">If the denominator of the rational function contains a quadratic factor, i.e. <span class="process-math">\((ax^2+bx+c)\text{,}\)</span> then the partial fraction decomposition should contain the term</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{Ax+B}{ax^2+bx+c}
+\end{equation*}
+</div>
+</div>
+<article class="example example-like" id="Differential_Equations_2-5-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
+</h4>
+<div class="para" id="Differential_Equations_2-5-7-1">Find the partial fraction decomposition of <span class="process-math">\(\dfrac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}\text{.}\)</span>
+</div> <details id="Differential_Equations_2-5-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\dfrac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}=\dfrac{2x}{x^2+2}-\dfrac{1}{(x-1)^2}\)</span></div></details> <details id="Differential_Equations_2-5-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Differential_Equations_2-5-7-3-1">
+<div class="para">Because the denominator contains a quadratic term a repeated linear term the partial fraction decomposition takes the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example12_5.html" id="Eqn_example12_5">
+\begin{equation}
+\frac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}=\frac{Ax+B}{x^2+2}+\frac{C}{x-1}+\frac{D}{(x-1)^2}\tag{10.5}
+\end{equation}
+</div>
+<div class="para">Multiply both sides of <a href="Differential_Equations_2.html#Eqn_example12_5" class="xref" data-knowl="./knowl/xref/Eqn_example12_5.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.5">(10.5)</a> by <span class="process-math">\((x^2+2)(x-1)^2\)</span> and collect like terms. This gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example12_5.html">
+\begin{equation*}
+2x^3-5x^2+2x-2=(A+C)x^3+(-2A+B-C+D)x^2+(A-2B+2C)x+(B-2C+2D)
+\end{equation*}
+</div>
+<div class="para">Equating the coefficients of the polynomials on each side gives <div class="para logical" id="Differential_Equations_2-5-7-3-1-5"><div class="displaymath process-math" id="Differential_Equations_2-5-7-3-1-5-1">
+\begin{align*}
+A+C \amp =2\\
+-2A+B-C+D \amp=-5\\
+A-2B+2C \amp =2\\
+B-2C+2D \amp=-2
+\end{align*}
+</div></div> Solving these simultaneous equations gives <span class="process-math">\(A=2\text{,}\)</span> <span class="process-math">\(B=0\text{,}\)</span> <span class="process-math">\(C=0\text{,}\)</span> <span class="process-math">\(D=-1\)</span> and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example12_5.html">
+\begin{equation*}
+\frac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}=\frac{2x}{x^2+2}-\frac{1}{(x-1)^2}
+\end{equation*}
+</div>
+</div></div></details></article><section class="exercises" id="Differential_Equations_2-5-8"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="Differential_Equations_2-5-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para logical" id="Differential_Equations_2-5-8-2-1-1">
+<div class="para">Evaluate the integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int \frac{x^2-2x+3}{(x^2+1)(x-1)}\hspace{2mm} dx
+\end{equation*}
+</div>
+</div></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Differential_Equations_1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Differential_Equations_3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

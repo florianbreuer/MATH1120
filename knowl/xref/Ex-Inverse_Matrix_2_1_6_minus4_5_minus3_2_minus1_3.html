@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.7</span><span class="period">.</span>
+</h4>
+<div class="para">Find the inverse, if it exists, of <span class="process-math">\(A=\begin{pmatrix} 2 \amp 1 \amp 6 \\ -4 \amp 5 \amp -3 \\ 2 \amp -1 \amp  3 \end{pmatrix}.  \)</span>
+</div> <details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(A^{-1}=\begin{pmatrix} -2 \amp \frac{3}{2} \amp \frac{11}{2} \\ -1 \amp 1 \amp 3 \\ 1 \amp -\frac{2}{3} \amp  -\frac{7}{3} \end{pmatrix}.  \)</span></div></details> <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Form the augmented matrix and row reduce to reduced row echelon form:<div class="displaymath process-math">
+\begin{align*}
+\amp \left(\begin{array}{c c c | c c c}   2 \amp -1 \amp 6 \amp  1 \amp 0 \amp 0 \\-4 \amp 5 \amp -3   \amp  0 \amp 1 \amp 0 \\2 \amp -1 \amp  3 \amp  0 \amp 0 \amp 1 \end{array}\right)\\
+\amp \sim \left(\begin{array}{c c c | c c c}   1 \amp \frac{1}{2} \amp 3   \amp  \frac{1}{2} \amp 0 \amp 0 \\0 \amp 7 \amp 9   \amp  2 \amp 1 \amp 0 \\0 \amp -2 \amp  -3 \amp -1 \amp 0 \amp 1 \end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp \frac{R_{1}}{2}\;\;\;\qquad\\
+R'_{2}  = \amp R_{2}+4R'_{1}\\
+R'_{3}  = \amp R_{3}-R_{1}
+\end{matrix} \\
+\amp \sim \left(\begin{array}{c c c | c c c} 1 \amp 0 \amp \frac{33}{14} \amp  \frac{5}{14} \amp  -\frac{1}{14} \amp 0 \\0 \amp 1 \amp \frac{9}{7} \amp    \frac{2}{7} \amp  \frac{1}{7} \amp 0 \\0 \amp 0 \amp  -\frac{3}{7} \amp   -\frac{3}{7} \amp 0 \amp 1 \end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp R_{1}-\frac{R'_{2}}{2} \\
+R'_{2}  = \amp \frac{R_{2}}{7}\;\;\;\qquad\\
+R'_{3}  = \amp R_{3}+2R'_{2}
+\end{matrix}  \\
+\amp \sim \left(\begin{array}{c c c | c c c} 1 \amp 0 \amp 0  \amp  -2  \amp  \frac{3}{2} \amp \frac{11}{2} \\0 \amp 1 \amp 0  \amp   -1 \amp  1 \amp 3 \\0 \amp 0 \amp  1  \amp   1 \amp -\frac{2}{3} \amp -\frac{7}{3} \end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp R_{1}-\frac{33R'_{3}}{14} \\
+R'_{2}  = \amp R_{2}-\frac{9R'_{3}}{7} \\
+R'_{3}  = \amp -\frac{7R'_{3}}{3} \;\;\; \qquad
+\end{matrix}  
+\end{align*}
+</div>Thus<div class="displaymath process-math">
+\begin{equation*}
+A^{-1}=\begin{pmatrix} -2 \amp \frac{3}{2} \amp \frac{11}{2} \\ -1 \amp 1 \amp 3 \\ 1 \amp -\frac{2}{3} \amp  -\frac{7}{3} \end{pmatrix}.  
+\end{equation*}
+</div>Of course we can always check our answer by confirming that  <span class="process-math">\(AA^{-1}=I \text{.}\)</span>
+</div></details></article><span class="incontext"><a class="internal" href="Linear_Algebra_4.html#Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3">in-context</a></span>
+</body>
+</html>

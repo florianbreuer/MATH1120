@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DE6: An Application of Second Order Linear DEs with Constant Coefficients</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "pre.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<p class="byline">Edited by: Florian Breuer</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Differential_Equations_5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Differenial_Equations.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Part-Linear_Algebra.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">3.2</span> <span class="title">Graphing functions of two variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.4</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.5</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="Part-Differenial_Equations.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Equations</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_1.html" class="internal"><span class="codenumber">9</span> <span class="title">DE1: Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_1.html#introduction-17" class="internal"><span class="codenumber">9.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#direction-fields-and-eulers-method" class="internal"><span class="codenumber">9.2</span> <span class="title">Direction Fields and Euler’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_1.html#direction-fields" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#eulers-method" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Euler’s Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_1.html#eulers-method-8" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_2.html" class="internal"><span class="codenumber">10</span> <span class="title">DE2: First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs" class="internal"><span class="codenumber">10.1</span> <span class="title">First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs-12" class="internal"><span class="codenumber">10.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" class="internal"><span class="codenumber">10.2</span> <span class="title">Some Simple Applications of First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5" class="internal"><span class="codenumber">10.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5" class="internal"><span class="codenumber">10.A</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5-8" class="internal"><span class="codenumber">10.A</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_3.html" class="internal"><span class="codenumber">11</span> <span class="title">DE3: First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_3.html#Exact_First_Order_DEs" class="internal"><span class="codenumber">11.1</span> <span class="title">Exact First Order DEs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_3.html#First_Order_Linear_DEs" class="internal"><span class="codenumber">11.2</span> <span class="title">First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_3.html#First_Order_Linear_DEs-10" class="internal"><span class="codenumber">11.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs" class="internal"><span class="codenumber">11.3</span> <span class="title">Some Simple Applications of First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs-5" class="internal"><span class="codenumber">11.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_4.html" class="internal"><span class="codenumber">12</span> <span class="title">DE4: Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients" class="internal"><span class="codenumber">12.1</span> <span class="title">Homogeneous Second Order Linear DEs With Constant Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25" class="internal"><span class="codenumber">12.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_5.html" class="internal"><span class="codenumber">13</span> <span class="title">DE5: Non-Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs" class="internal"><span class="codenumber">13.1</span> <span class="title">Non-Homogeneous First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs-8" class="internal"><span class="codenumber">13.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients" class="internal"><span class="codenumber">13.2</span> <span class="title">The Method of Undetermined Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients-15" class="internal"><span class="codenumber">13.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_an_External_Force" class="internal"><span class="codenumber">14.3</span> <span class="title">Adding an External Force</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_an_External_Force-8" class="internal"><span class="codenumber">14.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-Linear_Algebra.html" class="internal"><span class="codenumber">III</span> <span class="title">Linear Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_1.html" class="internal"><span class="codenumber">15</span> <span class="title">LA1: Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Introduction" class="internal"><span class="codenumber">15.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.2</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.3</span> <span class="title">Solving Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations-17" class="internal"><span class="codenumber">15.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html" class="internal"><span class="codenumber">16</span> <span class="title">LA2: Geometric Interpretations of Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows" class="internal"><span class="codenumber">16.1</span> <span class="title">Interpretation Via Rows</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows-7" class="internal"><span class="codenumber">16.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns" class="internal"><span class="codenumber">16.2</span> <span class="title">Interpretation Via Columns</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns-20" class="internal"><span class="codenumber">16.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html" class="internal"><span class="codenumber">17</span> <span class="title">LA3: Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication" class="internal"><span class="codenumber">17.1</span> <span class="title">Addition and Scalar Multiplication</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication-7" class="internal"><span class="codenumber">17.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication" class="internal"><span class="codenumber">17.2</span> <span class="title">Matrix Multiplication</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication-11" class="internal"><span class="codenumber">17.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">17.3</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations-9" class="internal"><span class="codenumber">17.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations" class="internal"><span class="codenumber">17.4</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations-8" class="internal"><span class="codenumber">17.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html" class="internal"><span class="codenumber">18</span> <span class="title">LA4: Square Matrices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html#Inverse_Matrices" class="internal"><span class="codenumber">18.1</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_4.html#Inverse_Matrices-31" class="internal"><span class="codenumber">18.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html#Determinants" class="internal"><span class="codenumber">18.2</span> <span class="title">Determinants</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_4.html#Determinants-18" class="internal"><span class="codenumber">18.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_5.html" class="internal"><span class="codenumber">19</span> <span class="title">LA5: Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Introduction" class="internal"><span class="codenumber">19.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" class="internal"><span class="codenumber">19.2</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-16" class="internal"><span class="codenumber">19.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_A_Simple_Application" class="internal"><span class="codenumber">19.3</span> <span class="title">A Simple Application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html" class="internal"><span class="codenumber">20</span> <span class="title">LA6: Some Applications of Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html#Powers_of_Matrices" class="internal"><span class="codenumber">20.1</span> <span class="title">Powers of Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_6.html#Powers_of_Matrices-10" class="internal"><span class="codenumber">20.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations" class="internal"><span class="codenumber">20.2</span> <span class="title">Coupled Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations-12" class="internal"><span class="codenumber">20.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Differential_Equations_6"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">14</span><span class="space"> </span><span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span>
+</h2>
+<section class="introduction" id="Differential_Equations_6-2"><div class="para logical" id="Differential_Equations_6-2-1">
+<div class="para">Recall that for a function <span class="process-math">\(y=y(x)\)</span> a 2nd order linear DE with constant coefficients is a DE of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_4.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+ay''+by'+cy=f(x)
+\end{equation*}
+</div>
+<div class="para">In previous lectures (i.e. <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a> and <a href="Differential_Equations_5.html" class="internal" title="Chapter 13: DE5: Non-Homogeneous Second Order Linear DEs">Chapter 13</a>) we discussed how to find solutions to DEs of this form (for various possibilities of <span class="process-math">\(f(x)\)</span> at least). In this lecture we are going to discuss an application of this type of DE to modelling the vibrations of springs.</div>
+</div></section><section class="section" id="A_Simple_Model"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.1</span><span class="space"> </span><span class="title">A Simple Model</span>
+</h3>
+<div class="para" id="A_Simple_Model-2">In this section we are going to model the motion of an object attached to the free end of a spring which has its other end fixed as shown in <a href="Differential_Equations_6.html#DE_6_Figure_1" class="xref" data-knowl="./knowl/xref/DE_6_Figure_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.1">Figure 14.1</a>. To construct this model set up an axis with its origin at the centre of the object when the object-spring system is in equilibrium and with the positive direction going upward. With respect to this axis assume that without the object attached the end of the spring is at <span class="process-math">\(y=N\text{.}\)</span> Now, imagine that the object is pulled down <span class="process-math">\(L\)</span> units (with respect to the axis) and then let go. <figure class="figure figure-like" id="DE_6_Figure_1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/6/figure_1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.1<span class="period">.</span></span><span class="space"> </span>Representation of an object-spring system.</figcaption></figure> Our models for the motion of the object will be based Hooke’s Law and Newton’s second law of motion.</div>
+<article class="definition definition-like" id="A_Simple_Model-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.2</span><span class="period">.</span><span class="space"> </span><span class="title">Hooke’s Law.</span>
+</h4> <div class="para" id="A_Simple_Model-3-2">If a spring is stretched (compressed) <span class="process-math">\(U\)</span> units beyond its natural position then it pulls (pushes) with a force, <span class="process-math">\(\mathbf{F_r}\text{,}\)</span> of magnitude <dfn class="terminology"><div class="displaymath process-math">
+\begin{equation*}
+\vert \mathbf{F_r} \vert =kU, \hspace{5mm} k&gt;0
+\end{equation*}
+</div></dfn> where the value of <span class="process-math">\(k\)</span> depends on the properties of the spring itself.</div></article><div class="para" id="A_Simple_Model-4">Common terminology is to call the force <span class="process-math">\(\mathbf{F_r}\)</span> the <dfn class="terminology">restoring force</dfn> and the constant <span class="process-math">\(k\)</span> the <dfn class="terminology">spring constant</dfn>.</div>
+<article class="definition definition-like" id="A_Simple_Model-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.3</span><span class="period">.</span><span class="space"> </span><span class="title">Newton’s Second Law of Motion.</span>
+</h4> <div class="para" id="A_Simple_Model-5-2">The acceleration, <span class="process-math">\(\mathbf{a}\text{,}\)</span> of an object as produced by a net force, <span class="process-math">\(\mathbf{F}\text{,}\)</span>  is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass, <span class="process-math">\(m\text{,}\)</span> of the object, i.e. <span class="process-math">\(\mathbf{F}=m\mathbf{a}\text{.}\)</span>
+</div></article><div class="para" id="A_Simple_Model-6">So, now consider the forces acting on the object at any time <span class="process-math">\(t\)</span> after the object has been pulled down and released. In our initial model we will assume that there are just two forces acting on the object as shown in <a href="Differential_Equations_6.html#DE_6_Figure_2" class="xref" data-knowl="./knowl/xref/DE_6_Figure_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.4">Figure 14.4</a>: firstly the force due to gravity, <span class="process-math">\(\mathbf{F_g}\text{,}\)</span> and secondly the restoring force, <span class="process-math">\(\mathbf{F_r}\text{,}\)</span> due to the spring. <figure class="figure figure-like" id="DE_6_Figure_2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.4<span class="period">.</span></span><span class="space"> </span>Forces in an object-spring system.</figcaption></figure> With the axis as set up in <a href="Differential_Equations_6.html#DE_6_Figure_2" class="xref" data-knowl="./knowl/xref/DE_6_Figure_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.4">Figure 14.4</a> (or <a href="Differential_Equations_6.html#DE_6_Figure_1" class="xref" data-knowl="./knowl/xref/DE_6_Figure_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.1">Figure 14.1</a>), <span class="process-math">\(\mathbf{F_g}\)</span> will always act in the negative direction. However, <span class="process-math">\(\mathbf{F_r}\)</span> will be positive when the displacement of the object is less than <span class="process-math">\(N\)</span> and negative when the displacement of the object is greater than <span class="process-math">\(N\)</span> (i.e. the restoring force always acts in the direction of the natural position of the spring). Notice that since the motion of the object is one dimensional we can represent the relevant vector quantities by real numbers. The sign of the number will give us the direction of the vector.</div>
+<div class="para logical" id="A_Simple_Model-7">
+<div class="para">Thus, the force due to gravity is constant and is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_g=-mg
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(m\)</span> is the mass of the object and <span class="process-math">\(g\)</span> is the acceleration due to gravity. (This follows from Newton’s Universal Law of Gravitation and Newton’s second law of motion.). If <span class="process-math">\(y\)</span> represents the displacement of (the centre of) the object then from Hooke’s Law</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_r=-k(y-N)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\gt 0\)</span> is the spring constant. Notice that the negative sign is needed in this relationship to make the restoring force act in the correct direction. Thus the net force acting on the object is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F=F_g+F_r=-mg-ky+kN
+\end{equation*}
+</div>
+<div class="para">Now if we let <span class="process-math">\(a\)</span> be the acceleration of the object, then from Newton’s second law of motion</div>
+</div>
+<div class="para logical" id="A_Simple_Model-8"><div class="displaymath process-math" id="A_Simple_Model-8-1">
+\begin{align*}
+ma \amp=F\\
+m\frac{d^2y}{dt^2} \amp=-mg-ky+kN
+\end{align*}
+</div></div>
+<div class="para logical" id="A_Simple_Model-9">
+<div class="para">Thus we are able to model the displacement of the object via a 2nd order linear DE with constant coefficients, along with the initial conditions</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y(0)=-L,\hspace{5mm} y'(0)=0
+\end{equation*}
+</div>
+<div class="para">We can further simplify the DE by noting that when the object-spring system is in equilibrium the net force is zero and hence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-mg+kN=0
+\end{equation*}
+</div>
+<div class="para">Using this, the model simplifies to</div>
+<div class="displaymath process-math" id="Equation_14_1_1">
+\begin{equation}
+\frac{d^2y}{dt^2}+\left(\frac{k}{m}\right)y=0, \hspace{5mm}y(0)=-L, \hspace{5mm}y'(0)=0,\hspace{5mm} k&gt;0,\hspace{5mm} m&gt;0\tag{14.1}
+\end{equation}
+</div>
+<div class="para">which is an initial-value problem involving a homogeneous 2nd order linear DE with constant coefficients.</div>
+</div>
+<div class="para logical" id="A_Simple_Model-10">
+<div class="para">Using the methods outlined in <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a> we find that the general solution to <a href="Differential_Equations_6.html#Equation_14_1_1" class="xref" data-knowl="./knowl/xref/Equation_14_1_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.1">(14.1)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_4.html ./knowl/xref/Equation_14_1_1.html ./knowl/xref/Fig_14_1_5.html">
+\begin{equation*}
+y(t)=C_1\cos(qt)+C_2\sin(qt)
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(q=\sqrt{\frac{k}{m}}\)</span> is called the <dfn class="terminology">natural frequency</dfn> of the system. (Note that <span class="process-math">\(q\)</span> should probably be called the "natural angular frequency" since the frequency of <span class="process-math">\(y\)</span> is <span class="process-math">\(\frac{q}{2\pi}\text{.}\)</span>) The derivative of <span class="process-math">\(y\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_4.html ./knowl/xref/Equation_14_1_1.html ./knowl/xref/Fig_14_1_5.html">
+\begin{equation*}
+y'(t)=-C_1\sin(qt)+C_2\cos(qt)
+\end{equation*}
+</div>
+<div class="para">and hence from the initial conditions we find that <span class="process-math">\(C_1=-L\)</span> and <span class="process-math">\(C_2=0\text{.}\)</span> Thus the solution to the initial-value problem is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Differential_Equations_4.html ./knowl/xref/Equation_14_1_1.html ./knowl/xref/Fig_14_1_5.html">
+\begin{equation*}
+y(t)=-L\cos(qt)
+\end{equation*}
+</div>
+<div class="para">As shown in <a href="Differential_Equations_6.html#Fig_14_1_5" class="xref" data-knowl="./knowl/xref/Fig_14_1_5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.5">Figure 14.5</a>, this solution is telling us that (under the assumptions of the model) the motion of the object will be periodic about the equilibrium position i.e. will be simple harmonic motion. <figure class="figure figure-like" id="Fig_14_1_5"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.5<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(y(t)=-L\cos(qt)\text{.}\)</span></figcaption></figure> Of course real springs do not oscillate forever and so we conclude that our model must have ignored some important details (e.g. air resistance, frictional forces etc.) Despite this obvious shortcoming we will use this simple model as the basis for looking at more complicated contexts.</div>
+</div></section><section class="section" id="Adding_Damping"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">Adding Damping</span>
+</h3>
+<div class="para logical" id="Adding_Damping-2">
+<div class="para">Imagine now that some sort of damping mechanism is added to the object-spring system as shown in <a href="Differential_Equations_6.html#Fig_14_2_1" class="xref" data-knowl="./knowl/xref/Fig_14_2_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.6">Figure 14.6</a>. (Such a system might be used as a simple model of a car shock absorber for example.) <figure class="figure figure-like" id="Fig_14_2_1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_4.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.6<span class="period">.</span></span><span class="space"> </span>Representation of an object-spring system with a damping mechanism.</figcaption></figure> So long as the speed of the object is not too fast then a reasonable assumption is that the damping force acting on the object, <span class="process-math">\(\mathbf{F_d}\text{,}\)</span>  is proportional to the speed and acts in the direction opposing  the motion of the object. Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
+\begin{equation*}
+F_d=-D\frac{dy}{dt}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(D\gt 0\text{.}\)</span> Thus the motion of the object can be modelled by the DE</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
+\begin{equation*}
+m\frac{d^2y}{dt^2}=-ky-D\frac{dy}{dt}
+\end{equation*}
+</div>
+<div class="para">which can be rearranged as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
+\begin{equation*}
+y''+\left(\frac{D}{m}\right)y'+\left(\frac{k}{m}\right)y=0
+\end{equation*}
+</div>
+<div class="para">i.e. a homogeneous 2nd order linear DE with constant coefficients. It is convenient in the subsequent algebra to let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
+\begin{equation*}
+\frac{D}{m}=2p \textrm{ and } \frac{k}{m}=q^2
+\end{equation*}
+</div>
+<div class="para">and so the model becomes</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html" id="Eqn_14_2_1">
+\begin{equation}
+y''+2py'+q^2y=0,\hspace{5mm} y(0)=-L,\hspace{5mm} y'(0)=0, \hspace{5mm}p\gt 0,\hspace{5mm} q\gt 0\tag{14.2}
+\end{equation}
+</div>
+<div class="para">The characteristic equation for <a href="Differential_Equations_6.html#Eqn_14_2_1" class="xref" data-knowl="./knowl/xref/Eqn_14_2_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.2">(14.2)</a> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
+\begin{equation*}
+r^2+2pr+q^2=0
+\end{equation*}
+</div>
+<div class="para">which gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
+\begin{equation*}
+r=\frac{-2p\pm \sqrt{4p^2-4q^2}}{2}=-p\pm \sqrt{p^2-q^2}
+\end{equation*}
+</div>
+<div class="para">Thus the nature of the general solution to <a href="Differential_Equations_6.html#Eqn_14_2_1" class="xref" data-knowl="./knowl/xref/Eqn_14_2_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.2">(14.2)</a> depends upon the sign of <span class="process-math">\(p^2-q^2\text{,}\)</span> or equivalently, on the magnitude of the parameter <span class="process-math">\(\delta=\frac{p}{q}\text{.}\)</span> <span class="process-math">\(\delta\)</span> is called the <dfn class="terminology">damping parameter</dfn> of the system.</div>
+</div>
+<div class="para logical" id="Adding_Damping-3">
+<div class="para">If <span class="process-math">\(p^2-q^2\gt 0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}\lt 1\)</span>) then the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_2.html">
+\begin{equation*}
+y(t)=e^{-pt}(C_1\cos(\omega t)+C_2\sin(\omega t))
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\omega=\sqrt{q^2-p^2}\)</span> and hence the function will be like that shown in <a href="Differential_Equations_6.html#Fig_14_2_2" class="xref" data-knowl="./knowl/xref/Fig_14_2_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.7">Figure 14.7</a>. In this case the system is called <dfn class="terminology">under-damped</dfn>. <figure class="figure figure-like" id="Fig_14_2_2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_5.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.7<span class="period">.</span></span><span class="space"> </span>Plot of under-damped solution <span class="process-math">\(y(t)\text{.}\)</span></figcaption></figure>
+</div>
+</div>
+<div class="para logical" id="Adding_Damping-4">
+<div class="para">If <span class="process-math">\(p^2-q^2\gt 0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}\gt 1\)</span>) then the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_3.html ./knowl/xref/Fig_14_2_4.html">
+\begin{equation*}
+y(t)=C_1e^{r_1t}+C_2e^{r_2t}
+\end{equation*}
+</div>
+<div class="para">where both <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\)</span> are negative and hence the function will be like that shown in <a href="Differential_Equations_6.html#Fig_14_2_3" class="xref" data-knowl="./knowl/xref/Fig_14_2_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.8">Figure 14.8</a>. In this case the system is called <dfn class="terminology">over-damped</dfn>. <figure class="figure figure-like" id="Fig_14_2_3"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_6.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.8<span class="period">.</span></span><span class="space"> </span>Plot of over-damped solution <span class="process-math">\(y(t)\text{.}\)</span></figcaption></figure> Finally if <span class="process-math">\(p^2-q^2=0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}=1\)</span>) then the general solution is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_3.html ./knowl/xref/Fig_14_2_4.html">
+\begin{equation*}
+y(t)=(C_1+C_2t)e^{-pt}
+\end{equation*}
+</div>
+<div class="para">and hence the function will be like that shown in <a href="Differential_Equations_6.html#Fig_14_2_4" class="xref" data-knowl="./knowl/xref/Fig_14_2_4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.9">Figure 14.9</a>. In this case the system is called <dfn class="terminology">critically-damped</dfn>. <figure class="figure figure-like" id="Fig_14_2_4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_7.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.9<span class="period">.</span></span><span class="space"> </span>Plot of critically-damped solution <span class="process-math">\(y(t)\text{.}\)</span></figcaption></figure> The critically-damped case is of practical interest. Often we want to add damping to a system so that it returns close to its equilibrium position "as quickly as possible", (for example in the shock absorber of a car). It turns out that this is achieved by critical damping.</div>
+</div>
+<article class="example example-like" id="Adding_Damping-5"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">14.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Adding_Damping-5-1">
+<div class="para">Consider the second-order linear homogeneous differential equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{d^2x}{dt^2}+\dfrac{D}{m}\dfrac{dx}{dt}+\dfrac{k}{m}x=0
+\end{equation*}
+</div>
+<div class="para">which has the damping parameter</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\delta = \dfrac{p}{q} = \dfrac{\frac{D}{2m}}{\sqrt{\frac{k}{m}}}=\dfrac{D}{2\sqrt{km}}.
+\end{equation*}
+</div>
+<div class="para">The Sage cell below considers the case where <span class="process-math">\(m=0.5\)</span>kg and <span class="process-math">\(k=0.5\)</span> (i.e. <span class="process-math">\(\delta = D\)</span>) and plots the solution <span class="process-math">\(x(t)\)</span> for various <span class="process-math">\(\delta\text{.}\)</span>
+</div>
+</div> <pre id="Adding_Damping-5-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = 1   # parameters in general solution
+B = 0
+m = 0.5   # mass 0.5kg
+k = 0.5   # spring constant
+
+t = var('t')
+
+@interact
+def _(D = slider(0,4,default=1,step_size=0.2), auto_update=false):
+    p = D/(2*m)
+    q = sqrt(k/m)
+    d = p/q           # damping parameter
+    w = abs(sqrt(q^2-p^2)) # frequency
+    if d > 1:   # over-damped
+        print("Over-damped: delta = ", d)
+        x = A*exp((-p + w)*t) + B*exp((-p - w)*t)
+    elif d == 1: # critcally damped
+        print("Critically damped: delta = 1")
+        x = (A+B*t)*exp(-p*t)
+    else: # under-damped
+        print("Under-damped: delta = ", d)
+        x = exp(-p*t)*(A*cos(w*t) + B*sin(w*t))
+    show(plot(x,(t,0,4*pi),aspect_ratio=6))
+</script></pre></article></section><section class="section" id="Adding_an_External_Force"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">14.3</span><span class="space"> </span><span class="title">Adding an External Force</span>
+</h3>
+<div class="para logical" id="Adding_an_External_Force-2">
+<div class="para">In our final model we will look at the situation where some other external force, <span class="process-math">\(\mathbf{F_e}\text{,}\)</span> is also acting on the object along the <span class="process-math">\(y\)</span>-axis, as shown in <a href="Differential_Equations_6.html#Fig_14_3_1" class="xref" data-knowl="./knowl/xref/Fig_14_3_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.11">Figure 14.11</a>. This context has many applications, especially in engineering, although in most applications the context doesn’t actually look like the diagram shown in <a href="Differential_Equations_6.html#Fig_14_3_1" class="xref" data-knowl="./knowl/xref/Fig_14_3_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.11">Figure 14.11</a>. For example if the top of a power pole is pulled to one side and let go it will behave like an object-spring system with damping. Now when a wind blows past the pole it is possible that aerodynamic effects can result in an oscillating side force acting on the pole. <figure class="figure figure-like" id="Fig_14_3_1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_8.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.11<span class="period">.</span></span><span class="space"> </span>Representation of object-spring system with a damping mechanism and an external force.</figcaption></figure> Assume that the external force is oscillatory and hence can be represented by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+F_e(t)=B\cos(\alpha t)
+\end{equation*}
+</div>
+<div class="para">Then the net force acting on the object will be</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+F=F_g+F_r+F_d+F_e
+\end{equation*}
+</div>
+<div class="para">and hence the motion of the object can be modelled by the DE</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+m\frac{d^2y}{dt^2}=-ky-D\frac{dy}{dt}+B\cos(\alpha t)
+\end{equation*}
+</div>
+<div class="para">Following the same steps as in the previous section we can, therefore, write our model as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html" id="Eqn_14_3_1">
+\begin{equation}
+y''+2py'+q^2y=A\cos(\alpha t),\hspace{5mm} y(0)=-L,\hspace{5mm} y'(0)=0,\hspace{5mm} p\gt 0,\hspace{5mm} q\gt 0,\hspace{5mm} A=\frac{B}{m}\tag{14.3}
+\end{equation}
+</div>
+<div class="para">So now the DE is a non-homogeneous 2nd order linear DE with constant coefficients. The general solution is constructed from the complementary solution and a particular solution. We know the complementary solution from our previous model. From that model we know that the complementary solution always tends to <span class="process-math">\(0\)</span> as <span class="process-math">\(t\rightarrow\infty\text{.}\)</span> Thus the long term behaviour of this system is determined by the particular solution to <a href="Differential_Equations_6.html#Eqn_14_3_1" class="xref" data-knowl="./knowl/xref/Eqn_14_3_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.3">(14.3)</a>. From <a href="Differential_Equations_5.html" class="internal" title="Chapter 13: DE5: Non-Homogeneous Second Order Linear DEs">Chapter 13</a> we know that a particular solution will be of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+y_p(t)=a\cos(\alpha t)+b\sin(\alpha t)
+\end{equation*}
+</div>
+<div class="para">Substituting into <a href="Differential_Equations_5.html" class="internal" title="Chapter 13: DE5: Non-Homogeneous Second Order Linear DEs">Chapter 13</a> and equating coefficients gives</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+a=\left(\frac{2p\alpha}{4p^2\alpha^2+(\alpha^2-q^2)^2}\right)A, \hspace{5mm} b=\left(\frac{\alpha^2-q^2}{4p^2\alpha^2+(\alpha^2-q^2)^2}\right)A
+\end{equation*}
+</div>
+<div class="para">Since it is easier to interpret we will write <span class="process-math">\(y_p(t)\)</span> as a single trigonometric function. Thus let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+y_p(t)=C\cos(\alpha t-\beta)
+\end{equation*}
+</div>
+<div class="para">Using some standard trigonometric identities it can be shown that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+C=\sqrt{a^2+b^2} \textrm{ and } \beta=\tan^{-1}\left(\frac{b}{a}\right)
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+C=\frac{A}{\sqrt{4p^2\alpha^2+(\alpha^2-q^2)^2}} \textrm{ and } \beta=\tan^{-1}\left(\frac{2p\alpha}{\alpha^2-q^2}\right)
+\end{equation*}
+</div>
+<div class="para">From this we can conclude that the long term response of our damped object-spring system to forcing by an external force <span class="process-math">\(F_e(t)=A\cos(\alpha t)\)</span> is to oscillate at the forcing angular frequency, <span class="process-math">\(\alpha\text{,}\)</span> and with an amplitude</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+C=\frac{A}{\sqrt{4p^2\alpha^2+(\alpha^2-q^2)^2}}
+\end{equation*}
+</div>
+<div class="para">that is the amplitude of the external force multiplied by the factor</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
+\begin{equation*}
+M=\frac{1}{\sqrt{4p^2\alpha^2+(\alpha^2-q^2)^2}}
+\end{equation*}
+</div>
+<div class="para">Notice that, since for a given object-spring system <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are fixed values, this factor <span class="process-math">\(M\)</span> is a function of the forcing angular frequency <span class="process-math">\(\alpha\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="Adding_an_External_Force-3">Run the Sage cell below to plot the graphs of <span class="process-math">\(M(\alpha)\)</span> for various values of <span class="process-math">\(p\)</span> (which relates to the damping coefficient) when <span class="process-math">\(q\)</span> (which relates to the stiffness coefficient) is held constant at <span class="process-math">\(q=1\text{.}\)</span> In fact, it can be shown that if the damping parameter <span class="process-math">\(\delta\)</span> (<span class="process-math">\(=\frac{p}{q}\)</span>) is small then <span class="process-math">\(M\)</span> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <span class="process-math">\(\delta\rightarrow 0\text{.}\)</span>
+</div>
+<pre id="Adding_an_External_Force-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">q = 1
+a = var('a')
+plist = [0.1, 0.2, 0.5, 1, 2]
+legends = ['p = '+str(p)[0:3] for p in plist]
+
+plot([1/sqrt(4*p^2*a^2+(a^2-q^2)^2) for p in plist], (a, 0, 3),
+    legend_label = legends, axes_labels = ['applied frequency', 'response'])
+</script></pre>
+<div class="para" id="Adding_an_External_Force-5">The significance of this analysis is the insight that if our damped object-spring system is subjected to an external oscillatory force near the natural frequency of the system it will respond with large amplitude motion unless the system is sufficiently damped. This phenomenon is known as <dfn class="terminology">resonance</dfn>.</div>
+<div class="para" id="Adding_an_External_Force-6">Using the Sage cell below, you can play with a damped oscillator with applied external force <span class="process-math">\(F_e(t)=B\cos(\alpha t)\text{.}\)</span> (Note: <span class="process-math">\(x_c(t)\)</span> here is actually the solution to the IVP with the right hand side set to zero, and <span class="process-math">\(x_p(t)=x(t)-x_c(t)\)</span> is not the same as the particular solution guessed earlier.)</div>
+<pre id="Adding_an_External_Force-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t = var('t')
+x = function('x')(t)
+alpha = var('alpha')
+a = var('a')
+B = var('B')
+
+show(r"\frac{d^2x}{dt^2}+\frac{D}{m}\frac{dx}{dt}+\frac{k}{m}x=B\cos(\alpha t)")
+@interact
+def _(D = ('damping D = ', slider(0, 5, default=1, step_size=0.1)),
+    m = ('mass m = ', slider(0.1, 5, default=1, step_size=0.1)),
+    k = ('spring k = ', slider(0.1, 5, default=1, step_size=0.1)),
+    B = ('B = ', slider(0, 5, default=1, step_size=0.1)),
+    alpha = ('alpha = ', slider(0, 5, default=1, step_size=0.1)),
+    x0 = ('initial x(0) = ', slider(-5, 5, default=0, step_size=0.1)),
+    xx0 = ("initial x'(0) = ", slider(-5, 5, default=0, step_size=0.1)),
+    tmax = ('t_max ', slider(1, 100, default=20, step_size=1)),
+    plotforce = ('show F_e(t)', true),
+    plotxc = ('show x_c(t)', false),
+    plotxp = ('show x_p(t)', false),
+    plotfr = ('frequency response', true)
+    ):
+    sol = desolve(diff(x,t,2)+(D/m)*diff(x,t)+(k/m)*x == B*cos(alpha*t), x, ics=[0,x0,xx0])
+    solc = desolve(diff(x,t,2)+(D/m)*diff(x,t)+(k/m)*x == 0, x, ics=[0,x0,xx0])
+    solp = sol - solc
+    p = D/(2*m)
+    q = sqrt(k/m)
+    d = p/q
+    show('d = '+latex(N(d,digits=3)))
+    show('x(t) = '+latex(sol))
+    L = [sol]
+    legend = ['x(t)']
+    if plotforce:
+        L.append(B*cos(alpha*t))
+        legend.append('F_e(t)')
+    if plotxc:
+        L.append(solc)
+        legend.append('x_c(t)')
+        show('x_c(t) = '+latex(solc))
+    if plotxp:
+        L.append(solp)
+        legend.append('x_p(t)')
+        show('x_p(t) = '+latex(solp))
+    show(plot(L, 0, tmax, axes_labels = ['t','x'], legend_label = legend))
+    frcurve = plot(1/sqrt(4*p^2*a^2+(a^2-q^2)^2), (a, 0, 5*alpha),
+        axes_labels = ['applied frequency w', 'response'])
+    if plotfr:
+        show(frcurve+line([(alpha,0),(alpha,frcurve.get_minmax_data()['ymax'])], color='red'),
+            legend_label = ['amplitude', 'alpha = '+str(alpha)[0:3]])
+</script></pre>
+<section class="exercises" id="Adding_an_External_Force-8"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="Adding_an_External_Force-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="Adding_an_External_Force-8-2-1-1">Determine the values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in the DE <span class="process-math">\(\frac{d^2x}{dt^2}+2a\frac{dx}{dt}+bx=0\)</span> that give the damped object-spring system a damping parameter of <span class="process-math">\(0.5\)</span> and a natural frequency of <span class="process-math">\(2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="Adding_an_External_Force-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Adding_an_External_Force-8-3-1-1">A beam that is fixed rigidly at one end and designed to support a load at the other end is called a <dfn class="terminology">cantilever</dfn>. If the cantilever is designed only to deflect a "small" amount under its load then it is reasonable to assume that the size of the deflection of the tip of the cantilever is proportional to the load applied. When such a cantilever is deflected beyond (or less than) its equilibrium position the cantilever exerts a restoring force toward the equilibrium position. So long as the deflection is reasonably small and the mass of the object is large compared to the mass of the cantilever this restoring force is proportional to the deflection. Show that the resulting motion of the tip of the cantilever can be modelled under these assumptions via a homogeneous 2nd order linear DE. <figure class="figure figure-like" id="Adding_an_External_Force-8-3-1-1-2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/./DifferentialEquations/Images/6/figure_cantilever.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.12<span class="period">.</span></span><span class="space"> </span>A cantilever.</figcaption></figure>
+</div></article><article class="exercise exercise-like" id="Adding_an_External_Force-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para logical" id="Adding_an_External_Force-8-4-1-1">
+<div class="para">Show that if <span class="process-math">\(a\cos(\alpha t)+b\sin(\alpha t)=C\cos(\alpha t-\beta)\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=\sqrt{a^2+b^2} \textrm{ and } \beta=\tan^{-1}\left(\frac{b}{a}\right)
+\end{equation*}
+</div>
+</div></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Differential_Equations_5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Part-Linear_Algebra.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

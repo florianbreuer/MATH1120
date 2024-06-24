@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LA4: Square Matrices</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<p class="byline">Edited by: Florian Breuer</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Chap-Linear_Algebra_3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Linear_Algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Linear_Algebra_5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">3.2</span> <span class="title">Graphing functions of two variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.4</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.5</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-Differenial_Equations.html" class="internal"><span class="codenumber">II</span> <span class="title">Differential Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_1.html" class="internal"><span class="codenumber">9</span> <span class="title">DE1: Introduction</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#introduction" class="internal"><span class="codenumber">9.1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_1.html#introduction-17" class="internal"><span class="codenumber">9.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#direction-fields-and-eulers-method" class="internal"><span class="codenumber">9.2</span> <span class="title">Direction Fields and Euler’s Method</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_1.html#direction-fields" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Direction Fields</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_1.html#eulers-method" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Euler’s Method</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_1.html#eulers-method-8" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_2.html" class="internal"><span class="codenumber">10</span> <span class="title">DE2: First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs" class="internal"><span class="codenumber">10.1</span> <span class="title">First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-First_Order_Separable_DEs-12" class="internal"><span class="codenumber">10.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" class="internal"><span class="codenumber">10.2</span> <span class="title">Some Simple Applications of First Order Separable DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5" class="internal"><span class="codenumber">10.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5" class="internal"><span class="codenumber">10.A</span> <span class="title">Partial Fraction Decomposition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5-8" class="internal"><span class="codenumber">10.A</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_3.html" class="internal"><span class="codenumber">11</span> <span class="title">DE3: First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_3.html#Exact_First_Order_DEs" class="internal"><span class="codenumber">11.1</span> <span class="title">Exact First Order DEs</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_3.html#First_Order_Linear_DEs" class="internal"><span class="codenumber">11.2</span> <span class="title">First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_3.html#First_Order_Linear_DEs-10" class="internal"><span class="codenumber">11.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs" class="internal"><span class="codenumber">11.3</span> <span class="title">Some Simple Applications of First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_3.html#Simple_Applications_of_First_Order_Linear_DEs-5" class="internal"><span class="codenumber">11.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_4.html" class="internal"><span class="codenumber">12</span> <span class="title">DE4: Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients" class="internal"><span class="codenumber">12.1</span> <span class="title">Homogeneous Second Order Linear DEs With Constant Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_4.html#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25" class="internal"><span class="codenumber">12.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_5.html" class="internal"><span class="codenumber">13</span> <span class="title">DE5: Non-Homogeneous Second Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs" class="internal"><span class="codenumber">13.1</span> <span class="title">Non-Homogeneous First Order Linear DEs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_5.html#Non-Homogeneous_First_Order_Linear_DEs-8" class="internal"><span class="codenumber">13.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients" class="internal"><span class="codenumber">13.2</span> <span class="title">The Method of Undetermined Coefficients</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_5.html#The_Method_of_Undetermined_Coefficients-15" class="internal"><span class="codenumber">13.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_an_External_Force" class="internal"><span class="codenumber">14.3</span> <span class="title">Adding an External Force</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_an_External_Force-8" class="internal"><span class="codenumber">14.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="Part-Linear_Algebra.html" class="internal"><span class="codenumber">III</span> <span class="title">Linear Algebra</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_1.html" class="internal"><span class="codenumber">15</span> <span class="title">LA1: Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Introduction" class="internal"><span class="codenumber">15.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.2</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations" class="internal"><span class="codenumber">15.3</span> <span class="title">Solving Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_1.html#Sec-LA_Solving_Systems_of_Linear_Equations-17" class="internal"><span class="codenumber">15.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html" class="internal"><span class="codenumber">16</span> <span class="title">LA2: Geometric Interpretations of Linear Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows" class="internal"><span class="codenumber">16.1</span> <span class="title">Interpretation Via Rows</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Rows-7" class="internal"><span class="codenumber">16.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns" class="internal"><span class="codenumber">16.2</span> <span class="title">Interpretation Via Columns</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra__2.html#Interpretation_Via_Columns-20" class="internal"><span class="codenumber">16.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html" class="internal"><span class="codenumber">17</span> <span class="title">LA3: Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication" class="internal"><span class="codenumber">17.1</span> <span class="title">Addition and Scalar Multiplication</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication-7" class="internal"><span class="codenumber">17.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication" class="internal"><span class="codenumber">17.2</span> <span class="title">Matrix Multiplication</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrix_multiplication-11" class="internal"><span class="codenumber">17.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations" class="internal"><span class="codenumber">17.3</span> <span class="title">Matrices and Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Matrices_and_Systems_of_Linear_Equations-9" class="internal"><span class="codenumber">17.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations" class="internal"><span class="codenumber">17.4</span> <span class="title">Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Linear_transformations-8" class="internal"><span class="codenumber">17.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html" class="internal"><span class="codenumber">18</span> <span class="title">LA4: Square Matrices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html#Inverse_Matrices" class="internal"><span class="codenumber">18.1</span> <span class="title">Inverse Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_4.html#Inverse_Matrices-31" class="internal"><span class="codenumber">18.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_4.html#Determinants" class="internal"><span class="codenumber">18.2</span> <span class="title">Determinants</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_4.html#Determinants-18" class="internal"><span class="codenumber">18.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_5.html" class="internal"><span class="codenumber">19</span> <span class="title">LA5: Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Introduction" class="internal"><span class="codenumber">19.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" class="internal"><span class="codenumber">19.2</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-16" class="internal"><span class="codenumber">19.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_A_Simple_Application" class="internal"><span class="codenumber">19.3</span> <span class="title">A Simple Application</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html" class="internal"><span class="codenumber">20</span> <span class="title">LA6: Some Applications of Eigenvalues and Eigenvectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html#Powers_of_Matrices" class="internal"><span class="codenumber">20.1</span> <span class="title">Powers of Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_6.html#Powers_of_Matrices-10" class="internal"><span class="codenumber">20.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations" class="internal"><span class="codenumber">20.2</span> <span class="title">Coupled Linear Differential Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Linear_Algebra_6.html#Coupled_Linear_Differential_Equations-12" class="internal"><span class="codenumber">20.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Linear_Algebra_4"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">18</span><span class="space"> </span><span class="title">LA4: Square Matrices</span>
+</h2>
+<section class="introduction" id="Linear_Algebra_4-2"><div class="para logical" id="Linear_Algebra_4-2-1">
+<div class="para">Recall that a square matrix is a matrix with the same number of rows as columns. We call an <span class="process-math">\(n\times n \)</span>  matrix a square matrix of order <span class="process-math">\(n \text{.}\)</span> When we add or multiply two square matrices of order <span class="process-math">\(n \)</span> we always obtain a square matrix of order <span class="process-math">\(n \text{.}\)</span> The zero matrix, <span class="process-math">\(0 \text{,}\)</span> of order <span class="process-math">\(n \)</span> is the  matrix with all entries <span class="process-math">\(0 \text{,}\)</span> i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 =
+\begin{pmatrix}
+0 \amp 0 \amp \cdots \amp 0 \\
+0 \amp 0 \amp \cdots \amp 0 \\
+\vdots  \amp \vdots  \amp \ddots \amp \vdots  \\
+0 \amp 0 \amp \cdots \amp 0
+\end{pmatrix}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="Linear_Algebra_4-2-2">
+<div class="para">and has the properties</div>
+<ol class="decimal">
+<li id="Linear_Algebra_4-2-2-1-1"><div class="para" id="p-derived-Linear_Algebra_4-2-2-1-1"><span class="process-math">\(\displaystyle 0A=A0=0 \)</span></div></li>
+<li id="Linear_Algebra_4-2-2-1-2"><div class="para" id="p-derived-Linear_Algebra_4-2-2-1-2"><span class="process-math">\(\displaystyle A+0=A \)</span></div></li>
+<li id="Linear_Algebra_4-2-2-1-3"><div class="para" id="p-derived-Linear_Algebra_4-2-2-1-3"><span class="process-math">\(\displaystyle A-A=0 \)</span></div></li>
+</ol>
+</div> <div class="para logical" id="Linear_Algebra_4-2-3">
+<div class="para">where <span class="process-math">\(A \)</span> is any square matrix of order <span class="process-math">\(n \text{.}\)</span> The identity matrix, <span class="process-math">\(I, \)</span> of order <span class="process-math">\(n \)</span>  is the <span class="process-math">\(n\times n \)</span> matrix with <span class="process-math">\(1\text{'s} \)</span> on the main diagonal and all other entries <span class="process-math">\(0 \text{.,}\)</span> i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I =
+\begin{pmatrix}
+1 \amp 0 \amp \cdots \amp 0 \\
+0 \amp 1 \amp \cdots \amp 0 \\
+\vdots  \amp \vdots  \amp \ddots \amp \vdots  \\
+0 \amp 0 \amp \cdots \amp 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">The identity matrix has the property that for any square matrix of order <span class="process-math">\(n, \)</span> <span class="process-math">\(A, \)</span>
+</div>
+<ul class="disc"><li id="Linear_Algebra_4-2-3-11-1"><div class="para" id="p-derived-Linear_Algebra_4-2-3-11-1"><span class="process-math">\(\displaystyle IA=AI=A \)</span></div></li></ul>
+<div class="para">
+<span class="process-math">\(I \)</span> is the only matrix that satisfies this property.</div>
+</div></section><section class="section" id="Inverse_Matrices"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">18.1</span><span class="space"> </span><span class="title">Inverse Matrices</span>
+</h3>
+<article class="definition definition-like" id="Inverse_Matrices-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">18.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse Matrix.</span>
+</h4> Given the square matrix <span class="process-math">\(A \text{,}\)</span> if there exists a square matrix <span class="process-math">\(B \)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+AB=BA=I
+\end{equation*}
+</div>then we call the matrix <span class="process-math">\(B \)</span> the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(A \)</span> and write <span class="process-math">\(B=A^{-1} \text{.}\)</span></article><div class="para logical" id="Inverse_Matrices-3">
+<div class="para">Note:</div>
+<ol class="lower-roman">
+<li id="Inverse_Matrices-3-1-1"><div class="para" id="p-derived-Inverse_Matrices-3-1-1">If matrix <span class="process-math">\(B \)</span> is the inverse of matrix <span class="process-math">\(A \)</span> then matrix <span class="process-math">\(A \)</span> is the inverse of matrix <span class="process-math">\(B, \text{,}\)</span> i.e.<div class="displaymath process-math">
+\begin{equation*}
+(A^{-1})^{-1}=A.
+\end{equation*}
+</div>
+</div></li>
+<li id="Inverse_Matrices-3-1-2"><div class="para" id="p-derived-Inverse_Matrices-3-1-2">If matrix <span class="process-math">\(A \)</span> has an inverse then we say that <span class="process-math">\(A \)</span> is <dfn class="terminology">invertible</dfn> or <dfn class="terminology">non-singular</dfn>.</div></li>
+<li id="Inverse_Matrices-3-1-3"><div class="para" id="p-derived-Inverse_Matrices-3-1-3">The inverse of a matrix (if it exists) is unique.</div></li>
+<li id="Inverse_Matrices-3-1-4"><div class="para" id="p-derived-Inverse_Matrices-3-1-4">For matrix <span class="process-math">\(A \text{,}\)</span> if there exists a matrix <span class="process-math">\(B \)</span> such that <span class="process-math">\(AB=I \)</span> then it follows that <span class="process-math">\(BA=I \)</span> as well.</div></li>
+</ol>
+</div>
+<article class="example example-like" id="Ex-Matrix_multiplication_inverse"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-Matrix_multiplication_inverse-1">Let <span class="process-math">\(A=\begin{pmatrix} 1 \amp 1 \\ 1 \amp 2 \end{pmatrix} \quad \mbox{and} \quad B=\begin{pmatrix} 2 \amp -1 \\ -1 \amp 1 \end{pmatrix}.\)</span> Calculate  <span class="process-math">\(AB\; \text{and}\; BA. \)</span>
+</div> <details id="Ex-Matrix_multiplication_inverse-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(AB=BA=I. \)</span></div></details> <details id="Ex-Matrix_multiplication_inverse-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="lower-alpha">
+<li id="Ex-Matrix_multiplication_inverse-3-1-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_inverse-3-1-1"><span class="process-math">\(\displaystyle AB=\begin{pmatrix} 1 \amp 1 \\ 1 \amp 2 \end{pmatrix} \begin{pmatrix} 2 \amp -1 \\ -1 \amp 1 \end{pmatrix} =\begin{pmatrix} 1 \amp 0 \\ 0 \amp 1 \end{pmatrix}=I  \)</span></div></li>
+<li id="Ex-Matrix_multiplication_inverse-3-1-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_inverse-3-1-2"><span class="process-math">\(\displaystyle BA=\begin{pmatrix} 2 \amp -1 \\ -1 \amp 1 \end{pmatrix} \begin{pmatrix} 1 \amp 1 \\ 1 \amp 2 \end{pmatrix} = \begin{pmatrix} 1 \amp 0 \\ 0 \amp 1 \end{pmatrix}=I \)</span></div></li>
+</ol> Thus <span class="process-math">\(A^{-1}=B\; \text{and}\; B^{-1}=A. \)</span>
+</div></details></article><article class="example example-like" id="Ex-Matrix_not_invertible"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-Matrix_not_invertible-1">Show that <span class="process-math">\(A=\begin{pmatrix} 1 \amp -1 \\ 1 \amp -1 \end{pmatrix}  \)</span> is not invertible.</div> <details id="Ex-Matrix_not_invertible-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Assume that <span class="process-math">\(A^{-1} \)</span> exists. Then, since <span class="process-math">\(A^{2}=0, \)</span> we have that<div class="displaymath process-math">
+\begin{equation*}
+A=IA=(A^{-1}A)A=A^{-1}A^{2}=A^{-1}0=0, 
+\end{equation*}
+</div>which is a contradiction. Thus we conclude that <span class="process-math">\(A^{-1} \)</span> does not exist.</div></details></article><div class="para logical" id="Inverse_Matrices-6">
+<div class="para">Given a square matrix <span class="process-math">\(A \)</span> to find its inverse we need to find a matrix <span class="process-math">\(A^{-1} \)</span> such that <span class="process-math">\(AA^{-1}=I \text{.}\)</span>  Let’s begin by considering the <span class="process-math">\(2\times 2 \)</span> case. Let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix} 1 \amp -1 \\ 1 \amp -1 \end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> are given. We want to find the entries in</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1}=\begin{pmatrix} x_{1} \amp y_{1} \\ x_{2} \amp y_{2} \end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(AA^{-1}=I \)</span> we have that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} a \amp b \\ c \amp d \end{pmatrix} \begin{pmatrix} x_{1} \amp y_{1} \\ x_{2} \amp y_{2} \end{pmatrix}=\begin{pmatrix} 1 \amp 0 \\ 0 \amp 1 \end{pmatrix},
+\end{equation*}
+</div>
+<div class="para">or equivalently,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}
+ax_{1} + bx_{2} = 1\\
+cx_{1} + dx_{2} = 0
+\end{cases}
+\;\;\; \text{ and } \;\;\;
+\begin{cases}
+ay_{1} + by_{2} = 0\\
+cy_{1} + dy_{2} = 1
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">Both systems of equations have the same coefficient matrix, i.e.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} a \amp b \\ c \amp d \end{pmatrix}.
+\end{equation*}
+</div>
+<div class="para">The augmented matrices for these systems are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix} a \amp b \amp 1 \\ c \amp d \amp 0 \end{pmatrix}
+\;\;\; \text{ and } \;\;\;
+\begin{pmatrix} a \amp b \amp 0 \\ c \amp d \amp 1 \end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">and since these have the same coefficient matrix we can combine the augmented matrices to get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\begin{array}{c c | c c} a \amp b \amp  1 \amp 0 \\c \amp d \amp 0 \amp 1 \end{array}\right)
+\end{equation*}
+</div>
+<div class="para">By reducing this matrix to reduced row echelon form we can solve both sets of equations at the same time. If <span class="process-math">\(A \)</span> has an inverse then the reduced row-echelon form will be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\begin{array}{c c | c c} 1 \amp 0 \amp  \alpha \amp \beta \\ 0 \amp 1 \amp \chi \amp \delta \end{array}\right)
+\end{equation*}
+</div>
+<div class="para">and hence <span class="process-math">\(x_{1}=\alpha,\; x_{2}=\chi,\; y_{2}=\beta \)</span> and <span class="process-math">\(\; y_{2}=\delta  \text{.}\)</span> Thus, the augmented section of this matrix will contain  <span class="process-math">\(A^{-1} \text{.}\)</span>
+</div>
+</div>
+<article class="example example-like" id="Ex-Inverse_Matrix_1_1_1_2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-Inverse_Matrix_1_1_1_2-1">Find the inverse of matrix <span class="process-math">\(A=\begin{pmatrix} 1 \amp 1 \\ 1 \amp 2 \end{pmatrix}.  \)</span>
+</div> <details id="Ex-Inverse_Matrix_1_1_1_2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(A^{-1}=\begin{pmatrix} 2 \amp -1 \\ -1 \amp 1 \end{pmatrix}.  \)</span></div></details> <details id="Ex-Inverse_Matrix_1_1_1_2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Begin by augmenting matrix  <span class="process-math">\(A \)</span> with the identity matrix  <span class="process-math">\(I, \)</span><div class="displaymath process-math">
+\begin{equation*}
+\left(\begin{array}{c c | c c} 1 \amp 1   \amp  1 \amp 0 \\1 \amp 2 \amp 0 \amp 1 \end{array}\right)
+\end{equation*}
+</div>Now use the elementary row operations to reduce this to reduced row echelon form<div class="displaymath process-math" id="Ex-Inverse_Matrix_1_1_1_2-3-4">
+\begin{align*}
+\left(\begin{array}{c c | c c} 1 \amp 1 \amp  1 \amp 0 \\1 \amp 2 \amp 0 \amp 1 \end{array}\right) \amp \sim\left(\begin{array}{c c | c c} 1 \amp 1 \amp  1 \amp 0 \\0 \amp 1 \amp  -1 \amp 1 \end{array}\right) \hspace{8mm} R'_{2}= R_{2}-R_{1} \\
+\amp \sim \left(\begin{array}{c c | c c} 1 \amp 0 \amp  2 \amp -1 \\0 \amp 1 \amp  -1 \amp 1 \end{array}\right) \hspace{4mm} R'_{1}= R_{1}-R_{2} 
+\end{align*}
+</div>We can read off the inverse as<div class="displaymath process-math">
+\begin{equation*}
+A^{-1}=\begin{pmatrix} 2 \amp -1 \\ -1 \amp 1 \end{pmatrix}.  
+\end{equation*}
+</div>
+</div></details></article><article class="example example-like" id="Ex-Inverse_Matrix_1_minus1_1_minus1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.5</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-Inverse_Matrix_1_minus1_1_minus1-1">Find the inverse of matrix <span class="process-math">\(A=\begin{pmatrix} 1 \amp -1 \\ 1 \amp -1 \end{pmatrix}.  \)</span>
+</div> <details id="Ex-Inverse_Matrix_1_minus1_1_minus1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(A \)</span> has no inverse.</div></details> <details id="Ex-Inverse_Matrix_1_minus1_1_minus1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Using the same procedure as in <a href="Linear_Algebra_4.html#Ex-Inverse_Matrix_1_1_1_2" class="xref" data-knowl="./knowl/xref/Ex-Inverse_Matrix_1_1_1_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 18.4">Example 18.4</a> begin by augmenting matrix <span class="process-math">\(A \)</span> with the identity matrix <span class="process-math">\(I \text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_1_1_1_2.html">
+\begin{equation*}
+\left(\begin{array}{c c | c c}   1 \amp -1 \amp 1 \amp 0 \\1 \amp -1 \amp  0 \amp 1 \end{array}\right)
+\end{equation*}
+</div>Now use the elementary row operations to reduce this to reduced row echelon form.<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_1_1_1_2.html">
+\begin{equation*}
+\left(\begin{array}{c c | c c}   1 \amp -1 \amp  1 \amp 0 \\1 \amp -1 \amp  0 \amp 1 \end{array}\right)\sim \left(\begin{array}{c c | c c}   1 \amp -1 \amp   1 \amp 0 \\0 \amp 0 \amp  -1 \amp 1 \end{array}\right) \hspace{5mm} R'_{2}= R_{2}-R_{1}
+\end{equation*}
+</div>Since there is a row of <span class="process-math">\(0 \)</span>’s in the coefficient part of the reduced row echelon form while the remainder of the row is non-zero, we can see that there is no solution to the equations for finding the entries in the inverse matrix for <span class="process-math">\(A \text{.}\)</span> Thus, we conclude that matrix <span class="process-math">\(A \)</span> is not invertible, i.e. has no inverse.</div></details></article><div class="para" id="Inverse_Matrices-9">The reasoning applied above to find a procedure for finding the inverse of a <span class="process-math">\(2\times 2 \)</span> matrix applies equally well to any sized square matrix. Thus we have a general procedure for finding the inverse of a square matrix.</div>
+<article class="theorem theorem-like" id="Inverse_Matrices-10"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.6</span><span class="period">.</span>
+</h4>Given the square matrix <span class="process-math">\(A \text{,}\)</span> to find its inverse <span class="process-math">\(A^{-1} \text{:}\)</span> <div class="para logical" id="Inverse_Matrices-10-1-3"><ul class="disc">
+<li id="Inverse_Matrices-10-1-3-1-1"><div class="para" id="Inverse_Matrices-10-1-3-1-1-1">Form the matrix <span class="process-math">\(\begin{pmatrix}
+A \bigm |  I \\
+\end{pmatrix} \)</span> by augmenting <span class="process-math">\(A \)</span> with the identity matrix <span class="process-math">\(I, \)</span>
+</div></li>
+<li id="Inverse_Matrices-10-1-3-1-2"><div class="para" id="Inverse_Matrices-10-1-3-1-2-1">Row reduce <span class="process-math">\(\begin{pmatrix}
+A \bigm |  I \\
+\end{pmatrix} \)</span> to reduced row echelon form,</div></li>
+<li id="Inverse_Matrices-10-1-3-1-3"><div class="para" id="Inverse_Matrices-10-1-3-1-3-1">If the reduced row echelon matrix is of the form <span class="process-math">\(\begin{pmatrix}
+I \bigm |  A^{-1} \\
+\end{pmatrix} \)</span> read off <span class="process-math">\(A^{-1} \text{.}\)</span> Otherwise the inverse does not exist.</div></li>
+</ul></div></article><article class="example example-like" id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.7</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3-1">Find the inverse, if it exists, of <span class="process-math">\(A=\begin{pmatrix} 2 \amp 1 \amp 6 \\ -4 \amp 5 \amp -3 \\ 2 \amp -1 \amp  3 \end{pmatrix}.  \)</span>
+</div> <details id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(A^{-1}=\begin{pmatrix} -2 \amp \frac{3}{2} \amp \frac{11}{2} \\ -1 \amp 1 \amp 3 \\ 1 \amp -\frac{2}{3} \amp  -\frac{7}{3} \end{pmatrix}.  \)</span></div></details> <details id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Form the augmented matrix and row reduce to reduced row echelon form:<div class="displaymath process-math" id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3-3-1">
+\begin{align*}
+\amp \left(\begin{array}{c c c | c c c}   2 \amp -1 \amp 6 \amp  1 \amp 0 \amp 0 \\-4 \amp 5 \amp -3   \amp  0 \amp 1 \amp 0 \\2 \amp -1 \amp  3 \amp  0 \amp 0 \amp 1 \end{array}\right)\\
+\amp \sim \left(\begin{array}{c c c | c c c}   1 \amp \frac{1}{2} \amp 3   \amp  \frac{1}{2} \amp 0 \amp 0 \\0 \amp 7 \amp 9   \amp  2 \amp 1 \amp 0 \\0 \amp -2 \amp  -3 \amp -1 \amp 0 \amp 1 \end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp \frac{R_{1}}{2}\;\;\;\qquad\\
+R'_{2}  = \amp R_{2}+4R'_{1}\\
+R'_{3}  = \amp R_{3}-R_{1}
+\end{matrix} \\
+\amp \sim \left(\begin{array}{c c c | c c c} 1 \amp 0 \amp \frac{33}{14} \amp  \frac{5}{14} \amp  -\frac{1}{14} \amp 0 \\0 \amp 1 \amp \frac{9}{7} \amp    \frac{2}{7} \amp  \frac{1}{7} \amp 0 \\0 \amp 0 \amp  -\frac{3}{7} \amp   -\frac{3}{7} \amp 0 \amp 1 \end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp R_{1}-\frac{R'_{2}}{2} \\
+R'_{2}  = \amp \frac{R_{2}}{7}\;\;\;\qquad\\
+R'_{3}  = \amp R_{3}+2R'_{2}
+\end{matrix}  \\
+\amp \sim \left(\begin{array}{c c c | c c c} 1 \amp 0 \amp 0  \amp  -2  \amp  \frac{3}{2} \amp \frac{11}{2} \\0 \amp 1 \amp 0  \amp   -1 \amp  1 \amp 3 \\0 \amp 0 \amp  1  \amp   1 \amp -\frac{2}{3} \amp -\frac{7}{3} \end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp R_{1}-\frac{33R'_{3}}{14} \\
+R'_{2}  = \amp R_{2}-\frac{9R'_{3}}{7} \\
+R'_{3}  = \amp -\frac{7R'_{3}}{3} \;\;\; \qquad
+\end{matrix}  
+\end{align*}
+</div>Thus<div class="displaymath process-math">
+\begin{equation*}
+A^{-1}=\begin{pmatrix} -2 \amp \frac{3}{2} \amp \frac{11}{2} \\ -1 \amp 1 \amp 3 \\ 1 \amp -\frac{2}{3} \amp  -\frac{7}{3} \end{pmatrix}.  
+\end{equation*}
+</div>Of course we can always check our answer by confirming that  <span class="process-math">\(AA^{-1}=I \text{.}\)</span>
+</div></details></article><article class="example example-like" id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_8_15"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.8</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_8_15-1">Find the inverse, if it exists, of <span class="process-math">\(A=\begin{pmatrix} 2 \amp 1 \amp 6 \\ -4 \amp 5 \amp -3 \\ 2 \amp 8 \amp  15 \end{pmatrix}.  \)</span>
+</div> <details id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_8_15-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(A \)</span> has no inverse.</div></details> <details id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_8_15-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Form the augmented matrix and row reduce to reduced row echelon form:<div class="displaymath process-math" id="Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_8_15-3-1">
+\begin{align*}
+\amp \left(\begin{array}{c c c | c c c} 2 \amp 1 \amp 6 \amp  1 \amp 0 \amp 0 \\-4 \amp 5 \amp -3 \amp  0 \amp 1 \amp 0 \\2 \amp 8 \amp  15 \amp  0 \amp 0 \amp 1\end{array}\right)\\
+\amp \sim\left(\begin{array}{c c c | c c c} 1 \amp \frac{1}{2} \amp 3 \amp  \frac{1}{2} \amp 0 \amp 0 \\0 \amp 7 \amp 9 \amp   2 \amp 1 \amp 0 \\0 \amp 7 \amp 9 \amp  -1 \amp 0 \amp 1\end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp \frac{R_{1}}{2}\;\;\;\qquad\\
+R'_{2}  = \amp R_{2}+4R'_{1}\\
+R'_{3}  = \amp R_{3}-R_{1}
+\end{matrix}  \\
+\amp \sim\left(\begin{array}{c c c | c c c} 1 \amp 0 \amp \frac{33}{14}   \amp  \frac{5}{14} \amp  -\frac{1}{14} \amp 0 \\0 \amp 1 \amp \frac{9}{7}  \amp   \frac{2}{7} \amp  \frac{1}{7} \amp 0 \\0 \amp 0 \amp  0 \amp -3 \amp -1 \amp 1\end{array}\right)
+\begin{matrix}
+R'_{1}  = \amp R_{1}-\frac{R'_{2}}{2} \\
+R'_{2}  = \amp \frac{R_{2}}{7}\;\;\;\qquad\\
+R'_{3}  = \amp R_{3}-R'_{2}
+\end{matrix}  
+\end{align*}
+</div>Since the coefficient part of the reduced row echelon matrix is not the identity matrix <span class="process-math">\(A \)</span> does not have an inverse.</div></details></article><div class="para" id="Inverse_Matrices-13">For later reference, some properties of the inverse of a matrix are listed below.</div>
+<article class="theorem theorem-like" id="Inverse_Matrices-14"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.9</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of the Matrix Inverse.</span>
+</h4>Let <span class="process-math">\(A \)</span> and <span class="process-math">\(B \)</span> be square invertible matrices of order <span class="process-math">\(n \)</span> and let <span class="process-math">\(k \)</span> be a real number. Then <div class="para logical" id="Inverse_Matrices-14-2-5"><ol class="decimal">
+<li id="Inverse_Matrices-14-2-5-1-1"><div class="para" id="Inverse_Matrices-14-2-5-1-1-1"><span class="process-math">\(\displaystyle (A^{-1})^{-1}=A \)</span></div></li>
+<li id="Inverse_Matrices-14-2-5-1-2"><div class="para" id="Inverse_Matrices-14-2-5-1-2-1"><span class="process-math">\(\displaystyle (A^{T})^{-1}=(A^{-1})^{T} \)</span></div></li>
+<li id="Inverse_Matrices-14-2-5-1-3"><div class="para" id="Inverse_Matrices-14-2-5-1-3-1"><span class="process-math">\(\displaystyle (kA)^{-1}=\frac{1}{k}A^{-1} \)</span></div></li>
+<li id="Inverse_Matrices-14-2-5-1-4"><div class="para" id="Inverse_Matrices-14-2-5-1-4-1"><span class="process-math">\(\displaystyle (AB)^{-1}=B^{-1}A^{-1} \)</span></div></li>
+<li id="Inverse_Matrices-14-2-5-1-5"><div class="para" id="Inverse_Matrices-14-2-5-1-5-1"><span class="process-math">\(\displaystyle (A^{r})^{-1}=(A^{-1})^{r}\;\;\;\; \text{where}\;\; r\in \mathbb{N} \)</span></div></li>
+</ol></div></article><article class="example example-like" id="Ex-Confirm_ABinverse_equal_B_inverse_A_inverse"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Ex-Confirm_ABinverse_equal_B_inverse_A_inverse-1">
+<div class="para">Confirm that <span class="process-math">\((AB)^{-1}=B^{-1}A^{-1} \)</span> holds for the matrices.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix} 3 \amp 1 \\ -1 \amp 2 \end{pmatrix} \;\;\; \text{and}\;\;\; B=\begin{pmatrix} 1 \amp 5 \\ 0 \amp -2 \end{pmatrix}         
+\end{equation*}
+</div>
+</div> <details id="Ex-Confirm_ABinverse_equal_B_inverse_A_inverse-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Firstly,<div class="displaymath process-math">
+\begin{equation*}
+AB=\begin{pmatrix} 3 \amp 1 \\ -1 \amp 2 \end{pmatrix} \begin{pmatrix} 1 \amp 5 \\ 0 \amp -2 \end{pmatrix} = \begin{pmatrix} 3 \amp 13 \\ -1 \amp -9 \end{pmatrix},
+\end{equation*}
+</div>and so<div class="displaymath process-math">
+\begin{equation*}
+(AB)^{-1}=\begin{pmatrix} 3 \amp 13 \\ -1 \amp 9 \end{pmatrix}^{-1} = \frac{1}{14}\begin{pmatrix} -9 \amp -13 \\ 1 \amp 3 \end{pmatrix}. 
+\end{equation*}
+</div>Next<div class="displaymath process-math">
+\begin{equation*}
+A^{-1}=\begin{pmatrix} 3 \amp 1 \\ -1 \amp 2 \end{pmatrix}^{-1} = \frac{1}{7}\begin{pmatrix} 2 \amp -1 \\ 1 \amp 3 \end{pmatrix}, 
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B^{-1}=\begin{pmatrix} 1 \amp 5 \\ 0 \amp -2 \end{pmatrix}^{-1} = -\frac{1}{2}\begin{pmatrix} -2 \amp -5 \\ 0 \amp 1 \end{pmatrix}, 
+\end{equation*}
+</div>and so<div class="displaymath process-math">
+\begin{equation*}
+B^{-1}A^{-1}= -\frac{1}{2}\begin{pmatrix} -2 \amp -5 \\ 0 \amp 1 \end{pmatrix} \frac{1}{7}\begin{pmatrix} 2 \amp -1 \\ 1 \amp 3 \end{pmatrix} = - \frac{1}{14}\begin{pmatrix} -9 \amp -13 \\ 1 \amp 3 \end{pmatrix}. 
+\end{equation*}
+</div>
+</div></details></article><div class="para" id="Inverse_Matrices-16">The idea of a matrix inverse can be related to the problem of solving systems of linear equations in the case where the number of equations in the system is the same as the number of variables.  As we have seen previously, we can write the system of <span class="process-math">\(n \)</span> linear equations in <span class="process-math">\(n \)</span> unknowns</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_1_1_1_2.html ./knowl/xref/Ax_equal_b.html ./knowl/xref/Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3.html" id="Inverse_Matrices-17">
+\begin{align*}
+a_{11} x_{1}+a_{12}x_{2} + \dots +a_{1n} x_{n}= \amp b_{1}\\
+a_{21} x_{1}+a_{22}x_{2} + \dots +a_{2n} x_{n}= \amp b_{2}\\
+\vdots \amp\\
+a_{n1} x_{1}+a_{n2}x_{2} + \dots +a_{nn} x_{n}= \amp b_{n}
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_1_1_1_2.html ./knowl/xref/Ax_equal_b.html ./knowl/xref/Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3.html" id="Ax_equal_b">
+\begin{equation}
+A \mathbf{x} = \mathbf{b}\tag{18.1}
+\end{equation}
+</div>
+<span class="process-math">\(A \)</span><span class="process-math">\(n\times n \)</span><span class="process-math">\(\mathbf{x} \)</span><span class="process-math">\(n\times 1 \)</span><span class="process-math">\(\mathbf{b} \)</span><span class="process-math">\(A \)</span><a href="Linear_Algebra_4.html#Ax_equal_b" class="xref" data-knowl="./knowl/xref/Ax_equal_b.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 18.1">(18.1)</a><div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_1_1_1_2.html ./knowl/xref/Ax_equal_b.html ./knowl/xref/Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3.html" id="Inverse_Matrices-26">
+\begin{align*}
+A^{-1}(A \mathbf{x})= \amp A^{-1} \mathbf{b},\\
+(A^{-1}A) \mathbf{x}= \amp A^{-1} \mathbf{b},\\
+\mathbf{x}= \amp A^{-1}\mathbf{b}.
+\end{align*}
+</div>
+<article class="example example-like" id="Ex-Solve_sys_equation_by_inverse_matrix"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Ex-Solve_sys_equation_by_inverse_matrix-1">
+<div class="para">Solve the system of equations</div>
+<div class="displaymath process-math" id="Ex-Solve_sys_equation_by_inverse_matrix-1-1">
+\begin{align*}
+2x + y + 6z = \amp 9,\\
+-4x + 5y - 3z = \amp -7,\\
+2x - y + 3z = \amp 5.
+\end{align*}
+</div>
+</div> <details id="Ex-Solve_sys_equation_by_inverse_matrix-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Solve_sys_equation_by_inverse_matrix-2-1"><span class="process-math">\(x=-1, \; y=-1,\; \text{and} \; z=2. \)</span></div></div></details> <details id="Ex-Solve_sys_equation_by_inverse_matrix-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">In matrix notation this system can be written as<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3.html">
+\begin{equation*}
+\begin{pmatrix}
+2 \amp 1 \amp 6  \\
+-4 \amp 5 \amp -3 \\
+2 \amp -1 \amp  3
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}=
+\begin{pmatrix}
+9 \\
+-7 \\
+5
+\end{pmatrix}
+\end{equation*}
+</div>We found the inverse of the coefficient matrix in <a href="Linear_Algebra_4.html#Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3" class="xref" data-knowl="./knowl/xref/Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 18.7">Example 18.7</a> and, using that result, we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Inverse_Matrix_2_1_6_minus4_5_minus3_2_minus1_3.html">
+\begin{equation*}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}=
+\begin{pmatrix}
+-2 \amp \frac{3}{2} \amp \frac{11}{2}  \\
+-1 \amp 1 \amp 3 \\
+1 \amp -\frac{2}{3} \amp  -\frac{7}{3}
+\end{pmatrix}
+\begin{pmatrix}
+9 \\
+-7 \\
+5
+\end{pmatrix}=
+\begin{pmatrix}
+-1 \\
+-1 \\
+2
+\end{pmatrix}
+\end{equation*}
+</div>Thus the solution is  <span class="process-math">\(x=-1, \; y=-1,\; \text{and} \; z=2. \)</span>
+</div></details></article><span class="process-math">\(n \)</span><span class="process-math">\(n \)</span><article class="theorem theorem-like" id="Th-non_homogeneous_system"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.12</span><span class="period">.</span>
+</h4>Consider the non-homogenous system of <span class="process-math">\(n \)</span> linear equations in <span class="process-math">\(n \)</span> variables<div class="displaymath process-math">
+\begin{equation*}
+A \mathbf{x} = \mathbf{b} ,\; \mathbf{b} \neq 0.
+\end{equation*}
+</div>The following statements are equivalent: <div class="para logical" id="Th-non_homogeneous_system-1-4"><ol class="decimal">
+<li id="Th-non_homogeneous_system-1-4-1-1"><div class="para" id="Th-non_homogeneous_system-1-4-1-1-1">The system has a unique solution,</div></li>
+<li id="Th-non_homogeneous_system-1-4-1-2"><div class="para" id="Th-non_homogeneous_system-1-4-1-2-1">
+<span class="process-math">\(A \mathbf{x} =0 \)</span>  has only the trivial solution  <span class="process-math">\(\mathbf{x} =0, \)</span>
+</div></li>
+<li id="Th-non_homogeneous_system-1-4-1-3"><div class="para" id="Th-non_homogeneous_system-1-4-1-3-1">The columns of <span class="process-math">\(A \)</span>  are linearly independent,</div></li>
+<li id="Th-non_homogeneous_system-1-4-1-4"><div class="para" id="Th-non_homogeneous_system-1-4-1-4-1">
+<span class="process-math">\(A \)</span> is invertible.</div></li>
+</ol></div></article><section class="exercises" id="Inverse_Matrices-31"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="Inverse_Matrices-31-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Find the inverse, if it exists, of<div class="displaymath process-math" id="Inverse_Matrices-31-2-1-1">
+\begin{align*}
+A = \amp \begin{pmatrix}
+2 \amp 1 \amp 3  \\
+-1 \amp 2 \amp 4 \\
+8 \amp -1 \amp  1
+\end{pmatrix}\\
+B = \amp \begin{pmatrix}
+1 \amp 1 \amp 2  \\
+-1 \amp 2 \amp -1 \\
+1 \amp -1 \amp 1
+\end{pmatrix}
+\end{align*}
+</div></article><article class="exercise exercise-like" id="Inverse_Matrices-31-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>Find the matrix for a rotation in the plane about the origin through <span class="process-math">\(\frac{\pi}{4}^{c} \)</span>  . Find the inverse of this matrix and interpret it geometrically.</article></section></section><section class="section" id="Determinants"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">18.2</span><span class="space"> </span><span class="title">Determinants</span>
+</h3>
+<div class="para logical" id="Determinants-2">
+<div class="para">If we attempted to find the inverse of the general <span class="process-math">\(2\times 2 \)</span> matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A= \begin{pmatrix}
+a \amp b  \\
+c \amp d
+\end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">we would find that, if <span class="process-math">\(ad-bc\neq 0 \)</span> the inverse is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A^{-1}=\frac{1}{ad-bc} \begin{pmatrix}
+d \amp -b  \\
+-c \amp a
+\end{pmatrix}, 
+\end{equation*}
+</div>
+<div class="para">and if <span class="process-math">\(ad-bc=0 \)</span>  then <span class="process-math">\(A \)</span> does not have an inverse. Thus for a  <span class="process-math">\(2\times 2\)</span> matrix, <span class="process-math">\(A \text{,}\)</span> calculating the quantity <span class="process-math">\(ad-bc \)</span>  can act as a test for the invertibility of <span class="process-math">\(A \text{.}\)</span> This quantity is called the <dfn class="terminology">determinant</dfn> of <span class="process-math">\(A \)</span> and is denoted by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A) \;\text{or}\; \vert A\vert.
+\end{equation*}
+</div>
+</div>
+<article class="example example-like" id="Ex-determinant_2_by_2_matrix"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.13</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Ex-determinant_2_by_2_matrix-1">
+<div class="para">Find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix} 2 \amp -1 \\ 3 \amp 1 \end{pmatrix}.  
+\end{equation*}
+</div>
+</div> <details id="Ex-determinant_2_by_2_matrix-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-determinant_2_by_2_matrix-2-1"><span class="process-math">\(\det(A)=5\)</span></div></div></details> <details id="Ex-determinant_2_by_2_matrix-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex-determinant_2_by_2_matrix-3-1">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{vmatrix}
+2 \amp -1 \\
+3 \amp 1
+\end{vmatrix}=2\times 1 -(3\times (-1))=5.
+\end{equation*}
+</div>
+<div class="para">Note that since the determinant is not zero this matrix is invertible.</div>
+</div></div></details></article><div class="para logical" id="Determinants-4">
+<div class="para">We can also think about the determinant of a <span class="process-math">\(2\times 2\)</span>  matrix geometrically. We know (see <a href="Linear_Algebra_4.html#Th-non_homogeneous_system" class="xref" data-knowl="./knowl/xref/Th-non_homogeneous_system.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 18.12">Theorem 18.12</a>) that a matrix has an inverse when its column vectors are linearly independent. Thus, the <span class="process-math">\(2\times 2\)</span>  matrix</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Th-non_homogeneous_system.html ./knowl/xref/Linear_Algebra__2.html">
+\begin{equation*}
+A= \begin{pmatrix}
+a \amp b  \\
+c \amp d
+\end{pmatrix} 
+\end{equation*}
+</div>
+<div class="para">will have an inverse when the vectors <span class="process-math">\((a,c)^{T} \)</span> and <span class="process-math">\((b,d)^{T} \)</span>  are linearly independent. Now we also know (from <a href="Linear_Algebra__2.html" class="internal" title="Chapter 16: LA2: Geometric Interpretations of Linear Equations">Chapter 16</a>) that two vectors in the plane are linearly independent if they define a parallelogram with non-zero area. Finally, from Math1110, we know that the area of the parallelogram defined by the vectors  <span class="process-math">\(\mathbf{u} = (u_{1},u_{2})^{T} \)</span> and <span class="process-math">\(\mathbf{v} = (v_{1},v_{2})^{T} \)</span>   is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Th-non_homogeneous_system.html ./knowl/xref/Linear_Algebra__2.html">
+\begin{equation*}
+Area=\vert u_{1}v_{2} - u_{2}v_{1}\vert. 
+\end{equation*}
+</div>
+<div class="para">Thus matrix <span class="process-math">\(A \)</span> will have an inverse when <span class="process-math">\(ad-bc\neq 0 \)</span> , i.e.  <span class="process-math">\(\det(A)\neq 0. \)</span>
+</div>
+</div>
+<div class="para logical" id="Determinants-5">
+<div class="para">Let’s now apply the same geometric argument to the general <span class="process-math">\(3 \times 3\)</span> matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix}
+u_{1} \amp v_{1} \amp w_{1}  \\
+u_{2} \amp v_{2} \amp w_{2} \\
+u_{3} \amp v_{3} \amp w_{3}
+\end{pmatrix}=(\mathbf{u}, \mathbf{v}, \mathbf{w}).
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="Determinants-6">
+<div class="para">Three vectors in space are linearly independent if they define a parallelepiped with non-zero volume. Now, the volume of the parallelepiped formed by the vectors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{u} = (u_{1},u_{2},u_{3})^{T} ,\;  \mathbf{v} = (v_{1},v_{2},v_{3})^{T}, \; \text{and} \; \mathbf{w} =(w_{1},w_{2},w_{3})^{T} 
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Volume=\vert \mathbf{u} \cdot \mathbf{v} \times \mathbf{w} \vert, 
+\end{equation*}
+</div>
+<div class="para">i.e. the absolute values of the scalar triple product of the vectors, (again see Math1110). Thus the matrix <span class="process-math">\(A \)</span> will have an inverse when <span class="process-math">\(\mathbf{u} \cdot \mathbf{v} \times \mathbf{w} \neq 0. \)</span> Hence for a <span class="process-math">\(3\times 3 \)</span> matrix its determinant is defined as</div>
+<div class="displaymath process-math" id="Eq-det_with_three_vectors">
+\begin{equation}
+\det(A)=\vert  \mathbf{u} \cdot \mathbf{v} \times \mathbf{w} \vert\tag{18.2}
+\end{equation}
+</div>
+</div>
+<article class="example example-like" id="Ex-determinant_3_by_3_matrix_by_volume"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.14</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Ex-determinant_3_by_3_matrix_by_volume-1">
+<div class="para">Find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A= \begin{pmatrix}
+2 \amp 4 \amp 6  \\
+3 \amp 2 \amp 1 \\
+1 \amp 1 \amp 2
+\end{pmatrix}.
+\end{equation*}
+</div>
+</div> <details id="Ex-determinant_3_by_3_matrix_by_volume-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-determinant_3_by_3_matrix_by_volume-2-1"><span class="process-math">\(\det(A)=-8\)</span></div></div></details> <details id="Ex-determinant_3_by_3_matrix_by_volume-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Let <span class="process-math">\(\mathbf{u}=(2,3,1)^{T},\;  \mathbf{v}=(4,2,1)^{T},\; \mathbf{w}=(6,1,2)^{T}. \)</span> Then<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{v} \times \mathbf{w}=(4,3,1) ^{T} \times (6,1,2)^{T}=(3,-2,-8)^{T}
+\end{equation*}
+</div>and hence<div class="displaymath process-math">
+\begin{equation*}
+\det(A) = (2,3,1) ^{T} \cdot (3,-2,-8)^{T}=(3,-2,-8)^{T}=-8.
+\end{equation*}
+</div>
+</div></details></article><div class="para" id="Determinants-8">While we can calculate the determinant of a <span class="process-math">\(3\times 3\)</span> matrix using formula <a href="Linear_Algebra_4.html#Eq-det_with_three_vectors" class="xref" data-knowl="./knowl/xref/Eq-det_with_three_vectors.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 18.2">(18.2)</a> other algorithms have been derived and have the advantage that they easily generalise to matrices of orders higher than <span class="process-math">\(3 \text{.}\)</span>
+</div>
+<article class="theorem theorem-like" id="Determinants-9"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.15</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Determinants-9-1-1"><ol class="decimal">
+<li id="Determinants-9-1-1-1-1"><div class="para" id="Determinants-9-1-1-1-1-1">For the <span class="process-math">\(2\times 2\)</span> matrix <span class="process-math">\(\begin{pmatrix}
+a \amp b \\
+c \amp d
+\end{pmatrix}\text{,}\)</span> <span class="process-math">\(\det \begin{pmatrix} a \amp b \\ c \amp d \end{pmatrix}=ad-bc \text{.}\)</span>
+</div></li>
+<li id="Determinants-9-1-1-1-2"><div class="para logical" id="Determinants-9-1-1-1-2-1">
+<div class="para">For the <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A=\begin{pmatrix}
+a_{ij}
+\end{pmatrix}\)</span> we define the <dfn class="terminology">minor,</dfn> <span class="process-math">\(M_{ij} \)</span> as the determinant of the <span class="process-math">\((n-1)\times (n-1) \)</span> matrix obtained by deleting the <span class="process-math">\(i\)</span>th row and the <span class="process-math">\(j\)</span>th column of <span class="process-math">\(A \text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A)=\sum_{j=1}^{n}(-1)^{i+j}a_{ij}M_{ij}\qquad \text{for any}\qquad i=1,2,3,\ldots,n
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A)=\sum_{i=1}^{n}(-1)^{i+j}a_{ij}M_{ij}\qquad \text{for any}\qquad j=1,2,3, \ldots, n.
+\end{equation*}
+</div>
+</div></li>
+</ol></div></article><article class="example example-like" id="Ex-determinant_3_by_3_matrix_by_minor"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.16</span><span class="period">.</span><span class="space"> </span><span class="title">(Example 18.14 revisited).</span>
+</h4> <div class="para logical" id="Ex-determinant_3_by_3_matrix_by_minor-2">
+<div class="para">Find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix}
+2 \amp 4 \amp 6  \\
+3 \amp 2 \amp 1 \\
+1 \amp 1 \amp 2
+\end{pmatrix}.
+\end{equation*}
+</div>
+</div> <details id="Ex-determinant_3_by_3_matrix_by_minor-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\det ( A ) = -8\)</span></div></details> <details id="Ex-determinant_3_by_3_matrix_by_minor-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Using the first of the formulas given above with <span class="process-math">\(i=1: \)</span><div class="displaymath process-math" id="Ex-determinant_3_by_3_matrix_by_minor-4-2">
+\begin{align*}
+\det(A) = \amp (-1)^{1+1} 2 \begin{vmatrix}
+2 \amp 1 \\
+1 \amp 2
+\end{vmatrix} + (-1)^{1+2} 4 \begin{vmatrix}
+3 \amp 1 \\
+1 \amp 2
+\end{vmatrix}+ (-1)^{1+3} 6 \begin{vmatrix}
+3 \amp 2 \\
+1 \amp 1
+\end{vmatrix}\\\\
+=\amp 2(4-1)-4(6-1)+6(3-2)\\  \\
+=\amp -8. 
+\end{align*}
+</div>
+</div></details></article><article class="example example-like" id="Ex-determinant_3_by_3_matrix_by_minor_upper_triangle_case"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.17</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Ex-determinant_3_by_3_matrix_by_minor_upper_triangle_case-1">
+<div class="para">Find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix}
+2 \amp 4 \amp 6  \\
+0 \amp 2 \amp 1 \\
+0 \amp 0 \amp -4
+\end{pmatrix}.
+\end{equation*}
+</div>
+</div> <details id="Ex-determinant_3_by_3_matrix_by_minor_upper_triangle_case-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\det ( A ) = -24\)</span></div></details> <details id="Ex-determinant_3_by_3_matrix_by_minor_upper_triangle_case-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex-determinant_3_by_3_matrix_by_minor_upper_triangle_case-3-1">
+<div class="para">Using the second of the formulas given above with <span class="process-math">\(j=1: \)</span>
+</div>
+<div class="displaymath process-math" id="Ex-determinant_3_by_3_matrix_by_minor_upper_triangle_case-3-1-2">
+\begin{align*}
+\det(A) = \amp (-1)^{1+1} 2 \begin{vmatrix}
+3 \amp 1 \\
+0 \amp -4
+\end{vmatrix} + (-1)^{2+1} 0 \begin{vmatrix}
+2 \amp 6 \\
+0 \amp -4
+\end{vmatrix}+ (-1)^{3+1} 0 \begin{vmatrix}
+4 \amp 6 \\
+3 \amp 1
+\end{vmatrix}\\\\
+=\amp 2(-12-0)-0+0\\  \\
+=\amp -24. 
+\end{align*}
+</div>
+<div class="para">Notice that for a matrix that is upper triangular the determinant is just the product of the entries on the main diagonal.</div>
+</div></div></details></article><div class="para" id="Determinants-12">Calculating the determinant of a <span class="process-math">\(3 \times 3 \)</span> matrix via minors is relatively easy. However for matrices of higher orders the calculation can become very tedious. For example, to calculate the determinant of a <span class="process-math">\(4\times 4 \)</span> matrix potentially involves calculating the determinants of four <span class="process-math">\(3\times 3\)</span> matrices. Thus for large matrices the preferred strategy for calculating its determinant is based on the observation that for an upper triangular matrix the determinant is just the product of the entries on the main diagonal.</div>
+<article class="theorem theorem-like" id="Determinants-13"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.18</span><span class="period">.</span>
+</h4>
+<div class="para" id="Determinants-13-1-1">To calculate the determinant of the <span class="process-math">\(n \times n \)</span> matrix <span class="process-math">\(A \text{:}\)</span>
+</div> <div class="para logical" id="Determinants-13-1-2"><ul class="disc"><li id="Determinants-13-1-2-1-1"><div class="para" id="Determinants-13-1-2-1-1-1">Row reduce <span class="process-math">\(A \)</span> to an equivalent upper triangular matrix, <span class="process-math">\(B \text{,}\)</span> noting that;</div></li></ul></div> <div class="para logical" id="Determinants-13-1-3"><ol class="lower-roman">
+<li id="Determinants-13-1-3-1-1"><div class="para logical" id="Determinants-13-1-3-1-1-1">
+<div class="para">If matrix <span class="process-math">\(B \)</span> is obtained from matrix <span class="process-math">\(A \)</span> by interchanging <span class="process-math">\(2 \)</span> rows then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(B)=-\det(A).
+\end{equation*}
+</div>
+</div></li>
+<li id="Determinants-13-1-3-1-2"><div class="para logical" id="Determinants-13-1-3-1-2-1">
+<div class="para">If matrix <span class="process-math">\(B \)</span> is obtained from matrix <span class="process-math">\(A \)</span> by multiplying a row of <span class="process-math">\(A \)</span> by a scalar <span class="process-math">\(k \)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(B)=k\det(A).
+\end{equation*}
+</div>
+</div></li>
+<li id="Determinants-13-1-3-1-3"><div class="para logical" id="Determinants-13-1-3-1-3-1">
+<div class="para">If matrix <span class="process-math">\(B \)</span> is obtained from matrix <span class="process-math">\(A \)</span> by adding a multiple of one row of <span class="process-math">\(A \)</span> to another then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(B)=\det(A).
+\end{equation*}
+</div>
+</div></li>
+</ol></div> <div class="para logical" id="Determinants-13-1-4"><ul class="disc"><li id="Determinants-13-1-4-1-1"><div class="para" id="Determinants-13-1-4-1-1-1">Find the determinant of <span class="process-math">\(B \)</span> by finding the product of the entries on the main diagonal of <span class="process-math">\(B \text{.}\)</span>
+</div></li></ul></div></article><article class="example example-like" id="Ex-determinant_3_by_3_matrix_by_Echelonizing"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.19</span><span class="period">.</span><span class="space"> </span><span class="title">(Example 18.14 revisited).</span>
+</h4> <div class="para logical" id="Ex-determinant_3_by_3_matrix_by_Echelonizing-2">
+<div class="para">Find the determinant of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{pmatrix}
+2 \amp 4 \amp 6  \\
+3 \amp 2 \amp 1 \\
+1 \amp 1 \amp 2
+\end{pmatrix}.
+\end{equation*}
+</div>
+</div> <details id="Ex-determinant_3_by_3_matrix_by_Echelonizing-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\det ( A ) = -8\)</span></div></details> <details id="Ex-determinant_3_by_3_matrix_by_Echelonizing-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Using the row reduction method, first reduce <span class="process-math">\(A \)</span> to an equivalent upper triangular matrix.<div class="displaymath process-math" id="Ex-determinant_3_by_3_matrix_by_Echelonizing-4-2">
+\begin{align*}
+\begin{pmatrix}
+2 \amp 4 \amp 6  \\
+3 \amp 2 \amp 1 \\
+1 \amp 1 \amp 2
+\end{pmatrix}
+\amp \sim
+\begin{pmatrix}
+2 \amp 4 \amp 6  \\
+0 \amp -4 \amp -8 \\
+0 \amp -1 \amp  -1
+\end{pmatrix} \;\;\;
+\begin{matrix}
+\amp  \\
+R'_{2} \amp =  R_{2}-3\frac{R_{1}}{2} \\
+R'_{3} \amp =  R_{3}-\frac{R_{1}}{2}
+\end{matrix}\\
+\amp \sim
+\begin{pmatrix}
+2 \amp 4 \amp 6  \\
+0 \amp -4 \amp -8 \\
+0 \amp 0 \amp  1
+\end{pmatrix} \;\;\;
+\begin{matrix}
+\amp  \\
+\amp  \\
+R'_{3} \amp = R_{3}-\frac{R_{2}}{4}
+\end{matrix}
+\end{align*}
+</div>Since the only elementary row operation used here was that of adding a multiple of one row to another the determinant of the reduced matrix will be the same as the determinant of <span class="process-math">\(A \text{.}\)</span> Thus<div class="displaymath process-math">
+\begin{equation*}
+\det(A)=2\times (-4)\times 1 = -8.
+\end{equation*}
+</div>
+</div></details></article><article class="theorem theorem-like" id="Th-Determinant_Property"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.20</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of the Determinant.</span>
+</h4>Let <span class="process-math">\(A \)</span> and <span class="process-math">\(B \)</span> be square invertible matrices of order <span class="process-math">\(n \)</span> and let <span class="process-math">\(k \)</span> be a real number. Then <div class="para logical" id="Th-Determinant_Property-2-5"><ol class="decimal">
+<li id="Th-Determinant_Property-2-5-1-1"><div class="para" id="Th-Determinant_Property-2-5-1-1-1"><span class="process-math">\(\displaystyle \det(A^{-1})=\frac{1}{\det(A)}\)</span></div></li>
+<li id="Th-Determinant_Property-2-5-1-2"><div class="para" id="Th-Determinant_Property-2-5-1-2-1"><span class="process-math">\(\displaystyle \det(A^{T})=\det(A)\)</span></div></li>
+<li id="Th-Determinant_Property-2-5-1-3"><div class="para" id="Th-Determinant_Property-2-5-1-3-1"><span class="process-math">\(\displaystyle \det(AB)=\det(A) \det(B)\)</span></div></li>
+<li id="Th-Determinant_Property-2-5-1-4"><div class="para" id="Th-Determinant_Property-2-5-1-4-1"><span class="process-math">\(\displaystyle \det(kA)=k^{n} \det(A)\)</span></div></li>
+</ol></div></article><article class="example example-like" id="Ex-determinant_2_by_2_matrix_Property"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">18.21</span><span class="period">.</span>
+</h4>
+<div class="para" id="Ex-determinant_2_by_2_matrix_Property-1">Calculate the determinant of the following matrices. Which property of determinants does this illustrate?</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Th-Determinant_Property.html">
+\begin{equation*}
+A=\begin{pmatrix}
+-1 \amp 2 \\
+3 \amp -4
+\end{pmatrix},\;
+B=\begin{pmatrix}
+-2 \amp 4 \\
+6 \amp -8
+\end{pmatrix}
+\end{equation*}
+</div>
+<details id="Ex-determinant_2_by_2_matrix_Property-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Firstly,<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Th-Determinant_Property.html">
+\begin{equation*}
+\det(A)=(-1)\times (-4)-3\times 2=4-6=-2.
+\end{equation*}
+</div>Next<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Th-Determinant_Property.html">
+\begin{equation*}
+\det(B)=(-2)\times (-8)-4\times 6=16-24=-8.
+\end{equation*}
+</div>Since <span class="process-math">\(A \)</span> and <span class="process-math">\(B \)</span> are square matrices of order <span class="process-math">\(2 \)</span> and <span class="process-math">\(B=2A \)</span> the fact that <span class="process-math">\(\det(B)=4\det(A) \)</span> illustrates Property <span class="process-math">\(4.\)</span> of <a href="Linear_Algebra_4.html#Th-Determinant_Property" class="xref" data-knowl="./knowl/xref/Th-Determinant_Property.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 18.20: Properties of the Determinant">Theorem 18.20</a> above.</div></details></article><article class="theorem theorem-like" id="Th-non_homogeneous_system_Update"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.22</span><span class="period">.</span>
+</h4>Consider the non-homogenous system of <span class="process-math">\(n \)</span> linear equations in <span class="process-math">\(n \)</span> variables<div class="displaymath process-math">
+\begin{equation*}
+A \mathbf{x} = \mathbf{b},\; \mathbf{b} \neq 0.
+\end{equation*}
+</div>The following statements are equivalent: <div class="para logical" id="Th-non_homogeneous_system_Update-1-4"><ol class="decimal">
+<li id="Th-non_homogeneous_system_Update-1-4-1-1"><div class="para" id="Th-non_homogeneous_system_Update-1-4-1-1-1">The system has a unique solution,</div></li>
+<li id="Th-non_homogeneous_system_Update-1-4-1-2"><div class="para" id="Th-non_homogeneous_system_Update-1-4-1-2-1">
+<span class="process-math">\(A \mathbf{x} =0 \)</span>  has only the trivial solution  <span class="process-math">\(\mathbf{x} =0, \)</span>
+</div></li>
+<li id="Th-non_homogeneous_system_Update-1-4-1-3"><div class="para" id="Th-non_homogeneous_system_Update-1-4-1-3-1">The columns of <span class="process-math">\(A \)</span>  are linearly independent,</div></li>
+<li id="Th-non_homogeneous_system_Update-1-4-1-4"><div class="para" id="Th-non_homogeneous_system_Update-1-4-1-4-1">
+<span class="process-math">\(A \)</span> is invertible.</div></li>
+<li id="Th-non_homogeneous_system_Update-1-4-1-5"><div class="para" id="Th-non_homogeneous_system_Update-1-4-1-5-1"><span class="process-math">\(\det(A)\neq 0 \text{.}\)</span></div></li>
+</ol></div></article><section class="exercises" id="Determinants-18"><h4 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
+</h4>
+<article class="exercise exercise-like" id="Determinants-18-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>Find the determinant of<div class="displaymath process-math">
+\begin{equation*}
+M=\begin{pmatrix}
+1 \amp 1 \amp 2  \\
+1 \amp -1 \amp 1 \\
+0 \amp 2 \amp 4
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para logical" id="Determinants-18-2-1-2"><ol class="lower-alpha">
+<li id="Determinants-18-2-1-2-1-1"><div class="para" id="Determinants-18-2-1-2-1-1-1">Using the minor formula.</div></li>
+<li id="Determinants-18-2-1-2-1-2"><div class="para" id="Determinants-18-2-1-2-1-2-1">Using row reduction to an upper triangular matrix.</div></li>
+</ol></div></article></section></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Chap-Linear_Algebra_3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Linear_Algebra_5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
