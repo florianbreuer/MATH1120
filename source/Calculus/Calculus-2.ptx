@@ -925,7 +925,7 @@
 
             <figure width="%" xml:id="fig-1-over-x-squared">
                 <caption>Approximations to <m>\frac{1}{1+x^2}</m> by its Maclaurin polynomials up to degree 30.</caption>
-                <image xml:id="sage-exp-plot" source="Calculus/Images/2/plot-1-over-x-squared.svg" width="100%">
+                <image xml:id="sage-exp-plot-2" source="Calculus/Images/2/plot-1-over-x-squared.svg" width="100%">
                     <description>A plot of <m>y=\frac{1}{1+x^2}</m> together with plots of its Maclaurin polynomials up to degree 30.</description>
                 </image>
             </figure>

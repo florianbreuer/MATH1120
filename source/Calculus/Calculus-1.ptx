@@ -87,7 +87,7 @@
 
         <p>
             The solution is to <em>approximate</em> the function using a <em>power series</em>. For example, the computer approximates <m>e^{0.3}</m> by adding finitely many terms of 
-            <men xml:id="eq-e0.3">
+            <men xml:id="eq-e03">
                 e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots 
             </men>
             In other words, it approximates the <em>function</em> <m>e^x</m> via the <em>power series</em> 
@@ -142,7 +142,7 @@
         <title>Infinite Series</title>
 
         <p>
-            Let's look carefully at the calculation <xref ref="eq-e0.3"/>. We will add the terms one by one and keep an eye on the cumulative total, more formally known as the <term>partial sums</term>:
+            Let's look carefully at the calculation <xref ref="eq-e03"/>. We will add the terms one by one and keep an eye on the cumulative total, more formally known as the <term>partial sums</term>:
         </p>
 
         <tabular top="minor">
@@ -238,7 +238,7 @@
 
         <p>
             In the above calculation, we have only computed finitely many terms, which is all one ever needs for applications. 
-            Mathematically, however, <xref ref="eq-e0.3"/> is an <em>infinite</em> series, and its value represents the sum of all infinitely many terms. 
+            Mathematically, however, <xref ref="eq-e03"/> is an <em>infinite</em> series, and its value represents the sum of all infinitely many terms. 
             What can this mean? 
         </p>
         <p>
@@ -291,7 +291,7 @@
 
             <figure width="100%" xml:id="fig-exp-plot">
                 <caption>Approximation to <m>e^x</m> by various partial sums of its power series</caption>
-                <image xml:id="sage-exp-plot" source="Calculus/Images/1/exp-power-series-plot.svg" width="100%">
+                <image xml:id="sage-exp-plot-1" source="Calculus/Images/1/exp-power-series-plot.svg" width="100%">
                     <description>A plot of <m>y=e^x</m> together with plots of the partial sums of its power series of degrees <m>0, 1, 2</m> and <m>3</m>.</description>
                 </image>
             </figure>

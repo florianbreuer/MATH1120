@@ -11,7 +11,7 @@
     </latex-image-preamble>
   </docinfo>
 
-  <book xml:id="MATH1120-Course-Notes">
+  <book xml:id="MATH1120-Course-Notes" numbers="no">
     <title>Mathematics 1120</title>
     <subtitle>Mathematics for Engineering, Science and Technology 2 [Revised Notes]</subtitle>
 
@@ -52,11 +52,13 @@
     -->
     </frontmatter>
 
+    <p>
+      Based on course notes by Dr. Malcolm Roberts.
+    </p>
+
     <part xml:id="Part-Calculus">
       <title>Calculus</title>
-      
       <xi:include href="./Calculus/Calculus-3.ptx" /> 
-
       <xi:include href="./Calculus/Calculus-4.ptx" />
       <xi:include href="./Calculus/Calculus-5.ptx" />
       <xi:include href="./Calculus/Calculus-6.ptx" />

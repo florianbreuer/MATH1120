@@ -59,6 +59,7 @@
     <section xml:id="Functions-of-Two-Variables">
       <title>Functions of Two Variables</title>
 
+
       <p>
         In Math1110 we studied "(real valued) functions of one variable", that is functions of the form,
         <me>f:D\rightarrow\mathbb{R}</me>
@@ -514,129 +515,7 @@
 <!-- =================================================================================================== -->
 
 
-<!-- =================================================================================================== -->
-<!-- Section 4: Surfaces of Revolution -->
-<!-- =================================================================================================== -->
 
-    <section xml:id="surfaces-of-revolution">
-      <title>Surfaces of Revolution</title>
-
-      <p>
-        The surface associated with the graph of <m>f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m> (see <xref ref="Example-6-Calc-3"/>) is an example of a special kind of surface... a surface of revolution.
-        <definition>
-          A <term>surface of revolution</term> is a surface in <m>\mathbb{R}^3</m> obtained by rotating a curve about an axis.
-        </definition>
-      </p>
-      <p>
-        Suppose we have a curve <m>z = g(x), \; x\geq 0</m> in the <m>xz</m>-plane, and we rotate this curve above the <m>z</m>-axis.
-        What would be an equation for the resulting surface of revolution?
-      </p>
-      <p>
-        Consider a point <m>P=(x,0,z)</m> on the curve above the <m>x</m>-axis in 3D space. Its height above the <m>xy</m>-plane is <m>z = g(x)</m>.
-        As we rotate the curve about the <m>z</m>-axis, the point <m>P</m> traces out a horizontal circle on the resulting surface of revolution. 
-        The radius <m>r</m> of this circle equals the original <m>x</m>-coordinate of the point when it started above the <m>x</m>-axis, and the 
-        height of the circle above the <m>xy</m>-plane equals <m>g(r)</m>.
-
-        The height of an arbitrary point <m>Q=(x,y,z)</m> on the surface of revolution is thus <m>z=g(r)</m>, where <m>r=\sqrt{x^2+y^2}</m> is the radius of the 
-        circle on which the point <m>Q</m> lies. This tells us that an equation for the surface of revolution is
-        <me>
-          z = g(\sqrt{x^2+y^2}).
-        </me>
-
-        Another way to see this is that, as a result of the rotational symmetry of the surface, the height of the surface above a point <m>(x,y)</m> on the <m>xy</m>-plane 
-        depends only on the distance <m>r=\sqrt{x^2+y^2}</m> of the point <m>(x,y)</m> from the origin.
-      </p>
-      <p>
-        The following SageMath code shows the partial surface of revolution obtained by rotating the curve <m>z = g(x) = \sin(x)</m> about the <m>z</m>-axis.
-      </p>
-      <sage>
-        <input>
-          t, r, x = var('t r x')
-          g = sin(x)
-          R = 10
-          p = line3d([(x,0,g(x=x)) for x in srange(0,R,0.1)], thickness=5, color='red')
-          @interact
-          def _(theta=slider(0.0, 2*pi, 0.1, default = 1.0)):
-              if theta > 0:
-                  q = p + parametric_plot3d((r*cos(-t), r*sin(-t), g(x=r)), (r,0,R), (t,0,theta))
-              else:
-                  q = p
-              show(q, frame=False)
-        </input>
-      </sage>
-      <example>
-        <p>
-          Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane <m>z=g(x)=2-3x, x\geq 0</m> about the <m>z</m>-axis.
-        </p>
-        <figure>
-          <caption>Plot of <m>z=2-3x</m> in the <m>xz</m>-plane for <m>x\geq 0</m>.</caption>
-          <image source="./Calculus/Images/3/3_example10.png" width="75%"/>
-        </figure>
-        <answer>
-        <p><m>f(x,y)=2-3\sqrt{x^2+y^2}</m></p>
-        </answer>
-      </example>
-      <!--
-      <p>
-        On repeating what we did in the above example in general gives:
-        <definition>
-          The equation of a surface of revolution obtained by rotating the curve <m>z=f(x), x\geq 0</m> in the <m>xz</m>-plane about the <m>z</m>-axis will be
-          <me>z=f(\sqrt{x^2+y^2})</me>
-        </definition>
-      </p>
-    -->
-      <example>
-        <p>
-          Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane
-          <me>z=xe^{-x^2}, x\geq 0</me>
-          about the <m>z</m>-axis.
-        </p>
-        <answer>
-        <p><m>z=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m></p>
-        </answer>  
-        <solution>
-          <p>
-            <figure>
-              <image source="./Calculus/Images/3/3_example11.png" width="50%"/>
-            </figure>
-            The equation of the surface of revolution will be
-            <me>z=f(\sqrt{x^2+y^2}) \textrm{ where } f(x)=xe^{-x^2}</me>
-            that is,
-            <me>z=\sqrt{x^2+y^2}e^{-\left(\sqrt{x^2+y^2}\right)^2}=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</me>
-          </p>
-        </solution>
-      </example>
-      <example>
-        <p>
-          Is the graph of <m>f(x,y)=4-x^2-y^2</m> a surface of revolution?
-        </p>
-        <solution>
-          <p>
-            Since we can write the function as
-            <me>f(x,y)=4-\left(\sqrt{x^2+y^2}\right)^2</me>
-            this surface can be obtained by rotating the curve in the <m>xz</m>-plane
-            <me>z=4-x^2, x\geq 0</me>
-          </p>
-        </solution>
-      </example>
-      <exercises>
-        <title>Example Tasks</title>
-        <exercise>
-          <statement>
-            <p>Determine the equation of the surface obtained by rotating the curve <m>z=\sqrt{4-x^2}, x\geq 0</m> about the <m>z</m>-axis. Make a sketch of the surface.</p>
-          </statement>
-        </exercise>
-        <exercise>
-          <statement>
-            <p>Is the graph of <m>f(x,y)=xy^2-y^3</m> a surface of revolution?</p>
-          </statement>
-        </exercise>
-      </exercises>
-
-
-    </section>
-
-<!-- =================================================================================================== -->
 
 
 <!-- =================================================================================================== -->
@@ -688,5 +567,135 @@
       </p>
 
     </section>
+<!-- =================================================================================================== -->
+ <!-- =================================================================================================== -->
+<!-- Section 4: Surfaces of Revolution -->
+<!-- =================================================================================================== -->
+
+<section xml:id="CA1-further-topics">
+  <title>Further Topics</title>
+
+
+<subsection xml:id="surfaces-of-revolution">
+  <title>Surfaces of Revolution</title>
+
+  <p>
+    The surface associated with the graph of <m>f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m> (see <xref ref="Example-6-Calc-3"/>) is an example of a special kind of surface... a surface of revolution.
+    <definition>
+      <p>
+        A <term>surface of revolution</term> is a surface in <m>\mathbb{R}^3</m> obtained by rotating a curve about an axis.
+      </p>
+    </definition>
+  </p>
+  <p>
+    Suppose we have a curve <m>z = g(x), \; x\geq 0</m> in the <m>xz</m>-plane, and we rotate this curve above the <m>z</m>-axis.
+    What would be an equation for the resulting surface of revolution?
+  </p>
+  <p>
+    Consider a point <m>P=(x,0,z)</m> on the curve above the <m>x</m>-axis in 3D space. Its height above the <m>xy</m>-plane is <m>z = g(x)</m>.
+    As we rotate the curve about the <m>z</m>-axis, the point <m>P</m> traces out a horizontal circle on the resulting surface of revolution. 
+    The radius <m>r</m> of this circle equals the original <m>x</m>-coordinate of the point when it started above the <m>x</m>-axis, and the 
+    height of the circle above the <m>xy</m>-plane equals <m>g(r)</m>.
+
+    The height of an arbitrary point <m>Q=(x,y,z)</m> on the surface of revolution is thus <m>z=g(r)</m>, where <m>r=\sqrt{x^2+y^2}</m> is the radius of the 
+    circle on which the point <m>Q</m> lies. This tells us that an equation for the surface of revolution is
+    <me>
+      z = g(\sqrt{x^2+y^2}).
+    </me>
+
+    Another way to see this is that, as a result of the rotational symmetry of the surface, the height of the surface above a point <m>(x,y)</m> on the <m>xy</m>-plane 
+    depends only on the distance <m>r=\sqrt{x^2+y^2}</m> of the point <m>(x,y)</m> from the origin.
+  </p>
+  <p>
+    The following SageMath code shows the partial surface of revolution obtained by rotating the curve <m>z = g(x) = \sin(x)</m> about the <m>z</m>-axis.
+  </p>
+  <sage>
+    <input>
+      t, r, x = var('t r x')
+      g = sin(x)
+      R = 10
+      p = line3d([(x,0,g(x=x)) for x in srange(0,R,0.1)], thickness=5, color='red')
+      @interact
+      def _(theta=slider(0.0, 2*pi, 0.1, default = 1.0)):
+          if theta > 0:
+              q = p + parametric_plot3d((r*cos(-t), r*sin(-t), g(x=r)), (r,0,R), (t,0,theta))
+          else:
+              q = p
+          show(q, frame=False)
+    </input>
+  </sage>
+  <example>
+    <p>
+      Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane <m>z=g(x)=2-3x, x\geq 0</m> about the <m>z</m>-axis.
+    </p>
+    <figure>
+      <caption>Plot of <m>z=2-3x</m> in the <m>xz</m>-plane for <m>x\geq 0</m>.</caption>
+      <image source="./Calculus/Images/3/3_example10.png" width="75%"/>
+    </figure>
+    <answer>
+    <p><m>f(x,y)=2-3\sqrt{x^2+y^2}</m></p>
+    </answer>
+  </example>
+  <!--
+  <p>
+    On repeating what we did in the above example in general gives:
+    <definition>
+      The equation of a surface of revolution obtained by rotating the curve <m>z=f(x), x\geq 0</m> in the <m>xz</m>-plane about the <m>z</m>-axis will be
+      <me>z=f(\sqrt{x^2+y^2})</me>
+    </definition>
+  </p>
+-->
+  <example>
+    <p>
+      Determine the equation of the surface obtained by rotating the curve in the <m>xz</m>-plane
+      <me>z=xe^{-x^2}, x\geq 0</me>
+      about the <m>z</m>-axis.
+    </p>
+    <answer>
+    <p><m>z=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</m></p>
+    </answer>  
+    <solution>
+      <p>
+        <figure>
+          <image source="./Calculus/Images/3/3_example11.png" width="50%"/>
+        </figure>
+        The equation of the surface of revolution will be
+        <me>z=f(\sqrt{x^2+y^2}) \textrm{ where } f(x)=xe^{-x^2}</me>
+        that is,
+        <me>z=\sqrt{x^2+y^2}e^{-\left(\sqrt{x^2+y^2}\right)^2}=\sqrt{x^2+y^2}e^{-(x^2+y^2)}</me>
+      </p>
+    </solution>
+  </example>
+  <example>
+    <p>
+      Is the graph of <m>f(x,y)=4-x^2-y^2</m> a surface of revolution?
+    </p>
+    <solution>
+      <p>
+        Since we can write the function as
+        <me>f(x,y)=4-\left(\sqrt{x^2+y^2}\right)^2</me>
+        this surface can be obtained by rotating the curve in the <m>xz</m>-plane
+        <me>z=4-x^2, x\geq 0</me>
+      </p>
+    </solution>
+  </example>
+  <exercises>
+    <title>Example Tasks</title>
+    <exercise>
+      <statement>
+        <p>Determine the equation of the surface obtained by rotating the curve <m>z=\sqrt{4-x^2}, x\geq 0</m> about the <m>z</m>-axis. Make a sketch of the surface.</p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>Is the graph of <m>f(x,y)=xy^2-y^3</m> a surface of revolution?</p>
+      </statement>
+    </exercise>
+  </exercises>
+
+  </subsection>
+
+</section>
+
 <!-- =================================================================================================== -->
 </chapter>
