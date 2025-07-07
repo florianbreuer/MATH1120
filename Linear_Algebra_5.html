@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LA5: Eigenvalues and Eigenvectors</title>
@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -98,33 +98,54 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Evaluate (Sage)"
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -135,7 +156,8 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Linear_Algebra_4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Linear_Algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Linear_Algebra_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Linear_Algebra_4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Linear_Algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Linear_Algebra_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -143,142 +165,145 @@ sagecell.makeSagecell({
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Functions of Several Variables</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">1.2</span> <span class="title">Graphing functions of two variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">1.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">1.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">1.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">1.4</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Partial Differentiation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">2.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Linear Approximations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">3.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">3.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">3.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">3.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: The Directional Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">4.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">4.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Local and Global Extrema</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">5.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">5.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">5.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: Chain Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">6.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">6.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">6.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">6.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Maclaurin Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">7.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">7.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">7.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">7.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">7.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">7.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">7.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">7.7.4</span> <span class="title">Infinite products</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Taylor Series</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">8.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">8.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">8.2</span> <span class="title">Geometric series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">8.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">8.4</span> <span class="title">Ratio test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">8.5</span> <span class="title">Convergence of power series</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">3.2</span> <span class="title">Graphing functions of two variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">8.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">8.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.4</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.5</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">8.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">8.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -431,9 +456,9 @@ sagecell.makeSagecell({
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="Linear_Algebra_5.html" class="internal"><span class="codenumber">19</span> <span class="title">LA5: Eigenvalues and Eigenvectors</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Introduction" class="internal"><span class="codenumber">19.1</span> <span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Linear_Algebra_5.html#Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors" class="internal"><span class="codenumber">19.2</span> <span class="title">Finding Eigenvalues and Eigenvectors</span></a></div>
@@ -489,9 +514,10 @@ A=\begin{pmatrix} 0 \amp 4 \amp 3 \\ \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp \frac{1
 </div>
 <div class="para">determine if any of <span class="process-math">\(\mathbf{x}=\begin{pmatrix} 18 \amp 6 \amp 1 \end{pmatrix}^T \text{,}\)</span> <span class="process-math">\(\mathbf{y}=\begin{pmatrix} -2 \amp 3 \amp 4 \end{pmatrix}^T \)</span> or <span class="process-math">\(\mathbf{z}=\begin{pmatrix} 36 \amp 12 \amp 2 \end{pmatrix}^T \)</span> are eigenvectors of <span class="process-math">\(A\text{.}\)</span>
 </div>
-</div> <details id="Sec-LA_5_Introduction-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-LA_5_Introduction-3-2-1">
+</div>
+<details id="Sec-LA_5_Introduction-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-LA_5_Introduction-3-2-1">
 <span class="process-math">\(\mathbf{x}\)</span> and <span class="process-math">\(\mathbf{z}\)</span> are eigenvectors of <span class="process-math">\(A\text{.}\)</span>
-</div></div></details> <details id="Sec-LA_5_Introduction-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-LA_5_Introduction-3-3-1">
+</div></div></details><details id="Sec-LA_5_Introduction-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-LA_5_Introduction-3-3-1">
 <div class="para">Since</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -527,13 +553,15 @@ A=\begin{pmatrix} 0 \amp 1 \\ 1 \amp 0 \end{pmatrix}
 </div>
 <div class="para">is the matrix for the plane transformation of a reflection in the line <span class="process-math">\(y=x\text{.}\)</span> Use this geometric interpretation of the matrix to determine the possible eigenvectors and eigenvalues of <span class="process-math">\(A\text{.}\)</span>
 </div>
-</div> <details id="Sec-LA_5_Introduction-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+</div>
+<details id="Sec-LA_5_Introduction-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para" id="Sec-LA_5_Introduction-4-2-1">
 <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 1 \end{pmatrix}, \textrm{ where } t\in \mathbb{R}\)</span> with eigenvalue <span class="process-math">\(1\text{.}\)</span>
-</div> <div class="para" id="Sec-LA_5_Introduction-4-2-2">
+</div>
+<div class="para" id="Sec-LA_5_Introduction-4-2-2">
 <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ -1 \end{pmatrix}, \textrm{ where } t\in \mathbb{R}\)</span> with eigenvalue <span class="process-math">\(-1\text{.}\)</span>
 </div>
-</div></details> <details id="Sec-LA_5_Introduction-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details><details id="Sec-LA_5_Introduction-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-LA_5_Introduction-4-3-1">
 <div class="para">By definition eigenvectors satisfy the equation</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Geometric_Interpretation.html">
@@ -554,7 +582,8 @@ A\mathbf{x}=\mathbf{x}
 \end{equation*}
 </div>
 <div class="para">will be eigenvectors of <span class="process-math">\(A\)</span> with an eigenvalue of <span class="process-math">\(1\text{.}\)</span> (Note that we could check this algebraically if so desired.)</div>
-</div> <div class="para logical" id="Sec-LA_5_Introduction-4-3-2">
+</div>
+<div class="para logical" id="Sec-LA_5_Introduction-4-3-2">
 <div class="para">As also illustrated in <a href="Linear_Algebra_5.html#Fig-Geometric_Interpretation" class="xref" data-knowl="./knowl/xref/Fig-Geometric_Interpretation.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 19.4">Figure 19.4</a>, any vector perpendicular to the line <span class="process-math">\(y=x\)</span> will be mapped by a reflection in that line to a vector of the same length but in the opposite direction, i.e. for such vectors</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Geometric_Interpretation.html">
 \begin{equation*}
@@ -581,8 +610,9 @@ A=\begin{pmatrix} 1 \amp 2 \\ 4 \amp 3 \end{pmatrix}
 \end{equation*}
 </div>
 <div class="para">find all eigenvectors associated with this eigenvalue.</div>
-</div> <details id="Ex-Find_all_eigenvectors_given_eigenvalue-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Find_all_eigenvectors_given_eigenvalue-2-1">The eigenvectors associated with the eigenvalue <span class="process-math">\(\lambda=5\)</span> are all scalar multiples of the vector <span class="process-math">\(\begin{pmatrix} 1 \amp 2 \end{pmatrix}^T\text{.}\)</span>
-</div></div></details> <details id="Ex-Find_all_eigenvectors_given_eigenvalue-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+</div>
+<details id="Ex-Find_all_eigenvectors_given_eigenvalue-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Find_all_eigenvectors_given_eigenvalue-2-1">The eigenvectors associated with the eigenvalue <span class="process-math">\(\lambda=5\)</span> are all scalar multiples of the vector <span class="process-math">\(\begin{pmatrix} 1 \amp 2 \end{pmatrix}^T\text{.}\)</span>
+</div></div></details><details id="Ex-Find_all_eigenvectors_given_eigenvalue-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-Find_all_eigenvectors_given_eigenvalue-3-1">
 <div class="para">An eigenvector, <span class="process-math">\(\mathbf{x}\text{,}\)</span> associated with the eigenvalue <span class="process-math">\(\lambda=5\)</span> will satisfy the system of linear equations</div>
 <div class="displaymath process-math">
@@ -618,7 +648,8 @@ A\mathbf{x}=5\mathbf{x}
 </div>
 <div class="para">Thus the eigenvectors associated with the eigenvalue <span class="process-math">\(\lambda=5\)</span> are all scalar multiples of the vector <span class="process-math">\(\begin{pmatrix} 1 \amp 2 \end{pmatrix}^T\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="Ex-Find_all_eigenvectors_given_eigenvalue-3-2">
+</div>
+<div class="para logical" id="Ex-Find_all_eigenvectors_given_eigenvalue-3-2">
 <div class="para">Of course, it is a good idea to check this result. Since</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -691,11 +722,13 @@ A\mathbf{x}-\lambda I\mathbf{x}=\mathbf{0}
 A=\begin{pmatrix} 2 \amp 1 \\ 1 \amp 2 \end{pmatrix} 
 \end{equation*}
 </div>
-</div> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-2-1">For <span class="process-math">\(\lambda=1\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -1 \\ 1 \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-2-2">For <span class="process-math">\(\lambda=3\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 1 \end{pmatrix}\text{.}\)</span>
 </div>
-</div></details> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-2-1">For <span class="process-math">\(\lambda=1\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -1 \\ 1 \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-2-2">For <span class="process-math">\(\lambda=3\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 1 \end{pmatrix}\text{.}\)</span>
+</div>
+</div></details><details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-1">
 <div class="para">The eigenvalues, <span class="process-math">\(\lambda\text{,}\)</span> of <span class="process-math">\(A\)</span> satisfy the characteristic equation</div>
 <div class="displaymath process-math">
@@ -723,7 +756,8 @@ A-\lambda I=\begin{pmatrix} 2\amp 1 \\ 1\amp 2 \end{pmatrix}-\lambda \begin{pmat
 \lambda=1 \textrm{ and } \lambda=3
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-2">
+</div>
+<div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-2">
 <div class="para">To find the eigenvectors associated with each of these eigenvalues we follow the procedure illustrated in <a href="Linear_Algebra_5.html#Ex-Find_all_eigenvectors_given_eigenvalue" class="xref" data-knowl="./knowl/xref/Ex-Find_all_eigenvectors_given_eigenvalue.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.5">Example 19.5</a>, i.e. solve the homogeneous system of linear equations</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Ex-Find_all_eigenvectors_given_eigenvalue.html">
 \begin{equation*}
@@ -731,7 +765,8 @@ A-\lambda I=\begin{pmatrix} 2\amp 1 \\ 1\amp 2 \end{pmatrix}-\lambda \begin{pmat
 \end{equation*}
 </div>
 <div class="para">for each eigenvalue.</div>
-</div> <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-3">
+</div>
+<div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-3">
 <div class="para">When <span class="process-math">\(\lambda=1\)</span> the augmented matrix and its reduced row echelon form are</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -760,7 +795,8 @@ A-\lambda I=\begin{pmatrix} 2\amp 1 \\ 1\amp 2 \end{pmatrix}-\lambda \begin{pmat
 </div>
 <div class="para">As always, you can very easily check that these vectors are indeed eigenvectors by performing the matrix multiplication <span class="process-math">\(A\mathbf{x}\text{.}\)</span>
 </div>
-</div> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-4">As an aside, we can get some geometric insight if we consider <span class="process-math">\(A\)</span> as the matrix of a plane transformation, (even though <span class="process-math">\(A\)</span> isn’t the matrix for any well known transformation). <a href="Linear_Algebra_5.html#Fig-Transformation_visualised" class="xref" data-knowl="./knowl/xref/Fig-Transformation_visualised.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 19.8">Figure 19.8</a> shows the result of applying <span class="process-math">\(A\)</span> to a square centred on the origin. <figure class="figure figure-like" id="Fig-Transformation_visualised"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./LinearAlgebra/Images/5/figure2.png" class="contained"></div>
+</div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-4-3-4">As an aside, we can get some geometric insight if we consider <span class="process-math">\(A\)</span> as the matrix of a plane transformation, (even though <span class="process-math">\(A\)</span> isn’t the matrix for any well known transformation). <a href="Linear_Algebra_5.html#Fig-Transformation_visualised" class="xref" data-knowl="./knowl/xref/Fig-Transformation_visualised.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 19.8">Figure 19.8</a> shows the result of applying <span class="process-math">\(A\)</span> to a square centred on the origin. <figure class="figure figure-like" id="Fig-Transformation_visualised"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./LinearAlgebra/Images/5/figure2.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">19.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Informally, the effect of <span class="process-math">\(A\)</span> is to pull the square out along the diagonal joining vertices <span class="process-math">\(B\)</span> and <span class="process-math">\(D\text{.}\)</span> Thus vectors along this diagonal will be mapped to scalar multiples of themselves while vectors along the diagonal joining vertices <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> will be left unchanged.</div>
 </div></details></article><article class="example example-like" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.9</span><span class="period">.</span>
@@ -772,11 +808,13 @@ A-\lambda I=\begin{pmatrix} 2\amp 1 \\ 1\amp 2 \end{pmatrix}-\lambda \begin{pmat
 A=\begin{pmatrix} 1 \amp 2 \\ 3 \amp 4 \end{pmatrix} 
 \end{equation*}
 </div>
-</div> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-2-1">For <span class="process-math">\(\lambda=\dfrac{5+\sqrt{33}}{2}\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 4 \\ 3+\sqrt{33} \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-2-2">For <span class="process-math">\(\lambda=\dfrac{5-\sqrt{33}}{2}\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 4 \\ 3-\sqrt{33} \end{pmatrix}\text{.}\)</span>
 </div>
-</div></details> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-2-1">For <span class="process-math">\(\lambda=\dfrac{5+\sqrt{33}}{2}\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 4 \\ 3+\sqrt{33} \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-2-2">For <span class="process-math">\(\lambda=\dfrac{5-\sqrt{33}}{2}\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 4 \\ 3-\sqrt{33} \end{pmatrix}\text{.}\)</span>
+</div>
+</div></details><details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-3-1">
 <div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-3-1-2">
@@ -793,7 +831,8 @@ A=\begin{pmatrix} 1 \amp 2 \\ 3 \amp 4 \end{pmatrix}
 \end{equation*}
 </div>
 <div class="para">Clearly the eigenvalues don’t always turn out to be nice numbers, even when the matrix is quite simple. The eigenvectors will also turn out to be rather complicated.</div>
-</div> <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-3-2">
+</div>
+<div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-5-3-2">
 <div class="para">When <span class="process-math">\(\lambda=\dfrac{5+\sqrt{33}}{2}\)</span> the augmented matrix and its reduced row echelon form are</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -831,11 +870,13 @@ A=\begin{pmatrix} 1 \amp 2 \\ 3 \amp 4 \end{pmatrix}
 A=\begin{pmatrix} 1 \amp 2 \\ 2 \amp 4 \end{pmatrix} 
 \end{equation*}
 </div>
-</div> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-2-1">For <span class="process-math">\(\lambda=0\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -2 \\ 1 \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-2-2">For <span class="process-math">\(\lambda=5\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 2 \end{pmatrix}\text{.}\)</span>
 </div>
-</div></details> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-3-1">
+<details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-2-1">For <span class="process-math">\(\lambda=0\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -2 \\ 1 \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-2-2">For <span class="process-math">\(\lambda=5\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 2 \end{pmatrix}\text{.}\)</span>
+</div>
+</div></details><details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-3-1">
 <div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-6-3-1-2">
 \begin{align*}
@@ -901,11 +942,13 @@ A\mathbf{x}=\mathbf{0}
 A=\begin{pmatrix} 0 \amp 1 \\ -1 \amp 0 \end{pmatrix}
 \end{equation*}
 </div>
-</div> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-2-1">For <span class="process-math">\(\lambda=i\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ i \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-2-2">For <span class="process-math">\(\lambda=-i\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -1 \\ i \end{pmatrix}\text{.}\)</span>
 </div>
-</div></details> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-3-1">
+<details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-2-1">For <span class="process-math">\(\lambda=i\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ i \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-2-2">For <span class="process-math">\(\lambda=-i\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -1 \\ i \end{pmatrix}\text{.}\)</span>
+</div>
+</div></details><details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-3-1">
 <div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-8-3-1-2">
 \begin{align*}
@@ -956,11 +999,13 @@ A=\begin{pmatrix} 0 \amp 1 \\ -1 \amp 0 \end{pmatrix}
 A=\begin{pmatrix} 7 \amp 1 \amp -2 \\ -3 \amp 3 \amp 6 \\ 2 \amp 2\amp 2 \end{pmatrix}
 \end{equation*}
 </div>
-</div> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-2-1">For <span class="process-math">\(\lambda=0\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ -3 \\ 2 \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-2-2">For <span class="process-math">\(\lambda=6\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=s\begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}+t\begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}\text{.}\)</span>
 </div>
-</div></details> <details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-2-1">For <span class="process-math">\(\lambda=0\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ -3 \\ 2 \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-2-2">For <span class="process-math">\(\lambda=6\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=s\begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}+t\begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}\text{.}\)</span>
+</div>
+</div></details><details id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-3-1">
 <div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
@@ -986,7 +1031,8 @@ A=\begin{pmatrix} 7 \amp 1 \amp -2 \\ -3 \amp 3 \amp 6 \\ 2 \amp 2\amp 2 \end{pm
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(\lambda=6\)</span> is a repeated root of the characteristic equation we say that this is an eigenvalue of <dfn class="terminology">multiplicity</dfn> <span class="process-math">\(2\text{.}\)</span> Also, since <span class="process-math">\(\lambda=0\)</span> is an eigenvalue of <span class="process-math">\(A\)</span> we know that <span class="process-math">\(A\)</span> is not invertible.</div>
-</div> <div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-3-2">
+</div>
+<div class="para logical" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-10-3-2">
 <div class="para">When <span class="process-math">\(\lambda=0\)</span> the augmented matrix and its reduced row echelon form are</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1024,12 +1070,15 @@ A=\begin{pmatrix} 7 \amp 1 \amp -2 \\ -3 \amp 3 \amp 6 \\ 2 \amp 2\amp 2 \end{pm
 A=\begin{pmatrix} 7 \amp 1 \amp -2 \\ 0 \amp 3 \amp 6 \\ 0 \amp 0 \amp 2 \end{pmatrix}
 \end{equation*}
 </div>
-</div> <details id="Ex-Find_eigen_upper_triangular_matrix-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para" id="Ex-Find_eigen_upper_triangular_matrix-2-1">For <span class="process-math">\(\lambda=2\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 8 \\ -30 \\ 5 \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Ex-Find_eigen_upper_triangular_matrix-2-2">For <span class="process-math">\(\lambda=3\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -1 \\ 4 \\ 0 \end{pmatrix}\text{.}\)</span>
-</div> <div class="para" id="Ex-Find_eigen_upper_triangular_matrix-2-3">For <span class="process-math">\(\lambda=7\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\text{.}\)</span>
 </div>
-</div></details> <details id="Ex-Find_eigen_upper_triangular_matrix-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex-Find_eigen_upper_triangular_matrix-3-1">
+<details id="Ex-Find_eigen_upper_triangular_matrix-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-Find_eigen_upper_triangular_matrix-2-1">For <span class="process-math">\(\lambda=2\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 8 \\ -30 \\ 5 \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Ex-Find_eigen_upper_triangular_matrix-2-2">For <span class="process-math">\(\lambda=3\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} -1 \\ 4 \\ 0 \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="para" id="Ex-Find_eigen_upper_triangular_matrix-2-3">For <span class="process-math">\(\lambda=7\text{,}\)</span> the eigenvectors take the form <span class="process-math">\(\mathbf{x}=t\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}\text{.}\)</span>
+</div>
+</div></details><details id="Ex-Find_eigen_upper_triangular_matrix-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex-Find_eigen_upper_triangular_matrix-3-1">
 <div class="para">The characteristic equation for <span class="process-math">\(A\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1102,7 +1151,7 @@ A\mathbf{x}=\mathbf{b}, \hspace{5mm} \mathbf{b\neq 0}
 \end{equation*}
 </div>
 <div class="para">The following statements are equivalent:</div>
-<ol class="decimal">
+<ol class="decimal ol-marker-3" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-14-1-4">
 <li id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-14-1-4-1"><div class="para" id="p-derived-Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-14-1-4-1">The system has a unique solution.</div></li>
 <li id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-14-1-4-2"><div class="para" id="p-derived-Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-14-1-4-2">
 <span class="process-math">\(A\mathbf{x}=\mathbf{0}\)</span> has only the trivial solution <span class="process-math">\(\mathbf{x}=\mathbf{0}\)</span>
@@ -1119,7 +1168,8 @@ A\mathbf{x}=\mathbf{b}, \hspace{5mm} \mathbf{b\neq 0}
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.15</span><span class="period">.</span>
 </h4>
 <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-1">We can visualise the relationship between a square matrix <span class="process-math">\(A\)</span> and its eigenvectors using the Sage cell below. This code plots the unit vector with angle <span class="process-math">\(\theta\)</span> in blue, i.e. the vector <span class="process-math">\(\mathbf{v}=(\cos(\theta),\sin(\theta))^T\text{.}\)</span> It also plots in red the vector <span class="process-math">\(A\mathbf{v}\text{.}\)</span> When these vectors are parallel, <span class="process-math">\(\mathbf{v}\)</span> is an eigenvector of <span class="process-math">\(A\text{.}\)</span>
-</div> <pre id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,2],[4,3]]
+</div>
+<div id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,2],[4,3]]
 
 @interact
 def _(A=input_grid(2,2, default = example,
@@ -1137,7 +1187,9 @@ def _(A=input_grid(2,2, default = example,
         arrow((0,0), vector(Av), color='red'),
         aspect_ratio=1, frame=true, xmin=-zoom, xmax=zoom, ymin=-zoom, ymax=zoom
     )
-</script></pre> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-3">Here is a better visualisation of eigenvectors: since the property of being an eigenvector of a given matrix depends only on the direction (not magnitude) of the vector, we draw a bunch of (blue) unit vectors <span class="process-math">\(\mathbf{v}\text{,}\)</span> as well as the output vectors <span class="process-math">\(A\mathbf{v}\)</span> in red. Where the red vector is parallel to the blue one pointing to it, that blue vector is an eigenvector. The factor by which its red vector is longer or shorter is the corresponding eigenvalue.</div> <pre id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,1], [0,2]]
+</script></div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-3">Here is a better visualisation of eigenvectors: since the property of being an eigenvector of a given matrix depends only on the direction (not magnitude) of the vector, we draw a bunch of (blue) unit vectors <span class="process-math">\(\mathbf{v}\text{,}\)</span> as well as the output vectors <span class="process-math">\(A\mathbf{v}\)</span> in red. Where the red vector is parallel to the blue one pointing to it, that blue vector is an eigenvector. The factor by which its red vector is longer or shorter is the corresponding eigenvalue.</div>
+<div id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,1], [0,2]]
 
 def point(w):
     return tuple((w[0][0], w[1][0]))
@@ -1156,7 +1208,9 @@ def _(A = input_grid(2, 2, default = example, label='A=', to_value=matrix),
         p = p + arrow((0,0), point(v), color='blue', arrowsize=2)
         p = p + arrow(point(v), point(v + A*v), color='red', arrowsize=2)
     display(p)
-</script></pre> <div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-5">The Sage cell below shows this same concept in three dimensions.</div> <pre id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,1,1],
+</script></div>
+<div class="para" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-5">The Sage cell below shows this same concept in three dimensions.</div>
+<div id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-15-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,1,1],
         [0,1,0],
         [0,0,3]]
 
@@ -1185,7 +1239,7 @@ def _(A = input_grid(3, 3, default = example, label='A = ', to_value=matrix),
         p = p + arrow((0,0,0), point3d(v), color='blue', arrowsize=1)
         p = p + arrow(point3d(v), point3d(v + scale*A*v), color='red', arrowsize=1)
     display(p)
-</script></pre></article><section class="exercises" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-16"><h4 class="heading hide-type">
+</script></div></article><section class="exercises" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-16"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-LA_5_Finding_Eigenvalues_and_Eigenvectors-16-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1284,7 +1338,7 @@ A\mathbf{r}=\frac{1}{k}\mathbf{r}=\lambda\mathbf{r}
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

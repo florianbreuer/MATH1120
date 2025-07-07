@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LA3: Matrix Algebra</title>
@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -98,33 +98,54 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Evaluate (Sage)"
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -135,7 +156,8 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Linear_Algebra__2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Linear_Algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Linear_Algebra_4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Linear_Algebra__2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Linear_Algebra.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Linear_Algebra_4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -143,142 +165,145 @@ sagecell.makeSagecell({
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Functions of Several Variables</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">1.2</span> <span class="title">Graphing functions of two variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">1.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">1.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">1.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">1.4</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Partial Differentiation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">2.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Linear Approximations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">3.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">3.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">3.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">3.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: The Directional Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">4.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">4.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Local and Global Extrema</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">5.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">5.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">5.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: Chain Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">6.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">6.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">6.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">6.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Maclaurin Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">7.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">7.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">7.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">7.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">7.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">7.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">7.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">7.7.4</span> <span class="title">Infinite products</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Taylor Series</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">8.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">8.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">8.2</span> <span class="title">Geometric series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">8.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">8.4</span> <span class="title">Ratio test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">8.5</span> <span class="title">Convergence of power series</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">3.2</span> <span class="title">Graphing functions of two variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">8.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">8.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.4</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.5</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">8.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">8.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -397,9 +422,9 @@ sagecell.makeSagecell({
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter active">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html" class="internal"><span class="codenumber">17</span> <span class="title">LA3: Matrix Algebra</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication" class="internal"><span class="codenumber">17.1</span> <span class="title">Addition and Scalar Multiplication</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Linear_Algebra_3.html#Sec-Addition_and_Scalar_Multiplication-7" class="internal"><span class="codenumber">17.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
@@ -479,15 +504,18 @@ a_{m1} \amp a_{m2} \amp \cdots \amp a_{mn}\\
 A=\left(a_{ij}\right)_{m \times n}.
 \end{equation*}
 </div>
-</div> <div class="para" id="Chap-Linear_Algebra_3-2-2">Note that we usually use a capital letter to denote a matrix.</div> <div class="para" id="Chap-Linear_Algebra_3-2-3">In the context of systems of linear equations the main concept was row reducing a matrix to produce equivalent matrices. In different contexts, however, other operations on matrices have proved useful and we shall discuss these operations below. Before doing this, though, we will introduce some new terminology.</div> <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-4"><h3 class="heading">
+</div>
+<div class="para" id="Chap-Linear_Algebra_3-2-2">Note that we usually use a capital letter to denote a matrix.</div>
+<div class="para" id="Chap-Linear_Algebra_3-2-3">In the context of systems of linear equations the main concept was row reducing a matrix to produce equivalent matrices. In different contexts, however, other operations on matrices have proved useful and we shall discuss these operations below. Before doing this, though, we will introduce some new terminology.</div>
+<article class="definition definition-like" id="Chap-Linear_Algebra_3-2-4"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
-</h3>Two matrices are said to be <dfn class="terminology">equal</dfn> if they are of the same size and all corresponding entries are equal.</article> <article class="example example-like" id="Ex-Matrix_equality"><h3 class="heading">
+</h3>Two matrices are said to be <dfn class="terminology">equal</dfn> if they are of the same size and all corresponding entries are equal.</article><article class="example example-like" id="Ex-Matrix_equality"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="Ex-Matrix_equality-1-1">
 <div class="para">Let <span class="process-math">\(A = \begin{pmatrix}5 \amp 0 \amp 1\\ -3 \amp \sqrt{2} \amp \frac{1}{2}\end{pmatrix}, \quad B = \begin{pmatrix}5 \amp -3 \\ 0 \amp \sqrt{2} \\ 1 \amp \frac{1}{2}\end{pmatrix}, \quad C = \begin{pmatrix} 5 \amp 0 \amp 1\\ -3 \amp a \amp b\end{pmatrix}.\)</span>
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-1-1-2">
 <li id="Ex-Matrix_equality-1-1-2-1"><div class="para" id="p-derived-Ex-Matrix_equality-1-1-2-1">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(A=C\text{?}\)</span>
 </div></li>
 <li id="Ex-Matrix_equality-1-1-2-2"><div class="para" id="p-derived-Ex-Matrix_equality-1-1-2-2">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(B=C\text{?}\)</span>
@@ -495,17 +523,17 @@ A=\left(a_{ij}\right)_{m \times n}.
 </ol>
 </div>
 <div class="solutions">
-<details id="Ex-Matrix_equality-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="Ex-Matrix_equality-2-1"><ol class="lower-alpha">
+<details id="Ex-Matrix_equality-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="Ex-Matrix_equality-2-1"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-2-1-1">
 <li id="Ex-Matrix_equality-2-1-1-1"><div class="para" id="p-derived-Ex-Matrix_equality-2-1-1-1">
 <span class="process-math">\(a=\sqrt{2}\)</span> and <span class="process-math">\(b=\dfrac{1}{2}\)</span>
 </div></li>
 <li id="Ex-Matrix_equality-2-1-1-2"><div class="para" id="p-derived-Ex-Matrix_equality-2-1-1-2">None.</div></li>
-</ol></div></div></details><details id="Ex-Matrix_equality-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha">
+</ol></div></div></details><details id="Ex-Matrix_equality-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-3-1">
 <li id="Ex-Matrix_equality-3-1-1"><div class="para" id="p-derived-Ex-Matrix_equality-3-1-1">Since <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> are of the same size, the matrices will be equal when <span class="process-math">\(a=\sqrt{2}\)</span> and <span class="process-math">\(b=\dfrac{1}{2}\text{.}\)</span>
 </div></li>
 <li id="Ex-Matrix_equality-3-1-2"><div class="para" id="p-derived-Ex-Matrix_equality-3-1-2">Since <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are not the same size they can never be equal.</div></li>
 </ol></div></details>
-</div></article> <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-6"><h3 class="heading">
+</div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-6"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span>
 </h3>The <dfn class="terminology">zero <span class="process-math">\(m \times n\)</span> matrix</dfn> is the <span class="process-math">\(m \times n\)</span>  matrix with all entries <span class="process-math">\(0\text{,}\)</span> i.e.<div class="displaymath process-math">
 \begin{equation*}
@@ -516,9 +544,11 @@ A=\left(a_{ij}\right)_{m \times n}.
 0\amp 0\amp \cdots \amp 0\\
 \end{pmatrix}.
 \end{equation*}
-</div></article> <div class="para" id="Chap-Linear_Algebra_3-2-7">Note that by using the symbol <span class="process-math">\(0\)</span> to denote the zero matrix we have to tell from the context whether the <span class="process-math">\(0\)</span> refers to a number or a matrix.</div> <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-8"><h3 class="heading">
+</div></article><div class="para" id="Chap-Linear_Algebra_3-2-7">Note that by using the symbol <span class="process-math">\(0\)</span> to denote the zero matrix we have to tell from the context whether the <span class="process-math">\(0\)</span> refers to a number or a matrix.</div>
+<article class="definition definition-like" id="Chap-Linear_Algebra_3-2-8"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span>
-</h3>For the matrix <span class="process-math">\(A=(a_{ij})_{m \times n}\text{,}\)</span> its <dfn class="terminology">transpose</dfn>, denoted by <span class="process-math">\(A^T\text{,}\)</span> is defined by <span class="process-math">\(A^T = \left(a_{ji}\right)_{n \times m}\text{.}\)</span></article> <div class="para" id="Chap-Linear_Algebra_3-2-9">Note that this definition is saying that the rows of matrix <span class="process-math">\(A\)</span> are the columns of its transpose <span class="process-math">\(A^T\)</span> and vice versa.</div> <article class="example example-like" id="Ex-Transpose"><h3 class="heading">
+</h3>For the matrix <span class="process-math">\(A=(a_{ij})_{m \times n}\text{,}\)</span> its <dfn class="terminology">transpose</dfn>, denoted by <span class="process-math">\(A^T\text{,}\)</span> is defined by <span class="process-math">\(A^T = \left(a_{ji}\right)_{n \times m}\text{.}\)</span></article><div class="para" id="Chap-Linear_Algebra_3-2-9">Note that this definition is saying that the rows of matrix <span class="process-math">\(A\)</span> are the columns of its transpose <span class="process-math">\(A^T\)</span> and vice versa.</div>
+<article class="example example-like" id="Ex-Transpose"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.5</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="Ex-Transpose-1-1">
@@ -532,11 +562,12 @@ B = \begin{pmatrix}5 \amp -3 \\ 0 \amp \sqrt{2} \\ 1 \amp \frac{1}{2}\end{pmatri
 </div>
 </div>
 <div class="solutions">
-<details id="Ex-Transpose-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(a=\sqrt{2}, \ b=\dfrac{1}{2}\)</span></div></details><details id="Ex-Transpose-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">Since <span class="process-math">\(B^T = \begin{pmatrix} 5 \amp 0 \amp 1\\ -3 \amp \sqrt{2} \amp \frac{1}{2}\end{pmatrix}\text{,}\)</span> <span class="process-math">\(B^T = C\)</span> when <span class="process-math">\(a=\sqrt{2}\)</span> and <span class="process-math">\(b=\frac{1}{2}\text{.}\)</span>
+<details id="Ex-Transpose-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(a=\sqrt{2}, \ b=\dfrac{1}{2}\)</span></div></details><details id="Ex-Transpose-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(B^T = \begin{pmatrix} 5 \amp 0 \amp 1\\ -3 \amp \sqrt{2} \amp \frac{1}{2}\end{pmatrix}\text{,}\)</span><span class="process-math">\(B^T = C\)</span><span class="process-math">\(a=\sqrt{2}\)</span><span class="process-math">\(b=\frac{1}{2}\text{.}\)</span>
 </div></details>
-</div></article> <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-11"><h3 class="heading">
+</div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-11"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
-</h3>A <dfn class="terminology">square matrix</dfn> is a matrix that has the same number of rows and columns.</article> <article class="example example-like" id="Ex-Square_matrices"><h3 class="heading">
+</h3>A <dfn class="terminology">square matrix</dfn> is a matrix that has the same number of rows and columns.</article><article class="example example-like" id="Ex-Square_matrices"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.7</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="Ex-Square_matrices-1-1">
@@ -546,7 +577,7 @@ B = \begin{pmatrix}5 \amp -3 \\ 0 \amp \sqrt{2} \\ 1 \amp \frac{1}{2}\end{pmatri
 A = \begin{pmatrix}-1 \amp 3 \amp 4\\ 5 \amp 0 \amp -2 \\ 3 \amp \frac{1}{3} \amp 6 \end{pmatrix}, \quad B = \begin{pmatrix} -1 \amp 3 \\ 5 \amp 0 \\ 3 \amp \frac{1}{3}\end{pmatrix}
 \end{equation*}
 </div>
-</div></article> <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-13"><h3 class="heading">
+</div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-13"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.8</span><span class="period">.</span>
 </h3>The <dfn class="terminology"><span class="process-math">\(n \times n\)</span> identity matrix</dfn>, <dfn class="terminology"><span class="process-math">\(I_n\)</span></dfn>, is the matrix with <span class="process-math">\(n\)</span> rows and <span class="process-math">\(n\)</span> columns with all entries on the main diagonal equal to <span class="process-math">\(1\)</span> and all other entries <span class="process-math">\(0\text{,}\)</span> i.e.<div class="displaymath process-math">
 \begin{equation*}
@@ -557,13 +588,13 @@ I_n = \begin{pmatrix}
 0\amp 0 \amp \cdots \amp 1\
 \end{pmatrix}.
 \end{equation*}
-</div></article> <div class="para" id="Chap-Linear_Algebra_3-2-14">Often, when the size of the identity matrix is clear the subscript is dropped from the notation and the identity matrix is denoted just by <span class="process-math">\(I\text{.}\)</span>
+</div></article><div class="para" id="Chap-Linear_Algebra_3-2-14">Often, when the size of the identity matrix is clear the subscript is dropped from the notation and the identity matrix is denoted just by <span class="process-math">\(I\text{.}\)</span>
 </div></section><section class="section" id="Sec-Addition_and_Scalar_Multiplication"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.1</span><span class="space"> </span><span class="title">Addition and Scalar Multiplication</span>
 </h3>
 <article class="definition definition-like" id="Sec-Addition_and_Scalar_Multiplication-2"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.9</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix addition and scalar multiplication.</span>
-</h4> Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(m \times n\)</span> matrices, i.e., <span class="process-math">\(A=\left(a_{ij}\right)_{m \times n}\)</span> and <span class="process-math">\(B = \left(b_{ij}\right)_{m \times n}\text{.}\)</span> Then <ol class="lower-roman">
+</h4>Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(m \times n\)</span> matrices, i.e., <span class="process-math">\(A=\left(a_{ij}\right)_{m \times n}\)</span> and <span class="process-math">\(B = \left(b_{ij}\right)_{m \times n}\text{.}\)</span> Then <ol class="lower-roman ol-marker-4" id="Sec-Addition_and_Scalar_Multiplication-2-2-6">
 <li id="Sec-Addition_and_Scalar_Multiplication-2-2-6-1"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-2-2-6-1">
 <dfn class="terminology">Matrix addition</dfn> is defined by <span class="process-math">\(A+B = \left(a_{ij} + b_{ij}\right)_{m \times n}\text{.}\)</span>
 </div></li>
@@ -582,14 +613,14 @@ A-B = A+ (-1)B.
 </h4>
 <div class="para logical" id="Ex-Matrix_addition_and_scalar_multiplication-1-1">
 <div class="para">If <span class="process-math">\(A = \begin{pmatrix} 1 \amp 2 \amp 3\\ 4 \amp 3 \amp 2\end{pmatrix}, \quad B = \begin{pmatrix} 5 \amp 3 \\ 9 \amp 2 \\ 4 \amp 3\end{pmatrix}.\)</span> Then calculate the given expression or explain why it does not exist.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2">
 <li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1"><span class="process-math">\(\displaystyle 3A+B\)</span></div></li>
 <li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2">
 <span class="process-math">\((2A^T - B)_{32} \, \)</span> (i.e. the entry in row <span class="process-math">\(3\text{,}\)</span> column <span class="process-math">\(2\)</span> of the matrix <span class="process-math">\(2A^T-B\,\)</span>)</div></li>
 <li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3"><span class="process-math">\(\displaystyle (B^T+A)_{31}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="Ex-Matrix_addition_and_scalar_multiplication-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha">
+<div class="solutions"><details id="Ex-Matrix_addition_and_scalar_multiplication-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_addition_and_scalar_multiplication-2-1">
 <li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-1"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-1">Since <span class="process-math">\(A\)</span> is a <span class="process-math">\(2 \times 3\)</span> matrix so will be <span class="process-math">\(3A\text{.}\)</span> Since <span class="process-math">\(3A\)</span> and <span class="process-math">\(B\)</span> are not the same size we cannot add these two matrices.</div></li>
 <li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-2"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-2">
 <span class="process-math">\(A^T = \begin{pmatrix} 1 \amp 4 \\ 2 \amp 3 \\ 3\amp 2\end{pmatrix}\)</span> and so <span class="process-math">\(2A^T = \begin{pmatrix} 2 \amp 8 \\ 4 \amp 6 \\ 6 \amp 4\end{pmatrix}\text{.}\)</span> Thus <span class="process-math">\(2A^T-B = \begin{pmatrix} -3 \amp 5 \\ -5 \amp 4 \\ 2 \amp 1\end{pmatrix}\)</span> and <span class="process-math">\((2A^T - B)_{32} =1.\)</span>
@@ -636,7 +667,7 @@ A-B = A+ (-1)B.
 A = \begin{pmatrix}4 \amp -2 \amp 1\\ 0 \amp 2 \amp 3\end{pmatrix} \quad \mbox{and} \quad B=\begin{pmatrix}1 \amp 2 \\ 3 \amp 4 \\ 5 \amp 6\end{pmatrix}.
 \end{equation*}
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2">
 <li id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1">Find <span class="process-math">\((2A-B^{T})_{12}\text{.}\)</span>
 </div></li>
 <li id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2">Find <span class="process-math">\((2A-B)^T\text{.}\)</span>
@@ -657,7 +688,7 @@ AB = \left(\sum_{k=1}^n a_{ik}b_{kj}\right)_{m \times p}.
 \end{equation*}
 </div></article><div class="para logical" id="Sec-Matrix_multiplication-3">
 <div class="para">If we call <span class="process-math">\(C=AB\)</span>  then from this definition it can be seen:</div>
-<ol class="decimal">
+<ol class="decimal ol-marker-6" id="Sec-Matrix_multiplication-3-2">
 <li id="Sec-Matrix_multiplication-3-2-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-3-2-1">For the matrix multiplication <span class="process-math">\(AB\)</span> to be defined the number of columns in <span class="process-math">\(A\)</span> has to be equal to the number of rows in <span class="process-math">\(B\text{.}\)</span> The resulting matrix, <span class="process-math">\(C\text{,}\)</span> has the same number of rows as <span class="process-math">\(A\)</span> and the same number of columns as <span class="process-math">\(B\text{.}\)</span>
 </div></li>
 <li id="Sec-Matrix_multiplication-3-2-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-3-2-2">Entry <span class="process-math">\(c_{ij}\)</span> in <span class="process-math">\(C\)</span> is found by taking the scalar (or dot) product of the <span class="process-math">\(i^{\mbox{th}}\)</span> row vector from <span class="process-math">\(A\)</span> with (the transpose of) the <span class="process-math">\(j^{\mbox{th}}\)</span> column vector from <span class="process-math">\(B\text{,}\)</span> i.e.<div class="displaymath process-math" id="Sec-Matrix_multiplication-3-2-2-7">
@@ -679,18 +710,19 @@ c_{ij} \amp = (a_{i1},a_{i2}, \ldots, a_{in})\cdot (b_{1j},b_{2j}, \ldots, b_{nj
 A=\begin{pmatrix} 0 \amp 1 \\ -1 \amp 3 \\ 2 \amp 5 \end{pmatrix} \quad \mbox{and} \quad B=\begin{pmatrix} -2 \amp 1/2 \\ -3 \amp 4 \end{pmatrix}.
 \end{equation*}
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-1-2">
 <li id="Ex-Matrix_multiplication_not_commutative-1-2-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-1-2-1">Calculate <span class="process-math">\(AB\text{.}\)</span>
 </div></li>
 <li id="Ex-Matrix_multiplication_not_commutative-1-2-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-1-2-2">Calculate <span class="process-math">\(BA\text{.}\)</span>
 </div></li>
 </ol>
-</div> <details id="Ex-Matrix_multiplication_not_commutative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha">
+</div>
+<details id="Ex-Matrix_multiplication_not_commutative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-2-1">
 <li id="Ex-Matrix_multiplication_not_commutative-2-1-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-2-1-1"><span class="process-math">\(\displaystyle AB=\begin{pmatrix} -3 \amp 4 \\ -7 \amp 23/2 \\ -19 \amp 21 \end{pmatrix}\)</span></div></li>
 <li id="Ex-Matrix_multiplication_not_commutative-2-1-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-2-1-2">
 <span class="process-math">\(BA\)</span> is not defined.</div></li>
-</ol></div></details> <details id="Ex-Matrix_multiplication_not_commutative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<ol class="lower-alpha">
+</ol></div></details><details id="Ex-Matrix_multiplication_not_commutative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-3-1">
 <li id="Ex-Matrix_multiplication_not_commutative-3-1-1"><div class="para logical" id="Ex-Matrix_multiplication_not_commutative-3-1-1-1">
 <div class="para">Since <span class="process-math">\(A\)</span> is a <span class="process-math">\(3 \times 2\)</span>  matrix and <span class="process-math">\(B\)</span> is <span class="process-math">\(2\times 2\)</span> then <span class="process-math">\(AB\)</span> is defined since <span class="process-math">\(A\)</span> has <span class="process-math">\(2\)</span> columns and <span class="process-math">\(B\)</span> has <span class="process-math">\(2\)</span> rows. The resultant matrix will be a <span class="process-math">\(3 \times 2\)</span>  matrix since <span class="process-math">\(A\)</span> has <span class="process-math">\(3\)</span> rows and <span class="process-math">\(B\)</span> has <span class="process-math">\(2\)</span> columns. Thus <span class="process-math">\(AB\)</span> will be of the form</div>
 <div class="displaymath process-math">
@@ -718,7 +750,8 @@ AB=\begin{pmatrix} -3 \amp 4 \\ -7 \amp 23/2 \\ -19 \amp 21 \end{pmatrix}.
 </div></li>
 <li id="Ex-Matrix_multiplication_not_commutative-3-1-2"><div class="para" id="Ex-Matrix_multiplication_not_commutative-3-1-2-1">
 <span class="process-math">\(BA\)</span> is not defined because the number of columns in <span class="process-math">\(B\)</span> (i.e. 2) is not equal to the number of rows in <span class="process-math">\(A\)</span> (i.e. 3).</div></li>
-</ol> <div class="para logical" id="Ex-Matrix_multiplication_not_commutative-3-2">
+</ol>
+<div class="para logical" id="Ex-Matrix_multiplication_not_commutative-3-2">
 <div class="para">Notice that this example shows that matrix multiplication is not commutative, i.e. in general</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -736,14 +769,15 @@ AB \neq BA.
 A=\begin{pmatrix} 3\amp 2 \amp 1 \amp 6 \\ 2 \amp 1 \amp 3 \amp -1\end{pmatrix},  \quad  B=\begin{pmatrix} 1 \amp 0 \\ -1 \amp 2 \\ 3 \amp 1 \\ 4 \amp 5 \end{pmatrix}, \quad C =\begin{pmatrix}-2 \amp 1 \amp 0 \\ 4 \amp -1 \amp 3\end{pmatrix}.
 \end{equation*}
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_associative-1-2">
 <li id="Ex-Matrix_multiplication_associative-1-2-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_associative-1-2-1">Calculate <span class="process-math">\(A(BC)\text{.}\)</span>
 </div></li>
 <li id="Ex-Matrix_multiplication_associative-1-2-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_associative-1-2-2">Calculate <span class="process-math">\((AB)C\text{.}\)</span>
 </div></li>
 </ol>
-</div> <details id="Ex-Matrix_multiplication_associative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Matrix_multiplication_associative-2-1"><span class="process-math">\(A(BC) =  \begin{pmatrix}84 \amp -7 \amp 105 \\ -12 \amp 6 \amp 0\end{pmatrix} = (AB)C\)</span></div></div></details> <details id="Ex-Matrix_multiplication_associative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<ol class="lower-alpha">
+</div>
+<details id="Ex-Matrix_multiplication_associative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Matrix_multiplication_associative-2-1"><span class="process-math">\(A(BC) =  \begin{pmatrix}84 \amp -7 \amp 105 \\ -12 \amp 6 \amp 0\end{pmatrix} = (AB)C\)</span></div></div></details><details id="Ex-Matrix_multiplication_associative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_associative-3-1">
 <li id="Ex-Matrix_multiplication_associative-3-1-1"><div class="para logical" id="Ex-Matrix_multiplication_associative-3-1-1-1">
 <div class="para"><span class="process-math">\(BC = \begin{pmatrix} 1 \amp 0 \\ -1 \amp 2 \\ 3 \amp 1 \\ 4 \amp 5 \end{pmatrix}\begin{pmatrix}-2 \amp 1 \amp 0 \\ 4 \amp -1 \amp 3\end{pmatrix} = \begin{pmatrix} -2 \amp 1 \amp 0\\ 10 \amp -3 \amp 6 \\ -2 \amp 2 \amp 3 \\ 12 \amp -1 \amp 15\end{pmatrix}\)</span></div>
 <div class="displaymath process-math">
@@ -760,7 +794,8 @@ A(BC) = \begin{pmatrix} 3\amp 2 \amp 1 \amp 6 \\ 2 \amp 1 \amp 3 \amp -1\end{pma
 \end{equation*}
 </div>
 </div></li>
-</ol> <div class="para logical" id="Ex-Matrix_multiplication_associative-3-2">
+</ol>
+<div class="para logical" id="Ex-Matrix_multiplication_associative-3-2">
 <div class="para">Notice that this example is an illustration that matrix multiplication is associative, i.e. in general</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -774,7 +809,7 @@ A(BC) = (AB)C\text{.}
 </h4>
 <div class="para logical" id="Sec-Matrix_multiplication-7-2-1">
 <div class="para">Let <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> be appropriately sized matrices. Then</div>
-<ol class="decimal">
+<ol class="decimal ol-marker-9" id="Sec-Matrix_multiplication-7-2-1-4">
 <li id="Sec-Matrix_multiplication-7-2-1-4-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-1">
 <span class="process-math">\(A(BC)=(AB)C \hspace{55mm}\)</span> (Associative Law)</div></li>
 <li id="Sec-Matrix_multiplication-7-2-1-4-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-2">
@@ -791,7 +826,7 @@ A(BC) = (AB)C\text{.}
 </h4>
 <div class="para logical" id="Sec-Matrix_multiplication-9-2-1">
 <div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be appropriately sized matrices. Then</div>
-<ol class="decimal">
+<ol class="decimal ol-marker-9" id="Sec-Matrix_multiplication-9-2-1-3">
 <li id="Sec-Matrix_multiplication-9-2-1-3-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-1"><span class="process-math">\(\displaystyle (A^T)^T = A\)</span></div></li>
 <li id="Sec-Matrix_multiplication-9-2-1-3-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-2"><span class="process-math">\(\displaystyle (A+B)^T = A^T + B^T \)</span></div></li>
 <li id="Sec-Matrix_multiplication-9-2-1-3-3"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-3"><span class="process-math">\(\displaystyle (kA)^T = k(A^T) \)</span></div></li>
@@ -838,7 +873,7 @@ B^TA^T \amp = \begin{pmatrix}-2 \amp -3 \\ 1/2 \amp 4 \end{pmatrix}  \begin{pmat
 A = \begin{pmatrix} 3 \amp -1 \\ -2 \amp 2\end{pmatrix} \quad \mbox{ and } \quad B=\begin{pmatrix} 0 \amp 1 \\ 4 \amp -1 \end{pmatrix}.
 \end{equation*}
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Sec-Matrix_multiplication-11-2-1-1-2">
 <li id="Sec-Matrix_multiplication-11-2-1-1-2-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-2-1-1-2-1">Calculate <span class="process-math">\((A+B)^2\text{.}\)</span>
 </div></li>
 <li id="Sec-Matrix_multiplication-11-2-1-1-2-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-2-1-1-2-2">Calculate <span class="process-math">\(A^2 + 2AB + B^2\text{.}\)</span>
@@ -852,7 +887,7 @@ A = \begin{pmatrix} 3 \amp -1 \\ -2 \amp 2\end{pmatrix} \quad \mbox{ and } \quad
 E = \begin{pmatrix} 6 \amp 1 \\ -1 \amp 3 \\ -5 \amp 2\end{pmatrix} \quad \mbox{ and } \quad F=\begin{pmatrix} 1 \amp -2 \amp 0 \\ 3 \amp 1 \amp 4 \end{pmatrix}.
 \end{equation*}
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Sec-Matrix_multiplication-11-3-1-1-2">
 <li id="Sec-Matrix_multiplication-11-3-1-1-2-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-3-1-1-2-1">Calculate <span class="process-math">\((EF)_{23}\text{.}\)</span>
 </div></li>
 <li id="Sec-Matrix_multiplication-11-3-1-1-2-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-3-1-1-2-2">Calculate <span class="process-math">\((FE)_{12}\text{.}\)</span>
@@ -939,13 +974,13 @@ A\mathbf{x} = \mathbf{b}, \ \mathbf{b} \neq 0\tag{17.1}
 A\mathbf{x} = \mathbf{0}\tag{17.2}
 \end{equation}
 </div>
-<ol class="decimal">
+<ol class="decimal ol-marker-9" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3">
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has two distinct solutions then it has an infinite number of solutions.</div></li>
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has a unique solution then <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a> has only the trivial solution <span class="process-math">\(\mathbf{x}=\mathbf{0}\text{.}\)</span>
 </div></li>
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a>  has an infinite number of solution then so does <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>.</div></li>
 </ol>
-</div></article><details id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1"><ol class="decimal">
+</div></article><details id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1"><ol class="decimal ol-marker-6" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1">
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1-1">
 <div class="para">Let <span class="process-math">\(\mathbf{x} = \mathbf{u}\)</span> and <span class="process-math">\(\mathbf{x} = \mathbf{v}\)</span> be two distinct solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> and let <span class="process-math">\(\mathbf{w} = \mathbf{u} − \mathbf{v}\text{.}\)</span> By using the properties of matrix multiplication we can see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Axb.html">
@@ -987,7 +1022,7 @@ A(t\mathbf{w}) = tA(\mathbf{u} − \mathbf{v}) = t(A\mathbf{u} − A\mathbf{v}) 
 \end{equation*}
 </div>
 <div class="para">The following statements are equivalent:</div>
-<ol class="decimal">
+<ol class="decimal ol-marker-6" id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2">
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1">The system has a unique solution.</div></li>
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2">The planes represented by the rows intersect in a point.</div></li>
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3">The column vectors of the coefficient matrix are linearly independent.</div></li>
@@ -1005,7 +1040,7 @@ x_2 + 3x_3 \amp =1\\
 2x_1 -x_2 +x_3 \amp =3.
 \end{align*}
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha ol-marker-5" id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2">
 <li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1">Calculate <span class="process-math">\(A\mathbf{u}\)</span> where<div class="displaymath process-math">
 \begin{equation*}
 A=\begin{pmatrix}1 \amp -1 \amp -1 \\ 0 \amp 1 \amp 3 \\ 2 \amp -1 \amp 1\end{pmatrix}, \quad \mathbf{u} = \begin{pmatrix}2 \\ 3 \\ -1\end{pmatrix}\text{.}
@@ -1059,7 +1094,7 @@ b_2 \amp = x = 1x + 0y
 \mathbf{b} = \begin{pmatrix}b_1 \\ b_2 \end{pmatrix} = \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix} = A\mathbf{x}.
 \end{equation*}
 </div>
-</div> <div class="para" id="Ex-Linear_transformation_reflection-1-3">Run the Sage cell below to see the effect of the transformation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).</div> <pre id="Ex-Linear_transformation_reflection-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
+</div> <div class="para" id="Ex-Linear_transformation_reflection-1-3">Run the Sage cell below to see the effect of the transformation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).</div> <div id="Ex-Linear_transformation_reflection-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
 example = [[0,1],[1,0]]
 
 @interact
@@ -1072,7 +1107,7 @@ def _(A=input_grid(2,2, default = example,
     show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
     show(line(L, color='blue')+line(LA, color='red'),
         aspect_ratio=1, frame=true, title='Both')
-</script></pre></article><article class="example example-like" id="Ex-Linear_transformation_rotation"><h4 class="heading">
+</script></div></article><article class="example example-like" id="Ex-Linear_transformation_rotation"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.23</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Ex-Linear_transformation_rotation-1-1">
@@ -1089,7 +1124,7 @@ A = \begin{pmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\t
 A = \begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix}.
 \end{equation*}
 </div>
-</div> <div class="para" id="Ex-Linear_transformation_rotation-1-3">Run the Sage cell below to see the effect of the rotation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).</div> <pre id="Ex-Linear_transformation_rotation-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
+</div> <div class="para" id="Ex-Linear_transformation_rotation-1-3">Run the Sage cell below to see the effect of the rotation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).</div> <div id="Ex-Linear_transformation_rotation-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
 
 @interact
 def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
@@ -1102,7 +1137,7 @@ def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
     show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
     show(line(L, color='blue')+line(LA, color='red'),
         aspect_ratio=1, frame=true, title='Both')
-</script></pre></article><article class="example example-like" id="Ex-Linear_transformation_reflection_rotation"><h4 class="heading">
+</script></div></article><article class="example example-like" id="Ex-Linear_transformation_reflection_rotation"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.24</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Linear_transformation_reflection_rotation-1-1">Determine the matrix for the transformation in which a reflection in the line <span class="process-math">\(y = x\)</span> is followed by a rotation about the origin through <span class="process-math">\(\pi^c\text{.}\)</span>
@@ -1122,7 +1157,8 @@ def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
 A = A_2A_1 =\begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix} \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix} = \begin{pmatrix} 0 \amp -1 \\ -1 \amp 0\end{pmatrix}.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Linear_transformation_reflection_rotation-3-2">
+</div>
+<div class="para logical" id="Ex-Linear_transformation_reflection_rotation-3-2">
 <div class="para">Note that given that the matrix for a reflection in the line <span class="process-math">\(y = kx\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1137,7 +1173,8 @@ A = A_2A_1 =\begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix} \begin{pmatrix}
 <article class="remark remark-like" id="Sec-Linear_transformations-7"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-Linear_transformations-7-1">Linear transformations in 3 dimensions are also possible. The Sage cell below plots the effect of a linear transformation on three unit vectors and the parallelepiped spanned by them.</div> <pre id="Sec-Linear_transformations-7-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,0,0],[0,1,0],[0,0,1]]
+<div class="para" id="Sec-Linear_transformations-7-1">Linear transformations in 3 dimensions are also possible. The Sage cell below plots the effect of a linear transformation on three unit vectors and the parallelepiped spanned by them.</div>
+<div id="Sec-Linear_transformations-7-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,0,0],[0,1,0],[0,0,1]]
 L = [(0,0,1),(0,1,0),(1,0,0)]
 P = polytopes.parallelotope(L)
 p1 = P.plot(opacity=0.5, color='blue')+\
@@ -1164,7 +1201,7 @@ def _(A=input_grid(3,3, default = example,
     show(p2, aspect_ratio=1)
     print('Both:')
     show(p1+p2, aspect_ratio=1)
-</script></pre></article><section class="exercises" id="Sec-Linear_transformations-8"><h4 class="heading hide-type">
+</script></div></article><section class="exercises" id="Sec-Linear_transformations-8"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Linear_transformations-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1185,7 +1222,7 @@ def _(A=input_grid(3,3, default = example,
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

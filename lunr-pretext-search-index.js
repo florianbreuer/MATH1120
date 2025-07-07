@@ -1,13 +1,1489 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
+  "id": "Calculus_3",
+  "level": "1",
+  "url": "Calculus_3.html",
+  "type": "Chapter",
+  "number": "1",
+  "title": "CA1: Functions of Several Variables",
+  "body": "    CA1: Functions of Several Variables            Functions of Two Variables  In Math1110 we studied \"(real valued) functions of one variable\", that is functions of the form, where is called the domain. We used the notation to denote such functions where denotes the independent variable and the dependent variable.  We have seen that functions of one variable are useful in practice but (of course) there are many real world relationships that are more complicated and can't be well modelled by these functions.   Suppose that we have a thin metal plate and that we are interested in the temperature on this plate. In general the temperature will vary from point to point. If we imagine a coordinate grid on the plate then points on the plate can be identified by their coordinates . Thus will depend on two independent variables, and . Thus we would write and say that is a function of two variables.    Many of the formulas you've come across in school are actually functions of several variables, such as:   The kinetic energy of an object of mass and velocity is given by the two-variable function     The value of a investment compounded continuously at an annual rate of after years is given by the two-variable function     The magnitude of the gravitational attraction between two objects of masses and , separated by a distance of , is given by the three variable function where is the universal gravitational constant .      Note that functions of two variables are of the form where is again the domain. Formally, we define a function of two variables as:   A (real valued) function of two variables is a rule that assigns to each ordered pair of real numbers in a set a unique (real) number denoted by .  Thus,  are examples of functions of two variables.  The set is called the domain of the function. Unless specified otherwise, we take to be the largest possible set of inputs for which we can calculate . The range of is the associated set of values that takes on.   Consider the function .   Find the domain of  Find:                (to 4.d.p.).  is not defined.       Since the argument of the log function has to be positive, the domain is the set of points in the plane satisfying . shows a plot of this domain in .        (to 4.d.p.).  Since is not in the domain of , is not defined.      Domain of the function   A plot of the domain of the function .     Consider the function    Find the domain of  Find:                      Since we can calculate for all values of and the domain of is                  Graphing functions of two variables  Now that we have an idea of what a function of two variables is and what its domain is, we would like a way to visualise it, similar to how we can visualise functions of a single variable by graphing them in the plane.  The two main visualisations are graphs and contour plots. We deal with contour plots in the next section. The graph of a function of two variables is the surface in defined by Thus, we imagine the \"floor\" to be the -plane of inputs to the function, and the height of the surface above (or below) this floor is the output .  A surface in is the graph of a function if and only if it passes the vertical line test, since a function only produces one output for each input in its domain.  In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. Various computer packages can produce such plots, such as Maple, Mathematica, Matlab, Wolfram Alpha and even GPT4 (which runs python code to produce the plots). The following plots are produced by SageMath - you can run the code cells to produce 3D plots which you can manipulate yourself.   Produce the graph of the function      This surface is an example of a paraboloid . It is used for satellite antennas.     Produce the graph of the function      This surface is an example of a hyperbolic paraboloid .     Produce the graph of the function       3D plot of        Produce the graph of the function       3D plot of       Not all surfaces in represent the graph of a function of two variables.   The surface associated with the equation is a sphere of radius and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when , could be either or .  3D plot of       Example Tasks   Determine the domain of the function .    Sketch the graph of the following functions.              Level Curves and Contour Plots  As we have seen, visualising the surface corresponding to the function can be quite difficult, in particular if you're limited to a static image in two dimensions (such as printed on paper). Another way to visualise a function of two variables is to use a contour plot . Here one plots contours, also known as level curves, each of which consists of all the input points for which the output is a certain constant value. This is commonly used in topographic maps, where the contours show points on the map of a given altitude. With a bit of practise, you can visualise the shape of the landscape just from a topographic map.  Sample Topographic Map (Part of the Watagan Mountains)     The level curves of a function are curves in the -plane on which the function has the same value, i.e. on which , where is some constant.  Note:  Each point in the domain of the function lies on exactly one level curve.  When a collection of level curves for a function are drawn on the same plane it is also called a contour plot.  We can also think of level curves as the intersection of the surface and the horizontal plane .     Draw the level curves associated with for the function    The level curves of a function satisfy the equation . So for this function the level curves are: Thus the level curves are rectangular hyperbolae (except for ). The level curves for are shown in following diagram.  Rectangular hyperbolae for various values of        Draw a contour plot for the function .   The contours (i.e. level curves) of a function satisfy the equation . So for this function the level curves are: that is, circles centred on the origin and whose radius is .  Circles for various values of   Notice that there are no level curves when . This tells us that the surface does not go below the -plane.    Here is a SageMath cell that lets you compare graphs and contour plots of different functions. Note that if you fill in the regions between the contours with colours related to the output values you get a colourful plot known as a heat map .    Example Tasks   Draw the level curves associated with for the function .    Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:       Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:             Functions of 3 (or more) Variables  Although we won't do much with them in this course it is possible to define (real valued) functions in variables where is any natural number, that is functions of the form .   The function is a function of the form .    The function is a function of the form .   Visualising such functions is difficult. One option to visualise a function of three variables is to make 3D plots of its level surfaces . These are the surfaces defined by for various values of the constant . This is the same idea as plotting level curves, except now we're in one dimension higher.   The following SageMath cell displays three level surfaces of the function for     We will see later in the course that, rather than using level surfaces to gain understanding a given function, we can gain understanding of a given surface by viewing it as the level surface of a function.        Further Topics   Surfaces of Revolution  The surface associated with the graph of (see ) is an example of a special kind of surface... a surface of revolution.  A surface of revolution is a surface in obtained by rotating a curve about an axis.    Suppose we have a curve in the -plane, and we rotate this curve above the -axis. What would be an equation for the resulting surface of revolution?  Consider a point on the curve above the -axis in 3D space. Its height above the -plane is . As we rotate the curve about the -axis, the point traces out a horizontal circle on the resulting surface of revolution. The radius of this circle equals the original -coordinate of the point when it started above the -axis, and the height of the circle above the -plane equals . The height of an arbitrary point on the surface of revolution is thus , where is the radius of the circle on which the point lies. This tells us that an equation for the surface of revolution is Another way to see this is that, as a result of the rotational symmetry of the surface, the height of the surface above a point on the -plane depends only on the distance of the point from the origin.  The following SageMath code shows the partial surface of revolution obtained by rotating the curve about the -axis.    Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.   Plot of in the -plane for .          Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.         The equation of the surface of revolution will be that is,      Is the graph of a surface of revolution?   Since we can write the function as this surface can be obtained by rotating the curve in the -plane      Example Tasks   Determine the equation of the surface obtained by rotating the curve about the -axis. Make a sketch of the surface.    Is the graph of a surface of revolution?       "
+},
+{
+  "id": "Functions-of-Two-Variables-4",
+  "level": "2",
+  "url": "Calculus_3.html#Functions-of-Two-Variables-4",
+  "type": "Example",
+  "number": "1.1",
+  "title": "",
+  "body": " Suppose that we have a thin metal plate and that we are interested in the temperature on this plate. In general the temperature will vary from point to point. If we imagine a coordinate grid on the plate then points on the plate can be identified by their coordinates . Thus will depend on two independent variables, and . Thus we would write and say that is a function of two variables.  "
+},
+{
+  "id": "Functions-of-Two-Variables-5",
+  "level": "2",
+  "url": "Calculus_3.html#Functions-of-Two-Variables-5",
+  "type": "Example",
+  "number": "1.2",
+  "title": "",
+  "body": " Many of the formulas you've come across in school are actually functions of several variables, such as:   The kinetic energy of an object of mass and velocity is given by the two-variable function     The value of a investment compounded continuously at an annual rate of after years is given by the two-variable function     The magnitude of the gravitational attraction between two objects of masses and , separated by a distance of , is given by the three variable function where is the universal gravitational constant .     "
+},
+{
+  "id": "Functions-of-Two-Variables-7",
+  "level": "2",
+  "url": "Calculus_3.html#Functions-of-Two-Variables-7",
+  "type": "Definition",
+  "number": "1.3",
+  "title": "",
+  "body": " A (real valued) function of two variables is a rule that assigns to each ordered pair of real numbers in a set a unique (real) number denoted by . "
+},
+{
+  "id": "Functions-of-Two-Variables-9",
+  "level": "2",
+  "url": "Calculus_3.html#Functions-of-Two-Variables-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "domain range "
+},
+{
+  "id": "Functions-of-Two-Variables-10",
+  "level": "2",
+  "url": "Calculus_3.html#Functions-of-Two-Variables-10",
+  "type": "Example",
+  "number": "1.4",
+  "title": "",
+  "body": " Consider the function .   Find the domain of  Find:                (to 4.d.p.).  is not defined.       Since the argument of the log function has to be positive, the domain is the set of points in the plane satisfying . shows a plot of this domain in .        (to 4.d.p.).  Since is not in the domain of , is not defined.    "
+},
+{
+  "id": "fig-domain1",
+  "level": "2",
+  "url": "Calculus_3.html#fig-domain1",
+  "type": "Figure",
+  "number": "1.5",
+  "title": "",
+  "body": " Domain of the function   A plot of the domain of the function .   "
+},
+{
+  "id": "Functions-of-Two-Variables-12",
+  "level": "2",
+  "url": "Calculus_3.html#Functions-of-Two-Variables-12",
+  "type": "Example",
+  "number": "1.6",
+  "title": "",
+  "body": " Consider the function    Find the domain of  Find:                      Since we can calculate for all values of and the domain of is           "
+},
+{
+  "id": "graphs-6",
+  "level": "2",
+  "url": "Calculus_3.html#graphs-6",
+  "type": "Example",
+  "number": "1.7",
+  "title": "",
+  "body": " Produce the graph of the function      This surface is an example of a paraboloid . It is used for satellite antennas.   "
+},
+{
+  "id": "graphs-7",
+  "level": "2",
+  "url": "Calculus_3.html#graphs-7",
+  "type": "Example",
+  "number": "1.8",
+  "title": "",
+  "body": " Produce the graph of the function      This surface is an example of a hyperbolic paraboloid .   "
+},
+{
+  "id": "graphs-8",
+  "level": "2",
+  "url": "Calculus_3.html#graphs-8",
+  "type": "Example",
+  "number": "1.9",
+  "title": "",
+  "body": " Produce the graph of the function       3D plot of      "
+},
+{
+  "id": "Example-6-Calc-3",
+  "level": "2",
+  "url": "Calculus_3.html#Example-6-Calc-3",
+  "type": "Example",
+  "number": "1.11",
+  "title": "",
+  "body": " Produce the graph of the function       3D plot of      "
+},
+{
+  "id": "graphs-11",
+  "level": "2",
+  "url": "Calculus_3.html#graphs-11",
+  "type": "Example",
+  "number": "1.13",
+  "title": "",
+  "body": " The surface associated with the equation is a sphere of radius and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when , could be either or .  3D plot of     "
+},
+{
+  "id": "graphs-12-2",
+  "level": "2",
+  "url": "Calculus_3.html#graphs-12-2",
+  "type": "Exercise",
+  "number": "1.2.1",
+  "title": "",
+  "body": " Determine the domain of the function .  "
+},
+{
+  "id": "graphs-12-3",
+  "level": "2",
+  "url": "Calculus_3.html#graphs-12-3",
+  "type": "Exercise",
+  "number": "1.2.2",
+  "title": "",
+  "body": " Sketch the graph of the following functions.      "
+},
+{
+  "id": "level-curves-2",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "contour plot "
+},
+{
+  "id": "level-curves-3",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-3",
+  "type": "Definition",
+  "number": "1.16",
+  "title": "",
+  "body": "The level curves of a function are curves in the -plane on which the function has the same value, i.e. on which , where is some constant. "
+},
+{
+  "id": "level-curves-5",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-5",
+  "type": "Example",
+  "number": "1.17",
+  "title": "",
+  "body": " Draw the level curves associated with for the function    The level curves of a function satisfy the equation . So for this function the level curves are: Thus the level curves are rectangular hyperbolae (except for ). The level curves for are shown in following diagram.  Rectangular hyperbolae for various values of      "
+},
+{
+  "id": "level-curves-6",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-6",
+  "type": "Example",
+  "number": "1.19",
+  "title": "",
+  "body": " Draw a contour plot for the function .   The contours (i.e. level curves) of a function satisfy the equation . So for this function the level curves are: that is, circles centred on the origin and whose radius is .  Circles for various values of   Notice that there are no level curves when . This tells us that the surface does not go below the -plane.   "
+},
+{
+  "id": "level-curves-7",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "heat map "
+},
+{
+  "id": "level-curves-8-2",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-8-2",
+  "type": "Exercise",
+  "number": "1.3.1",
+  "title": "",
+  "body": " Draw the level curves associated with for the function .  "
+},
+{
+  "id": "level-curves-8-3",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-8-3",
+  "type": "Exercise",
+  "number": "1.3.2",
+  "title": "",
+  "body": " Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:     "
+},
+{
+  "id": "level-curves-8-4",
+  "level": "2",
+  "url": "Calculus_3.html#level-curves-8-4",
+  "type": "Exercise",
+  "number": "1.3.3",
+  "title": "",
+  "body": " Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:     "
+},
+{
+  "id": "functions-of-3-or-more-variables-3",
+  "level": "2",
+  "url": "Calculus_3.html#functions-of-3-or-more-variables-3",
+  "type": "Example",
+  "number": "1.23",
+  "title": "",
+  "body": " The function is a function of the form .  "
+},
+{
+  "id": "functions-of-3-or-more-variables-4",
+  "level": "2",
+  "url": "Calculus_3.html#functions-of-3-or-more-variables-4",
+  "type": "Example",
+  "number": "1.24",
+  "title": "",
+  "body": " The function is a function of the form .  "
+},
+{
+  "id": "functions-of-3-or-more-variables-5",
+  "level": "2",
+  "url": "Calculus_3.html#functions-of-3-or-more-variables-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "level surfaces "
+},
+{
+  "id": "functions-of-3-or-more-variables-6",
+  "level": "2",
+  "url": "Calculus_3.html#functions-of-3-or-more-variables-6",
+  "type": "Example",
+  "number": "1.25",
+  "title": "",
+  "body": " The following SageMath cell displays three level surfaces of the function for    "
+},
+{
+  "id": "surfaces-of-revolution-2",
+  "level": "2",
+  "url": "Calculus_3.html#surfaces-of-revolution-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "surface of revolution "
+},
+{
+  "id": "surfaces-of-revolution-7",
+  "level": "2",
+  "url": "Calculus_3.html#surfaces-of-revolution-7",
+  "type": "Example",
+  "number": "1.27",
+  "title": "",
+  "body": " Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.   Plot of in the -plane for .       "
+},
+{
+  "id": "surfaces-of-revolution-8",
+  "level": "2",
+  "url": "Calculus_3.html#surfaces-of-revolution-8",
+  "type": "Example",
+  "number": "1.29",
+  "title": "",
+  "body": " Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.         The equation of the surface of revolution will be that is,    "
+},
+{
+  "id": "surfaces-of-revolution-9",
+  "level": "2",
+  "url": "Calculus_3.html#surfaces-of-revolution-9",
+  "type": "Example",
+  "number": "1.31",
+  "title": "",
+  "body": " Is the graph of a surface of revolution?   Since we can write the function as this surface can be obtained by rotating the curve in the -plane    "
+},
+{
+  "id": "surfaces-of-revolution-10-2",
+  "level": "2",
+  "url": "Calculus_3.html#surfaces-of-revolution-10-2",
+  "type": "Exercise",
+  "number": "1.5.1.1",
+  "title": "",
+  "body": " Determine the equation of the surface obtained by rotating the curve about the -axis. Make a sketch of the surface.  "
+},
+{
+  "id": "surfaces-of-revolution-10-3",
+  "level": "2",
+  "url": "Calculus_3.html#surfaces-of-revolution-10-3",
+  "type": "Exercise",
+  "number": "1.5.1.2",
+  "title": "",
+  "body": " Is the graph of a surface of revolution?  "
+},
+{
+  "id": "Calculus_4",
+  "level": "1",
+  "url": "Calculus_4.html",
+  "type": "Chapter",
+  "number": "2",
+  "title": "CA2: Partial Differentiation",
+  "body": "    CA2: Partial Differentiation            Partial Differentiation  Firstly, let’s recall some of the important things that we know about the derivative of the function of one variable, .   At any given point , gives the slope of the tangent to the graph of the function at that point.  Plot of (blue) and the tangent line (red) at .     At any given point , gives the instantaneous rate of change of the function at that point.  The derivative is itself a function of one variable, when it exists.   For a function of two variables, , the rate at which the function is changing at any point as we vary the independent variables depends upon the direction in which we vary those variables.    Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .     As a first step to analyzing more formally how a function of two variables can change with respect to its independent variables we will first consider the cases where we vary only one variable at a time.    Consider the function at the point .  Firstly, let’s look at the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .   3D plot of with a plane constant in through the point .    Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .  Now consider the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .  Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .   3D plot of with a plane constant in through the point .     Consider a function of two variables, for example: . The following plots the graph of , together with the vertical planes defined by (in orange) and (in red), and arrows representing the slope of the surface inside these planes.    The slopes of the surface inside the planes above are given by what is known as the partial derivatives of the function. Where is kept constant (in the orange plane), the slope is given by the partial derivative . Where is kept constant (in the red plane), the slope is given by the partial derivative . Formally, partial derivatives are defined as follows.   Partial Derivative   Consider the function of two variables,  The partial derivative of with respect to at the point is given by the limit (if it exists) .  The partial derivative of with respect to at the point is given by the limit (if it exists) .     Notation  The notation is often used to denote . Similarly, is often used to denote .      Using the definition, calculate the partial derivatives of at the point .    and    Firstly, calculate the partial derivative of with respect to at .   Next, calculate the partial derivative of with respect to at .     If we calculate the partial derivatives of a function at the general point (as opposed to some specific point ) we will obtain (instead of two specific values) two new functions of two variables.     Using the definition, calculate the partial derivatives of .    and    Calculating the partial derivative with respect to :   Now, calculating the partial derivative with respect to :     As can be seen in the above example, to calculate the partial derivative of with respect to at the general point all we have to do is treat as a constant and differentiate with respect to (using all of the familiar rules of differentiation for functions of one variable). Similarly, to calculate the partial derivative of with respect to at the general point treat as a constant and differentiate with respect to .     Find the partial derivatives of the function at the point using the above method.    and    This function can be written as:   Now, thinking of as a constant (so that is also constant) and treating the function as a function of only,   Thus,   Next, think of as a constant (so that is also constant) and treating the function as a function of only,   Thus,     A shorter notation for the partial derivative of with respect to is . Similarly the partial derivative with respect to is written as .    Find and when .    and .    To find , think of as a constant. Thus, .  To find , think of as a constant. So, .      Find and when .    and     To find , think of as a constant. Thus, using the chain rule: .  To find , think of as a constant. Again, using the chain rule:       The equation can be thought of as implicitly defining as a function of and . Find and .    and     To find differentiate both sides of the defining equation with respect to , remembering that is some unknown function of . Also, remember to treat as a constant. Then, using the product rule and the chain rule,   Similarly, differentiating both sides of the defining equation with respect to ,     Partial derivatives can be found for functions of more than two variables.    Find the partial derivatives for the function of three variables .    , and    Write the function as .  To find treat and as constants and think of as a function of only. Thus,   To find treat and as constants and think of as a function of only. Thus,   Finally, to find treat and as constants and think of as a function of only. Thus,      Example Tasks   Find both partial derivatives of the function at the point .    Find and when .    If , find .    Find and when .    In the following contour plot the contours are for evenly spaced values of from at the point to at the point . Find the sign of and at the points , and given the following contour plot for the function . Explain your thinking.              Higher Partial Derivatives  The partial derivatives of the function are themselves functions of two variables. Thus they can be differentiated further, giving the second partial derivatives, the third partial derivatives etc. Common notations for the second partial derivatives include:     Find the second partial derivatives for the function .    , , and     Begin by finding the first partial derivatives. Here .  Now differentiate firstly with respect to to find and then with respect to to find . Thus,   Next differentiate with respect to to find and then with respect to to find . Thus,   Notice that for this function .      Calculate , and when .    , and .    Begin by writing the function in the form .  Then the first partial derivatives are and hence the second partial derivatives are .  Differentiating with respect to , with respect to and with respect to gives .    The above instances have provided examples of the following general result.   Clairaut's Theorem   If for the function both and are continuous on some domain , then on that domain .    Clairaut's Theorem can be extended to higher partial derivatives and to functions of more than two variables.    Calculate all first and second order partial derivatives for the function .    Even though is a function of variables, Clairaut's Theorem still holds. Thus there will be only 6 distinct second partial derivatives, i.e. , , , , , .  Now and so       Example Tasks   Find the second partial derivatives for the function .    Calculate  and for .    Let where is a constant and . Determine if satisfies     A little remark  Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.             SageMath can also be used to compute partial derivatives. For example, the following Sage cell computes the partial derivatives of the function .      "
+},
+{
+  "id": "Fig-Slope_of_tangent",
+  "level": "2",
+  "url": "Calculus_4.html#Fig-Slope_of_tangent",
+  "type": "Figure",
+  "number": "2.1",
+  "title": "",
+  "body": " Plot of (blue) and the tangent line (red) at .   "
+},
+{
+  "id": "Ex-Direction_and_rate_of_change",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-Direction_and_rate_of_change",
+  "type": "Example",
+  "number": "2.2",
+  "title": "",
+  "body": "  Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .    "
+},
+{
+  "id": "Ex-Direction_and_instantaneous_rate_of_change",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-Direction_and_instantaneous_rate_of_change",
+  "type": "Example",
+  "number": "2.4",
+  "title": "",
+  "body": "  Consider the function at the point .  Firstly, let’s look at the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .   3D plot of with a plane constant in through the point .    Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .  Now consider the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .  Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .   3D plot of with a plane constant in through the point .    "
+},
+{
+  "id": "Sec-Partial_Differentiation-10",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "partial derivatives "
+},
+{
+  "id": "Sec-Partial_Differentiation-11",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-11",
+  "type": "Definition",
+  "number": "2.7",
+  "title": "Partial Derivative.",
+  "body": " Partial Derivative   Consider the function of two variables,  The partial derivative of with respect to at the point is given by the limit (if it exists) .  The partial derivative of with respect to at the point is given by the limit (if it exists) .   "
+},
+{
+  "id": "Sec-Partial_Differentiation-12",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-12",
+  "type": "Remark",
+  "number": "2.8",
+  "title": "Notation.",
+  "body": " Notation  The notation is often used to denote . Similarly, is often used to denote .  "
+},
+{
+  "id": "Ex-Calculating_partial_derivatives_at_particular_point",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-Calculating_partial_derivatives_at_particular_point",
+  "type": "Example",
+  "number": "2.9",
+  "title": "",
+  "body": "   Using the definition, calculate the partial derivatives of at the point .    and    Firstly, calculate the partial derivative of with respect to at .   Next, calculate the partial derivative of with respect to at .    "
+},
+{
+  "id": "Ex-Calculating_partial_derivatives_at_general_point",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-Calculating_partial_derivatives_at_general_point",
+  "type": "Example",
+  "number": "2.10",
+  "title": "",
+  "body": "   Using the definition, calculate the partial derivatives of .    and    Calculating the partial derivative with respect to :   Now, calculating the partial derivative with respect to :    "
+},
+{
+  "id": "Ex-Calculating_partial_derivatives_at_particular_point_shorter",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-Calculating_partial_derivatives_at_particular_point_shorter",
+  "type": "Example",
+  "number": "2.11",
+  "title": "",
+  "body": "   Find the partial derivatives of the function at the point using the above method.    and    This function can be written as:   Now, thinking of as a constant (so that is also constant) and treating the function as a function of only,   Thus,   Next, think of as a constant (so that is also constant) and treating the function as a function of only,   Thus,    "
+},
+{
+  "id": "Ex-shorthand_computation_example-1",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-shorthand_computation_example-1",
+  "type": "Example",
+  "number": "2.12",
+  "title": "",
+  "body": "  Find and when .    and .    To find , think of as a constant. Thus, .  To find , think of as a constant. So, .   "
+},
+{
+  "id": "Ex-shorthand_computation_example_arcsin",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-shorthand_computation_example_arcsin",
+  "type": "Example",
+  "number": "2.13",
+  "title": "",
+  "body": "  Find and when .    and     To find , think of as a constant. Thus, using the chain rule: .  To find , think of as a constant. Again, using the chain rule:    "
+},
+{
+  "id": "Ex-shorthand_computation_example-3_variables_implicit",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-shorthand_computation_example-3_variables_implicit",
+  "type": "Example",
+  "number": "2.14",
+  "title": "",
+  "body": "  The equation can be thought of as implicitly defining as a function of and . Find and .    and     To find differentiate both sides of the defining equation with respect to , remembering that is some unknown function of . Also, remember to treat as a constant. Then, using the product rule and the chain rule,   Similarly, differentiating both sides of the defining equation with respect to ,    "
+},
+{
+  "id": "Ex-shorthand_computation_example_3_variables",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-shorthand_computation_example_3_variables",
+  "type": "Example",
+  "number": "2.15",
+  "title": "",
+  "body": "  Find the partial derivatives for the function of three variables .    , and    Write the function as .  To find treat and as constants and think of as a function of only. Thus,   To find treat and as constants and think of as a function of only. Thus,   Finally, to find treat and as constants and think of as a function of only. Thus,    "
+},
+{
+  "id": "Sec-Partial_Differentiation-24-2",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-2",
+  "type": "Exercise",
+  "number": "2.1.1",
+  "title": "",
+  "body": " Find both partial derivatives of the function at the point .  "
+},
+{
+  "id": "Sec-Partial_Differentiation-24-3",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-3",
+  "type": "Exercise",
+  "number": "2.1.2",
+  "title": "",
+  "body": " Find and when .  "
+},
+{
+  "id": "Sec-Partial_Differentiation-24-4",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-4",
+  "type": "Exercise",
+  "number": "2.1.3",
+  "title": "",
+  "body": " If , find .  "
+},
+{
+  "id": "Sec-Partial_Differentiation-24-5",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-5",
+  "type": "Exercise",
+  "number": "2.1.4",
+  "title": "",
+  "body": " Find and when .  "
+},
+{
+  "id": "Sec-Partial_Differentiation-24-6",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-6",
+  "type": "Exercise",
+  "number": "2.1.5",
+  "title": "",
+  "body": " In the following contour plot the contours are for evenly spaced values of from at the point to at the point . Find the sign of and at the points , and given the following contour plot for the function . Explain your thinking.      "
+},
+{
+  "id": "Ex-second_partial_derivatives",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-second_partial_derivatives",
+  "type": "Example",
+  "number": "2.17",
+  "title": "",
+  "body": "  Find the second partial derivatives for the function .    , , and     Begin by finding the first partial derivatives. Here .  Now differentiate firstly with respect to to find and then with respect to to find . Thus,   Next differentiate with respect to to find and then with respect to to find . Thus,   Notice that for this function .   "
+},
+{
+  "id": "Ex-third_partial_derivatives",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-third_partial_derivatives",
+  "type": "Example",
+  "number": "2.18",
+  "title": "",
+  "body": "  Calculate , and when .    , and .    Begin by writing the function in the form .  Then the first partial derivatives are and hence the second partial derivatives are .  Differentiating with respect to , with respect to and with respect to gives .   "
+},
+{
+  "id": "Sec-Higher_Partial_Derivatives-7",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-7",
+  "type": "Theorem",
+  "number": "2.19",
+  "title": "Clairaut’s Theorem.",
+  "body": " Clairaut's Theorem   If for the function both and are continuous on some domain , then on that domain .   "
+},
+{
+  "id": "Ex-first_and_second_partials_of_3_variable_function",
+  "level": "2",
+  "url": "Calculus_4.html#Ex-first_and_second_partials_of_3_variable_function",
+  "type": "Example",
+  "number": "2.20",
+  "title": "",
+  "body": "  Calculate all first and second order partial derivatives for the function .    Even though is a function of variables, Clairaut's Theorem still holds. Thus there will be only 6 distinct second partial derivatives, i.e. , , , , , .  Now and so     "
+},
+{
+  "id": "Sec-Higher_Partial_Derivatives-10-2",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-10-2",
+  "type": "Exercise",
+  "number": "2.2.1",
+  "title": "",
+  "body": " Find the second partial derivatives for the function .  "
+},
+{
+  "id": "Sec-Higher_Partial_Derivatives-10-3",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-10-3",
+  "type": "Exercise",
+  "number": "2.2.2",
+  "title": "",
+  "body": " Calculate  and for .  "
+},
+{
+  "id": "Sec-Higher_Partial_Derivatives-10-4",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-10-4",
+  "type": "Exercise",
+  "number": "2.2.3",
+  "title": "",
+  "body": " Let where is a constant and . Determine if satisfies  "
+},
+{
+  "id": "Sec-Higher_Partial_Derivatives-11",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-11",
+  "type": "Remark",
+  "number": "2.21",
+  "title": "A little remark.",
+  "body": " A little remark  Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.           "
+},
+{
+  "id": "Sec-Higher_Partial_Derivatives-12",
+  "level": "2",
+  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-12",
+  "type": "Remark",
+  "number": "2.25",
+  "title": "",
+  "body": " SageMath can also be used to compute partial derivatives. For example, the following Sage cell computes the partial derivatives of the function .   "
+},
+{
+  "id": "Chap-Calculus_5",
+  "level": "1",
+  "url": "Chap-Calculus_5.html",
+  "type": "Chapter",
+  "number": "3",
+  "title": "CA3: Linear Approximations",
+  "body": "    CA3: Linear Approximations       In Math1110 we looked at the idea of the linearization of a function of one variable . The idea was that near the point we could approximate the function using the line tangent to the function at . We called this tangent the linearization of the function at and used it to derive the linear approximation formula , . These ideas can also be applied to functions of two variables.        Tangent Planes  Recall that the graph associated with the function is a surface in (that passes the vertical line test). Wherever this surface does not have any discontinuities or cusp-like points it will have a tangent plane. Like the tangent line to the graph of a function of one variable, the tangent plane to the function at the point is the plane that just touches the surface at the point .   For the function the graph below shows the graph of the function and it's tangent plane at the point .   3D plot of and the tangent plane at .     To find the equation of the plane tangent to the function at the point , firstly recall that the equation of a plane in Cartesian form is given by or in normal form, as illustrated in , by where is a normal vector to the plane, is the position vector of a point on the plane and .   Representation of the normal vector to a plane.      Find the equation of the tangent plane to the function at .       Now, we know that the partial derivative gives the slope of the tangent at , to the curve of intersection of the surface associated with and the plane .     Since this tangent line lies in the plane tangent to at the vector will be a vector that is parallel to the tangent plane, (or lies in the tangent plane if we place it’s tail at the point ). Similarly, the vector will be another vector parallel to the tangent plane. Since these two non-parallel vectors are parallel to the tangent plane, their vector product will give a vector normal to the tangent plane, i.e. Thus, using equation , the equation of the plane tangent to at is which simplifies to .    In general, to find the equation of the plane tangent to the function at the point , note that the vectors lie in the tangent plane and hence a normal to the plane is . Since the point lies on the plane, using equation , the equation of the tangent plane is On expanding and rearranging this we get the following result.    The equation of the plane tangent to the function at the point is , where .    The Sage cell below uses the equation of the tangent plane given above to plot the tangent plane to the function at a point .     Find the equation of the plane tangent to at the point .   3D plot of and the tangent plane at .         Firstly, note that when , . Now and . Thus the equation of the tangent plane is which simplifies to .      Find the equation of the line normal to the graph of the function at the point .       Recall that the vector equation of a line in is where is the position vector of a general point, is the position vector of a point that lies on the line and is a direction vector for the line (i.e. a vector that is parallel to the line).  We know that a vector normal to the surface at the point is given by .  For the function , and . Thus a direction vector for the line normal to at the point will be . Since the normal line passes through the point its equation is .     Example Tasks   Find the equation of the tangent plane to at the point .    Find the equation of the tangent plane and normal line to at the point .    Show that every line that is normal to the sphere passes through the origin.          Linear Approximations  In we found that the equation of the tangent plane to the function at the point , which is a linear equation.     We call the function the linearisation of at the point .      Find the linearisation of at the point .       Begin by calculating the partial derivatives of , . Thus . and so the linearisation is .    When we use the linearisation of at the point to approximate the function near the point we call this the linear (or tangent plane) approximation of at the point . Notice that if we let the independent variables change by the amounts and then the linearisation will change from to . Thus we can approximate the change in the function value by On using the linearisation formula given above, we end up with the following result.   The Linear Approximation Formula   The linear approximation to the change, , in the function when the independent variables change from to is .    This result is sometimes called the small change formula for functions of two variables.    For the function , . Use a linear approximation to estimate .       Via a linear approximation . Here and so .  Thus, with and , via the linear approximation formula and hence      A steel ball has a mass, , of 6300   50   and has volume, , 800   10   . Find the density of the ball, including an estimate of the error.    7.875          The density, , is given by . Thus   Using a linear approximation to estimate the error . Now and so at , and with and (to get the maximum value of ) . Thus .      Use a linear approximation to estimate the value of at for surface defined implicitly by .       Firstly notice that when and , . Thus . Now, via a linear approximation where , and , . To find the partial derivatives we need to use implicit differentiation. Differentiating with respect to : .  Thus .  Differentiating with respect to y: .  Thus . Putting this together gives and hence      Example Tasks   Use a linear approximation to find the value of when .    Use a linear approximation to estimate the value of .    A right angled triangle with right angle at is measured with 10   0.02   and 3.4   0.02   . What is the angle at , including the error?    In the figure below a rectangle initially with sides and has been made larger so that the sides are now and .    Shade on the diagram the regions that represent:  The increase in area.  The linear approximation to the increase in area. Explain your answer.           Quadratic Approximations  We have seen previously that for functions of one variable the idea of the linearisation of the function could be extended by considering the Taylor polynomial for the function.    For the function the Maclaurin polynomial of degree is .  We saw that the linearisation of at was the Maclaurin polynomial of degree 1, i.e. .  The Maclaurin polynomial of degree 2, i.e. gives a quadratic approximation to about and so on.    For functions of one variable we derived the Taylor series by trying to find a power series in that matched the function and all its derivatives at . For functions of two variables we can use a similar idea to derive the Taylor series about the point . This series will be a power series in and that matches the function and its partial derivatives at the point . The formula for the Taylor series of two variables is quite lengthy to write and so we will not reproduce it here. However, as with functions of one variable truncations of this series are called Taylor polynomials and the Taylor polynomial of degree 1 is the linearisation of the function. Similarly, the Taylor polynomial of degree 2 will give us a quadratic approximation to the function.   Taylor Polynomial of Degree 2  The Taylor Polynomial of degree 2 for the function of two variables about the point is    The question of how good an approximation this polynomial is goes beyond what we will cover in this course but if has continuous partial derivatives and if is sufficiently close to  then the approximation should be useful.    Find the quadratic approximation to the function about the point .       First calculate the partial derivatives:   Now evaluate these at    Thus, using , we have .      Using both a linear and a quadratic approximation, estimate the difference in the volume between a box with a square base of side length 1 and height 2 and a box with square base of side length 1.1 and height 2.05 .    Via a linear approximation, .  Via a quadratic approximation,    If we let the side length of the base of a box be and the height be then volume of the box is given by the formula .  Thus the difference in the volume between the boxes will be the change in when changes by 0.1 and changes by 0.05. Using the results obtained in the example above, via a linear approximation .  Via a quadratic approximation .     Example Tasks   Find the Taylor polynomial of degree 2 for about .    Find the Taylor polynomial of degree 2 for about .    If , use a linear approximation and a quadratic approximation to find the value of the dependent variable z and an associated error bound when .      "
+},
+{
+  "id": "Ex-Tangent_Plane",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Tangent_Plane",
+  "type": "Example",
+  "number": "3.1",
+  "title": "",
+  "body": " For the function the graph below shows the graph of the function and it's tangent plane at the point .   3D plot of and the tangent plane at .    "
+},
+{
+  "id": "Fig-Tangent_Plane_Vector_Form_Figure",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Fig-Tangent_Plane_Vector_Form_Figure",
+  "type": "Figure",
+  "number": "3.3",
+  "title": "",
+  "body": " Representation of the normal vector to a plane.   "
+},
+{
+  "id": "Ex-Equation_of_Tangent_Plane",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Equation_of_Tangent_Plane",
+  "type": "Example",
+  "number": "3.4",
+  "title": "",
+  "body": "  Find the equation of the tangent plane to the function at .       Now, we know that the partial derivative gives the slope of the tangent at , to the curve of intersection of the surface associated with and the plane .     Since this tangent line lies in the plane tangent to at the vector will be a vector that is parallel to the tangent plane, (or lies in the tangent plane if we place it’s tail at the point ). Similarly, the vector will be another vector parallel to the tangent plane. Since these two non-parallel vectors are parallel to the tangent plane, their vector product will give a vector normal to the tangent plane, i.e. Thus, using equation , the equation of the plane tangent to at is which simplifies to .   "
+},
+{
+  "id": "Thm-Equation-of-tangent-plane",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Thm-Equation-of-tangent-plane",
+  "type": "Theorem",
+  "number": "3.6",
+  "title": "",
+  "body": "  The equation of the plane tangent to the function at the point is , where .   "
+},
+{
+  "id": "Ex-Equation_of_Tangent_Plane_2",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Equation_of_Tangent_Plane_2",
+  "type": "Example",
+  "number": "3.7",
+  "title": "",
+  "body": "  Find the equation of the plane tangent to at the point .   3D plot of and the tangent plane at .         Firstly, note that when , . Now and . Thus the equation of the tangent plane is which simplifies to .   "
+},
+{
+  "id": "Ex-Equation_of_Normal_Line",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Equation_of_Normal_Line",
+  "type": "Example",
+  "number": "3.9",
+  "title": "",
+  "body": "  Find the equation of the line normal to the graph of the function at the point .       Recall that the vector equation of a line in is where is the position vector of a general point, is the position vector of a point that lies on the line and is a direction vector for the line (i.e. a vector that is parallel to the line).  We know that a vector normal to the surface at the point is given by .  For the function , and . Thus a direction vector for the line normal to at the point will be . Since the normal line passes through the point its equation is .   "
+},
+{
+  "id": "Sec-Tangent_Planes-13-2",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Tangent_Planes-13-2",
+  "type": "Exercise",
+  "number": "3.1.1",
+  "title": "",
+  "body": " Find the equation of the tangent plane to at the point .  "
+},
+{
+  "id": "Sec-Tangent_Planes-13-3",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Tangent_Planes-13-3",
+  "type": "Exercise",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Find the equation of the tangent plane and normal line to at the point .  "
+},
+{
+  "id": "Sec-Tangent_Planes-13-4",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Tangent_Planes-13-4",
+  "type": "Exercise",
+  "number": "3.1.3",
+  "title": "",
+  "body": " Show that every line that is normal to the sphere passes through the origin.  "
+},
+{
+  "id": "Sec-Linear_Approximations-3",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-3",
+  "type": "Definition",
+  "number": "3.10",
+  "title": "",
+  "body": "   We call the function the linearisation of at the point .   "
+},
+{
+  "id": "Ex-Linearisation",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Linearisation",
+  "type": "Example",
+  "number": "3.11",
+  "title": "",
+  "body": "  Find the linearisation of at the point .       Begin by calculating the partial derivatives of , . Thus . and so the linearisation is .   "
+},
+{
+  "id": "Sec-Linear_Approximations-6",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-6",
+  "type": "Definition",
+  "number": "3.12",
+  "title": "The Linear Approximation Formula.",
+  "body": " The Linear Approximation Formula   The linear approximation to the change, , in the function when the independent variables change from to is .   "
+},
+{
+  "id": "Ex-Linear-Estimation",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Linear-Estimation",
+  "type": "Example",
+  "number": "3.13",
+  "title": "",
+  "body": "  For the function , . Use a linear approximation to estimate .       Via a linear approximation . Here and so .  Thus, with and , via the linear approximation formula and hence   "
+},
+{
+  "id": "Ex-Find_Density_of_Steel_Ball",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Find_Density_of_Steel_Ball",
+  "type": "Example",
+  "number": "3.14",
+  "title": "",
+  "body": "  A steel ball has a mass, , of 6300   50   and has volume, , 800   10   . Find the density of the ball, including an estimate of the error.    7.875          The density, , is given by . Thus   Using a linear approximation to estimate the error . Now and so at , and with and (to get the maximum value of ) . Thus .   "
+},
+{
+  "id": "Ex-Linear-Estimation_Implicit",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Linear-Estimation_Implicit",
+  "type": "Example",
+  "number": "3.15",
+  "title": "",
+  "body": "  Use a linear approximation to estimate the value of at for surface defined implicitly by .       Firstly notice that when and , . Thus . Now, via a linear approximation where , and , . To find the partial derivatives we need to use implicit differentiation. Differentiating with respect to : .  Thus .  Differentiating with respect to y: .  Thus . Putting this together gives and hence    "
+},
+{
+  "id": "Sec-Linear_Approximations-11-2",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-2",
+  "type": "Exercise",
+  "number": "3.2.1",
+  "title": "",
+  "body": " Use a linear approximation to find the value of when .  "
+},
+{
+  "id": "Sec-Linear_Approximations-11-3",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-3",
+  "type": "Exercise",
+  "number": "3.2.2",
+  "title": "",
+  "body": " Use a linear approximation to estimate the value of .  "
+},
+{
+  "id": "Sec-Linear_Approximations-11-4",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-4",
+  "type": "Exercise",
+  "number": "3.2.3",
+  "title": "",
+  "body": " A right angled triangle with right angle at is measured with 10   0.02   and 3.4   0.02   . What is the angle at , including the error?  "
+},
+{
+  "id": "Sec-Linear_Approximations-11-5",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-5",
+  "type": "Exercise",
+  "number": "3.2.4",
+  "title": "",
+  "body": " In the figure below a rectangle initially with sides and has been made larger so that the sides are now and .    Shade on the diagram the regions that represent:  The increase in area.  The linear approximation to the increase in area. Explain your answer.   "
+},
+{
+  "id": "Ex-Exp_Function_Maclaurin_polynomial_of_degree_2",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Exp_Function_Maclaurin_polynomial_of_degree_2",
+  "type": "Example",
+  "number": "3.17",
+  "title": "",
+  "body": "  For the function the Maclaurin polynomial of degree is .  We saw that the linearisation of at was the Maclaurin polynomial of degree 1, i.e. .  The Maclaurin polynomial of degree 2, i.e. gives a quadratic approximation to about and so on.   "
+},
+{
+  "id": "Quadratic-Approximations-5",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Quadratic-Approximations-5",
+  "type": "Definition",
+  "number": "3.18",
+  "title": "Taylor Polynomial of Degree 2.",
+  "body": " Taylor Polynomial of Degree 2  The Taylor Polynomial of degree 2 for the function of two variables about the point is   "
+},
+{
+  "id": "Ex-Find_quadratic_approx",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Find_quadratic_approx",
+  "type": "Example",
+  "number": "3.19",
+  "title": "",
+  "body": "  Find the quadratic approximation to the function about the point .       First calculate the partial derivatives:   Now evaluate these at    Thus, using , we have .   "
+},
+{
+  "id": "Ex-Linear_and_quad_approx",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Ex-Linear_and_quad_approx",
+  "type": "Example",
+  "number": "3.20",
+  "title": "",
+  "body": "  Using both a linear and a quadratic approximation, estimate the difference in the volume between a box with a square base of side length 1 and height 2 and a box with square base of side length 1.1 and height 2.05 .    Via a linear approximation, .  Via a quadratic approximation,    If we let the side length of the base of a box be and the height be then volume of the box is given by the formula .  Thus the difference in the volume between the boxes will be the change in when changes by 0.1 and changes by 0.05. Using the results obtained in the example above, via a linear approximation .  Via a quadratic approximation .   "
+},
+{
+  "id": "Quadratic-Approximations-9-2",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Quadratic-Approximations-9-2",
+  "type": "Exercise",
+  "number": "3.3.1",
+  "title": "",
+  "body": " Find the Taylor polynomial of degree 2 for about .  "
+},
+{
+  "id": "Quadratic-Approximations-9-3",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Quadratic-Approximations-9-3",
+  "type": "Exercise",
+  "number": "3.3.2",
+  "title": "",
+  "body": " Find the Taylor polynomial of degree 2 for about .  "
+},
+{
+  "id": "Quadratic-Approximations-9-4",
+  "level": "2",
+  "url": "Chap-Calculus_5.html#Quadratic-Approximations-9-4",
+  "type": "Exercise",
+  "number": "3.3.3",
+  "title": "",
+  "body": " If , use a linear approximation and a quadratic approximation to find the value of the dependent variable z and an associated error bound when .  "
+},
+{
+  "id": "Calculus_6",
+  "level": "1",
+  "url": "Calculus_6.html",
+  "type": "Chapter",
+  "number": "4",
+  "title": "CA4: The Directional Derivative",
+  "body": "    CA4: The Directional Derivative       We have noted previously that the instantaneous rate of change of a function at the point will depend on the direction in which the independent variables are changing.    Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .     In the case that the direction is parallel to the positive x-axis we already know that the slope is given by the partial derivative and in the case that the direction is parallel to the positive -axis the slope is given by . In this section we will look at the problem of finding the slope of the function if we move away from the point in any direction.        Directional Derivatives  Firstly, note that vectors are a convenient way to specify directions in the -plane. For example, we could say the slope of the function in the direction of the vector is while in the direction of the vector it is . Thus the problem we are looking at is that of finding the slope of the function at the point in the direction given by some vector . Mathematically, we would say that we are trying to find the directional derivative of the function at the point in the direction . The notation that we use to denote this directional derivative is .  One way to approach the problem of finding the directional derivative is to use the tangent plane to the function at the point , i.e. .  Then the slope of the function in the direction of is the slope of in that direction. If is a unit vector in the direction of then the required slope is the amount by which the value of changes as the independent variables change from to , i.e.     Consider the function . shows the graph of this function along with its the tangent plane at . Also shown on the diagram are the vectors and drawn in the -plane with their tails at the point . Then the directional derivative will be the slope of the line joining the points and while the directional derivative will be the slope of the line joining the points and .   3D plot of and the tangent plane at .      The below Sage cell computes the tangent plane to the surface at the point (shown in red). This surface is a level surface of the function . The gradient vector is then a normal vector for the surface. Since we have a point on the surface, we can then determine an equation for the tangent surface:      The below Sage cell computes the tangent plane to a \"rugby ball\" at the point and the corresponding normal vector to the surface at this point (shown in red).    To summarise:   Directional Derivative  The directional derivative of the differentiable function at the point in the direction of the unit vector is given by .       Find the directional derivative of at in the direction .    .    For the given function . Thus . Now the unit vector in the direction of is . Thus the required directional derivative is .       Find the directional derivative of in the direction of the angle (from the positive -axis) .       For the given function . Now, the unit vector in the direction of the angle is . Thus the required directional derivative is     Note that the directional derivative can be expressed in the terms of the scalar product if we use the following definition.   Gradient Vector  The vector is called the gradient vector of at .    With this definition the directional derivative can be written as:    The Sage cell below computes the gradient vector (shown by the orange arrow) at some location for the function The gradient vector points in the direction of steepest ascent on the surface . The unit vector in the direction of some angle is shown by the red arrow. (Note that when the angle is zero, the unit vector is parallel to the gradient vector.) The tangent line to the surface is plotted in green. The gradient of that tangent line is the directional derivative.       Find the gradient vector for the function . Hence find and the directional derivative in the direction of the origin.      .    For the given function , and so the gradient vector is . Thus . Now, the unit vector in the direction of the origin from the point is . Thus the required directional derivative is .     The gradient vector has some interesting facts associated with it. Note that in the following remarks, we are assuming that .   points in the direction in which the directional derivative takes on its largest value. To see this, note that At a given point is fixed and so the largest value of will occur when , i.e. when or put another way, when is parallel to . We can also see from this that the largest value that the directional derivative can take is .  Similarly, the directional derivative takes on its smallest value in the direction of and has value .     For the function , the level curve passing through the point is given by       is orthogonal (i.e. at right angles) to the level curve passing through . To see this, run the Sage cell below, which plots the level curves of the function and the corresponding gradient vectors in red.     As shown in , a vector parallel to the tangent to this curve at the point will be .   Plot of (blue) and the tangent vector (red) at the point .    Thus a vector normal to the curve at the point will be . We will see subsequently, via implicit differentiation, that for the curve , and so a vector normal to the curve at the point will be , which is parallel to .  Notice that since is orthogonal to the level curve passing through the point and that is the direction in which the directional derivative takes on its largest value, the path of steepest ascent on any surface is always at right angles to its contours. To see this, run the Sage cell below. This generates a 2D contour plot of . The unit vector starting at some point and pointing in the direction of some angle is shown by the red arrow. The gradient vector at the point is shown in orange.      For the function find the directions in which the directional derivative at the point is maximised, minimised and .    Maximised in the direction ; minimised in the direction ; and when    For the given function , and so . Thus the directional derivative, , will be maximised in the direction and minimised in the direction . Finally will be when i.e. when or some scalar multiple of this.      For the function find the level curve, the tangent line and the gradient vector at the point .    The level curve is .  The tangent line is .  The gradient vector is    Since the level curve through the point is or . We can find the equation of the tangent by standard calculus to obtain . Next, the gradient vector is . As can be seen in the diagram below, the gradient vector is orthogonal to the level curve.          Suppose you are climbing a hill whose shape is given by the equation and you are standing at the point with coordinates .  In which direction should you proceed initially in order to be ascending most rapidly?  If you climb in that direction, at what angle to the horizontal will you be climbing initially?       Head in the direction of .  The angle to the horizontal will be .      Since we want to travel on the path of steepest ascent we will want to head in the direction of . Now and hence .  In this direction we know that . Thus the angle, , to the horizontal will be .      Example Tasks   Find the directional derivative for at the point in the direction of the point .    Find the maximum value of the rate of change of at .    For the curve use the gradient vector of a two variable function to find the tangent line and the normal line at the point .    For the following contour plot for some unspecified function of two variables estimate the sign of the directional derivatives at:       The point and in the direction of .  The point and in the direction of .  The point and in the direction of the origin.  The point and in the direction of the origin.          In Three Variables  The concepts of the directional derivative and the gradient vector extend to functions of more than two variables. In this section we will look at some examples for functions of three variables.    Find the rate of change of the function at the point in the direction .    .    The gradient vector for the given function is . Thus and so the required directional derivative is .      The temperature at the point is given by the function .  Find the rate of change of temperature at the point in the direction where .  In which direction does the temperature increase the fastest at ?  Find the maximum rate of increase at .       .  .  .     The gradient vector for the given function is . Thus .   Since , the required rate of change is given by the directional derivative .  The direction in which the temperature increase the fastest at is .  The maximum rate of increase at is the maximum value of which is .       Find the equation of the tangent plane to the level surface of at the point .    .    Since , the level surface for this function satisfies the equation . A normal to this surface at the point , and hence to the tangent plane at this point, is given by . Now, , and so . Thus the equation of the tangent plane is which simplifies to .     Example Tasks   Find the directional derivative of at in the direction .    By thinking of level surfaces to a function of variables show that the normal lines to a sphere pass through its centre.      "
+},
+{
+  "id": "Ex-Direction_and_rate_of_change_Copy",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Direction_and_rate_of_change_Copy",
+  "type": "Example",
+  "number": "4.1",
+  "title": "",
+  "body": "  Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .    "
+},
+{
+  "id": "Ex-Directional_Derivative",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Directional_Derivative",
+  "type": "Example",
+  "number": "4.3",
+  "title": "",
+  "body": "  Consider the function . shows the graph of this function along with its the tangent plane at . Also shown on the diagram are the vectors and drawn in the -plane with their tails at the point . Then the directional derivative will be the slope of the line joining the points and while the directional derivative will be the slope of the line joining the points and .   3D plot of and the tangent plane at .    "
+},
+{
+  "id": "Directional-Derivatives-7",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-7",
+  "type": "Example",
+  "number": "4.5",
+  "title": "",
+  "body": " The below Sage cell computes the tangent plane to the surface at the point (shown in red). This surface is a level surface of the function . The gradient vector is then a normal vector for the surface. Since we have a point on the surface, we can then determine an equation for the tangent surface:    "
+},
+{
+  "id": "Directional-Derivatives-8",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-8",
+  "type": "Example",
+  "number": "4.6",
+  "title": "",
+  "body": " The below Sage cell computes the tangent plane to a \"rugby ball\" at the point and the corresponding normal vector to the surface at this point (shown in red).   "
+},
+{
+  "id": "Directional-Derivatives-10",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-10",
+  "type": "Definition",
+  "number": "4.7",
+  "title": "Directional Derivative.",
+  "body": " Directional Derivative  The directional derivative of the differentiable function at the point in the direction of the unit vector is given by .   "
+},
+{
+  "id": "Ex-Find_Directional_Derivative",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Find_Directional_Derivative",
+  "type": "Example",
+  "number": "4.8",
+  "title": "",
+  "body": "   Find the directional derivative of at in the direction .    .    For the given function . Thus . Now the unit vector in the direction of is . Thus the required directional derivative is .   "
+},
+{
+  "id": "Ex-Find_Directional_Derivative_2",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Find_Directional_Derivative_2",
+  "type": "Example",
+  "number": "4.9",
+  "title": "",
+  "body": "   Find the directional derivative of in the direction of the angle (from the positive -axis) .       For the given function . Now, the unit vector in the direction of the angle is . Thus the required directional derivative is    "
+},
+{
+  "id": "Directional-Derivatives-14",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-14",
+  "type": "Definition",
+  "number": "4.10",
+  "title": "Gradient Vector.",
+  "body": " Gradient Vector  The vector is called the gradient vector of at .   "
+},
+{
+  "id": "Directional-Derivatives-16",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-16",
+  "type": "Example",
+  "number": "4.11",
+  "title": "",
+  "body": " The Sage cell below computes the gradient vector (shown by the orange arrow) at some location for the function The gradient vector points in the direction of steepest ascent on the surface . The unit vector in the direction of some angle is shown by the red arrow. (Note that when the angle is zero, the unit vector is parallel to the gradient vector.) The tangent line to the surface is plotted in green. The gradient of that tangent line is the directional derivative.   "
+},
+{
+  "id": "Ex-Find_Gradient_Vector",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Find_Gradient_Vector",
+  "type": "Example",
+  "number": "4.12",
+  "title": "",
+  "body": "   Find the gradient vector for the function . Hence find and the directional derivative in the direction of the origin.      .    For the given function , and so the gradient vector is . Thus . Now, the unit vector in the direction of the origin from the point is . Thus the required directional derivative is .   "
+},
+{
+  "id": "Directional-Derivatives-19",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-19",
+  "type": "Remark",
+  "number": "4.13",
+  "title": "",
+  "body": " points in the direction in which the directional derivative takes on its largest value. To see this, note that At a given point is fixed and so the largest value of will occur when , i.e. when or put another way, when is parallel to . We can also see from this that the largest value that the directional derivative can take is .  Similarly, the directional derivative takes on its smallest value in the direction of and has value .  "
+},
+{
+  "id": "def-level_curves",
+  "level": "2",
+  "url": "Calculus_6.html#def-level_curves",
+  "type": "Definition",
+  "number": "4.14",
+  "title": "",
+  "body": "  For the function , the level curve passing through the point is given by    "
+},
+{
+  "id": "Directional-Derivatives-21",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-21",
+  "type": "Remark",
+  "number": "4.15",
+  "title": "",
+  "body": "  is orthogonal (i.e. at right angles) to the level curve passing through . To see this, run the Sage cell below, which plots the level curves of the function and the corresponding gradient vectors in red.   "
+},
+{
+  "id": "Directional-Derivatives-22",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-22",
+  "type": "Remark",
+  "number": "4.16",
+  "title": "",
+  "body": " As shown in , a vector parallel to the tangent to this curve at the point will be .   Plot of (blue) and the tangent vector (red) at the point .    Thus a vector normal to the curve at the point will be . We will see subsequently, via implicit differentiation, that for the curve , and so a vector normal to the curve at the point will be , which is parallel to .  Notice that since is orthogonal to the level curve passing through the point and that is the direction in which the directional derivative takes on its largest value, the path of steepest ascent on any surface is always at right angles to its contours. To see this, run the Sage cell below. This generates a 2D contour plot of . The unit vector starting at some point and pointing in the direction of some angle is shown by the red arrow. The gradient vector at the point is shown in orange.   "
+},
+{
+  "id": "Ex-Find_Max_Min_Directional_Derivative",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Find_Max_Min_Directional_Derivative",
+  "type": "Example",
+  "number": "4.18",
+  "title": "",
+  "body": "  For the function find the directions in which the directional derivative at the point is maximised, minimised and .    Maximised in the direction ; minimised in the direction ; and when    For the given function , and so . Thus the directional derivative, , will be maximised in the direction and minimised in the direction . Finally will be when i.e. when or some scalar multiple of this.   "
+},
+{
+  "id": "Ex-Find_lvlcurve_tanline_gradvec",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Find_lvlcurve_tanline_gradvec",
+  "type": "Example",
+  "number": "4.19",
+  "title": "",
+  "body": "  For the function find the level curve, the tangent line and the gradient vector at the point .    The level curve is .  The tangent line is .  The gradient vector is    Since the level curve through the point is or . We can find the equation of the tangent by standard calculus to obtain . Next, the gradient vector is . As can be seen in the diagram below, the gradient vector is orthogonal to the level curve.       "
+},
+{
+  "id": "Ex-Hill_Climbing",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Hill_Climbing",
+  "type": "Example",
+  "number": "4.21",
+  "title": "",
+  "body": "  Suppose you are climbing a hill whose shape is given by the equation and you are standing at the point with coordinates .  In which direction should you proceed initially in order to be ascending most rapidly?  If you climb in that direction, at what angle to the horizontal will you be climbing initially?       Head in the direction of .  The angle to the horizontal will be .      Since we want to travel on the path of steepest ascent we will want to head in the direction of . Now and hence .  In this direction we know that . Thus the angle, , to the horizontal will be .    "
+},
+{
+  "id": "Directional-Derivatives-26-2",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-26-2",
+  "type": "Exercise",
+  "number": "4.1.1",
+  "title": "",
+  "body": " Find the directional derivative for at the point in the direction of the point .  "
+},
+{
+  "id": "Directional-Derivatives-26-3",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-26-3",
+  "type": "Exercise",
+  "number": "4.1.2",
+  "title": "",
+  "body": " Find the maximum value of the rate of change of at .  "
+},
+{
+  "id": "Directional-Derivatives-26-4",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-26-4",
+  "type": "Exercise",
+  "number": "4.1.3",
+  "title": "",
+  "body": " For the curve use the gradient vector of a two variable function to find the tangent line and the normal line at the point .  "
+},
+{
+  "id": "Directional-Derivatives-26-5",
+  "level": "2",
+  "url": "Calculus_6.html#Directional-Derivatives-26-5",
+  "type": "Exercise",
+  "number": "4.1.4",
+  "title": "",
+  "body": " For the following contour plot for some unspecified function of two variables estimate the sign of the directional derivatives at:       The point and in the direction of .  The point and in the direction of .  The point and in the direction of the origin.  The point and in the direction of the origin.   "
+},
+{
+  "id": "Ex-rate_of_change",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-rate_of_change",
+  "type": "Example",
+  "number": "4.23",
+  "title": "",
+  "body": "  Find the rate of change of the function at the point in the direction .    .    The gradient vector for the given function is . Thus and so the required directional derivative is .   "
+},
+{
+  "id": "Ex-Temperature",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Temperature",
+  "type": "Example",
+  "number": "4.24",
+  "title": "",
+  "body": "  The temperature at the point is given by the function .  Find the rate of change of temperature at the point in the direction where .  In which direction does the temperature increase the fastest at ?  Find the maximum rate of increase at .       .  .  .     The gradient vector for the given function is . Thus .   Since , the required rate of change is given by the directional derivative .  The direction in which the temperature increase the fastest at is .  The maximum rate of increase at is the maximum value of which is .    "
+},
+{
+  "id": "Ex-Level_surface_equation",
+  "level": "2",
+  "url": "Calculus_6.html#Ex-Level_surface_equation",
+  "type": "Example",
+  "number": "4.25",
+  "title": "",
+  "body": "  Find the equation of the tangent plane to the level surface of at the point .    .    Since , the level surface for this function satisfies the equation . A normal to this surface at the point , and hence to the tangent plane at this point, is given by . Now, , and so . Thus the equation of the tangent plane is which simplifies to .   "
+},
+{
+  "id": "In_Three_Variables-6-2",
+  "level": "2",
+  "url": "Calculus_6.html#In_Three_Variables-6-2",
+  "type": "Exercise",
+  "number": "4.2.1",
+  "title": "",
+  "body": " Find the directional derivative of at in the direction .  "
+},
+{
+  "id": "In_Three_Variables-6-3",
+  "level": "2",
+  "url": "Calculus_6.html#In_Three_Variables-6-3",
+  "type": "Exercise",
+  "number": "4.2.2",
+  "title": "",
+  "body": " By thinking of level surfaces to a function of variables show that the normal lines to a sphere pass through its centre.  "
+},
+{
+  "id": "Calculus_7",
+  "level": "1",
+  "url": "Calculus_7.html",
+  "type": "Chapter",
+  "number": "5",
+  "title": "CA5: Local and Global Extrema",
+  "body": "    CA5: Local and Global Extrema            Critical Points  Recall that a function of one variable, has a critical point at if the tangent line to the curve at is horizontal or if the derivative does not exist at that point. This critical point can be either a (local) maximum, minimum or horizontal point of inflection or vertical point of inflection. (The first three possibilities are shown in below.)   A plot of with stationary points labelled.    The idea of critical points can be applied to functions of two variables.   Critical Point   The function has a critical point at if the tangent plane to the surface at the point is horizontal or if one of the directional derivatives does not exist.    As with functions of one variable, critical points of functions of two variables will be one of three types.   If at a critical point for all points in some open disk centred on then the critical point is a local maximum .  If at a critical point for all points in some open disk centred on then the critical point is a local minimum .  For a smooth function (i.e. a function for which all derivatives exist) if a critical point is not a local maximum or a local minimum then it is a saddle point .     The graph of the function is given below with local maxima and local minima labelled.   3D plot of with local minima and maxima labelled.        The graph of the function is given below with a saddle point labelled.   3D plot of with a saddle point labelled.      For smooth functions we can find the critical points by looking for those points where the tangent plane is horizontal. If the function has a tangent plane at the point we can determine algebraically that it is horizontal by checking that:   The normal vector for the plane is parallel to the vector , or  The directional derivative at is zero in every direction, or  The gradient vector at is .   These conditions are all equivalent and they lead us to the following theorem.   Critical Point   The point is a critical point of the function if , or, if at least one of these derivatives does not exist.    Note: For the most part, we will assume that the function is smooth, i.e. has derivatives of all orders. In particular a smooth function does not have any discontinuities or cusps. Such critical points will occur for functions of two variables when at least one of the partial derivatives does not exist at the critical point.    Locate, and determine the nature of, the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    To locate the critical points we solve the equations , and check for any points where they do not exist. Since this function is given by a polynomial, the partial derivatives exist. We set them to zero below. From  . Putting into gives . Putting into gives . Thus there are 4 critical points at .  If we have the graph of the function then we can usually determine the nature of these critical points by inspection. From the (computer generated) graph shown below we can see with very careful inspection that the critical point at is a local minimum, the critical point at is a local maximum and the critical points at and are saddle points.   3D plot of .    Sometimes the nature of the critical points is not clear on such graphs or we don't have access to the graph. Another approach to determining the nature of the critical points is to sketch the level curves for the function.   Sketch of the level curves for various .    From this diagram we can see that as we move away from the critical points at in any direction the function value is increasing and hence is local minimum. Similarly as we move away from the critical point at in any direction the function value is decreasing is hence is a local maximum. For the critical points at and we can move away in some directions and have the function value increase while in other directions the function value will decrease. Hence these critical points are saddle points.  The below Sage cell plots the critical points (in red) of the function on the 3D surface plot and on the 2D contour plot.       Example Tasks   Find the critical points of the function and use the plot of level curves given below to determine the nature of each critical point.              Second Derivative Test  An algebraic method for determining what type of critical points a function has is given by the following theorem.   The Second Derivative Test   Let the function have continuous 2nd partial derivatives and let be a critical point of the function. Let .   If and then has a local minimum at .  If and then has a local maximum at .  If then has a saddle point at .  If then the 2nd derivative test is inconclusive.      Outline of Proof  For the sake of simplicity assume that the critical point is at the point . Now using a Taylor expansion for functions of two variables about we have (up to the quadratic terms) . Since is a critical point of the function . Thus .  On completing the square (and dropping the evaluation at for brevity) .  From this we can see that if and then when and are varied from , increases and so will be a local minimum.     Locate and identify the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    We located the critical points of this function in an earlier example. We found that there are 4 critical points at .  To determine the nature of these critical points, in this example we will use the second derivative test. To this end, note that . Thus . Now, applying the second derivative test:   At , , and so is a local minimum.  At , , and so is a local maximum.  At , and so is a saddle point.  At , and so is also a saddle point.   This is in agreement with the conclusions we made on the nature of these critical pointson the basis of the level curves of the function.      Locate and identify the critical points of the function .    is a local maximum.    Here .  For this function both partial derivatives are undefined at and so this point will be a critical point. However we cannot use the second derivative test to determine the nature of this critical point. In this case we can see from the graph of the function that the critical point at is a local maximum.         Example Tasks   Locate and identify the critical points of the function .    Locate and identify the critical points of the function .              Global Extrema   Global Extrema   Consider the function of two variables on the domain D.   If there exists some point in such that for all points in then the function has a global maximum at .  Similarly, if there exists some point in such that for all points in then the function has a global minimum at .       The graph of the function over the domain is shown below.   3D plot of with global maximum and minimum labelled.      Before discussing global extrema for functions of two variables, recall the situation for a function of one variable . If is continuous on the closed interval then is guaranteed to have both a global maximum and a global minimum on .   Plot of with global maximum and minimum, and critical points labelled.    These global extrema can be found by evaluating at   All of the critical points of in , and  The endpoints of .   The procedure for finding the global extrema of functions of two variables is very similar and is based on the following theorem.   Extreme Value Theorem   If is a continuous function on the closed and bounded domain then has both a global maximum and a global minimum on .    Note that a closed region, , is a region in the plane that contains its boundary. For example in the diagram below Region would be a closed region whereas Region is not closed.   Example of a region which is closed, and a region which is not closed.    A bounded region, , is a region in the plane that doesn't extend to infinity in any direction. For example in the diagram below Region would be a bounded region whereas Region is not bounded.   Example of a region which is bounded, and a region which is not bounded.     Locating Global Extrema   To locate the global extrema of the continuous function on the closed and bounded domain :   Find all of the critical points in the interior of ;  Find the maximum and minimum values of on the boundary of ;  Evaluate at each of the above points and compare.      The below Sage cell plots the global maximum and global minimum (shown in red) of the surface on the disc (shown in green).      Find the global extrema of the function on the closed triangular region with vertices , and .    Global maximum: at  Global minimum: at .        Firstly note that is a closed and bounded region in the plane and so we can use the method outlined above. So begin by finding the critical points of . Here .  Critical points occur when and so this function has only one critical point at . This is inside and so we evaluate the function at this point, i.e. .  To find the maximum and minimum values of the function on the boundary we will have to consider the 3 sides of the triangle separately. Firstly, consider the side of the triangle defined by .  On this interval we think of as a function of only, i.e. .      This has a maximum value at and minimum value at .  Next consider the side of the triangle defined by . On this interval we think of as a function of only, i.e. .      Again, using the technique given above for locating the global extrema for a function of one variable (or by looking at the graph) we find that the largest value of occurs at (giving ) and the smallest value of occurs at , (giving ).  Finally on the interval defined by , we can think of as a function of only, i.e. .      For this function the global maximum is at and the global minimum is at .  On comparing the value of the function at each of the global extrema on the sides of the triangle and at the critical point inside the region we conclude that the function has a global maximum of at and a global minimum of at .     Example Tasks   Find the global extrema of on .    Find the global extrema of on .     "
+},
+{
+  "id": "Fig_max_min_inflection",
+  "level": "2",
+  "url": "Calculus_7.html#Fig_max_min_inflection",
+  "type": "Figure",
+  "number": "5.1",
+  "title": "",
+  "body": " A plot of with stationary points labelled.   "
+},
+{
+  "id": "Critical-Points-5",
+  "level": "2",
+  "url": "Calculus_7.html#Critical-Points-5",
+  "type": "Definition",
+  "number": "5.2",
+  "title": "Critical Point.",
+  "body": " Critical Point   The function has a critical point at if the tangent plane to the surface at the point is horizontal or if one of the directional derivatives does not exist.   "
+},
+{
+  "id": "Ex-Local_max_and_min",
+  "level": "2",
+  "url": "Calculus_7.html#Ex-Local_max_and_min",
+  "type": "Example",
+  "number": "5.3",
+  "title": "",
+  "body": "  The graph of the function is given below with local maxima and local minima labelled.   3D plot of with local minima and maxima labelled.     "
+},
+{
+  "id": "Ex-Saddle_point",
+  "level": "2",
+  "url": "Calculus_7.html#Ex-Saddle_point",
+  "type": "Example",
+  "number": "5.5",
+  "title": "",
+  "body": "  The graph of the function is given below with a saddle point labelled.   3D plot of with a saddle point labelled.     "
+},
+{
+  "id": "Critical-Points-13",
+  "level": "2",
+  "url": "Calculus_7.html#Critical-Points-13",
+  "type": "Theorem",
+  "number": "5.7",
+  "title": "Critical Point.",
+  "body": " Critical Point   The point is a critical point of the function if , or, if at least one of these derivatives does not exist.   "
+},
+{
+  "id": "Ex-Locate_critical_points",
+  "level": "2",
+  "url": "Calculus_7.html#Ex-Locate_critical_points",
+  "type": "Example",
+  "number": "5.8",
+  "title": "",
+  "body": "  Locate, and determine the nature of, the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    To locate the critical points we solve the equations , and check for any points where they do not exist. Since this function is given by a polynomial, the partial derivatives exist. We set them to zero below. From  . Putting into gives . Putting into gives . Thus there are 4 critical points at .  If we have the graph of the function then we can usually determine the nature of these critical points by inspection. From the (computer generated) graph shown below we can see with very careful inspection that the critical point at is a local minimum, the critical point at is a local maximum and the critical points at and are saddle points.   3D plot of .    Sometimes the nature of the critical points is not clear on such graphs or we don't have access to the graph. Another approach to determining the nature of the critical points is to sketch the level curves for the function.   Sketch of the level curves for various .    From this diagram we can see that as we move away from the critical points at in any direction the function value is increasing and hence is local minimum. Similarly as we move away from the critical point at in any direction the function value is decreasing is hence is a local maximum. For the critical points at and we can move away in some directions and have the function value increase while in other directions the function value will decrease. Hence these critical points are saddle points.  The below Sage cell plots the critical points (in red) of the function on the 3D surface plot and on the 2D contour plot.    "
+},
+{
+  "id": "Critical-Points-16-2",
+  "level": "2",
+  "url": "Calculus_7.html#Critical-Points-16-2",
+  "type": "Exercise",
+  "number": "5.1.1",
+  "title": "",
+  "body": " Find the critical points of the function and use the plot of level curves given below to determine the nature of each critical point.      "
+},
+{
+  "id": "Second-Derivative-Test-3",
+  "level": "2",
+  "url": "Calculus_7.html#Second-Derivative-Test-3",
+  "type": "Theorem",
+  "number": "5.12",
+  "title": "The Second Derivative Test.",
+  "body": " The Second Derivative Test   Let the function have continuous 2nd partial derivatives and let be a critical point of the function. Let .   If and then has a local minimum at .  If and then has a local maximum at .  If then has a saddle point at .  If then the 2nd derivative test is inconclusive.    "
+},
+{
+  "id": "Second-Derivative-Test-4",
+  "level": "2",
+  "url": "Calculus_7.html#Second-Derivative-Test-4",
+  "type": "Proof",
+  "number": "5.2.1",
+  "title": "Outline of Proof.",
+  "body": " Outline of Proof  For the sake of simplicity assume that the critical point is at the point . Now using a Taylor expansion for functions of two variables about we have (up to the quadratic terms) . Since is a critical point of the function . Thus .  On completing the square (and dropping the evaluation at for brevity) .  From this we can see that if and then when and are varied from , increases and so will be a local minimum.  "
+},
+{
+  "id": "Ex-Locate_critical_points_2",
+  "level": "2",
+  "url": "Calculus_7.html#Ex-Locate_critical_points_2",
+  "type": "Example",
+  "number": "5.13",
+  "title": "",
+  "body": "  Locate and identify the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    We located the critical points of this function in an earlier example. We found that there are 4 critical points at .  To determine the nature of these critical points, in this example we will use the second derivative test. To this end, note that . Thus . Now, applying the second derivative test:   At , , and so is a local minimum.  At , , and so is a local maximum.  At , and so is a saddle point.  At , and so is also a saddle point.   This is in agreement with the conclusions we made on the nature of these critical pointson the basis of the level curves of the function.   "
+},
+{
+  "id": "Ex-Locate_critical_points_3",
+  "level": "2",
+  "url": "Calculus_7.html#Ex-Locate_critical_points_3",
+  "type": "Example",
+  "number": "5.14",
+  "title": "",
+  "body": "  Locate and identify the critical points of the function .    is a local maximum.    Here .  For this function both partial derivatives are undefined at and so this point will be a critical point. However we cannot use the second derivative test to determine the nature of this critical point. In this case we can see from the graph of the function that the critical point at is a local maximum.       "
+},
+{
+  "id": "Second-Derivative-Test-7-2",
+  "level": "2",
+  "url": "Calculus_7.html#Second-Derivative-Test-7-2",
+  "type": "Exercise",
+  "number": "5.2.1",
+  "title": "",
+  "body": " Locate and identify the critical points of the function .  "
+},
+{
+  "id": "Second-Derivative-Test-7-3",
+  "level": "2",
+  "url": "Calculus_7.html#Second-Derivative-Test-7-3",
+  "type": "Exercise",
+  "number": "5.2.2",
+  "title": "",
+  "body": " Locate and identify the critical points of the function .      "
+},
+{
+  "id": "Global-Extrema-2",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-2",
+  "type": "Definition",
+  "number": "5.17",
+  "title": "Global Extrema.",
+  "body": " Global Extrema   Consider the function of two variables on the domain D.   If there exists some point in such that for all points in then the function has a global maximum at .  Similarly, if there exists some point in such that for all points in then the function has a global minimum at .    "
+},
+{
+  "id": "Global-Extrema-3",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-3",
+  "type": "Example",
+  "number": "5.18",
+  "title": "",
+  "body": "  The graph of the function over the domain is shown below.   3D plot of with global maximum and minimum labelled.     "
+},
+{
+  "id": "Fig8_Global_Extrema_1D",
+  "level": "2",
+  "url": "Calculus_7.html#Fig8_Global_Extrema_1D",
+  "type": "Figure",
+  "number": "5.20",
+  "title": "",
+  "body": " Plot of with global maximum and minimum, and critical points labelled.   "
+},
+{
+  "id": "Global-Extrema-9",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-9",
+  "type": "Theorem",
+  "number": "5.21",
+  "title": "Extreme Value Theorem.",
+  "body": " Extreme Value Theorem   If is a continuous function on the closed and bounded domain then has both a global maximum and a global minimum on .   "
+},
+{
+  "id": "Fig9_closed_region",
+  "level": "2",
+  "url": "Calculus_7.html#Fig9_closed_region",
+  "type": "Figure",
+  "number": "5.22",
+  "title": "",
+  "body": " Example of a region which is closed, and a region which is not closed.   "
+},
+{
+  "id": "Fig10_bounded_region",
+  "level": "2",
+  "url": "Calculus_7.html#Fig10_bounded_region",
+  "type": "Figure",
+  "number": "5.23",
+  "title": "",
+  "body": " Example of a region which is bounded, and a region which is not bounded.   "
+},
+{
+  "id": "Global-Extrema-14",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-14",
+  "type": "Remark",
+  "number": "5.24",
+  "title": "Locating Global Extrema.",
+  "body": " Locating Global Extrema   To locate the global extrema of the continuous function on the closed and bounded domain :   Find all of the critical points in the interior of ;  Find the maximum and minimum values of on the boundary of ;  Evaluate at each of the above points and compare.    "
+},
+{
+  "id": "Global-Extrema-15",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-15",
+  "type": "Example",
+  "number": "5.25",
+  "title": "",
+  "body": " The below Sage cell plots the global maximum and global minimum (shown in red) of the surface on the disc (shown in green).   "
+},
+{
+  "id": "Global-Extrema-16",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-16",
+  "type": "Example",
+  "number": "5.26",
+  "title": "",
+  "body": "  Find the global extrema of the function on the closed triangular region with vertices , and .    Global maximum: at  Global minimum: at .        Firstly note that is a closed and bounded region in the plane and so we can use the method outlined above. So begin by finding the critical points of . Here .  Critical points occur when and so this function has only one critical point at . This is inside and so we evaluate the function at this point, i.e. .  To find the maximum and minimum values of the function on the boundary we will have to consider the 3 sides of the triangle separately. Firstly, consider the side of the triangle defined by .  On this interval we think of as a function of only, i.e. .      This has a maximum value at and minimum value at .  Next consider the side of the triangle defined by . On this interval we think of as a function of only, i.e. .      Again, using the technique given above for locating the global extrema for a function of one variable (or by looking at the graph) we find that the largest value of occurs at (giving ) and the smallest value of occurs at , (giving ).  Finally on the interval defined by , we can think of as a function of only, i.e. .      For this function the global maximum is at and the global minimum is at .  On comparing the value of the function at each of the global extrema on the sides of the triangle and at the critical point inside the region we conclude that the function has a global maximum of at and a global minimum of at .   "
+},
+{
+  "id": "Global-Extrema-17-2",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-17-2",
+  "type": "Exercise",
+  "number": "5.3.1",
+  "title": "",
+  "body": " Find the global extrema of on .  "
+},
+{
+  "id": "Global-Extrema-17-3",
+  "level": "2",
+  "url": "Calculus_7.html#Global-Extrema-17-3",
+  "type": "Exercise",
+  "number": "5.3.2",
+  "title": "",
+  "body": " Find the global extrema of on .  "
+},
+{
+  "id": "Chap-Calculus_8",
+  "level": "1",
+  "url": "Chap-Calculus_8.html",
+  "type": "Chapter",
+  "number": "6",
+  "title": "CA6: Chain Rules",
+  "body": "    CA6: Chain Rules            The Single Variable Chain Rule  Recall that the chain rule for functions of one variable says:   Use the chain rule to find if and .    Via the chain rule:     With multivariable functions there are many ways in which to form composite functions but there will be a chain rule for each possibility. In the following sections we will look at some of these.       Multivariable Chain Rules  Begin by considering the case where and , . In this case we can think of as defining a real valued function .   If and , then find by substituting the expressions for and into and then differentiating.    On substituting and into  Thus     Now for a function of two variables the linear approximation (or ''small change'') formula says: Thus   This formula becomes more accurate as and from the limit we obtain the following chain rule.   Chain Rule 1   If and , are differentiable functions then      If and , then find by using the chain rule.    Here So, via the chain rule      Use the chain rule to find when and .    Here So, via the chain rule      The radius of a right circular cone is increasing at a rate of cm\/s while its height is decreasing at a rate of cm\/s. At what rate is the volume of the cone changing when the radius is cm and the height is cm?    The volume of right circular cone of radius and height is  Since both radius and the height are functions of time , i.e. and , we can think of the volume as a function of time as well, i.e. , and the problem is asking us to find when and . Now, by the chain rule:  Here and we are given that and . (Note that is negative because the height is decreasing.) Thus, at and      Consider the case now where and . In this case we can think of as defining a function of two variables and hence has partial derivatives with respect to these variables. The relevant chain rules for this case are:   Chain Rule 2   If and are differentiable functions then      A spherical balloon holds a fixed amount of gas but its volume is dependent on the pressure and temperature of the gas according to Determine expressions for the rate of change of the radius of the balloon with respect to the pressure and temperature of the gas.       The volume of a sphere of radius is  Thus we can think of the radius of the balloon as a function of its volume, i.e. where the volume is, in turn, a function of the pressure and temperature of the gas, i.e.  Using Chain Rule 2:   Similarly      Use the appropriate chain rules to calculate and when      Using Chain Rule 2:  Now, (via the quotient rule) and  Thus    Next consider the case where and , . In this case we can think of as defining a function of two variables . The relevant chain rules for this case are:   Chain Rule 3   If and , are differentiable functions then       Use the appropriate chain rules to find and when      Here and   Thus, by Chain Rule 3 and     The chain rules given above are just special cases of the general chain rule.   The General Chain Rule   If is a differentiable function of variables and each is a differentiable function of the variables then for each      Find if and      By the general Chain Rule      Example Tasks  Use the appropriate chain rules to find and when   Two straight roads intersect at right angles. Car A is moving on one road approaches the intersection at km\/h while Car B moving on the other road approaches the intersection at km\/h. At what rate is the distance between the cars changing when A is km from the intersection and B is km from the intersection?  Show that any function of the form is a solution of the wave equation     If and and find an appropriate chain rule for .  Using the result of part (a) find when and and .          Implicit Differentiation  We can use our chain rules to produce another way looking at implicit differentiation. Assuming that the equation implicitly defines the function , recall that implicit differentiation gives us a way of finding a formula for .   Use implicit differentiation to find a formula for for the function implicitly defined by the equation .      Differentiating both sides of the equation with respect to      For the example above, we can construct the surface and plot this using the Sage cell below. The constant that determines the level curves can be varied with the slider. The level curves are shown in blue, and the slopes given by are shown as little grey line segments. The slope of each segment is given by evaluating at its position. (Note that these slopes are tangential to the curve, as they must be.) Furthermore:  by selecting the \"show3d\" option, you can also see the 3D plot of and a \"water level\" of . In this case, the curves represent the \"shoreline\";  by selecting the \"gradient\" option, you can show the gradient vectors (red arrows), which are of course perpendicular to the level curves (and thus the grey slopes).     To use the chain rules to find a formula for for the function implicitly defined by the equation let Thus we can think of as being a function of the one variable , and so, by Chain Rule 1, Now we are thinking of equation as defining a function of one variable , so let and and hence   Returning to equation , on differentiating both sides with respect to , we obtain from which we obtain, provided ,   Thus we can find a formula for via partial differentiation as opposed to implicit differentiation. In summary:    If the equation implicitly defines the function then      Use partial differentiation to find a formula for for the function implicitly defined by the equation .      Let . Then Thus     A similar argument can extend this result to functions of more than one variable. For example:    If implicitly defines the function then      Use partial differentiation to find formulas for for the function implicitly defined by the equation       Let . Then Thus       Example Tasks  Using partial differentiation (as opposed to implicit differentiation) find at when the function is defined by the equation     "
+},
+{
+  "id": "Ex-Single_variable_chain_rule",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Single_variable_chain_rule",
+  "type": "Example",
+  "number": "6.1",
+  "title": "",
+  "body": " Use the chain rule to find if and .    Via the chain rule:    "
+},
+{
+  "id": "Ex-Multivariate_chain_rule_substitution",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Multivariate_chain_rule_substitution",
+  "type": "Example",
+  "number": "6.2",
+  "title": "",
+  "body": " If and , then find by substituting the expressions for and into and then differentiating.    On substituting and into  Thus    "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-6",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-6",
+  "type": "Theorem",
+  "number": "6.3",
+  "title": "Chain Rule 1.",
+  "body": " Chain Rule 1   If and , are differentiable functions then    "
+},
+{
+  "id": "Ex-Chain_rule_1_sample_1",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Chain_rule_1_sample_1",
+  "type": "Example",
+  "number": "6.4",
+  "title": "",
+  "body": " If and , then find by using the chain rule.    Here So, via the chain rule    "
+},
+{
+  "id": "Ex-Chain_rule_1_sample_2",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Chain_rule_1_sample_2",
+  "type": "Example",
+  "number": "6.5",
+  "title": "",
+  "body": " Use the chain rule to find when and .    Here So, via the chain rule    "
+},
+{
+  "id": "Ex-Related_rate_chain_rule_1",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Related_rate_chain_rule_1",
+  "type": "Example",
+  "number": "6.6",
+  "title": "",
+  "body": " The radius of a right circular cone is increasing at a rate of cm\/s while its height is decreasing at a rate of cm\/s. At what rate is the volume of the cone changing when the radius is cm and the height is cm?    The volume of right circular cone of radius and height is  Since both radius and the height are functions of time , i.e. and , we can think of the volume as a function of time as well, i.e. , and the problem is asking us to find when and . Now, by the chain rule:  Here and we are given that and . (Note that is negative because the height is decreasing.) Thus, at and     "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-11",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-11",
+  "type": "Theorem",
+  "number": "6.7",
+  "title": "Chain Rule 2.",
+  "body": " Chain Rule 2   If and are differentiable functions then    "
+},
+{
+  "id": "Ex-Related_rate_chain_rule_2",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Related_rate_chain_rule_2",
+  "type": "Example",
+  "number": "6.8",
+  "title": "",
+  "body": " A spherical balloon holds a fixed amount of gas but its volume is dependent on the pressure and temperature of the gas according to Determine expressions for the rate of change of the radius of the balloon with respect to the pressure and temperature of the gas.       The volume of a sphere of radius is  Thus we can think of the radius of the balloon as a function of its volume, i.e. where the volume is, in turn, a function of the pressure and temperature of the gas, i.e.  Using Chain Rule 2:   Similarly    "
+},
+{
+  "id": "Ex-Chain_rule_2_sample",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Chain_rule_2_sample",
+  "type": "Example",
+  "number": "6.9",
+  "title": "",
+  "body": " Use the appropriate chain rules to calculate and when      Using Chain Rule 2:  Now, (via the quotient rule) and  Thus   "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-15",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-15",
+  "type": "Theorem",
+  "number": "6.10",
+  "title": "Chain Rule 3.",
+  "body": " Chain Rule 3   If and , are differentiable functions then     "
+},
+{
+  "id": "Ex-Chain_rule_3_sample",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Chain_rule_3_sample",
+  "type": "Example",
+  "number": "6.11",
+  "title": "",
+  "body": " Use the appropriate chain rules to find and when      Here and   Thus, by Chain Rule 3 and    "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-18",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-18",
+  "type": "Theorem",
+  "number": "6.12",
+  "title": "The General Chain Rule.",
+  "body": " The General Chain Rule   If is a differentiable function of variables and each is a differentiable function of the variables then for each    "
+},
+{
+  "id": "Ex-General_chain_rule_sample",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-General_chain_rule_sample",
+  "type": "Example",
+  "number": "6.13",
+  "title": "",
+  "body": " Find if and      By the general Chain Rule    "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-20-2",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-2",
+  "type": "Exercise",
+  "number": "6.2.1",
+  "title": "",
+  "body": "Use the appropriate chain rules to find and when  "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-20-3",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-3",
+  "type": "Exercise",
+  "number": "6.2.2",
+  "title": "",
+  "body": "Two straight roads intersect at right angles. Car A is moving on one road approaches the intersection at km\/h while Car B moving on the other road approaches the intersection at km\/h. At what rate is the distance between the cars changing when A is km from the intersection and B is km from the intersection? "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-20-4",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-4",
+  "type": "Exercise",
+  "number": "6.2.3",
+  "title": "",
+  "body": "Show that any function of the form is a solution of the wave equation  "
+},
+{
+  "id": "Sec-Multivariable-chain-rules-20-5",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-5",
+  "type": "Exercise",
+  "number": "6.2.4",
+  "title": "",
+  "body": "  If and and find an appropriate chain rule for .  Using the result of part (a) find when and and .   "
+},
+{
+  "id": "Ex-Implicit_differentiation_recall",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Implicit_differentiation_recall",
+  "type": "Example",
+  "number": "6.14",
+  "title": "",
+  "body": " Use implicit differentiation to find a formula for for the function implicitly defined by the equation .      Differentiating both sides of the equation with respect to     "
+},
+{
+  "id": "Chap-Calculus_8-4-8",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Chap-Calculus_8-4-8",
+  "type": "Theorem",
+  "number": "6.15",
+  "title": "",
+  "body": "  If the equation implicitly defines the function then    "
+},
+{
+  "id": "Ex-Implicit_differentiation_via_partial_differentiation",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Implicit_differentiation_via_partial_differentiation",
+  "type": "Example",
+  "number": "6.16",
+  "title": "",
+  "body": " Use partial differentiation to find a formula for for the function implicitly defined by the equation .      Let . Then Thus    "
+},
+{
+  "id": "Chap-Calculus_8-4-11",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Chap-Calculus_8-4-11",
+  "type": "Theorem",
+  "number": "6.17",
+  "title": "",
+  "body": "  If implicitly defines the function then    "
+},
+{
+  "id": "Ex-Implicit_differentiation_via_partial_differentiation_general",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Ex-Implicit_differentiation_via_partial_differentiation_general",
+  "type": "Example",
+  "number": "6.18",
+  "title": "",
+  "body": " Use partial differentiation to find formulas for for the function implicitly defined by the equation       Let . Then Thus     "
+},
+{
+  "id": "Chap-Calculus_8-4-13-2",
+  "level": "2",
+  "url": "Chap-Calculus_8.html#Chap-Calculus_8-4-13-2",
+  "type": "Exercise",
+  "number": "6.3.1",
+  "title": "",
+  "body": "Using partial differentiation (as opposed to implicit differentiation) find at when the function is defined by the equation  "
+},
+{
   "id": "Chap-Calculus_1",
   "level": "1",
   "url": "Chap-Calculus_1.html",
   "type": "Chapter",
-  "number": "1",
-  "title": "CA1: Maclaurin Series",
-  "body": "    CA1: Maclaurin Series            Introduction   Faster multiplication  There are actually multiplication algorithms which are significantly faster than long multiplication. Long multiplication of two -digit numbers will typically take single-digit multiplications (and another  -digit additions). The fastest known algorithm is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to , which for large values of is a significant improvement.   Have you ever wondered how computers actually calculate things? Computers can only ever do finitely many steps with finitely many bits of information. The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example and . You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute in a finite number of steps. But then how does it calculate or , or other non-polynomial functions?  The solution is to approximate the function using a power series . For example, the computer approximates by adding finitely many terms of In other words, it approximates the function  via the power series     Factorials  Here is  factorial . It grows really fast: The factorial satifies the useful property that , meaning that fractions with factorials in the numerator and denominator will often allow lots of cancellation.   Challenge: Determine the number of zeroes at the end of the decimal expression for    How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. The long answer is much more complicated, and is the subject of a whole other area of Mathematics called Numerical Analysis .  How does the computer know to use this particular series? And what even is a series? That's what we'll learn in this chapter!       Infinite Series  Let's look carefully at the calculation . We will add the terms one by one and keep an eye on the cumulative total, more formally known as the partial sums :    Number of Terms  Partial Sum  Value                                  If you're viewing this online, you can compute this yourself by running the following Sage cell:   This computation is actually quite inefficient, since we're calculating each term from scratch. Notice that the term is obtained by multiplying the previous term by : Firstly, this allows us to calculate the sum more efficiently:  Efficiency  We do we care about efficiency? Aren't modern computers plenty fast enough? For this example, yes. But there are often cases where we need to compute efficiently, for example in mobile devices with limited power, or calculations that need to be repeated millions of times per second, for example in computer graphics.   Secondly, as we add more terms, gets ever bigger while stays the same, so the multiplier we use to get from one term to the next gets ever smaller. This means that the terms shrink to zero exponentially and we will see in the next chapter ( ) that the sum converges for every value of .  In the above calculation, we have only computed finitely many terms, which is all one ever needs for applications. Mathematically, however, is an infinite series, and its value represents the sum of all infinitely many terms. What can this mean?  We have seen that the partial sums tend to , and this limit is defined to the be sum of the infinite series:     Given a sequence  of real numbers (the terms), we define the series  to be the limit of the partial sums (running totals) of the terms, provided that this limit exists.  If the limit exists, we say that the series converges . Otherwise, it diverges.     We will learn more about convergence and divergence in the next chapter. For now, we're interested in using infinite series to represent useful functions, like , or .       Power Series  Our first example above shows that the function can be expressed as an infinite series in the following form: Note that each term consists of a coefficient (for example ) multiplied by some power of the variable (for example ), so this is an example of what we call a power series . Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We're very comfortable with polynomials. shows how the first few partial sums of the series approximate the function .  Approximation to by various partial sums of its power series   A plot of together with plots of the partial sums of its power series of degrees and .     Power series aren't the only way to represent interesting functions: there are also other types of series, infinite products, continued fractions...    Assuming for now that the series converges, how do we know this is even true? How does one find such a series?       Maclaurin Series  Let's suppose for the moment that a power series representation for a function  exists , but we don't know what the coefficients should be: We can find the value of the first coefficient by the clever trick of plugging into : What about the next coefficient? We use an even cleverer trick: differentiating the series kills the first coefficient and decreases the exponent in all other coefficients: Plugging into this gives us . Let's differentiate another time: so , next , etc. In general, we find   Maclaurin   Let be an open interval, and suppose that the power series converges to for . Then, for ,      Use induction on to prove that the expression in is correct.   The series expansion is called the Maclaurin series for the function .  So now that we know how to create power series for functions using their derivatives, let's do the same for two more important functions:    Compute the Maclaurin series for .         We compute the derivatives of : thereafter, the pattern repeats, so again, etc.  Plugging in , we get   Now we put it all together: To get the last expression, note that the non-zero terms correspond to odd powers of , and odd numbers are of the form . The then ensures the alternating signs.      Compute the Maclaurin series for .         We compute the derivatives of : thereafter, the pattern repeats, so again, etc.  Plugging in , we get   Now we put it all together: To get the last expression, note that the non-zero terms correspond to even powers of , and even numbers are of the form . The then ensures the alternating signs.    Let's record the Maclaurin series we have found thus far:        Euler's Formula  You may have noticed that the Maclaurin series for and all look very similar - the series for has exactly the same terms as the series for , except for the differences in signs.  It turns out we can fix these signs if we subsitute , where is the imaginary unit. Using the fact that we find that     Euler   For we have    In particular, if we set , we obtain the following amazing formula, which combines the five most important constants in Mathematics:   The most beautiful formula  A survey at the 2006 International Congress of Mathematicians in Madrid, Spain, asked delegates from all over the world what they thought was the most beautiful mathematical formula. The winner, by far, was Euler's formula .         Maclaurin Polynomials  Now we have a method for obtaining power series expressions for functions. But these are infinite series, and for most applications we want to approximate our functions with finite polynomials. That's really easy - we just cut off the series after a finite number of terms:     The degree Maclaurin polynomial of a function is      Note that the degree Maclaurin polynomial will generally consist of terms. However, it will have degree less than if the coefficient of equals zero, for example   The degree 0 Maclaurin polynomial of is not very interesting, it's the just the constant function .  You'll recognise the degree 1 Maclaurin polynomial : its graph is the tangent to at . We also call it the linear approximation to , it is the linear function that most closely approximates near .  Similarly, the degree 2 Maclaurin polynomial is called the quadratic approximation to . It is the quadratic function closest to near .  The following Sage cell let's you plot the Maclaurin polynomials for and . Notice that when we increase the order (i.e. the number of terms in the Maclaurin polynomial), the approximation of the function about improves:    Computer algebra systems  Computer Algebra Systems usually have a command for calculating Maclaurin series. For example, the following shows part of the output from a Wolfram Alpha query.     We have already seen Sage code to compute Maclaurin series, here is the simplest code:         Advanced Topics   Computing     It's not hard to show, using repeated differentiation, that the Maclaurin series for is Since , this gives us an infinite series converging to . The Sage cell below computes the partial sums of this series up to some :    As you can see from this computation, convergence is extremely slow. See how big you must make N in the above code before you get two correct digits after the decimal point.  One can compute much faster by using identities such as the following, due to John Machin (in 1706):    Modern algorithms to compute are more sophisticated and much faster still, see . We mention only one method, the BBP (Bailey-Borwein-Plouffe) Algorithm: This formula not only converges extremely quickly, but it also allows you to compute specific hexadecimal digits of without first computing the previous digits.     A function without Maclaurin series  Consider the function This function is well-defined and continuous at . You can compute the limit    Plot of   Plot of    One can show that this function is well-defined and differentiable. In fact, for we have (check this yourself): The plot in is suspiciously flat near , and in fact we have Therefore, the Maclaurin series for is identically zero! So this function does not equal its Maclaurin series.  Replacing by in the power series for , we get This is not strictly a power series, but a Laurent series , which converges for . The Sage cell belows plots the Laurent polynomial for .   Here we see that the partial sums approximate well for large , but not for small .    Other types of series  For one can show that the following infinite series converges: This defines the zeta-function , a fascinating function defined by a series other than a power series. Later we will see that is related to the distribution of prime numbers. When is an even integer, it takes on very interesting values: Its values at the odd integers are much more mysterious.    Show that in other words, the harmonic series  diverges.   Show that the partial sum is greater than the integral .     Infinite products  Instead of adding infinitely many terms, one might also multiply them. Thus one may express some functions as infinite products, for example Such products can only converge if the factors tend to (not ) as tends to infinity.  You can plot the finite products against and in the following Sage cells:     Try out your own Sage computations here:    "
+  "number": "7",
+  "title": "CA7: Maclaurin Series",
+  "body": "    CA7: Maclaurin Series            Introduction   Faster multiplication  There are actually multiplication algorithms which are significantly faster than long multiplication. Long multiplication of two -digit numbers will typically take single-digit multiplications (and another  -digit additions). The fastest known algorithm is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to , which for large values of is a significant improvement.   Have you ever wondered how computers actually calculate things? Computers can only ever do finitely many steps with finitely many bits of information. The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example and . You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute in a finite number of steps. But then how does it calculate or , or other non-polynomial functions?  The solution is to approximate the function using a power series . For example, the computer approximates by adding finitely many terms of In other words, it approximates the function  via the power series     Factorials  Here is  factorial . It grows really fast: The factorial satifies the useful property that , meaning that fractions with factorials in the numerator and denominator will often allow lots of cancellation.   Challenge: Determine the number of zeroes at the end of the decimal expression for    How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. The long answer is much more complicated, and is the subject of a whole other area of Mathematics called Numerical Analysis .  How does the computer know to use this particular series? And what even is a series? That's what we'll learn in this chapter!       Infinite Series  Let's look carefully at the calculation . We will add the terms one by one and keep an eye on the cumulative total, more formally known as the partial sums :    Number of Terms  Partial Sum  Value                                  If you're viewing this online, you can compute this yourself by running the following Sage cell:   This computation is actually quite inefficient, since we're calculating each term from scratch. Notice that the term is obtained by multiplying the previous term by : Firstly, this allows us to calculate the sum more efficiently:  Efficiency  We do we care about efficiency? Aren't modern computers plenty fast enough? For this example, yes. But there are often cases where we need to compute efficiently, for example in mobile devices with limited power, or calculations that need to be repeated millions of times per second, for example in computer graphics.   Secondly, as we add more terms, gets ever bigger while stays the same, so the multiplier we use to get from one term to the next gets ever smaller. This means that the terms shrink to zero exponentially and we will see in the next chapter ( ) that the sum converges for every value of .  In the above calculation, we have only computed finitely many terms, which is all one ever needs for applications. Mathematically, however, is an infinite series, and its value represents the sum of all infinitely many terms. What can this mean?  We have seen that the partial sums tend to , and this limit is defined to the be sum of the infinite series:     Given a sequence  of real numbers (the terms), we define the series  to be the limit of the partial sums (running totals) of the terms, provided that this limit exists.  If the limit exists, we say that the series converges . Otherwise, it diverges.     We will learn more about convergence and divergence in the next chapter. For now, we're interested in using infinite series to represent useful functions, like , or .       Power Series  Our first example above shows that the function can be expressed as an infinite series in the following form: Note that each term consists of a coefficient (for example ) multiplied by some power of the variable (for example ), so this is an example of what we call a power series . Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We're very comfortable with polynomials. shows how the first few partial sums of the series approximate the function .  Approximation to by various partial sums of its power series   A plot of together with plots of the partial sums of its power series of degrees and .     Power series aren't the only way to represent interesting functions: there are also other types of series, infinite products, continued fractions...    Assuming for now that the series converges, how do we know this is even true? How does one find such a series?       Maclaurin Series  Let's suppose for the moment that a power series representation for a function  exists , but we don't know what the coefficients should be: We can find the value of the first coefficient by the clever trick of plugging into : What about the next coefficient? We use an even cleverer trick: differentiating the series kills the first coefficient and decreases the exponent in all other coefficients: Plugging into this gives us . Let's differentiate another time: so , next , etc. In general, we find   Maclaurin   Let be an open interval, and suppose that the power series converges to for . Then, for ,      Use induction on to prove that the expression in is correct.   The series expansion is called the Maclaurin series for the function .  So now that we know how to create power series for functions using their derivatives, let's do the same for two more important functions:    Compute the Maclaurin series for .         We compute the derivatives of : thereafter, the pattern repeats, so again, etc.  Plugging in , we get   Now we put it all together: To get the last expression, note that the non-zero terms correspond to odd powers of , and odd numbers are of the form . The then ensures the alternating signs.      Compute the Maclaurin series for .         We compute the derivatives of : thereafter, the pattern repeats, so again, etc.  Plugging in , we get   Now we put it all together: To get the last expression, note that the non-zero terms correspond to even powers of , and even numbers are of the form . The then ensures the alternating signs.    Let's record the Maclaurin series we have found thus far:        Euler's Formula  You may have noticed that the Maclaurin series for and all look very similar - the series for has exactly the same terms as the series for , except for the differences in signs.  It turns out we can fix these signs if we subsitute , where is the imaginary unit. Using the fact that we find that     Euler   For we have    In particular, if we set , we obtain the following amazing formula, which combines the five most important constants in Mathematics:   The most beautiful formula  A survey at the 2006 International Congress of Mathematicians in Madrid, Spain, asked delegates from all over the world what they thought was the most beautiful mathematical formula. The winner, by far, was Euler's formula .         Maclaurin Polynomials  Now we have a method for obtaining power series expressions for functions. But these are infinite series, and for most applications we want to approximate our functions with finite polynomials. That's really easy - we just cut off the series after a finite number of terms:     The degree Maclaurin polynomial of a function is      Note that the degree Maclaurin polynomial will generally consist of terms. However, it will have degree less than if the coefficient of equals zero, for example   The degree 0 Maclaurin polynomial of is not very interesting, it's the just the constant function .  You'll recognise the degree 1 Maclaurin polynomial : its graph is the tangent to at . We also call it the linear approximation to , it is the linear function that most closely approximates near .  Similarly, the degree 2 Maclaurin polynomial is called the quadratic approximation to . It is the quadratic function closest to near .  The following Sage cell let's you plot the Maclaurin polynomials for and . Notice that when we increase the order (i.e. the number of terms in the Maclaurin polynomial), the approximation of the function about improves:    Computer algebra systems  Computer Algebra Systems usually have a command for calculating Maclaurin series. For example, the following shows part of the output from a Wolfram Alpha query.     We have already seen Sage code to compute Maclaurin series, here is the simplest code:         Advanced Topics   Computing     It's not hard to show, using repeated differentiation, that the Maclaurin series for is Since , this gives us an infinite series converging to . The Sage cell below computes the partial sums of this series up to some :    As you can see from this computation, convergence is extremely slow. See how big you must make N in the above code before you get two correct digits after the decimal point.  One can compute much faster by using identities such as the following, due to John Machin (in 1706):    Modern algorithms to compute are more sophisticated and much faster still, see . We mention only one method, the BBP (Bailey-Borwein-Plouffe) Algorithm: This formula not only converges extremely quickly, but it also allows you to compute specific hexadecimal digits of without first computing the previous digits.     A function without Maclaurin series  Consider the function This function is well-defined and continuous at . You can compute the limit    Plot of   Plot of    One can show that this function is well-defined and differentiable. In fact, for we have (check this yourself): The plot in is suspiciously flat near , and in fact we have Therefore, the Maclaurin series for is identically zero! So this function does not equal its Maclaurin series.  Replacing by in the power series for , we get This is not strictly a power series, but a Laurent series , which converges for . The Sage cell belows plots the Laurent polynomial for .   Here we see that the partial sums approximate well for large , but not for small .    Other types of series  For one can show that the following infinite series converges: This defines the zeta-function , a fascinating function defined by a series other than a power series. Later we will see that is related to the distribution of prime numbers. When is an even integer, it takes on very interesting values: Its values at the odd integers are much more mysterious.    Show that in other words, the harmonic series  diverges.   Show that the partial sum is greater than the integral .     Infinite products  Instead of adding infinitely many terms, one might also multiply them. Thus one may express some functions as infinite products, for example Such products can only converge if the factors tend to (not ) as tends to infinity.  You can plot the finite products against and in the following Sage cells:     Try out your own Sage computations here:    "
 },
 {
   "id": "Sec-Introduction-5-2",
@@ -41,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#def-series",
   "type": "Definition",
-  "number": "1.1",
+  "number": "7.1",
   "title": "",
   "body": "  Given a sequence  of real numbers (the terms), we define the series  to be the limit of the partial sums (running totals) of the terms, provided that this limit exists.  If the limit exists, we say that the series converges . Otherwise, it diverges.    "
 },
@@ -59,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#thm-Maclaurin",
   "type": "Theorem",
-  "number": "1.3",
+  "number": "7.3",
   "title": "",
   "body": " Maclaurin   Let be an open interval, and suppose that the power series converges to for . Then, for ,    "
 },
@@ -68,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#sec-Maclaurin-Series-4",
   "type": "Checkpoint",
-  "number": "1.4",
+  "number": "7.4",
   "title": "",
   "body": " Use induction on to prove that the expression in is correct.  "
 },
@@ -86,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#sec-Maclaurin-Series-7",
   "type": "Example",
-  "number": "1.5",
+  "number": "7.5",
   "title": "",
   "body": "  Compute the Maclaurin series for .         We compute the derivatives of : thereafter, the pattern repeats, so again, etc.  Plugging in , we get   Now we put it all together: To get the last expression, note that the non-zero terms correspond to odd powers of , and odd numbers are of the form . The then ensures the alternating signs.   "
 },
@@ -95,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#sec-Maclaurin-Series-8",
   "type": "Example",
-  "number": "1.6",
+  "number": "7.6",
   "title": "",
   "body": "  Compute the Maclaurin series for .         We compute the derivatives of : thereafter, the pattern repeats, so again, etc.  Plugging in , we get   Now we put it all together: To get the last expression, note that the non-zero terms correspond to even powers of , and even numbers are of the form . The then ensures the alternating signs.   "
 },
@@ -104,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#thm-eulers-formula",
   "type": "Theorem",
-  "number": "1.7",
+  "number": "7.7",
   "title": "",
   "body": " Euler   For we have    "
 },
@@ -140,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#sec-Maclaurin-Polynomials-10",
   "type": "Remark",
-  "number": "1.9",
+  "number": "7.9",
   "title": "Computer algebra systems.",
   "body": " Computer algebra systems  Computer Algebra Systems usually have a command for calculating Maclaurin series. For example, the following shows part of the output from a Wolfram Alpha query.     We have already seen Sage code to compute Maclaurin series, here is the simplest code:   "
 },
@@ -149,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#fig-exp-minus-1-over-x-squared",
   "type": "Figure",
-  "number": "1.11",
+  "number": "7.11",
   "title": "",
   "body": " Plot of   Plot of   "
 },
@@ -176,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Chap-Calculus_1.html#subsec-Other-types-of-series-3",
   "type": "Checkpoint",
-  "number": "1.12",
+  "number": "7.12",
   "title": "",
   "body": "  Show that in other words, the harmonic series  diverges.   Show that the partial sum is greater than the integral .  "
 },
@@ -185,16 +1661,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "Calculus_2.html",
   "type": "Chapter",
-  "number": "2",
-  "title": "CA2: Taylor Series",
-  "body": "    CA2: Taylor Series         Taylor series   Plot of and its degree 5 Maclaurin polynomial.   Plot of and its degree 5 Maclaurin polynomial. The polynomial starts diverging visibly from the plot of when .     compares to its degree 5 Maclaurin polynomial. We notice that the polynomial is a poor approximation of when . What can we do about this? We could use Maclaurin polynomials of ever higher degree, but these get ever more complicated.  The issue is that Maclaurin series are computed based on the value of the function and its derivatives around , so it's not surprising that they best approximate the function near If for some reason we're more interested in the function near another value, say near , then instead of computing Maclaurin polynomials of high degree, we can simply shift our function along the -axis until the point of interest lies above , compute the Maclaurin polynomials of the shifted function, and then shift back.  In other words, we consider the shifted function , then compute the Maclaurin series for : Finally, we shift back to obtain a power series for : This is the Taylor series for  centred at  .   Taylor Series   The series,   .  is called the Taylor series for about     Note that a Maclaurin series is simply a Taylor series centred at   The degree  Taylor polynomial of centred at is - you guessed it - the sum of the terms of the Taylor series of degree at most . The degree Taylor polynomial of a function is also called its nth order approximation .    Compute the Taylor series of the function centred at .    We compute the derivatives of at : Thus      Degree 3 Taylor polynomial of centred at   Plot of and its degree 3 Taylor polynomial centered at .    The Sage cell below plots the Taylor polynomial for a function centred at some .    Find the second order approximation to about       In order to find the second order approximation for about we need to evaluate and its first two derivatives at . So,   Thus the second order approximation for about (or the Taylor polynomial of degree for about ), is      Find the Taylor polynomial of degree for about       Since we already know the Taylor series for about we can obtain the degree Taylor polynomial for about as follows   Thus the degree Taylor polynomial is      Example Tasks   Find the Taylor series for about     Find the Taylor polynomial of degree for about     Find the Taylor polynomial of degree for about     Find the rd degree Taylor polynomial for about      A little remark  Computer algebra systems usually have commands for Taylor series. For example, here in is an example of a query to Wolfram Alpha that will work.        Geometric series  So far, we have succeeded in finding various useful power series expressions for the functions , and . What about other functions? A particularly instructive case is the function   We can compute its derivatives by hand, but that quickly gets old, so we'll ask the computer instead:   We notice that (Note that Sage often formats the answer differently, swapping the and around, leading to alternating signs.)   Use induction on to prove that the formula in is correct.   This allows us to write down the Maclaurin series for :    Prove that, for every , Deduce that    You can use induction on , or just multiply out and cancel terms.   Assuming that , deduce from .   Take the limit as .   We compute since as because .    The series in is an example of a geometric series (sometimes also called a geometric progression ). More generally, a geometric series is one of the form Here is the starting term, and each subsequent term equals the previous terms multiplied by , which we call the common ratio .  Let's plot the various Maclaurin polynomials for :   Maclaurin polynomials for   Plot of the Maclaurin polynomials for . Note how they only approximate when .    We immediately notice that the Maclaurin polynomials are wildy different from when .    Convergence issues  Of course, the problem is that the series does not converge unless - after all, if , then the individual terms do not shrink to zero, and the partial sums cannot converge to a limit. This is true for all series:   The Divergence Test   If the terms of the series do not approach as then the series diverges.    This is obvious if you think about it: if the series converges, then the partial sums (running totals) tend to some fixed limit. But this means that the changes from one partial sum to the next (i.e. the terms of the series) must shrink to zero.  We will soon see that the converse is not true: there are series, whose terms tend to zero, but which nevertheless diverge. One can think of this problem as the terms not tending to zero fast enough.    Geometric Series   A geometric series converges if and only if , in which case it converges to      If , then does not equal zero, so by the Divergence Test, the series diverges.  Now suppose that . By the result of , we have So since as because .    Repeating decimals are also geometric series:      Ratio test  Most series aren't obligingly geometric series, but a similar principle applies: if the ratios of consecutive terms stay small (specifically, tend to a value strictly between and ), then we can expect convergence:   The Ratio Test   For the series , let . If  then the series converges  then the series diverges  then the test is inconclusive       We can actually do slightly better: in the Ratio Test we can replace by .  If you don't yet know what a limsup is, here is another way of putting it: If there exists a number , such that for all sufficiently large , then the series converges.  The idea is simply that, in this case, the terms in the series shrink to zero faster than the terms of a (convergent) geometric series with common ratio , and thus it must also converge.   In other courses you will learn more about convergence of series and in particular you will see more convergence tests. Annoyingly, all convergence tests have cases in which they're inconclusive. One can actually prove that, in a suitable technical sense, a universal convergence test cannot exist.    Determine the nature of the series     Convergent.    To use the ratio test consider   Thus   Since , by the ratio test this series converges. (Notice that the ratio test doesn't tell us to what number the series converges to. In this case it happens to be .)      Convergence of power series  It turns out that the Ratio Test is well suited for testing the convergence of power series. Consider a general power series, of the form We'd like to know for which values of this series converges. After all, if the series doesn't converge for a particular , then it tells us nothing about the value of the function at .  Firstly, when , then obviously converges to the first term . In other words, a power series always converges at its centre.   For other values of , we apply the Ratio Test. To do so, we check the (absolute values of) ratios of consecutive terms, and try to determine if they converge to something smaller than 1. Due to the nature of power series, there is some cancellation in this ratio: For the Ratio Test to apply, this must converge to some as . This depends on the ratios of the coefficients of the power series. Assuming the ratios converge to something, we find three possibilities.   Case 1. If then the series converges for all :   Consider the Maclaurin series for : Here Thus the Maclaurin series for converges for all values of .  It's not hard to show that the same holds for the Taylor series of , and about any centre. The reason is that the derivatives are bounded (by in the case of , and by in the case of or ), thus in the Ratio Test calculation, the factorials in the denominators dominate everything.     Case 2. If then the series converges for and diverges if : This will converge if , i.e. when .  In this case, we call the radius of convergence of the power series. Basically, the series converges if the distance from to the centre is less than the radius of convergence . If this distance is greater than , then the series diverges.  In other words, the series converges for inside the open interval , and diverges outside the closed interval .  What happens on the endpoints of these intervals, i.e. when ? The Ratio Test tells us nothing. All we know at this point is that there is an interval of convergence , of the form But we won't worry about convergence at the endpoints in this course.   Where's the circle?  Why is the radius of convergence called a radius? Where's the circle?  The answer becomes clear when we consider the variable to be a complex number, rather than just a real number. Everything we've done up to now also makes sense over complex number, especially power series, and in this case the interval of convergence turns out to be a disk of convergence. The series will converge for , and this region defines a disk in the complex plane, centered at , with radius .     Compute the radius of convergence of .    We use the Ratio Test: because Now when . So we find that the series converges for , i.e. on the interval , and the radius of convergence is .     Case 3. If then the series diverges for all : so unless . In this case we say the radius of convergence is zero: .  Just to round things off, in the first case, where the series converges for all , we say that it has infinite radius of convergence .       Algebra of infinite series  Computing repeated derivatives gets old really quickly. Often a much quicker way to get power series expansions for given functions is to manipulate a known series.  In below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques:    Manipulating\/Substituting into known series.  Differentiating\/Integrating known series.     Some Important Maclaurin Series (and their intervals of convergence):                                     Manipulating\/Substituting into Known Series    Find the Maclaurin series for        We know that the Maclaurin series for on is   We can use this series by replacing with to obtain   which will converge on the interval i.e.,       Find the Maclaurin series for        Once again we will use the Maclaurin series for on Now   which will converge on the interval i.e.,       Find the Maclaurin series for        Substituting into the Maclaurin series for , we obtain   which will converge for all real values of     Differentiating\/Integrating Known Series  As the theorem below says, we can also use differentiation and integration to work out new Maclaurin series expansions from ones that we already know. The proof of this theorem is beyond the scope of this course.    If with radius of convergence then    with radius of convergence ,  with radius of convergence (where ).     Note that the behaviour of the series (i.e. whether it converges or diverges) at the endpoints may change when it is differentiated or integrated.    Find the Maclaurin series for        Notice that or put the other way, Since we know the Maclaurin series for we can differentiate this series to obtain the Maclaurin series for So, on        Find the Maclaurin series for        Notice that or put the other way, . Since we know the Maclaurin series for we can integrate this series to obtain the Maclaurin series for So, on    Since is when we have Thus on       Example Tasks   Find the Maclaurin series for     Find the Maclaurin series for     Find the Maclaurin series for     Find the Maclaurin series for     Use a sixth degree Maclaurin polynomial to estimate       Advanced topics   Why radius 1?  In we worked out the Maclaurin series of and found that it has radius of convergence .  What's wrong with this function? The plot in shows a perfectly well-behaved function, defined on all of , but its Maclaurin polynomials are all over the place when . Why is the radius of convergence so small?   Approximations to by its Maclaurin polynomials up to degree 30.   A plot of together with plots of its Maclaurin polynomials up to degree 30.    The answer becomes clear if we view as a function of a complex variable! Over the complex numbers, the denominator vanishes at , so the function blows up at these values. These are at distance 1 from the origin, so the disc of convergence in the complex plane cannot include these points, and so the radius of this disc (the radius of convergence!) cannot be larger than 1.  In fact, it is a result from Complex Analysis that the radius of convergence of the Taylor series of an analytic function is always the distance from the centre of the Taylor series to the nearest singularity of the function. In our case, this distance is 1.      "
+  "number": "8",
+  "title": "CA8: Taylor Series",
+  "body": "    CA8: Taylor Series         Taylor series   Plot of and its degree 5 Maclaurin polynomial.   Plot of and its degree 5 Maclaurin polynomial. The polynomial starts diverging visibly from the plot of when .     compares to its degree 5 Maclaurin polynomial. We notice that the polynomial is a poor approximation of when . What can we do about this? We could use Maclaurin polynomials of ever higher degree, but these get ever more complicated.  The issue is that Maclaurin series are computed based on the value of the function and its derivatives around , so it's not surprising that they best approximate the function near If for some reason we're more interested in the function near another value, say near , then instead of computing Maclaurin polynomials of high degree, we can simply shift our function along the -axis until the point of interest lies above , compute the Maclaurin polynomials of the shifted function, and then shift back.  In other words, we consider the shifted function , then compute the Maclaurin series for : Finally, we shift back to obtain a power series for : This is the Taylor series for  centred at  .   Taylor Series   The series,   .  is called the Taylor series for about     Note that a Maclaurin series is simply a Taylor series centred at   The degree  Taylor polynomial of centred at is - you guessed it - the sum of the terms of the Taylor series of degree at most . The degree Taylor polynomial of a function is also called its nth order approximation .    Compute the Taylor series of the function centred at .    We compute the derivatives of at : Thus      Degree 3 Taylor polynomial of centred at   Plot of and its degree 3 Taylor polynomial centered at .    The Sage cell below plots the Taylor polynomial for a function centred at some .    Find the second order approximation to about       In order to find the second order approximation for about we need to evaluate and its first two derivatives at . So,   Thus the second order approximation for about (or the Taylor polynomial of degree for about ), is      Find the Taylor polynomial of degree for about       Since we already know the Taylor series for about we can obtain the degree Taylor polynomial for about as follows   Thus the degree Taylor polynomial is      Example Tasks   Find the Taylor series for about     Find the Taylor polynomial of degree for about     Find the Taylor polynomial of degree for about     Find the rd degree Taylor polynomial for about      A little remark  Computer algebra systems usually have commands for Taylor series. For example, here in is an example of a query to Wolfram Alpha that will work.        Geometric series  So far, we have succeeded in finding various useful power series expressions for the functions , and . What about other functions? A particularly instructive case is the function   We can compute its derivatives by hand, but that quickly gets old, so we'll ask the computer instead:   We notice that (Note that Sage often formats the answer differently, swapping the and around, leading to alternating signs.)   Use induction on to prove that the formula in is correct.   This allows us to write down the Maclaurin series for :    Prove that, for every , Deduce that    You can use induction on , or just multiply out and cancel terms.   Assuming that , deduce from .   Take the limit as .   We compute since as because .    The series in is an example of a geometric series (sometimes also called a geometric progression ). More generally, a geometric series is one of the form Here is the starting term, and each subsequent term equals the previous terms multiplied by , which we call the common ratio .  Let's plot the various Maclaurin polynomials for :   Maclaurin polynomials for   Plot of the Maclaurin polynomials for . Note how they only approximate when .    We immediately notice that the Maclaurin polynomials are wildy different from when .    Convergence issues  Of course, the problem is that the series does not converge unless - after all, if , then the individual terms do not shrink to zero, and the partial sums cannot converge to a limit. This is true for all series:   The Divergence Test   If the terms of the series do not approach as then the series diverges.    This is obvious if you think about it: if the series converges, then the partial sums (running totals) tend to some fixed limit. But this means that the changes from one partial sum to the next (i.e. the terms of the series) must shrink to zero.  We will soon see that the converse is not true: there are series, whose terms tend to zero, but which nevertheless diverge. One can think of this problem as the terms not tending to zero fast enough.    Geometric Series   A geometric series converges if and only if , in which case it converges to      If , then does not equal zero, so by the Divergence Test, the series diverges.  Now suppose that . By the result of , we have So since as because .    Repeating decimals are also geometric series:      Ratio test  Most series aren't obligingly geometric series, but a similar principle applies: if the ratios of consecutive terms stay small (specifically, tend to a value strictly between and ), then we can expect convergence:   The Ratio Test   For the series , let . If  then the series converges  then the series diverges  then the test is inconclusive       We can actually do slightly better: in the Ratio Test we can replace by .  If you don't yet know what a limsup is, here is another way of putting it: If there exists a number , such that for all sufficiently large , then the series converges.  The idea is simply that, in this case, the terms in the series shrink to zero faster than the terms of a (convergent) geometric series with common ratio , and thus it must also converge.   In other courses you will learn more about convergence of series and in particular you will see more convergence tests. Annoyingly, all convergence tests have cases in which they're inconclusive. One can actually prove that, in a suitable technical sense, a universal convergence test cannot exist.    Determine the nature of the series     Convergent.    To use the ratio test consider   Thus   Since , by the ratio test this series converges. (Notice that the ratio test doesn't tell us to what number the series converges to. In this case it happens to be .)      Convergence of power series  It turns out that the Ratio Test is well suited for testing the convergence of power series. Consider a general power series, of the form We'd like to know for which values of this series converges. After all, if the series doesn't converge for a particular , then it tells us nothing about the value of the function at .  Firstly, when , then obviously converges to the first term . In other words, a power series always converges at its centre.   For other values of , we apply the Ratio Test. To do so, we check the (absolute values of) ratios of consecutive terms, and try to determine if they converge to something smaller than 1. Due to the nature of power series, there is some cancellation in this ratio: For the Ratio Test to apply, this must converge to some as . This depends on the ratios of the coefficients of the power series. Assuming the ratios converge to something, we find three possibilities.   Case 1. If then the series converges for all :   Consider the Maclaurin series for : Here Thus the Maclaurin series for converges for all values of .  It's not hard to show that the same holds for the Taylor series of , and about any centre. The reason is that the derivatives are bounded (by in the case of , and by in the case of or ), thus in the Ratio Test calculation, the factorials in the denominators dominate everything.     Case 2. If then the series converges for and diverges if : This will converge if , i.e. when .  In this case, we call the radius of convergence of the power series. Basically, the series converges if the distance from to the centre is less than the radius of convergence . If this distance is greater than , then the series diverges.  In other words, the series converges for inside the open interval , and diverges outside the closed interval .  What happens on the endpoints of these intervals, i.e. when ? The Ratio Test tells us nothing. All we know at this point is that there is an interval of convergence , of the form But we won't worry about convergence at the endpoints in this course.   Where's the circle?  Why is the radius of convergence called a radius? Where's the circle?  The answer becomes clear when we consider the variable to be a complex number, rather than just a real number. Everything we've done up to now also makes sense over complex number, especially power series, and in this case the interval of convergence turns out to be a disk of convergence. The series will converge for , and this region defines a disk in the complex plane, centered at , with radius .     Compute the radius of convergence of .    We use the Ratio Test: because Now when . So we find that the series converges for , i.e. on the interval , and the radius of convergence is .     Case 3. If then the series diverges for all : so unless . In this case we say the radius of convergence is zero: .  Just to round things off, in the first case, where the series converges for all , we say that it has infinite radius of convergence .       Algebra of infinite series  Computing repeated derivatives gets old really quickly. Often a much quicker way to get power series expansions for given functions is to manipulate a known series.  In below we have listed the Maclaurin series for a small set of basic functions of science and engineering. These series can all be relatively easily derived from first principals as discussed in previous lectures. However, for some more complex functions it is easier to find their Maclaurin series by starting from known series rather than trying to find the series from scratch. We will look at two commonly used techniques:    Manipulating\/Substituting into known series.  Differentiating\/Integrating known series.     Some Important Maclaurin Series (and their intervals of convergence):                                     Manipulating\/Substituting into Known Series    Find the Maclaurin series for        We know that the Maclaurin series for on is   We can use this series by replacing with to obtain   which will converge on the interval i.e.,       Find the Maclaurin series for        Once again we will use the Maclaurin series for on Now   which will converge on the interval i.e.,       Find the Maclaurin series for        Substituting into the Maclaurin series for , we obtain   which will converge for all real values of     Differentiating\/Integrating Known Series  As the theorem below says, we can also use differentiation and integration to work out new Maclaurin series expansions from ones that we already know. The proof of this theorem is beyond the scope of this course.    If with radius of convergence then    with radius of convergence ,  with radius of convergence (where ).     Note that the behaviour of the series (i.e. whether it converges or diverges) at the endpoints may change when it is differentiated or integrated.    Find the Maclaurin series for        Notice that or put the other way, Since we know the Maclaurin series for we can differentiate this series to obtain the Maclaurin series for So, on        Find the Maclaurin series for        Notice that or put the other way, . Since we know the Maclaurin series for we can integrate this series to obtain the Maclaurin series for So, on    Since is when we have Thus on       Example Tasks   Find the Maclaurin series for     Find the Maclaurin series for     Find the Maclaurin series for     Find the Maclaurin series for     Use a sixth degree Maclaurin polynomial to estimate       Advanced topics   Why radius 1?  In we worked out the Maclaurin series of and found that it has radius of convergence .  What's wrong with this function? The plot in shows a perfectly well-behaved function, defined on all of , but its Maclaurin polynomials are all over the place when . Why is the radius of convergence so small?   Approximations to by its Maclaurin polynomials up to degree 30.   A plot of together with plots of its Maclaurin polynomials up to degree 30.    The answer becomes clear if we view as a function of a complex variable! Over the complex numbers, the denominator vanishes at , so the function blows up at these values. These are at distance 1 from the origin, so the disc of convergence in the complex plane cannot include these points, and so the radius of this disc (the radius of convergence!) cannot be larger than 1.  In fact, it is a result from Complex Analysis that the radius of convergence of the Taylor series of an analytic function is always the distance from the centre of the Taylor series to the nearest singularity of the function. In our case, this distance is 1.      "
 },
 {
   "id": "fig-plot-sin-T5",
   "level": "2",
   "url": "Calculus_2.html#fig-plot-sin-T5",
   "type": "Figure",
-  "number": "2.1",
+  "number": "8.1",
   "title": "",
   "body": " Plot of and its degree 5 Maclaurin polynomial.   Plot of and its degree 5 Maclaurin polynomial. The polynomial starts diverging visibly from the plot of when .   "
 },
@@ -212,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-6",
   "type": "Definition",
-  "number": "2.2",
+  "number": "8.2",
   "title": "Taylor Series.",
   "body": " Taylor Series   The series,   .  is called the Taylor series for about    "
 },
@@ -230,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-9",
   "type": "Example",
-  "number": "2.3",
+  "number": "8.3",
   "title": "",
   "body": "  Compute the Taylor series of the function centred at .    We compute the derivatives of at : Thus    "
 },
@@ -239,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#fig-plot-cos-T3",
   "type": "Figure",
-  "number": "2.4",
+  "number": "8.4",
   "title": "",
   "body": " Degree 3 Taylor polynomial of centred at   Plot of and its degree 3 Taylor polynomial centered at .   "
 },
@@ -248,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Second_order_approximation_e_power_minus_x_on_3",
   "type": "Example",
-  "number": "2.5",
+  "number": "8.5",
   "title": "",
   "body": " Find the second order approximation to about       In order to find the second order approximation for about we need to evaluate and its first two derivatives at . So,   Thus the second order approximation for about (or the Taylor polynomial of degree for about ), is    "
 },
@@ -257,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Fourth_order_approximation_e_power_minus_x_on_3",
   "type": "Example",
-  "number": "2.6",
+  "number": "8.6",
   "title": "",
   "body": " Find the Taylor polynomial of degree for about       Since we already know the Taylor series for about we can obtain the degree Taylor polynomial for about as follows   Thus the degree Taylor polynomial is    "
 },
@@ -266,7 +1742,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-15-2",
   "type": "Exercise",
-  "number": "2.1.1",
+  "number": "8.1.1",
   "title": "",
   "body": " Find the Taylor series for about   "
 },
@@ -275,7 +1751,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-15-3",
   "type": "Exercise",
-  "number": "2.1.2",
+  "number": "8.1.2",
   "title": "",
   "body": " Find the Taylor polynomial of degree for about   "
 },
@@ -284,7 +1760,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-15-4",
   "type": "Exercise",
-  "number": "2.1.3",
+  "number": "8.1.3",
   "title": "",
   "body": " Find the Taylor polynomial of degree for about   "
 },
@@ -293,7 +1769,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-15-5",
   "type": "Exercise",
-  "number": "2.1.4",
+  "number": "8.1.4",
   "title": "",
   "body": " Find the rd degree Taylor polynomial for about   "
 },
@@ -302,7 +1778,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Taylor-series-16",
   "type": "Remark",
-  "number": "2.7",
+  "number": "8.7",
   "title": "A little remark.",
   "body": " A little remark  Computer algebra systems usually have commands for Taylor series. For example, here in is an example of a query to Wolfram Alpha that will work.     "
 },
@@ -311,7 +1787,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Geometric-series-6",
   "type": "Checkpoint",
-  "number": "2.9",
+  "number": "8.9",
   "title": "",
   "body": " Use induction on to prove that the formula in is correct.  "
 },
@@ -320,7 +1796,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#ex-GS",
   "type": "Checkpoint",
-  "number": "2.10",
+  "number": "8.10",
   "title": "",
   "body": " Prove that, for every , Deduce that    You can use induction on , or just multiply out and cancel terms.   Assuming that , deduce from .   Take the limit as .   We compute since as because .  "
 },
@@ -338,7 +1814,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#fig-plot-GS",
   "type": "Figure",
-  "number": "2.11",
+  "number": "8.11",
   "title": "",
   "body": " Maclaurin polynomials for   Plot of the Maclaurin polynomials for . Note how they only approximate when .   "
 },
@@ -347,7 +1823,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Convergence-issues-3",
   "type": "Theorem",
-  "number": "2.12",
+  "number": "8.12",
   "title": "The Divergence Test.",
   "body": " The Divergence Test   If the terms of the series do not approach as then the series diverges.   "
 },
@@ -356,7 +1832,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Convergence-issues-6",
   "type": "Theorem",
-  "number": "2.13",
+  "number": "8.13",
   "title": "Geometric Series.",
   "body": " Geometric Series   A geometric series converges if and only if , in which case it converges to    "
 },
@@ -365,7 +1841,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Convergence-issues-7",
   "type": "Proof",
-  "number": "2.3.1",
+  "number": "8.3.1",
   "title": "",
   "body": " If , then does not equal zero, so by the Divergence Test, the series diverges.  Now suppose that . By the result of , we have So since as because .  "
 },
@@ -374,7 +1850,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Convergence-issues-8",
   "type": "Example",
-  "number": "2.14",
+  "number": "8.14",
   "title": "",
   "body": " Repeating decimals are also geometric series:   "
 },
@@ -383,7 +1859,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Ratio-test-3",
   "type": "Theorem",
-  "number": "2.15",
+  "number": "8.15",
   "title": "The Ratio Test.",
   "body": " The Ratio Test   For the series , let . If  then the series converges  then the series diverges  then the test is inconclusive     "
 },
@@ -392,7 +1868,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Ex-Ratio_test",
   "type": "Example",
-  "number": "2.16",
+  "number": "8.16",
   "title": "",
   "body": "  Determine the nature of the series     Convergent.    To use the ratio test consider   Thus   Since , by the ratio test this series converges. (Notice that the ratio test doesn't tell us to what number the series converges to. In this case it happens to be .)   "
 },
@@ -437,7 +1913,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Convergence-of-power-series-11",
   "type": "Example",
-  "number": "2.18",
+  "number": "8.18",
   "title": "",
   "body": "  Compute the radius of convergence of .    We use the Ratio Test: because Now when . So we find that the series converges for , i.e. on the interval , and the radius of convergence is .   "
 },
@@ -464,7 +1940,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Table_Maclaurin",
   "type": "Table",
-  "number": "2.19",
+  "number": "8.19",
   "title": "Some Important Maclaurin Series (and their intervals of convergence):",
   "body": " Some Important Maclaurin Series (and their intervals of convergence):                                    "
 },
@@ -473,7 +1949,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Maclaurin_series_1_on_1_plus_x2",
   "type": "Example",
-  "number": "2.20",
+  "number": "8.20",
   "title": "",
   "body": "  Find the Maclaurin series for        We know that the Maclaurin series for on is   We can use this series by replacing with to obtain   which will converge on the interval i.e.,    "
 },
@@ -482,7 +1958,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Maclaurin_series_x_on_2_minus_5x",
   "type": "Example",
-  "number": "2.21",
+  "number": "8.21",
   "title": "",
   "body": "  Find the Maclaurin series for        Once again we will use the Maclaurin series for on Now   which will converge on the interval i.e.,    "
 },
@@ -491,7 +1967,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Maclaurin_series_e_minus_x_2",
   "type": "Example",
-  "number": "2.22",
+  "number": "8.22",
   "title": "",
   "body": "  Find the Maclaurin series for        Substituting into the Maclaurin series for , we obtain   which will converge for all real values of    "
 },
@@ -500,7 +1976,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Algebra-of-infinite-series-12",
   "type": "Theorem",
-  "number": "2.23",
+  "number": "8.23",
   "title": "",
   "body": "  If with radius of convergence then    with radius of convergence ,  with radius of convergence (where ).    "
 },
@@ -509,7 +1985,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Maclaurin_series_1_on_1_minus_x_power_2",
   "type": "Example",
-  "number": "2.24",
+  "number": "8.24",
   "title": "",
   "body": "  Find the Maclaurin series for        Notice that or put the other way, Since we know the Maclaurin series for we can differentiate this series to obtain the Maclaurin series for So, on     "
 },
@@ -518,7 +1994,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#Maclaurin_series_ln_1_plus_x",
   "type": "Example",
-  "number": "2.25",
+  "number": "8.25",
   "title": "",
   "body": "  Find the Maclaurin series for        Notice that or put the other way, . Since we know the Maclaurin series for we can integrate this series to obtain the Maclaurin series for So, on    Since is when we have Thus on     "
 },
@@ -527,7 +2003,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Algebra-of-infinite-series-16-2",
   "type": "Exercise",
-  "number": "2.6.1",
+  "number": "8.6.1",
   "title": "",
   "body": " Find the Maclaurin series for   "
 },
@@ -536,7 +2012,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Algebra-of-infinite-series-16-3",
   "type": "Exercise",
-  "number": "2.6.2",
+  "number": "8.6.2",
   "title": "",
   "body": " Find the Maclaurin series for   "
 },
@@ -545,7 +2021,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Algebra-of-infinite-series-16-4",
   "type": "Exercise",
-  "number": "2.6.3",
+  "number": "8.6.3",
   "title": "",
   "body": " Find the Maclaurin series for   "
 },
@@ -554,7 +2030,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Algebra-of-infinite-series-16-5",
   "type": "Exercise",
-  "number": "2.6.4",
+  "number": "8.6.4",
   "title": "",
   "body": " Find the Maclaurin series for   "
 },
@@ -563,7 +2039,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#sec-Algebra-of-infinite-series-16-6",
   "type": "Exercise",
-  "number": "2.6.5",
+  "number": "8.6.5",
   "title": "",
   "body": " Use a sixth degree Maclaurin polynomial to estimate   "
 },
@@ -572,1485 +2048,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Calculus_2.html#fig-1-over-x-squared",
   "type": "Figure",
-  "number": "2.26",
+  "number": "8.26",
   "title": "",
   "body": " Approximations to by its Maclaurin polynomials up to degree 30.   A plot of together with plots of its Maclaurin polynomials up to degree 30.   "
-},
-{
-  "id": "Calculus_3",
-  "level": "1",
-  "url": "Calculus_3.html",
-  "type": "Chapter",
-  "number": "3",
-  "title": "CA3: Functions of Several Variables",
-  "body": "    CA3: Functions of Several Variables            Functions of Two Variables  In Math1110 we studied \"(real valued) functions of one variable\", that is functions of the form, where is called the domain. We used the notation to denote such functions where denotes the independent variable and the dependent variable.  We have seen that functions of one variable are useful in practice but (of course) there are many real world relationships that are more complicated and can't be well modelled by these functions.   Suppose that we have a thin metal plate and that we are interested in the temperature on this plate. In general the temperature will vary from point to point. If we imagine a coordinate grid on the plate then points on the plate can be identified by their coordinates . Thus will depend on two independent variables, and . Thus we would write and say that is a function of two variables.    Many of the formulas you've come across in school are actually functions of several variables, such as:   The kinetic energy of an object of mass and velocity is given by the two-variable function     The value of a investment compounded continuously at an annual rate of after years is given by the two-variable function     The magnitude of the gravitational attraction between two objects of masses and , separated by a distance of , is given by the three variable function where is the universal gravitational constant .      Note that functions of two variables are of the form where is again the domain. Formally, we define a function of two variables as:   A (real valued) function of two variables is a rule that assigns to each ordered pair of real numbers in a set a unique (real) number denoted by .  Thus,  are examples of functions of two variables.  The set is called the domain of the function. Unless specified otherwise, we take to be the largest possible set of inputs for which we can calculate . The range of is the associated set of values that takes on.   Consider the function .   Find the domain of  Find:                (to 4.d.p.).  is not defined.       Since the argument of the log function has to be positive, the domain is the set of points in the plane satisfying . shows a plot of this domain in .        (to 4.d.p.).  Since is not in the domain of , is not defined.      Domain of the function   A plot of the domain of the function .     Consider the function    Find the domain of  Find:                      Since we can calculate for all values of and the domain of is                  Graphing functions of two variables  Now that we have an idea of what a function of two variables is and what its domain is, we would like a way to visualise it, similar to how we can visualise functions of a single variable by graphing them in the plane.  The two main visualisations are graphs and contour plots. We deal with contour plots in the next section. The graph of a function of two variables is the surface in defined by Thus, we imagine the \"floor\" to be the -plane of inputs to the function, and the height of the surface above (or below) this floor is the output .  A surface in is the graph of a function if and only if it passes the vertical line test, since a function only produces one output for each input in its domain.  In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. Various computer packages can produce such plots, such as Maple, Mathematica, Matlab, Wolfram Alpha and even GPT4 (which runs python code to produce the plots). The following plots are produced by SageMath - you can run the code cells to produce 3D plots which you can manipulate yourself.   Produce the graph of the function      This surface is an example of a paraboloid . It is used for satellite antennas.     Produce the graph of the function      This surface is an example of a hyperbolic paraboloid .     Produce the graph of the function       3D plot of        Produce the graph of the function       3D plot of       Not all surfaces in represent the graph of a function of two variables.   The surface associated with the equation is a sphere of radius and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when , could be either or .  3D plot of       Example Tasks   Determine the domain of the function .    Sketch the graph of the following functions.              Level Curves and Contour Plots  As we have seen, visualising the surface corresponding to the function can be quite difficult, in particular if you're limited to a static image in two dimensions (such as printed on paper). Another way to visualise a function of two variables is to use a contour plot . Here one plots contours, also known as level curves, each of which consists of all the input points for which the output is a certain constant value. This is commonly used in topographic maps, where the contours show points on the map of a given altitude. With a bit of practise, you can visualise the shape of the landscape just from a topographic map.  Sample Topographic Map (Part of the Watagan Mountains)     The level curves of a function are curves in the -plane on which the function has the same value, i.e. on which , where is some constant.  Note:  Each point in the domain of the function lies on exactly one level curve.  When a collection of level curves for a function are drawn on the same plane it is also called a contour plot.  We can also think of level curves as the intersection of the surface and the horizontal plane .     Draw the level curves associated with for the function    The level curves of a function satisfy the equation . So for this function the level curves are: Thus the level curves are rectangular hyperbolae (except for ). The level curves for are shown in following diagram.  Rectangular hyperbolae for various values of        Draw a contour plot for the function .   The contours (i.e. level curves) of a function satisfy the equation . So for this function the level curves are: that is, circles centred on the origin and whose radius is .  Circles for various values of   Notice that there are no level curves when . This tells us that the surface does not go below the -plane.    Here is a SageMath cell that lets you compare graphs and contour plots of different functions. Note that if you fill in the regions between the contours with colours related to the output values you get a colourful plot known as a heat map .    Example Tasks   Draw the level curves associated with for the function .    Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:       Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:             Surfaces of Revolution  The surface associated with the graph of (see ) is an example of a special kind of surface... a surface of revolution. A surface of revolution is a surface in obtained by rotating a curve about an axis.   Suppose we have a curve in the -plane, and we rotate this curve above the -axis. What would be an equation for the resulting surface of revolution?  Consider a point on the curve above the -axis in 3D space. Its height above the -plane is . As we rotate the curve about the -axis, the point traces out a horizontal circle on the resulting surface of revolution. The radius of this circle equals the original -coordinate of the point when it started above the -axis, and the height of the circle above the -plane equals . The height of an arbitrary point on the surface of revolution is thus , where is the radius of the circle on which the point lies. This tells us that an equation for the surface of revolution is Another way to see this is that, as a result of the rotational symmetry of the surface, the height of the surface above a point on the -plane depends only on the distance of the point from the origin.  The following SageMath code shows the partial surface of revolution obtained by rotating the curve about the -axis.    Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.   Plot of in the -plane for .          Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.         The equation of the surface of revolution will be that is,      Is the graph of a surface of revolution?   Since we can write the function as this surface can be obtained by rotating the curve in the -plane      Example Tasks   Determine the equation of the surface obtained by rotating the curve about the -axis. Make a sketch of the surface.    Is the graph of a surface of revolution?          Functions of 3 (or more) Variables  Although we won't do much with them in this course it is possible to define (real valued) functions in variables where is any natural number, that is functions of the form .   The function is a function of the form .    The function is a function of the form .   Visualising such functions is difficult. One option to visualise a function of three variables is to make 3D plots of its level surfaces . These are the surfaces defined by for various values of the constant . This is the same idea as plotting level curves, except now we're in one dimension higher.   The following SageMath cell displays three level surfaces of the function for     We will see later in the course that, rather than using level surfaces to gain understanding a given function, we can gain understanding of a given surface by viewing it as the level surface of a function.    "
-},
-{
-  "id": "Functions-of-Two-Variables-4",
-  "level": "2",
-  "url": "Calculus_3.html#Functions-of-Two-Variables-4",
-  "type": "Example",
-  "number": "3.1",
-  "title": "",
-  "body": " Suppose that we have a thin metal plate and that we are interested in the temperature on this plate. In general the temperature will vary from point to point. If we imagine a coordinate grid on the plate then points on the plate can be identified by their coordinates . Thus will depend on two independent variables, and . Thus we would write and say that is a function of two variables.  "
-},
-{
-  "id": "Functions-of-Two-Variables-5",
-  "level": "2",
-  "url": "Calculus_3.html#Functions-of-Two-Variables-5",
-  "type": "Example",
-  "number": "3.2",
-  "title": "",
-  "body": " Many of the formulas you've come across in school are actually functions of several variables, such as:   The kinetic energy of an object of mass and velocity is given by the two-variable function     The value of a investment compounded continuously at an annual rate of after years is given by the two-variable function     The magnitude of the gravitational attraction between two objects of masses and , separated by a distance of , is given by the three variable function where is the universal gravitational constant .     "
-},
-{
-  "id": "Functions-of-Two-Variables-7",
-  "level": "2",
-  "url": "Calculus_3.html#Functions-of-Two-Variables-7",
-  "type": "Definition",
-  "number": "3.3",
-  "title": "",
-  "body": " A (real valued) function of two variables is a rule that assigns to each ordered pair of real numbers in a set a unique (real) number denoted by . "
-},
-{
-  "id": "Functions-of-Two-Variables-9",
-  "level": "2",
-  "url": "Calculus_3.html#Functions-of-Two-Variables-9",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "domain range "
-},
-{
-  "id": "Functions-of-Two-Variables-10",
-  "level": "2",
-  "url": "Calculus_3.html#Functions-of-Two-Variables-10",
-  "type": "Example",
-  "number": "3.4",
-  "title": "",
-  "body": " Consider the function .   Find the domain of  Find:                (to 4.d.p.).  is not defined.       Since the argument of the log function has to be positive, the domain is the set of points in the plane satisfying . shows a plot of this domain in .        (to 4.d.p.).  Since is not in the domain of , is not defined.    "
-},
-{
-  "id": "fig-domain1",
-  "level": "2",
-  "url": "Calculus_3.html#fig-domain1",
-  "type": "Figure",
-  "number": "3.5",
-  "title": "",
-  "body": " Domain of the function   A plot of the domain of the function .   "
-},
-{
-  "id": "Functions-of-Two-Variables-12",
-  "level": "2",
-  "url": "Calculus_3.html#Functions-of-Two-Variables-12",
-  "type": "Example",
-  "number": "3.6",
-  "title": "",
-  "body": " Consider the function    Find the domain of  Find:                      Since we can calculate for all values of and the domain of is           "
-},
-{
-  "id": "graphs-6",
-  "level": "2",
-  "url": "Calculus_3.html#graphs-6",
-  "type": "Example",
-  "number": "3.7",
-  "title": "",
-  "body": " Produce the graph of the function      This surface is an example of a paraboloid . It is used for satellite antennas.   "
-},
-{
-  "id": "graphs-7",
-  "level": "2",
-  "url": "Calculus_3.html#graphs-7",
-  "type": "Example",
-  "number": "3.8",
-  "title": "",
-  "body": " Produce the graph of the function      This surface is an example of a hyperbolic paraboloid .   "
-},
-{
-  "id": "graphs-8",
-  "level": "2",
-  "url": "Calculus_3.html#graphs-8",
-  "type": "Example",
-  "number": "3.9",
-  "title": "",
-  "body": " Produce the graph of the function       3D plot of      "
-},
-{
-  "id": "Example-6-Calc-3",
-  "level": "2",
-  "url": "Calculus_3.html#Example-6-Calc-3",
-  "type": "Example",
-  "number": "3.11",
-  "title": "",
-  "body": " Produce the graph of the function       3D plot of      "
-},
-{
-  "id": "graphs-11",
-  "level": "2",
-  "url": "Calculus_3.html#graphs-11",
-  "type": "Example",
-  "number": "3.13",
-  "title": "",
-  "body": " The surface associated with the equation is a sphere of radius and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when , could be either or .  3D plot of     "
-},
-{
-  "id": "graphs-12-2",
-  "level": "2",
-  "url": "Calculus_3.html#graphs-12-2",
-  "type": "Exercise",
-  "number": "3.2.1",
-  "title": "",
-  "body": " Determine the domain of the function .  "
-},
-{
-  "id": "graphs-12-3",
-  "level": "2",
-  "url": "Calculus_3.html#graphs-12-3",
-  "type": "Exercise",
-  "number": "3.2.2",
-  "title": "",
-  "body": " Sketch the graph of the following functions.      "
-},
-{
-  "id": "level-curves-2",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "contour plot "
-},
-{
-  "id": "level-curves-3",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-3",
-  "type": "Definition",
-  "number": "3.16",
-  "title": "",
-  "body": "The level curves of a function are curves in the -plane on which the function has the same value, i.e. on which , where is some constant. "
-},
-{
-  "id": "level-curves-5",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-5",
-  "type": "Example",
-  "number": "3.17",
-  "title": "",
-  "body": " Draw the level curves associated with for the function    The level curves of a function satisfy the equation . So for this function the level curves are: Thus the level curves are rectangular hyperbolae (except for ). The level curves for are shown in following diagram.  Rectangular hyperbolae for various values of      "
-},
-{
-  "id": "level-curves-6",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-6",
-  "type": "Example",
-  "number": "3.19",
-  "title": "",
-  "body": " Draw a contour plot for the function .   The contours (i.e. level curves) of a function satisfy the equation . So for this function the level curves are: that is, circles centred on the origin and whose radius is .  Circles for various values of   Notice that there are no level curves when . This tells us that the surface does not go below the -plane.   "
-},
-{
-  "id": "level-curves-7",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-7",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "heat map "
-},
-{
-  "id": "level-curves-8-2",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-8-2",
-  "type": "Exercise",
-  "number": "3.3.1",
-  "title": "",
-  "body": " Draw the level curves associated with for the function .  "
-},
-{
-  "id": "level-curves-8-3",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-8-3",
-  "type": "Exercise",
-  "number": "3.3.2",
-  "title": "",
-  "body": " Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:     "
-},
-{
-  "id": "level-curves-8-4",
-  "level": "2",
-  "url": "Calculus_3.html#level-curves-8-4",
-  "type": "Exercise",
-  "number": "3.3.3",
-  "title": "",
-  "body": " Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:     "
-},
-{
-  "id": "surfaces-of-revolution-2",
-  "level": "2",
-  "url": "Calculus_3.html#surfaces-of-revolution-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "surface of revolution "
-},
-{
-  "id": "surfaces-of-revolution-7",
-  "level": "2",
-  "url": "Calculus_3.html#surfaces-of-revolution-7",
-  "type": "Example",
-  "number": "3.24",
-  "title": "",
-  "body": " Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.   Plot of in the -plane for .       "
-},
-{
-  "id": "surfaces-of-revolution-8",
-  "level": "2",
-  "url": "Calculus_3.html#surfaces-of-revolution-8",
-  "type": "Example",
-  "number": "3.26",
-  "title": "",
-  "body": " Determine the equation of the surface obtained by rotating the curve in the -plane about the -axis.         The equation of the surface of revolution will be that is,    "
-},
-{
-  "id": "surfaces-of-revolution-9",
-  "level": "2",
-  "url": "Calculus_3.html#surfaces-of-revolution-9",
-  "type": "Example",
-  "number": "3.28",
-  "title": "",
-  "body": " Is the graph of a surface of revolution?   Since we can write the function as this surface can be obtained by rotating the curve in the -plane    "
-},
-{
-  "id": "surfaces-of-revolution-10-2",
-  "level": "2",
-  "url": "Calculus_3.html#surfaces-of-revolution-10-2",
-  "type": "Exercise",
-  "number": "3.4.1",
-  "title": "",
-  "body": " Determine the equation of the surface obtained by rotating the curve about the -axis. Make a sketch of the surface.  "
-},
-{
-  "id": "surfaces-of-revolution-10-3",
-  "level": "2",
-  "url": "Calculus_3.html#surfaces-of-revolution-10-3",
-  "type": "Exercise",
-  "number": "3.4.2",
-  "title": "",
-  "body": " Is the graph of a surface of revolution?  "
-},
-{
-  "id": "functions-of-3-or-more-variables-3",
-  "level": "2",
-  "url": "Calculus_3.html#functions-of-3-or-more-variables-3",
-  "type": "Example",
-  "number": "3.29",
-  "title": "",
-  "body": " The function is a function of the form .  "
-},
-{
-  "id": "functions-of-3-or-more-variables-4",
-  "level": "2",
-  "url": "Calculus_3.html#functions-of-3-or-more-variables-4",
-  "type": "Example",
-  "number": "3.30",
-  "title": "",
-  "body": " The function is a function of the form .  "
-},
-{
-  "id": "functions-of-3-or-more-variables-5",
-  "level": "2",
-  "url": "Calculus_3.html#functions-of-3-or-more-variables-5",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "level surfaces "
-},
-{
-  "id": "functions-of-3-or-more-variables-6",
-  "level": "2",
-  "url": "Calculus_3.html#functions-of-3-or-more-variables-6",
-  "type": "Example",
-  "number": "3.31",
-  "title": "",
-  "body": " The following SageMath cell displays three level surfaces of the function for    "
-},
-{
-  "id": "Calculus_4",
-  "level": "1",
-  "url": "Calculus_4.html",
-  "type": "Chapter",
-  "number": "4",
-  "title": "CA4: Partial Differentiation",
-  "body": "    CA4: Partial Differentiation            Partial Differentiation  Firstly, let’s recall some of the important things that we know about the derivative of the function of one variable, .   At any given point , gives the slope of the tangent to the graph of the function at that point.  Plot of (blue) and the tangent line (red) at .     At any given point , gives the instantaneous rate of change of the function at that point.  The derivative is itself a function of one variable, when it exists.   For a function of two variables, , the rate at which the function is changing at any point as we vary the independent variables depends upon the direction in which we vary those variables.    Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .     As a first step to analyzing more formally how a function of two variables can change with respect to its independent variables we will first consider the cases where we vary only one variable at a time.    Consider the function at the point .  Firstly, let’s look at the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .   3D plot of with a plane constant in through the point .    Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .  Now consider the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .  Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .   3D plot of with a plane constant in through the point .     Consider a function of two variables, for example: . The following plots the graph of , together with the vertical planes defined by (in orange) and (in red), and arrows representing the slope of the surface inside these planes.    The slopes of the surface inside the planes above are given by what is known as the partial derivatives of the function. Where is kept constant (in the orange plane), the slope is given by the partial derivative . Where is kept constant (in the red plane), the slope is given by the partial derivative . Formally, partial derivatives are defined as follows.   Partial Derivative   Consider the function of two variables,  The partial derivative of with respect to at the point is given by the limit (if it exists) .  The partial derivative of with respect to at the point is given by the limit (if it exists) .     Notation  The notation is often used to denote . Similarly, is often used to denote .      Using the definition, calculate the partial derivatives of at the point .    and    Firstly, calculate the partial derivative of with respect to at .   Next, calculate the partial derivative of with respect to at .     If we calculate the partial derivatives of a function at the general point (as opposed to some specific point ) we will obtain (instead of two specific values) two new functions of two variables.     Using the definition, calculate the partial derivatives of .    and    Calculating the partial derivative with respect to :   Now, calculating the partial derivative with respect to :     As can be seen in the above example, to calculate the partial derivative of with respect to at the general point all we have to do is treat as a constant and differentiate with respect to (using all of the familiar rules of differentiation for functions of one variable). Similarly, to calculate the partial derivative of with respect to at the general point treat as a constant and differentiate with respect to .     Find the partial derivatives of the function at the point using the above method.    and    This function can be written as:   Now, thinking of as a constant (so that is also constant) and treating the function as a function of only,   Thus,   Next, think of as a constant (so that is also constant) and treating the function as a function of only,   Thus,     A shorter notation for the partial derivative of with respect to is . Similarly the partial derivative with respect to is written as .    Find and when .    and .    To find , think of as a constant. Thus, .  To find , think of as a constant. So, .      Find and when .    and     To find , think of as a constant. Thus, using the chain rule: .  To find , think of as a constant. Again, using the chain rule:       The equation can be thought of as implicitly defining as a function of and . Find and .    and     To find differentiate both sides of the defining equation with respect to , remembering that is some unknown function of . Also, remember to treat as a constant. Then, using the product rule and the chain rule,   Similarly, differentiating both sides of the defining equation with respect to ,     Partial derivatives can be found for functions of more than two variables.    Find the partial derivatives for the function of three variables .    , and    Write the function as .  To find treat and as constants and think of as a function of only. Thus,   To find treat and as constants and think of as a function of only. Thus,   Finally, to find treat and as constants and think of as a function of only. Thus,      Example Tasks   Find both partial derivatives of the function at the point .    Find and when .    If , find .    Find and when .    In the following contour plot the contours are for evenly spaced values of from at the point to at the point . Find the sign of and at the points , and given the following contour plot for the function . Explain your thinking.              Higher Partial Derivatives  The partial derivatives of the function are themselves functions of two variables. Thus they can be differentiated further, giving the second partial derivatives, the third partial derivatives etc. Common notations for the second partial derivatives include:     Find the second partial derivatives for the function .    , , and     Begin by finding the first partial derivatives. Here .  Now differentiate firstly with respect to to find and then with respect to to find . Thus,   Next differentiate with respect to to find and then with respect to to find . Thus,   Notice that for this function .      Calculate , and when .    , and .    Begin by writing the function in the form .  Then the first partial derivatives are and hence the second partial derivatives are .  Differentiating with respect to , with respect to and with respect to gives .    The above instances have provided examples of the following general result.   Clairaut's Theorem   If for the function both and are continuous on some domain , then on that domain .    Clairaut's Theorem can be extended to higher partial derivatives and to functions of more than two variables.    Calculate all first and second order partial derivatives for the function .    Even though is a function of variables, Clairaut's Theorem still holds. Thus there will be only 6 distinct second partial derivatives, i.e. , , , , , .  Now and so       Example Tasks   Find the second partial derivatives for the function .    Calculate  and for .    Let where is a constant and . Determine if satisfies     A little remark  Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.             SageMath can also be used to compute partial derivatives. For example, the following Sage cell computes the partial derivatives of the function .      "
-},
-{
-  "id": "Fig-Slope_of_tangent",
-  "level": "2",
-  "url": "Calculus_4.html#Fig-Slope_of_tangent",
-  "type": "Figure",
-  "number": "4.1",
-  "title": "",
-  "body": " Plot of (blue) and the tangent line (red) at .   "
-},
-{
-  "id": "Ex-Direction_and_rate_of_change",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-Direction_and_rate_of_change",
-  "type": "Example",
-  "number": "4.2",
-  "title": "",
-  "body": "  Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .    "
-},
-{
-  "id": "Ex-Direction_and_instantaneous_rate_of_change",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-Direction_and_instantaneous_rate_of_change",
-  "type": "Example",
-  "number": "4.4",
-  "title": "",
-  "body": "  Consider the function at the point .  Firstly, let’s look at the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .   3D plot of with a plane constant in through the point .    Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .  Now consider the instantaneous rate of change of in the direction of the positive -axis. As shown in the diagram below, if we hold constant at and vary we are actually moving along the curve .  Along this curve and at we have . Thus, the instantaneous rate of change of in the direction of the positive -axis at the point is .   3D plot of with a plane constant in through the point .    "
-},
-{
-  "id": "Sec-Partial_Differentiation-10",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-10",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "partial derivatives "
-},
-{
-  "id": "Sec-Partial_Differentiation-11",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-11",
-  "type": "Definition",
-  "number": "4.7",
-  "title": "Partial Derivative.",
-  "body": " Partial Derivative   Consider the function of two variables,  The partial derivative of with respect to at the point is given by the limit (if it exists) .  The partial derivative of with respect to at the point is given by the limit (if it exists) .   "
-},
-{
-  "id": "Sec-Partial_Differentiation-12",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-12",
-  "type": "Remark",
-  "number": "4.8",
-  "title": "Notation.",
-  "body": " Notation  The notation is often used to denote . Similarly, is often used to denote .  "
-},
-{
-  "id": "Ex-Calculating_partial_derivatives_at_particular_point",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-Calculating_partial_derivatives_at_particular_point",
-  "type": "Example",
-  "number": "4.9",
-  "title": "",
-  "body": "   Using the definition, calculate the partial derivatives of at the point .    and    Firstly, calculate the partial derivative of with respect to at .   Next, calculate the partial derivative of with respect to at .    "
-},
-{
-  "id": "Ex-Calculating_partial_derivatives_at_general_point",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-Calculating_partial_derivatives_at_general_point",
-  "type": "Example",
-  "number": "4.10",
-  "title": "",
-  "body": "   Using the definition, calculate the partial derivatives of .    and    Calculating the partial derivative with respect to :   Now, calculating the partial derivative with respect to :    "
-},
-{
-  "id": "Ex-Calculating_partial_derivatives_at_particular_point_shorter",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-Calculating_partial_derivatives_at_particular_point_shorter",
-  "type": "Example",
-  "number": "4.11",
-  "title": "",
-  "body": "   Find the partial derivatives of the function at the point using the above method.    and    This function can be written as:   Now, thinking of as a constant (so that is also constant) and treating the function as a function of only,   Thus,   Next, think of as a constant (so that is also constant) and treating the function as a function of only,   Thus,    "
-},
-{
-  "id": "Ex-shorthand_computation_example-1",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-shorthand_computation_example-1",
-  "type": "Example",
-  "number": "4.12",
-  "title": "",
-  "body": "  Find and when .    and .    To find , think of as a constant. Thus, .  To find , think of as a constant. So, .   "
-},
-{
-  "id": "Ex-shorthand_computation_example_arcsin",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-shorthand_computation_example_arcsin",
-  "type": "Example",
-  "number": "4.13",
-  "title": "",
-  "body": "  Find and when .    and     To find , think of as a constant. Thus, using the chain rule: .  To find , think of as a constant. Again, using the chain rule:    "
-},
-{
-  "id": "Ex-shorthand_computation_example-3_variables_implicit",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-shorthand_computation_example-3_variables_implicit",
-  "type": "Example",
-  "number": "4.14",
-  "title": "",
-  "body": "  The equation can be thought of as implicitly defining as a function of and . Find and .    and     To find differentiate both sides of the defining equation with respect to , remembering that is some unknown function of . Also, remember to treat as a constant. Then, using the product rule and the chain rule,   Similarly, differentiating both sides of the defining equation with respect to ,    "
-},
-{
-  "id": "Ex-shorthand_computation_example_3_variables",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-shorthand_computation_example_3_variables",
-  "type": "Example",
-  "number": "4.15",
-  "title": "",
-  "body": "  Find the partial derivatives for the function of three variables .    , and    Write the function as .  To find treat and as constants and think of as a function of only. Thus,   To find treat and as constants and think of as a function of only. Thus,   Finally, to find treat and as constants and think of as a function of only. Thus,    "
-},
-{
-  "id": "Sec-Partial_Differentiation-24-2",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-2",
-  "type": "Exercise",
-  "number": "4.1.1",
-  "title": "",
-  "body": " Find both partial derivatives of the function at the point .  "
-},
-{
-  "id": "Sec-Partial_Differentiation-24-3",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-3",
-  "type": "Exercise",
-  "number": "4.1.2",
-  "title": "",
-  "body": " Find and when .  "
-},
-{
-  "id": "Sec-Partial_Differentiation-24-4",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-4",
-  "type": "Exercise",
-  "number": "4.1.3",
-  "title": "",
-  "body": " If , find .  "
-},
-{
-  "id": "Sec-Partial_Differentiation-24-5",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-5",
-  "type": "Exercise",
-  "number": "4.1.4",
-  "title": "",
-  "body": " Find and when .  "
-},
-{
-  "id": "Sec-Partial_Differentiation-24-6",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Partial_Differentiation-24-6",
-  "type": "Exercise",
-  "number": "4.1.5",
-  "title": "",
-  "body": " In the following contour plot the contours are for evenly spaced values of from at the point to at the point . Find the sign of and at the points , and given the following contour plot for the function . Explain your thinking.      "
-},
-{
-  "id": "Ex-second_partial_derivatives",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-second_partial_derivatives",
-  "type": "Example",
-  "number": "4.17",
-  "title": "",
-  "body": "  Find the second partial derivatives for the function .    , , and     Begin by finding the first partial derivatives. Here .  Now differentiate firstly with respect to to find and then with respect to to find . Thus,   Next differentiate with respect to to find and then with respect to to find . Thus,   Notice that for this function .   "
-},
-{
-  "id": "Ex-third_partial_derivatives",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-third_partial_derivatives",
-  "type": "Example",
-  "number": "4.18",
-  "title": "",
-  "body": "  Calculate , and when .    , and .    Begin by writing the function in the form .  Then the first partial derivatives are and hence the second partial derivatives are .  Differentiating with respect to , with respect to and with respect to gives .   "
-},
-{
-  "id": "Sec-Higher_Partial_Derivatives-7",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-7",
-  "type": "Theorem",
-  "number": "4.19",
-  "title": "Clairaut’s Theorem.",
-  "body": " Clairaut's Theorem   If for the function both and are continuous on some domain , then on that domain .   "
-},
-{
-  "id": "Ex-first_and_second_partials_of_3_variable_function",
-  "level": "2",
-  "url": "Calculus_4.html#Ex-first_and_second_partials_of_3_variable_function",
-  "type": "Example",
-  "number": "4.20",
-  "title": "",
-  "body": "  Calculate all first and second order partial derivatives for the function .    Even though is a function of variables, Clairaut's Theorem still holds. Thus there will be only 6 distinct second partial derivatives, i.e. , , , , , .  Now and so     "
-},
-{
-  "id": "Sec-Higher_Partial_Derivatives-10-2",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-10-2",
-  "type": "Exercise",
-  "number": "4.2.1",
-  "title": "",
-  "body": " Find the second partial derivatives for the function .  "
-},
-{
-  "id": "Sec-Higher_Partial_Derivatives-10-3",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-10-3",
-  "type": "Exercise",
-  "number": "4.2.2",
-  "title": "",
-  "body": " Calculate  and for .  "
-},
-{
-  "id": "Sec-Higher_Partial_Derivatives-10-4",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-10-4",
-  "type": "Exercise",
-  "number": "4.2.3",
-  "title": "",
-  "body": " Let where is a constant and . Determine if satisfies  "
-},
-{
-  "id": "Sec-Higher_Partial_Derivatives-11",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-11",
-  "type": "Remark",
-  "number": "4.21",
-  "title": "A little remark.",
-  "body": " A little remark  Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.           "
-},
-{
-  "id": "Sec-Higher_Partial_Derivatives-12",
-  "level": "2",
-  "url": "Calculus_4.html#Sec-Higher_Partial_Derivatives-12",
-  "type": "Remark",
-  "number": "4.25",
-  "title": "",
-  "body": " SageMath can also be used to compute partial derivatives. For example, the following Sage cell computes the partial derivatives of the function .   "
-},
-{
-  "id": "Chap-Calculus_5",
-  "level": "1",
-  "url": "Chap-Calculus_5.html",
-  "type": "Chapter",
-  "number": "5",
-  "title": "CA5: Linear Approximations",
-  "body": "    CA5: Linear Approximations       In Math1110 we looked at the idea of the linearization of a function of one variable . The idea was that near the point we could approximate the function using the line tangent to the function at . We called this tangent the linearization of the function at and used it to derive the linear approximation formula , . These ideas can also be applied to functions of two variables.        Tangent Planes  Recall that the graph associated with the function is a surface in (that passes the vertical line test). Wherever this surface does not have any discontinuities or cusp-like points it will have a tangent plane. Like the tangent line to the graph of a function of one variable, the tangent plane to the function at the point is the plane that just touches the surface at the point .   For the function the graph below shows the graph of the function and it's tangent plane at the point .   3D plot of and the tangent plane at .     To find the equation of the plane tangent to the function at the point , firstly recall that the equation of a plane in Cartesian form is given by or in normal form, as illustrated in , by where is a normal vector to the plane, is the position vector of a point on the plane and .   Representation of the normal vector to a plane.      Find the equation of the tangent plane to the function at .       Now, we know that the partial derivative gives the slope of the tangent at , to the curve of intersection of the surface associated with and the plane .     Since this tangent line lies in the plane tangent to at the vector will be a vector that is parallel to the tangent plane, (or lies in the tangent plane if we place it’s tail at the point ). Similarly, the vector will be another vector parallel to the tangent plane. Since these two non-parallel vectors are parallel to the tangent plane, their vector product will give a vector normal to the tangent plane, i.e. Thus, using equation , the equation of the plane tangent to at is which simplifies to .    In general, to find the equation of the plane tangent to the function at the point , note that the vectors lie in the tangent plane and hence a normal to the plane is . Since the point lies on the plane, using equation , the equation of the tangent plane is On expanding and rearranging this we get the following result.    The equation of the plane tangent to the function at the point is , where .    The Sage cell below uses the equation of the tangent plane given above to plot the tangent plane to the function at a point .     Find the equation of the plane tangent to at the point .   3D plot of and the tangent plane at .         Firstly, note that when , . Now and . Thus the equation of the tangent plane is which simplifies to .      Find the equation of the line normal to the graph of the function at the point .       Recall that the vector equation of a line in is where is the position vector of a general point, is the position vector of a point that lies on the line and is a direction vector for the line (i.e. a vector that is parallel to the line).  We know that a vector normal to the surface at the point is given by .  For the function , and . Thus a direction vector for the line normal to at the point will be . Since the normal line passes through the point its equation is .     Example Tasks   Find the equation of the tangent plane to at the point .    Find the equation of the tangent plane and normal line to at the point .    Show that every line that is normal to the sphere passes through the origin.          Linear Approximations  In we found that the equation of the tangent plane to the function at the point , which is a linear equation.     We call the function the linearisation of at the point .      Find the linearisation of at the point .       Begin by calculating the partial derivatives of , . Thus . and so the linearisation is .    When we use the linearisation of at the point to approximate the function near the point we call this the linear (or tangent plane) approximation of at the point . Notice that if we let the independent variables change by the amounts and then the linearisation will change from to . Thus we can approximate the change in the function value by On using the linearisation formula given above, we end up with the following result.   The Linear Approximation Formula   The linear approximation to the change, , in the function when the independent variables change from to is .    This result is sometimes called the small change formula for functions of two variables.    For the function , . Use a linear approximation to estimate .       Via a linear approximation . Here and so .  Thus, with and , via the linear approximation formula and hence      A steel ball has a mass, , of 6300   50   and has volume, , 800   10   . Find the density of the ball, including an estimate of the error.    7.875          The density, , is given by . Thus   Using a linear approximation to estimate the error . Now and so at , and with and (to get the maximum value of ) . Thus .      Use a linear approximation to estimate the value of at for surface defined implicitly by .       Firstly notice that when and , . Thus . Now, via a linear approximation where , and , . To find the partial derivatives we need to use implicit differentiation. Differentiating with respect to : .  Thus .  Differentiating with respect to y: .  Thus . Putting this together gives and hence      Example Tasks   Use a linear approximation to find the value of when .    Use a linear approximation to estimate the value of .    A right angled triangle with right angle at is measured with 10   0.02   and 3.4   0.02   . What is the angle at , including the error?    In the figure below a rectangle initially with sides and has been made larger so that the sides are now and .    Shade on the diagram the regions that represent:  The increase in area.  The linear approximation to the increase in area. Explain your answer.           Quadratic Approximations  We have seen previously that for functions of one variable the idea of the linearisation of the function could be extended by considering the Taylor polynomial for the function.    For the function the Maclaurin polynomial of degree is .  We saw that the linearisation of at was the Maclaurin polynomial of degree 1, i.e. .  The Maclaurin polynomial of degree 2, i.e. gives a quadratic approximation to about and so on.    For functions of one variable we derived the Taylor series by trying to find a power series in that matched the function and all its derivatives at . For functions of two variables we can use a similar idea to derive the Taylor series about the point . This series will be a power series in and that matches the function and its partial derivatives at the point . The formula for the Taylor series of two variables is quite lengthy to write and so we will not reproduce it here. However, as with functions of one variable truncations of this series are called Taylor polynomials and the Taylor polynomial of degree 1 is the linearisation of the function. Similarly, the Taylor polynomial of degree 2 will give us a quadratic approximation to the function.   Taylor Polynomial of Degree 2  The Taylor Polynomial of degree 2 for the function of two variables about the point is    The question of how good an approximation this polynomial is goes beyond what we will cover in this course but if has continuous partial derivatives and if is sufficiently close to  then the approximation should be useful.    Find the quadratic approximation to the function about the point .       First calculate the partial derivatives:   Now evaluate these at    Thus, using , we have .      Using both a linear and a quadratic approximation, estimate the difference in the volume between a box with a square base of side length 1 and height 2 and a box with square base of side length 1.1 and height 2.05 .    Via a linear approximation, .  Via a quadratic approximation,    If we let the side length of the base of a box be and the height be then volume of the box is given by the formula .  Thus the difference in the volume between the boxes will be the change in when changes by 0.1 and changes by 0.05. Using the results obtained in the example above, via a linear approximation .  Via a quadratic approximation .     Example Tasks   Find the Taylor polynomial of degree 2 for about .    Find the Taylor polynomial of degree 2 for about .    If , use a linear approximation and a quadratic approximation to find the value of the dependent variable z and an associated error bound when .      "
-},
-{
-  "id": "Ex-Tangent_Plane",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Tangent_Plane",
-  "type": "Example",
-  "number": "5.1",
-  "title": "",
-  "body": " For the function the graph below shows the graph of the function and it's tangent plane at the point .   3D plot of and the tangent plane at .    "
-},
-{
-  "id": "Fig-Tangent_Plane_Vector_Form_Figure",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Fig-Tangent_Plane_Vector_Form_Figure",
-  "type": "Figure",
-  "number": "5.3",
-  "title": "",
-  "body": " Representation of the normal vector to a plane.   "
-},
-{
-  "id": "Ex-Equation_of_Tangent_Plane",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Equation_of_Tangent_Plane",
-  "type": "Example",
-  "number": "5.4",
-  "title": "",
-  "body": "  Find the equation of the tangent plane to the function at .       Now, we know that the partial derivative gives the slope of the tangent at , to the curve of intersection of the surface associated with and the plane .     Since this tangent line lies in the plane tangent to at the vector will be a vector that is parallel to the tangent plane, (or lies in the tangent plane if we place it’s tail at the point ). Similarly, the vector will be another vector parallel to the tangent plane. Since these two non-parallel vectors are parallel to the tangent plane, their vector product will give a vector normal to the tangent plane, i.e. Thus, using equation , the equation of the plane tangent to at is which simplifies to .   "
-},
-{
-  "id": "Thm-Equation-of-tangent-plane",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Thm-Equation-of-tangent-plane",
-  "type": "Theorem",
-  "number": "5.6",
-  "title": "",
-  "body": "  The equation of the plane tangent to the function at the point is , where .   "
-},
-{
-  "id": "Ex-Equation_of_Tangent_Plane_2",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Equation_of_Tangent_Plane_2",
-  "type": "Example",
-  "number": "5.7",
-  "title": "",
-  "body": "  Find the equation of the plane tangent to at the point .   3D plot of and the tangent plane at .         Firstly, note that when , . Now and . Thus the equation of the tangent plane is which simplifies to .   "
-},
-{
-  "id": "Ex-Equation_of_Normal_Line",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Equation_of_Normal_Line",
-  "type": "Example",
-  "number": "5.9",
-  "title": "",
-  "body": "  Find the equation of the line normal to the graph of the function at the point .       Recall that the vector equation of a line in is where is the position vector of a general point, is the position vector of a point that lies on the line and is a direction vector for the line (i.e. a vector that is parallel to the line).  We know that a vector normal to the surface at the point is given by .  For the function , and . Thus a direction vector for the line normal to at the point will be . Since the normal line passes through the point its equation is .   "
-},
-{
-  "id": "Sec-Tangent_Planes-13-2",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Tangent_Planes-13-2",
-  "type": "Exercise",
-  "number": "5.1.1",
-  "title": "",
-  "body": " Find the equation of the tangent plane to at the point .  "
-},
-{
-  "id": "Sec-Tangent_Planes-13-3",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Tangent_Planes-13-3",
-  "type": "Exercise",
-  "number": "5.1.2",
-  "title": "",
-  "body": " Find the equation of the tangent plane and normal line to at the point .  "
-},
-{
-  "id": "Sec-Tangent_Planes-13-4",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Tangent_Planes-13-4",
-  "type": "Exercise",
-  "number": "5.1.3",
-  "title": "",
-  "body": " Show that every line that is normal to the sphere passes through the origin.  "
-},
-{
-  "id": "Sec-Linear_Approximations-3",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-3",
-  "type": "Definition",
-  "number": "5.10",
-  "title": "",
-  "body": "   We call the function the linearisation of at the point .   "
-},
-{
-  "id": "Ex-Linearisation",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Linearisation",
-  "type": "Example",
-  "number": "5.11",
-  "title": "",
-  "body": "  Find the linearisation of at the point .       Begin by calculating the partial derivatives of , . Thus . and so the linearisation is .   "
-},
-{
-  "id": "Sec-Linear_Approximations-6",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-6",
-  "type": "Definition",
-  "number": "5.12",
-  "title": "The Linear Approximation Formula.",
-  "body": " The Linear Approximation Formula   The linear approximation to the change, , in the function when the independent variables change from to is .   "
-},
-{
-  "id": "Ex-Linear-Estimation",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Linear-Estimation",
-  "type": "Example",
-  "number": "5.13",
-  "title": "",
-  "body": "  For the function , . Use a linear approximation to estimate .       Via a linear approximation . Here and so .  Thus, with and , via the linear approximation formula and hence   "
-},
-{
-  "id": "Ex-Find_Density_of_Steel_Ball",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Find_Density_of_Steel_Ball",
-  "type": "Example",
-  "number": "5.14",
-  "title": "",
-  "body": "  A steel ball has a mass, , of 6300   50   and has volume, , 800   10   . Find the density of the ball, including an estimate of the error.    7.875          The density, , is given by . Thus   Using a linear approximation to estimate the error . Now and so at , and with and (to get the maximum value of ) . Thus .   "
-},
-{
-  "id": "Ex-Linear-Estimation_Implicit",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Linear-Estimation_Implicit",
-  "type": "Example",
-  "number": "5.15",
-  "title": "",
-  "body": "  Use a linear approximation to estimate the value of at for surface defined implicitly by .       Firstly notice that when and , . Thus . Now, via a linear approximation where , and , . To find the partial derivatives we need to use implicit differentiation. Differentiating with respect to : .  Thus .  Differentiating with respect to y: .  Thus . Putting this together gives and hence    "
-},
-{
-  "id": "Sec-Linear_Approximations-11-2",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-2",
-  "type": "Exercise",
-  "number": "5.2.1",
-  "title": "",
-  "body": " Use a linear approximation to find the value of when .  "
-},
-{
-  "id": "Sec-Linear_Approximations-11-3",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-3",
-  "type": "Exercise",
-  "number": "5.2.2",
-  "title": "",
-  "body": " Use a linear approximation to estimate the value of .  "
-},
-{
-  "id": "Sec-Linear_Approximations-11-4",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-4",
-  "type": "Exercise",
-  "number": "5.2.3",
-  "title": "",
-  "body": " A right angled triangle with right angle at is measured with 10   0.02   and 3.4   0.02   . What is the angle at , including the error?  "
-},
-{
-  "id": "Sec-Linear_Approximations-11-5",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Sec-Linear_Approximations-11-5",
-  "type": "Exercise",
-  "number": "5.2.4",
-  "title": "",
-  "body": " In the figure below a rectangle initially with sides and has been made larger so that the sides are now and .    Shade on the diagram the regions that represent:  The increase in area.  The linear approximation to the increase in area. Explain your answer.   "
-},
-{
-  "id": "Ex-Exp_Function_Maclaurin_polynomial_of_degree_2",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Exp_Function_Maclaurin_polynomial_of_degree_2",
-  "type": "Example",
-  "number": "5.17",
-  "title": "",
-  "body": "  For the function the Maclaurin polynomial of degree is .  We saw that the linearisation of at was the Maclaurin polynomial of degree 1, i.e. .  The Maclaurin polynomial of degree 2, i.e. gives a quadratic approximation to about and so on.   "
-},
-{
-  "id": "Quadratic-Approximations-5",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Quadratic-Approximations-5",
-  "type": "Definition",
-  "number": "5.18",
-  "title": "Taylor Polynomial of Degree 2.",
-  "body": " Taylor Polynomial of Degree 2  The Taylor Polynomial of degree 2 for the function of two variables about the point is   "
-},
-{
-  "id": "Ex-Find_quadratic_approx",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Find_quadratic_approx",
-  "type": "Example",
-  "number": "5.19",
-  "title": "",
-  "body": "  Find the quadratic approximation to the function about the point .       First calculate the partial derivatives:   Now evaluate these at    Thus, using , we have .   "
-},
-{
-  "id": "Ex-Linear_and_quad_approx",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Ex-Linear_and_quad_approx",
-  "type": "Example",
-  "number": "5.20",
-  "title": "",
-  "body": "  Using both a linear and a quadratic approximation, estimate the difference in the volume between a box with a square base of side length 1 and height 2 and a box with square base of side length 1.1 and height 2.05 .    Via a linear approximation, .  Via a quadratic approximation,    If we let the side length of the base of a box be and the height be then volume of the box is given by the formula .  Thus the difference in the volume between the boxes will be the change in when changes by 0.1 and changes by 0.05. Using the results obtained in the example above, via a linear approximation .  Via a quadratic approximation .   "
-},
-{
-  "id": "Quadratic-Approximations-9-2",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Quadratic-Approximations-9-2",
-  "type": "Exercise",
-  "number": "5.3.1",
-  "title": "",
-  "body": " Find the Taylor polynomial of degree 2 for about .  "
-},
-{
-  "id": "Quadratic-Approximations-9-3",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Quadratic-Approximations-9-3",
-  "type": "Exercise",
-  "number": "5.3.2",
-  "title": "",
-  "body": " Find the Taylor polynomial of degree 2 for about .  "
-},
-{
-  "id": "Quadratic-Approximations-9-4",
-  "level": "2",
-  "url": "Chap-Calculus_5.html#Quadratic-Approximations-9-4",
-  "type": "Exercise",
-  "number": "5.3.3",
-  "title": "",
-  "body": " If , use a linear approximation and a quadratic approximation to find the value of the dependent variable z and an associated error bound when .  "
-},
-{
-  "id": "Calculus_6",
-  "level": "1",
-  "url": "Calculus_6.html",
-  "type": "Chapter",
-  "number": "6",
-  "title": "CA6: The Directional Derivative",
-  "body": "    CA6: The Directional Derivative       We have noted previously that the instantaneous rate of change of a function at the point will depend on the direction in which the independent variables are changing.    Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .     In the case that the direction is parallel to the positive x-axis we already know that the slope is given by the partial derivative and in the case that the direction is parallel to the positive -axis the slope is given by . In this section we will look at the problem of finding the slope of the function if we move away from the point in any direction.        Directional Derivatives  Firstly, note that vectors are a convenient way to specify directions in the -plane. For example, we could say the slope of the function in the direction of the vector is while in the direction of the vector it is . Thus the problem we are looking at is that of finding the slope of the function at the point in the direction given by some vector . Mathematically, we would say that we are trying to find the directional derivative of the function at the point in the direction . The notation that we use to denote this directional derivative is .  One way to approach the problem of finding the directional derivative is to use the tangent plane to the function at the point , i.e. .  Then the slope of the function in the direction of is the slope of in that direction. If is a unit vector in the direction of then the required slope is the amount by which the value of changes as the independent variables change from to , i.e.     Consider the function . shows the graph of this function along with its the tangent plane at . Also shown on the diagram are the vectors and drawn in the -plane with their tails at the point . Then the directional derivative will be the slope of the line joining the points and while the directional derivative will be the slope of the line joining the points and .   3D plot of and the tangent plane at .      The below Sage cell computes the tangent plane to the surface at the point (shown in red). This surface is a level surface of the function . The gradient vector is then a normal vector for the surface. Since we have a point on the surface, we can then determine an equation for the tangent surface:      The below Sage cell computes the tangent plane to a \"rugby ball\" at the point and the corresponding normal vector to the surface at this point (shown in red).    To summarise:   Directional Derivative  The directional derivative of the differentiable function at the point in the direction of the unit vector is given by .       Find the directional derivative of at in the direction .    .    For the given function . Thus . Now the unit vector in the direction of is . Thus the required directional derivative is .       Find the directional derivative of in the direction of the angle (from the positive -axis) .       For the given function . Now, the unit vector in the direction of the angle is . Thus the required directional derivative is     Note that the directional derivative can be expressed in the terms of the scalar product if we use the following definition.   Gradient Vector  The vector is called the gradient vector of at .    With this definition the directional derivative can be written as:    The Sage cell below computes the gradient vector (shown by the orange arrow) at some location for the function The gradient vector points in the direction of steepest ascent on the surface . The unit vector in the direction of some angle is shown by the red arrow. (Note that when the angle is zero, the unit vector is parallel to the gradient vector.) The tangent line to the surface is plotted in green. The gradient of that tangent line is the directional derivative.       Find the gradient vector for the function . Hence find and the directional derivative in the direction of the origin.      .    For the given function , and so the gradient vector is . Thus . Now, the unit vector in the direction of the origin from the point is . Thus the required directional derivative is .     The gradient vector has some interesting facts associated with it. Note that in the following remarks, we are assuming that .   points in the direction in which the directional derivative takes on its largest value. To see this, note that At a given point is fixed and so the largest value of will occur when , i.e. when or put another way, when is parallel to . We can also see from this that the largest value that the directional derivative can take is .  Similarly, the directional derivative takes on its smallest value in the direction of and has value .     For the function , the level curve passing through the point is given by       is orthogonal (i.e. at right angles) to the level curve passing through . To see this, run the Sage cell below, which plots the level curves of the function and the corresponding gradient vectors in red.     As shown in , a vector parallel to the tangent to this curve at the point will be .   Plot of (blue) and the tangent vector (red) at the point .    Thus a vector normal to the curve at the point will be . We will see subsequently, via implicit differentiation, that for the curve , and so a vector normal to the curve at the point will be , which is parallel to .  Notice that since is orthogonal to the level curve passing through the point and that is the direction in which the directional derivative takes on its largest value, the path of steepest ascent on any surface is always at right angles to its contours. To see this, run the Sage cell below. This generates a 2D contour plot of . The unit vector starting at some point and pointing in the direction of some angle is shown by the red arrow. The gradient vector at the point is shown in orange.      For the function find the directions in which the directional derivative at the point is maximised, minimised and .    Maximised in the direction ; minimised in the direction ; and when    For the given function , and so . Thus the directional derivative, , will be maximised in the direction and minimised in the direction . Finally will be when i.e. when or some scalar multiple of this.      For the function find the level curve, the tangent line and the gradient vector at the point .    The level curve is .  The tangent line is .  The gradient vector is    Since the level curve through the point is or . We can find the equation of the tangent by standard calculus to obtain . Next, the gradient vector is . As can be seen in the diagram below, the gradient vector is orthogonal to the level curve.          Suppose you are climbing a hill whose shape is given by the equation and you are standing at the point with coordinates .  In which direction should you proceed initially in order to be ascending most rapidly?  If you climb in that direction, at what angle to the horizontal will you be climbing initially?       Head in the direction of .  The angle to the horizontal will be .      Since we want to travel on the path of steepest ascent we will want to head in the direction of . Now and hence .  In this direction we know that . Thus the angle, , to the horizontal will be .      Example Tasks   Find the directional derivative for at the point in the direction of the point .    Find the maximum value of the rate of change of at .    For the curve use the gradient vector of a two variable function to find the tangent line and the normal line at the point .    For the following contour plot for some unspecified function of two variables estimate the sign of the directional derivatives at:       The point and in the direction of .  The point and in the direction of .  The point and in the direction of the origin.  The point and in the direction of the origin.          In Three Variables  The concepts of the directional derivative and the gradient vector extend to functions of more than two variables. In this section we will look at some examples for functions of three variables.    Find the rate of change of the function at the point in the direction .    .    The gradient vector for the given function is . Thus and so the required directional derivative is .      The temperature at the point is given by the function .  Find the rate of change of temperature at the point in the direction where .  In which direction does the temperature increase the fastest at ?  Find the maximum rate of increase at .       .  .  .     The gradient vector for the given function is . Thus .   Since , the required rate of change is given by the directional derivative .  The direction in which the temperature increase the fastest at is .  The maximum rate of increase at is the maximum value of which is .       Find the equation of the tangent plane to the level surface of at the point .    .    Since , the level surface for this function satisfies the equation . A normal to this surface at the point , and hence to the tangent plane at this point, is given by . Now, , and so . Thus the equation of the tangent plane is which simplifies to .     Example Tasks   Find the directional derivative of at in the direction .    By thinking of level surfaces to a function of variables show that the normal lines to a sphere pass through its centre.      "
-},
-{
-  "id": "Ex-Direction_and_rate_of_change_Copy",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Direction_and_rate_of_change_Copy",
-  "type": "Example",
-  "number": "6.1",
-  "title": "",
-  "body": "  Consider the function . The graph of this function is shown below. At , . As we can see by looking at the graph, as we move away from the origin along the positive -axis the value of is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive -axis the value of is decreasing, i.e. the rate of change of the function will be negative.   3D plot of .    "
-},
-{
-  "id": "Ex-Directional_Derivative",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Directional_Derivative",
-  "type": "Example",
-  "number": "6.3",
-  "title": "",
-  "body": "  Consider the function . shows the graph of this function along with its the tangent plane at . Also shown on the diagram are the vectors and drawn in the -plane with their tails at the point . Then the directional derivative will be the slope of the line joining the points and while the directional derivative will be the slope of the line joining the points and .   3D plot of and the tangent plane at .    "
-},
-{
-  "id": "Directional-Derivatives-7",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-7",
-  "type": "Example",
-  "number": "6.5",
-  "title": "",
-  "body": " The below Sage cell computes the tangent plane to the surface at the point (shown in red). This surface is a level surface of the function . The gradient vector is then a normal vector for the surface. Since we have a point on the surface, we can then determine an equation for the tangent surface:    "
-},
-{
-  "id": "Directional-Derivatives-8",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-8",
-  "type": "Example",
-  "number": "6.6",
-  "title": "",
-  "body": " The below Sage cell computes the tangent plane to a \"rugby ball\" at the point and the corresponding normal vector to the surface at this point (shown in red).   "
-},
-{
-  "id": "Directional-Derivatives-10",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-10",
-  "type": "Definition",
-  "number": "6.7",
-  "title": "Directional Derivative.",
-  "body": " Directional Derivative  The directional derivative of the differentiable function at the point in the direction of the unit vector is given by .   "
-},
-{
-  "id": "Ex-Find_Directional_Derivative",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Find_Directional_Derivative",
-  "type": "Example",
-  "number": "6.8",
-  "title": "",
-  "body": "   Find the directional derivative of at in the direction .    .    For the given function . Thus . Now the unit vector in the direction of is . Thus the required directional derivative is .   "
-},
-{
-  "id": "Ex-Find_Directional_Derivative_2",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Find_Directional_Derivative_2",
-  "type": "Example",
-  "number": "6.9",
-  "title": "",
-  "body": "   Find the directional derivative of in the direction of the angle (from the positive -axis) .       For the given function . Now, the unit vector in the direction of the angle is . Thus the required directional derivative is    "
-},
-{
-  "id": "Directional-Derivatives-14",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-14",
-  "type": "Definition",
-  "number": "6.10",
-  "title": "Gradient Vector.",
-  "body": " Gradient Vector  The vector is called the gradient vector of at .   "
-},
-{
-  "id": "Directional-Derivatives-16",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-16",
-  "type": "Example",
-  "number": "6.11",
-  "title": "",
-  "body": " The Sage cell below computes the gradient vector (shown by the orange arrow) at some location for the function The gradient vector points in the direction of steepest ascent on the surface . The unit vector in the direction of some angle is shown by the red arrow. (Note that when the angle is zero, the unit vector is parallel to the gradient vector.) The tangent line to the surface is plotted in green. The gradient of that tangent line is the directional derivative.   "
-},
-{
-  "id": "Ex-Find_Gradient_Vector",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Find_Gradient_Vector",
-  "type": "Example",
-  "number": "6.12",
-  "title": "",
-  "body": "   Find the gradient vector for the function . Hence find and the directional derivative in the direction of the origin.      .    For the given function , and so the gradient vector is . Thus . Now, the unit vector in the direction of the origin from the point is . Thus the required directional derivative is .   "
-},
-{
-  "id": "Directional-Derivatives-19",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-19",
-  "type": "Remark",
-  "number": "6.13",
-  "title": "",
-  "body": " points in the direction in which the directional derivative takes on its largest value. To see this, note that At a given point is fixed and so the largest value of will occur when , i.e. when or put another way, when is parallel to . We can also see from this that the largest value that the directional derivative can take is .  Similarly, the directional derivative takes on its smallest value in the direction of and has value .  "
-},
-{
-  "id": "def-level_curves",
-  "level": "2",
-  "url": "Calculus_6.html#def-level_curves",
-  "type": "Definition",
-  "number": "6.14",
-  "title": "",
-  "body": "  For the function , the level curve passing through the point is given by    "
-},
-{
-  "id": "Directional-Derivatives-21",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-21",
-  "type": "Remark",
-  "number": "6.15",
-  "title": "",
-  "body": "  is orthogonal (i.e. at right angles) to the level curve passing through . To see this, run the Sage cell below, which plots the level curves of the function and the corresponding gradient vectors in red.   "
-},
-{
-  "id": "Directional-Derivatives-22",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-22",
-  "type": "Remark",
-  "number": "6.16",
-  "title": "",
-  "body": " As shown in , a vector parallel to the tangent to this curve at the point will be .   Plot of (blue) and the tangent vector (red) at the point .    Thus a vector normal to the curve at the point will be . We will see subsequently, via implicit differentiation, that for the curve , and so a vector normal to the curve at the point will be , which is parallel to .  Notice that since is orthogonal to the level curve passing through the point and that is the direction in which the directional derivative takes on its largest value, the path of steepest ascent on any surface is always at right angles to its contours. To see this, run the Sage cell below. This generates a 2D contour plot of . The unit vector starting at some point and pointing in the direction of some angle is shown by the red arrow. The gradient vector at the point is shown in orange.   "
-},
-{
-  "id": "Ex-Find_Max_Min_Directional_Derivative",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Find_Max_Min_Directional_Derivative",
-  "type": "Example",
-  "number": "6.18",
-  "title": "",
-  "body": "  For the function find the directions in which the directional derivative at the point is maximised, minimised and .    Maximised in the direction ; minimised in the direction ; and when    For the given function , and so . Thus the directional derivative, , will be maximised in the direction and minimised in the direction . Finally will be when i.e. when or some scalar multiple of this.   "
-},
-{
-  "id": "Ex-Find_lvlcurve_tanline_gradvec",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Find_lvlcurve_tanline_gradvec",
-  "type": "Example",
-  "number": "6.19",
-  "title": "",
-  "body": "  For the function find the level curve, the tangent line and the gradient vector at the point .    The level curve is .  The tangent line is .  The gradient vector is    Since the level curve through the point is or . We can find the equation of the tangent by standard calculus to obtain . Next, the gradient vector is . As can be seen in the diagram below, the gradient vector is orthogonal to the level curve.       "
-},
-{
-  "id": "Ex-Hill_Climbing",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Hill_Climbing",
-  "type": "Example",
-  "number": "6.21",
-  "title": "",
-  "body": "  Suppose you are climbing a hill whose shape is given by the equation and you are standing at the point with coordinates .  In which direction should you proceed initially in order to be ascending most rapidly?  If you climb in that direction, at what angle to the horizontal will you be climbing initially?       Head in the direction of .  The angle to the horizontal will be .      Since we want to travel on the path of steepest ascent we will want to head in the direction of . Now and hence .  In this direction we know that . Thus the angle, , to the horizontal will be .    "
-},
-{
-  "id": "Directional-Derivatives-26-2",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-26-2",
-  "type": "Exercise",
-  "number": "6.1.1",
-  "title": "",
-  "body": " Find the directional derivative for at the point in the direction of the point .  "
-},
-{
-  "id": "Directional-Derivatives-26-3",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-26-3",
-  "type": "Exercise",
-  "number": "6.1.2",
-  "title": "",
-  "body": " Find the maximum value of the rate of change of at .  "
-},
-{
-  "id": "Directional-Derivatives-26-4",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-26-4",
-  "type": "Exercise",
-  "number": "6.1.3",
-  "title": "",
-  "body": " For the curve use the gradient vector of a two variable function to find the tangent line and the normal line at the point .  "
-},
-{
-  "id": "Directional-Derivatives-26-5",
-  "level": "2",
-  "url": "Calculus_6.html#Directional-Derivatives-26-5",
-  "type": "Exercise",
-  "number": "6.1.4",
-  "title": "",
-  "body": " For the following contour plot for some unspecified function of two variables estimate the sign of the directional derivatives at:       The point and in the direction of .  The point and in the direction of .  The point and in the direction of the origin.  The point and in the direction of the origin.   "
-},
-{
-  "id": "Ex-rate_of_change",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-rate_of_change",
-  "type": "Example",
-  "number": "6.23",
-  "title": "",
-  "body": "  Find the rate of change of the function at the point in the direction .    .    The gradient vector for the given function is . Thus and so the required directional derivative is .   "
-},
-{
-  "id": "Ex-Temperature",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Temperature",
-  "type": "Example",
-  "number": "6.24",
-  "title": "",
-  "body": "  The temperature at the point is given by the function .  Find the rate of change of temperature at the point in the direction where .  In which direction does the temperature increase the fastest at ?  Find the maximum rate of increase at .       .  .  .     The gradient vector for the given function is . Thus .   Since , the required rate of change is given by the directional derivative .  The direction in which the temperature increase the fastest at is .  The maximum rate of increase at is the maximum value of which is .    "
-},
-{
-  "id": "Ex-Level_surface_equation",
-  "level": "2",
-  "url": "Calculus_6.html#Ex-Level_surface_equation",
-  "type": "Example",
-  "number": "6.25",
-  "title": "",
-  "body": "  Find the equation of the tangent plane to the level surface of at the point .    .    Since , the level surface for this function satisfies the equation . A normal to this surface at the point , and hence to the tangent plane at this point, is given by . Now, , and so . Thus the equation of the tangent plane is which simplifies to .   "
-},
-{
-  "id": "In_Three_Variables-6-2",
-  "level": "2",
-  "url": "Calculus_6.html#In_Three_Variables-6-2",
-  "type": "Exercise",
-  "number": "6.2.1",
-  "title": "",
-  "body": " Find the directional derivative of at in the direction .  "
-},
-{
-  "id": "In_Three_Variables-6-3",
-  "level": "2",
-  "url": "Calculus_6.html#In_Three_Variables-6-3",
-  "type": "Exercise",
-  "number": "6.2.2",
-  "title": "",
-  "body": " By thinking of level surfaces to a function of variables show that the normal lines to a sphere pass through its centre.  "
-},
-{
-  "id": "Calculus_7",
-  "level": "1",
-  "url": "Calculus_7.html",
-  "type": "Chapter",
-  "number": "7",
-  "title": "CA7: Local and Global Extrema",
-  "body": "    CA7: Local and Global Extrema            Critical Points  Recall that a function of one variable, has a critical point at if the tangent line to the curve at is horizontal or if the derivative does not exist at that point. This critical point can be either a (local) maximum, minimum or horizontal point of inflection or vertical point of inflection. (The first three possibilities are shown in below.)   A plot of with stationary points labelled.    The idea of critical points can be applied to functions of two variables.   Critical Point   The function has a critical point at if the tangent plane to the surface at the point is horizontal or if one of the directional derivatives does not exist.    As with functions of one variable, critical points of functions of two variables will be one of three types.   If at a critical point for all points in some open disk centred on then the critical point is a local maximum .  If at a critical point for all points in some open disk centred on then the critical point is a local minimum .  For a smooth function (i.e. a function for which all derivatives exist) if a critical point is not a local maximum or a local minimum then it is a saddle point .     The graph of the function is given below with local maxima and local minima labelled.   3D plot of with local minima and maxima labelled.        The graph of the function is given below with a saddle point labelled.   3D plot of with a saddle point labelled.      For smooth functions we can find the critical points by looking for those points where the tangent plane is horizontal. If the function has a tangent plane at the point we can determine algebraically that it is horizontal by checking that:   The normal vector for the plane is parallel to the vector , or  The directional derivative at is zero in every direction, or  The gradient vector at is .   These conditions are all equivalent and they lead us to the following theorem.   Critical Point   The point is a critical point of the function if , or, if at least one of these derivatives does not exist.    Note: For the most part, we will assume that the function is smooth, i.e. has derivatives of all orders. In particular a smooth function does not have any discontinuities or cusps. Such critical points will occur for functions of two variables when at least one of the partial derivatives does not exist at the critical point.    Locate, and determine the nature of, the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    To locate the critical points we solve the equations , and check for any points where they do not exist. Since this function is given by a polynomial, the partial derivatives exist. We set them to zero below. From  . Putting into gives . Putting into gives . Thus there are 4 critical points at .  If we have the graph of the function then we can usually determine the nature of these critical points by inspection. From the (computer generated) graph shown below we can see with very careful inspection that the critical point at is a local minimum, the critical point at is a local maximum and the critical points at and are saddle points.   3D plot of .    Sometimes the nature of the critical points is not clear on such graphs or we don't have access to the graph. Another approach to determining the nature of the critical points is to sketch the level curves for the function.   Sketch of the level curves for various .    From this diagram we can see that as we move away from the critical points at in any direction the function value is increasing and hence is local minimum. Similarly as we move away from the critical point at in any direction the function value is decreasing is hence is a local maximum. For the critical points at and we can move away in some directions and have the function value increase while in other directions the function value will decrease. Hence these critical points are saddle points.  The below Sage cell plots the critical points (in red) of the function on the 3D surface plot and on the 2D contour plot.       Example Tasks   Find the critical points of the function and use the plot of level curves given below to determine the nature of each critical point.              Second Derivative Test  An algebraic method for determining what type of critical points a function has is given by the following theorem.   The Second Derivative Test   Let the function have continuous 2nd partial derivatives and let be a critical point of the function. Let .   If and then has a local minimum at .  If and then has a local maximum at .  If then has a saddle point at .  If then the 2nd derivative test is inconclusive.      Outline of Proof  For the sake of simplicity assume that the critical point is at the point . Now using a Taylor expansion for functions of two variables about we have (up to the quadratic terms) . Since is a critical point of the function . Thus .  On completing the square (and dropping the evaluation at for brevity) .  From this we can see that if and then when and are varied from , increases and so will be a local minimum.     Locate and identify the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    We located the critical points of this function in an earlier example. We found that there are 4 critical points at .  To determine the nature of these critical points, in this example we will use the second derivative test. To this end, note that . Thus . Now, applying the second derivative test:   At , , and so is a local minimum.  At , , and so is a local maximum.  At , and so is a saddle point.  At , and so is also a saddle point.   This is in agreement with the conclusions we made on the nature of these critical pointson the basis of the level curves of the function.      Locate and identify the critical points of the function .    is a local maximum.    Here .  For this function both partial derivatives are undefined at and so this point will be a critical point. However we cannot use the second derivative test to determine the nature of this critical point. In this case we can see from the graph of the function that the critical point at is a local maximum.         Example Tasks   Locate and identify the critical points of the function .    Locate and identify the critical points of the function .              Global Extrema   Global Extrema   Consider the function of two variables on the domain D.   If there exists some point in such that for all points in then the function has a global maximum at .  Similarly, if there exists some point in such that for all points in then the function has a global minimum at .       The graph of the function over the domain is shown below.   3D plot of with global maximum and minimum labelled.      Before discussing global extrema for functions of two variables, recall the situation for a function of one variable . If is continuous on the closed interval then is guaranteed to have both a global maximum and a global minimum on .   Plot of with global maximum and minimum, and critical points labelled.    These global extrema can be found by evaluating at   All of the critical points of in , and  The endpoints of .   The procedure for finding the global extrema of functions of two variables is very similar and is based on the following theorem.   Extreme Value Theorem   If is a continuous function on the closed and bounded domain then has both a global maximum and a global minimum on .    Note that a closed region, , is a region in the plane that contains its boundary. For example in the diagram below Region would be a closed region whereas Region is not closed.   Example of a region which is closed, and a region which is not closed.    A bounded region, , is a region in the plane that doesn't extend to infinity in any direction. For example in the diagram below Region would be a bounded region whereas Region is not bounded.   Example of a region which is bounded, and a region which is not bounded.     Locating Global Extrema   To locate the global extrema of the continuous function on the closed and bounded domain :   Find all of the critical points in the interior of ;  Find the maximum and minimum values of on the boundary of ;  Evaluate at each of the above points and compare.      The below Sage cell plots the global maximum and global minimum (shown in red) of the surface on the disc (shown in green).      Find the global extrema of the function on the closed triangular region with vertices , and .    Global maximum: at  Global minimum: at .        Firstly note that is a closed and bounded region in the plane and so we can use the method outlined above. So begin by finding the critical points of . Here .  Critical points occur when and so this function has only one critical point at . This is inside and so we evaluate the function at this point, i.e. .  To find the maximum and minimum values of the function on the boundary we will have to consider the 3 sides of the triangle separately. Firstly, consider the side of the triangle defined by .  On this interval we think of as a function of only, i.e. .      This has a maximum value at and minimum value at .  Next consider the side of the triangle defined by . On this interval we think of as a function of only, i.e. .      Again, using the technique given above for locating the global extrema for a function of one variable (or by looking at the graph) we find that the largest value of occurs at (giving ) and the smallest value of occurs at , (giving ).  Finally on the interval defined by , we can think of as a function of only, i.e. .      For this function the global maximum is at and the global minimum is at .  On comparing the value of the function at each of the global extrema on the sides of the triangle and at the critical point inside the region we conclude that the function has a global maximum of at and a global minimum of at .     Example Tasks   Find the global extrema of on .    Find the global extrema of on .     "
-},
-{
-  "id": "Fig_max_min_inflection",
-  "level": "2",
-  "url": "Calculus_7.html#Fig_max_min_inflection",
-  "type": "Figure",
-  "number": "7.1",
-  "title": "",
-  "body": " A plot of with stationary points labelled.   "
-},
-{
-  "id": "Critical-Points-5",
-  "level": "2",
-  "url": "Calculus_7.html#Critical-Points-5",
-  "type": "Definition",
-  "number": "7.2",
-  "title": "Critical Point.",
-  "body": " Critical Point   The function has a critical point at if the tangent plane to the surface at the point is horizontal or if one of the directional derivatives does not exist.   "
-},
-{
-  "id": "Ex-Local_max_and_min",
-  "level": "2",
-  "url": "Calculus_7.html#Ex-Local_max_and_min",
-  "type": "Example",
-  "number": "7.3",
-  "title": "",
-  "body": "  The graph of the function is given below with local maxima and local minima labelled.   3D plot of with local minima and maxima labelled.     "
-},
-{
-  "id": "Ex-Saddle_point",
-  "level": "2",
-  "url": "Calculus_7.html#Ex-Saddle_point",
-  "type": "Example",
-  "number": "7.5",
-  "title": "",
-  "body": "  The graph of the function is given below with a saddle point labelled.   3D plot of with a saddle point labelled.     "
-},
-{
-  "id": "Critical-Points-13",
-  "level": "2",
-  "url": "Calculus_7.html#Critical-Points-13",
-  "type": "Theorem",
-  "number": "7.7",
-  "title": "Critical Point.",
-  "body": " Critical Point   The point is a critical point of the function if , or, if at least one of these derivatives does not exist.   "
-},
-{
-  "id": "Ex-Locate_critical_points",
-  "level": "2",
-  "url": "Calculus_7.html#Ex-Locate_critical_points",
-  "type": "Example",
-  "number": "7.8",
-  "title": "",
-  "body": "  Locate, and determine the nature of, the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    To locate the critical points we solve the equations , and check for any points where they do not exist. Since this function is given by a polynomial, the partial derivatives exist. We set them to zero below. From  . Putting into gives . Putting into gives . Thus there are 4 critical points at .  If we have the graph of the function then we can usually determine the nature of these critical points by inspection. From the (computer generated) graph shown below we can see with very careful inspection that the critical point at is a local minimum, the critical point at is a local maximum and the critical points at and are saddle points.   3D plot of .    Sometimes the nature of the critical points is not clear on such graphs or we don't have access to the graph. Another approach to determining the nature of the critical points is to sketch the level curves for the function.   Sketch of the level curves for various .    From this diagram we can see that as we move away from the critical points at in any direction the function value is increasing and hence is local minimum. Similarly as we move away from the critical point at in any direction the function value is decreasing is hence is a local maximum. For the critical points at and we can move away in some directions and have the function value increase while in other directions the function value will decrease. Hence these critical points are saddle points.  The below Sage cell plots the critical points (in red) of the function on the 3D surface plot and on the 2D contour plot.    "
-},
-{
-  "id": "Critical-Points-16-2",
-  "level": "2",
-  "url": "Calculus_7.html#Critical-Points-16-2",
-  "type": "Exercise",
-  "number": "7.1.1",
-  "title": "",
-  "body": " Find the critical points of the function and use the plot of level curves given below to determine the nature of each critical point.      "
-},
-{
-  "id": "Second-Derivative-Test-3",
-  "level": "2",
-  "url": "Calculus_7.html#Second-Derivative-Test-3",
-  "type": "Theorem",
-  "number": "7.12",
-  "title": "The Second Derivative Test.",
-  "body": " The Second Derivative Test   Let the function have continuous 2nd partial derivatives and let be a critical point of the function. Let .   If and then has a local minimum at .  If and then has a local maximum at .  If then has a saddle point at .  If then the 2nd derivative test is inconclusive.    "
-},
-{
-  "id": "Second-Derivative-Test-4",
-  "level": "2",
-  "url": "Calculus_7.html#Second-Derivative-Test-4",
-  "type": "Proof",
-  "number": "7.2.1",
-  "title": "Outline of Proof.",
-  "body": " Outline of Proof  For the sake of simplicity assume that the critical point is at the point . Now using a Taylor expansion for functions of two variables about we have (up to the quadratic terms) . Since is a critical point of the function . Thus .  On completing the square (and dropping the evaluation at for brevity) .  From this we can see that if and then when and are varied from , increases and so will be a local minimum.  "
-},
-{
-  "id": "Ex-Locate_critical_points_2",
-  "level": "2",
-  "url": "Calculus_7.html#Ex-Locate_critical_points_2",
-  "type": "Example",
-  "number": "7.13",
-  "title": "",
-  "body": "  Locate and identify the critical points of the function .    is a local minimum; is a local maximum; and are saddle points.    We located the critical points of this function in an earlier example. We found that there are 4 critical points at .  To determine the nature of these critical points, in this example we will use the second derivative test. To this end, note that . Thus . Now, applying the second derivative test:   At , , and so is a local minimum.  At , , and so is a local maximum.  At , and so is a saddle point.  At , and so is also a saddle point.   This is in agreement with the conclusions we made on the nature of these critical pointson the basis of the level curves of the function.   "
-},
-{
-  "id": "Ex-Locate_critical_points_3",
-  "level": "2",
-  "url": "Calculus_7.html#Ex-Locate_critical_points_3",
-  "type": "Example",
-  "number": "7.14",
-  "title": "",
-  "body": "  Locate and identify the critical points of the function .    is a local maximum.    Here .  For this function both partial derivatives are undefined at and so this point will be a critical point. However we cannot use the second derivative test to determine the nature of this critical point. In this case we can see from the graph of the function that the critical point at is a local maximum.       "
-},
-{
-  "id": "Second-Derivative-Test-7-2",
-  "level": "2",
-  "url": "Calculus_7.html#Second-Derivative-Test-7-2",
-  "type": "Exercise",
-  "number": "7.2.1",
-  "title": "",
-  "body": " Locate and identify the critical points of the function .  "
-},
-{
-  "id": "Second-Derivative-Test-7-3",
-  "level": "2",
-  "url": "Calculus_7.html#Second-Derivative-Test-7-3",
-  "type": "Exercise",
-  "number": "7.2.2",
-  "title": "",
-  "body": " Locate and identify the critical points of the function .      "
-},
-{
-  "id": "Global-Extrema-2",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-2",
-  "type": "Definition",
-  "number": "7.17",
-  "title": "Global Extrema.",
-  "body": " Global Extrema   Consider the function of two variables on the domain D.   If there exists some point in such that for all points in then the function has a global maximum at .  Similarly, if there exists some point in such that for all points in then the function has a global minimum at .    "
-},
-{
-  "id": "Global-Extrema-3",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-3",
-  "type": "Example",
-  "number": "7.18",
-  "title": "",
-  "body": "  The graph of the function over the domain is shown below.   3D plot of with global maximum and minimum labelled.     "
-},
-{
-  "id": "Fig8_Global_Extrema_1D",
-  "level": "2",
-  "url": "Calculus_7.html#Fig8_Global_Extrema_1D",
-  "type": "Figure",
-  "number": "7.20",
-  "title": "",
-  "body": " Plot of with global maximum and minimum, and critical points labelled.   "
-},
-{
-  "id": "Global-Extrema-9",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-9",
-  "type": "Theorem",
-  "number": "7.21",
-  "title": "Extreme Value Theorem.",
-  "body": " Extreme Value Theorem   If is a continuous function on the closed and bounded domain then has both a global maximum and a global minimum on .   "
-},
-{
-  "id": "Fig9_closed_region",
-  "level": "2",
-  "url": "Calculus_7.html#Fig9_closed_region",
-  "type": "Figure",
-  "number": "7.22",
-  "title": "",
-  "body": " Example of a region which is closed, and a region which is not closed.   "
-},
-{
-  "id": "Fig10_bounded_region",
-  "level": "2",
-  "url": "Calculus_7.html#Fig10_bounded_region",
-  "type": "Figure",
-  "number": "7.23",
-  "title": "",
-  "body": " Example of a region which is bounded, and a region which is not bounded.   "
-},
-{
-  "id": "Global-Extrema-14",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-14",
-  "type": "Remark",
-  "number": "7.24",
-  "title": "Locating Global Extrema.",
-  "body": " Locating Global Extrema   To locate the global extrema of the continuous function on the closed and bounded domain :   Find all of the critical points in the interior of ;  Find the maximum and minimum values of on the boundary of ;  Evaluate at each of the above points and compare.    "
-},
-{
-  "id": "Global-Extrema-15",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-15",
-  "type": "Example",
-  "number": "7.25",
-  "title": "",
-  "body": " The below Sage cell plots the global maximum and global minimum (shown in red) of the surface on the disc (shown in green).   "
-},
-{
-  "id": "Global-Extrema-16",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-16",
-  "type": "Example",
-  "number": "7.26",
-  "title": "",
-  "body": "  Find the global extrema of the function on the closed triangular region with vertices , and .    Global maximum: at  Global minimum: at .        Firstly note that is a closed and bounded region in the plane and so we can use the method outlined above. So begin by finding the critical points of . Here .  Critical points occur when and so this function has only one critical point at . This is inside and so we evaluate the function at this point, i.e. .  To find the maximum and minimum values of the function on the boundary we will have to consider the 3 sides of the triangle separately. Firstly, consider the side of the triangle defined by .  On this interval we think of as a function of only, i.e. .      This has a maximum value at and minimum value at .  Next consider the side of the triangle defined by . On this interval we think of as a function of only, i.e. .      Again, using the technique given above for locating the global extrema for a function of one variable (or by looking at the graph) we find that the largest value of occurs at (giving ) and the smallest value of occurs at , (giving ).  Finally on the interval defined by , we can think of as a function of only, i.e. .      For this function the global maximum is at and the global minimum is at .  On comparing the value of the function at each of the global extrema on the sides of the triangle and at the critical point inside the region we conclude that the function has a global maximum of at and a global minimum of at .   "
-},
-{
-  "id": "Global-Extrema-17-2",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-17-2",
-  "type": "Exercise",
-  "number": "7.3.1",
-  "title": "",
-  "body": " Find the global extrema of on .  "
-},
-{
-  "id": "Global-Extrema-17-3",
-  "level": "2",
-  "url": "Calculus_7.html#Global-Extrema-17-3",
-  "type": "Exercise",
-  "number": "7.3.2",
-  "title": "",
-  "body": " Find the global extrema of on .  "
-},
-{
-  "id": "Chap-Calculus_8",
-  "level": "1",
-  "url": "Chap-Calculus_8.html",
-  "type": "Chapter",
-  "number": "8",
-  "title": "CA8: Chain Rules",
-  "body": "    CA8: Chain Rules            The Single Variable Chain Rule  Recall that the chain rule for functions of one variable says:   Use the chain rule to find if and .    Via the chain rule:     With multivariable functions there are many ways in which to form composite functions but there will be a chain rule for each possibility. In the following sections we will look at some of these.       Multivariable Chain Rules  Begin by considering the case where and , . In this case we can think of as defining a real valued function .   If and , then find by substituting the expressions for and into and then differentiating.    On substituting and into  Thus     Now for a function of two variables the linear approximation (or ''small change'') formula says: Thus   This formula becomes more accurate as and from the limit we obtain the following chain rule.   Chain Rule 1   If and , are differentiable functions then      If and , then find by using the chain rule.    Here So, via the chain rule      Use the chain rule to find when and .    Here So, via the chain rule      The radius of a right circular cone is increasing at a rate of cm\/s while its height is decreasing at a rate of cm\/s. At what rate is the volume of the cone changing when the radius is cm and the height is cm?    The volume of right circular cone of radius and height is  Since both radius and the height are functions of time , i.e. and , we can think of the volume as a function of time as well, i.e. , and the problem is asking us to find when and . Now, by the chain rule:  Here and we are given that and . (Note that is negative because the height is decreasing.) Thus, at and      Consider the case now where and . In this case we can think of as defining a function of two variables and hence has partial derivatives with respect to these variables. The relevant chain rules for this case are:   Chain Rule 2   If and are differentiable functions then      A spherical balloon holds a fixed amount of gas but its volume is dependent on the pressure and temperature of the gas according to Determine expressions for the rate of change of the radius of the balloon with respect to the pressure and temperature of the gas.       The volume of a sphere of radius is  Thus we can think of the radius of the balloon as a function of its volume, i.e. where the volume is, in turn, a function of the pressure and temperature of the gas, i.e.  Using Chain Rule 2:   Similarly      Use the appropriate chain rules to calculate and when      Using Chain Rule 2:  Now, (via the quotient rule) and  Thus    Next consider the case where and , . In this case we can think of as defining a function of two variables . The relevant chain rules for this case are:   Chain Rule 3   If and , are differentiable functions then       Use the appropriate chain rules to find and when      Here and   Thus, by Chain Rule 3 and     The chain rules given above are just special cases of the general chain rule.   The General Chain Rule   If is a differentiable function of variables and each is a differentiable function of the variables then for each      Find if and      By the general Chain Rule      Example Tasks  Use the appropriate chain rules to find and when   Two straight roads intersect at right angles. Car A is moving on one road approaches the intersection at km\/h while Car B moving on the other road approaches the intersection at km\/h. At what rate is the distance between the cars changing when A is km from the intersection and B is km from the intersection?  Show that any function of the form is a solution of the wave equation     If and and find an appropriate chain rule for .  Using the result of part (a) find when and and .          Implicit Differentiation  We can use our chain rules to produce another way looking at implicit differentiation. Assuming that the equation implicitly defines the function , recall that implicit differentiation gives us a way of finding a formula for .   Use implicit differentiation to find a formula for for the function implicitly defined by the equation .      Differentiating both sides of the equation with respect to      For the example above, we can construct the surface and plot this using the Sage cell below. The constant that determines the level curves can be varied with the slider. The level curves are shown in blue, and the slopes given by are shown as little grey line segments. The slope of each segment is given by evaluating at its position. (Note that these slopes are tangential to the curve, as they must be.) Furthermore:  by selecting the \"show3d\" option, you can also see the 3D plot of and a \"water level\" of . In this case, the curves represent the \"shoreline\";  by selecting the \"gradient\" option, you can show the gradient vectors (red arrows), which are of course perpendicular to the level curves (and thus the grey slopes).     To use the chain rules to find a formula for for the function implicitly defined by the equation let Thus we can think of as being a function of the one variable , and so, by Chain Rule 1, Now we are thinking of equation as defining a function of one variable , so let and and hence   Returning to equation , on differentiating both sides with respect to , we obtain from which we obtain, provided ,   Thus we can find a formula for via partial differentiation as opposed to implicit differentiation. In summary:    If the equation implicitly defines the function then      Use partial differentiation to find a formula for for the function implicitly defined by the equation .      Let . Then Thus     A similar argument can extend this result to functions of more than one variable. For example:    If implicitly defines the function then      Use partial differentiation to find formulas for for the function implicitly defined by the equation       Let . Then Thus       Example Tasks  Using partial differentiation (as opposed to implicit differentiation) find at when the function is defined by the equation     "
-},
-{
-  "id": "Ex-Single_variable_chain_rule",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Single_variable_chain_rule",
-  "type": "Example",
-  "number": "8.1",
-  "title": "",
-  "body": " Use the chain rule to find if and .    Via the chain rule:    "
-},
-{
-  "id": "Ex-Multivariate_chain_rule_substitution",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Multivariate_chain_rule_substitution",
-  "type": "Example",
-  "number": "8.2",
-  "title": "",
-  "body": " If and , then find by substituting the expressions for and into and then differentiating.    On substituting and into  Thus    "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-6",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-6",
-  "type": "Theorem",
-  "number": "8.3",
-  "title": "Chain Rule 1.",
-  "body": " Chain Rule 1   If and , are differentiable functions then    "
-},
-{
-  "id": "Ex-Chain_rule_1_sample_1",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Chain_rule_1_sample_1",
-  "type": "Example",
-  "number": "8.4",
-  "title": "",
-  "body": " If and , then find by using the chain rule.    Here So, via the chain rule    "
-},
-{
-  "id": "Ex-Chain_rule_1_sample_2",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Chain_rule_1_sample_2",
-  "type": "Example",
-  "number": "8.5",
-  "title": "",
-  "body": " Use the chain rule to find when and .    Here So, via the chain rule    "
-},
-{
-  "id": "Ex-Related_rate_chain_rule_1",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Related_rate_chain_rule_1",
-  "type": "Example",
-  "number": "8.6",
-  "title": "",
-  "body": " The radius of a right circular cone is increasing at a rate of cm\/s while its height is decreasing at a rate of cm\/s. At what rate is the volume of the cone changing when the radius is cm and the height is cm?    The volume of right circular cone of radius and height is  Since both radius and the height are functions of time , i.e. and , we can think of the volume as a function of time as well, i.e. , and the problem is asking us to find when and . Now, by the chain rule:  Here and we are given that and . (Note that is negative because the height is decreasing.) Thus, at and     "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-11",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-11",
-  "type": "Theorem",
-  "number": "8.7",
-  "title": "Chain Rule 2.",
-  "body": " Chain Rule 2   If and are differentiable functions then    "
-},
-{
-  "id": "Ex-Related_rate_chain_rule_2",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Related_rate_chain_rule_2",
-  "type": "Example",
-  "number": "8.8",
-  "title": "",
-  "body": " A spherical balloon holds a fixed amount of gas but its volume is dependent on the pressure and temperature of the gas according to Determine expressions for the rate of change of the radius of the balloon with respect to the pressure and temperature of the gas.       The volume of a sphere of radius is  Thus we can think of the radius of the balloon as a function of its volume, i.e. where the volume is, in turn, a function of the pressure and temperature of the gas, i.e.  Using Chain Rule 2:   Similarly    "
-},
-{
-  "id": "Ex-Chain_rule_2_sample",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Chain_rule_2_sample",
-  "type": "Example",
-  "number": "8.9",
-  "title": "",
-  "body": " Use the appropriate chain rules to calculate and when      Using Chain Rule 2:  Now, (via the quotient rule) and  Thus   "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-15",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-15",
-  "type": "Theorem",
-  "number": "8.10",
-  "title": "Chain Rule 3.",
-  "body": " Chain Rule 3   If and , are differentiable functions then     "
-},
-{
-  "id": "Ex-Chain_rule_3_sample",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Chain_rule_3_sample",
-  "type": "Example",
-  "number": "8.11",
-  "title": "",
-  "body": " Use the appropriate chain rules to find and when      Here and   Thus, by Chain Rule 3 and    "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-18",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-18",
-  "type": "Theorem",
-  "number": "8.12",
-  "title": "The General Chain Rule.",
-  "body": " The General Chain Rule   If is a differentiable function of variables and each is a differentiable function of the variables then for each    "
-},
-{
-  "id": "Ex-General_chain_rule_sample",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-General_chain_rule_sample",
-  "type": "Example",
-  "number": "8.13",
-  "title": "",
-  "body": " Find if and      By the general Chain Rule    "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-20-2",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-2",
-  "type": "Exercise",
-  "number": "8.2.1",
-  "title": "",
-  "body": "Use the appropriate chain rules to find and when  "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-20-3",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-3",
-  "type": "Exercise",
-  "number": "8.2.2",
-  "title": "",
-  "body": "Two straight roads intersect at right angles. Car A is moving on one road approaches the intersection at km\/h while Car B moving on the other road approaches the intersection at km\/h. At what rate is the distance between the cars changing when A is km from the intersection and B is km from the intersection? "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-20-4",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-4",
-  "type": "Exercise",
-  "number": "8.2.3",
-  "title": "",
-  "body": "Show that any function of the form is a solution of the wave equation  "
-},
-{
-  "id": "Sec-Multivariable-chain-rules-20-5",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20-5",
-  "type": "Exercise",
-  "number": "8.2.4",
-  "title": "",
-  "body": "  If and and find an appropriate chain rule for .  Using the result of part (a) find when and and .   "
-},
-{
-  "id": "Ex-Implicit_differentiation_recall",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Implicit_differentiation_recall",
-  "type": "Example",
-  "number": "8.14",
-  "title": "",
-  "body": " Use implicit differentiation to find a formula for for the function implicitly defined by the equation .      Differentiating both sides of the equation with respect to     "
-},
-{
-  "id": "Chap-Calculus_8-4-8",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Chap-Calculus_8-4-8",
-  "type": "Theorem",
-  "number": "8.15",
-  "title": "",
-  "body": "  If the equation implicitly defines the function then    "
-},
-{
-  "id": "Ex-Implicit_differentiation_via_partial_differentiation",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Implicit_differentiation_via_partial_differentiation",
-  "type": "Example",
-  "number": "8.16",
-  "title": "",
-  "body": " Use partial differentiation to find a formula for for the function implicitly defined by the equation .      Let . Then Thus    "
-},
-{
-  "id": "Chap-Calculus_8-4-11",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Chap-Calculus_8-4-11",
-  "type": "Theorem",
-  "number": "8.17",
-  "title": "",
-  "body": "  If implicitly defines the function then    "
-},
-{
-  "id": "Ex-Implicit_differentiation_via_partial_differentiation_general",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Ex-Implicit_differentiation_via_partial_differentiation_general",
-  "type": "Example",
-  "number": "8.18",
-  "title": "",
-  "body": " Use partial differentiation to find formulas for for the function implicitly defined by the equation       Let . Then Thus     "
-},
-{
-  "id": "Chap-Calculus_8-4-13-2",
-  "level": "2",
-  "url": "Chap-Calculus_8.html#Chap-Calculus_8-4-13-2",
-  "type": "Exercise",
-  "number": "8.3.1",
-  "title": "",
-  "body": "Using partial differentiation (as opposed to implicit differentiation) find at when the function is defined by the equation  "
 },
 {
   "id": "Differential_Equations_1",

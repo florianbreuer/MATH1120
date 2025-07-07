@@ -5,10 +5,10 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>CA5: Linear Approximations</title>
+<title>CA3: Linear Approximations</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -86,10 +86,10 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* pre with class 'sagecell-sage' an executable Sage cell
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
 // Their results will be linked, only within language type
 sagecell.makeSagecell({
-  "inputLocation": "pre.sagecell-sage",
+  "inputLocation": "div.sagecell-sage",
   "linked": true,
   "linkKey": "linked-sage",
   "autoeval": false,
@@ -98,33 +98,54 @@ sagecell.makeSagecell({
   ],
   "evalButtonText": "Evaluate (Sage)"
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -135,7 +156,8 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Calculus_4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Calculus_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Calculus_4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-Calculus.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Calculus_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -143,142 +165,145 @@ sagecell.makeSagecell({
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-part contains-active">
 <div class="toc-title-box"><a href="Part-Calculus.html" class="internal"><span class="codenumber">I</span> <span class="title">Calculus</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Maclaurin Series</span></a></div>
+<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">1</span> <span class="title">CA1: Functions of Several Variables</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">1.2</span> <span class="title">Infinite Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">1.3</span> <span class="title">Power Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">1.4</span> <span class="title">Maclaurin Series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">1.5</span> <span class="title">Euler’s Formula</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">1.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">1.7</span> <span class="title">Advanced Topics</span></a></div>
+<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">1.2</span> <span class="title">Graphing functions of two variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">1.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">1.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">1.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">1.4</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Partial Differentiation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">1.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">1.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">1.7.3</span> <span class="title">Other types of series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">1.7.4</span> <span class="title">Infinite products</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">2.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">2.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Linear Approximations</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">3.1</span> <span class="title">Tangent Planes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">3.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">3.2</span> <span class="title">Linear Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">3.3</span> <span class="title">Quadratic Approximations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: The Directional Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">4.1</span> <span class="title">Directional Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">4.2</span> <span class="title">In Three Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Local and Global Extrema</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">5.1</span> <span class="title">Critical Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">5.2</span> <span class="title">Second Derivative Test</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">5.3</span> <span class="title">Global Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: Chain Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">6.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">6.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">6.3</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">6.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Maclaurin Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Introduction" class="internal"><span class="codenumber">7.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#Sec-Infinite_Series" class="internal"><span class="codenumber">7.2</span> <span class="title">Infinite Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Power-Series" class="internal"><span class="codenumber">7.3</span> <span class="title">Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Series" class="internal"><span class="codenumber">7.4</span> <span class="title">Maclaurin Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Eulers-Formula" class="internal"><span class="codenumber">7.5</span> <span class="title">Euler’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Maclaurin-Polynomials" class="internal"><span class="codenumber">7.6</span> <span class="title">Maclaurin Polynomials</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Chap-Calculus_1.html#sec-Advanced-Topics" class="internal"><span class="codenumber">7.7</span> <span class="title">Advanced Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Computing-pi" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Computing <span class="process-math">\(\pi\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-A-function-without-Maclaurin-series" class="internal"><span class="codenumber">7.7.2</span> <span class="title">A function without Maclaurin series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Other-types-of-series" class="internal"><span class="codenumber">7.7.3</span> <span class="title">Other types of series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Chap-Calculus_1.html#subsec-Infinite-products" class="internal"><span class="codenumber">7.7.4</span> <span class="title">Infinite products</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">2</span> <span class="title">CA2: Taylor Series</span></a></div>
+<div class="toc-title-box"><a href="Calculus_2.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Taylor Series</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">2.1</span> <span class="title">Taylor series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">2.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series" class="internal"><span class="codenumber">8.1</span> <span class="title">Taylor series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Taylor-series-15" class="internal"><span class="codenumber">8.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">2.2</span> <span class="title">Geometric series</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">2.3</span> <span class="title">Convergence issues</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">2.4</span> <span class="title">Ratio test</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">2.5</span> <span class="title">Convergence of power series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Geometric-series" class="internal"><span class="codenumber">8.2</span> <span class="title">Geometric series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-issues" class="internal"><span class="codenumber">8.3</span> <span class="title">Convergence issues</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Ratio-test" class="internal"><span class="codenumber">8.4</span> <span class="title">Ratio test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_2.html#sec-Convergence-of-power-series" class="internal"><span class="codenumber">8.5</span> <span class="title">Convergence of power series</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">2.6</span> <span class="title">Algebra of infinite series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">2.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">2.7</span> <span class="title">Advanced topics</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_3.html" class="internal"><span class="codenumber">3</span> <span class="title">CA3: Functions of Several Variables</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#Functions-of-Two-Variables" class="internal"><span class="codenumber">3.1</span> <span class="title">Functions of Two Variables</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#graphs" class="internal"><span class="codenumber">3.2</span> <span class="title">Graphing functions of two variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#graphs-12" class="internal"><span class="codenumber">3.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series" class="internal"><span class="codenumber">8.6</span> <span class="title">Algebra of infinite series</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_2.html#sec-Algebra-of-infinite-series-16" class="internal"><span class="codenumber">8.6</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#level-curves" class="internal"><span class="codenumber">3.3</span> <span class="title">Level Curves and Contour Plots</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#level-curves-8" class="internal"><span class="codenumber">3.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">3.4</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">3.4</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Calculus_3.html#functions-of-3-or-more-variables" class="internal"><span class="codenumber">3.5</span> <span class="title">Functions of 3 (or more) Variables</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_4.html" class="internal"><span class="codenumber">4</span> <span class="title">CA4: Partial Differentiation</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation" class="internal"><span class="codenumber">4.1</span> <span class="title">Partial Differentiation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Partial_Differentiation-24" class="internal"><span class="codenumber">4.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives" class="internal"><span class="codenumber">4.2</span> <span class="title">Higher Partial Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_4.html#Sec-Higher_Partial_Derivatives-10" class="internal"><span class="codenumber">4.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter active">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html" class="internal"><span class="codenumber">5</span> <span class="title">CA5: Linear Approximations</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal"><span class="codenumber">5.1</span> <span class="title">Tangent Planes</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Tangent_Planes-13" class="internal"><span class="codenumber">5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations" class="internal"><span class="codenumber">5.2</span> <span class="title">Linear Approximations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Sec-Linear_Approximations-11" class="internal"><span class="codenumber">5.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations" class="internal"><span class="codenumber">5.3</span> <span class="title">Quadratic Approximations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_5.html#Quadratic-Approximations-9" class="internal"><span class="codenumber">5.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_6.html" class="internal"><span class="codenumber">6</span> <span class="title">CA6: The Directional Derivative</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives" class="internal"><span class="codenumber">6.1</span> <span class="title">Directional Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#Directional-Derivatives-26" class="internal"><span class="codenumber">6.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables" class="internal"><span class="codenumber">6.2</span> <span class="title">In Three Variables</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_6.html#In_Three_Variables-6" class="internal"><span class="codenumber">6.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Calculus_7.html" class="internal"><span class="codenumber">7</span> <span class="title">CA7: Local and Global Extrema</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Critical-Points" class="internal"><span class="codenumber">7.1</span> <span class="title">Critical Points</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Critical-Points-16" class="internal"><span class="codenumber">7.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test" class="internal"><span class="codenumber">7.2</span> <span class="title">Second Derivative Test</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Second-Derivative-Test-7" class="internal"><span class="codenumber">7.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema" class="internal"><span class="codenumber">7.3</span> <span class="title">Global Extrema</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_7.html#Global-Extrema-17" class="internal"><span class="codenumber">7.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html" class="internal"><span class="codenumber">8</span> <span class="title">CA8: Chain Rules</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-The_single_variable_chain_rule" class="internal"><span class="codenumber">8.1</span> <span class="title">The Single Variable Chain Rule</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules" class="internal"><span class="codenumber">8.2</span> <span class="title">Multivariable Chain Rules</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Sec-Multivariable-chain-rules-20" class="internal"><span class="codenumber">8.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4" class="internal"><span class="codenumber">8.3</span> <span class="title">Implicit Differentiation</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Chap-Calculus_8.html#Chap-Calculus_8-4-13" class="internal"><span class="codenumber">8.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<div class="toc-title-box"><a href="Calculus_2.html#sec-Advanced-topics2" class="internal"><span class="codenumber">8.7</span> <span class="title">Advanced topics</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Calculus_2.html#subsec-Why-radius-1" class="internal"><span class="codenumber">8.7.1</span> <span class="title">Why radius 1?</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -459,7 +484,7 @@ sagecell.makeSagecell({
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Chap-Calculus_5"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">CA5: Linear Approximations</span>
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">CA3: Linear Approximations</span>
 </h2>
 <section class="introduction" id="Chap-Calculus_5-2"><div class="para logical" id="Chap-Calculus_5-2-1">
 <div class="para">In Math1110 we looked at the idea of “the linearization of a function of one variable”. The idea was that near the point <span class="process-math">\(x=x_0\)</span> we could approximate the function <span class="process-math">\(f(x)\)</span> using the line tangent to the function at <span class="process-math">\(x=x_0\text{.}\)</span> We called this tangent the linearization of the function at <span class="process-math">\(x=x_0\)</span> and used it to derive the “linear approximation formula”,</div>
@@ -470,42 +495,44 @@ sagecell.makeSagecell({
 </div>
 <div class="para">These ideas can also be applied to functions of two variables.</div>
 </div></section><section class="section" id="Sec-Tangent_Planes"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.1</span><span class="space"> </span><span class="title">Tangent Planes</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Tangent Planes</span>
 </h3>
 <div class="para" id="Sec-Tangent_Planes-2">Recall  that  the  graph  associated  with  the  function <span class="process-math">\(z=f(x,y)\)</span> is  a  surface  in <span class="process-math">\(\mathbb{R}^3\)</span> (that passes the vertical line test). Wherever this surface does not have any discontinuities or cusp-like points it will have a tangent plane. Like the tangent line to the graph of a function of one variable,  the  tangent  plane  to  the  function <span class="process-math">\(z=f(x,y)\)</span> at  the  point <span class="process-math">\((x_0,y_0)\)</span> is  the  plane  that “just touches” the surface at the point <span class="process-math">\((x_0,y_0,z_0)\text{.}\)</span>
 </div>
 <article class="example example-like" id="Ex-Tangent_Plane"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Tangent_Plane-1">For  the  function <span class="process-math">\(f(x,y) = 5-\dfrac{x^2+y^2}{2}\)</span> the  graph  below  shows  the  graph of the function and it’s tangent plane at the point <span class="process-math">\((x,y) = (2,1)\text{.}\)</span>
-</div> <figure class="figure figure-like" id="Fig-Example_1_Tangent_Plane"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/5/Ex1_Tangent_Plane.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.2<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= 5 - \dfrac{x^2+y^2}{2}\)</span> and the tangent plane at <span class="process-math">\((2,1)\text{.}\)</span></figcaption></figure></article><div class="para logical" id="Sec-Tangent_Planes-4">
+</div>
+<figure class="figure figure-like" id="Fig-Example_1_Tangent_Plane"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/5/Ex1_Tangent_Plane.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= 5 - \dfrac{x^2+y^2}{2}\)</span> and the tangent plane at <span class="process-math">\((2,1)\text{.}\)</span></figcaption></figure></article><div class="para logical" id="Sec-Tangent_Planes-4">
 <div class="para">To find the equation of the plane tangent to the function <span class="process-math">\(z=f(x,y)\)</span> at the point <span class="process-math">\((x_0,y_0,z_0)\text{,}\)</span> firstly recall that the equation of a plane in Cartesian form is given by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Tangent_Plane_Vector_Form_Figure.html">
 \begin{equation*}
 ax+by+cz = k, \quad a,b,c,k \in \mathbb{R},
 \end{equation*}
 </div>
-<div class="para">or in normal form, as illustrated in <a href="Chap-Calculus_5.html#Fig-Tangent_Plane_Vector_Form_Figure" class="xref" data-knowl="./knowl/xref/Fig-Tangent_Plane_Vector_Form_Figure.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3">Figure 5.3</a>, by</div>
+<div class="para">or in normal form, as illustrated in <a href="Chap-Calculus_5.html#Fig-Tangent_Plane_Vector_Form_Figure" class="xref" data-knowl="./knowl/xref/Fig-Tangent_Plane_Vector_Form_Figure.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.3">Figure 3.3</a>, by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Tangent_Plane_Vector_Form_Figure.html" id="Eqn-Tangent_Plane_Vector_Form">
 \begin{equation}
-\mathbf{n} \cdot (\mathbf{r}-\mathbf{r}_0) = 0\tag{5.1}
+\mathbf{n} \cdot (\mathbf{r}-\mathbf{r}_0) = 0\tag{3.1}
 \end{equation}
 </div>
 <div class="para">where <span class="process-math">\(\mathbf{n} = \langle a,b,c \rangle\)</span> is a normal vector to the plane, <span class="process-math">\(\mathbf{r}_0\)</span> is the position vector of a point on the plane and <span class="process-math">\(\mathbf{r} = \langle x,y,z \rangle\text{.}\)</span>
 </div>
 </div>
 <figure class="figure figure-like" id="Fig-Tangent_Plane_Vector_Form_Figure"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/5/Tangent_Plane_Vector_Form.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3<span class="period">.</span></span><span class="space"> </span>Representation of the normal vector <span class="process-math">\(\mathbf{n}\)</span> to a plane.</figcaption></figure><article class="example example-like" id="Ex-Equation_of_Tangent_Plane"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3<span class="period">.</span></span><span class="space"> </span>Representation of the normal vector <span class="process-math">\(\mathbf{n}\)</span> to a plane.</figcaption></figure><article class="example example-like" id="Ex-Equation_of_Tangent_Plane"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Equation_of_Tangent_Plane-1-1">Find the equation of the tangent plane to the function <span class="process-math">\(f(x,y) = 5-\dfrac{x^2+y^2}{2}\)</span> at <span class="process-math">\((x,y) = (2,1)\text{.}\)</span>
 </div>
 <div class="solutions">
 <details id="Ex-Equation_of_Tangent_Plane-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Equation_of_Tangent_Plane-2-1"><span class="process-math">\(2x+y+z=\dfrac{15}{2}\)</span></div></div></details><details id="Ex-Equation_of_Tangent_Plane-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="Ex-Equation_of_Tangent_Plane-3-1">Now, we know that the partial derivative <span class="process-math">\(f_x(2,1)\)</span> gives the slope of the tangent at <span class="process-math">\(x=2\text{,}\)</span> to the curve of intersection of the surface associated with <span class="process-math">\(f\)</span> and the plane <span class="process-math">\(y=1\text{.}\)</span>
-</div> <figure class="figure figure-like" id="Fig-Example_2_Tangent_Planes"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/5/Ex2_Tangent_Planes.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure> <div class="para logical" id="Ex-Equation_of_Tangent_Plane-3-3">
+</div>
+<figure class="figure figure-like" id="Fig-Example_2_Tangent_Planes"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/5/Ex2_Tangent_Planes.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para logical" id="Ex-Equation_of_Tangent_Plane-3-3">
 <div class="para">Since this tangent line lies in the plane tangent to <span class="process-math">\(f\)</span> at <span class="process-math">\((x,y) = (2,1)\)</span> the vector</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html">
 \begin{equation*}
@@ -526,7 +553,7 @@ ax+by+cz = k, \quad a,b,c,k \in \mathbb{R},
 \amp = \langle 2,1,1 \rangle
 \end{align*}
 </div>
-<div class="para">Thus, using equation <a href="Chap-Calculus_5.html#Eqn-Tangent_Plane_Vector_Form" class="xref" data-knowl="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1">(5.1)</a>, the equation of the plane tangent to <span class="process-math">\(f(x,y) = 5 - \dfrac{x^2+y^2}{2}\)</span> at <span class="process-math">\((x,y) = (2,1)\)</span> is</div>
+<div class="para">Thus, using equation <a href="Chap-Calculus_5.html#Eqn-Tangent_Plane_Vector_Form" class="xref" data-knowl="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.1">(3.1)</a>, the equation of the plane tangent to <span class="process-math">\(f(x,y) = 5 - \dfrac{x^2+y^2}{2}\)</span> at <span class="process-math">\((x,y) = (2,1)\)</span> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html">
 \begin{equation*}
 \langle 2,1,1 \rangle \cdot \left( \langle x,y,z \rangle - \langle 2,1,\frac{5}{2} \rangle \right) = 0
@@ -554,7 +581,7 @@ ax+by+cz = k, \quad a,b,c,k \in \mathbb{R},
 \amp = \langle -f_x(x_0,y_0), -f_y(x_0,y_0),1 \rangle\text{.}
 \end{align*}
 </div>
-<div class="para">Since the point <span class="process-math">\((x_0,y_0,z_0)\)</span> lies on the plane, using equation <a href="Chap-Calculus_5.html#Eqn-Tangent_Plane_Vector_Form" class="xref" data-knowl="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.1">(5.1)</a>, the equation of the tangent plane is</div>
+<div class="para">Since the point <span class="process-math">\((x_0,y_0,z_0)\)</span> lies on the plane, using equation <a href="Chap-Calculus_5.html#Eqn-Tangent_Plane_Vector_Form" class="xref" data-knowl="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.1">(3.1)</a>, the equation of the tangent plane is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Tangent_Plane_Vector_Form.html">
 \begin{equation*}
 \langle  -f_x(x_0,y_0), -f_y(x_0,y_0),1 \rangle \cdot \bigg( \langle x,y,z \rangle - \langle x_0, y_0, z_0 \rangle \bigg) = 0.
@@ -563,7 +590,7 @@ ax+by+cz = k, \quad a,b,c,k \in \mathbb{R},
 <div class="para">On expanding and rearranging this we get the following result.</div>
 </div>
 <article class="theorem theorem-like" id="Thm-Equation-of-tangent-plane"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Thm-Equation-of-tangent-plane-1-1">
 <div class="para">The equation of the plane tangent to the function <span class="process-math">\(f(x,y)\)</span> at the point <span class="process-math">\((x_0,y_0,z_0)\)</span> is</div>
@@ -576,7 +603,7 @@ z = z_0 + f_x(x_0,y_0) (x-x_0) + f_y(x_0,y_0) (y-y_0)\text{,}
 </div>
 </div></article><div class="para" id="Sec-Tangent_Planes-9">The Sage cell below uses the equation of the tangent plane given above to plot the tangent plane to the function <span class="process-math">\(f(x,y)=xy\)</span> at a point <span class="process-math">\((x_0,y_0)\text{.}\)</span>
 </div>
-<pre id="Sec-Tangent_Planes-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y=var('x','y')
+<div id="Sec-Tangent_Planes-10" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y=var('x','y')
 
 f = x*y
 
@@ -597,13 +624,13 @@ def _(x0=slider(-Mx,Mx,step_size=0.1,default=0),y0=slider(-My,My,step_size=0.1,d
     show('(f_x('+latex(x0)+'),f_y('+latex(y0)+'))='+latex((N(fx(x=x0,y=y0),digits=3),N(fy(x=x0,y=y0),digits=3))))
     show('L(x,y)='+latex(L(x=x,y=y)))
     show(plot3d(f,(x,-Mx,Mx),(y,-My,My),color='blue')+plot3d(L,(x,-Mx,Mx),(y,-My,My),color='red'))
-</script></pre>
+</script></div>
 <article class="example example-like" id="Ex-Equation_of_Tangent_Plane_2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Equation_of_Tangent_Plane_2-1-1">Find the equation of the plane tangent to <span class="process-math">\(z = x^2+2y^2\)</span> at the point <span class="process-math">\((x,y)=(1,2)\text{.}\)</span>
 </div> <figure class="figure figure-like" id="Fig-Example_3_Tangent_Plane"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/5/Ex3_Tangent_Plane.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.8<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(z = x^2+2y^2\)</span> and the tangent plane at <span class="process-math">\((1,2)\text{.}\)</span></figcaption></figure><div class="solutions">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.8<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(z = x^2+2y^2\)</span> and the tangent plane at <span class="process-math">\((1,2)\text{.}\)</span></figcaption></figure><div class="solutions">
 <details id="Ex-Equation_of_Tangent_Plane_2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Equation_of_Tangent_Plane_2-2-1"><span class="process-math">\(2x+8y-z-9=0\)</span></div></div></details><details id="Ex-Equation_of_Tangent_Plane_2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex-Equation_of_Tangent_Plane_2-3-1">
 <div class="para">Firstly, note that when <span class="process-math">\((x,y)=(1,2)\text{,}\)</span> <span class="process-math">\(z=9\text{.}\)</span> Now</div>
 <div class="displaymath process-math">
@@ -631,7 +658,7 @@ z = 9+2(x-1)+8(y-2)
 </div>
 </div></div></details>
 </div></article><article class="example example-like" id="Ex-Equation_of_Normal_Line"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Equation_of_Normal_Line-1-1">Find the equation of the line normal to the graph of the function <span class="process-math">\(z=x^2+2y^2\)</span> at the point <span class="process-math">\((x,y) = (1,2)\text{.}\)</span>
 </div>
@@ -645,14 +672,16 @@ z = 9+2(x-1)+8(y-2)
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(\mathbf{r} = \langle x, y, z \rangle\)</span> is the position vector of a general point, <span class="process-math">\(\mathbf{r}_0\)</span> is the position vector of a point that lies on the line and <span class="process-math">\(d\)</span> is a direction vector for the line (i.e. a vector that is parallel to the line).</div>
-</div> <div class="para logical" id="Ex-Equation_of_Normal_Line-3-2">
+</div>
+<div class="para logical" id="Ex-Equation_of_Normal_Line-3-2">
 <div class="para">We know that a vector normal to the surface <span class="process-math">\(z=f(x,y)\)</span> at the point <span class="process-math">\((x_0,y_0,z_0)\)</span> is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \mathbf{n} = \langle -f_x(x_0,y_0), -f_y(x_0,y_0),1 \rangle\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Equation_of_Normal_Line-3-3">
+</div>
+<div class="para logical" id="Ex-Equation_of_Normal_Line-3-3">
 <div class="para">For the function <span class="process-math">\(z=x^2+2y^2\text{,}\)</span> <span class="process-math">\(z_x=2x\)</span> and <span class="process-math">\(z_y=4y\text{.}\)</span> Thus a direction vector for the line normal to <span class="process-math">\(z=x^2+2y^2\)</span> at the point <span class="process-math">\((x,y)=(1,2)\)</span> will be</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -676,12 +705,13 @@ z = 9+2(x-1)+8(y-2)
 <div class="para" id="Sec-Tangent_Planes-13-3-1-1">Find the equation of the tangent plane and normal line to <span class="process-math">\(z = \sqrt{x+y} \sin (xy)\)</span> at the point <span class="process-math">\((x,y)=(0,1)\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="Sec-Tangent_Planes-13-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para" id="Sec-Tangent_Planes-13-4-1-1">Show that every line that is normal to the sphere <span class="process-math">\(x^2+y^2+z^2 = 1\)</span> passes through the origin.</div></article></section></section><section class="section" id="Sec-Linear_Approximations"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.2</span><span class="space"> </span><span class="title">Linear Approximations</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Linear Approximations</span>
 </h3>
-<div class="para" id="Sec-Linear_Approximations-2">In <a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal" title="Section 5.1: Tangent Planes">Section 5.1</a> we found that the equation of the tangent plane to the function <span class="process-math">\(f(x,y)\)</span> at the point <span class="process-math">\((x_0,y_0,f(x_0,y_0))\text{,}\)</span> which is a linear equation.</div>
+<div class="para" id="Sec-Linear_Approximations-2">In <a href="Chap-Calculus_5.html#Sec-Tangent_Planes" class="internal" title="Section 3.1: Tangent Planes">Section 3.1</a> we found that the equation of the tangent plane to the function <span class="process-math">\(f(x,y)\)</span> at the point <span class="process-math">\((x_0,y_0,f(x_0,y_0))\text{,}\)</span> which is a linear equation.</div>
 <article class="definition definition-like" id="Sec-Linear_Approximations-3"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span>
-</h4> <div class="para logical" id="Sec-Linear_Approximations-3-1-1">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="Sec-Linear_Approximations-3-1-1">
 <div class="para">We call the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -691,7 +721,7 @@ L(x,y) = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
 <div class="para">the <dfn class="terminology">linearisation</dfn> of <span class="process-math">\(f\)</span> at the point <span class="process-math">\((x_0,y_0)\text{.}\)</span>
 </div>
 </div></article><article class="example example-like" id="Ex-Linearisation"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.11</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Linearisation-1-1">Find the linearisation of <span class="process-math">\(z=\sin(x)\cos(y)\)</span> at the point <span class="process-math">\((x,y) = \left(\dfrac{\pi}{4},\dfrac{\pi}{4} \right)\text{.}\)</span>
 </div>
@@ -729,8 +759,9 @@ L(x,y) = \dfrac{1}{2} + \dfrac{1}{2} \left( x - \dfrac{\pi}{4} \right) - \dfrac{
 <div class="para">On using the linearisation formula given above, we end up with the following result.</div>
 </div>
 <article class="definition definition-like" id="Sec-Linear_Approximations-6"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Linear Approximation Formula.</span>
-</h4> <div class="para logical" id="Sec-Linear_Approximations-6-2-1">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Linear Approximation Formula.</span>
+</h4>
+<div class="para logical" id="Sec-Linear_Approximations-6-2-1">
 <div class="para">The  linear  approximation  to  the  change, <span class="process-math">\(\Delta z\text{,}\)</span>  in  the  function <span class="process-math">\(z = f(x,y)\)</span> when  the independent variables change from <span class="process-math">\((x_0,y_0)\)</span> to <span class="process-math">\((x_0+\Delta x, y_0 + \Delta y)\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -739,7 +770,7 @@ L(x,y) = \dfrac{1}{2} + \dfrac{1}{2} \left( x - \dfrac{\pi}{4} \right) - \dfrac{
 </div>
 </div></article><div class="para" id="Sec-Linear_Approximations-7">This result is sometimes called the “small change” formula for functions of two variables.</div>
 <article class="example example-like" id="Ex-Linear-Estimation"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.13</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.13</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Linear-Estimation-1-1">For the function <span class="process-math">\(f(x,y) = 3x^4+2y^4\text{,}\)</span> <span class="process-math">\(f(1,2) = 35\text{.}\)</span> Use a linear approximation to estimate <span class="process-math">\(f(1.01,2.03)\text{.}\)</span>
 </div>
@@ -764,7 +795,8 @@ f_x = 12x^3 \: \text{ and } \: f_y = 8y^3
 f_x(1,2) = 12 \: \text{ and } \: f_y(1,2) = 64\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Linear-Estimation-3-2">
+</div>
+<div class="para logical" id="Ex-Linear-Estimation-3-2">
 <div class="para">Thus, with <span class="process-math">\(\Delta x = 0.01\)</span> and <span class="process-math">\(\Delta y = 0.03\text{,}\)</span> via the linear approximation formula</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -780,7 +812,7 @@ f(1.01,2.03) \simeq 35 + 2.04 = 37.04
 </div>
 </div></details>
 </div></article><article class="example example-like" id="Ex-Find_Density_of_Steel_Ball"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.14</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Find_Density_of_Steel_Ball-1-1">A steel ball has a mass, <span class="process-math">\(m\text{,}\)</span> of 6300 <span class="process-math">\(\pm\)</span> <span class="quantity">50 g</span> and has volume, <span class="process-math">\(V\text{,}\)</span> 800 <span class="process-math">\(\pm\)</span> <span class="quantity">10 cm<sup>3</sup></span>. Find the density of the ball, including an estimate of the error.</div>
 <div class="solutions">
@@ -800,7 +832,8 @@ f(1.01,2.03) \simeq 35 + 2.04 = 37.04
 \rho = \dfrac{6300}{800} = 7.875 \: g/cm^3.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Find_Density_of_Steel_Ball-3-2">
+</div>
+<div class="para logical" id="Ex-Find_Density_of_Steel_Ball-3-2">
 <div class="para">Using a linear approximation to estimate the error</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -828,7 +861,7 @@ f(1.01,2.03) \simeq 35 + 2.04 = 37.04
 </div>
 </div></details>
 </div></article><article class="example example-like" id="Ex-Linear-Estimation_Implicit"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.15</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.15</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Linear-Estimation_Implicit-1-1">Use a linear approximation to estimate the value of <span class="process-math">\(z\)</span> at <span class="process-math">\((x,y) = (1.1,-0.02)\)</span> for surface <span class="process-math">\(z = f(x,y)\)</span> defined implicitly by <span class="process-math">\(z-yz^3 = x+2\text{.}\)</span>
 </div>
@@ -856,14 +889,16 @@ z_x - 3y z^2 z_x \amp = 1\\
 z_x \amp = \dfrac{1}{1-3yz^2}\text{.}
 \end{align*}
 </div>
-</div> <div class="para logical" id="Ex-Linear-Estimation_Implicit-3-2">
+</div>
+<div class="para logical" id="Ex-Linear-Estimation_Implicit-3-2">
 <div class="para">Thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
 z_x(1,0) = \dfrac{1}{1-3 \times 0 \times 3^2} = 1\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Linear-Estimation_Implicit-3-3">
+</div>
+<div class="para logical" id="Ex-Linear-Estimation_Implicit-3-3">
 <div class="para">Differentiating with respect to y:</div>
 <div class="displaymath process-math" id="Ex-Linear-Estimation_Implicit-3-3-1">
 \begin{align*}
@@ -872,7 +907,8 @@ z_y - (3y z^2 z_y + z^3) \amp = 0\\
 z_y \amp = \dfrac{z^3}{1-3yz^2}\text{.}
 \end{align*}
 </div>
-</div> <div class="para logical" id="Ex-Linear-Estimation_Implicit-3-4">
+</div>
+<div class="para logical" id="Ex-Linear-Estimation_Implicit-3-4">
 <div class="para">Thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -910,17 +946,17 @@ z=x^2-xy+3y^2\text{.}
 <div class="para" id="Sec-Linear_Approximations-11-4-1-1">A right angled triangle <span class="process-math">\(ABC\)</span> with right angle at <span class="process-math">\(B\)</span> is measured with <span class="process-math">\(AB = \)</span> 10 <span class="process-math">\(\pm\)</span> <span class="quantity">0.02 cm</span> and <span class="process-math">\(BC = \)</span> 3.4 <span class="process-math">\(\pm\)</span> <span class="quantity">0.02 cm</span>. What is the angle at <span class="process-math">\(A\text{,}\)</span> including the error?</div></article><article class="exercise exercise-like" id="Sec-Linear_Approximations-11-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="para logical" id="Sec-Linear_Approximations-11-5-1-1">
 <div class="para">In the figure below a rectangle initially with sides <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> has been made larger so that the sides are now <span class="process-math">\(x + \Delta x\)</span> and <span class="process-math">\(y + \Delta y\text{.}\)</span> <figure class="figure figure-like" id="Fig-Task_4_Figure"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./Calculus/Images/5/Task_4_Figure.PNG" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Shade on the diagram the regions that represent:</div>
-<ol class="lower-alpha">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure> Shade on the diagram the regions that represent:</div>
+<ol class="lower-alpha ol-marker-5" id="Sec-Linear_Approximations-11-5-1-1-6">
 <li id="Sec-Linear_Approximations-11-5-1-1-6-1"><div class="para" id="Sec-Linear_Approximations-11-5-1-1-6-1-1">The increase in area.</div></li>
 <li id="Sec-Linear_Approximations-11-5-1-1-6-2"><div class="para" id="Sec-Linear_Approximations-11-5-1-1-6-2-1">The linear approximation to the increase in area. Explain your answer.</div></li>
 </ol>
 </div></article></section></section><section class="section" id="Quadratic-Approximations"><h3 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.3</span><span class="space"> </span><span class="title">Quadratic Approximations</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Quadratic Approximations</span>
 </h3>
 <div class="para" id="Quadratic-Approximations-2">We have seen previously that for functions of one variable the idea of the linearisation of the function could be extended by considering the Taylor polynomial for the function.</div>
 <article class="example example-like" id="Ex-Exp_Function_Maclaurin_polynomial_of_degree_2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.17</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.17</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Ex-Exp_Function_Maclaurin_polynomial_of_degree_2-1-1">
 <div class="para">For the function <span class="process-math">\(f(x) = e^x\)</span> the Maclaurin polynomial of degree <span class="process-math">\(n\)</span> is</div>
@@ -946,15 +982,15 @@ T_2 (x) = 1 + x + \dfrac{x^2}{2}
 <div class="para">gives a quadratic approximation to <span class="process-math">\(e^x\)</span> about <span class="process-math">\(x=0\)</span> and so on.</div>
 </div></article><div class="para" id="Quadratic-Approximations-4">For functions of one variable we derived the Taylor series by trying to find a power series in <span class="process-math">\((x-a)\)</span> that matched the function and all its derivatives at <span class="process-math">\(x=a\text{.}\)</span> For functions of two variables we can use a similar idea to derive the Taylor series about the point <span class="process-math">\((x,y)=(a,b)\text{.}\)</span> This series will be a power series in <span class="process-math">\((x-a)\)</span> and <span class="process-math">\((y-b)\)</span> that matches the function and its partial derivatives at the point <span class="process-math">\((x,y)=(a,b)\text{.}\)</span> The formula for the Taylor series of two variables is quite lengthy to write and so we will not reproduce it here. However, as with functions of one variable truncations of this series are called Taylor polynomials and the Taylor polynomial of degree 1 is the linearisation of the function. Similarly, the Taylor polynomial of degree 2 will give us a quadratic approximation to the function.</div>
 <article class="definition definition-like" id="Quadratic-Approximations-5"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.18</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor Polynomial of Degree 2.</span>
-</h4> The Taylor Polynomial of degree 2 for the function of two variables <span class="process-math">\(f(x,y)\)</span> about the point <span class="process-math">\((x,y) = (a,b)\)</span> is<div class="displaymath process-math" id="Quadratic-Approximations-5-2-3">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor Polynomial of Degree 2.</span>
+</h4>The Taylor Polynomial of degree 2 for the function of two variables <span class="process-math">\(f(x,y)\)</span> about the point <span class="process-math">\((x,y) = (a,b)\)</span> is<div class="displaymath process-math" id="Quadratic-Approximations-5-2-3">
 \begin{align*}
 T_2(x,y) = \amp f(a,b) + f_x(a,b)(x-a) + f_y(a,b)(y-b)\\
 \amp + \dfrac{f_{xx}(a,b)}{2!} (x-a)^2 + f_{xy}(a,b)(x-a)(y-b) + \dfrac{f_{yy}(a,b)}{2!}(y-b)^2
 \end{align*}
 </div></article><div class="para" id="Quadratic-Approximations-6">The question of how good an approximation this polynomial is goes beyond what we will cover in this course but if <span class="process-math">\(f(x,y)\)</span> has continuous partial derivatives and if <span class="process-math">\((x,y)\)</span> is “sufficiently close to” <span class="process-math">\((a,b)\)</span> then the approximation should be useful.</div>
 <article class="example example-like" id="Ex-Find_quadratic_approx"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.19</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.19</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Find_quadratic_approx-1-1">Find the quadratic approximation to the function <span class="process-math">\(f(x,y) = x^2y\)</span> about the point <span class="process-math">\((x,y) = (1,2)\text{.}\)</span>
 </div>
@@ -967,7 +1003,8 @@ T_2(x,y) = \amp f(a,b) + f_x(a,b)(x-a) + f_y(a,b)(y-b)\\
 f_x = 2xy, \: \: f_y = x^2, \: \: f_{xx} = 2y, \: \: f_{xy} = 2x, \: \: f_{yy} = 0.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Find_quadratic_approx-3-2">
+</div>
+<div class="para logical" id="Ex-Find_quadratic_approx-3-2">
 <div class="para">Now evaluate these at <span class="process-math">\((x,y) = (1,2)\)</span>
 </div>
 <div class="displaymath process-math">
@@ -975,7 +1012,8 @@ f_x = 2xy, \: \: f_y = x^2, \: \: f_{xx} = 2y, \: \: f_{xy} = 2x, \: \: f_{yy} =
 f_x(1,2) = 4, \: \: f_y(1,2) = 1, \: \: f_{xx}(1,2) = 4, \: \: f_{xy}(1,2) = 2, \: \: f_{yy}(1,2) = 0.
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Find_quadratic_approx-3-3">
+</div>
+<div class="para logical" id="Ex-Find_quadratic_approx-3-3">
 <div class="para">Thus, using <span class="process-math">\(f(1,2) = 2\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -985,13 +1023,14 @@ T_2(x,y) = 2+4(x-1)+(y-2)+2(x-1)^2+2(x-1)(y-2)\text{.}
 </div>
 </div></details>
 </div></article><article class="example example-like" id="Ex-Linear_and_quad_approx"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.20</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.20</span><span class="period">.</span>
 </h4>
 <div class="para" id="Ex-Linear_and_quad_approx-1-1">Using both a linear and a quadratic approximation, estimate the difference in the volume between a box with a square base of side length <span class="quantity">1 m</span> and height <span class="quantity">2 m</span> and a box with square base of side length <span class="quantity">1.1 m</span> and height <span class="quantity">2.05 m</span>.</div>
 <div class="solutions">
 <details id="Ex-Linear_and_quad_approx-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
 <div class="para" id="Ex-Linear_and_quad_approx-2-1">Via a linear approximation, <span class="process-math">\(\Delta V = 0.45\text{.}\)</span>
-</div> <div class="para" id="Ex-Linear_and_quad_approx-2-2">Via a quadratic approximation, <span class="process-math">\(\Delta V = 0.48\)</span>
+</div>
+<div class="para" id="Ex-Linear_and_quad_approx-2-2">Via a quadratic approximation, <span class="process-math">\(\Delta V = 0.48\)</span>
 </div>
 </div></details><details id="Ex-Linear_and_quad_approx-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-Linear_and_quad_approx-3-1">
@@ -1001,14 +1040,16 @@ T_2(x,y) = 2+4(x-1)+(y-2)+2(x-1)^2+2(x-1)(y-2)\text{.}
 V(x,y) = x^2y\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Linear_and_quad_approx-3-2">
+</div>
+<div class="para logical" id="Ex-Linear_and_quad_approx-3-2">
 <div class="para">Thus the difference in the volume between the boxes will be the change in <span class="process-math">\(V\)</span> when <span class="process-math">\(x\)</span> changes by 0.1 and <span class="process-math">\(y\)</span> changes by 0.05. Using the results obtained in the example above, via a linear approximation</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Delta V = 4 \Delta x + \Delta y = 4 \times 0.1 + 0.05 = 0.45\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="Ex-Linear_and_quad_approx-3-3">
+</div>
+<div class="para logical" id="Ex-Linear_and_quad_approx-3-3">
 <div class="para">Via a quadratic approximation</div>
 <div class="displaymath process-math" id="Ex-Linear_and_quad_approx-3-3-1">
 \begin{align*}
@@ -1040,7 +1081,7 @@ z = y\ln(x)\text{.}
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
