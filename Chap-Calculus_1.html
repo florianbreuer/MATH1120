@@ -342,9 +342,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" class="internal"><span class="codenumber">10.2</span> <span class="title">Some Simple Applications of First Order Separable DEs</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5" class="internal"><span class="codenumber">10.2</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5" class="internal"><span class="codenumber">10.A</span> <span class="title">Partial Fraction Decomposition</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5-8" class="internal"><span class="codenumber">10.A</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5" class="internal"><span class="codenumber">10.3</span> <span class="title">Appendix on Partial Fraction Decomposition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Differential_Equations_2.html#Differential_Equations_2-5-8" class="internal"><span class="codenumber">10.3</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -489,10 +489,10 @@ eBookConfig.enable_chatcodes =  false;
 <section class="section" id="Sec-Introduction"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">7.1</span><span class="space"> </span><span class="title">Introduction</span>
 </h3>
-<aside class="aside aside-like" id="Sec-Introduction-2"><h4 class="heading"><span class="title">Faster multiplication.</span></h4>
-<div class="para" id="Sec-Introduction-2-2">There are actually multiplication algorithms which are significantly faster than long multiplication. Long multiplication of two <span class="process-math">\(n\)</span>-digit numbers will typically take <span class="process-math">\(n^2\)</span> single-digit multiplications (and another <span class="process-math">\(n\)</span> <span class="process-math">\(n\)</span>-digit additions). The <a class="external" href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/" target="_blank">fastest known algorithm</a><details class="ptx-footnote" aria-live="polite" id="Sec-Introduction-2-2-6"><summary class="ptx-footnote__number" title="Footnote 7.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="Sec-Introduction-2-2-6"><code class="code-inline tex2jax_ignore">www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/</code></div></details> is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <span class="process-math">\(n\ln(n)\text{,}\)</span> which for large values of <span class="process-math">\(n\)</span> is a significant improvement.</div></aside><div class="para" id="Sec-Introduction-3">Have you ever wondered how computers actually calculate things? Computers can only ever do finitely many steps with finitely many bits of information. The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example <span class="process-math">\(x=0.3\)</span> and <span class="process-math">\(y=1.744\text{.}\)</span> You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute <span class="process-math">\(x+y = 2.044\)</span> in a finite number of steps. But then how does it calculate <span class="process-math">\(e^x\)</span> or <span class="process-math">\(\sin(x)\text{,}\)</span> or other non-polynomial functions?</div>
-<div class="para logical" id="Sec-Introduction-4">
-<div class="para">The solution is to <em class="emphasis">approximate</em> the function using a <em class="emphasis">power series</em>. For example, the computer approximates <span class="process-math">\(e^{0.3}\)</span> by adding finitely many terms of</div>
+<div class="para" id="Sec-Introduction-2">Have you ever wondered how computers actually calculate things? Computers can only ever do finitely many steps with finitely many bits of information. The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example <span class="process-math">\(x=0.3\)</span> and <span class="process-math">\(y=1.744\text{.}\)</span> You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute <span class="process-math">\(x+y = 2.044\)</span> in a finite number of steps.</div>
+<aside class="aside aside-like" id="Sec-Introduction-3"><h4 class="heading"><span class="title">Faster multiplication.</span></h4>
+<div class="para" id="Sec-Introduction-3-2">There are actually multiplication algorithms which are significantly faster than long multiplication. Long multiplication of two <span class="process-math">\(n\)</span>-digit numbers will typically take <span class="process-math">\(n^2\)</span> single-digit multiplications (and another <span class="process-math">\(n\)</span> <span class="process-math">\(n\)</span>-digit additions). The <a class="external" href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/" target="_blank">fastest known algorithm</a><details class="ptx-footnote" aria-live="polite" id="Sec-Introduction-3-2-6"><summary class="ptx-footnote__number" title="Footnote 7.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="Sec-Introduction-3-2-6"><code class="code-inline tex2jax_ignore">www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/</code></div></details> is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <span class="process-math">\(n\ln(n)\text{,}\)</span> which for large values of <span class="process-math">\(n\)</span> is a significant improvement.</div></aside><div class="para logical" id="Sec-Introduction-4">
+<div class="para">But then how does it calculate <span class="process-math">\(e^x\)</span> or <span class="process-math">\(\sin(x)\text{,}\)</span> or other non-polynomial functions? The solution is to <em class="emphasis">approximate</em> the function using a <em class="emphasis">power series</em>. For example, the computer approximates <span class="process-math">\(e^{0.3}\)</span> by adding finitely many terms of</div>
 <div class="displaymath process-math" id="eq-e03">
 \begin{equation}
 e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots \tag{7.1}
@@ -500,17 +500,19 @@ e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^
 </div>
 <div class="para">In other words, it approximates the <em class="emphasis">function</em> <span class="process-math">\(e^x\)</span> via the <em class="emphasis">power series</em>
 </div>
-<div class="displaymath process-math" id="Sec-Introduction-4-8">
+<div class="displaymath process-math" id="Sec-Introduction-4-10">
 \begin{align*}
 e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  \\
 \amp = \sum_{n=0}^{\infty} \frac{1}{n!}x^n.
 \end{align*}
 </div>
 </div>
-<aside class="aside aside-like" id="Sec-Introduction-5"><h4 class="heading"><span class="title">Factorials.</span></h4>
-<div class="para logical" id="Sec-Introduction-5-2">
+<div class="para" id="Sec-Introduction-5">How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. The long answer is much more complicated, and is the subject of a whole other area of Mathematics called <em class="emphasis">Numerical Analysis</em>.</div>
+<div class="para" id="Sec-Introduction-6">How does the computer know to use this particular series? And what even <em class="emphasis">is</em> a series? That’s what we’ll learn in this chapter!</div>
+<aside class="aside aside-like" id="Sec-Introduction-7"><h4 class="heading"><span class="title">Factorials.</span></h4>
+<div class="para logical" id="Sec-Introduction-7-2">
 <div class="para">Here <span class="process-math">\(n! = 1\cdot 2 \cdot 3 \cdots n\)</span> is <span class="process-math">\(n\)</span> <dfn class="terminology">factorial</dfn>. It grows really fast:</div>
-<div class="displaymath process-math" id="Sec-Introduction-5-2-4">
+<div class="displaymath process-math" id="Sec-Introduction-7-2-4">
 \begin{align*}
 0! \amp = 1\\
 1! \amp = 1\\
@@ -525,10 +527,9 @@ e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  \
 </div>
 <div class="para">The factorial satifies the useful property that <span class="process-math">\((n+1)! = (n+1)n!\text{,}\)</span> meaning that fractions with factorials in the numerator and denominator will often allow lots of cancellation.</div>
 </div>
-<div class="para" id="Sec-Introduction-5-3">
+<div class="para" id="Sec-Introduction-7-3">
 <dfn class="terminology">Challenge:</dfn> Determine the number of zeroes at the end of the decimal expression for <span class="process-math">\(100!\)</span>
-</div></aside><div class="para" id="Sec-Introduction-6">How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. The long answer is much more complicated, and is the subject of a whole other area of Mathematics called <em class="emphasis">Numerical Analysis</em>.</div>
-<div class="para" id="Sec-Introduction-7">How does the computer know to use this particular series? And what even <em class="emphasis">is</em> a series? That’s what we’ll learn in this chapter!</div></section><section class="section" id="Sec-Infinite_Series"><h3 class="heading hide-type">
+</div></aside></section><section class="section" id="Sec-Infinite_Series"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">7.2</span><span class="space"> </span><span class="title">Infinite Series</span>
 </h3>
 <div class="para" id="Sec-Infinite_Series-2">Let’s look carefully at the calculation <a href="Chap-Calculus_1.html#eq-e03" class="xref" data-knowl="./knowl/xref/eq-e03.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1">(7.1)</a>. We will add the terms one by one and keep an eye on the cumulative total, more formally known as the <dfn class="terminology">partial sums</dfn>:</div>
@@ -630,7 +631,7 @@ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{k=0}^{\infty} \fr
 \end{equation}
 </div>
 <div class="para">Note that each term consists of a <em class="emphasis">coefficient</em> (for example <span class="process-math">\(\frac{1}{3!}\)</span>) multiplied by some power of the variable (for example <span class="process-math">\(x^3\)</span>), so this is an example of what we call a <dfn class="terminology">power series</dfn>. Power series are particularly useful, as we can approximate them by the sum of the first few terms, which is then a polynomial. We’re very comfortable with polynomials. <a href="Chap-Calculus_1.html#fig-exp-plot" class="xref" data-knowl="./knowl/xref/fig-exp-plot.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.2">Figure 7.2</a> shows how the first few partial sums of the series <a href="Chap-Calculus_1.html#eq-exp-series" class="xref" data-knowl="./knowl/xref/eq-exp-series.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3">(7.3)</a> approximate the function <span class="process-math">\(e^x\text{.}\)</span> <figure class="figure figure-like" id="fig-exp-plot"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">
-<img src="external/Calculus/Images/1/exp-power-series-plot.svg" class="contained" alt="described in detail following the image" aria-describedby="sage-exp-plot-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="sage-exp-plot-1-description">A plot of <span class="process-math">\(y=e^x\)</span> together with plots of the partial sums of its power series of degrees <span class="process-math">\(0, 1, 2\)</span> and <span class="process-math">\(3\text{.}\)</span>
+<img src="external/Calculus/Images/1/exp-power-series-plot.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="sage-exp-plot-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="sage-exp-plot-1-description">A plot of <span class="process-math">\(y=e^x\)</span> together with plots of the partial sums of its power series of degrees <span class="process-math">\(0, 1, 2\)</span> and <span class="process-math">\(3\text{.}\)</span>
 </div></details>
 </div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2<span class="period">.</span></span><span class="space"> </span>Approximation to <span class="process-math">\(e^x\)</span> by various partial sums of its power series</figcaption></figure> <aside class="aside aside-like" id="sec-Power-Series-2-11"><div class="para" id="sec-Power-Series-2-11-1">Power series aren’t the only way to represent interesting functions: there are also other types of series, infinite products, continued fractions...</div></aside>
