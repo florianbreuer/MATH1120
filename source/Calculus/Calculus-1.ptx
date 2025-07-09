@@ -61,31 +61,32 @@
     <section xml:id="Sec-Introduction">
         <title>Introduction</title>
 
-        <aside>
-                <title>Faster multiplication</title>
-                <p>
-                    There are actually multiplication algorithms which are significantly faster than long multiplication.
-                    Long multiplication of two <m>n</m>-digit numbers will typically take <m>n^2</m> single-digit multiplications 
-                    (and another <m>n</m> <m>n</m>-digit additions). 
 
-                    The  
-                    <url href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/"> fastest known algorithm </url>
-                    is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <m>n\ln(n)</m>, which for large values of <m>n</m>
-                    is a significant improvement.
-                </p>
-                
-            </aside>
 
         <p>
             Have you ever wondered how computers actually calculate things? 
             Computers can only ever do finitely many steps with finitely many bits of information.
             The inputs in a calculation are numbers represented by finitely many (decimal or binary) digits, for example <m>x=0.3</m> and <m>y=1.744</m>. 
             You probably learned in primary school how to do long addition or multiplication with pencil and paper, and you could imagine that your computer might follow a similar algorithm and compute <m>x+y = 2.044</m> in a finite number of steps.
-            
-            But then how does it calculate <m>e^x</m> or <m>\sin(x)</m>, or other non-polynomial functions?
         </p>
 
+        <aside>
+            <title>Faster multiplication</title>
+            <p>
+                There are actually multiplication algorithms which are significantly faster than long multiplication.
+                Long multiplication of two <m>n</m>-digit numbers will typically take <m>n^2</m> single-digit multiplications 
+                (and another <m>n</m> <m>n</m>-digit additions). 
+
+                The  
+                <url href="https://www.quantamagazine.org/mathematicians-discover-the-perfect-way-to-multiply-20190411/"> fastest known algorithm </url>
+                is due to David Harvey and Joris van der Hoeven, and requires a number of steps proportional to <m>n\ln(n)</m>, which for large values of <m>n</m>
+                is a significant improvement.
+            </p>
+         </aside>
+
         <p>
+            But then how does it calculate <m>e^x</m> or <m>\sin(x)</m>, or other non-polynomial functions?
+
             The solution is to <em>approximate</em> the function using a <em>power series</em>. For example, the computer approximates <m>e^{0.3}</m> by adding finitely many terms of 
             <men xml:id="eq-e03">
                 e^{0.3} = 1 + 0.3 + \frac{1}{2}(0.3)^2 + \frac{1}{6}(0.3)^3 + \frac{1}{24}(0.3)^4 + \cdots 
@@ -95,6 +96,18 @@
                 <mrow> e^x \amp = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3 + \frac{1}{24}x^4 + \cdots  </mrow>
                 <mrow>     \amp = \sum_{n=0}^{\infty} \frac{1}{n!}x^n.</mrow>
             </md>
+        </p>
+
+           
+    
+
+        <p>
+            How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. 
+            The long answer is much more complicated, and is the subject of a whole other area of Mathematics called <em>Numerical Analysis</em>.  
+        </p>
+
+        <p>
+            How does the computer know to use this particular series? And what even <em>is</em> a series? That's what we'll learn in this chapter!
         </p>
 
         <aside>
@@ -120,17 +133,6 @@
                 <term>Challenge:</term> Determine the number of zeroes at the end of the decimal expression for <m>100!</m>
             </p>
         </aside>
-            
-    
-
-        <p>
-            How does the computer know how many of these terms to add? The short answer is: as many as needed to get the required level of accuracy. 
-            The long answer is much more complicated, and is the subject of a whole other area of Mathematics called <em>Numerical Analysis</em>.  
-        </p>
-
-        <p>
-            How does the computer know to use this particular series? And what even <em>is</em> a series? That's what we'll learn in this chapter!
-        </p>
 
     </section>
 
@@ -291,7 +293,7 @@
 
             <figure width="100%" xml:id="fig-exp-plot">
                 <caption>Approximation to <m>e^x</m> by various partial sums of its power series</caption>
-                <image xml:id="sage-exp-plot-1" source="Calculus/Images/1/exp-power-series-plot.svg" width="100%">
+                <image xml:id="sage-exp-plot-1" source="Calculus/Images/1/exp-power-series-plot" width="100%">
                     <description>A plot of <m>y=e^x</m> together with plots of the partial sums of its power series of degrees <m>0, 1, 2</m> and <m>3</m>.</description>
                 </image>
             </figure>

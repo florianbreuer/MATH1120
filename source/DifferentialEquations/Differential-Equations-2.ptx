@@ -517,8 +517,8 @@ def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
 <!-- Appendix: Partial Fraction Decomposition -->
 <!-- =================================================================================================== -->
 
-        <appendix>
-            <title>Partial Fraction Decomposition</title>
+        <section>
+            <title>Appendix on Partial Fraction Decomposition</title>
 
             <p>
                 <term>Partial fraction decomposition</term> is, essentially, the inverse operation of combining fractions by putting them over a common denominator. More formally, partial fraction decomposition expresses a proper rational function (i.e. a function that is the ratio of two polynomials where the degree of the polynomial in the denominator is greater that the degree of the polynomial in the numerator) as the sum of proper rational functions of lesser degree.
@@ -621,7 +621,7 @@ def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
                 </exercise>
             </exercises>
 
-        </appendix>
+        </section>
 
 <!-- =================================================================================================== -->
 

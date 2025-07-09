@@ -27,9 +27,7 @@
         </date>
       </titlepage>
 
-      <p>
-        To add: introduction about maths and computers, Sage etc.
-      </p>
+
 
       <!--
       <colophon>
@@ -52,9 +50,6 @@
     -->
     </frontmatter>
 
-    <p>
-      Based on course notes by Dr. Malcolm Roberts.
-    </p>
 
     <part xml:id="Part-Calculus">
       <title>Calculus</title>
