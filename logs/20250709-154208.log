@@ -1,0 +1,4 @@
+WARNING : Using CLI version 2.13.0 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.13.0.
