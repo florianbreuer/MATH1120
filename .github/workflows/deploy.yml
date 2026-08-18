@@ -40,6 +40,7 @@ jobs:
               run: |
                   git worktree add --detach /tmp/gh-pages origin/gh-pages
                   rsync --archive --delete --exclude=.git output/stage/ /tmp/gh-pages/
+                  touch /tmp/gh-pages/.nojekyll
                   cd /tmp/gh-pages
                   git config user.name "github-actions[bot]"
                   git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
