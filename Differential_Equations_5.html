@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DE5: Non-Homogeneous Second Order Linear DEs</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,17 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -118,19 +123,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -175,7 +182,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -371,7 +378,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -494,6 +501,7 @@ ay''+by'+c=f(x)
 \end{equation*}
 </div>
 <div class="para">Some insight into how we might solve such DEs can be gained by revisiting some relevant first order examples.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_5-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div></section><section class="section" id="Non-Homogeneous_First_Order_Linear_DEs"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">13.1</span><span class="space"> </span><span class="title">Non-Homogeneous First Order Linear DEs</span>
 </h3>
@@ -505,6 +513,7 @@ ay'+by=f(x)
 \end{equation*}
 </div>
 <div class="para">We know that we can solve these DEs via an integrating factor, (see section <a href="Differential_Equations_3.html" class="internal" title="Chapter 11: DE3: First Order Linear DEs">Chapter 11</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Non-Homogeneous_First_Order_Linear_DEs-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
@@ -516,8 +525,15 @@ ay'+by=f(x)
 y'-y=x
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Non-Homogeneous_First_Order_Linear_DEs-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Non-Homogeneous_First_Order_Linear_DEs-3-2-1"><span class="process-math">\(y(x)=Ae^x-x-1\)</span></div></div></details><details id="Non-Homogeneous_First_Order_Linear_DEs-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Non-Homogeneous_First_Order_Linear_DEs-3-3-1">
+<details id="Non-Homogeneous_First_Order_Linear_DEs-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Non-Homogeneous_First_Order_Linear_DEs-3-2-1">
+<span class="process-math">\(y(x)=Ae^x-x-1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-3-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.1.1"><a href="#Non-Homogeneous_First_Order_Linear_DEs-3-2" title="Copy permalink for Answer 13.1.1">🔗</a></div>
+</div></details><details id="Non-Homogeneous_First_Order_Linear_DEs-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Non-Homogeneous_First_Order_Linear_DEs-3-3-1">
 <div class="para">Multiplying both sides of this DE via the integrating factor <span class="process-math">\(I(x)=e^{\int -1\hspace{2mm}dx}=e^{-x}\)</span> gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -550,7 +566,10 @@ y'-y=0
 </div>
 <div class="para">and <span class="process-math">\(y_p(x)\)</span> is one particular solution to the original non-homogeneous DE. The second fact to note is that the form of the particular solution <span class="process-math">\(y_p(x)=-x-1\)</span> is the same as that of the non-homogeneous term <span class="process-math">\(f(x)=x\text{,}\)</span> that is they are both polynomials of degree <span class="process-math">\(1\text{.}\)</span>
 </div>
-</div></div></details></article><article class="example example-like" id="Non-Homogeneous_First_Order_Linear_DEs-4"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-3-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.1.1"><a href="#Non-Homogeneous_First_Order_Linear_DEs-3-3" title="Copy permalink for Solution 13.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.1"><a href="#Non-Homogeneous_First_Order_Linear_DEs-3" title="Copy permalink for Example 13.1">🔗</a></div></article><article class="example example-like" id="Non-Homogeneous_First_Order_Linear_DEs-4"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Non-Homogeneous_First_Order_Linear_DEs-4-1">
@@ -560,8 +579,15 @@ y'-y=0
 y'-y=\cos(x)
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-4-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Non-Homogeneous_First_Order_Linear_DEs-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Non-Homogeneous_First_Order_Linear_DEs-4-2-1"><span class="process-math">\(y(x)=Ae^x+\dfrac{1}{2}\sin(x)-\dfrac{1}{2}\cos(x)\)</span></div></div></details><details id="Non-Homogeneous_First_Order_Linear_DEs-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Non-Homogeneous_First_Order_Linear_DEs-4-3-1">
+<details id="Non-Homogeneous_First_Order_Linear_DEs-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Non-Homogeneous_First_Order_Linear_DEs-4-2-1">
+<span class="process-math">\(y(x)=Ae^x+\dfrac{1}{2}\sin(x)-\dfrac{1}{2}\cos(x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-4-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.2.1"><a href="#Non-Homogeneous_First_Order_Linear_DEs-4-2" title="Copy permalink for Answer 13.2.1">🔗</a></div>
+</div></details><details id="Non-Homogeneous_First_Order_Linear_DEs-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Non-Homogeneous_First_Order_Linear_DEs-4-3-1">
 <div class="para">Solving via an integrating factor gives the general solution as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -582,7 +608,10 @@ y_c(x)=Ae^x \textrm{ and } y_p(x)=\frac{1}{2}\sin(x)-\frac{1}{2}\cos(x)
 </div>
 <div class="para">we see that <span class="process-math">\(y_c(x)\)</span> is the general solution to the associated homogeneous DE and that <span class="process-math">\(y_p(x)\)</span> and <span class="process-math">\(f(x)\)</span> are both trigonometric functions. In this case it seems reasonable that <span class="process-math">\(y_c(x)\)</span> contains both a <span class="process-math">\(\cos(x)\)</span> term and a <span class="process-math">\(\sin(x)\)</span> since to satisfy the DE we would expect the particular solution to contain terms like <span class="process-math">\(f(x)=\cos(x)\)</span> and its derivative <span class="process-math">\(f'(x)=-\sin(x)\text{.}\)</span>
 </div>
-</div></div></details></article><article class="example example-like" id="Example_13_1_3"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-4-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.2.1"><a href="#Non-Homogeneous_First_Order_Linear_DEs-4-3" title="Copy permalink for Solution 13.2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.2"><a href="#Non-Homogeneous_First_Order_Linear_DEs-4" title="Copy permalink for Example 13.2">🔗</a></div></article><article class="example example-like" id="Example_13_1_3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Example_13_1_3-1">
@@ -592,8 +621,15 @@ y_c(x)=Ae^x \textrm{ and } y_p(x)=\frac{1}{2}\sin(x)-\frac{1}{2}\cos(x)
 y'-y=e^x
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Example_13_1_3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Example_13_1_3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Example_13_1_3-2-1"><span class="process-math">\(y(x)=Ae^x+xe^x\)</span></div></div></details><details id="Example_13_1_3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Example_13_1_3-3-1">
+<details id="Example_13_1_3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Example_13_1_3-2-1">
+<span class="process-math">\(y(x)=Ae^x+xe^x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Example_13_1_3-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.3.1"><a href="#Example_13_1_3-2" title="Copy permalink for Answer 13.3.1">🔗</a></div>
+</div></details><details id="Example_13_1_3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Example_13_1_3-3-1">
 <div class="para">The general solution to this DE, found via an integrating factor, is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -607,7 +643,11 @@ y_c(x)=Ae^x \textrm{ and } y_p(x)=xe^x
 \end{equation*}
 </div>
 <div class="para">we see that, once again, <span class="process-math">\(y_c(x)\)</span> is the general solution to the associated homogeneous DE but this time <span class="process-math">\(y_p(x)\)</span> is not quite the same form as <span class="process-math">\(f(x)\text{.}\)</span> The difference in this case from the previous two examples is that here <span class="process-math">\(f(x)\)</span> is the same form as <span class="process-math">\(y_c(x)\text{,}\)</span> the solution to the homogeneous DE and hence <span class="process-math">\(y_p(x)\)</span> can’t also be of this form.</div>
-</div></div></details></article><div class="para" id="Non-Homogeneous_First_Order_Linear_DEs-6">The above examples all illustrate the following more general result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Example_13_1_3-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.3.1"><a href="#Example_13_1_3-3" title="Copy permalink for Solution 13.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.3"><a href="#Example_13_1_3" title="Copy permalink for Example 13.3">🔗</a></div></article><div class="para" id="Non-Homogeneous_First_Order_Linear_DEs-6">The above examples all illustrate the following more general result.<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Non-Homogeneous_First_Order_Linear_DEs-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span>
 </h4>
@@ -631,7 +671,9 @@ ay'+by=0
 \end{equation*}
 </div>
 <div class="para">and <span class="process-math">\(y_p(x)\)</span> is any particular solution to non-homogeneous DE.</div>
-</div></article><section class="exercises" id="Non-Homogeneous_First_Order_Linear_DEs-8"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-7-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 13.4"><a href="#Non-Homogeneous_First_Order_Linear_DEs-7" title="Copy permalink for Definition 13.4">🔗</a></div></article><section class="exercises" id="Non-Homogeneous_First_Order_Linear_DEs-8"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Non-Homogeneous_First_Order_Linear_DEs-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -660,7 +702,9 @@ y(x)=y_c(x)+y_p(x)
 ay'+by=f(x)
 \end{equation*}
 </div>
-</div></article></section></section><section class="section" id="The_Method_of_Undetermined_Coefficients"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Non-Homogeneous_First_Order_Linear_DEs-8-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 13.1.1"><a href="#Non-Homogeneous_First_Order_Linear_DEs-8-2" title="Copy permalink for Exercise 13.1.1">🔗</a></div></article><div class="autopermalink" data-description="Exercises 13.1: Example Tasks"><a href="#Non-Homogeneous_First_Order_Linear_DEs-8" title="Copy permalink for Exercises 13.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 13.1: Non-Homogeneous First Order Linear DEs"><a href="#Non-Homogeneous_First_Order_Linear_DEs" title="Copy permalink for Section 13.1: Non-Homogeneous First Order Linear DEs">🔗</a></div></section><section class="section" id="The_Method_of_Undetermined_Coefficients"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">13.2</span><span class="space"> </span><span class="title">The Method of Undetermined Coefficients</span>
 </h3>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-2">
@@ -671,6 +715,7 @@ ay''+by'+cy=f(x)
 \end{equation*}
 </div>
 <div class="para">Since we don’t have any alternative method (such as using an integrating factor) for finding a solution to this class of DE we are forced to use the method suggested by the previous section.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="The_Method_of_Undetermined_Coefficients-3"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
@@ -695,7 +740,9 @@ ay''+by'+cy=0
 \end{equation*}
 </div>
 <div class="para">and <span class="process-math">\(y_p(x)\)</span> is any <dfn class="terminology">particular solution</dfn> to non-homogeneous DE.</div>
-</div></article><div class="para logical" id="The_Method_of_Undetermined_Coefficients-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 13.5"><a href="#The_Method_of_Undetermined_Coefficients-3" title="Copy permalink for Definition 13.5">🔗</a></div></article><div class="para logical" id="The_Method_of_Undetermined_Coefficients-4">
 <div class="para">It is easy to show that <span class="process-math">\(y(x)=y_c(x)+y_p(x)\)</span> is a solution to the non-homogeneous DE but how do we know that we have found all such solutions, i.e. that we have found the general solution? (After all, <span class="process-math">\(y_p(x)\)</span> is just one particular solution.) Let <span class="process-math">\(\phi(x)\)</span> be any solution to the DE</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -709,17 +756,23 @@ ay''+by'+cy=0
 \end{equation*}
 </div>
 <div class="para">since</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-5"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-5-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-5">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-5-1">
 \begin{align*}
 ag''+bg'+cg \amp = a(\phi''-y_p'')+b(\phi'-y_p')+c(\phi-y_p)\\
 \amp = (a\phi''+b\phi'+c\phi)-(ay_p''+by_p'+cy_p)\\
 \amp = f(x)-f(x)\\
 \amp =0
 \end{align*}
-</div></div>
-<div class="para" id="The_Method_of_Undetermined_Coefficients-6">Now since <span class="process-math">\(y_c(x)\)</span> is the general solution to the homogeneous DE, <span class="process-math">\(g(x)\)</span> must be one of the solutions in <span class="process-math">\(y_c(x)\text{.}\)</span> Thus <span class="process-math">\(\phi(x)=g(x)+y_p(x)\)</span> must be one of the solutions in <span class="process-math">\(y(x)=y_c(x)+y_p(x)\text{,}\)</span> or to put it the other way, <span class="process-math">\(y(x)=y_c(x)+y_p(x)\)</span> contains all solutions to the non-homogeneous DE.</div>
-<div class="para" id="The_Method_of_Undetermined_Coefficients-7">Thus to solve a non-homogeneous second order DE with constant coefficients we have to first find the complementary solution, then find any particular solution and then add these solutions together. We already know how to find the complementary solution (see <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a>) so all that remains is to work out how to find a particular solution, <span class="process-math">\(y_p\text{.}\)</span> The <dfn class="terminology">method of undetermined coefficients</dfn> tries to find <span class="process-math">\(y_p\)</span> by guessing that the form that <span class="process-math">\(y_p\)</span> should take is a linear combination of the non-homogeneous term, <span class="process-math">\(f(x)\text{,}\)</span> and its derivatives.</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="The_Method_of_Undetermined_Coefficients-6">Now since <span class="process-math">\(y_c(x)\)</span> is the general solution to the homogeneous DE, <span class="process-math">\(g(x)\)</span> must be one of the solutions in <span class="process-math">\(y_c(x)\text{.}\)</span> Thus <span class="process-math">\(\phi(x)=g(x)+y_p(x)\)</span> must be one of the solutions in <span class="process-math">\(y(x)=y_c(x)+y_p(x)\text{,}\)</span> or to put it the other way, <span class="process-math">\(y(x)=y_c(x)+y_p(x)\)</span> contains all solutions to the non-homogeneous DE.<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="The_Method_of_Undetermined_Coefficients-7">Thus to solve a non-homogeneous second order DE with constant coefficients we have to first find the complementary solution, then find any particular solution and then add these solutions together. We already know how to find the complementary solution (see <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a>) so all that remains is to work out how to find a particular solution, <span class="process-math">\(y_p\text{.}\)</span> The <dfn class="terminology">method of undetermined coefficients</dfn> tries to find <span class="process-math">\(y_p\)</span> by guessing that the form that <span class="process-math">\(y_p\)</span> should take is a linear combination of the non-homogeneous term, <span class="process-math">\(f(x)\text{,}\)</span> and its derivatives.<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="The_Method_of_Undetermined_Coefficients-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
 </h4>
@@ -730,8 +783,14 @@ ag''+bg'+cg \amp = a(\phi''-y_p'')+b(\phi'-y_p')+c(\phi-y_p)\\
 y''+2y'-3y=4x^2
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="The_Method_of_Undetermined_Coefficients-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="The_Method_of_Undetermined_Coefficients-8-2-1"><span class="process-math">\(y_p(x)=-\dfrac{4}{3}x^2-\dfrac{16}{9}x-\dfrac{56}{27}\)</span></div></div></details><details id="The_Method_of_Undetermined_Coefficients-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="The_Method_of_Undetermined_Coefficients-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="The_Method_of_Undetermined_Coefficients-8-2-1">
+<span class="process-math">\(y_p(x)=-\dfrac{4}{3}x^2-\dfrac{16}{9}x-\dfrac{56}{27}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.6.1"><a href="#The_Method_of_Undetermined_Coefficients-8-2" title="Copy permalink for Answer 13.6.1">🔗</a></div>
+</div></details><details id="The_Method_of_Undetermined_Coefficients-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-8-3-1">
 <div class="para">Here the non-homogeneous term is <span class="process-math">\(f(x)=4x^2\text{.}\)</span> This is a 2nd degree polynomial. The first and second derivatives of this will be a linear polynomial and a constant respectively. Thus we guess that a particular solution can found of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/DEs_5_Example_4_1.html" id="DEs_5_Example_4_1">
@@ -752,22 +811,30 @@ y_p''=2A
 \end{equation*}
 </div>
 <div class="para">Substituting into the DE gives</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-8-3-2"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-8-3-2-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-8-3-2">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-8-3-2-1">
 \begin{align*}
 y_p''+2y_p'-3y_p \amp = 4x^2\\
 (2A)+2(2Ax+B)-3(Ax^2+Bx+C)\amp = 4x^2\\
 (-3A)x^2+(4A-3B)x+(2A+2B-3C)\amp = 4x^2
 \end{align*}
-</div></div>
-<div class="para" id="The_Method_of_Undetermined_Coefficients-8-3-3">Thus for <span class="process-math">\(y_p\)</span> to be a solution</div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-8-3-4"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-8-3-4-1">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="The_Method_of_Undetermined_Coefficients-8-3-3">Thus for <span class="process-math">\(y_p\)</span> to be a solution<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-8-3-4">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-8-3-4-1">
 \begin{align*}
 -3A \amp = 4\\
 4A-3B \amp = 0\\
 2A+2B-3C \amp = 0
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-8-3-5">
 <div class="para">Solving these equations gives</div>
 <div class="displaymath process-math">
@@ -781,8 +848,10 @@ A=-\frac{4}{3}, \hspace{5mm} B=-\frac{16}{9}, \hspace{5mm} C=-\frac{56}{27}
 y_p(x)=-\frac{4}{3}x^2-\frac{16}{9}x-\frac{56}{27}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-8-3-5" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><div class="para" id="The_Method_of_Undetermined_Coefficients-9">The method of undetermined coefficients is only useful for finding the particular solution when the non-homogeneous term is fairly simple. <a href="Differential_Equations_5.html#DEs_5_table" class="xref" data-knowl="./knowl/xref/DEs_5_table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 13.7">Table 13.7</a> gives a guide to the form of the particular solution, <span class="process-math">\(y_p\text{,}\)</span> to try for various non-homogeneous terms <span class="process-math">\(f\text{.}\)</span> <figure class="table table-like" id="DEs_5_table"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">13.7<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="autopermalink" data-description="Solution 13.6.1"><a href="#The_Method_of_Undetermined_Coefficients-8-3" title="Copy permalink for Solution 13.6.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.6"><a href="#The_Method_of_Undetermined_Coefficients-8" title="Copy permalink for Example 13.6">🔗</a></div></article><div class="para" id="The_Method_of_Undetermined_Coefficients-9">The method of undetermined coefficients is only useful for finding the particular solution when the non-homogeneous term is fairly simple. <a href="Differential_Equations_5.html#DEs_5_table" class="xref" data-knowl="./knowl/xref/DEs_5_table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 13.7">Table 13.7</a> gives a guide to the form of the particular solution, <span class="process-math">\(y_p\text{,}\)</span> to try for various non-homogeneous terms <span class="process-math">\(f\text{.}\)</span> <figure class="table table-like" id="DEs_5_table"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">13.7<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Table 13.7"><a href="#DEs_5_table" title="Copy permalink for Table 13.7">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b1 r0 l0 t0 lines">Non-Homogenous Term</th>
 <th scope="col" class="c m b1 r0 l0 t0 lines">Form of Particular Solution</th>
@@ -809,7 +878,7 @@ y_p(x)=-\frac{4}{3}x^2-\frac{16}{9}x-\frac{56}{27}
 <span class="process-math">\(y_p(x)\)</span> is a linear combination of <span class="process-math">\(f(x)\)</span> and its derivatives, i.e. <span class="process-math">\(y_p(x)=\sum_{k=0} C_kf^{(k)}(x)\)</span>
 </td>
 </tr>
-</table></div></figure>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-9" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="The_Method_of_Undetermined_Coefficients-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.8</span><span class="period">.</span>
@@ -821,8 +890,14 @@ y_p(x)=-\frac{4}{3}x^2-\frac{16}{9}x-\frac{56}{27}
 x''+6x'+8x=8\sin(2t)
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="The_Method_of_Undetermined_Coefficients-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="The_Method_of_Undetermined_Coefficients-10-2-1"><span class="process-math">\(x(t)=Ae^{-2t}+Be^{-4t}+\dfrac{1}{5}\sin(2t)-\dfrac{3}{5}\cos(2t)\)</span></div></div></details><details id="The_Method_of_Undetermined_Coefficients-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="The_Method_of_Undetermined_Coefficients-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="The_Method_of_Undetermined_Coefficients-10-2-1">
+<span class="process-math">\(x(t)=Ae^{-2t}+Be^{-4t}+\dfrac{1}{5}\sin(2t)-\dfrac{3}{5}\cos(2t)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.8.1"><a href="#The_Method_of_Undetermined_Coefficients-10-2" title="Copy permalink for Answer 13.8.1">🔗</a></div>
+</div></details><details id="The_Method_of_Undetermined_Coefficients-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-1">
 <div class="para">The first step is to find the general solution to the homogeneous DE</div>
 <div class="displaymath process-math">
@@ -855,13 +930,17 @@ x_p(t)=C_1\sin(2t)+C_2\cos(2t)
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(C_1\)</span> and <span class="process-math">\(C_2\)</span> are the coefficients to be determined. Now</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-2"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-10-3-2-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-2">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-10-3-2-1">
 \begin{align*}
 x_p'(t) \amp = 2C_1\cos(2t)-2C_2\sin(2t)\\
 x_p''(t) \amp = -4C_1\sin(2t)-4C_2\cos(2t)
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-3">
 <div class="para">For <span class="process-math">\(x_p(t)\)</span> to be a solution</div>
 <div class="displaymath process-math">
@@ -882,13 +961,17 @@ x_p''+6x_p'+8x_p=8\sin(2t)
 \end{equation*}
 </div>
 <div class="para">Equating coefficients on each side of the equation gives</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-3-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-4"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-10-3-4-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-4">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-10-3-4-1">
 \begin{align*}
 4C_1-12C_2 \amp = 8\\
 12C_1+4C_2 \amp = 0
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-10-3-5">
 <div class="para">Solving these equations gives</div>
 <div class="displaymath process-math">
@@ -908,8 +991,10 @@ x_p(t)=\frac{1}{5}\sin(2t)-\frac{3}{5}\cos(2t)
 x(t)=Ae^{-2t}+Be^{-4t}+\frac{1}{5}\sin(2t)-\frac{3}{5}\cos(2t)
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-10-3-5" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><article class="example example-like" id="The_Method_of_Undetermined_Coefficients-11"><h4 class="heading">
+<div class="autopermalink" data-description="Solution 13.8.1"><a href="#The_Method_of_Undetermined_Coefficients-10-3" title="Copy permalink for Solution 13.8.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.8"><a href="#The_Method_of_Undetermined_Coefficients-10" title="Copy permalink for Example 13.8">🔗</a></div></article><article class="example example-like" id="The_Method_of_Undetermined_Coefficients-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.9</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-1">
@@ -924,8 +1009,14 @@ y''+3y'=5e^{2x}
 y(0)=1,\hspace{5mm} y'(0)=-2
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="The_Method_of_Undetermined_Coefficients-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="The_Method_of_Undetermined_Coefficients-11-2-1"><span class="process-math">\(y(x)=e^{-3x}+\dfrac{1}{2}e^{2x}-\dfrac{1}{2}\)</span></div></div></details><details id="The_Method_of_Undetermined_Coefficients-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="The_Method_of_Undetermined_Coefficients-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="The_Method_of_Undetermined_Coefficients-11-2-1">
+<span class="process-math">\(y(x)=e^{-3x}+\dfrac{1}{2}e^{2x}-\dfrac{1}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.9.1"><a href="#The_Method_of_Undetermined_Coefficients-11-2" title="Copy permalink for Answer 13.9.1">🔗</a></div>
+</div></details><details id="The_Method_of_Undetermined_Coefficients-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-1">
 <div class="para">To solve the initial-value problem we have to begin by finding the general solution to the DE. Since this DE is a non-homogeneous second order DE with constant coefficients we have to first find the general solution to the associated homogeneous DE</div>
 <div class="displaymath process-math">
@@ -958,13 +1049,17 @@ y_p(x)=Ce^{2x}
 \end{equation*}
 </div>
 <div class="para">Then</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-2"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-11-3-2-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-2">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-11-3-2-1">
 \begin{align*}
 y_p'(x) \amp =2Ce^{2x}\\
 y_p''(x) \amp=4Ce^{2x}
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-3">
 <div class="para">For this to be a solution</div>
 <div class="displaymath process-math">
@@ -973,13 +1068,17 @@ y_p''+3y_p'=5e^{2x}
 \end{equation*}
 </div>
 <div class="para">and so</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-3-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-4"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-11-3-4-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-4">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-11-3-4-1">
 \begin{align*}
 4Ce^{2x}+3(2Ce^{2x}) \amp =5e^{2x}\\
 10Ce^{2x} \amp=5e^{2x}
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-11-3-5">
 <div class="para">On equating coefficients on both sides of this equation</div>
 <div class="displaymath process-math">
@@ -1017,8 +1116,11 @@ B=1
 y(x)=e^{-3x}+\frac{1}{2}e^{2x}-\frac{1}{2}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-11-3-5" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><div class="para" id="The_Method_of_Undetermined_Coefficients-12">If the non-homogeneous term <span class="process-math">\(f\)</span> is itself a solution to the associated homogeneous DE then the form that we guess for the particular solution has to change. Guided by our experience from non-homogeneous first order constant coefficient DEs (see <a href="Differential_Equations_5.html#Example_13_1_3" class="xref" data-knowl="./knowl/xref/Example_13_1_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 13.3">Example 13.3</a>) what we try for the particular solution is to multiply the usual form by <span class="process-math">\(x\)</span> (or <span class="process-math">\(x^2\text{,}\)</span> <span class="process-math">\(x^3\)</span> etc. if necessary) so that no term in the particular solution is itself a solution to the homogeneous DE.</div>
+<div class="autopermalink" data-description="Solution 13.9.1"><a href="#The_Method_of_Undetermined_Coefficients-11-3" title="Copy permalink for Solution 13.9.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.9"><a href="#The_Method_of_Undetermined_Coefficients-11" title="Copy permalink for Example 13.9">🔗</a></div></article><div class="para" id="The_Method_of_Undetermined_Coefficients-12">If the non-homogeneous term <span class="process-math">\(f\)</span> is itself a solution to the associated homogeneous DE then the form that we guess for the particular solution has to change. Guided by our experience from non-homogeneous first order constant coefficient DEs (see <a href="Differential_Equations_5.html#Example_13_1_3" class="xref" data-knowl="./knowl/xref/Example_13_1_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 13.3">Example 13.3</a>) what we try for the particular solution is to multiply the usual form by <span class="process-math">\(x\)</span> (or <span class="process-math">\(x^2\text{,}\)</span> <span class="process-math">\(x^3\)</span> etc. if necessary) so that no term in the particular solution is itself a solution to the homogeneous DE.<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-12" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="The_Method_of_Undetermined_Coefficients-13"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.10</span><span class="period">.</span>
 </h4>
@@ -1029,8 +1131,14 @@ y(x)=e^{-3x}+\frac{1}{2}e^{2x}-\frac{1}{2}
 \frac{d^2u}{dt^2}+\frac{du}{dt}-2u=e^t
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-13-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="The_Method_of_Undetermined_Coefficients-13-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="The_Method_of_Undetermined_Coefficients-13-2-1"><span class="process-math">\(u(t)=Ae^t+Be^{-2t}+\dfrac{1}{3}te^t\)</span></div></div></details><details id="The_Method_of_Undetermined_Coefficients-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="The_Method_of_Undetermined_Coefficients-13-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="The_Method_of_Undetermined_Coefficients-13-2-1">
+<span class="process-math">\(u(t)=Ae^t+Be^{-2t}+\dfrac{1}{3}te^t\)</span><div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-13-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.10.1"><a href="#The_Method_of_Undetermined_Coefficients-13-2" title="Copy permalink for Answer 13.10.1">🔗</a></div>
+</div></details><details id="The_Method_of_Undetermined_Coefficients-13-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-13-3-1">
 <div class="para">The general solution to the associated homogeneous DE, i.e.</div>
 <div class="displaymath process-math">
@@ -1069,13 +1177,17 @@ u_p(t)=Cte^t
 \end{equation*}
 </div>
 <div class="para">Substituting into the DE gives</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-13-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-13-3-2"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-13-3-2-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-13-3-2">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-13-3-2-1">
 \begin{align*}
 (Cte^t+2Ce^t)+(Cte^t+Ce^t)-2(Cte^t) \amp =e^t\\
 3Ce^t \amp =e^t
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-13-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-13-3-3">
 <div class="para">Notice that the <span class="process-math">\(te^t\)</span> terms will cancel out and so on equating the coefficients of the <span class="process-math">\(e^t\)</span> terms gives</div>
 <div class="displaymath process-math">
@@ -1095,8 +1207,10 @@ u_p(t)=\frac{1}{3}te^t
 u(t)=Ae^t+Be^{-2t}+\frac{1}{3}te^t
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-13-3-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><article class="example example-like" id="The_Method_of_Undetermined_Coefficients-14"><h4 class="heading">
+<div class="autopermalink" data-description="Solution 13.10.1"><a href="#The_Method_of_Undetermined_Coefficients-13-3" title="Copy permalink for Solution 13.10.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.10"><a href="#The_Method_of_Undetermined_Coefficients-13" title="Copy permalink for Example 13.10">🔗</a></div></article><article class="example example-like" id="The_Method_of_Undetermined_Coefficients-14"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.11</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-1">
@@ -1111,8 +1225,14 @@ y''+y'=x
 y(0)=1,\hspace{5mm} y'(0)=1
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="The_Method_of_Undetermined_Coefficients-14-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="The_Method_of_Undetermined_Coefficients-14-2-1"><span class="process-math">\(y(x)=3-2e^{-x}+\dfrac{1}{2}x^2-x\)</span></div></div></details><details id="The_Method_of_Undetermined_Coefficients-14-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="The_Method_of_Undetermined_Coefficients-14-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="The_Method_of_Undetermined_Coefficients-14-2-1">
+<span class="process-math">\(y(x)=3-2e^{-x}+\dfrac{1}{2}x^2-x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 13.11.1"><a href="#The_Method_of_Undetermined_Coefficients-14-2" title="Copy permalink for Answer 13.11.1">🔗</a></div>
+</div></details><details id="The_Method_of_Undetermined_Coefficients-14-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-1">
 <div class="para">The associated homogeneous DE is</div>
 <div class="displaymath process-math">
@@ -1139,27 +1259,39 @@ y_p(x)=C_1x^2+C_2x
 \end{equation*}
 </div>
 <div class="para">Thus</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-2"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-14-3-2-1">
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-2">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-14-3-2-1">
 \begin{align*}
 y_p'(x) \amp=2C_1x+C_2\\
 y_p''(x) \amp=2C_1
 \end{align*}
-</div></div>
-<div class="para" id="The_Method_of_Undetermined_Coefficients-14-3-3">Substituting into the DE gives</div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-4"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-14-3-4-1">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="The_Method_of_Undetermined_Coefficients-14-3-3">Substituting into the DE gives<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-4">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-14-3-4-1">
 \begin{align*}
 (2C_1)+(2C_1x+C_2) \amp =x\\
 (2C_1)x+(2C_1+C_2) \amp =x
 \end{align*}
-</div></div>
-<div class="para" id="The_Method_of_Undetermined_Coefficients-14-3-5">Equating coefficients yields</div>
-<div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-6"><div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-14-3-6-1">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="The_Method_of_Undetermined_Coefficients-14-3-5">Equating coefficients yields<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-6">
+<div class="displaymath process-math" id="The_Method_of_Undetermined_Coefficients-14-3-6-1">
 \begin{align*}
 2C_1 \amp =1\\
 2C_1+C_2 \amp =0
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-14-3-7">
 <div class="para">and hence</div>
 <div class="displaymath process-math">
@@ -1211,8 +1343,10 @@ A=-2,\hspace{5mm} B=3
 y(x)=3-2e^{-x}+\frac{1}{2}x^2-x
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-14-3-7" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><section class="exercises" id="The_Method_of_Undetermined_Coefficients-15"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Solution 13.11.1"><a href="#The_Method_of_Undetermined_Coefficients-14-3" title="Copy permalink for Solution 13.11.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 13.11"><a href="#The_Method_of_Undetermined_Coefficients-14" title="Copy permalink for Example 13.11">🔗</a></div></article><section class="exercises" id="The_Method_of_Undetermined_Coefficients-15"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1223,7 +1357,9 @@ y(x)=3-2e^{-x}+\frac{1}{2}x^2-x
 y''+3y'-10y=10x^2+4x
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-15-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 13.2.1"><a href="#The_Method_of_Undetermined_Coefficients-15-2" title="Copy permalink for Exercise 13.2.1">🔗</a></div></article><article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-15-3-1-1">
 <div class="para">Find the general solution to the DE</div>
 <div class="displaymath process-math">
@@ -1231,7 +1367,9 @@ y''+3y'-10y=10x^2+4x
 r''+r=\sin(x)
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-15-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 13.2.2"><a href="#The_Method_of_Undetermined_Coefficients-15-3" title="Copy permalink for Exercise 13.2.2">🔗</a></div></article><article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-15-4-1-1">
 <div class="para">Solve the initial value problem</div>
 <div class="displaymath process-math">
@@ -1239,7 +1377,9 @@ r''+r=\sin(x)
 y''-y'-6y=\sinh(x),\hspace{5mm}y(0)=1,\hspace{5mm}y'(0)=0
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-15-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 13.2.3"><a href="#The_Method_of_Undetermined_Coefficients-15-4" title="Copy permalink for Exercise 13.2.3">🔗</a></div></article><article class="exercise exercise-like" id="The_Method_of_Undetermined_Coefficients-15-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="para logical" id="The_Method_of_Undetermined_Coefficients-15-5-1-1">
 <div class="para">Find the general solution to the DE</div>
 <div class="displaymath process-math">
@@ -1247,8 +1387,10 @@ y''-y'-6y=\sinh(x),\hspace{5mm}y(0)=1,\hspace{5mm}y'(0)=0
 u''+u'=xe^x+3\sin(x)
 \end{equation*}
 </div>
-</div></article></section></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#The_Method_of_Undetermined_Coefficients-15-5-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 13.2.4"><a href="#The_Method_of_Undetermined_Coefficients-15-5" title="Copy permalink for Exercise 13.2.4">🔗</a></div></article><div class="autopermalink" data-description="Exercises 13.2: Example Tasks"><a href="#The_Method_of_Undetermined_Coefficients-15" title="Copy permalink for Exercises 13.2: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 13.2: The Method of Undetermined Coefficients"><a href="#The_Method_of_Undetermined_Coefficients" title="Copy permalink for Section 13.2: The Method of Undetermined Coefficients">🔗</a></div></section><div class="autopermalink" data-description="Chapter 13: DE5: Non-Homogeneous Second Order Linear DEs"><a href="#Differential_Equations_5" title="Copy permalink for Chapter 13: DE5: Non-Homogeneous Second Order Linear DEs">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Differential_Equations_4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Differential_Equations_6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

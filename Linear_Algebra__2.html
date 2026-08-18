@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LA2: Geometric Interpretations of Linear Equations</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,17 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -118,19 +123,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -175,7 +182,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -371,7 +378,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -485,6 +492,7 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">can be interpreted as a line of slope <span class="process-math">\(-\frac{2}{3}\)</span> and with a <span class="process-math">\(y\)</span>-intercept of <span class="process-math">\(2\text{.}\)</span> Thus, for a system of linear equations involving two variables each row can be interpreted as a line in the plane and finding the solution to this system can be thought of as finding all of those points in the plane (if any) that lie on all of the lines. (We had several examples last week where we interpreted systems involving just two linear equations this way.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Interpretation_Via_Rows-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.1</span><span class="period">.</span>
@@ -498,8 +506,10 @@ eBookConfig.enable_chatcodes =  false;
 3x-2y \amp=-3
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Rows-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Rows-3-2-1">
+<details id="Interpretation_Via_Rows-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Rows-3-2-1">
 <div class="para">Forming the augmented matrix and row reducing it to reduced row-echelon form gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Inconsistent_set_of_linear_equations.html">
 \begin{equation*}
@@ -507,9 +517,12 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">We can see from the reduced row-echelon form that this system of equations is inconsistent. The geometric interpretation of this is that there is no point in the plane that lies on all three lines, as can be seen in <a href="Linear_Algebra__2.html#Fig-Inconsistent_set_of_linear_equations" class="xref" data-knowl="./knowl/xref/Fig-Inconsistent_set_of_linear_equations.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.2">Figure 16.2</a>. <figure class="figure figure-like" id="Fig-Inconsistent_set_of_linear_equations"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.2<span class="period">.</span></span><span class="space"> </span>Plots of <span class="process-math">\(3x-2y=-3\)</span> (blue), <span class="process-math">\(2x+3y=6\)</span> (red) and <span class="process-math">\(-x+2y=2\)</span> (green).</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.2<span class="period">.</span></span><span class="space"> </span>Plots of <span class="process-math">\(3x-2y=-3\)</span> (blue), <span class="process-math">\(2x+3y=6\)</span> (red) and <span class="process-math">\(-x+2y=2\)</span> (green).<div class="autopermalink" data-description="Figure 16.2"><a href="#Fig-Inconsistent_set_of_linear_equations" title="Copy permalink for Figure 16.2">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><div class="para logical" id="Interpretation_Via_Rows-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-3-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.1.1"><a href="#Interpretation_Via_Rows-3-2" title="Copy permalink for Solution 16.1.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.1"><a href="#Interpretation_Via_Rows-3" title="Copy permalink for Example 16.1">🔗</a></div></article><div class="para logical" id="Interpretation_Via_Rows-4">
 <div class="para">For systems of linear equations involving three unknowns each equation (or alternatively each row in the augmented matrix) can be thought of as representing a plane in <span class="process-math">\(\mathbb{R}^3\text{,}\)</span> i.e. in three dimensions. Recall that the Cartesian equation of the plane that is normal to the vector <span class="process-math">\(\mathbf{n}=\langle a,b,c \rangle\)</span> and passes through the point <span class="process-math">\((x_0,y_0,z_0)\)</span> is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -517,6 +530,7 @@ ax+by+cz=k \textrm{ where } k=ax_0+by_0+cz_0
 \end{equation*}
 </div>
 <div class="para">i.e. a linear equation in three variables. Thus the solution to a system of linear equations in <span class="process-math">\(3\)</span> variables can be interpreted as those points in <span class="process-math">\(\mathbb{R}^3\)</span> (if any) that lie on all of the planes in the system.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Interpretation_Via_Rows-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.3</span><span class="period">.</span>
@@ -530,8 +544,10 @@ x_1+2x_2+3x_3 \amp =-3\\
 -x_1+3x_2+7x_3 \amp=-17
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-5-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Rows-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Rows-5-2-1">
+<details id="Interpretation_Via_Rows-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Rows-5-2-1">
 <div class="para">Forming the augmented matrix and row reducing it to reduced row-echelon form gives</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Intersection_of_planes.html">
 \begin{equation*}
@@ -551,14 +567,20 @@ x_1+2x_2+3x_3 \amp =-3\\
 \end{equation*}
 </div>
 <div class="para">i.e. the line passing through the point <span class="process-math">\((5,-4,0)\)</span> and parallel to the vector <span class="process-math">\((1,-2,1)\)</span> <figure class="figure figure-like" id="Fig-Intersection_of_planes"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.4<span class="period">.</span></span><span class="space"> </span>Intersection of planes.</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.4<span class="period">.</span></span><span class="space"> </span>Intersection of planes.<div class="autopermalink" data-description="Figure 16.4"><a href="#Fig-Intersection_of_planes" title="Copy permalink for Figure 16.4">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><div class="para" id="Interpretation_Via_Rows-6">A linear equation in more than <span class="process-math">\(n\)</span> variables (where <span class="process-math">\(n\gt 3\)</span>) is said to represent an “<span class="process-math">\(n\)</span>-dimensional hyperplane”. The geometric interpretation (in terms of rows) of the solution to a system of linear equations involving such equations would be the set of <span class="process-math">\(n\)</span>-dimensional points that lie on all of the hyperplanes. Obviously drawing pictures for such systems is not possible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-5-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.3.1"><a href="#Interpretation_Via_Rows-5-2" title="Copy permalink for Solution 16.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.3"><a href="#Interpretation_Via_Rows-5" title="Copy permalink for Example 16.3">🔗</a></div></article><div class="para" id="Interpretation_Via_Rows-6">A linear equation in more than <span class="process-math">\(n\)</span> variables (where <span class="process-math">\(n\gt 3\)</span>) is said to represent an “<span class="process-math">\(n\)</span>-dimensional hyperplane”. The geometric interpretation (in terms of rows) of the solution to a system of linear equations involving such equations would be the set of <span class="process-math">\(n\)</span>-dimensional points that lie on all of the hyperplanes. Obviously drawing pictures for such systems is not possible.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <section class="exercises" id="Interpretation_Via_Rows-7"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Interpretation_Via_Rows-7-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="Interpretation_Via_Rows-7-2-1-1">What would you expect the reduced row-echelon form of the augmented matrix associated with the system of equations for <span class="process-math">\(4\)</span> lines in space meeting a point to look like.</div></article><article class="exercise exercise-like" id="Interpretation_Via_Rows-7-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Interpretation_Via_Rows-7-2-1-1">What would you expect the reduced row-echelon form of the augmented matrix associated with the system of equations for <span class="process-math">\(4\)</span> lines in space meeting a point to look like.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-7-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 16.1.1"><a href="#Interpretation_Via_Rows-7-2" title="Copy permalink for Exercise 16.1.1">🔗</a></div></article><article class="exercise exercise-like" id="Interpretation_Via_Rows-7-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="Interpretation_Via_Rows-7-3-1-1">
 <div class="para">Solve the following system of linear equations and interpret your answer geometrically (in terms of the rows).</div>
 <div class="displaymath process-math" id="Interpretation_Via_Rows-7-3-1-1-1">
@@ -568,8 +590,12 @@ x_1+2x_2+3x_3 \amp=4\\
 2x_1+3x_2+4x_3 \amp =1
 \end{align*}
 </div>
-</div></article><article class="exercise exercise-like" id="Interpretation_Via_Rows-7-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="Interpretation_Via_Rows-7-4-1-1">What form would you expect the reduced row-echelon form of the augmented matrix associated with the system of equations for <span class="process-math">\(3\)</span> distinct parallel planes to take.</div></article></section></section><section class="section" id="Interpretation_Via_Columns"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-7-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 16.1.2"><a href="#Interpretation_Via_Rows-7-3" title="Copy permalink for Exercise 16.1.2">🔗</a></div></article><article class="exercise exercise-like" id="Interpretation_Via_Rows-7-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="Interpretation_Via_Rows-7-4-1-1">What form would you expect the reduced row-echelon form of the augmented matrix associated with the system of equations for <span class="process-math">\(3\)</span> distinct parallel planes to take.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Rows-7-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 16.1.3"><a href="#Interpretation_Via_Rows-7-4" title="Copy permalink for Exercise 16.1.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 16.1: Example Tasks"><a href="#Interpretation_Via_Rows-7" title="Copy permalink for Exercises 16.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 16.1: Interpretation Via Rows"><a href="#Interpretation_Via_Rows" title="Copy permalink for Section 16.1: Interpretation Via Rows">🔗</a></div></section><section class="section" id="Interpretation_Via_Columns"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">16.2</span><span class="space"> </span><span class="title">Interpretation Via Columns</span>
 </h3>
 <div class="para logical" id="Interpretation_Via_Columns-2">
@@ -594,13 +620,15 @@ a_{21}x+a_{22}y \amp =b_2
 \end{equation*}
 </div>
 <div class="para">as representing the vector in <span class="process-math">\(\mathbb{R}^2\)</span> (i.e. in the plane) whose tail is at the origin and whose head is at the point <span class="process-math">\((v_1,v_2)\text{.}\)</span> Thus this matrix is sometimes called a <dfn class="terminology">column vector</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Interpretation_Via_Columns-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="Interpretation_Via_Columns-3-1">The vector represented by <span class="process-math">\(\begin{pmatrix} 3 \\ 2 \end{pmatrix} \)</span> is sketched in <a href="Linear_Algebra__2.html#Fig-Vector_sketch" class="xref" data-knowl="./knowl/xref/Fig-Vector_sketch.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.6">Figure 16.6</a>. <figure class="figure figure-like" id="Fig-Vector_sketch"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.6<span class="period">.</span></span><span class="space"> </span>Sketch of the vector <span class="process-math">\(\begin{pmatrix} 3 \\ 2 \end{pmatrix} \text{.}\)</span></figcaption></figure>
-</div></article><div class="para logical" id="Interpretation_Via_Columns-4">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.6<span class="period">.</span></span><span class="space"> </span>Sketch of the vector <span class="process-math">\(\begin{pmatrix} 3 \\ 2 \end{pmatrix} \text{.}\)</span><div class="autopermalink" data-description="Figure 16.6"><a href="#Fig-Vector_sketch" title="Copy permalink for Figure 16.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 16.5"><a href="#Interpretation_Via_Columns-3" title="Copy permalink for Example 16.5">🔗</a></div></article><div class="para logical" id="Interpretation_Via_Columns-4">
 <div class="para">Now, the system of linear equations given above can be written as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -615,6 +643,7 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 </div>
 <div class="para">Remember that when written in this form, the <span class="process-math">\(+\)</span> sign means vector addition and <span class="process-math">\(x\mathbf{a_1}\text{,}\)</span> for example, means the scalar multiplication of the vector <span class="process-math">\(\mathbf{a_1}\)</span> by the scalar <span class="process-math">\(x\text{.}\)</span> So solving this system of linear equations can be interpreted as finding scalars <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that the vector <span class="process-math">\(\mathbf{b}\)</span> can be written in terms of the vectors <span class="process-math">\(\mathbf{a_1}\)</span> and <span class="process-math">\(\mathbf{a_2}\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex_16_2_5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.7</span><span class="period">.</span>
@@ -627,8 +656,10 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 2x+2y \amp = 7
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex_16_2_5-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Ex_16_2_5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex_16_2_5-2-1">
+<details id="Ex_16_2_5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Ex_16_2_5-2-1">
 <div class="para">The augmented matrix and its reduced row-echelon equivalent matrix are</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Vector_sum_parallelogram.html">
 \begin{equation*}
@@ -642,15 +673,21 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 \end{equation*}
 </div>
 <div class="para">See <a href="Linear_Algebra__2.html#Fig-Vector_sum_parallelogram" class="xref" data-knowl="./knowl/xref/Fig-Vector_sum_parallelogram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.8">Figure 16.8</a>. Note that the solution is also saying that there is only one way in which <span class="process-math">\(\begin{pmatrix} -3 \\ 7 \end{pmatrix}\)</span> can be written in terms of <span class="process-math">\(\begin{pmatrix} 2 \\ 2 \end{pmatrix}\)</span> and <span class="process-math">\(\begin{pmatrix} -3 \\ 2 \end{pmatrix}\text{.}\)</span> <figure class="figure figure-like" id="Fig-Vector_sum_parallelogram"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure4.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.8<span class="period">.</span></span><span class="space"> </span>Sum of vectors</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.8<span class="period">.</span></span><span class="space"> </span>Sum of vectors<div class="autopermalink" data-description="Figure 16.8"><a href="#Fig-Vector_sum_parallelogram" title="Copy permalink for Figure 16.8">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><div class="para" id="Interpretation_Via_Columns-6">Before going on to consider systems of linear equations involving <span class="process-math">\(3\)</span> (or more) variables it is convenient to introduce some new terminology.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex_16_2_5-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.7.1"><a href="#Ex_16_2_5-2" title="Copy permalink for Solution 16.7.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.7"><a href="#Ex_16_2_5" title="Copy permalink for Example 16.7">🔗</a></div></article><div class="para" id="Interpretation_Via_Columns-6">Before going on to consider systems of linear equations involving <span class="process-math">\(3\)</span> (or more) variables it is convenient to introduce some new terminology.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Interpretation_Via_Columns-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">16.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="Interpretation_Via_Columns-7-1">The vector <span class="process-math">\(a_1\mathbf{v_1}+a_2\mathbf{v_2}+\dots a_n\mathbf{v_n}\text{,}\)</span> where <span class="process-math">\(a_i\in \mathbb{R}\text{,}\)</span> is said to be a <dfn class="terminology">linear combination</dfn> of the vectors <span class="process-math">\(\mathbf{v_1}, \mathbf{v_2}, \dots, \mathbf{v_n}\text{.}\)</span>
+<div class="para" id="Interpretation_Via_Columns-7-1">The vector <span class="process-math">\(a_1\mathbf{v_1}+a_2\mathbf{v_2}+\dots a_n\mathbf{v_n}\text{,}\)</span> where <span class="process-math">\(a_i\in \mathbb{R}\text{,}\)</span> is said to be a <dfn class="terminology">linear combination</dfn> of the vectors <span class="process-math">\(\mathbf{v_1}, \mathbf{v_2}, \dots, \mathbf{v_n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-7-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Interpretation_Via_Columns-7-2">The set of all linear combinations of the set of vectors <span class="process-math">\(\{\mathbf{v_1}, \mathbf{v_2}, \dots, \mathbf{v_n}\}\)</span>  is said to be the <dfn class="terminology">span</dfn> of that set of vectors.</div></article><article class="example example-like" id="Interpretation_Via_Columns-8"><h4 class="heading">
+<div class="para" id="Interpretation_Via_Columns-7-2">The set of all linear combinations of the set of vectors <span class="process-math">\(\{\mathbf{v_1}, \mathbf{v_2}, \dots, \mathbf{v_n}\}\)</span>  is said to be the <dfn class="terminology">span</dfn> of that set of vectors.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-7-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 16.9"><a href="#Interpretation_Via_Columns-7" title="Copy permalink for Definition 16.9">🔗</a></div></article><article class="example example-like" id="Interpretation_Via_Columns-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.10</span><span class="period">.</span><span class="space"> </span><span class="title">(Example 16.7 cont.).</span>
 </h4>
 <div class="para logical" id="Interpretation_Via_Columns-8-2">
@@ -663,16 +700,25 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 </div>
 <div class="para">can be now be phrased as:</div>
 <ul class="disc" id="Interpretation_Via_Columns-8-2-2">
-<li id="Interpretation_Via_Columns-8-2-2-1"><div class="para" id="p-derived-Interpretation_Via_Columns-8-2-2-1">The vector <span class="process-math">\(\begin{pmatrix} -3 \\ 7 \end{pmatrix}\)</span> can be written as a linear combination of the vectors <span class="process-math">\(\begin{pmatrix} 2 \\ 2 \end{pmatrix}\)</span> and <span class="process-math">\(\begin{pmatrix} -3 \\ 2 \end{pmatrix}\text{,}\)</span> and in only one way, or</div></li>
-<li id="Interpretation_Via_Columns-8-2-2-2"><div class="para" id="p-derived-Interpretation_Via_Columns-8-2-2-2">The vector <span class="process-math">\(\begin{pmatrix} -3 \\ 7 \end{pmatrix}\)</span> is in the span of the vectors <span class="process-math">\(\begin{pmatrix} 2 \\ 2 \end{pmatrix}\)</span> and <span class="process-math">\(\begin{pmatrix} -3 \\ 2 \end{pmatrix}\text{.}\)</span>
-</div></li>
+<li id="Interpretation_Via_Columns-8-2-2-1">
+<div class="para" id="p-derived-Interpretation_Via_Columns-8-2-2-1">The vector <span class="process-math">\(\begin{pmatrix} -3 \\ 7 \end{pmatrix}\)</span> can be written as a linear combination of the vectors <span class="process-math">\(\begin{pmatrix} 2 \\ 2 \end{pmatrix}\)</span> and <span class="process-math">\(\begin{pmatrix} -3 \\ 2 \end{pmatrix}\text{,}\)</span> and in only one way, or</div>
+<div class="autopermalink" data-description="Item"><a href="#Interpretation_Via_Columns-8-2-2-1" title="Copy permalink for Item">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-8-2-2-2">
+<div class="para" id="p-derived-Interpretation_Via_Columns-8-2-2-2">The vector <span class="process-math">\(\begin{pmatrix} -3 \\ 7 \end{pmatrix}\)</span> is in the span of the vectors <span class="process-math">\(\begin{pmatrix} 2 \\ 2 \end{pmatrix}\)</span> and <span class="process-math">\(\begin{pmatrix} -3 \\ 2 \end{pmatrix}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Interpretation_Via_Columns-8-2-2-2" title="Copy permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><article class="example example-like" id="Interpretation_Via_Columns-9"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-8-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 16.10: (Example 16.7 cont.)"><a href="#Interpretation_Via_Columns-8" title="Copy permalink for Example 16.10: (Example 16.7 cont.)">🔗</a></div></article><article class="example example-like" id="Interpretation_Via_Columns-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="Interpretation_Via_Columns-9-1">Describe the span of the set of vectors <span class="process-math">\(\left \{\mathbf{v_1, v_2} \right \}=\left \{\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \end{pmatrix} \right \}\text{.}\)</span>
+<div class="para" id="Interpretation_Via_Columns-9-1">Describe the span of the set of vectors <span class="process-math">\(\left \{\mathbf{v_1, v_2} \right \}=\left \{\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \end{pmatrix} \right \}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-9-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Columns-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Columns-9-2-1">
+<details id="Interpretation_Via_Columns-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Columns-9-2-1">
 <div class="para">The span of the set <span class="process-math">\(\{\mathbf{v_1, v_2}\}\)</span> is the set of vectors <span class="process-math">\(\mathbf{u}\)</span> of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -693,12 +739,16 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 </div>
 <div class="para">and so the solution is <span class="process-math">\((x,y)=\left(\frac{a}{5}+\frac{3b}{10},\frac{b}{5}-\frac{a}{5}\right)\text{.}\)</span> Thus, no matter which vector, <span class="process-math">\(\mathbf{u}\text{,}\)</span> in <span class="process-math">\(\mathbb{R}^2\)</span> we choose we can find the scalars so that <span class="process-math">\(\mathbf{u}\)</span> is a linear combination of <span class="process-math">\(\mathbf{v_1}\)</span> and <span class="process-math">\(\mathbf{v_2}\)</span> and hence in the span of <span class="process-math">\(\{\mathbf{v_1, v_2}\}\text{.}\)</span>
 </div>
-</div></div></details></article><article class="example example-like" id="Interpretation_Via_Columns-10"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-9-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.11.1"><a href="#Interpretation_Via_Columns-9-2" title="Copy permalink for Solution 16.11.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.11"><a href="#Interpretation_Via_Columns-9" title="Copy permalink for Example 16.11">🔗</a></div></article><article class="example example-like" id="Interpretation_Via_Columns-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="Interpretation_Via_Columns-10-1">Describe the span of the set of vectors <span class="process-math">\(\{\mathbf{v_1, v_2}\}=\left \{\begin{pmatrix} 2 \\ 2 \\ 1 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \\ -1 \end{pmatrix} \right \}\text{.}\)</span>
+<div class="para" id="Interpretation_Via_Columns-10-1">Describe the span of the set of vectors <span class="process-math">\(\{\mathbf{v_1, v_2}\}=\left \{\begin{pmatrix} 2 \\ 2 \\ 1 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \\ -1 \end{pmatrix} \right \}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-10-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Columns-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Columns-10-2-1">
+<details id="Interpretation_Via_Columns-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Columns-10-2-1">
 <div class="para">Firstly note that the vectors in this set are <span class="process-math">\(3\)</span>-dimensional vectors and hence the vectors in the span will also be <span class="process-math">\(3\)</span>-dimensional. Now, the span of the set <span class="process-math">\(\{\mathbf{v_1, v_2}\}\)</span> is the set of vectors <span class="process-math">\(\mathbf{u}\)</span> of the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Vector_equation_of_plane.html ./knowl/xref/Fig-Vector_equation_of_plane.html">
 \begin{equation*}
@@ -706,7 +756,7 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 \end{equation*}
 </div>
 <div class="para">We recognise this as the vector equation of the plane through the origin and with direction vectors <span class="process-math">\(\mathbf{v_1}\)</span> and <span class="process-math">\(\mathbf{v_2}\text{,}\)</span> as shown in <a href="Linear_Algebra__2.html#Fig-Vector_equation_of_plane" class="xref" data-knowl="./knowl/xref/Fig-Vector_equation_of_plane.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.13">Figure 16.13</a>. <figure class="figure figure-like" id="Fig-Vector_equation_of_plane"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure5.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.13<span class="period">.</span></span><span class="space"> </span>3D plot of the plane given by <span class="process-math">\(\mathbf{u}\)</span> with normal vector shown in blue.</figcaption></figure> Recall that the normal to this plane (shown in blue in <a href="Linear_Algebra__2.html#Fig-Vector_equation_of_plane" class="xref" data-knowl="./knowl/xref/Fig-Vector_equation_of_plane.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.13">Figure 16.13</a>) is given by <span class="process-math">\(\mathbf{n=v_1\times v_2}\)</span> and so here (using the column vector notation) is</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.13<span class="period">.</span></span><span class="space"> </span>3D plot of the plane given by <span class="process-math">\(\mathbf{u}\)</span> with normal vector shown in blue.<div class="autopermalink" data-description="Figure 16.13"><a href="#Fig-Vector_equation_of_plane" title="Copy permalink for Figure 16.13">🔗</a></div></figcaption></figure> Recall that the normal to this plane (shown in blue in <a href="Linear_Algebra__2.html#Fig-Vector_equation_of_plane" class="xref" data-knowl="./knowl/xref/Fig-Vector_equation_of_plane.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.13">Figure 16.13</a>) is given by <span class="process-math">\(\mathbf{n=v_1\times v_2}\)</span> and so here (using the column vector notation) is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Vector_equation_of_plane.html ./knowl/xref/Fig-Vector_equation_of_plane.html">
 \begin{equation*}
 \mathbf{n}=\begin{pmatrix} -4 \\ -1 \\ 10 \end{pmatrix}
@@ -718,7 +768,10 @@ x\mathbf{a_1}+y\mathbf{a_2}=\mathbf{b}
 -4x-y+10z=0
 \end{equation*}
 </div>
-</div></div></details></article><article class="definition definition-like" id="Interpretation_Via_Columns-11"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-10-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.12.1"><a href="#Interpretation_Via_Columns-10-2" title="Copy permalink for Solution 16.12.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.12"><a href="#Interpretation_Via_Columns-10" title="Copy permalink for Example 16.12">🔗</a></div></article><article class="definition definition-like" id="Interpretation_Via_Columns-11"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">16.14</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Interpretation_Via_Columns-11-1">
@@ -730,31 +783,53 @@ a_1\mathbf{v_1}+a_2\mathbf{v_2}+\dots +a_n\mathbf{v_n}=\mathbf{0}
 </div>
 <div class="para">is <span class="process-math">\(a_1=a_2=\dots=a_n=0\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-11-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Interpretation_Via_Columns-11-2">A set of vectors that is not linearly independent is called <dfn class="terminology">linearly dependent</dfn>.</div></article><article class="example example-like" id="Interpretation_Via_Columns-12"><h4 class="heading">
+<div class="para" id="Interpretation_Via_Columns-11-2">A set of vectors that is not linearly independent is called <dfn class="terminology">linearly dependent</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-11-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 16.14"><a href="#Interpretation_Via_Columns-11" title="Copy permalink for Definition 16.14">🔗</a></div></article><article class="example example-like" id="Interpretation_Via_Columns-12"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.15</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Interpretation_Via_Columns-12-1">
 <div class="para">Decide if the following sets of vectors are linearly independent or not.</div>
 <ol class="lower-alpha ol-marker-8" id="Interpretation_Via_Columns-12-1-1">
-<li id="Interpretation_Via_Columns-12-1-1-1"><div class="para" id="p-derived-Interpretation_Via_Columns-12-1-1-1"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2, v_3}\}=\left \{\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 7 \end{pmatrix} \right \}\)</span></div></li>
-<li id="Interpretation_Via_Columns-12-1-1-2"><div class="para" id="p-derived-Interpretation_Via_Columns-12-1-1-2"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2}\}=\left \{\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \end{pmatrix} \right \}\)</span></div></li>
+<li id="Interpretation_Via_Columns-12-1-1-1">
+<div class="para" id="p-derived-Interpretation_Via_Columns-12-1-1-1"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2, v_3}\}=\left \{\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 7 \end{pmatrix} \right \}\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#Interpretation_Via_Columns-12-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-12-1-1-2">
+<div class="para" id="p-derived-Interpretation_Via_Columns-12-1-1-2"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2}\}=\left \{\begin{pmatrix} 2 \\ 2 \end{pmatrix}, \begin{pmatrix} -3 \\ 2 \end{pmatrix} \right \}\)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#Interpretation_Via_Columns-12-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-12-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Columns-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Columns-12-2-1"><ol class="lower-alpha ol-marker-8" id="Interpretation_Via_Columns-12-2-1-1">
-<li id="Interpretation_Via_Columns-12-2-1-1-1"><div class="para" id="p-derived-Interpretation_Via_Columns-12-2-1-1-1">This set of vectors is linearly dependent since (from our previous examples) we know that<div class="displaymath process-math">
+<details id="Interpretation_Via_Columns-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Columns-12-2-1">
+<ol class="lower-alpha ol-marker-8" id="Interpretation_Via_Columns-12-2-1-1">
+<li id="Interpretation_Via_Columns-12-2-1-1-1">
+<div class="para" id="p-derived-Interpretation_Via_Columns-12-2-1-1-1">This set of vectors is linearly dependent since (from our previous examples) we know that<div class="displaymath process-math">
 \begin{equation*}
 \begin{pmatrix} -3 \\ 7 \end{pmatrix}=\frac{3}{2} \begin{pmatrix} 2 \\ 2 \end{pmatrix}+2\begin{pmatrix} -3 \\ 2 \end{pmatrix}
 \end{equation*}
 </div>i.e. <span class="process-math">\(\mathbf{v_3}\)</span> can be written as a linear combination of <span class="process-math">\(\mathbf{v_1}\)</span> and <span class="process-math">\(\mathbf{v_2}\text{.}\)</span>
-</div></li>
-<li id="Interpretation_Via_Columns-12-2-1-1-2"><div class="para" id="p-derived-Interpretation_Via_Columns-12-2-1-1-2">This set of vectors is linearly independent since the only solution to<div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Interpretation_Via_Columns-12-2-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-12-2-1-1-2">
+<div class="para" id="p-derived-Interpretation_Via_Columns-12-2-1-1-2">This set of vectors is linearly independent since the only solution to<div class="displaymath process-math">
 \begin{equation*}
 x_1\mathbf{v_1}+x_2\mathbf{v_2}=\mathbf{0}
 \end{equation*}
 </div>is <span class="process-math">\(x_1=x_2=0\text{.}\)</span> Note that in this case this is telling us that <span class="process-math">\(\mathbf{v_2}\)</span> is not a scalar multiple of <span class="process-math">\(\mathbf{v_1}\text{,}\)</span> i.e. <span class="process-math">\(\mathbf{v_2}\)</span> is not parallel to <span class="process-math">\(\mathbf{v_1}\text{.}\)</span>
-</div></li>
-</ol></div></div></details></article><div class="para logical" id="Interpretation_Via_Columns-13">
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Interpretation_Via_Columns-12-2-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-12-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.15.1"><a href="#Interpretation_Via_Columns-12-2" title="Copy permalink for Solution 16.15.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.15"><a href="#Interpretation_Via_Columns-12" title="Copy permalink for Example 16.15">🔗</a></div></article><div class="para logical" id="Interpretation_Via_Columns-13">
 <div class="para">We are now ready to discuss the geometric interpretation, in terms of the columns, of a system of three linear equations in three unknowns <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\text{,}\)</span> i.e. of</div>
 <div class="displaymath process-math" id="Interpretation_Via_Columns-13-4">
 \begin{gather*}
@@ -776,6 +851,7 @@ x\mathbf{a_1}+y\mathbf{a_2}+z\mathbf{a_3}=\mathbf{b}
 \end{equation*}
 </div>
 <div class="para">Thus, solving this system of linear equations can be interpreted as finding scalars <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> such that the vector <span class="process-math">\(\mathbf{b}\)</span> can be written as a linear combination of the vectors <span class="process-math">\(\{\mathbf{a_1, a_2, a_3}\}\text{,}\)</span> (or equivalently, that <span class="process-math">\(\mathbf{b}\)</span> is in the span of  <span class="process-math">\(\{\mathbf{a_1, a_2, a_3}\}\)</span>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-13" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Interpretation_Via_Columns-14"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.16</span><span class="period">.</span>
@@ -789,8 +865,10 @@ x\mathbf{a_1}+y\mathbf{a_2}+z\mathbf{a_3}=\mathbf{b}
 4x+y-z \amp=3
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-14-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Columns-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Columns-14-2-1">
+<details id="Interpretation_Via_Columns-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Columns-14-2-1">
 <div class="para">The augmented matrix and its reduced row-echelon equivalent matrix are</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Vector_as_a_linear_combination.html ./knowl/xref/Fig-Vector_as_a_linear_combination.html ./knowl/xref/Fig-Vector_as_a_linear_combination.html">
 \begin{equation*}
@@ -798,9 +876,13 @@ x\mathbf{a_1}+y\mathbf{a_2}+z\mathbf{a_3}=\mathbf{b}
 \end{equation*}
 </div>
 <div class="para">Thus the solution is <span class="process-math">\((x,y,z)=\left(\frac{3}{2},-1,2 \right)\text{.}\)</span> The geometric interpretation of this solution is that the vector <span class="process-math">\(\begin{pmatrix} 3 \\ 6 \\ 3 \end{pmatrix}\)</span> (shown in blue in <a href="Linear_Algebra__2.html#Fig-Vector_as_a_linear_combination" class="xref" data-knowl="./knowl/xref/Fig-Vector_as_a_linear_combination.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.17">Figure 16.17</a>) can be written as a linear combination of the vectors <span class="process-math">\(\left \{\begin{pmatrix} 2 \\ 2 \\ 4 \end{pmatrix}, \begin{pmatrix} 4 \\ 3 \\ 1 \end{pmatrix}, \begin{pmatrix} 2 \\ 3 \\ -1 \end{pmatrix} \right \}\)</span> (shown in red in <a href="Linear_Algebra__2.html#Fig-Vector_as_a_linear_combination" class="xref" data-knowl="./knowl/xref/Fig-Vector_as_a_linear_combination.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.17">Figure 16.17</a>) and in only one way, (shown in green in <a href="Linear_Algebra__2.html#Fig-Vector_as_a_linear_combination" class="xref" data-knowl="./knowl/xref/Fig-Vector_as_a_linear_combination.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.17">Figure 16.17</a>). <figure class="figure figure-like" id="Fig-Vector_as_a_linear_combination"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure6.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.17<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.17<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 16.17"><a href="#Fig-Vector_as_a_linear_combination" title="Copy permalink for Figure 16.17">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><div class="para" id="Interpretation_Via_Columns-15">Note that if the system of linear equations is homogeneous (i.e. <span class="process-math">\(\mathbf{b=0}\)</span>) then the solution of the system tells us if the set of vectors <span class="process-math">\(\{\mathbf{a_1, a_2, a_3}\}\)</span>  is linearly independent or not.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-14-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.16.1"><a href="#Interpretation_Via_Columns-14-2" title="Copy permalink for Solution 16.16.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.16"><a href="#Interpretation_Via_Columns-14" title="Copy permalink for Example 16.16">🔗</a></div></article><div class="para" id="Interpretation_Via_Columns-15">Note that if the system of linear equations is homogeneous (i.e. <span class="process-math">\(\mathbf{b=0}\)</span>) then the solution of the system tells us if the set of vectors <span class="process-math">\(\{\mathbf{a_1, a_2, a_3}\}\)</span>  is linearly independent or not.<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-15" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Interpretation_Via_Columns-16"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.18</span><span class="period">.</span>
 </h4>
@@ -813,8 +895,10 @@ x\mathbf{a_1}+y\mathbf{a_2}+z\mathbf{a_3}=\mathbf{b}
 4x+y-z=0
 \end{gather*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-16-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Interpretation_Via_Columns-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Interpretation_Via_Columns-16-2-1">
+<details id="Interpretation_Via_Columns-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Interpretation_Via_Columns-16-2-1">
 <div class="para">The augmented matrix and its reduced row-echelon equivalent matrix are</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-Vectors_not_coplanar.html">
 \begin{equation*}
@@ -828,9 +912,12 @@ x\mathbf{a_1}+y\mathbf{a_2}+z\mathbf{a_3}=\mathbf{b}
 \end{equation*}
 </div>
 <div class="para">This would imply that <span class="process-math">\(\mathbf{a_3}\)</span> lies in the plane defined by the vectors <span class="process-math">\(\mathbf{a_1}\)</span> and <span class="process-math">\(\mathbf{a_2}\text{,}\)</span> or to say the same thing, that  <span class="process-math">\(\mathbf{a_1}\text{,}\)</span> <span class="process-math">\(\mathbf{a_2}\)</span> and <span class="process-math">\(\mathbf{a_3}\)</span> are coplanar. Since the vectors are linearly independent we can say these vectors are not coplanar. See <a href="Linear_Algebra__2.html#Fig-Vectors_not_coplanar" class="xref" data-knowl="./knowl/xref/Fig-Vectors_not_coplanar.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 16.19">Figure 16.19</a>. <figure class="figure figure-like" id="Fig-Vectors_not_coplanar"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./LinearAlgebra/Images/2/figure7.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.19<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.19<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 16.19"><a href="#Fig-Vectors_not_coplanar" title="Copy permalink for Figure 16.19">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><article class="example example-like" id="Interpretation_Via_Columns-17"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-16-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 16.18.1"><a href="#Interpretation_Via_Columns-16-2" title="Copy permalink for Solution 16.18.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.18"><a href="#Interpretation_Via_Columns-16" title="Copy permalink for Example 16.18">🔗</a></div></article><article class="example example-like" id="Interpretation_Via_Columns-17"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.20</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Interpretation_Via_Columns-17-1">
@@ -842,6 +929,7 @@ x+2y+3z \amp=-3\\
 2x+3y+4z \amp=-2
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-17-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <details id="Interpretation_Via_Columns-17-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Interpretation_Via_Columns-17-2-1">
@@ -870,6 +958,7 @@ x+2y+3z \amp=-3\\
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(\mathbf{b}\)</span> can written as a linear combination of <span class="process-math">\(\{\mathbf{a_1, a_2}\}\text{,}\)</span> the vectors <span class="process-math">\(\mathbf{b}\text{,}\)</span> <span class="process-math">\(\mathbf{a_1}\)</span> and <span class="process-math">\(\mathbf{a_2}\)</span> are coplanar. Similarly (with <span class="process-math">\(t=-2\)</span>) we can see that <span class="process-math">\(\mathbf{b}\text{,}\)</span> <span class="process-math">\(\mathbf{a_1}\)</span> and <span class="process-math">\(\mathbf{a_3}\)</span> are coplanar. So, in fact, <span class="process-math">\(\mathbf{b}\text{,}\)</span> <span class="process-math">\(\mathbf{a_1}\text{,}\)</span> <span class="process-math">\(\mathbf{a_2}\)</span> and <span class="process-math">\(\mathbf{a_3}\)</span> are all coplanar.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-17-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Interpretation_Via_Columns-17-2-2">
 <div class="para">Finally we can see from the above working that the vectors <span class="process-math">\(\{\mathbf{a_1, a_2, a_3}\}\)</span> are linearly dependent since if <span class="process-math">\(\mathbf{b=0}\)</span> then the reduced row-echelon form would be</div>
@@ -878,8 +967,11 @@ x+2y+3z \amp=-3\\
 \begin{pmatrix} 1 \amp 0 \amp -1 \amp 0 \\ 0 \amp 1 \amp 2 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \end{pmatrix}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-17-2-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><div class="para" id="Interpretation_Via_Columns-18">To summarise what we have we have covered:</div>
+<div class="autopermalink" data-description="Solution 16.20.1"><a href="#Interpretation_Via_Columns-17-2" title="Copy permalink for Solution 16.20.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 16.20"><a href="#Interpretation_Via_Columns-17" title="Copy permalink for Example 16.20">🔗</a></div></article><div class="para" id="Interpretation_Via_Columns-18">To summarise what we have we have covered:<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-18" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Interpretation_Via_Columns-19"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">16.21</span><span class="period">.</span>
 </h4>
@@ -892,21 +984,40 @@ x+2y+3z \amp=-3\\
 </div>
 <div class="para">The following statements are equivalent:</div>
 <ol class="decimal ol-marker-3" id="Interpretation_Via_Columns-19-1-2">
-<li id="Interpretation_Via_Columns-19-1-2-1"><div class="para" id="p-derived-Interpretation_Via_Columns-19-1-2-1">The system has a unique solution</div></li>
-<li id="Interpretation_Via_Columns-19-1-2-2"><div class="para" id="p-derived-Interpretation_Via_Columns-19-1-2-2">The planes represented by the rows intersect in a point</div></li>
-<li id="Interpretation_Via_Columns-19-1-2-3"><div class="para" id="p-derived-Interpretation_Via_Columns-19-1-2-3">The column vectors of the coefficient matrix are linearly independent</div></li>
+<li id="Interpretation_Via_Columns-19-1-2-1">
+<div class="para" id="p-derived-Interpretation_Via_Columns-19-1-2-1">The system has a unique solution</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Interpretation_Via_Columns-19-1-2-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-19-1-2-2">
+<div class="para" id="p-derived-Interpretation_Via_Columns-19-1-2-2">The planes represented by the rows intersect in a point</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Interpretation_Via_Columns-19-1-2-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-19-1-2-3">
+<div class="para" id="p-derived-Interpretation_Via_Columns-19-1-2-3">The column vectors of the coefficient matrix are linearly independent</div>
+<div class="autopermalink" data-description="Item 3"><a href="#Interpretation_Via_Columns-19-1-2-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
 </ol>
-</div></article><section class="exercises" id="Interpretation_Via_Columns-20"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-19-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 16.21"><a href="#Interpretation_Via_Columns-19" title="Copy permalink for Definition 16.21">🔗</a></div></article><section class="exercises" id="Interpretation_Via_Columns-20"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Interpretation_Via_Columns-20-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="para logical" id="Interpretation_Via_Columns-20-2-1-1">
 <div class="para">Decide if the following sets of vectors are linearly independent or not</div>
 <ol class="lower-alpha ol-marker-8" id="Interpretation_Via_Columns-20-2-1-1-1">
-<li id="Interpretation_Via_Columns-20-2-1-1-1-1"><div class="para" id="p-derived-Interpretation_Via_Columns-20-2-1-1-1-1"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2}\}=\left \{(1,1), (1,-1)\right \}\)</span></div></li>
-<li id="Interpretation_Via_Columns-20-2-1-1-1-2"><div class="para" id="p-derived-Interpretation_Via_Columns-20-2-1-1-1-2"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2, v_3}\}=\left \{(1,1, 2), (1,-1,0), (3,2,1)\right \}\)</span></div></li>
+<li id="Interpretation_Via_Columns-20-2-1-1-1-1">
+<div class="para" id="p-derived-Interpretation_Via_Columns-20-2-1-1-1-1"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2}\}=\left \{(1,1), (1,-1)\right \}\)</span></div>
+<div class="autopermalink" data-description="Item 16.2.1.a"><a href="#Interpretation_Via_Columns-20-2-1-1-1-1" title="Copy permalink for Item 16.2.1.a">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-20-2-1-1-1-2">
+<div class="para" id="p-derived-Interpretation_Via_Columns-20-2-1-1-1-2"><span class="process-math">\(\displaystyle \{\mathbf{v_1, v_2, v_3}\}=\left \{(1,1, 2), (1,-1,0), (3,2,1)\right \}\)</span></div>
+<div class="autopermalink" data-description="Item 16.2.1.b"><a href="#Interpretation_Via_Columns-20-2-1-1-1-2" title="Copy permalink for Item 16.2.1.b">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="exercise exercise-like" id="Interpretation_Via_Columns-20-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-20-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 16.2.1"><a href="#Interpretation_Via_Columns-20-2" title="Copy permalink for Exercise 16.2.1">🔗</a></div></article><article class="exercise exercise-like" id="Interpretation_Via_Columns-20-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="Interpretation_Via_Columns-20-3-1-1">
 <div class="para">Solve the following system of linear equations and interpret your answer geometrically in terms of the columns of the augmented matrix.</div>
 <div class="displaymath process-math" id="Interpretation_Via_Columns-20-3-1-1-1">
@@ -916,19 +1027,31 @@ x_1+2x_2+3x_3=4\\
 2x_1+3x_2+4x_3=1
 \end{gather*}
 </div>
-</div></article><article class="exercise exercise-like" id="Interpretation_Via_Columns-20-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para logical" id="Interpretation_Via_Columns-20-4-1-1"><ol class="lower-alpha ol-marker-8" id="Interpretation_Via_Columns-20-4-1-1-1">
-<li id="Interpretation_Via_Columns-20-4-1-1-1-1"><div class="para" id="p-derived-Interpretation_Via_Columns-20-4-1-1-1-1">Show that the set of vectors <span class="process-math">\(\left \{(2,3, 7), (3,4, 5), (2,1,-15) \right\}\)</span> are linearly dependent.</div></li>
-<li id="Interpretation_Via_Columns-20-4-1-1-1-2"><div class="para" id="p-derived-Interpretation_Via_Columns-20-4-1-1-1-2">Find values of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> such that the following system of linear equations has infinitely many solutions<div class="displaymath process-math" id="Interpretation_Via_Columns-20-4-1-1-1-2-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-20-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 16.2.2"><a href="#Interpretation_Via_Columns-20-3" title="Copy permalink for Exercise 16.2.2">🔗</a></div></article><article class="exercise exercise-like" id="Interpretation_Via_Columns-20-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para logical" id="Interpretation_Via_Columns-20-4-1-1">
+<ol class="lower-alpha ol-marker-8" id="Interpretation_Via_Columns-20-4-1-1-1">
+<li id="Interpretation_Via_Columns-20-4-1-1-1-1">
+<div class="para" id="p-derived-Interpretation_Via_Columns-20-4-1-1-1-1">Show that the set of vectors <span class="process-math">\(\left \{(2,3, 7), (3,4, 5), (2,1,-15) \right\}\)</span> are linearly dependent.</div>
+<div class="autopermalink" data-description="Item 16.2.3.a"><a href="#Interpretation_Via_Columns-20-4-1-1-1-1" title="Copy permalink for Item 16.2.3.a">🔗</a></div>
+</li>
+<li id="Interpretation_Via_Columns-20-4-1-1-1-2">
+<div class="para" id="p-derived-Interpretation_Via_Columns-20-4-1-1-1-2">Find values of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> such that the following system of linear equations has infinitely many solutions<div class="displaymath process-math" id="Interpretation_Via_Columns-20-4-1-1-1-2-4">
 \begin{align*}
 2x_1+3x_2+2x_3 \amp =a\\
 3x_1+4x_2+x_3 \amp =b\\
 7x_1+5x_2-15x_3 \amp =c
 \end{align*}
 </div>
-</div></li>
-</ol></div></article></section></section></section></div>
-<div class="ptx-content-footer">
+</div>
+<div class="autopermalink" data-description="Item 16.2.3.b"><a href="#Interpretation_Via_Columns-20-4-1-1-1-2" title="Copy permalink for Item 16.2.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Interpretation_Via_Columns-20-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 16.2.3"><a href="#Interpretation_Via_Columns-20-4" title="Copy permalink for Exercise 16.2.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 16.2: Example Tasks"><a href="#Interpretation_Via_Columns-20" title="Copy permalink for Exercises 16.2: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 16.2: Interpretation Via Columns"><a href="#Interpretation_Via_Columns" title="Copy permalink for Section 16.2: Interpretation Via Columns">🔗</a></div></section><div class="autopermalink" data-description="Chapter 16: LA2: Geometric Interpretations of Linear Equations"><a href="#Linear_Algebra__2" title="Copy permalink for Chapter 16: LA2: Geometric Interpretations of Linear Equations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Linear_Algebra_1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Chap-Linear_Algebra_3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

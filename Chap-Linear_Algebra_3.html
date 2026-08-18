@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LA3: Matrix Algebra</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,29 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -130,19 +123,33 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -187,7 +194,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -383,7 +390,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -504,36 +511,68 @@ a_{m1} \amp a_{m2} \amp \cdots \amp a_{mn}\\
 A=\left(a_{ij}\right)_{m \times n}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Chap-Linear_Algebra_3-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Chap-Linear_Algebra_3-2-2">Note that we usually use a capital letter to denote a matrix.</div>
-<div class="para" id="Chap-Linear_Algebra_3-2-3">In the context of systems of linear equations the main concept was row reducing a matrix to produce equivalent matrices. In different contexts, however, other operations on matrices have proved useful and we shall discuss these operations below. Before doing this, though, we will introduce some new terminology.</div>
+<div class="para" id="Chap-Linear_Algebra_3-2-2">Note that we usually use a capital letter to denote a matrix.<div class="autopermalink" data-description="Paragraph"><a href="#Chap-Linear_Algebra_3-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Chap-Linear_Algebra_3-2-3">In the context of systems of linear equations the main concept was row reducing a matrix to produce equivalent matrices. In different contexts, however, other operations on matrices have proved useful and we shall discuss these operations below. Before doing this, though, we will introduce some new terminology.<div class="autopermalink" data-description="Paragraph"><a href="#Chap-Linear_Algebra_3-2-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-4"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span>
-</h3>Two matrices are said to be <dfn class="terminology">equal</dfn> if they are of the same size and all corresponding entries are equal.</article><article class="example example-like" id="Ex-Matrix_equality"><h3 class="heading">
+</h3>Two matrices are said to be <dfn class="terminology">equal</dfn> if they are of the same size and all corresponding entries are equal.<div class="autopermalink" data-description="Definition 17.1"><a href="#Chap-Linear_Algebra_3-2-4" title="Copy permalink for Definition 17.1">🔗</a></div></article><article class="example example-like" id="Ex-Matrix_equality"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="Ex-Matrix_equality-1-1">
 <div class="para">Let <span class="process-math">\(A = \begin{pmatrix}5 \amp 0 \amp 1\\ -3 \amp \sqrt{2} \amp \frac{1}{2}\end{pmatrix}, \quad B = \begin{pmatrix}5 \amp -3 \\ 0 \amp \sqrt{2} \\ 1 \amp \frac{1}{2}\end{pmatrix}, \quad C = \begin{pmatrix} 5 \amp 0 \amp 1\\ -3 \amp a \amp b\end{pmatrix}.\)</span>
 </div>
 <ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-1-1-2">
-<li id="Ex-Matrix_equality-1-1-2-1"><div class="para" id="p-derived-Ex-Matrix_equality-1-1-2-1">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(A=C\text{?}\)</span>
-</div></li>
-<li id="Ex-Matrix_equality-1-1-2-2"><div class="para" id="p-derived-Ex-Matrix_equality-1-1-2-2">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(B=C\text{?}\)</span>
-</div></li>
+<li id="Ex-Matrix_equality-1-1-2-1">
+<div class="para" id="p-derived-Ex-Matrix_equality-1-1-2-1">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(A=C\text{?}\)</span>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_equality-1-1-2-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_equality-1-1-2-2">
+<div class="para" id="p-derived-Ex-Matrix_equality-1-1-2-2">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(B=C\text{?}\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_equality-1-1-2-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_equality-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-Matrix_equality-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="Ex-Matrix_equality-2-1"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-2-1-1">
-<li id="Ex-Matrix_equality-2-1-1-1"><div class="para" id="p-derived-Ex-Matrix_equality-2-1-1-1">
+<details id="Ex-Matrix_equality-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="Ex-Matrix_equality-2-1">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-2-1-1">
+<li id="Ex-Matrix_equality-2-1-1-1">
+<div class="para" id="p-derived-Ex-Matrix_equality-2-1-1-1">
 <span class="process-math">\(a=\sqrt{2}\)</span> and <span class="process-math">\(b=\dfrac{1}{2}\)</span>
-</div></li>
-<li id="Ex-Matrix_equality-2-1-1-2"><div class="para" id="p-derived-Ex-Matrix_equality-2-1-1-2">None.</div></li>
-</ol></div></div></details><details id="Ex-Matrix_equality-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-3-1">
-<li id="Ex-Matrix_equality-3-1-1"><div class="para" id="p-derived-Ex-Matrix_equality-3-1-1">Since <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> are of the same size, the matrices will be equal when <span class="process-math">\(a=\sqrt{2}\)</span> and <span class="process-math">\(b=\dfrac{1}{2}\text{.}\)</span>
-</div></li>
-<li id="Ex-Matrix_equality-3-1-2"><div class="para" id="p-derived-Ex-Matrix_equality-3-1-2">Since <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are not the same size they can never be equal.</div></li>
-</ol></div></details>
-</div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-6"><h3 class="heading">
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_equality-2-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_equality-2-1-1-2">
+<div class="para" id="p-derived-Ex-Matrix_equality-2-1-1-2">None.</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_equality-2-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_equality-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 17.2.1"><a href="#Ex-Matrix_equality-2" title="Copy permalink for Answer 17.2.1">🔗</a></div>
+</div></details><details id="Ex-Matrix_equality-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_equality-3-1">
+<li id="Ex-Matrix_equality-3-1-1">
+<div class="para" id="p-derived-Ex-Matrix_equality-3-1-1">Since <span class="process-math">\(A\)</span> and <span class="process-math">\(C\)</span> are of the same size, the matrices will be equal when <span class="process-math">\(a=\sqrt{2}\)</span> and <span class="process-math">\(b=\dfrac{1}{2}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_equality-3-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_equality-3-1-2">
+<div class="para" id="p-derived-Ex-Matrix_equality-3-1-2">Since <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are not the same size they can never be equal.</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_equality-3-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 17.2.1"><a href="#Ex-Matrix_equality-3" title="Copy permalink for Solution 17.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 17.2"><a href="#Ex-Matrix_equality" title="Copy permalink for Example 17.2">🔗</a></div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-6"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span>
 </h3>The <dfn class="terminology">zero <span class="process-math">\(m \times n\)</span> matrix</dfn> is the <span class="process-math">\(m \times n\)</span>  matrix with all entries <span class="process-math">\(0\text{,}\)</span> i.e.<div class="displaymath process-math">
 \begin{equation*}
@@ -544,10 +583,13 @@ A=\left(a_{ij}\right)_{m \times n}.
 0\amp 0\amp \cdots \amp 0\\
 \end{pmatrix}.
 \end{equation*}
-</div></article><div class="para" id="Chap-Linear_Algebra_3-2-7">Note that by using the symbol <span class="process-math">\(0\)</span> to denote the zero matrix we have to tell from the context whether the <span class="process-math">\(0\)</span> refers to a number or a matrix.</div>
+</div>
+<div class="autopermalink" data-description="Definition 17.3"><a href="#Chap-Linear_Algebra_3-2-6" title="Copy permalink for Definition 17.3">🔗</a></div></article><div class="para" id="Chap-Linear_Algebra_3-2-7">Note that by using the symbol <span class="process-math">\(0\)</span> to denote the zero matrix we have to tell from the context whether the <span class="process-math">\(0\)</span> refers to a number or a matrix.<div class="autopermalink" data-description="Paragraph"><a href="#Chap-Linear_Algebra_3-2-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Chap-Linear_Algebra_3-2-8"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span>
-</h3>For the matrix <span class="process-math">\(A=(a_{ij})_{m \times n}\text{,}\)</span> its <dfn class="terminology">transpose</dfn>, denoted by <span class="process-math">\(A^T\text{,}\)</span> is defined by <span class="process-math">\(A^T = \left(a_{ji}\right)_{n \times m}\text{.}\)</span></article><div class="para" id="Chap-Linear_Algebra_3-2-9">Note that this definition is saying that the rows of matrix <span class="process-math">\(A\)</span> are the columns of its transpose <span class="process-math">\(A^T\)</span> and vice versa.</div>
+</h3>For the matrix <span class="process-math">\(A=(a_{ij})_{m \times n}\text{,}\)</span> its <dfn class="terminology">transpose</dfn>, denoted by <span class="process-math">\(A^T\text{,}\)</span> is defined by <span class="process-math">\(A^T = \left(a_{ji}\right)_{n \times m}\text{.}\)</span><div class="autopermalink" data-description="Definition 17.4"><a href="#Chap-Linear_Algebra_3-2-8" title="Copy permalink for Definition 17.4">🔗</a></div></article><div class="para" id="Chap-Linear_Algebra_3-2-9">Note that this definition is saying that the rows of matrix <span class="process-math">\(A\)</span> are the columns of its transpose <span class="process-math">\(A^T\)</span> and vice versa.<div class="autopermalink" data-description="Paragraph"><a href="#Chap-Linear_Algebra_3-2-9" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-Transpose"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.5</span><span class="period">.</span>
 </h3>
@@ -560,14 +602,18 @@ B = \begin{pmatrix}5 \amp -3 \\ 0 \amp \sqrt{2} \\ 1 \amp \frac{1}{2}\end{pmatri
 </div>
 <div class="para">For what values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> does <span class="process-math">\(B^T=C\text{?}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Transpose-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-Transpose-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(a=\sqrt{2}, \ b=\dfrac{1}{2}\)</span></div></details><details id="Ex-Transpose-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<span class="process-math">\(B^T = \begin{pmatrix} 5 \amp 0 \amp 1\\ -3 \amp \sqrt{2} \amp \frac{1}{2}\end{pmatrix}\text{,}\)</span><span class="process-math">\(B^T = C\)</span><span class="process-math">\(a=\sqrt{2}\)</span><span class="process-math">\(b=\frac{1}{2}\text{.}\)</span>
+<details id="Ex-Transpose-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(a=\sqrt{2}, \ b=\dfrac{1}{2}\)</span><div class="autopermalink" data-description="Answer 17.5.1"><a href="#Ex-Transpose-2" title="Copy permalink for Answer 17.5.1">🔗</a></div>
+</div></details><details id="Ex-Transpose-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<span class="process-math">\(B^T = \begin{pmatrix} 5 \amp 0 \amp 1\\ -3 \amp \sqrt{2} \amp \frac{1}{2}\end{pmatrix}\text{,}\)</span><span class="process-math">\(B^T = C\)</span><span class="process-math">\(a=\sqrt{2}\)</span><span class="process-math">\(b=\frac{1}{2}\text{.}\)</span><div class="autopermalink" data-description="Solution 17.5.1"><a href="#Ex-Transpose-3" title="Copy permalink for Solution 17.5.1">🔗</a></div>
 </div></details>
-</div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-11"><h3 class="heading">
+</div>
+<div class="autopermalink" data-description="Example 17.5"><a href="#Ex-Transpose" title="Copy permalink for Example 17.5">🔗</a></div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-11"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
-</h3>A <dfn class="terminology">square matrix</dfn> is a matrix that has the same number of rows and columns.</article><article class="example example-like" id="Ex-Square_matrices"><h3 class="heading">
+</h3>A <dfn class="terminology">square matrix</dfn> is a matrix that has the same number of rows and columns.<div class="autopermalink" data-description="Definition 17.6"><a href="#Chap-Linear_Algebra_3-2-11" title="Copy permalink for Definition 17.6">🔗</a></div></article><article class="example example-like" id="Ex-Square_matrices"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.7</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="Ex-Square_matrices-1-1">
@@ -577,7 +623,9 @@ B = \begin{pmatrix}5 \amp -3 \\ 0 \amp \sqrt{2} \\ 1 \amp \frac{1}{2}\end{pmatri
 A = \begin{pmatrix}-1 \amp 3 \amp 4\\ 5 \amp 0 \amp -2 \\ 3 \amp \frac{1}{3} \amp 6 \end{pmatrix}, \quad B = \begin{pmatrix} -1 \amp 3 \\ 5 \amp 0 \\ 3 \amp \frac{1}{3}\end{pmatrix}
 \end{equation*}
 </div>
-</div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-13"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Square_matrices-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 17.7"><a href="#Ex-Square_matrices" title="Copy permalink for Example 17.7">🔗</a></div></article><article class="definition definition-like" id="Chap-Linear_Algebra_3-2-13"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.8</span><span class="period">.</span>
 </h3>The <dfn class="terminology"><span class="process-math">\(n \times n\)</span> identity matrix</dfn>, <dfn class="terminology"><span class="process-math">\(I_n\)</span></dfn>, is the matrix with <span class="process-math">\(n\)</span> rows and <span class="process-math">\(n\)</span> columns with all entries on the main diagonal equal to <span class="process-math">\(1\)</span> and all other entries <span class="process-math">\(0\text{,}\)</span> i.e.<div class="displaymath process-math">
 \begin{equation*}
@@ -588,25 +636,34 @@ I_n = \begin{pmatrix}
 0\amp 0 \amp \cdots \amp 1\
 \end{pmatrix}.
 \end{equation*}
-</div></article><div class="para" id="Chap-Linear_Algebra_3-2-14">Often, when the size of the identity matrix is clear the subscript is dropped from the notation and the identity matrix is denoted just by <span class="process-math">\(I\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Definition 17.8"><a href="#Chap-Linear_Algebra_3-2-13" title="Copy permalink for Definition 17.8">🔗</a></div></article><div class="para" id="Chap-Linear_Algebra_3-2-14">Often, when the size of the identity matrix is clear the subscript is dropped from the notation and the identity matrix is denoted just by <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Chap-Linear_Algebra_3-2-14" title="Copy permalink for Paragraph">🔗</a></div>
 </div></section><section class="section" id="Sec-Addition_and_Scalar_Multiplication"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.1</span><span class="space"> </span><span class="title">Addition and Scalar Multiplication</span>
 </h3>
 <article class="definition definition-like" id="Sec-Addition_and_Scalar_Multiplication-2"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">17.9</span><span class="period">.</span><span class="space"> </span><span class="title">Matrix addition and scalar multiplication.</span>
 </h4>Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(m \times n\)</span> matrices, i.e., <span class="process-math">\(A=\left(a_{ij}\right)_{m \times n}\)</span> and <span class="process-math">\(B = \left(b_{ij}\right)_{m \times n}\text{.}\)</span> Then <ol class="lower-roman ol-marker-4" id="Sec-Addition_and_Scalar_Multiplication-2-2-6">
-<li id="Sec-Addition_and_Scalar_Multiplication-2-2-6-1"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-2-2-6-1">
+<li id="Sec-Addition_and_Scalar_Multiplication-2-2-6-1">
+<div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-2-2-6-1">
 <dfn class="terminology">Matrix addition</dfn> is defined by <span class="process-math">\(A+B = \left(a_{ij} + b_{ij}\right)_{m \times n}\text{.}\)</span>
-</div></li>
-<li id="Sec-Addition_and_Scalar_Multiplication-2-2-6-2"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-2-2-6-2">
-<dfn class="terminology">Scalar multiplication</dfn> is defined by <span class="process-math">\(kA = \left(k \cdot a_{ij}\right)_{m \times n}\)</span> where <span class="process-math">\(k\)</span> is a constant.</div></li>
-</ol></article><div class="para logical" id="Sec-Addition_and_Scalar_Multiplication-3">
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Sec-Addition_and_Scalar_Multiplication-2-2-6-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Sec-Addition_and_Scalar_Multiplication-2-2-6-2">
+<div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-2-2-6-2">
+<dfn class="terminology">Scalar multiplication</dfn> is defined by <span class="process-math">\(kA = \left(k \cdot a_{ij}\right)_{m \times n}\)</span> where <span class="process-math">\(k\)</span> is a constant.</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Sec-Addition_and_Scalar_Multiplication-2-2-6-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Definition 17.9: Matrix addition and scalar multiplication"><a href="#Sec-Addition_and_Scalar_Multiplication-2" title="Copy permalink for Definition 17.9: Matrix addition and scalar multiplication">🔗</a></div></article><div class="para logical" id="Sec-Addition_and_Scalar_Multiplication-3">
 <div class="para">Thus, to add two matrices of the same size, add up the corresponding entries in each matrix. Matrix addition of matrices not of the same size is not defined. To multiply a matrix by a scalar, multiply each entry in the matrix by that scalar. Note that we now can also subtract two matrices by defining</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A-B = A+ (-1)B.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Addition_and_Scalar_Multiplication-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex-Matrix_addition_and_scalar_multiplication"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
@@ -614,49 +671,83 @@ A-B = A+ (-1)B.
 <div class="para logical" id="Ex-Matrix_addition_and_scalar_multiplication-1-1">
 <div class="para">If <span class="process-math">\(A = \begin{pmatrix} 1 \amp 2 \amp 3\\ 4 \amp 3 \amp 2\end{pmatrix}, \quad B = \begin{pmatrix} 5 \amp 3 \\ 9 \amp 2 \\ 4 \amp 3\end{pmatrix}.\)</span> Then calculate the given expression or explain why it does not exist.</div>
 <ol class="lower-alpha ol-marker-5" id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2">
-<li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1"><span class="process-math">\(\displaystyle 3A+B\)</span></div></li>
-<li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2">
-<span class="process-math">\((2A^T - B)_{32} \, \)</span> (i.e. the entry in row <span class="process-math">\(3\text{,}\)</span> column <span class="process-math">\(2\)</span> of the matrix <span class="process-math">\(2A^T-B\,\)</span>)</div></li>
-<li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3"><span class="process-math">\(\displaystyle (B^T+A)_{31}\)</span></div></li>
+<li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1">
+<div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1"><span class="process-math">\(\displaystyle 3A+B\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_addition_and_scalar_multiplication-1-1-2-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2">
+<div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2">
+<span class="process-math">\((2A^T - B)_{32} \, \)</span> (i.e. the entry in row <span class="process-math">\(3\text{,}\)</span> column <span class="process-math">\(2\)</span> of the matrix <span class="process-math">\(2A^T-B\,\)</span>)</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_addition_and_scalar_multiplication-1-1-2-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+<li id="Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3">
+<div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3"><span class="process-math">\(\displaystyle (B^T+A)_{31}\)</span></div>
+<div class="autopermalink" data-description="Item c"><a href="#Ex-Matrix_addition_and_scalar_multiplication-1-1-2-3" title="Copy permalink for Item c">🔗</a></div>
+</li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_addition_and_scalar_multiplication-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="Ex-Matrix_addition_and_scalar_multiplication-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_addition_and_scalar_multiplication-2-1">
-<li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-1"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-1">Since <span class="process-math">\(A\)</span> is a <span class="process-math">\(2 \times 3\)</span> matrix so will be <span class="process-math">\(3A\text{.}\)</span> Since <span class="process-math">\(3A\)</span> and <span class="process-math">\(B\)</span> are not the same size we cannot add these two matrices.</div></li>
-<li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-2"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-2">
+<div class="solutions"><details id="Ex-Matrix_addition_and_scalar_multiplication-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_addition_and_scalar_multiplication-2-1">
+<li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-1">
+<div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-1">Since <span class="process-math">\(A\)</span> is a <span class="process-math">\(2 \times 3\)</span> matrix so will be <span class="process-math">\(3A\text{.}\)</span> Since <span class="process-math">\(3A\)</span> and <span class="process-math">\(B\)</span> are not the same size we cannot add these two matrices.</div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_addition_and_scalar_multiplication-2-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-2">
+<div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-2">
 <span class="process-math">\(A^T = \begin{pmatrix} 1 \amp 4 \\ 2 \amp 3 \\ 3\amp 2\end{pmatrix}\)</span> and so <span class="process-math">\(2A^T = \begin{pmatrix} 2 \amp 8 \\ 4 \amp 6 \\ 6 \amp 4\end{pmatrix}\text{.}\)</span> Thus <span class="process-math">\(2A^T-B = \begin{pmatrix} -3 \amp 5 \\ -5 \amp 4 \\ 2 \amp 1\end{pmatrix}\)</span> and <span class="process-math">\((2A^T - B)_{32} =1.\)</span>
-</div></li>
-<li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-3"><div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-3">
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_addition_and_scalar_multiplication-2-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+<li id="Ex-Matrix_addition_and_scalar_multiplication-2-1-3">
+<div class="para" id="p-derived-Ex-Matrix_addition_and_scalar_multiplication-2-1-3">
 <span class="process-math">\(B^T + A = \begin{pmatrix} 5 \amp 9 \amp 4 \\ 3 \amp 2 \amp 3\end{pmatrix} + \begin{pmatrix} 1 \amp 2 \amp 3\\ 4 \amp 3 \amp 2\end{pmatrix} =  \begin{pmatrix} 6 \amp 11 \amp 7\\ 7 \amp 5 \amp 5\end{pmatrix}\text{.}\)</span> Since this is a <span class="process-math">\(2 \times 3\)</span>  matrix there is no entry in row <span class="process-math">\(3\text{,}\)</span> column <span class="process-math">\(1\text{.}\)</span>
-</div></li>
-</ol></div></details></div></article><div class="para" id="Sec-Addition_and_Scalar_Multiplication-5">From the definitions of matrix addition and scalar multiplication the following general properties can be shown.</div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#Ex-Matrix_addition_and_scalar_multiplication-2-1-3" title="Copy permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 17.10.1"><a href="#Ex-Matrix_addition_and_scalar_multiplication-2" title="Copy permalink for Solution 17.10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 17.10"><a href="#Ex-Matrix_addition_and_scalar_multiplication" title="Copy permalink for Example 17.10">🔗</a></div></article><div class="para" id="Sec-Addition_and_Scalar_Multiplication-5">From the definitions of matrix addition and scalar multiplication the following general properties can be shown.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Addition_and_Scalar_Multiplication-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Sec-Addition_and_Scalar_Multiplication-6"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.11</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Scalar Multiplication and Matrix Addition.</span>
 </h4>
 <div class="para logical" id="Sec-Addition_and_Scalar_Multiplication-6-2-1">
 <div class="para">Let <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> be matrices of the same size. Then</div>
 <dl class="description-list">
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-1">(A1)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-1">(A1)<div class="autopermalink" data-description="Item: (A1)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-1" title="Copy permalink for Item: (A1)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\(A+B = B+A \hspace{32mm}\)</span> (Commutative Law)</dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-2">(A2)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-2">(A2)<div class="autopermalink" data-description="Item: (A2)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-2" title="Copy permalink for Item: (A2)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\((A+B)+C = A+(B+C) \hspace{10mm}\)</span>(Associative Law)</dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-3">(A3)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-3">(A3)<div class="autopermalink" data-description="Item: (A3)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-3" title="Copy permalink for Item: (A3)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\(A+0 = A \hspace{57mm}\)</span> (Identity Law)</dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-4">(A4)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-4">(A4)<div class="autopermalink" data-description="Item: (A4)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-4" title="Copy permalink for Item: (A4)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\(A+(-A) = 0 \hspace{50mm}\)</span> (Inverse Law)</dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-5">(S1)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-5">(S1)<div class="autopermalink" data-description="Item: (S1)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-5" title="Copy permalink for Item: (S1)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\(k(A+B) = kA+kB\)</span>
 </dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-6">(S2)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-6">(S2)<div class="autopermalink" data-description="Item: (S2)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-6" title="Copy permalink for Item: (S2)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\((k_1 + k_2)A= k_1A + k_2A\)</span>
 </dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-7">(S3)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-7">(S3)<div class="autopermalink" data-description="Item: (S3)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-7" title="Copy permalink for Item: (S3)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\(k_1(k_2A) = (k_1k_2)A\)</span>
 </dd>
-<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-8">(S4)</dt>
+<dt id="Sec-Addition_and_Scalar_Multiplication-6-2-1-4-8">(S4)<div class="autopermalink" data-description="Item: (S4)"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1-4-8" title="Copy permalink for Item: (S4)">🔗</a></div>
+</dt>
 <dd> <span class="process-math">\(1A = A\)</span>
 </dd>
 </dl>
-</div></article><section class="exercises" id="Sec-Addition_and_Scalar_Multiplication-7"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Addition_and_Scalar_Multiplication-6-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.11: Properties of Scalar Multiplication and Matrix Addition"><a href="#Sec-Addition_and_Scalar_Multiplication-6" title="Copy permalink for Theorem 17.11: Properties of Scalar Multiplication and Matrix Addition">🔗</a></div></article><section class="exercises" id="Sec-Addition_and_Scalar_Multiplication-7"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Addition_and_Scalar_Multiplication-7-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -668,16 +759,26 @@ A = \begin{pmatrix}4 \amp -2 \amp 1\\ 0 \amp 2 \amp 3\end{pmatrix} \quad \mbox{a
 \end{equation*}
 </div>
 <ol class="lower-alpha ol-marker-5" id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2">
-<li id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1">Find <span class="process-math">\((2A-B^{T})_{12}\text{.}\)</span>
-</div></li>
-<li id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2"><div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2">Find <span class="process-math">\((2A-B)^T\text{.}\)</span>
-</div></li>
+<li id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1">
+<div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1">Find <span class="process-math">\((2A-B^{T})_{12}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 17.1.1.a"><a href="#Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-1" title="Copy permalink for Item 17.1.1.a">🔗</a></div>
+</li>
+<li id="Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2">
+<div class="para" id="p-derived-Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2">Find <span class="process-math">\((2A-B)^T\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 17.1.1.b"><a href="#Sec-Addition_and_Scalar_Multiplication-7-2-1-1-2-2" title="Copy permalink for Item 17.1.1.b">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="exercise exercise-like" id="Sec-Addition_and_Scalar_Multiplication-7-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Addition_and_Scalar_Multiplication-7-3-1-1">Show that for any matrix <span class="process-math">\(A\,\text{,}\)</span> <span class="process-math">\(3A = A + A + A\text{.}\)</span> For what values of <span class="process-math">\(k\)</span> is it true that <span class="process-math">\(kA = \underbrace{A + A + \cdots + A}_{k \mbox{ times}}\,\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Addition_and_Scalar_Multiplication-7-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Addition_and_Scalar_Multiplication-7-4-1-1">Prove that for two matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> of the same size <span class="process-math">\(A+B = B+A\text{.}\)</span>
-</div></article></section></section><section class="section" id="Sec-Matrix_multiplication"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Addition_and_Scalar_Multiplication-7-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.1.1"><a href="#Sec-Addition_and_Scalar_Multiplication-7-2" title="Copy permalink for Exercise 17.1.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Addition_and_Scalar_Multiplication-7-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Addition_and_Scalar_Multiplication-7-3-1-1">Show that for any matrix <span class="process-math">\(A\,\text{,}\)</span> <span class="process-math">\(3A = A + A + A\text{.}\)</span> For what values of <span class="process-math">\(k\)</span> is it true that <span class="process-math">\(kA = \underbrace{A + A + \cdots + A}_{k \mbox{ times}}\,\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Addition_and_Scalar_Multiplication-7-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.1.2"><a href="#Sec-Addition_and_Scalar_Multiplication-7-3" title="Copy permalink for Exercise 17.1.2">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Addition_and_Scalar_Multiplication-7-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Addition_and_Scalar_Multiplication-7-4-1-1">Prove that for two matrices <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> of the same size <span class="process-math">\(A+B = B+A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Addition_and_Scalar_Multiplication-7-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.1.3"><a href="#Sec-Addition_and_Scalar_Multiplication-7-4" title="Copy permalink for Exercise 17.1.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 17.1: Example Tasks"><a href="#Sec-Addition_and_Scalar_Multiplication-7" title="Copy permalink for Exercises 17.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 17.1: Addition and Scalar Multiplication"><a href="#Sec-Addition_and_Scalar_Multiplication" title="Copy permalink for Section 17.1: Addition and Scalar Multiplication">🔗</a></div></section><section class="section" id="Sec-Matrix_multiplication"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.2</span><span class="space"> </span><span class="title">Matrix Multiplication</span>
 </h3>
 <article class="definition definition-like" id="Sec-Matrix_multiplication-2"><h4 class="heading">
@@ -686,19 +787,27 @@ A = \begin{pmatrix}4 \amp -2 \amp 1\\ 0 \amp 2 \amp 3\end{pmatrix} \quad \mbox{a
 \begin{equation*}
 AB = \left(\sum_{k=1}^n a_{ik}b_{kj}\right)_{m \times p}.
 \end{equation*}
-</div></article><div class="para logical" id="Sec-Matrix_multiplication-3">
+</div>
+<div class="autopermalink" data-description="Definition 17.12"><a href="#Sec-Matrix_multiplication-2" title="Copy permalink for Definition 17.12">🔗</a></div></article><div class="para logical" id="Sec-Matrix_multiplication-3">
 <div class="para">If we call <span class="process-math">\(C=AB\)</span>  then from this definition it can be seen:</div>
 <ol class="decimal ol-marker-6" id="Sec-Matrix_multiplication-3-2">
-<li id="Sec-Matrix_multiplication-3-2-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-3-2-1">For the matrix multiplication <span class="process-math">\(AB\)</span> to be defined the number of columns in <span class="process-math">\(A\)</span> has to be equal to the number of rows in <span class="process-math">\(B\text{.}\)</span> The resulting matrix, <span class="process-math">\(C\text{,}\)</span> has the same number of rows as <span class="process-math">\(A\)</span> and the same number of columns as <span class="process-math">\(B\text{.}\)</span>
-</div></li>
-<li id="Sec-Matrix_multiplication-3-2-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-3-2-2">Entry <span class="process-math">\(c_{ij}\)</span> in <span class="process-math">\(C\)</span> is found by taking the scalar (or dot) product of the <span class="process-math">\(i^{\mbox{th}}\)</span> row vector from <span class="process-math">\(A\)</span> with (the transpose of) the <span class="process-math">\(j^{\mbox{th}}\)</span> column vector from <span class="process-math">\(B\text{,}\)</span> i.e.<div class="displaymath process-math" id="Sec-Matrix_multiplication-3-2-2-7">
+<li id="Sec-Matrix_multiplication-3-2-1">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-3-2-1">For the matrix multiplication <span class="process-math">\(AB\)</span> to be defined the number of columns in <span class="process-math">\(A\)</span> has to be equal to the number of rows in <span class="process-math">\(B\text{.}\)</span> The resulting matrix, <span class="process-math">\(C\text{,}\)</span> has the same number of rows as <span class="process-math">\(A\)</span> and the same number of columns as <span class="process-math">\(B\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Sec-Matrix_multiplication-3-2-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-3-2-2">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-3-2-2">Entry <span class="process-math">\(c_{ij}\)</span> in <span class="process-math">\(C\)</span> is found by taking the scalar (or dot) product of the <span class="process-math">\(i^{\mbox{th}}\)</span> row vector from <span class="process-math">\(A\)</span> with (the transpose of) the <span class="process-math">\(j^{\mbox{th}}\)</span> column vector from <span class="process-math">\(B\text{,}\)</span> i.e.<div class="displaymath process-math" id="Sec-Matrix_multiplication-3-2-2-7">
 \begin{align*}
 c_{ij} \amp = (a_{i1},a_{i2}, \ldots, a_{in})\cdot (b_{1j},b_{2j}, \ldots, b_{nj}) \\
 \amp = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{in}b_{nj}.
 \end{align*}
 </div>
-</div></li>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Sec-Matrix_multiplication-3-2-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
 </ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex-Matrix_multiplication_not_commutative"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.13</span><span class="period">.</span>
@@ -711,19 +820,36 @@ A=\begin{pmatrix} 0 \amp 1 \\ -1 \amp 3 \\ 2 \amp 5 \end{pmatrix} \quad \mbox{an
 \end{equation*}
 </div>
 <ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-1-2">
-<li id="Ex-Matrix_multiplication_not_commutative-1-2-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-1-2-1">Calculate <span class="process-math">\(AB\text{.}\)</span>
-</div></li>
-<li id="Ex-Matrix_multiplication_not_commutative-1-2-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-1-2-2">Calculate <span class="process-math">\(BA\text{.}\)</span>
-</div></li>
-</ol>
+<li id="Ex-Matrix_multiplication_not_commutative-1-2-1">
+<div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-1-2-1">Calculate <span class="process-math">\(AB\text{.}\)</span>
 </div>
-<details id="Ex-Matrix_multiplication_not_commutative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-2-1">
-<li id="Ex-Matrix_multiplication_not_commutative-2-1-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-2-1-1"><span class="process-math">\(\displaystyle AB=\begin{pmatrix} -3 \amp 4 \\ -7 \amp 23/2 \\ -19 \amp 21 \end{pmatrix}\)</span></div></li>
-<li id="Ex-Matrix_multiplication_not_commutative-2-1-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-2-1-2">
-<span class="process-math">\(BA\)</span> is not defined.</div></li>
-</ol></div></details><details id="Ex-Matrix_multiplication_not_commutative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_multiplication_not_commutative-1-2-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_multiplication_not_commutative-1-2-2">
+<div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-1-2-2">Calculate <span class="process-math">\(BA\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_multiplication_not_commutative-1-2-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_not_commutative-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<details id="Ex-Matrix_multiplication_not_commutative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-2-1">
+<li id="Ex-Matrix_multiplication_not_commutative-2-1-1">
+<div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-2-1-1"><span class="process-math">\(\displaystyle AB=\begin{pmatrix} -3 \amp 4 \\ -7 \amp 23/2 \\ -19 \amp 21 \end{pmatrix}\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_multiplication_not_commutative-2-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_multiplication_not_commutative-2-1-2">
+<div class="para" id="p-derived-Ex-Matrix_multiplication_not_commutative-2-1-2">
+<span class="process-math">\(BA\)</span> is not defined.</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_multiplication_not_commutative-2-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Answer 17.13.1"><a href="#Ex-Matrix_multiplication_not_commutative-2" title="Copy permalink for Answer 17.13.1">🔗</a></div>
+</div></details><details id="Ex-Matrix_multiplication_not_commutative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_not_commutative-3-1">
-<li id="Ex-Matrix_multiplication_not_commutative-3-1-1"><div class="para logical" id="Ex-Matrix_multiplication_not_commutative-3-1-1-1">
+<li id="Ex-Matrix_multiplication_not_commutative-3-1-1">
+<div class="para logical" id="Ex-Matrix_multiplication_not_commutative-3-1-1-1">
 <div class="para">Since <span class="process-math">\(A\)</span> is a <span class="process-math">\(3 \times 2\)</span>  matrix and <span class="process-math">\(B\)</span> is <span class="process-math">\(2\times 2\)</span> then <span class="process-math">\(AB\)</span> is defined since <span class="process-math">\(A\)</span> has <span class="process-math">\(2\)</span> columns and <span class="process-math">\(B\)</span> has <span class="process-math">\(2\)</span> rows. The resultant matrix will be a <span class="process-math">\(3 \times 2\)</span>  matrix since <span class="process-math">\(A\)</span> has <span class="process-math">\(3\)</span> rows and <span class="process-math">\(B\)</span> has <span class="process-math">\(2\)</span> columns. Thus <span class="process-math">\(AB\)</span> will be of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -747,9 +873,16 @@ c_{32} \amp = (2,5)\cdot (1/2,4) = 1 + 20  = 21
 AB=\begin{pmatrix} -3 \amp 4 \\ -7 \amp 23/2 \\ -19 \amp 21 \end{pmatrix}.
 \end{equation*}
 </div>
-</div></li>
-<li id="Ex-Matrix_multiplication_not_commutative-3-1-2"><div class="para" id="Ex-Matrix_multiplication_not_commutative-3-1-2-1">
-<span class="process-math">\(BA\)</span> is not defined because the number of columns in <span class="process-math">\(B\)</span> (i.e. 2) is not equal to the number of rows in <span class="process-math">\(A\)</span> (i.e. 3).</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_not_commutative-3-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_multiplication_not_commutative-3-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_multiplication_not_commutative-3-1-2">
+<div class="para" id="Ex-Matrix_multiplication_not_commutative-3-1-2-1">
+<span class="process-math">\(BA\)</span> is not defined because the number of columns in <span class="process-math">\(B\)</span> (i.e. 2) is not equal to the number of rows in <span class="process-math">\(A\)</span> (i.e. 3).<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_not_commutative-3-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_multiplication_not_commutative-3-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
 </ol>
 <div class="para logical" id="Ex-Matrix_multiplication_not_commutative-3-2">
 <div class="para">Notice that this example shows that matrix multiplication is not commutative, i.e. in general</div>
@@ -758,8 +891,10 @@ AB=\begin{pmatrix} -3 \amp 4 \\ -7 \amp 23/2 \\ -19 \amp 21 \end{pmatrix}.
 AB \neq BA.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_not_commutative-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><article class="example example-like" id="Ex-Matrix_multiplication_associative"><h4 class="heading">
+<div class="autopermalink" data-description="Solution 17.13.1"><a href="#Ex-Matrix_multiplication_not_commutative-3" title="Copy permalink for Solution 17.13.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 17.13"><a href="#Ex-Matrix_multiplication_not_commutative" title="Copy permalink for Example 17.13">🔗</a></div></article><article class="example example-like" id="Ex-Matrix_multiplication_associative"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.14</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Ex-Matrix_multiplication_associative-1">
@@ -770,30 +905,50 @@ A=\begin{pmatrix} 3\amp 2 \amp 1 \amp 6 \\ 2 \amp 1 \amp 3 \amp -1\end{pmatrix},
 \end{equation*}
 </div>
 <ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_associative-1-2">
-<li id="Ex-Matrix_multiplication_associative-1-2-1"><div class="para" id="p-derived-Ex-Matrix_multiplication_associative-1-2-1">Calculate <span class="process-math">\(A(BC)\text{.}\)</span>
-</div></li>
-<li id="Ex-Matrix_multiplication_associative-1-2-2"><div class="para" id="p-derived-Ex-Matrix_multiplication_associative-1-2-2">Calculate <span class="process-math">\((AB)C\text{.}\)</span>
-</div></li>
-</ol>
+<li id="Ex-Matrix_multiplication_associative-1-2-1">
+<div class="para" id="p-derived-Ex-Matrix_multiplication_associative-1-2-1">Calculate <span class="process-math">\(A(BC)\text{.}\)</span>
 </div>
-<details id="Ex-Matrix_multiplication_associative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Matrix_multiplication_associative-2-1"><span class="process-math">\(A(BC) =  \begin{pmatrix}84 \amp -7 \amp 105 \\ -12 \amp 6 \amp 0\end{pmatrix} = (AB)C\)</span></div></div></details><details id="Ex-Matrix_multiplication_associative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_multiplication_associative-1-2-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_multiplication_associative-1-2-2">
+<div class="para" id="p-derived-Ex-Matrix_multiplication_associative-1-2-2">Calculate <span class="process-math">\((AB)C\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_multiplication_associative-1-2-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_associative-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<details id="Ex-Matrix_multiplication_associative-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-Matrix_multiplication_associative-2-1">
+<span class="process-math">\(A(BC) =  \begin{pmatrix}84 \amp -7 \amp 105 \\ -12 \amp 6 \amp 0\end{pmatrix} = (AB)C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_associative-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 17.14.1"><a href="#Ex-Matrix_multiplication_associative-2" title="Copy permalink for Answer 17.14.1">🔗</a></div>
+</div></details><details id="Ex-Matrix_multiplication_associative-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <ol class="lower-alpha ol-marker-5" id="Ex-Matrix_multiplication_associative-3-1">
-<li id="Ex-Matrix_multiplication_associative-3-1-1"><div class="para logical" id="Ex-Matrix_multiplication_associative-3-1-1-1">
+<li id="Ex-Matrix_multiplication_associative-3-1-1">
+<div class="para logical" id="Ex-Matrix_multiplication_associative-3-1-1-1">
 <div class="para"><span class="process-math">\(BC = \begin{pmatrix} 1 \amp 0 \\ -1 \amp 2 \\ 3 \amp 1 \\ 4 \amp 5 \end{pmatrix}\begin{pmatrix}-2 \amp 1 \amp 0 \\ 4 \amp -1 \amp 3\end{pmatrix} = \begin{pmatrix} -2 \amp 1 \amp 0\\ 10 \amp -3 \amp 6 \\ -2 \amp 2 \amp 3 \\ 12 \amp -1 \amp 15\end{pmatrix}\)</span></div>
 <div class="displaymath process-math">
 \begin{equation*}
 A(BC) = \begin{pmatrix} 3\amp 2 \amp 1 \amp 6 \\ 2 \amp 1 \amp 3 \amp -1\end{pmatrix}\begin{pmatrix} -2 \amp 1 \amp 0\\ 10 \amp -3 \amp 6 \\ -2 \amp 2 \amp 3 \\ 12 \amp -1 \amp 15\end{pmatrix} = \begin{pmatrix} 84 \amp -7 \amp 105 \\ -12 \amp 6 \amp 0\end{pmatrix}.
 \end{equation*}
 </div>
-</div></li>
-<li id="Ex-Matrix_multiplication_associative-3-1-2"><div class="para logical" id="Ex-Matrix_multiplication_associative-3-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_associative-3-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Ex-Matrix_multiplication_associative-3-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Ex-Matrix_multiplication_associative-3-1-2">
+<div class="para logical" id="Ex-Matrix_multiplication_associative-3-1-2-1">
 <div class="para"><span class="process-math">\(AB = \begin{pmatrix} 3\amp 2 \amp 1 \amp 6 \\ 2 \amp 1 \amp 3 \amp -1\end{pmatrix} \begin{pmatrix} 1 \amp 0 \\ -1 \amp 2 \\ 3 \amp 1 \\ 4 \amp 5 \end{pmatrix} = \begin{pmatrix} 28 \amp 35 \\ 6 \amp 0\end{pmatrix}\)</span></div>
 <div class="displaymath process-math">
 \begin{equation*}
 (AB)C = \begin{pmatrix} 28 \amp 35 \\ 6 \amp 0\end{pmatrix} \begin{pmatrix}-2 \amp 1 \amp 0 \\ 4 \amp -1 \amp 3\end{pmatrix} = \begin{pmatrix}84 \amp -7 \amp 105 \\ -12 \amp 6 \amp 0\end{pmatrix}.
 \end{equation*}
 </div>
-</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_associative-3-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Ex-Matrix_multiplication_associative-3-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
 </ol>
 <div class="para logical" id="Ex-Matrix_multiplication_associative-3-2">
 <div class="para">Notice that this example is an illustration that matrix multiplication is associative, i.e. in general</div>
@@ -802,40 +957,78 @@ A(BC) = \begin{pmatrix} 3\amp 2 \amp 1 \amp 6 \\ 2 \amp 1 \amp 3 \amp -1\end{pma
 A(BC) = (AB)C\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_multiplication_associative-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></article><div class="para" id="Sec-Matrix_multiplication-6">From the definition of matrix multiplication the following properties can be shown to hold.</div>
+<div class="autopermalink" data-description="Solution 17.14.1"><a href="#Ex-Matrix_multiplication_associative-3" title="Copy permalink for Solution 17.14.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 17.14"><a href="#Ex-Matrix_multiplication_associative" title="Copy permalink for Example 17.14">🔗</a></div></article><div class="para" id="Sec-Matrix_multiplication-6">From the definition of matrix multiplication the following properties can be shown to hold.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Sec-Matrix_multiplication-7"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.15</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Matrix Multiplication.</span>
 </h4>
 <div class="para logical" id="Sec-Matrix_multiplication-7-2-1">
 <div class="para">Let <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> be appropriately sized matrices. Then</div>
 <ol class="decimal ol-marker-9" id="Sec-Matrix_multiplication-7-2-1-4">
-<li id="Sec-Matrix_multiplication-7-2-1-4-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-1">
-<span class="process-math">\(A(BC)=(AB)C \hspace{55mm}\)</span> (Associative Law)</div></li>
-<li id="Sec-Matrix_multiplication-7-2-1-4-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-2">
-<span class="process-math">\(A(B+C) = AB + AC \hspace{42mm}\)</span> (Left Distributive Law)</div></li>
-<li id="Sec-Matrix_multiplication-7-2-1-4-3"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-3">
-<span class="process-math">\((A+B)C = AC + BC \hspace{42mm}\)</span> (Right Distributive Law)</div></li>
-<li id="Sec-Matrix_multiplication-7-2-1-4-4"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-4"><span class="process-math">\(\displaystyle k(AB) = (kA)B = A(kB)\)</span></div></li>
-<li id="Sec-Matrix_multiplication-7-2-1-4-5"><div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-5">
-<span class="process-math">\(I_mA = A = AI_n\)</span> if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix<span class="process-math">\(\hspace{5mm}\)</span> (Identity Law)</div></li>
+<li id="Sec-Matrix_multiplication-7-2-1-4-1">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-1">
+<span class="process-math">\(A(BC)=(AB)C \hspace{55mm}\)</span> (Associative Law)</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Sec-Matrix_multiplication-7-2-1-4-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-7-2-1-4-2">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-2">
+<span class="process-math">\(A(B+C) = AB + AC \hspace{42mm}\)</span> (Left Distributive Law)</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Sec-Matrix_multiplication-7-2-1-4-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-7-2-1-4-3">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-3">
+<span class="process-math">\((A+B)C = AC + BC \hspace{42mm}\)</span> (Right Distributive Law)</div>
+<div class="autopermalink" data-description="Item 3"><a href="#Sec-Matrix_multiplication-7-2-1-4-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-7-2-1-4-4">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-4"><span class="process-math">\(\displaystyle k(AB) = (kA)B = A(kB)\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#Sec-Matrix_multiplication-7-2-1-4-4" title="Copy permalink for Item 4">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-7-2-1-4-5">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-7-2-1-4-5">
+<span class="process-math">\(I_mA = A = AI_n\)</span> if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix<span class="process-math">\(\hspace{5mm}\)</span> (Identity Law)</div>
+<div class="autopermalink" data-description="Item 5"><a href="#Sec-Matrix_multiplication-7-2-1-4-5" title="Copy permalink for Item 5">🔗</a></div>
+</li>
 </ol>
-</div></article><div class="para" id="Sec-Matrix_multiplication-8">For later reference, some properties of the transpose of a matrix with respect to the various matrix operations that we have been discussing are listed below.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-7-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.15: Properties of Matrix Multiplication"><a href="#Sec-Matrix_multiplication-7" title="Copy permalink for Theorem 17.15: Properties of Matrix Multiplication">🔗</a></div></article><div class="para" id="Sec-Matrix_multiplication-8">For later reference, some properties of the transpose of a matrix with respect to the various matrix operations that we have been discussing are listed below.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-8" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Sec-Matrix_multiplication-9"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.16</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Matrix Transpose.</span>
 </h4>
 <div class="para logical" id="Sec-Matrix_multiplication-9-2-1">
 <div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be appropriately sized matrices. Then</div>
 <ol class="decimal ol-marker-9" id="Sec-Matrix_multiplication-9-2-1-3">
-<li id="Sec-Matrix_multiplication-9-2-1-3-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-1"><span class="process-math">\(\displaystyle (A^T)^T = A\)</span></div></li>
-<li id="Sec-Matrix_multiplication-9-2-1-3-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-2"><span class="process-math">\(\displaystyle (A+B)^T = A^T + B^T \)</span></div></li>
-<li id="Sec-Matrix_multiplication-9-2-1-3-3"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-3"><span class="process-math">\(\displaystyle (kA)^T = k(A^T) \)</span></div></li>
-<li id="Sec-Matrix_multiplication-9-2-1-3-4"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-4"><span class="process-math">\(\displaystyle (AB)^T = B^TA^T \)</span></div></li>
-<li id="Sec-Matrix_multiplication-9-2-1-3-5"><div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-5">
+<li id="Sec-Matrix_multiplication-9-2-1-3-1">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-1"><span class="process-math">\(\displaystyle (A^T)^T = A\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#Sec-Matrix_multiplication-9-2-1-3-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-9-2-1-3-2">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-2"><span class="process-math">\(\displaystyle (A+B)^T = A^T + B^T \)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#Sec-Matrix_multiplication-9-2-1-3-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-9-2-1-3-3">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-3"><span class="process-math">\(\displaystyle (kA)^T = k(A^T) \)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#Sec-Matrix_multiplication-9-2-1-3-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-9-2-1-3-4">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-4"><span class="process-math">\(\displaystyle (AB)^T = B^TA^T \)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#Sec-Matrix_multiplication-9-2-1-3-4" title="Copy permalink for Item 4">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-9-2-1-3-5">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-9-2-1-3-5">
 <span class="process-math">\((A^r)^T = (A^T)^r \)</span> where <span class="process-math">\(r \in \mathbb{N}\text{.}\)</span>
-</div></li>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#Sec-Matrix_multiplication-9-2-1-3-5" title="Copy permalink for Item 5">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="example example-like" id="Ex-Properties_of_transpose"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-9-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.16: Properties of Matrix Transpose"><a href="#Sec-Matrix_multiplication-9" title="Copy permalink for Theorem 17.16: Properties of Matrix Transpose">🔗</a></div></article><article class="example example-like" id="Ex-Properties_of_transpose"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.17</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Ex-Properties_of_transpose-1-1">
@@ -845,8 +1038,10 @@ A(BC) = (AB)C\text{.}
 A = \begin{pmatrix}0 \amp 1\\ -1 \amp 3 \\ 2 \amp 5\end{pmatrix} \quad \mbox{and} \quad B = \begin{pmatrix}-2 \amp 1/2 \\ -3 \amp 4 \end{pmatrix}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Properties_of_transpose-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="Ex-Properties_of_transpose-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Ex-Properties_of_transpose-2-1">
+<div class="solutions"><details id="Ex-Properties_of_transpose-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Ex-Properties_of_transpose-2-1">
 <div class="para">Firstly</div>
 <div class="displaymath process-math" id="Ex-Properties_of_transpose-2-1-1">
 \begin{align*}
@@ -862,7 +1057,11 @@ B^TA^T \amp = \begin{pmatrix}-2 \amp -3 \\ 1/2 \amp 4 \end{pmatrix}  \begin{pmat
 \amp = \begin{pmatrix}-3 \amp -7 \amp -19 \\ 4 \amp 23/2 \amp 21 \end{pmatrix}.
 \end{align*}
 </div>
-</div></div></details></div></article><section class="exercises" id="Sec-Matrix_multiplication-11"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Properties_of_transpose-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 17.17.1"><a href="#Ex-Properties_of_transpose-2" title="Copy permalink for Solution 17.17.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 17.17"><a href="#Ex-Properties_of_transpose" title="Copy permalink for Example 17.17">🔗</a></div></article><section class="exercises" id="Sec-Matrix_multiplication-11"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Matrix_multiplication-11-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -874,12 +1073,20 @@ A = \begin{pmatrix} 3 \amp -1 \\ -2 \amp 2\end{pmatrix} \quad \mbox{ and } \quad
 \end{equation*}
 </div>
 <ol class="lower-alpha ol-marker-5" id="Sec-Matrix_multiplication-11-2-1-1-2">
-<li id="Sec-Matrix_multiplication-11-2-1-1-2-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-2-1-1-2-1">Calculate <span class="process-math">\((A+B)^2\text{.}\)</span>
-</div></li>
-<li id="Sec-Matrix_multiplication-11-2-1-1-2-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-2-1-1-2-2">Calculate <span class="process-math">\(A^2 + 2AB + B^2\text{.}\)</span>
-</div></li>
+<li id="Sec-Matrix_multiplication-11-2-1-1-2-1">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-11-2-1-1-2-1">Calculate <span class="process-math">\((A+B)^2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 17.2.1.a"><a href="#Sec-Matrix_multiplication-11-2-1-1-2-1" title="Copy permalink for Item 17.2.1.a">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-11-2-1-1-2-2">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-11-2-1-1-2-2">Calculate <span class="process-math">\(A^2 + 2AB + B^2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 17.2.1.b"><a href="#Sec-Matrix_multiplication-11-2-1-1-2-2" title="Copy permalink for Item 17.2.1.b">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="exercise exercise-like" id="Sec-Matrix_multiplication-11-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-11-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.2.1"><a href="#Sec-Matrix_multiplication-11-2" title="Copy permalink for Exercise 17.2.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Matrix_multiplication-11-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="Sec-Matrix_multiplication-11-3-1-1">
 <div class="para">Let</div>
 <div class="displaymath process-math">
@@ -888,12 +1095,20 @@ E = \begin{pmatrix} 6 \amp 1 \\ -1 \amp 3 \\ -5 \amp 2\end{pmatrix} \quad \mbox{
 \end{equation*}
 </div>
 <ol class="lower-alpha ol-marker-5" id="Sec-Matrix_multiplication-11-3-1-1-2">
-<li id="Sec-Matrix_multiplication-11-3-1-1-2-1"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-3-1-1-2-1">Calculate <span class="process-math">\((EF)_{23}\text{.}\)</span>
-</div></li>
-<li id="Sec-Matrix_multiplication-11-3-1-1-2-2"><div class="para" id="p-derived-Sec-Matrix_multiplication-11-3-1-1-2-2">Calculate <span class="process-math">\((FE)_{12}\text{.}\)</span>
-</div></li>
+<li id="Sec-Matrix_multiplication-11-3-1-1-2-1">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-11-3-1-1-2-1">Calculate <span class="process-math">\((EF)_{23}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 17.2.2.a"><a href="#Sec-Matrix_multiplication-11-3-1-1-2-1" title="Copy permalink for Item 17.2.2.a">🔗</a></div>
+</li>
+<li id="Sec-Matrix_multiplication-11-3-1-1-2-2">
+<div class="para" id="p-derived-Sec-Matrix_multiplication-11-3-1-1-2-2">Calculate <span class="process-math">\((FE)_{12}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 17.2.2.b"><a href="#Sec-Matrix_multiplication-11-3-1-1-2-2" title="Copy permalink for Item 17.2.2.b">🔗</a></div>
+</li>
 </ol>
-</div></article></section></section><section class="section" id="Sec-Matrices_and_Systems_of_Linear_Equations"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrix_multiplication-11-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.2.2"><a href="#Sec-Matrix_multiplication-11-3" title="Copy permalink for Exercise 17.2.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 17.2: Example Tasks"><a href="#Sec-Matrix_multiplication-11" title="Copy permalink for Exercises 17.2: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 17.2: Matrix Multiplication"><a href="#Sec-Matrix_multiplication" title="Copy permalink for Section 17.2: Matrix Multiplication">🔗</a></div></section><section class="section" id="Sec-Matrices_and_Systems_of_Linear_Equations"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.3</span><span class="space"> </span><span class="title">Matrices and Systems of Linear Equations</span>
 </h3>
 <div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-2">
@@ -906,6 +1121,7 @@ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n  \amp= b_2\\
 a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n  \amp= b_m
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-3">
 <div class="para">Now that we have introduced matrix multiplication we can write this system as</div>
@@ -938,6 +1154,7 @@ a_{m1} \amp a_{m2} \amp \cdots \amp a_{mn}\\
 \mathbf{b} = \begin{pmatrix}b_1 \\ b_2 \\ \vdots \\ b_m\end{pmatrix}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex-Matrix_for_systems_of_equations"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.18</span><span class="period">.</span>
@@ -957,7 +1174,10 @@ x_1 + x_2 + 7x_3 + 4x_4  \amp= 8
 A = \begin{pmatrix} 3 \amp -1 \amp 2 \amp 1 \\ -1 \amp 6 \amp 0 \amp -11 \\ 1 \amp 1 \amp 7 \amp 4 \end{pmatrix} \begin{pmatrix}x_1\\ x_2 \\ x_3 \\ x_4\end{pmatrix} = \begin{pmatrix} 2 \\ -22 \\ 8\end{pmatrix}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="Sec-Matrices_and_Systems_of_Linear_Equations-5">We can now use the properties of matrix multiplication to establish some interesting facts about the solutions to systems of linear equations. For example:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Matrix_for_systems_of_equations-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 17.18"><a href="#Ex-Matrix_for_systems_of_equations" title="Copy permalink for Example 17.18">🔗</a></div></article><div class="para" id="Sec-Matrices_and_Systems_of_Linear_Equations-5">We can now use the properties of matrix multiplication to establish some interesting facts about the solutions to systems of linear equations. For example:<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Sec-Matrices_and_Systems_of_Linear_Equations-6"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.19</span><span class="period">.</span>
 </h4>
@@ -975,13 +1195,26 @@ A\mathbf{x} = \mathbf{0}\tag{17.2}
 \end{equation}
 </div>
 <ol class="decimal ol-marker-9" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3">
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has two distinct solutions then it has an infinite number of solutions.</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has a unique solution then <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a> has only the trivial solution <span class="process-math">\(\mathbf{x}=\mathbf{0}\text{.}\)</span>
-</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a>  has an infinite number of solution then so does <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>.</div></li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has two distinct solutions then it has an infinite number of solutions.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has a unique solution then <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a> has only the trivial solution <span class="process-math">\(\mathbf{x}=\mathbf{0}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3">If <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a>  has an infinite number of solution then so does <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1-3-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
 </ol>
-</div></article><details id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1"><ol class="decimal ol-marker-6" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1">
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.19"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6" title="Copy permalink for Theorem 17.19">🔗</a></div></article><details id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1">
+<ol class="decimal ol-marker-6" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1">
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1">
+<div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1-1">
 <div class="para">Let <span class="process-math">\(\mathbf{x} = \mathbf{u}\)</span> and <span class="process-math">\(\mathbf{x} = \mathbf{v}\)</span> be two distinct solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> and let <span class="process-math">\(\mathbf{w} = \mathbf{u} - \mathbf{v}\text{.}\)</span> By using the properties of matrix multiplication we can see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Axb.html">
 \begin{equation*}
@@ -995,8 +1228,12 @@ A(\mathbf{u} +t\mathbf{w}) = A\mathbf{u} + A(t\mathbf{w}) = A\mathbf{u} +tA\math
 \end{equation*}
 </div>
 <div class="para">i.e. <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has an infinite number of solutions.</div>
-</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-2"><div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-2">
+<div class="para logical" id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-2-1">
 <div class="para">Let <span class="process-math">\(\mathbf{x} = \mathbf{u}\)</span> be the unique solution to <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> and let <span class="process-math">\(\mathbf{x} = \mathbf{v}\)</span> be a non-zero solution to <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>. Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Ax0.html ./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Ax0.html">
 \begin{equation*}
@@ -1004,13 +1241,23 @@ A(\mathbf{u} + \mathbf{v}) = A\mathbf{u} + A\mathbf{v} = \mathbf{b} + \mathbf{0}
 \end{equation*}
 </div>
 <div class="para">and so <span class="process-math">\(\mathbf{x} = \mathbf{u} + \mathbf{v}\)</span> is another solution to <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a>, which is not possible. Thus there cannot be any non-zero solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>.</div>
-</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-3"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-3">Since <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has an infinite number of solutions let <span class="process-math">\(\mathbf{x} = \mathbf{u}\)</span> and <span class="process-math">\(\mathbf{x} = \mathbf{v}\)</span> be two distinct solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a>. Now let <span class="process-math">\(\mathbf{w} = \mathbf{u} - \mathbf{v}\)</span> and <span class="process-math">\(t \in \mathbb{R}\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Ax0.html">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-3">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-3">Since <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a> has an infinite number of solutions let <span class="process-math">\(\mathbf{x} = \mathbf{u}\)</span> and <span class="process-math">\(\mathbf{x} = \mathbf{v}\)</span> be two distinct solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Axb" class="xref" data-knowl="./knowl/xref/Eqn-Axb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.1">(17.1)</a>. Now let <span class="process-math">\(\mathbf{w} = \mathbf{u} - \mathbf{v}\)</span> and <span class="process-math">\(t \in \mathbb{R}\text{.}\)</span> Then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Axb.html ./knowl/xref/Eqn-Ax0.html">
 \begin{equation*}
 A(t\mathbf{w}) = tA(\mathbf{u} - \mathbf{v}) = t(A\mathbf{u} - A\mathbf{v}) = t(\mathbf{b} - \mathbf{b}) = \mathbf{0}\text{,}
 \end{equation*}
-</div>i.e. there are an infinite number of solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>.</div></li>
-</ol></div></article></details><div class="para" id="Sec-Matrices_and_Systems_of_Linear_Equations-7">Note that these arguments are general and hold for any system of <span class="process-math">\(m\)</span> linear equations in <span class="process-math">\(n\)</span> variables. Note also that if the system consists of <span class="process-math">\(3\)</span> linear equations in <span class="process-math">\(3\)</span> variables then result <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a> above can be stated as:</div>
+</div>i.e. there are an infinite number of solutions to <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a>.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1-1-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 17.19.1"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-6-2" title="Copy permalink for Proof 17.19.1">🔗</a></div></article></details><div class="para" id="Sec-Matrices_and_Systems_of_Linear_Equations-7">Note that these arguments are general and hold for any system of <span class="process-math">\(m\)</span> linear equations in <span class="process-math">\(n\)</span> variables. Note also that if the system consists of <span class="process-math">\(3\)</span> linear equations in <span class="process-math">\(3\)</span> variables then result <a href="Chap-Linear_Algebra_3.html#Eqn-Ax0" class="xref" data-knowl="./knowl/xref/Eqn-Ax0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.2">(17.2)</a> above can be stated as:<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="remark remark-like" id="Sec-Matrices_and_Systems_of_Linear_Equations-8"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.20</span><span class="period">.</span>
 </h4>
@@ -1023,11 +1270,22 @@ A(t\mathbf{w}) = tA(\mathbf{u} - \mathbf{v}) = t(A\mathbf{u} - A\mathbf{v}) = t(
 </div>
 <div class="para">The following statements are equivalent:</div>
 <ol class="decimal ol-marker-6" id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2">
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1">The system has a unique solution.</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2">The planes represented by the rows intersect in a point.</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3">The column vectors of the coefficient matrix are linearly independent.</div></li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1">The system has a unique solution.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2">The planes represented by the rows intersect in a point.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3">The column vectors of the coefficient matrix are linearly independent.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1-2-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
 </ol>
-</div></article><section class="exercises" id="Sec-Matrices_and_Systems_of_Linear_Equations-9"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-8-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 17.20"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-8" title="Copy permalink for Remark 17.20">🔗</a></div></article><section class="exercises" id="Sec-Matrices_and_Systems_of_Linear_Equations-9"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1041,19 +1299,30 @@ x_2 + 3x_3 \amp =1\\
 \end{align*}
 </div>
 <ol class="lower-alpha ol-marker-5" id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2">
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1">Calculate <span class="process-math">\(A\mathbf{u}\)</span> where<div class="displaymath process-math">
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1">Calculate <span class="process-math">\(A\mathbf{u}\)</span> where<div class="displaymath process-math">
 \begin{equation*}
 A=\begin{pmatrix}1 \amp -1 \amp -1 \\ 0 \amp 1 \amp 3 \\ 2 \amp -1 \amp 1\end{pmatrix}, \quad \mathbf{u} = \begin{pmatrix}2 \\ 3 \\ -1\end{pmatrix}\text{.}
 \end{equation*}
 </div>
-</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-2"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-2">Show that <span class="process-math">\((1,1,0)\)</span> is a solution to the system of equations.</div></li>
-<li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-3"><div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-3">Write down all solutions to the system of equations.</div></li>
+</div>
+<div class="autopermalink" data-description="Item 17.3.1.a"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-1" title="Copy permalink for Item 17.3.1.a">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-2">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-2">Show that <span class="process-math">\((1,1,0)\)</span> is a solution to the system of equations.</div>
+<div class="autopermalink" data-description="Item 17.3.1.b"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-2" title="Copy permalink for Item 17.3.1.b">🔗</a></div>
+</li>
+<li id="Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-3">
+<div class="para" id="p-derived-Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-3">Write down all solutions to the system of equations.</div>
+<div class="autopermalink" data-description="Item 17.3.1.c"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1-2-3" title="Copy permalink for Item 17.3.1.c">🔗</a></div>
+</li>
 </ol>
-</div></article></section></section><section class="section" id="Sec-Linear_transformations"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-9-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.3.1"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-9-2" title="Copy permalink for Exercise 17.3.1">🔗</a></div></article><div class="autopermalink" data-description="Exercises 17.3: Example Tasks"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations-9" title="Copy permalink for Exercises 17.3: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 17.3: Matrices and Systems of Linear Equations"><a href="#Sec-Matrices_and_Systems_of_Linear_Equations" title="Copy permalink for Section 17.3: Matrices and Systems of Linear Equations">🔗</a></div></section><section class="section" id="Sec-Linear_transformations"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">17.4</span><span class="space"> </span><span class="title">Linear Transformations</span>
 </h3>
-<div class="para" id="Sec-Linear_transformations-2">There are many applications of matrices where we view the matrix as a transformation (or mapping) that takes one vector and transforms (or maps) it to another vector. So, if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix then <span class="process-math">\(A\)</span> can be thought of as a transformation that takes the <span class="process-math">\(n \times 1\)</span> vector <span class="process-math">\(x\)</span> to the <span class="process-math">\(m \times 1\)</span> vector <span class="process-math">\(\mathbf{b} = A\mathbf{x}\text{.}\)</span>
+<div class="para" id="Sec-Linear_transformations-2">There are many applications of matrices where we view the matrix as a transformation (or mapping) that takes one vector and transforms (or maps) it to another vector. So, if <span class="process-math">\(A\)</span> is an <span class="process-math">\(m \times n\)</span> matrix then <span class="process-math">\(A\)</span> can be thought of as a transformation that takes the <span class="process-math">\(n \times 1\)</span> vector <span class="process-math">\(x\)</span> to the <span class="process-math">\(m \times 1\)</span> vector <span class="process-math">\(\mathbf{b} = A\mathbf{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Linear_transformations-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex-Linear_transformation_reflection"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.21</span><span class="period">.</span>
@@ -1078,8 +1347,9 @@ A = \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix}.
 \end{equation*}
 </div>
 <div class="para">See <a href="Chap-Linear_Algebra_3.html#Fig-Linear_transformation_reflection" class="xref" data-knowl="./knowl/xref/Fig-Linear_transformation_reflection.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 17.22">Figure 17.22</a> <figure class="figure figure-like" id="Fig-Linear_transformation_reflection"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./LinearAlgebra/Images/3/Linear_transformation.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">17.22<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">17.22<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 17.22"><a href="#Fig-Linear_transformation_reflection" title="Copy permalink for Figure 17.22">🔗</a></div></figcaption></figure>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_reflection-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="Ex-Linear_transformation_reflection-1-2">
 <div class="para">In fact, <span class="process-math">\(A\)</span> is the matrix for the transformation that we would describe as a reflection in the line <span class="process-math">\(y = x\text{.}\)</span> To see this, let the vector <span class="process-math">\((x,y)\)</span> be transformed to the vector <span class="process-math">\((b_1,b_2)\)</span> under this reflection. Then we know that</div>
 <div class="displaymath process-math" id="Ex-Linear_transformation_reflection-1-2-5">
@@ -1094,7 +1364,9 @@ b_2 \amp = x = 1x + 0y
 \mathbf{b} = \begin{pmatrix}b_1 \\ b_2 \end{pmatrix} = \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix} = A\mathbf{x}.
 \end{equation*}
 </div>
-</div> <div class="para" id="Ex-Linear_transformation_reflection-1-3">Run the Sage cell below to see the effect of the transformation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).</div> <div id="Ex-Linear_transformation_reflection-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_reflection-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="Ex-Linear_transformation_reflection-1-3">Run the Sage cell below to see the effect of the transformation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_reflection-1-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div id="Ex-Linear_transformation_reflection-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
 example = [[0,1],[1,0]]
 
 @interact
@@ -1107,7 +1379,8 @@ def _(A=input_grid(2,2, default = example,
     show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
     show(line(L, color='blue')+line(LA, color='red'),
         aspect_ratio=1, frame=true, title='Both')
-</script></div></article><article class="example example-like" id="Ex-Linear_transformation_rotation"><h4 class="heading">
+</script></div>
+<div class="autopermalink" data-description="Example 17.21"><a href="#Ex-Linear_transformation_reflection" title="Copy permalink for Example 17.21">🔗</a></div></article><article class="example example-like" id="Ex-Linear_transformation_rotation"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.23</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Ex-Linear_transformation_rotation-1-1">
@@ -1117,6 +1390,7 @@ def _(A=input_grid(2,2, default = example,
 A = \begin{pmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta)\end{pmatrix}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_rotation-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="Ex-Linear_transformation_rotation-1-2">
 <div class="para">For example the matrix for a rotation about the origin through <span class="process-math">\(\pi^{c}\)</span> (or <span class="process-math">\(180^{\circ}\)</span>) is</div>
 <div class="displaymath process-math">
@@ -1124,7 +1398,9 @@ A = \begin{pmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\t
 A = \begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix}.
 \end{equation*}
 </div>
-</div> <div class="para" id="Ex-Linear_transformation_rotation-1-3">Run the Sage cell below to see the effect of the rotation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).</div> <div id="Ex-Linear_transformation_rotation-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_rotation-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="Ex-Linear_transformation_rotation-1-3">Run the Sage cell below to see the effect of the rotation matrix <span class="process-math">\(A\)</span> on some input (a sketch of a house).<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_rotation-1-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div id="Ex-Linear_transformation_rotation-1-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">L=[(1,1),(1,0),(0,0),(0,1),(1,1),(0.5,1.5),(0,1),(0,1.4),(0.25,1.4),(0.25,1.25)]
 
 @interact
 def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
@@ -1137,13 +1413,16 @@ def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
     show(line(LA, color='red'), aspect_ratio=1, frame=true, title='Output')
     show(line(L, color='blue')+line(LA, color='red'),
         aspect_ratio=1, frame=true, title='Both')
-</script></div></article><article class="example example-like" id="Ex-Linear_transformation_reflection_rotation"><h4 class="heading">
+</script></div>
+<div class="autopermalink" data-description="Example 17.23"><a href="#Ex-Linear_transformation_rotation" title="Copy permalink for Example 17.23">🔗</a></div></article><article class="example example-like" id="Ex-Linear_transformation_reflection_rotation"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-Linear_transformation_reflection_rotation-1-1">Determine the matrix for the transformation in which a reflection in the line <span class="process-math">\(y = x\)</span> is followed by a rotation about the origin through <span class="process-math">\(\pi^c\text{.}\)</span>
+<div class="para" id="Ex-Linear_transformation_reflection_rotation-1-1">Determine the matrix for the transformation in which a reflection in the line <span class="process-math">\(y = x\)</span> is followed by a rotation about the origin through <span class="process-math">\(\pi^c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_reflection_rotation-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-Linear_transformation_reflection_rotation-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\begin{pmatrix} 0 \amp -1 \\ -1 \amp 0\end{pmatrix}\)</span></div></details><details id="Ex-Linear_transformation_reflection_rotation-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Ex-Linear_transformation_reflection_rotation-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\begin{pmatrix} 0 \amp -1 \\ -1 \amp 0\end{pmatrix}\)</span><div class="autopermalink" data-description="Answer 17.24.1"><a href="#Ex-Linear_transformation_reflection_rotation-2" title="Copy permalink for Answer 17.24.1">🔗</a></div>
+</div></details><details id="Ex-Linear_transformation_reflection_rotation-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-Linear_transformation_reflection_rotation-3-1">
 <div class="para">Let <span class="process-math">\(A_1 = \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix}\)</span> and <span class="process-math">\(A_2 = \begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix}.\)</span> Then, under the given transformation the vector <span class="process-math">\(\mathbf{x}\)</span> will be mapped to the vector <span class="process-math">\(\mathbf{b}\)</span> where</div>
 <div class="displaymath process-math">
@@ -1157,6 +1436,7 @@ def _(theta=slider(-3.14,3.14,step_size=0.01,default=pi,label=r'\(\theta =\)'),
 A = A_2A_1 =\begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix} \begin{pmatrix} 0 \amp 1 \\ 1 \amp 0\end{pmatrix} = \begin{pmatrix} 0 \amp -1 \\ -1 \amp 0\end{pmatrix}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_reflection_rotation-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-Linear_transformation_reflection_rotation-3-2">
 <div class="para">Note that given that the matrix for a reflection in the line <span class="process-math">\(y = kx\)</span> is</div>
@@ -1167,13 +1447,18 @@ A = A_2A_1 =\begin{pmatrix} -1 \amp 0 \\ 0 \amp -1 \end{pmatrix} \begin{pmatrix}
 </div>
 <div class="para">we can see that the matrix <span class="process-math">\(A\)</span> represents a reflection in the line <span class="process-math">\(y=-x\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Linear_transformation_reflection_rotation-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 17.24.1"><a href="#Ex-Linear_transformation_reflection_rotation-3" title="Copy permalink for Solution 17.24.1">🔗</a></div>
 </div></details>
-</div></article><div class="para" id="Sec-Linear_transformations-6">Transformations that can be represented via a matrix are called <dfn class="terminology">linear transformations</dfn>. When the matrix is a <span class="process-math">\(2 \times 2\)</span> matrix the transformation is called a linear transformation of the plane.</div>
+</div>
+<div class="autopermalink" data-description="Example 17.24"><a href="#Ex-Linear_transformation_reflection_rotation" title="Copy permalink for Example 17.24">🔗</a></div></article><div class="para" id="Sec-Linear_transformations-6">Transformations that can be represented via a matrix are called <dfn class="terminology">linear transformations</dfn>. When the matrix is a <span class="process-math">\(2 \times 2\)</span> matrix the transformation is called a linear transformation of the plane.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Linear_transformations-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="remark remark-like" id="Sec-Linear_transformations-7"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">17.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-Linear_transformations-7-1">Linear transformations in 3 dimensions are also possible. The Sage cell below plots the effect of a linear transformation on three unit vectors and the parallelepiped spanned by them.</div>
+<div class="para" id="Sec-Linear_transformations-7-1">Linear transformations in 3 dimensions are also possible. The Sage cell below plots the effect of a linear transformation on three unit vectors and the parallelepiped spanned by them.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Linear_transformations-7-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div id="Sec-Linear_transformations-7-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">example = [[1,0,0],[0,1,0],[0,0,1]]
 L = [(0,0,1),(0,1,0),(1,0,0)]
 P = polytopes.parallelotope(L)
@@ -1201,7 +1486,8 @@ def _(A=input_grid(3,3, default = example,
     show(p2, aspect_ratio=1)
     print('Both:')
     show(p1+p2, aspect_ratio=1)
-</script></div></article><section class="exercises" id="Sec-Linear_transformations-8"><h4 class="heading hide-type">
+</script></div>
+<div class="autopermalink" data-description="Remark 17.25"><a href="#Sec-Linear_transformations-7" title="Copy permalink for Remark 17.25">🔗</a></div></article><section class="exercises" id="Sec-Linear_transformations-8"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Linear_transformations-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1212,12 +1498,16 @@ def _(A=input_grid(3,3, default = example,
 \begin{pmatrix} 1 \amp 2 \amp -1 \\ 0 \amp -1 \amp 2 \\ 2 \amp 3 \amp 0 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="Sec-Linear_transformations-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Linear_transformations-8-3-1-1">Find the matrix for the transformation of the plane in which a rotation about the origin through <span class="process-math">\(180^{\circ}\)</span> is followed by a reflection in the line <span class="process-math">\(y = 2x\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Linear_transformations-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Linear_transformations-8-4-1-1">Find the vector to which <span class="process-math">\(\mathbf{x} = \begin{pmatrix}1 \\ 2\end{pmatrix}\)</span> is mapped by <span class="process-math">\(\begin{pmatrix} 3 \amp 4 \\ 1 \amp 2 \end{pmatrix}\)</span> followed by <span class="process-math">\(\begin{pmatrix}2 \amp 1 \\ 3 \amp 3 \end{pmatrix}\)</span> followed by <span class="process-math">\(\begin{pmatrix}-1 \amp 1 \\ -1 \amp 0\end{pmatrix}.\)</span>
-</div></article></section></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Linear_transformations-8-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.4.1"><a href="#Sec-Linear_transformations-8-2" title="Copy permalink for Exercise 17.4.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Linear_transformations-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Linear_transformations-8-3-1-1">Find the matrix for the transformation of the plane in which a rotation about the origin through <span class="process-math">\(180^{\circ}\)</span> is followed by a reflection in the line <span class="process-math">\(y = 2x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Linear_transformations-8-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.4.2"><a href="#Sec-Linear_transformations-8-3" title="Copy permalink for Exercise 17.4.2">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Linear_transformations-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Linear_transformations-8-4-1-1">Find the vector to which <span class="process-math">\(\mathbf{x} = \begin{pmatrix}1 \\ 2\end{pmatrix}\)</span> is mapped by <span class="process-math">\(\begin{pmatrix} 3 \amp 4 \\ 1 \amp 2 \end{pmatrix}\)</span> followed by <span class="process-math">\(\begin{pmatrix}2 \amp 1 \\ 3 \amp 3 \end{pmatrix}\)</span> followed by <span class="process-math">\(\begin{pmatrix}-1 \amp 1 \\ -1 \amp 0\end{pmatrix}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Linear_transformations-8-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 17.4.3"><a href="#Sec-Linear_transformations-8-4" title="Copy permalink for Exercise 17.4.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 17.4: Example Tasks"><a href="#Sec-Linear_transformations-8" title="Copy permalink for Exercises 17.4: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 17.4: Linear Transformations"><a href="#Sec-Linear_transformations" title="Copy permalink for Section 17.4: Linear Transformations">🔗</a></div></section><div class="autopermalink" data-description="Chapter 17: LA3: Matrix Algebra"><a href="#Chap-Linear_Algebra_3" title="Copy permalink for Chapter 17: LA3: Matrix Algebra">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Linear_Algebra__2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Linear_Algebra_4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DE4: Homogeneous Second Order Linear DEs</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,17 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -118,19 +123,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -175,7 +182,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -371,7 +378,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -474,64 +481,120 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Differential_Equations_4"><h2 class="heading">
 <span class="type">Chapter</span><span class="space"> </span><span class="codenumber">12</span><span class="space"> </span><span class="title">DE4: Homogeneous Second Order Linear DEs</span>
 </h2>
-<section class="introduction" id="Differential_Equations_4-2"><div class="para" id="Differential_Equations_4-2-1">So far we have learnt how to find exact solutions to separable first order DEs and linear first order DEs. For other types of first order DEs finding exact solutions can become quite involved (or even impossible) and so instead we will turn our attention to second order DEs. Recall that a second order DE is one that involves the second derivative of the unknown function. As with first order DEs we can only find analytic methods for solving second order DEs for certain classes of such DEs.</div>
-<div class="para" id="Differential_Equations_4-2-2">The class of second order DEs that we are going to consider in this lecture is called the class of “homogeneous, second order, linear DEs with constant coefficients”. Let’s try to put this into some sort of context. Recall from <a href="Differential_Equations_3.html" class="internal" title="Chapter 11: DE3: First Order Linear DEs">Chapter 11</a> that a first order linear DE is a DE of the form:</div>
-<div class="para logical" id="Differential_Equations_4-2-3"><div class="displaymath process-math">
+<section class="introduction" id="Differential_Equations_4-2"><div class="para" id="Differential_Equations_4-2-1">So far we have learnt how to find exact solutions to separable first order DEs and linear first order DEs. For other types of first order DEs finding exact solutions can become quite involved (or even impossible) and so instead we will turn our attention to second order DEs. Recall that a second order DE is one that involves the second derivative of the unknown function. As with first order DEs we can only find analytic methods for solving second order DEs for certain classes of such DEs.<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Differential_Equations_4-2-2">The class of second order DEs that we are going to consider in this lecture is called the class of “homogeneous, second order, linear DEs with constant coefficients”. Let’s try to put this into some sort of context. Recall from <a href="Differential_Equations_3.html" class="internal" title="Chapter 11: DE3: First Order Linear DEs">Chapter 11</a> that a first order linear DE is a DE of the form:<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Differential_Equations_4-2-3">
+<div class="displaymath process-math">
 \begin{equation*}
 P(x)y'+Q(x)y=f(x).
 \end{equation*}
-</div></div>
-<div class="para" id="Differential_Equations_4-2-4">As we have seen, this equation is called <dfn class="terminology">linear</dfn> because it is the sum of terms that either don’t involve <span class="process-math">\(y\)</span> or only involve <span class="process-math">\(y\)</span> or its derivatives raised to the power of one<details class="ptx-footnote" aria-live="polite" id="Differential_Equations_4-2-4-4"><summary class="ptx-footnote__number" title="Footnote 12.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="Differential_Equations_4-2-4-4">This is a very rudimentary statement of the concept of linearity</div></details>. Extending this idea to second order DEs gives the following definition.</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Differential_Equations_4-2-4">As we have seen, this equation is called <dfn class="terminology">linear</dfn> because it is the sum of terms that either don’t involve <span class="process-math">\(y\)</span> or only involve <span class="process-math">\(y\)</span> or its derivatives raised to the power of one<details class="ptx-footnote" aria-live="polite" id="Differential_Equations_4-2-4-4"><summary class="ptx-footnote__number" title="Footnote 12.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="Differential_Equations_4-2-4-4">This is a very rudimentary statement of the concept of linearity</div></details>. Extending this idea to second order DEs gives the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Differential_Equations_4-2-5"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="Differential_Equations_4-2-5-1-1">A differential equation of the form,</div> <div class="para logical" id="Differential_Equations_4-2-5-1-2"><div class="displaymath process-math">
+<div class="para" id="Differential_Equations_4-2-5-1-1">A differential equation of the form,<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-5-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="Differential_Equations_4-2-5-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 P(x)y''+Q(x)y'+R(x)y=f(x) \text{.}
 \end{equation*}
-</div></div> <div class="para" id="Differential_Equations_4-2-5-1-3">where <span class="process-math">\(P(x)\neq 0 \)</span> is called a <dfn class="terminology">second order linear DE.</dfn>
-</div></article><div class="para" id="Differential_Equations_4-2-6">In the case where   <span class="process-math">\(f(x)= 0 \)</span> the DE is called homogeneous. Thus:</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-5-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="Differential_Equations_4-2-5-1-3">where <span class="process-math">\(P(x)\neq 0 \)</span> is called a <dfn class="terminology">second order linear DE.</dfn><div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-5-1-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12.1"><a href="#Differential_Equations_4-2-5" title="Copy permalink for Definition 12.1">🔗</a></div></article><div class="para" id="Differential_Equations_4-2-6">In the case where   <span class="process-math">\(f(x)= 0 \)</span> the DE is called homogeneous. Thus:<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Differential_Equations_4-2-7"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="Differential_Equations_4-2-7-1-1">A differential equation of the form,</div> <div class="para logical" id="Differential_Equations_4-2-7-1-2"><div class="displaymath process-math">
+<div class="para" id="Differential_Equations_4-2-7-1-1">A differential equation of the form,<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-7-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="Differential_Equations_4-2-7-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 P(x)y''+Q(x)y'+R(x)y=0 \text{.}
 \end{equation*}
-</div></div> <div class="para" id="Differential_Equations_4-2-7-1-3">where <span class="process-math">\(P(x)\neq 0 \)</span> is called a <dfn class="terminology">homogeneous second order linear DE.</dfn>
-</div></article><div class="para" id="Differential_Equations_4-2-8">Further, if each of  <span class="process-math">\(P(x),\; Q(x), \text{and}\; R(x) \)</span>   and   are constant functions then the DE is said to have constant coefficients. Thus:</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-7-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="Differential_Equations_4-2-7-1-3">where <span class="process-math">\(P(x)\neq 0 \)</span> is called a <dfn class="terminology">homogeneous second order linear DE.</dfn><div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-7-1-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12.2"><a href="#Differential_Equations_4-2-7" title="Copy permalink for Definition 12.2">🔗</a></div></article><div class="para" id="Differential_Equations_4-2-8">Further, if each of  <span class="process-math">\(P(x),\; Q(x), \text{and}\; R(x) \)</span>   and   are constant functions then the DE is said to have constant coefficients. Thus:<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-8" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Differential_Equations_4-2-9"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="Differential_Equations_4-2-9-1-1">A differential equation of the form,</div> <div class="para logical" id="Differential_Equations_4-2-9-1-2"><div class="displaymath process-math">
+<div class="para" id="Differential_Equations_4-2-9-1-1">A differential equation of the form,<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-9-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="Differential_Equations_4-2-9-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 ay''+by'+cy=0 \text{.}
 \end{equation*}
-</div></div> <div class="para" id="Differential_Equations_4-2-9-1-3">where  <span class="process-math">\(a,\; b, \; c \in \mathbb{R} \; \text{and}\; a\neq 0 \)</span> is called a <dfn class="terminology">homogeneous second order linear DE with constant coefficients.</dfn>
-</div></article></section><section class="section" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients"><h3 class="heading hide-type">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-9-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="Differential_Equations_4-2-9-1-3">where  <span class="process-math">\(a,\; b, \; c \in \mathbb{R} \; \text{and}\; a\neq 0 \)</span> is called a <dfn class="terminology">homogeneous second order linear DE with constant coefficients.</dfn><div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_4-2-9-1-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12.3"><a href="#Differential_Equations_4-2-9" title="Copy permalink for Definition 12.3">🔗</a></div></article></section><section class="section" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">12.1</span><span class="space"> </span><span class="title">Homogeneous Second Order Linear DEs With Constant Coefficients</span>
 </h3>
 <article class="example example-like" id="Two_simple_example_homogeneous"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="Two_simple_example_homogeneous-1-1">Guess solutions to the following homogeneous second order linear DEs with constant coefficients.</div> <div class="para logical" id="Two_simple_example_homogeneous-1-2"><ol class="lower-alpha ol-marker-5" id="Two_simple_example_homogeneous-1-2-1">
-<li id="Two_simple_example_homogeneous-1-2-1-1"><div class="para" id="Two_simple_example_homogeneous-1-2-1-1-1"><span class="process-math">\(\displaystyle y''=0. \)</span></div></li>
-<li id="Two_simple_example_homogeneous-1-2-1-2"><div class="para" id="Two_simple_example_homogeneous-1-2-1-2-1"><span class="process-math">\(\displaystyle y''-y=0 \)</span></div></li>
-</ol></div>
+<div class="para" id="Two_simple_example_homogeneous-1-1">Guess solutions to the following homogeneous second order linear DEs with constant coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="Two_simple_example_homogeneous-1-2">
+<ol class="lower-alpha ol-marker-5" id="Two_simple_example_homogeneous-1-2-1">
+<li id="Two_simple_example_homogeneous-1-2-1-1">
+<div class="para" id="Two_simple_example_homogeneous-1-2-1-1-1">
+<span class="process-math">\(\displaystyle y''=0. \)</span><div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-1-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Two_simple_example_homogeneous-1-2-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Two_simple_example_homogeneous-1-2-1-2">
+<div class="para" id="Two_simple_example_homogeneous-1-2-1-2-1">
+<span class="process-math">\(\displaystyle y''-y=0 \)</span><div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-1-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Two_simple_example_homogeneous-1-2-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="solutions">
-<details id="Two_simple_example_homogeneous-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="Two_simple_example_homogeneous-2-1"><ol class="lower-alpha ol-marker-5" id="Two_simple_example_homogeneous-2-1-1">
-<li id="Two_simple_example_homogeneous-2-1-1-1"><div class="para" id="p-derived-Two_simple_example_homogeneous-2-1-1-1"><span class="process-math">\(\displaystyle y(x)=Ax+B, \; A,B\in \mathbb{R}\)</span></div></li>
-<li id="Two_simple_example_homogeneous-2-1-1-2"><div class="para" id="p-derived-Two_simple_example_homogeneous-2-1-1-2"><span class="process-math">\(\displaystyle y(x)=Ae^{x}+Be^{-x}, \; A,B\in \mathbb{R} \)</span></div></li>
-</ol></div></div></details><details id="Two_simple_example_homogeneous-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Two_simple_example_homogeneous-3-1"><ol class="lower-alpha ol-marker-5" id="Two_simple_example_homogeneous-3-1-1">
-<li id="Two_simple_example_homogeneous-3-1-1-1"><div class="para logical" id="Two_simple_example_homogeneous-3-1-1-1-1">
+<details id="Two_simple_example_homogeneous-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para logical" id="Two_simple_example_homogeneous-2-1">
+<ol class="lower-alpha ol-marker-5" id="Two_simple_example_homogeneous-2-1-1">
+<li id="Two_simple_example_homogeneous-2-1-1-1">
+<div class="para" id="p-derived-Two_simple_example_homogeneous-2-1-1-1"><span class="process-math">\(\displaystyle y(x)=Ax+B, \; A,B\in \mathbb{R}\)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#Two_simple_example_homogeneous-2-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Two_simple_example_homogeneous-2-1-1-2">
+<div class="para" id="p-derived-Two_simple_example_homogeneous-2-1-1-2"><span class="process-math">\(\displaystyle y(x)=Ae^{x}+Be^{-x}, \; A,B\in \mathbb{R} \)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#Two_simple_example_homogeneous-2-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.4.1"><a href="#Two_simple_example_homogeneous-2" title="Copy permalink for Answer 12.4.1">🔗</a></div>
+</div></details><details id="Two_simple_example_homogeneous-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Two_simple_example_homogeneous-3-1">
+<ol class="lower-alpha ol-marker-5" id="Two_simple_example_homogeneous-3-1-1">
+<li id="Two_simple_example_homogeneous-3-1-1-1">
+<div class="para logical" id="Two_simple_example_homogeneous-3-1-1-1-1">
 <div class="para">What function has its second derivative zero (i.e. has zero curvature)? Clearly any linear function satisfies this property and so we guess that the general solution to this DE is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 y(x)=Ax+B, \; A,B\in \mathbb{R} 
 \end{equation*}
 </div>
-</div></li>
-<li id="Two_simple_example_homogeneous-3-1-1-2"><div class="para logical" id="Two_simple_example_homogeneous-3-1-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-3-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Two_simple_example_homogeneous-3-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Two_simple_example_homogeneous-3-1-1-2">
+<div class="para logical" id="Two_simple_example_homogeneous-3-1-1-2-1">
 <div class="para">This DE can be rewritten as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -557,20 +620,42 @@ y(x)=Ae^{x}+Be^{-x}, \; A,B\in \mathbb{R}
 \end{equation*}
 </div>
 <div class="para">will be a solution to the DE.</div>
-</div></li>
-</ol></div></div></details>
-</div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-3">Before looking at the method for solving a homogeneous second order linear DE with constant coefficients, i.e. a DE of the form</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-3-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Two_simple_example_homogeneous-3-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Two_simple_example_homogeneous-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.4.1"><a href="#Two_simple_example_homogeneous-3" title="Copy permalink for Solution 12.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 12.4"><a href="#Two_simple_example_homogeneous" title="Copy permalink for Example 12.4">🔗</a></div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-3">Before looking at the method for solving a homogeneous second order linear DE with constant coefficients, i.e. a DE of the form<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Two_simple_example_homogeneous.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/y_equal_e_to_rx.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/y_equal_fx_e__power_rx.html ./knowl/xref/ftwo_order_derivative_equal_zero.html ./knowl/xref/y_equal_e__power_rx.html ./knowl/xref/ftwo_order_derivative_equal_zero.html ./knowl/xref/y_equal_e__power_rx.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html ./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html ./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html ./knowl/xref/Fig-initial_value_problem.html ./knowl/xref/Fig-boundary_value_problem.html" id="homogeneous_2_order_constant_coefficients">
 \begin{equation}
 ay''+by'+cy=0,\;\;\;\; a\neq 0, b,c\in \mathbb{R}, \tag{12.1}
 \end{equation}
 </div>
-<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-5">there are several things that we can predict about the solution, (based on <a href="Differential_Equations_4.html#Two_simple_example_homogeneous" class="xref" data-knowl="./knowl/xref/Two_simple_example_homogeneous.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.4">Example 12.4</a> and previous lectures):</div>
-<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6"><ul class="disc" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1">
-<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-1"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-1-1">The general solution will be a family of functions involving two parameters.</div></li>
-<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-2"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-2-1">The exponential function is a likely candidate for a solution.</div></li>
-</ul></div>
-<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-7">Notice also that if both <span class="process-math">\(y_{1}(x) \)</span>  and <span class="process-math">\(y_{1}(x) \)</span>  are solutions to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a> then so will be <span class="process-math">\(y(x)=A y_{1}(x)+B y_{2}(x) \)</span> where <span class="process-math">\(A \)</span> and <span class="process-math">\(B \)</span> are arbitrary constants. To see this, let <span class="process-math">\(y_{1}(x) \)</span>  and <span class="process-math">\(y_{2}(x) \)</span>  be solutions to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a>, i.e.</div>
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-5">there are several things that we can predict about the solution, (based on <a href="Differential_Equations_4.html#Two_simple_example_homogeneous" class="xref" data-knowl="./knowl/xref/Two_simple_example_homogeneous.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.4">Example 12.4</a> and previous lectures):<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6">
+<ul class="disc" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1">
+<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-1">
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-1-1">The general solution will be a family of functions involving two parameters.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-1" title="Copy permalink for Item">🔗</a></div>
+</li>
+<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-2">
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-2-1">The exponential function is a likely candidate for a solution.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6-1-2" title="Copy permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-7">Notice also that if both <span class="process-math">\(y_{1}(x) \)</span>  and <span class="process-math">\(y_{1}(x) \)</span>  are solutions to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a> then so will be <span class="process-math">\(y(x)=A y_{1}(x)+B y_{2}(x) \)</span> where <span class="process-math">\(A \)</span> and <span class="process-math">\(B \)</span> are arbitrary constants. To see this, let <span class="process-math">\(y_{1}(x) \)</span>  and <span class="process-math">\(y_{2}(x) \)</span>  be solutions to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a>, i.e.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-8">
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous_2_order_constant_coefficients.html" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-8-1">
 \begin{align*}
@@ -600,8 +685,10 @@ LHS \amp =  ay + by +cy  \\
 \amp = 0  
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-8" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-9">These observations, along with the following theorem, enable us to develop a method of solution for DEs of the form <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a>.</div>
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-9">These observations, along with the following theorem, enable us to develop a method of solution for DEs of the form <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-9" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-10"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span>
 </h4>
@@ -618,8 +705,11 @@ P(x)y''+Q(x)y'+R(x)y=0
 y(x) =  A y_{1}(x) + B y_{2}(x). 
 \end{equation*}
 </div>
-</div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-11">
-<dfn class="terminology">Note:</dfn> The proof of this theorem is beyond the scope of this course.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-10-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.5"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-10" title="Copy permalink for Theorem 12.5">🔗</a></div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-11">
+<dfn class="terminology">Note:</dfn> The proof of this theorem is beyond the scope of this course.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-11" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="example_y_double_derivative_minus_y_complete_solution"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span>
 </h4>
@@ -631,6 +721,7 @@ y''-y=0
 \end{equation*}
 </div>
 <div class="para">write down a general solution to this DE.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example_y_double_derivative_minus_y_complete_solution-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="example_y_double_derivative_minus_y_complete_solution-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="example_y_double_derivative_minus_y_complete_solution-2-1">
@@ -643,6 +734,7 @@ y_{3}(x) \amp =  A e^{x} + B \cosh(x).
 \end{align*}
 </div>
 <div class="para">and so on.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example_y_double_derivative_minus_y_complete_solution-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="example_y_double_derivative_minus_y_complete_solution-2-2">
 <div class="para">Recall that a general solution to the DE contains every solution to the DE. For example consider the particular solution</div>
@@ -653,8 +745,11 @@ y(x) =  2 \sinh(x) - 3 \cosh(x).
 </div>
 <div class="para">This solution belongs to the general solution <span class="process-math">\(y_{2}(x) \)</span>  with <span class="process-math">\(A=2 \; \text{and}\; B=-3.   \)</span> It  also belongs to the general solution <span class="process-math">\(y_{1}(x) \)</span>  with <span class="process-math">\(A=-\frac{1}{2} \; \text{and}\; B=-\frac{5}{2}.   \)</span> and to the general solution <span class="process-math">\(y_{3}(x) \)</span>  with <span class="process-math">\(A=2 \; \text{and}\; B=-5.  \)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example_y_double_derivative_minus_y_complete_solution-2-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></div></article><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-13">
+<div class="autopermalink" data-description="Solution 12.6.1"><a href="#example_y_double_derivative_minus_y_complete_solution-2" title="Copy permalink for Solution 12.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 12.6"><a href="#example_y_double_derivative_minus_y_complete_solution" title="Copy permalink for Example 12.6">🔗</a></div></article><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-13">
 <div class="para">Thus, initially at least, our method for trying to find the solutions to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a> is to try to find two different exponential functions that satisfy the DE and then combine them to obtain a general solution. To this end, let</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/y_equal_e_to_rx.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html" id="y_equal_e_to_rx">
 \begin{equation}
@@ -676,6 +771,7 @@ ar^{2}+br+c=0.\tag{12.3}
 </div>
 <div class="para">
 <a href="Differential_Equations_4.html#characteristic_equation" class="xref" data-knowl="./knowl/xref/characteristic_equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.3">(12.3)</a> is called the <dfn class="terminology">characteristic equation</dfn> for a DE of the form of <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-13" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-14">
 <div class="para">If the characteristic equation <a href="Differential_Equations_4.html#characteristic_equation" class="xref" data-knowl="./knowl/xref/characteristic_equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.3">(12.3)</a>) has two real solutions (i.e. <span class="process-math">\(b^{2}-4ac&gt;0 \)</span>) then we are done since we will have found two solutions to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a> and, via the given theorem, we can combine these solutions to produce a general solution to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a>. So if the solutions to the characteristic equation are  <span class="process-math">\(r_{1} \)</span> and <span class="process-math">\(r_{2} \)</span>    say, then the general solution to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a> is</div>
@@ -684,14 +780,21 @@ ar^{2}+br+c=0.\tag{12.3}
 y(x)=Ae^{r_{1}x} + Be^{r_{1}x}. 
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-14" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="example_y_double_derivative_plus_3yderivative_2y"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="example_y_double_derivative_plus_3yderivative_2y-1-1">Find the general solution to <span class="process-math">\(y''+3y'+2y=0. \)</span>
+<div class="para" id="example_y_double_derivative_plus_3yderivative_2y-1-1">Find the general solution to <span class="process-math">\(y''+3y'+2y=0. \)</span><div class="autopermalink" data-description="Paragraph"><a href="#example_y_double_derivative_plus_3yderivative_2y-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="example_y_double_derivative_plus_3yderivative_2y-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="example_y_double_derivative_plus_3yderivative_2y-2-1"><span class="process-math">\(y(x)=A e^{-x} + B e^{-2 x}.\)</span></div></div></details><details id="example_y_double_derivative_plus_3yderivative_2y-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="example_y_double_derivative_plus_3yderivative_2y-3-1">
+<details id="example_y_double_derivative_plus_3yderivative_2y-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="example_y_double_derivative_plus_3yderivative_2y-2-1">
+<span class="process-math">\(y(x)=A e^{-x} + B e^{-2 x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example_y_double_derivative_plus_3yderivative_2y-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.7.1"><a href="#example_y_double_derivative_plus_3yderivative_2y-2" title="Copy permalink for Answer 12.7.1">🔗</a></div>
+</div></details><details id="example_y_double_derivative_plus_3yderivative_2y-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example_y_double_derivative_plus_3yderivative_2y-3-1">
 <div class="para">The characteristic equation for this homogeneous second order linear DE with constant coefficients is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -710,8 +813,12 @@ r=-1,\; -2.
 y(x)=A e^{-x} + B e^{-2 x}. 
 \end{equation*}
 </div>
-</div></div></details>
-</div></article><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-16">
+<div class="autopermalink" data-description="Paragraph"><a href="#example_y_double_derivative_plus_3yderivative_2y-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.7.1"><a href="#example_y_double_derivative_plus_3yderivative_2y-3" title="Copy permalink for Solution 12.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 12.7"><a href="#example_y_double_derivative_plus_3yderivative_2y" title="Copy permalink for Example 12.7">🔗</a></div></article><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-16">
 <div class="para">If the characteristic equation <a href="Differential_Equations_4.html#characteristic_equation" class="xref" data-knowl="./knowl/xref/characteristic_equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.3">(12.3)</a> has only one real solution (i.e. <span class="process-math">\(b^{2}-4ac=0\)</span>) then we will have found only one exponential solution to  <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.1">(12.1)</a> , i.e.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/y_equal_fx_e__power_rx.html ./knowl/xref/ftwo_order_derivative_equal_zero.html ./knowl/xref/y_equal_e__power_rx.html ./knowl/xref/ftwo_order_derivative_equal_zero.html ./knowl/xref/y_equal_e__power_rx.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html" id="y_equal_e__power_rx">
 \begin{equation}
@@ -743,14 +850,21 @@ f''(x)=0.\tag{12.6}
 y(x)=(Ax+B)e^{rx},\; r=-\frac{b}{2a}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-16" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-1-1">Find the general solution to <span class="process-math">\(y''-4y'+4=0. \)</span>
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-1-1">Find the general solution to <span class="process-math">\(y''-4y'+4=0. \)</span><div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-2-1"><span class="process-math">\(y(x)=Ae^{2x} + Bxe^{2x}.\)</span></div></div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-3-1">
+<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-2-1">
+<span class="process-math">\(y(x)=Ae^{2x} + Bxe^{2x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.8.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-2" title="Copy permalink for Answer 12.8.1">🔗</a></div>
+</div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-3-1">
 <div class="para">The characteristic equation for this DE is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -769,8 +883,12 @@ r=2.
 y(x)=Ae^{2x} + Bxe^{2x}.
 \end{equation*}
 </div>
-</div></div></details>
-</div></article><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-18">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.8.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17-3" title="Copy permalink for Solution 12.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 12.8"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-17" title="Copy permalink for Example 12.8">🔗</a></div></article><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-18">
 <div class="para">The final case to consider is that the characteristic equation <a href="Differential_Equations_4.html#characteristic_equation" class="xref" data-knowl="./knowl/xref/characteristic_equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.3">(12.3)</a> has complex roots, say</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/characteristic_equation.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html ./knowl/xref/homogeneous_2_order_constant_coefficients.html">
 \begin{equation*}
@@ -816,14 +934,21 @@ y_{4}(x) \amp =\frac{i}{2} y_{1}(x) - \frac{i}{2} y_{2}(x)  \\
 y(x)=Ae^{\alpha x}\cos(\beta x) + B e^{\alpha x}\sin(\beta x).
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-18" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-1-1">Find the general solution to <span class="process-math">\(y''-4y'+13y=0. \)</span>
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-1-1">Find the general solution to <span class="process-math">\(y''-4y'+13y=0. \)</span><div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-2-1"><span class="process-math">\(y(x)=Ae^{2 x}\cos(3 x) + B e^{2 x}\sin(3 x).\)</span></div></div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-3-1">
+<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-2-1">
+<span class="process-math">\(y(x)=Ae^{2 x}\cos(3 x) + B e^{2 x}\sin(3 x).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.9.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-2" title="Copy permalink for Answer 12.9.1">🔗</a></div>
+</div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-3-1">
 <div class="para">The characteristic equation for this homogeneous second order linear DE with constant coefficients is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -842,8 +967,13 @@ r=2\pm 3i.
 y(x)=Ae^{2 x}\cos(3 x) + B e^{2 x}\sin(3 x).
 \end{equation*}
 </div>
-</div></div></details>
-</div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-20">The above discussion can be summarised as follows.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.9.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19-3" title="Copy permalink for Solution 12.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 12.9"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-19" title="Copy permalink for Example 12.9">🔗</a></div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-20">The above discussion can be summarised as follows.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-20" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span>
 </h4>
@@ -854,40 +984,62 @@ y(x)=Ae^{2 x}\cos(3 x) + B e^{2 x}\sin(3 x).
 ay''+by'+cy=0\tag{12.7}
 \end{equation}
 </div>
-</div> <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2"><ul class="disc" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1">
-<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-1"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-1-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2">
+<ul class="disc" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1">
+<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-1">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-1-1">
 <div class="para">Find the roots of the characteristic equation</div>
 <div class="displaymath process-math">
 \begin{equation*}
 ar^{2}+br+c=0.
 \end{equation*}
 </div>
-</div></li>
-<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-2"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-1" title="Copy permalink for Item">🔗</a></div>
+</li>
+<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-2">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-2-1">
 <div class="para">If the characteristic equation has two real roots <span class="process-math">\(r_1 \text{ and } r_{2}\)</span> then the general solution to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients_Repeated_in_Theorem" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.7">(12.7)</a> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html">
 \begin{equation*}
 y(x)=Ae^{r_{1}x} + Be^{r_{2}x}.
 \end{equation*}
 </div>
-</div></li>
-<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-3"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-3-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-2" title="Copy permalink for Item">🔗</a></div>
+</li>
+<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-3">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-3-1">
 <div class="para">If the characteristic equation has a repeated real root <span class="process-math">\(r \)</span> then the general solution to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients_Repeated_in_Theorem" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.7">(12.7)</a> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html">
 \begin{equation*}
 y(x)=A e^{rx} + Bxe^{rx}.
 \end{equation*}
 </div>
-</div></li>
-<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-4"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-4-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-3" title="Copy permalink for Item">🔗</a></div>
+</li>
+<li id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-4">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-4-1">
 <div class="para">If the characteristic equation has complex roots <span class="process-math">\(\alpha\pm i\beta \)</span>  then the general solution to <a href="Differential_Equations_4.html#homogeneous_2_order_constant_coefficients_Repeated_in_Theorem" class="xref" data-knowl="./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.7">(12.7)</a> is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/homogeneous_2_order_constant_coefficients_Repeated_in_Theorem.html">
 \begin{equation*}
 y(x)=A e^{\alpha x}\cos(\beta x) + B e^{\alpha x}\sin(\beta x).
 \end{equation*}
 </div>
-</div></li>
-</ul></div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-22">Given that the general solution to a second order DE has two arbitrary constants in order to find a particular solution it is necessary to give two conditions. In an <dfn class="terminology">initial-value problem</dfn> the conditions given are the values of <span class="process-math">\(y \)</span> and <span class="process-math">\(y' \)</span> at the same value of <span class="process-math">\(x \text{,}\)</span> usually <span class="process-math">\(x=0. \)</span> In a <dfn class="terminology">boundary-value problem</dfn> the conditions given are the values of <span class="process-math">\(y \)</span> at two different values of <span class="process-math">\(x. \)</span> Even when we have a general solution to the DE, it may not always be possible to satisfy a given set of boundary-value conditions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2-1-4" title="Copy permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.10"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-21" title="Copy permalink for Theorem 12.10">🔗</a></div></article><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-22">Given that the general solution to a second order DE has two arbitrary constants in order to find a particular solution it is necessary to give two conditions. In an <dfn class="terminology">initial-value problem</dfn> the conditions given are the values of <span class="process-math">\(y \)</span> and <span class="process-math">\(y' \)</span> at the same value of <span class="process-math">\(x \text{,}\)</span> usually <span class="process-math">\(x=0. \)</span> In a <dfn class="terminology">boundary-value problem</dfn> the conditions given are the values of <span class="process-math">\(y \)</span> at two different values of <span class="process-math">\(x. \)</span> Even when we have a general solution to the DE, it may not always be possible to satisfy a given set of boundary-value conditions.<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-22" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.11</span><span class="period">.</span>
 </h4>
@@ -903,9 +1055,16 @@ y(x)=A e^{\alpha x}\cos(\beta x) + B e^{\alpha x}\sin(\beta x).
 y(0)=3,\; y'(0)=0. 
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-2-1"><span class="process-math">\(y(x) = \dfrac{12}{5} e^{-\frac{x}{4}} + \dfrac{3}{5} e^{x}.\)</span></div></div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3-1">
+<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-2-1">
+<span class="process-math">\(y(x) = \dfrac{12}{5} e^{-\frac{x}{4}} + \dfrac{3}{5} e^{x}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.11.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-2" title="Copy permalink for Answer 12.11.1">🔗</a></div>
+</div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3-1">
 <div class="para">The DE is a homogeneous second order linear DE with constant coefficients. The characteristic equation then is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-initial_value_problem.html">
 \begin{equation*}
@@ -918,7 +1077,8 @@ y(0)=3,\; y'(0)=0.
 r=-\frac{1}{4},\, 1
 \end{equation*}
 </div>
-<div class="para"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3-1-3">the general solution is</div></div>
+<div class="para"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3-1-3">the general solution is<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3-1-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div></div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-initial_value_problem.html">
 \begin{equation*}
 y(x) = A e^{-\frac{x}{4}} + B e^{x}.
@@ -950,10 +1110,14 @@ y(x) = \frac{12}{5} e^{-\frac{x}{4}} + \frac{3}{5} e^{x}.
 \end{equation*}
 </div>
 <div class="para">This solution is shown in <a href="Differential_Equations_4.html#Fig-initial_value_problem" class="xref" data-knowl="./knowl/xref/Fig-initial_value_problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.12">Figure 12.12</a>. Note that since <span class="process-math">\(r_{1}=-\frac{1}{4} &lt; 0 \)</span> the term in the general solution associated with this root (i.e. <span class="process-math">\(\frac{12}{5} e^{-\frac{x}{4}} \)</span>) decays as <span class="process-math">\(x\to \infty. \)</span> On the other hand since <span class="process-math">\(r_{2}=1 &gt; 0 \)</span> the term in the general solution associated with this root (i.e. <span class="process-math">\(\frac{3}{5} e^{x} \)</span>) grows as <span class="process-math">\(x\to \infty. \)</span> <figure class="figure figure-like" id="Fig-initial_value_problem"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/./DifferentialEquations/Images/4/initial_value_problem.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.12<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(y(x) = \frac{12}{5} e^{-\frac{x}{4}} + \frac{3}{5} e^{x}\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.12<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(y(x) = \frac{12}{5} e^{-\frac{x}{4}} + \frac{3}{5} e^{x}\text{.}\)</span><div class="autopermalink" data-description="Figure 12.12"><a href="#Fig-initial_value_problem" title="Copy permalink for Figure 12.12">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details>
-</div></article><article class="example example-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.11.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23-3" title="Copy permalink for Solution 12.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 12.11"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-23" title="Copy permalink for Example 12.11">🔗</a></div></article><article class="example example-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.13</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-1-1">
@@ -968,9 +1132,16 @@ y(x) = \frac{12}{5} e^{-\frac{x}{4}} + \frac{3}{5} e^{x}.
 y(0)=1,\;  y\left(\frac{\pi}{8}\right)=2.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-2-1"><span class="process-math">\(y(x)=e^{3x} ( \cos(4 x) + 2 e^{-\frac{3\pi}{8}} \sin(4 x)).\)</span></div></div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-3-1">
+<details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-2-1">
+<span class="process-math">\(y(x)=e^{3x} ( \cos(4 x) + 2 e^{-\frac{3\pi}{8}} \sin(4 x)).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.13.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-2" title="Copy permalink for Answer 12.13.1">🔗</a></div>
+</div></details><details id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-3-1">
 <div class="para">The characteristic equation is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig-boundary_value_problem.html">
 \begin{equation*}
@@ -1003,10 +1174,14 @@ y(x)=e^{3x} ( \cos(4 x) + 2 e^{-\frac{3\pi}{8}} \sin(4 x)).
 \end{equation*}
 </div>
 <div class="para">This graph of this function is shown in <a href="Differential_Equations_4.html#Fig-boundary_value_problem" class="xref" data-knowl="./knowl/xref/Fig-boundary_value_problem.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.14">Figure 12.14</a>. Note that when the characteristic equation has complex roots, <span class="process-math">\(r=\alpha\pm\beta i\)</span> the solutions the homogeneous second order linear DE with constant coefficients will be periodic in nature with frequency <span class="process-math">\(\beta\text{.}\)</span> Further, if <span class="process-math">\(\alpha &gt; 0\)</span> then the oscillations will grow as <span class="process-math">\(x\to \infty \)</span>  whereas if <span class="process-math">\(\alpha &lt; 0\)</span> the oscillations will decay as  <span class="process-math">\(x\to \infty. \)</span> In this case <span class="process-math">\(\alpha =3\)</span> and hence the oscillations increase in amplitude. <figure class="figure figure-like" id="Fig-boundary_value_problem"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/./DifferentialEquations/Images/4/boundary_value_problem.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.14<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(y(x)=e^{3x} ( \cos(4 x) + 2 e^{-\frac{3\pi}{8}} \sin(4 x))\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.14<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(y(x)=e^{3x} ( \cos(4 x) + 2 e^{-\frac{3\pi}{8}} \sin(4 x))\text{.}\)</span><div class="autopermalink" data-description="Figure 12.14"><a href="#Fig-boundary_value_problem" title="Copy permalink for Figure 12.14">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details>
-</div></article><section class="exercises" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.13.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24-3" title="Copy permalink for Solution 12.13.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 12.13"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-24" title="Copy permalink for Example 12.13">🔗</a></div></article><section class="exercises" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1022,7 +1197,9 @@ y(x)=e^{3x} ( \cos(4 x) + 2 e^{-\frac{3\pi}{8}} \sin(4 x)).
 x(0)=1,\; x'(0)=3. 
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 12.1.1"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-2" title="Copy permalink for Exercise 12.1.1">🔗</a></div></article><article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-3-1-1">
 <div class="para">Find the solution to the boundary-value problem</div>
 <div class="displaymath process-math">
@@ -1035,7 +1212,9 @@ y''+6y'+9y=0
 y(1)=0,\; y'(2)=3. 
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 12.1.2"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-3" title="Copy permalink for Exercise 12.1.2">🔗</a></div></article><article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-4-1-1">
 <div class="para">Describe the long term behaviour of the solutions to the DE</div>
 <div class="displaymath process-math">
@@ -1043,14 +1222,18 @@ y(1)=0,\; y'(2)=3.
 p''(t)=-9p(t).
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-5-1-1">Use the substitution  <span class="process-math">\(x=e^{z}. \)</span> to solve the DE</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 12.1.3"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-4" title="Copy permalink for Exercise 12.1.3">🔗</a></div></article><article class="exercise exercise-like" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-5-1-1">Use the substitution  <span class="process-math">\(x=e^{z}. \)</span> to solve the DE<div class="autopermalink" data-description="Paragraph"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-5-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x^{2}\frac{d^{2}y}{dx^{2}} + 3x\frac{dy}{dx} + 2y = 0,\; (x &gt; 0).
 \end{equation*}
-</div></article></section></section></section></div>
-<div class="ptx-content-footer">
+</div>
+<div class="autopermalink" data-description="Exercise 12.1.4"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25-5" title="Copy permalink for Exercise 12.1.4">🔗</a></div></article><div class="autopermalink" data-description="Exercises 12.1: Example Tasks"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients-25" title="Copy permalink for Exercises 12.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 12.1: Homogeneous Second Order Linear DEs With Constant Coefficients"><a href="#Homogeneous_Second_Order_Linear_DEs_With_Constant_Coefficients" title="Copy permalink for Section 12.1: Homogeneous Second Order Linear DEs With Constant Coefficients">🔗</a></div></section><div class="autopermalink" data-description="Chapter 12: DE4: Homogeneous Second Order Linear DEs"><a href="#Differential_Equations_4" title="Copy permalink for Chapter 12: DE4: Homogeneous Second Order Linear DEs">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Differential_Equations_3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Differential_Equations_5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DE6: An Application of Second Order Linear DEs with Constant Coefficients</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<title>DE6: Applications of 2nd Order Linear DEs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,29 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -130,19 +123,33 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -187,7 +194,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -383,7 +390,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -484,7 +491,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="Differential_Equations_6"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">14</span><span class="space"> </span><span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span>
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">14</span><span class="space"> </span><span class="title">DE6: Applications of 2nd Order Linear DEs</span>
 </h2>
 <section class="introduction" id="Differential_Equations_6-2"><div class="para logical" id="Differential_Equations_6-2-1">
 <div class="para">Recall that for a function <span class="process-math">\(y=y(x)\)</span> a 2nd order linear DE with constant coefficients is a DE of the form</div>
@@ -494,11 +501,13 @@ ay''+by'+cy=f(x)
 \end{equation*}
 </div>
 <div class="para">In previous lectures (i.e. <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a> and <a href="Differential_Equations_5.html" class="internal" title="Chapter 13: DE5: Non-Homogeneous Second Order Linear DEs">Chapter 13</a>) we discussed how to find solutions to DEs of this form (for various possibilities of <span class="process-math">\(f(x)\)</span> at least). In this lecture we are going to discuss an application of this type of DE to modelling the vibrations of springs.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_6-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div></section><section class="section" id="A_Simple_Model"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.1</span><span class="space"> </span><span class="title">A Simple Model</span>
 </h3>
 <div class="para" id="A_Simple_Model-2">In this section we are going to model the motion of an object attached to the free end of a spring which has its other end fixed as shown in <a href="Differential_Equations_6.html#DE_6_Figure_1" class="xref" data-knowl="./knowl/xref/DE_6_Figure_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.1">Figure 14.1</a>. To construct this model set up an axis with its origin at the centre of the object when the object-spring system is in equilibrium and with the positive direction going upward. With respect to this axis assume that without the object attached the end of the spring is at <span class="process-math">\(y=N\text{.}\)</span> Now, imagine that the object is pulled down <span class="process-math">\(L\)</span> units (with respect to the axis) and then let go. <figure class="figure figure-like" id="DE_6_Figure_1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/6/figure_1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.1<span class="period">.</span></span><span class="space"> </span>Representation of an object-spring system.</figcaption></figure> Our models for the motion of the object will be based Hooke’s Law and Newton’s second law of motion.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.1<span class="period">.</span></span><span class="space"> </span>Representation of an object-spring system.<div class="autopermalink" data-description="Figure 14.1"><a href="#DE_6_Figure_1" title="Copy permalink for Figure 14.1">🔗</a></div></figcaption></figure> Our models for the motion of the object will be based Hooke’s Law and Newton’s second law of motion.<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="A_Simple_Model-3"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.2</span><span class="period">.</span><span class="space"> </span><span class="title">Hooke’s Law.</span>
 </h4>
@@ -506,13 +515,18 @@ ay''+by'+cy=f(x)
 \begin{equation*}
 \vert \mathbf{F_r} \vert =kU, \hspace{5mm} k&gt;0
 \end{equation*}
-</div></dfn> where the value of <span class="process-math">\(k\)</span> depends on the properties of the spring itself.</div></article><div class="para" id="A_Simple_Model-4">Common terminology is to call the force <span class="process-math">\(\mathbf{F_r}\)</span> the <dfn class="terminology">restoring force</dfn> and the constant <span class="process-math">\(k\)</span> the <dfn class="terminology">spring constant</dfn>.</div>
+</div></dfn> where the value of <span class="process-math">\(k\)</span> depends on the properties of the spring itself.<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 14.2: Hooke’s Law"><a href="#A_Simple_Model-3" title="Copy permalink for Definition 14.2: Hooke’s Law">🔗</a></div></article><div class="para" id="A_Simple_Model-4">Common terminology is to call the force <span class="process-math">\(\mathbf{F_r}\)</span> the <dfn class="terminology">restoring force</dfn> and the constant <span class="process-math">\(k\)</span> the <dfn class="terminology">spring constant</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="A_Simple_Model-5"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.3</span><span class="period">.</span><span class="space"> </span><span class="title">Newton’s Second Law of Motion.</span>
 </h4>
-<div class="para" id="A_Simple_Model-5-2">The acceleration, <span class="process-math">\(\mathbf{a}\text{,}\)</span> of an object as produced by a net force, <span class="process-math">\(\mathbf{F}\text{,}\)</span>  is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass, <span class="process-math">\(m\text{,}\)</span> of the object, i.e. <span class="process-math">\(\mathbf{F}=m\mathbf{a}\text{.}\)</span>
-</div></article><div class="para" id="A_Simple_Model-6">So, now consider the forces acting on the object at any time <span class="process-math">\(t\)</span> after the object has been pulled down and released. In our initial model we will assume that there are just two forces acting on the object as shown in <a href="Differential_Equations_6.html#DE_6_Figure_2" class="xref" data-knowl="./knowl/xref/DE_6_Figure_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.4">Figure 14.4</a>: firstly the force due to gravity, <span class="process-math">\(\mathbf{F_g}\text{,}\)</span> and secondly the restoring force, <span class="process-math">\(\mathbf{F_r}\text{,}\)</span> due to the spring. <figure class="figure figure-like" id="DE_6_Figure_2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.4<span class="period">.</span></span><span class="space"> </span>Forces in an object-spring system.</figcaption></figure> With the axis as set up in <a href="Differential_Equations_6.html#DE_6_Figure_2" class="xref" data-knowl="./knowl/xref/DE_6_Figure_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.4">Figure 14.4</a> (or <a href="Differential_Equations_6.html#DE_6_Figure_1" class="xref" data-knowl="./knowl/xref/DE_6_Figure_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.1">Figure 14.1</a>), <span class="process-math">\(\mathbf{F_g}\)</span> will always act in the negative direction. However, <span class="process-math">\(\mathbf{F_r}\)</span> will be positive when the displacement of the object is less than <span class="process-math">\(N\)</span> and negative when the displacement of the object is greater than <span class="process-math">\(N\)</span> (i.e. the restoring force always acts in the direction of the natural position of the spring). Notice that since the motion of the object is one dimensional we can represent the relevant vector quantities by real numbers. The sign of the number will give us the direction of the vector.</div>
+<div class="para" id="A_Simple_Model-5-2">The acceleration, <span class="process-math">\(\mathbf{a}\text{,}\)</span> of an object as produced by a net force, <span class="process-math">\(\mathbf{F}\text{,}\)</span>  is directly proportional to the magnitude of the net force, in the same direction as the net force, and inversely proportional to the mass, <span class="process-math">\(m\text{,}\)</span> of the object, i.e. <span class="process-math">\(\mathbf{F}=m\mathbf{a}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-5-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 14.3: Newton’s Second Law of Motion"><a href="#A_Simple_Model-5" title="Copy permalink for Definition 14.3: Newton’s Second Law of Motion">🔗</a></div></article><div class="para" id="A_Simple_Model-6">So, now consider the forces acting on the object at any time <span class="process-math">\(t\)</span> after the object has been pulled down and released. In our initial model we will assume that there are just two forces acting on the object as shown in <a href="Differential_Equations_6.html#DE_6_Figure_2" class="xref" data-knowl="./knowl/xref/DE_6_Figure_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.4">Figure 14.4</a>: firstly the force due to gravity, <span class="process-math">\(\mathbf{F_g}\text{,}\)</span> and secondly the restoring force, <span class="process-math">\(\mathbf{F_r}\text{,}\)</span> due to the spring. <figure class="figure figure-like" id="DE_6_Figure_2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.4<span class="period">.</span></span><span class="space"> </span>Forces in an object-spring system.<div class="autopermalink" data-description="Figure 14.4"><a href="#DE_6_Figure_2" title="Copy permalink for Figure 14.4">🔗</a></div></figcaption></figure> With the axis as set up in <a href="Differential_Equations_6.html#DE_6_Figure_2" class="xref" data-knowl="./knowl/xref/DE_6_Figure_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.4">Figure 14.4</a> (or <a href="Differential_Equations_6.html#DE_6_Figure_1" class="xref" data-knowl="./knowl/xref/DE_6_Figure_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.1">Figure 14.1</a>), <span class="process-math">\(\mathbf{F_g}\)</span> will always act in the negative direction. However, <span class="process-math">\(\mathbf{F_r}\)</span> will be positive when the displacement of the object is less than <span class="process-math">\(N\)</span> and negative when the displacement of the object is greater than <span class="process-math">\(N\)</span> (i.e. the restoring force always acts in the direction of the natural position of the spring). Notice that since the motion of the object is one dimensional we can represent the relevant vector quantities by real numbers. The sign of the number will give us the direction of the vector.<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="A_Simple_Model-7">
 <div class="para">Thus, the force due to gravity is constant and is given by</div>
 <div class="displaymath process-math">
@@ -533,13 +547,17 @@ F=F_g+F_r=-mg-ky+kN
 \end{equation*}
 </div>
 <div class="para">Now if we let <span class="process-math">\(a\)</span> be the acceleration of the object, then from Newton’s second law of motion</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-7" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="A_Simple_Model-8"><div class="displaymath process-math" id="A_Simple_Model-8-1">
+<div class="para logical" id="A_Simple_Model-8">
+<div class="displaymath process-math" id="A_Simple_Model-8-1">
 \begin{align*}
 ma \amp=F\\
 m\frac{d^2y}{dt^2} \amp=-mg-ky+kN
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-8" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="A_Simple_Model-9">
 <div class="para">Thus we are able to model the displacement of the object via a 2nd order linear DE with constant coefficients, along with the initial conditions</div>
 <div class="displaymath process-math">
@@ -560,6 +578,7 @@ y(0)=-L,\hspace{5mm} y'(0)=0
 \end{equation}
 </div>
 <div class="para">which is an initial-value problem involving a homogeneous 2nd order linear DE with constant coefficients.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-9" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="A_Simple_Model-10">
 <div class="para">Using the methods outlined in <a href="Differential_Equations_4.html" class="internal" title="Chapter 12: DE4: Homogeneous Second Order Linear DEs">Chapter 12</a> we find that the general solution to <a href="Differential_Equations_6.html#Equation_14_1_1" class="xref" data-knowl="./knowl/xref/Equation_14_1_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.1">(14.1)</a> is</div>
@@ -581,13 +600,15 @@ y(t)=-L\cos(qt)
 \end{equation*}
 </div>
 <div class="para">As shown in <a href="Differential_Equations_6.html#Fig_14_1_5" class="xref" data-knowl="./knowl/xref/Fig_14_1_5.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.5">Figure 14.5</a>, this solution is telling us that (under the assumptions of the model) the motion of the object will be periodic about the equilibrium position i.e. will be simple harmonic motion. <figure class="figure figure-like" id="Fig_14_1_5"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.5<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(y(t)=-L\cos(qt)\text{.}\)</span></figcaption></figure> Of course real springs do not oscillate forever and so we conclude that our model must have ignored some important details (e.g. air resistance, frictional forces etc.) Despite this obvious shortcoming we will use this simple model as the basis for looking at more complicated contexts.</div>
-</div></section><section class="section" id="Adding_Damping"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.5<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(y(t)=-L\cos(qt)\text{.}\)</span><div class="autopermalink" data-description="Figure 14.5"><a href="#Fig_14_1_5" title="Copy permalink for Figure 14.5">🔗</a></div></figcaption></figure> Of course real springs do not oscillate forever and so we conclude that our model must have ignored some important details (e.g. air resistance, frictional forces etc.) Despite this obvious shortcoming we will use this simple model as the basis for looking at more complicated contexts.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_Simple_Model-10" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 14.1: A Simple Model"><a href="#A_Simple_Model" title="Copy permalink for Section 14.1: A Simple Model">🔗</a></div></section><section class="section" id="Adding_Damping"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">Adding Damping</span>
 </h3>
 <div class="para logical" id="Adding_Damping-2">
 <div class="para">Imagine now that some sort of damping mechanism is added to the object-spring system as shown in <a href="Differential_Equations_6.html#Fig_14_2_1" class="xref" data-knowl="./knowl/xref/Fig_14_2_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.6">Figure 14.6</a>. (Such a system might be used as a simple model of a car shock absorber for example.) <figure class="figure figure-like" id="Fig_14_2_1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_4.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.6<span class="period">.</span></span><span class="space"> </span>Representation of an object-spring system with a damping mechanism.</figcaption></figure> So long as the speed of the object is not too fast then a reasonable assumption is that the damping force acting on the object, <span class="process-math">\(\mathbf{F_d}\text{,}\)</span>  is proportional to the speed and acts in the direction opposing  the motion of the object. Thus</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.6<span class="period">.</span></span><span class="space"> </span>Representation of an object-spring system with a damping mechanism.<div class="autopermalink" data-description="Figure 14.6"><a href="#Fig_14_2_1" title="Copy permalink for Figure 14.6">🔗</a></div></figcaption></figure> So long as the speed of the object is not too fast then a reasonable assumption is that the damping force acting on the object, <span class="process-math">\(\mathbf{F_d}\text{,}\)</span>  is proportional to the speed and acts in the direction opposing  the motion of the object. Thus</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_1.html ./knowl/xref/Eqn_14_2_1.html ./knowl/xref/Eqn_14_2_1.html">
 \begin{equation*}
 F_d=-D\frac{dy}{dt}
@@ -630,6 +651,7 @@ r=\frac{-2p\pm \sqrt{4p^2-4q^2}}{2}=-p\pm \sqrt{p^2-q^2}
 \end{equation*}
 </div>
 <div class="para">Thus the nature of the general solution to <a href="Differential_Equations_6.html#Eqn_14_2_1" class="xref" data-knowl="./knowl/xref/Eqn_14_2_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 14.2">(14.2)</a> depends upon the sign of <span class="process-math">\(p^2-q^2\text{,}\)</span> or equivalently, on the magnitude of the parameter <span class="process-math">\(\delta=\frac{p}{q}\text{.}\)</span> <span class="process-math">\(\delta\)</span> is called the <dfn class="terminology">damping parameter</dfn> of the system.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Adding_Damping-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Adding_Damping-3">
 <div class="para">If <span class="process-math">\(p^2-q^2\gt 0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}\lt 1\)</span>) then the general solution is</div>
@@ -639,8 +661,9 @@ y(t)=e^{-pt}(C_1\cos(\omega t)+C_2\sin(\omega t))
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(\omega=\sqrt{q^2-p^2}\)</span> and hence the function will be like that shown in <a href="Differential_Equations_6.html#Fig_14_2_2" class="xref" data-knowl="./knowl/xref/Fig_14_2_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.7">Figure 14.7</a>. In this case the system is called <dfn class="terminology">under-damped</dfn>. <figure class="figure figure-like" id="Fig_14_2_2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_5.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.7<span class="period">.</span></span><span class="space"> </span>Plot of under-damped solution <span class="process-math">\(y(t)\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.7<span class="period">.</span></span><span class="space"> </span>Plot of under-damped solution <span class="process-math">\(y(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 14.7"><a href="#Fig_14_2_2" title="Copy permalink for Figure 14.7">🔗</a></div></figcaption></figure>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Adding_Damping-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Adding_Damping-4">
 <div class="para">If <span class="process-math">\(p^2-q^2\gt 0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}\gt 1\)</span>) then the general solution is</div>
@@ -650,14 +673,15 @@ y(t)=C_1e^{r_1t}+C_2e^{r_2t}
 \end{equation*}
 </div>
 <div class="para">where both <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\)</span> are negative and hence the function will be like that shown in <a href="Differential_Equations_6.html#Fig_14_2_3" class="xref" data-knowl="./knowl/xref/Fig_14_2_3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.8">Figure 14.8</a>. In this case the system is called <dfn class="terminology">over-damped</dfn>. <figure class="figure figure-like" id="Fig_14_2_3"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_6.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.8<span class="period">.</span></span><span class="space"> </span>Plot of over-damped solution <span class="process-math">\(y(t)\text{.}\)</span></figcaption></figure> Finally if <span class="process-math">\(p^2-q^2=0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}=1\)</span>) then the general solution is</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.8<span class="period">.</span></span><span class="space"> </span>Plot of over-damped solution <span class="process-math">\(y(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 14.8"><a href="#Fig_14_2_3" title="Copy permalink for Figure 14.8">🔗</a></div></figcaption></figure> Finally if <span class="process-math">\(p^2-q^2=0\)</span> (or equivalently <span class="process-math">\(\delta=\frac{p}{q}=1\)</span>) then the general solution is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_2_3.html ./knowl/xref/Fig_14_2_4.html">
 \begin{equation*}
 y(t)=(C_1+C_2t)e^{-pt}
 \end{equation*}
 </div>
 <div class="para">and hence the function will be like that shown in <a href="Differential_Equations_6.html#Fig_14_2_4" class="xref" data-knowl="./knowl/xref/Fig_14_2_4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.9">Figure 14.9</a>. In this case the system is called <dfn class="terminology">critically-damped</dfn>. <figure class="figure figure-like" id="Fig_14_2_4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_7.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.9<span class="period">.</span></span><span class="space"> </span>Plot of critically-damped solution <span class="process-math">\(y(t)\text{.}\)</span></figcaption></figure> The critically-damped case is of practical interest. Often we want to add damping to a system so that it returns close to its equilibrium position "as quickly as possible", (for example in the shock absorber of a car). It turns out that this is achieved by critical damping.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.9<span class="period">.</span></span><span class="space"> </span>Plot of critically-damped solution <span class="process-math">\(y(t)\text{.}\)</span><div class="autopermalink" data-description="Figure 14.9"><a href="#Fig_14_2_4" title="Copy permalink for Figure 14.9">🔗</a></div></figcaption></figure> The critically-damped case is of practical interest. Often we want to add damping to a system so that it returns close to its equilibrium position "as quickly as possible", (for example in the shock absorber of a car). It turns out that this is achieved by critical damping.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Adding_Damping-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Adding_Damping-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.10</span><span class="period">.</span>
@@ -677,6 +701,7 @@ y(t)=(C_1+C_2t)e^{-pt}
 </div>
 <div class="para">The Sage cell below considers the case where <span class="process-math">\(m=0.5\)</span>kg and <span class="process-math">\(k=0.5\)</span> (i.e. <span class="process-math">\(\delta = D\)</span>) and plots the solution <span class="process-math">\(x(t)\)</span> for various <span class="process-math">\(\delta\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Adding_Damping-5-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Adding_Damping-5-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">A = 1   # parameters in general solution
 B = 0
@@ -701,12 +726,13 @@ def _(D = slider(0,4,default=1,step_size=0.2), auto_update=false):
         print("Under-damped: delta = ", d)
         x = exp(-p*t)*(A*cos(w*t) + B*sin(w*t))
     show(plot(x,(t,0,4*pi),aspect_ratio=6))
-</script></div></article></section><section class="section" id="Adding_an_External_Force"><h3 class="heading hide-type">
+</script></div>
+<div class="autopermalink" data-description="Example 14.10"><a href="#Adding_Damping-5" title="Copy permalink for Example 14.10">🔗</a></div></article><div class="autopermalink" data-description="Section 14.2: Adding Damping"><a href="#Adding_Damping" title="Copy permalink for Section 14.2: Adding Damping">🔗</a></div></section><section class="section" id="Adding_an_External_Force"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">14.3</span><span class="space"> </span><span class="title">Adding an External Force</span>
 </h3>
 <div class="para logical" id="Adding_an_External_Force-2">
 <div class="para">In our final model we will look at the situation where some other external force, <span class="process-math">\(\mathbf{F_e}\text{,}\)</span> is also acting on the object along the <span class="process-math">\(y\)</span>-axis, as shown in <a href="Differential_Equations_6.html#Fig_14_3_1" class="xref" data-knowl="./knowl/xref/Fig_14_3_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.11">Figure 14.11</a>. This context has many applications, especially in engineering, although in most applications the context doesn’t actually look like the diagram shown in <a href="Differential_Equations_6.html#Fig_14_3_1" class="xref" data-knowl="./knowl/xref/Fig_14_3_1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 14.11">Figure 14.11</a>. For example if the top of a power pole is pulled to one side and let go it will behave like an object-spring system with damping. Now when a wind blows past the pole it is possible that aerodynamic effects can result in an oscillating side force acting on the pole. <figure class="figure figure-like" id="Fig_14_3_1"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/./DifferentialEquations/Images/6/figure_8.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.11<span class="period">.</span></span><span class="space"> </span>Representation of object-spring system with a damping mechanism and an external force.</figcaption></figure> Assume that the external force is oscillatory and hence can be represented by</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.11<span class="period">.</span></span><span class="space"> </span>Representation of object-spring system with a damping mechanism and an external force.<div class="autopermalink" data-description="Figure 14.11"><a href="#Fig_14_3_1" title="Copy permalink for Figure 14.11">🔗</a></div></figcaption></figure> Assume that the external force is oscillatory and hence can be represented by</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_14_3_1.html ./knowl/xref/Fig_14_3_1.html ./knowl/xref/Eqn_14_3_1.html ./knowl/xref/Differential_Equations_5.html ./knowl/xref/Differential_Equations_5.html">
 \begin{equation*}
 F_e(t)=B\cos(\alpha t)
@@ -774,8 +800,9 @@ M=\frac{1}{\sqrt{4p^2\alpha^2+(\alpha^2-q^2)^2}}
 </div>
 <div class="para">Notice that, since for a given object-spring system <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are fixed values, this factor <span class="process-math">\(M\)</span> is a function of the forcing angular frequency <span class="process-math">\(\alpha\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Adding_an_External_Force-3">Run the Sage cell below to plot the graphs of <span class="process-math">\(M(\alpha)\)</span> for various values of <span class="process-math">\(p\)</span> (which relates to the damping coefficient) when <span class="process-math">\(q\)</span> (which relates to the stiffness coefficient) is held constant at <span class="process-math">\(q=1\text{.}\)</span> In fact, it can be shown that if the damping parameter <span class="process-math">\(\delta\)</span> (<span class="process-math">\(=\frac{p}{q}\)</span>) is small then <span class="process-math">\(M\)</span> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <span class="process-math">\(\delta\rightarrow 0\text{.}\)</span>
+<div class="para" id="Adding_an_External_Force-3">Run the Sage cell below to plot the graphs of <span class="process-math">\(M(\alpha)\)</span> for various values of <span class="process-math">\(p\)</span> (which relates to the damping coefficient) when <span class="process-math">\(q\)</span> (which relates to the stiffness coefficient) is held constant at <span class="process-math">\(q=1\text{.}\)</span> In fact, it can be shown that if the damping parameter <span class="process-math">\(\delta\)</span> (<span class="process-math">\(=\frac{p}{q}\)</span>) is small then <span class="process-math">\(M\)</span> has a maximum when the forcing frequency is near the natural frequency of the system and further that this maximum tends to infinity as <span class="process-math">\(\delta\rightarrow 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Adding_an_External_Force-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">q = 1
 a = var('a')
@@ -785,8 +812,10 @@ legends = ['p = '+str(p)[0:3] for p in plist]
 plot([1/sqrt(4*p^2*a^2+(a^2-q^2)^2) for p in plist], (a, 0, 3),
     legend_label = legends, axes_labels = ['applied frequency', 'response'])
 </script></div>
-<div class="para" id="Adding_an_External_Force-5">The significance of this analysis is the insight that if our damped object-spring system is subjected to an external oscillatory force near the natural frequency of the system it will respond with large amplitude motion unless the system is sufficiently damped. This phenomenon is known as <dfn class="terminology">resonance</dfn>.</div>
-<div class="para" id="Adding_an_External_Force-6">Using the Sage cell below, you can play with a damped oscillator with applied external force <span class="process-math">\(F_e(t)=B\cos(\alpha t)\text{.}\)</span> (Note: <span class="process-math">\(x_c(t)\)</span> here is actually the solution to the IVP with the right hand side set to zero, and <span class="process-math">\(x_p(t)=x(t)-x_c(t)\)</span> is not the same as the particular solution guessed earlier.)</div>
+<div class="para" id="Adding_an_External_Force-5">The significance of this analysis is the insight that if our damped object-spring system is subjected to an external oscillatory force near the natural frequency of the system it will respond with large amplitude motion unless the system is sufficiently damped. This phenomenon is known as <dfn class="terminology">resonance</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Adding_an_External_Force-6">Using the Sage cell below, you can play with a damped oscillator with applied external force <span class="process-math">\(F_e(t)=B\cos(\alpha t)\text{.}\)</span> (Note: <span class="process-math">\(x_c(t)\)</span> here is actually the solution to the IVP with the right hand side set to zero, and <span class="process-math">\(x_p(t)=x(t)-x_c(t)\)</span> is not the same as the particular solution guessed earlier.)<div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div id="Adding_an_External_Force-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t = var('t')
 x = function('x')(t)
 alpha = var('alpha')
@@ -840,11 +869,13 @@ def _(D = ('damping D = ', slider(0, 5, default=1, step_size=0.1)),
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Adding_an_External_Force-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="Adding_an_External_Force-8-2-1-1">Determine the values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in the DE <span class="process-math">\(\frac{d^2x}{dt^2}+2a\frac{dx}{dt}+bx=0\)</span> that give the damped object-spring system a damping parameter of <span class="process-math">\(0.5\)</span> and a natural frequency of <span class="process-math">\(2\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Adding_an_External_Force-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Adding_an_External_Force-8-2-1-1">Determine the values of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in the DE <span class="process-math">\(\frac{d^2x}{dt^2}+2a\frac{dx}{dt}+bx=0\)</span> that give the damped object-spring system a damping parameter of <span class="process-math">\(0.5\)</span> and a natural frequency of <span class="process-math">\(2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-8-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 14.3.1"><a href="#Adding_an_External_Force-8-2" title="Copy permalink for Exercise 14.3.1">🔗</a></div></article><article class="exercise exercise-like" id="Adding_an_External_Force-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para" id="Adding_an_External_Force-8-3-1-1">A beam that is fixed rigidly at one end and designed to support a load at the other end is called a <dfn class="terminology">cantilever</dfn>. If the cantilever is designed only to deflect a "small" amount under its load then it is reasonable to assume that the size of the deflection of the tip of the cantilever is proportional to the load applied. When such a cantilever is deflected beyond (or less than) its equilibrium position the cantilever exerts a restoring force toward the equilibrium position. So long as the deflection is reasonably small and the mass of the object is large compared to the mass of the cantilever this restoring force is proportional to the deflection. Show that the resulting motion of the tip of the cantilever can be modelled under these assumptions via a homogeneous 2nd order linear DE. <figure class="figure figure-like" id="Adding_an_External_Force-8-3-1-1-2"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/./DifferentialEquations/Images/6/figure_cantilever.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.12<span class="period">.</span></span><span class="space"> </span>A cantilever.</figcaption></figure>
-</div></article><article class="exercise exercise-like" id="Adding_an_External_Force-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">14.12<span class="period">.</span></span><span class="space"> </span>A cantilever.<div class="autopermalink" data-description="Figure 14.12"><a href="#Adding_an_External_Force-8-3-1-1-2" title="Copy permalink for Figure 14.12">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-8-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 14.3.2"><a href="#Adding_an_External_Force-8-3" title="Copy permalink for Exercise 14.3.2">🔗</a></div></article><article class="exercise exercise-like" id="Adding_an_External_Force-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="Adding_an_External_Force-8-4-1-1">
 <div class="para">Show that if <span class="process-math">\(a\cos(\alpha t)+b\sin(\alpha t)=C\cos(\alpha t-\beta)\)</span> then</div>
 <div class="displaymath process-math">
@@ -852,8 +883,10 @@ def _(D = ('damping D = ', slider(0, 5, default=1, step_size=0.1)),
 C=\sqrt{a^2+b^2} \textrm{ and } \beta=\tan^{-1}\left(\frac{b}{a}\right)
 \end{equation*}
 </div>
-</div></article></section></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#Adding_an_External_Force-8-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 14.3.3"><a href="#Adding_an_External_Force-8-4" title="Copy permalink for Exercise 14.3.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 14.3: Example Tasks"><a href="#Adding_an_External_Force-8" title="Copy permalink for Exercises 14.3: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 14.3: Adding an External Force"><a href="#Adding_an_External_Force" title="Copy permalink for Section 14.3: Adding an External Force">🔗</a></div></section><div class="autopermalink" data-description="Chapter 14: DE6: Applications of 2nd Order Linear DEs"><a href="#Differential_Equations_6" title="Copy permalink for Chapter 14: DE6: Applications of 2nd Order Linear DEs">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Differential_Equations_5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Part-Linear_Algebra.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

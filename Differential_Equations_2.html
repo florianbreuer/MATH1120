@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DE2: First Order Separable DEs</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,29 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -130,19 +123,33 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -187,7 +194,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -383,7 +390,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -494,8 +501,10 @@ y^{(n)}(x)=f(x)
 \end{equation*}
 </div>
 <div class="para">(where we can find the solutions just by integration) we have not yet seen any algebraic methods for finding the solutions to a DE. (We did see that for first order DEs we can obtain a graphical representation of the solutions via a direction field and a numerical approximation to a particular solution via Euler’s method.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Differential_Equations_2-2-2">As mentioned in <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a> there is no one general method that will solve all possible DEs. However, for various classes of DEs methods have been found that will find their solution. In this lecture we are going to look at an algebraic method for finding the solutions to the class of DEs called first order separable DEs.</div></section><section class="section" id="Sec-First_Order_Separable_DEs"><h3 class="heading hide-type">
+<div class="para" id="Differential_Equations_2-2-2">As mentioned in <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a> there is no one general method that will solve all possible DEs. However, for various classes of DEs methods have been found that will find their solution. In this lecture we are going to look at an algebraic method for finding the solutions to the class of DEs called first order separable DEs.<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div></section><section class="section" id="Sec-First_Order_Separable_DEs"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.1</span><span class="space"> </span><span class="title">First Order Separable DEs</span>
 </h3>
 <article class="definition definition-like" id="Sec-First_Order_Separable_DEs-2"><h4 class="heading">
@@ -509,67 +518,131 @@ y^{(n)}(x)=f(x)
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(g(y)\neq 0\)</span> is called a <dfn class="terminology">first order separable DE</dfn>.</div>
-</div></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-3"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 10.1"><a href="#Sec-First_Order_Separable_DEs-2" title="Copy permalink for Definition 10.1">🔗</a></div></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-First_Order_Separable_DEs-3-1">Which of the following DEs are first order separable DEs?</div>
-<div class="para logical" id="Sec-First_Order_Separable_DEs-3-2"><ol class="lower-alpha ol-marker-7" id="Sec-First_Order_Separable_DEs-3-2-1">
-<li id="Sec-First_Order_Separable_DEs-3-2-1-1"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-1"><span class="process-math">\(\displaystyle y^2y'=x \)</span></div></li>
-<li id="Sec-First_Order_Separable_DEs-3-2-1-2"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-2"><span class="process-math">\(\displaystyle y''+2y=0 \)</span></div></li>
-<li id="Sec-First_Order_Separable_DEs-3-2-1-3"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-3"><span class="process-math">\(\displaystyle \frac{dy}{dt}+3e^t=ye^t \)</span></div></li>
-<li id="Sec-First_Order_Separable_DEs-3-2-1-4"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-4"><span class="process-math">\(\displaystyle \frac{dy}{dt}+ty=2 \)</span></div></li>
-<li id="Sec-First_Order_Separable_DEs-3-2-1-5"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-5"><span class="process-math">\(\displaystyle y'=y(1-y) \)</span></div></li>
-<li id="Sec-First_Order_Separable_DEs-3-2-1-6"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-6"><span class="process-math">\(\displaystyle y'=y(x-y) \)</span></div></li>
-</ol></div>
-<details id="Sec-First_Order_Separable_DEs-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-3-3-1">
-<span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(c\)</span> and <span class="process-math">\(e\)</span>
-</div></div></details><details id="Sec-First_Order_Separable_DEs-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-First_Order_Separable_DEs-3-4-1"><ol class="lower-alpha ol-marker-7" id="Sec-First_Order_Separable_DEs-3-4-1-1">
-<li id="Sec-First_Order_Separable_DEs-3-4-1-1-1"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-1">This DE can be written as<div class="displaymath process-math">
+<div class="para" id="Sec-First_Order_Separable_DEs-3-1">Which of the following DEs are first order separable DEs?<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Sec-First_Order_Separable_DEs-3-2">
+<ol class="lower-alpha ol-marker-7" id="Sec-First_Order_Separable_DEs-3-2-1">
+<li id="Sec-First_Order_Separable_DEs-3-2-1-1">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-1"><span class="process-math">\(\displaystyle y^2y'=x \)</span></div>
+<div class="autopermalink" data-description="Item a"><a href="#Sec-First_Order_Separable_DEs-3-2-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-2">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-2"><span class="process-math">\(\displaystyle y''+2y=0 \)</span></div>
+<div class="autopermalink" data-description="Item b"><a href="#Sec-First_Order_Separable_DEs-3-2-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-3">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-3"><span class="process-math">\(\displaystyle \frac{dy}{dt}+3e^t=ye^t \)</span></div>
+<div class="autopermalink" data-description="Item c"><a href="#Sec-First_Order_Separable_DEs-3-2-1-3" title="Copy permalink for Item c">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-4">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-4"><span class="process-math">\(\displaystyle \frac{dy}{dt}+ty=2 \)</span></div>
+<div class="autopermalink" data-description="Item d"><a href="#Sec-First_Order_Separable_DEs-3-2-1-4" title="Copy permalink for Item d">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-5">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-5"><span class="process-math">\(\displaystyle y'=y(1-y) \)</span></div>
+<div class="autopermalink" data-description="Item e"><a href="#Sec-First_Order_Separable_DEs-3-2-1-5" title="Copy permalink for Item e">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-2-1-6">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-2-1-6"><span class="process-math">\(\displaystyle y'=y(x-y) \)</span></div>
+<div class="autopermalink" data-description="Item f"><a href="#Sec-First_Order_Separable_DEs-3-2-1-6" title="Copy permalink for Item f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<details id="Sec-First_Order_Separable_DEs-3-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-First_Order_Separable_DEs-3-3-1">
+<span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(c\)</span> and <span class="process-math">\(e\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-3-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.2.1"><a href="#Sec-First_Order_Separable_DEs-3-3" title="Copy permalink for Answer 10.2.1">🔗</a></div>
+</div></details><details id="Sec-First_Order_Separable_DEs-3-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-First_Order_Separable_DEs-3-4-1">
+<ol class="lower-alpha ol-marker-7" id="Sec-First_Order_Separable_DEs-3-4-1-1">
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-1">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-1">This DE can be written as<div class="displaymath process-math">
 \begin{equation*}
 y'=\frac{x}{y^2} 
 \end{equation*}
 </div>Thus it is a first order separable DE with <span class="process-math">\(f(x)=x\)</span> and <span class="process-math">\(g(y)=\frac{1}{y^2}\text{.}\)</span>
-</div></li>
-<li id="Sec-First_Order_Separable_DEs-3-4-1-1-2"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-2">This DE is a second order DE (due to the <span class="process-math">\(y''\)</span> term) and hence cannot be a first order separable DE.</div></li>
-<li id="Sec-First_Order_Separable_DEs-3-4-1-1-3"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-3">This DE can be rearranged as<div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Sec-First_Order_Separable_DEs-3-4-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-2">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-2">This DE is a second order DE (due to the <span class="process-math">\(y''\)</span> term) and hence cannot be a first order separable DE.</div>
+<div class="autopermalink" data-description="Item b"><a href="#Sec-First_Order_Separable_DEs-3-4-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-3">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-3">This DE can be rearranged as<div class="displaymath process-math">
 \begin{equation*}
 \frac{dy}{dt}=e^t(y-3)
 \end{equation*}
 </div>and hence is a first order separable DE with <span class="process-math">\(f(t)=e^t\)</span> and <span class="process-math">\(g(y)=y-3\text{.}\)</span>
-</div></li>
-<li id="Sec-First_Order_Separable_DEs-3-4-1-1-4"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-4">When we try to rearrange this DE in the same manner as we did in part (c) we obtain<div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#Sec-First_Order_Separable_DEs-3-4-1-1-3" title="Copy permalink for Item c">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-4">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-4">When we try to rearrange this DE in the same manner as we did in part (c) we obtain<div class="displaymath process-math">
 \begin{equation*}
 \frac{dy}{dt}=2-ty
 \end{equation*}
-</div>This is not of the form <span class="process-math">\(y'=f(t)g(y)\)</span> and hence this first order DE is not separable.</div></li>
-<li id="Sec-First_Order_Separable_DEs-3-4-1-1-5"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-5">This DE is already in the form of a first order separable DE with <span class="process-math">\(f(x)=1\)</span> and <span class="process-math">\(g(y)=y(1-y)\text{.}\)</span>
-</div></li>
-<li id="Sec-First_Order_Separable_DEs-3-4-1-1-6"><div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-6">The right hand side of this DE can’t be rearranged into the form <span class="process-math">\(y'=f(x)g(y)\)</span> and so this DE is not a first order separable DE.</div></li>
-</ol></div></div></details></article><div class="para" id="Sec-First_Order_Separable_DEs-4">The method for solving first order separable DEs is based on integration by substitution. This integration technique was covered in Math1110 but the following example is given as a reminder.</div>
+</div>This is not of the form <span class="process-math">\(y'=f(t)g(y)\)</span> and hence this first order DE is not separable.</div>
+<div class="autopermalink" data-description="Item d"><a href="#Sec-First_Order_Separable_DEs-3-4-1-1-4" title="Copy permalink for Item d">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-5">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-5">This DE is already in the form of a first order separable DE with <span class="process-math">\(f(x)=1\)</span> and <span class="process-math">\(g(y)=y(1-y)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item e"><a href="#Sec-First_Order_Separable_DEs-3-4-1-1-5" title="Copy permalink for Item e">🔗</a></div>
+</li>
+<li id="Sec-First_Order_Separable_DEs-3-4-1-1-6">
+<div class="para" id="p-derived-Sec-First_Order_Separable_DEs-3-4-1-1-6">The right hand side of this DE can’t be rearranged into the form <span class="process-math">\(y'=f(x)g(y)\)</span> and so this DE is not a first order separable DE.</div>
+<div class="autopermalink" data-description="Item f"><a href="#Sec-First_Order_Separable_DEs-3-4-1-1-6" title="Copy permalink for Item f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-3-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.2.1"><a href="#Sec-First_Order_Separable_DEs-3-4" title="Copy permalink for Solution 10.2.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.2"><a href="#Sec-First_Order_Separable_DEs-3" title="Copy permalink for Example 10.2">🔗</a></div></article><div class="para" id="Sec-First_Order_Separable_DEs-4">The method for solving first order separable DEs is based on integration by substitution. This integration technique was covered in Math1110 but the following example is given as a reminder.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Sec-First_Order_Separable_DEs-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-First_Order_Separable_DEs-5-1">Evaluate the integral <span class="process-math">\(\displaystyle\int 2x\sin(x^2) \hspace{2mm} dx\text{.}\)</span>
+<div class="para" id="Sec-First_Order_Separable_DEs-5-1">Evaluate the integral <span class="process-math">\(\displaystyle\int 2x\sin(x^2) \hspace{2mm} dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-5-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-First_Order_Separable_DEs-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-5-2-1"><span class="process-math">\(\displaystyle\int 2x\sin(x^2)\hspace{2mm} dx=-\cos(x^2)+C\)</span></div></div></details><details id="Sec-First_Order_Separable_DEs-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-First_Order_Separable_DEs-5-3-1">
+<details id="Sec-First_Order_Separable_DEs-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-First_Order_Separable_DEs-5-2-1">
+<span class="process-math">\(\displaystyle\int 2x\sin(x^2)\hspace{2mm} dx=-\cos(x^2)+C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-5-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.3.1"><a href="#Sec-First_Order_Separable_DEs-5-2" title="Copy permalink for Answer 10.3.1">🔗</a></div>
+</div></details><details id="Sec-First_Order_Separable_DEs-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-First_Order_Separable_DEs-5-3-1">
 <div class="para">Since the integrand is of the form <span class="process-math">\(g'(x)\sin(g(x))\)</span> (or, in Leibniz notation <span class="process-math">\(\sin(g(x))\frac{dg}{dx}\)</span>) make the substitution</div>
 <div class="displaymath process-math">
 \begin{equation*}
 u=g(x)=x^2
 \end{equation*}
 </div>
-<div class="para">Then <div class="para logical" id="Sec-First_Order_Separable_DEs-5-3-1-4"><div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-5-3-1-4-1">
+<div class="para">Then <div class="para logical" id="Sec-First_Order_Separable_DEs-5-3-1-4">
+<div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-5-3-1-4-1">
 \begin{align*}
 \int 2x\sin(x^2)\hspace{2mm} dx \amp =\int \sin(u)\hspace{2mm} du\\
 \amp =-\cos(u)+C
 \end{align*}
-</div></div> Using <span class="process-math">\(u=x^2\)</span> gives</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-5-3-1-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div> Using <span class="process-math">\(u=x^2\)</span> gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int 2x\sin(x^2)\hspace{2mm} dx=-\cos(x^2)+C
 \end{equation*}
 </div>
-</div></div></details></article><div class="para logical" id="Sec-First_Order_Separable_DEs-6">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-5-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.3.1"><a href="#Sec-First_Order_Separable_DEs-5-3" title="Copy permalink for Solution 10.3.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.3"><a href="#Sec-First_Order_Separable_DEs-5" title="Copy permalink for Example 10.3">🔗</a></div></article><div class="para logical" id="Sec-First_Order_Separable_DEs-6">
 <div class="para">In general, the integration by substitution method says that for an integral of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -595,6 +668,7 @@ u=g(x)
 \end{equation*}
 </div>
 <div class="para">(As an aside, we saw in Math1110 that this formula follows directly from the chain rule of differentiation.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-6" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Sec-First_Order_Separable_DEs-7">
 <div class="para">Returning now to the problem of solving first order separable DEs, i.e. to solving DEs of the form</div>
@@ -622,6 +696,7 @@ u=g(x)
 \end{equation*}
 </div>
 <div class="para">So long as we can actually perform the integrals on both sides of this equation we will have an equation which will implicitly define <span class="process-math">\(y\)</span> (the unknown function) in terms of <span class="process-math">\(x\)</span> (the independent variable). If we can further make <span class="process-math">\(y\)</span> the subject of this equation then we will have found an explicit formula for the solution to the separable DE.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-7" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Sec-First_Order_Separable_DEs-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span>
@@ -633,8 +708,14 @@ u=g(x)
 \frac{dy}{dx}=-4xy^2
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-8-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-First_Order_Separable_DEs-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-8-2-1"><span class="process-math">\(y(x)=\dfrac{1}{2x^2+C}, \hspace{5mm} y(x)=0 \hspace{5mm} \textrm{ for } C\in\mathbb{R}\)</span></div></div></details><details id="Sec-First_Order_Separable_DEs-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Sec-First_Order_Separable_DEs-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-First_Order_Separable_DEs-8-2-1">
+<span class="process-math">\(y(x)=\dfrac{1}{2x^2+C}, \hspace{5mm} y(x)=0 \hspace{5mm} \textrm{ for } C\in\mathbb{R}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-8-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.4.1"><a href="#Sec-First_Order_Separable_DEs-8-2" title="Copy permalink for Answer 10.4.1">🔗</a></div>
+</div></details><details id="Sec-First_Order_Separable_DEs-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-First_Order_Separable_DEs-8-3-1">
 <div class="para">This is a first order separable DE so begin by separating the variables, i.e.</div>
 <div class="displaymath process-math">
@@ -680,6 +761,7 @@ y(x)=\frac{1}{2x^2+C}
 \end{equation*}
 </div>
 <div class="para">and so <span class="process-math">\(y\)</span> does indeed satisfy the DE.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-8-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Sec-First_Order_Separable_DEs-8-3-2">
 <div class="para">The working so far has assumed that <span class="process-math">\(y^2\neq 0\)</span> and hence that <span class="process-math">\(y\neq 0\text{.}\)</span> Thus to check that we have found all of the solutions to the DE we must check whether the function <span class="process-math">\(y(x)=0\)</span> is also a solution. Clearly it is. Thus the set of all solutions to the DE is</div>
@@ -689,10 +771,11 @@ y(x)=\frac{1}{2x^2+C}, \hspace{5mm} y(x)=0 \hspace{5mm} \textrm{ for } C\in\math
 \end{equation*}
 </div>
 <div class="para">See <a href="Differential_Equations_2.html#Fig_1_example3_DEs" class="xref" data-knowl="./knowl/xref/Fig_1_example3_DEs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.5">Figure 10.5</a> for a sketch of these solutions for various values of <span class="process-math">\(C\text{.}\)</span> <figure class="figure figure-like" id="Fig_1_example3_DEs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.5<span class="period">.</span></span><span class="space"> </span>A sketch of <span class="process-math">\(y(x)=\frac{1}{2x^2+C}\)</span> for various values of <span class="process-math">\(C\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.5<span class="period">.</span></span><span class="space"> </span>A sketch of <span class="process-math">\(y(x)=\frac{1}{2x^2+C}\)</span> for various values of <span class="process-math">\(C\text{.}\)</span><div class="autopermalink" data-description="Figure 10.5"><a href="#Fig_1_example3_DEs" title="Copy permalink for Figure 10.5">🔗</a></div></figcaption></figure>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-8-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Sec-First_Order_Separable_DEs-8-3-3">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dx}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(c\text{.}\)</span>
+<div class="para" id="Sec-First_Order_Separable_DEs-8-3-3">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dx}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-8-3-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Sec-First_Order_Separable_DEs-8-3-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
 M=4
@@ -703,7 +786,8 @@ def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
     show(r'y(x) = '+latex(1/(2*x^2+N(c,digits=3))))
     show(VF+plot(1/(2*x^2+c),(x,-M,M),ymin=-M,ymax=M))
 </script></div>
-</div></details></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-9"><h4 class="heading">
+<div class="autopermalink" data-description="Solution 10.4.1"><a href="#Sec-First_Order_Separable_DEs-8-3" title="Copy permalink for Solution 10.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.4"><a href="#Sec-First_Order_Separable_DEs-8" title="Copy permalink for Example 10.4">🔗</a></div></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Sec-First_Order_Separable_DEs-9-1">
@@ -713,8 +797,14 @@ def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
 (4y-\cos(y))\frac{dy}{dt}-3t^2=0, \hspace{5mm} y(0)=0
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-9-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-First_Order_Separable_DEs-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-9-2-1"><span class="process-math">\(2y^2-\sin(y)=t^3\)</span></div></div></details><details id="Sec-First_Order_Separable_DEs-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Sec-First_Order_Separable_DEs-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-First_Order_Separable_DEs-9-2-1">
+<span class="process-math">\(2y^2-\sin(y)=t^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-9-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.6.1"><a href="#Sec-First_Order_Separable_DEs-9-2" title="Copy permalink for Answer 10.6.1">🔗</a></div>
+</div></details><details id="Sec-First_Order_Separable_DEs-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-First_Order_Separable_DEs-9-3-1">
 <div class="para">This is a first order separable DE so begin by separating the variables, i.e.</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example4.html">
@@ -753,10 +843,11 @@ C=0
 \end{equation*}
 </div>
 <div class="para">The curve defined implicitly by this equation is shown in <a href="Differential_Equations_2.html#Fig_1_example4" class="xref" data-knowl="./knowl/xref/Fig_1_example4.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.7">Figure 10.7</a> and from this we can see that the "bottom" part of the curve will be the function that is the solution to the initial-value problem. <figure class="figure figure-like" id="Fig_1_example4"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example4.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 10.7"><a href="#Fig_1_example4" title="Copy permalink for Figure 10.7">🔗</a></div></figcaption></figure>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-9-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Sec-First_Order_Separable_DEs-9-3-2">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dt}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(c\text{.}\)</span>
+<div class="para" id="Sec-First_Order_Separable_DEs-9-3-2">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dt}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-9-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Sec-First_Order_Separable_DEs-9-3-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t,y = var('t y')
 M=4
@@ -767,7 +858,8 @@ def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
     show(r'2y^2-\sin(y)=t^3 + '+latex(N(c,digits=3)))
     show(VF+implicit_plot(2*y^2-sin(y)==t^3+c,(t,-M,M),(y,-M,M)))
 </script></div>
-</div></details></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-10"><h4 class="heading">
+<div class="autopermalink" data-description="Solution 10.6.1"><a href="#Sec-First_Order_Separable_DEs-9-3" title="Copy permalink for Solution 10.6.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.6"><a href="#Sec-First_Order_Separable_DEs-9" title="Copy permalink for Example 10.6">🔗</a></div></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Sec-First_Order_Separable_DEs-10-1">
@@ -779,8 +871,14 @@ def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
 </div>
 <div class="para">
 <dfn class="terminology">Note</dfn>: We looked at this example in <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a>. There we sketched a direction field for the DE.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-10-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-First_Order_Separable_DEs-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-10-2-1"><span class="process-math">\(y(x)=\dfrac{Ae^x}{1+Ae^x}\)</span></div></div></details><details id="Sec-First_Order_Separable_DEs-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Sec-First_Order_Separable_DEs-10-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-First_Order_Separable_DEs-10-2-1">
+<span class="process-math">\(y(x)=\dfrac{Ae^x}{1+Ae^x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-10-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.8.1"><a href="#Sec-First_Order_Separable_DEs-10-2" title="Copy permalink for Answer 10.8.1">🔗</a></div>
+</div></details><details id="Sec-First_Order_Separable_DEs-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Sec-First_Order_Separable_DEs-10-3-1">
 <div class="para">This is a first order separable DE with <span class="process-math">\(f(x)=1\)</span> (i.e. it is autonomous) and <span class="process-math">\(g(y)=y(1-y)\text{.}\)</span> On separating the variables and integrating both sides with respect to <span class="process-math">\(x\)</span> we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example5_DEs.html">
@@ -794,12 +892,15 @@ def _(c = slider(-5,5,default=0,step_size=0.1), auto_update=false):
 \frac{1}{y(1-y)}=\frac{1}{y}+\frac{1}{1-y}
 \end{equation*}
 </div>
-<div class="para">Thus <div class="para logical" id="Sec-First_Order_Separable_DEs-10-3-1-6"><div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-10-3-1-6-1">
+<div class="para">Thus <div class="para logical" id="Sec-First_Order_Separable_DEs-10-3-1-6">
+<div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-10-3-1-6-1">
 \begin{align*}
 \int \frac{1}{y(1-y)}\hspace{2mm}dy \amp=\int \frac{1}{y}\hspace{2mm}dy +\int \frac{1}{1-y}\hspace{2mm}dy\\
 \amp =\ln(\vert y\vert)-\ln(\vert 1-y\vert)+C
 \end{align*}
-</div></div> (Some more detail on partial fraction decomposition can be found in an appendix to this lecture.) So, on evaluating the integral on the right hand side and combining the two constants of integration we obtain</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-10-3-1-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div> (Some more detail on partial fraction decomposition can be found in an appendix to this lecture.) So, on evaluating the integral on the right hand side and combining the two constants of integration we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example5_DEs.html">
 \begin{equation*}
 \ln(\vert y\vert)-\ln(\vert 1-y\vert)=x+K
@@ -813,10 +914,11 @@ y(x)=\frac{Ae^x}{1+Ae^x}
 </div>
 <div class="para">
 <a href="Differential_Equations_2.html#Fig_1_example5_DEs" class="xref" data-knowl="./knowl/xref/Fig_1_example5_DEs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.9">Figure 10.9</a> shows this curve when <span class="process-math">\(A=1\)</span> superimposed on top of the direction field for the DE. Also shown in the figure are the solutions <span class="process-math">\(y(x)=0\)</span> and <span class="process-math">\(y(x)=1\)</span> which come from checking separately the cases where <span class="process-math">\(g(y)=0\text{.}\)</span> <figure class="figure figure-like" id="Fig_1_example5_DEs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example5.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.9<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 10.9"><a href="#Fig_1_example5_DEs" title="Copy permalink for Figure 10.9">🔗</a></div></figcaption></figure>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-10-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Sec-First_Order_Separable_DEs-10-3-2">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dx}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="Sec-First_Order_Separable_DEs-10-3-2">The Sage cell below can be used to plot the direction field of <span class="process-math">\(\dfrac{dy}{dx}\)</span> as well as the solution <span class="process-math">\(y(x)\)</span> for a given constant of integration <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-10-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Sec-First_Order_Separable_DEs-10-3-3" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
 M=4
@@ -827,7 +929,8 @@ def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
     show(r'y(x) = '+latex(N(A,digits=3)*exp(x)/(1+N(A,digits=3)*exp(x))))
     show(VF+plot(A*exp(x)/(1+A*exp(x)),(x,-M,M),ymin=-M,ymax=M))
 </script></div>
-</div></details></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-11"><h4 class="heading">
+<div class="autopermalink" data-description="Solution 10.8.1"><a href="#Sec-First_Order_Separable_DEs-10-3" title="Copy permalink for Solution 10.8.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.8"><a href="#Sec-First_Order_Separable_DEs-10" title="Copy permalink for Example 10.8">🔗</a></div></article><article class="example example-like" id="Sec-First_Order_Separable_DEs-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.10</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Sec-First_Order_Separable_DEs-11-1">
@@ -840,8 +943,15 @@ def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
 <div class="para">
 <dfn class="terminology">Note</dfn>: We looked at this example in section <a href="Differential_Equations_1.html" class="internal" title="Chapter 9: DE1: Introduction">Chapter 9</a> where we used Euler’s method with <span class="process-math">\(\Delta x=0.1\)</span> to approximate the value of the solution at <span class="process-math">\(x=0.3\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-11-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-First_Order_Separable_DEs-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-First_Order_Separable_DEs-11-2-1"><span class="process-math">\(y(x)=2e^{x^2/2}-1\)</span></div></div></details><details id="Sec-First_Order_Separable_DEs-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-First_Order_Separable_DEs-11-3-1">
+<details id="Sec-First_Order_Separable_DEs-11-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-First_Order_Separable_DEs-11-2-1">
+<span class="process-math">\(y(x)=2e^{x^2/2}-1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-11-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.10.1"><a href="#Sec-First_Order_Separable_DEs-11-2" title="Copy permalink for Answer 10.10.1">🔗</a></div>
+</div></details><details id="Sec-First_Order_Separable_DEs-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-First_Order_Separable_DEs-11-3-1">
 <div class="para">This is a first order separable DE with <span class="process-math">\(f(x)=x\)</span> and <span class="process-math">\(g(y)=y+1\text{.}\)</span> On separating the variables and integrating both sides with respect to <span class="process-math">\(x\)</span> we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
 \begin{equation*}
@@ -854,12 +964,15 @@ def _(A = slider(-10,10,default=0,step_size=0.1), auto_update=false):
 y(x)=Ce^{x^2/2}-1
 \end{equation*}
 </div>
-<div class="para">To satisfy the initial condition <div class="para logical" id="Sec-First_Order_Separable_DEs-11-3-1-6"><div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-11-3-1-6-1">
+<div class="para">To satisfy the initial condition <div class="para logical" id="Sec-First_Order_Separable_DEs-11-3-1-6">
+<div class="displaymath process-math" id="Sec-First_Order_Separable_DEs-11-3-1-6-1">
 \begin{align*}
 1 \amp=Ce^0-1\\
 C \amp =2
 \end{align*}
-</div></div> Thus the solution to the initial-value problem is</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-11-3-1-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div> Thus the solution to the initial-value problem is</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Fig_1_example6_DEs.html">
 \begin{equation*}
 y(x)=2e^{x^2/2}-1
@@ -880,9 +993,12 @@ y(0.3)=1.0604 \textrm{ to 4.d.p.}
 </div>
 <div class="para">
 <a href="Differential_Equations_2.html#Fig_1_example6_DEs" class="xref" data-knowl="./knowl/xref/Fig_1_example6_DEs.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.11">Figure 10.11</a> shows both the analytic solution and the Euler approximation over the domain <span class="process-math">\(0\leq x\leq 0.3\text{.}\)</span> <figure class="figure figure-like" id="Fig_1_example6_DEs"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./DifferentialEquations/Images/2/1_example6.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.11<span class="period">.</span></span><span class="space"> </span>Plot of the analytic solution (blue) and Euler approximation (red) for <span class="process-math">\(\frac{dy}{dx}=xy+x\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.11<span class="period">.</span></span><span class="space"> </span>Plot of the analytic solution (blue) and Euler approximation (red) for <span class="process-math">\(\frac{dy}{dx}=xy+x\text{.}\)</span><div class="autopermalink" data-description="Figure 10.11"><a href="#Fig_1_example6_DEs" title="Copy permalink for Figure 10.11">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><section class="exercises" id="Sec-First_Order_Separable_DEs-12"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-11-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.10.1"><a href="#Sec-First_Order_Separable_DEs-11-3" title="Copy permalink for Solution 10.10.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.10"><a href="#Sec-First_Order_Separable_DEs-11" title="Copy permalink for Example 10.10">🔗</a></div></article><section class="exercises" id="Sec-First_Order_Separable_DEs-12"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-First_Order_Separable_DEs-12-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -893,7 +1009,9 @@ y(0.3)=1.0604 \textrm{ to 4.d.p.}
 \frac{\sqrt{1+x^2}}{y+1}\frac{dy}{dx}=-x
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="Sec-First_Order_Separable_DEs-12-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-12-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 10.1.1"><a href="#Sec-First_Order_Separable_DEs-12-2" title="Copy permalink for Exercise 10.1.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-First_Order_Separable_DEs-12-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para logical" id="Sec-First_Order_Separable_DEs-12-3-1-1">
 <div class="para">Solve the initial-value problem</div>
 <div class="displaymath process-math">
@@ -901,15 +1019,23 @@ y(0.3)=1.0604 \textrm{ to 4.d.p.}
 y'=-\frac{x}{y+1}, \hspace{5mm} y(0)=2
 \end{equation*}
 </div>
-</div></article></section></section><section class="section" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-First_Order_Separable_DEs-12-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 10.1.2"><a href="#Sec-First_Order_Separable_DEs-12-3" title="Copy permalink for Exercise 10.1.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 10.1: Example Tasks"><a href="#Sec-First_Order_Separable_DEs-12" title="Copy permalink for Exercises 10.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 10.1: First Order Separable DEs"><a href="#Sec-First_Order_Separable_DEs" title="Copy permalink for Section 10.1: First Order Separable DEs">🔗</a></div></section><section class="section" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.2</span><span class="space"> </span><span class="title">Some Simple Applications of First Order Separable DEs</span>
 </h3>
 <article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-1">Find a curve in the <span class="process-math">\(xy\)</span>-plane that passes through the point <span class="process-math">\((0,3)\)</span> and whose tangent line at any point <span class="process-math">\((x,y)\)</span> has its slope given by <span class="process-math">\(\frac{2x}{y^2}\text{.}\)</span>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-1">Find a curve in the <span class="process-math">\(xy\)</span>-plane that passes through the point <span class="process-math">\((0,3)\)</span> and whose tangent line at any point <span class="process-math">\((x,y)\)</span> has its slope given by <span class="process-math">\(\frac{2x}{y^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2-1"><span class="process-math">\(y(x)=(3x^2+27)^{1/3}\)</span></div></div></details><details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3-1">
+<details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2-1">
+<span class="process-math">\(y(x)=(3x^2+27)^{1/3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.12.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-2" title="Copy permalink for Answer 10.12.1">🔗</a></div>
+</div></details><details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3-1">
 <div class="para">Let the curve be <span class="process-math">\(y(x)\text{.}\)</span> Then we know</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -934,11 +1060,21 @@ y'=\frac{2x}{y^2}, \hspace{5mm} y(0)=3
 y(x)=(3x^2+27)^{1/3}
 \end{equation*}
 </div>
-</div></div></details></article><article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.12.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2-3" title="Copy permalink for Solution 10.12.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.12"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-2" title="Copy permalink for Example 10.12">🔗</a></div></article><article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-1">Suppose that the temperature a cup of coffee when it is poured is <span class="process-math">\(95^oC\text{.}\)</span> The cup is left to stand in a room where the temperature is <span class="process-math">\(20^oC\text{.}\)</span> If the temperature of the coffee is <span class="process-math">\(90^oC\)</span> after <span class="process-math">\(2\)</span> min, how long will it take for the temperature of the coffee in the cup to reach <span class="process-math">\(25^oC\)</span> according to Newton’s law of cooling?</div>
-<details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2-1"><span class="process-math">\(t\approx 78.5 \textrm{ min}\)</span></div></div></details><details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1">
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-1">Suppose that the temperature a cup of coffee when it is poured is <span class="process-math">\(95^oC\text{.}\)</span> The cup is left to stand in a room where the temperature is <span class="process-math">\(20^oC\text{.}\)</span> If the temperature of the coffee is <span class="process-math">\(90^oC\)</span> after <span class="process-math">\(2\)</span> min, how long will it take for the temperature of the coffee in the cup to reach <span class="process-math">\(25^oC\)</span> according to Newton’s law of cooling?<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2-1">
+<span class="process-math">\(t\approx 78.5 \textrm{ min}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.13.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-2" title="Copy permalink for Answer 10.13.1">🔗</a></div>
+</div></details><details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1">
 <div class="para">Let <span class="process-math">\(T(t)\)</span> be the temperature of the cup of coffee at time <span class="process-math">\(t\)</span> min after it was poured and let <span class="process-math">\(T_a\)</span> be the room (ambient) temperature. Now, Newton’s law of cooling says that the rate at which the temperature of an object falls is proportional to the difference in the temperature of the object and the temperature of its surroundings. Thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -951,12 +1087,15 @@ y(x)=(3x^2+27)^{1/3}
 \int \frac{1}{T-T_a}\hspace{2mm}dT=\int -k\hspace{2mm}dt
 \end{equation*}
 </div>
-<div class="para">Evaluating the integrals gives <div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8"><div class="displaymath process-math" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8-1">
+<div class="para">Evaluating the integrals gives <div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8">
+<div class="displaymath process-math" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8-1">
 \begin{align*}
 \ln(\vert T-T_a\vert) \amp=-kt+C\\
 T(t) \amp =Ae^{-kt}+T_a
 \end{align*}
-</div></div> Since <span class="process-math">\(T_a=20\text{,}\)</span> using <span class="process-math">\(T(0)=95\)</span> gives <span class="process-math">\(A=75\text{.}\)</span> Using <span class="process-math">\(T(2)=90\)</span> gives</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1-8" title="Copy permalink for Paragraph">🔗</a></div>
+</div> Since <span class="process-math">\(T_a=20\text{,}\)</span> using <span class="process-math">\(T(0)=95\)</span> gives <span class="process-math">\(A=75\text{.}\)</span> Using <span class="process-math">\(T(2)=90\)</span> gives</div>
 <div class="displaymath process-math">
 \begin{equation*}
 90=75e^{-2k}+20
@@ -980,13 +1119,22 @@ k=-\frac{\ln(\frac{14}{15})}{2}\approx 0.034
 t=-\frac{\ln(\frac{1}{15})}{k}\approx 78.5 \textrm{ min}
 \end{equation*}
 </div>
-</div></div></details></article><article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.13.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3-3" title="Copy permalink for Solution 10.13.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.13"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-3" title="Copy permalink for Example 10.13">🔗</a></div></article><article class="example example-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span>
 </h4>
 <div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-1">Consider a <span class="process-math">\(100\)</span>L tank which contains pure water. At time <span class="process-math">\(t=0\)</span> salt water begins to flow into the tank at a rate of <span class="process-math">\(2\)</span>L/min and the mixed water flows out of the tank at the same rate. If the concentration of the salt in the inflowing water is <span class="process-math">\(35\)</span>g/L determine the concentration, <span class="process-math">\(C(t)\text{,}\)</span> of the salt in the tank as a function of time. <figure class="figure figure-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-1-6"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="external/./DifferentialEquations/Images/2/1_example9.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.15<span class="period">.</span></span><span class="space"> </span>Flow of water in and out of a tank.</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.15<span class="period">.</span></span><span class="space"> </span>Flow of water in and out of a tank.<div class="autopermalink" data-description="Figure 10.15"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-1-6" title="Copy permalink for Figure 10.15">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2-1"><span class="process-math">\(C(t)=35-35e^{-t/50}\)</span></div></div></details><details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3-1">
+<details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2-1">
+<span class="process-math">\(C(t)=35-35e^{-t/50}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.14.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-2" title="Copy permalink for Answer 10.14.1">🔗</a></div>
+</div></details><details id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3-1">
 <div class="para">Let <span class="process-math">\(A(t)\)</span> be the amount of salt in the tank (in grams) at time <span class="process-math">\(t\text{.}\)</span> Then, since there is <span class="process-math">\(100\)</span>L of water in the tank</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example9_1.html ./knowl/xref/Eqn_example9_3.html ./knowl/xref/Eqn_example9_2.html" id="Eqn_example9_1">
 \begin{equation}
@@ -1035,58 +1183,91 @@ C(t)=35-ke^{-t/50}
 C(t)=35-35e^{-t/50}
 \end{equation*}
 </div>
-</div></div></details></article><section class="exercises" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.14.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4-3" title="Copy permalink for Solution 10.14.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.14"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-4" title="Copy permalink for Example 10.14">🔗</a></div></article><section class="exercises" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2-1-1">An ingot of gold is placed into a furnace which has a temperature of <span class="process-math">\(1200^oC\text{.}\)</span>  After <span class="process-math">\(3\)</span> min the temperature of the ingot has risen from <span class="process-math">\(40^oC\)</span> to <span class="process-math">\(610^oC\text{.}\)</span> Assuming Newton’s Law of Cooling how long before the ingot reaches the melting temperature of <span class="process-math">\(1064^oC\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3-1-1">Consider a <span class="process-math">\(50\)</span>L tank which contains salt water with concentration of <span class="process-math">\(20\)</span>g/L. At time <span class="process-math">\(t=0\)</span> more salt water begins to flow into the tank at the rate of <span class="process-math">\(3\)</span>L/min and the mixed water flows out of the tank at the same rate. Assuming that the concentration of salt in the inflowing water is <span class="process-math">\(30\)</span>g/L how long will it take for the concentration of the water in the tank to reach <span class="process-math">\(25\)</span>g/L?</div></article></section></section><section class="section" id="Differential_Equations_2-5"><h3 class="heading hide-type">
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2-1-1">An ingot of gold is placed into a furnace which has a temperature of <span class="process-math">\(1200^oC\text{.}\)</span>  After <span class="process-math">\(3\)</span> min the temperature of the ingot has risen from <span class="process-math">\(40^oC\)</span> to <span class="process-math">\(610^oC\text{.}\)</span> Assuming Newton’s Law of Cooling how long before the ingot reaches the melting temperature of <span class="process-math">\(1064^oC\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 10.2.1"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-2" title="Copy permalink for Exercise 10.2.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3-1-1">Consider a <span class="process-math">\(50\)</span>L tank which contains salt water with concentration of <span class="process-math">\(20\)</span>g/L. At time <span class="process-math">\(t=0\)</span> more salt water begins to flow into the tank at the rate of <span class="process-math">\(3\)</span>L/min and the mixed water flows out of the tank at the same rate. Assuming that the concentration of salt in the inflowing water is <span class="process-math">\(30\)</span>g/L how long will it take for the concentration of the water in the tank to reach <span class="process-math">\(25\)</span>g/L?<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 10.2.2"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5-3" title="Copy permalink for Exercise 10.2.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 10.2: Example Tasks"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs-5" title="Copy permalink for Exercises 10.2: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 10.2: Some Simple Applications of First Order Separable DEs"><a href="#Sec-Some-Simple-Applications-of-First-Order-Separable-DEs" title="Copy permalink for Section 10.2: Some Simple Applications of First Order Separable DEs">🔗</a></div></section><section class="section" id="Differential_Equations_2-5"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.3</span><span class="space"> </span><span class="title">Appendix on Partial Fraction Decomposition</span>
 </h3>
 <div class="para" id="Differential_Equations_2-5-2">
-<dfn class="terminology">Partial fraction decomposition</dfn> is, essentially, the inverse operation of combining fractions by putting them over a common denominator. More formally, partial fraction decomposition expresses a proper rational function (i.e. a function that is the ratio of two polynomials where the degree of the polynomial in the denominator is greater that the degree of the polynomial in the numerator) as the sum of proper rational functions of lesser degree.</div>
+<dfn class="terminology">Partial fraction decomposition</dfn> is, essentially, the inverse operation of combining fractions by putting them over a common denominator. More formally, partial fraction decomposition expresses a proper rational function (i.e. a function that is the ratio of two polynomials where the degree of the polynomial in the denominator is greater that the degree of the polynomial in the numerator) as the sum of proper rational functions of lesser degree.<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Differential_Equations_2-5-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.16</span><span class="period">.</span>
 </h4>
-<div class="para" id="Differential_Equations_2-5-3-1">Write <span class="process-math">\(\dfrac{2}{x+2}-\dfrac{3}{2x-1}\)</span> as a single fraction.</div>
-<details id="Differential_Equations_2-5-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Differential_Equations_2-5-3-2-1"><span class="process-math">\(=\dfrac{x-8}{(x+2)(2x-1)}\)</span></div></div></details><details id="Differential_Equations_2-5-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="Differential_Equations_2-5-3-3-1">Using <span class="process-math">\((x+2)(2x-1)\)</span> as the common denominator we get <div class="para logical" id="Differential_Equations_2-5-3-3-1-2"><div class="displaymath process-math" id="Differential_Equations_2-5-3-3-1-2-1">
+<div class="para" id="Differential_Equations_2-5-3-1">Write <span class="process-math">\(\dfrac{2}{x+2}-\dfrac{3}{2x-1}\)</span> as a single fraction.<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<details id="Differential_Equations_2-5-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Differential_Equations_2-5-3-2-1">
+<span class="process-math">\(=\dfrac{x-8}{(x+2)(2x-1)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-3-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 10.16.1"><a href="#Differential_Equations_2-5-3-2" title="Copy permalink for Answer 10.16.1">🔗</a></div>
+</div></details><details id="Differential_Equations_2-5-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Differential_Equations_2-5-3-3-1">Using <span class="process-math">\((x+2)(2x-1)\)</span> as the common denominator we get <div class="para logical" id="Differential_Equations_2-5-3-3-1-2">
+<div class="displaymath process-math" id="Differential_Equations_2-5-3-3-1-2-1">
 \begin{align*}
 \frac{2}{x+2}-\frac{3}{2x-1} \amp=\frac{2(2x-1)}{(x+2)(2x-1)}-\frac{3(x+2)}{(x+2)(2x-1)}\\
 \amp =\frac{4x-2-3x-6}{(x+2)(2x-1)}\\
 \amp =\frac{x-8}{(x+2)(2x-1)}
 \end{align*}
-</div></div>
-</div></div></details></article><div class="para" id="Differential_Equations_2-5-4">In partial fraction decomposition, for each distinct linear factor <span class="process-math">\((ax+b)\)</span> in the denominator include a term <span class="process-math">\(\dfrac{A}{ax+b}\)</span> in the decomposition, where <span class="process-math">\(A\)</span> is a value we have to determine.</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-3-3-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-3-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.16.1"><a href="#Differential_Equations_2-5-3-3" title="Copy permalink for Solution 10.16.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.16"><a href="#Differential_Equations_2-5-3" title="Copy permalink for Example 10.16">🔗</a></div></article><div class="para" id="Differential_Equations_2-5-4">In partial fraction decomposition, for each distinct linear factor <span class="process-math">\((ax+b)\)</span> in the denominator include a term <span class="process-math">\(\dfrac{A}{ax+b}\)</span> in the decomposition, where <span class="process-math">\(A\)</span> is a value we have to determine.<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Differential_Equations_2-5-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.17</span><span class="period">.</span>
 </h4>
-<div class="para" id="Differential_Equations_2-5-5-1">Find the partial fraction decomposition of <span class="process-math">\(\dfrac{x-8}{(x+2)(2x-1)}\text{.}\)</span>
+<div class="para" id="Differential_Equations_2-5-5-1">Find the partial fraction decomposition of <span class="process-math">\(\dfrac{x-8}{(x+2)(2x-1)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-5-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Differential_Equations_2-5-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\dfrac{x-8}{(x+2)(2x-1)}=\dfrac{2}{x+2}-\dfrac{3}{2x-1}\)</span></div></details><details id="Differential_Equations_2-5-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Differential_Equations_2-5-5-3-1">
+<details id="Differential_Equations_2-5-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\dfrac{x-8}{(x+2)(2x-1)}=\dfrac{2}{x+2}-\dfrac{3}{2x-1}\)</span><div class="autopermalink" data-description="Answer 10.17.1"><a href="#Differential_Equations_2-5-5-2" title="Copy permalink for Answer 10.17.1">🔗</a></div>
+</div></details><details id="Differential_Equations_2-5-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Differential_Equations_2-5-5-3-1">
 <div class="para">Because the denominator of this rational function contains two linear polynomial terms the partial fraction decomposition takes the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example11_4.html" id="Eqn_example11_4">
 \begin{equation}
 \frac{x-8}{(x+2)(2x-1)}=\frac{A}{x+2}+\frac{B}{2x-1}\tag{10.4}
 \end{equation}
 </div>
-<div class="para">To determine the values for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> multiply both sides of <a href="Differential_Equations_2.html#Eqn_example11_4" class="xref" data-knowl="./knowl/xref/Eqn_example11_4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.4">(10.4)</a> by <span class="process-math">\((x+2)(2x-1)\text{.}\)</span> This gives <div class="para logical" id="Differential_Equations_2-5-5-3-1-6"><div class="displaymath process-math" id="Differential_Equations_2-5-5-3-1-6-1">
+<div class="para">To determine the values for <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> multiply both sides of <a href="Differential_Equations_2.html#Eqn_example11_4" class="xref" data-knowl="./knowl/xref/Eqn_example11_4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.4">(10.4)</a> by <span class="process-math">\((x+2)(2x-1)\text{.}\)</span> This gives <div class="para logical" id="Differential_Equations_2-5-5-3-1-6">
+<div class="displaymath process-math" id="Differential_Equations_2-5-5-3-1-6-1">
 \begin{align*}
 x-8 \amp=A(2x-1)+B(x+2)\\
 \amp =(2A+B)x+(2B-A)
 \end{align*}
-</div></div> For the polynomials on both sides of the equation to be equal they must have the same coefficients and so <div class="para logical" id="Differential_Equations_2-5-5-3-1-7"><div class="displaymath process-math" id="Differential_Equations_2-5-5-3-1-7-1">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-5-3-1-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div> For the polynomials on both sides of the equation to be equal they must have the same coefficients and so <div class="para logical" id="Differential_Equations_2-5-5-3-1-7">
+<div class="displaymath process-math" id="Differential_Equations_2-5-5-3-1-7-1">
 \begin{align*}
 2A+B \amp=1\\
 -A+2B \amp=-8
 \end{align*}
-</div></div> Solving these simultaneous equations gives <span class="process-math">\(A=2,\hspace{2mm} B=-3\)</span> and hence</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-5-3-1-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div> Solving these simultaneous equations gives <span class="process-math">\(A=2,\hspace{2mm} B=-3\)</span> and hence</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example11_4.html">
 \begin{equation*}
 \frac{x-8}{(x+2)(2x-1)}=\frac{2}{x+2}-\frac{3}{2x-1}
 \end{equation*}
 </div>
-</div></div></details></article><div class="para logical" id="Differential_Equations_2-5-6">
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-5-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.17.1"><a href="#Differential_Equations_2-5-5-3" title="Copy permalink for Solution 10.17.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.17"><a href="#Differential_Equations_2-5-5" title="Copy permalink for Example 10.17">🔗</a></div></article><div class="para logical" id="Differential_Equations_2-5-6">
 <div class="para">If the denominator of the rational function contains a linear factor to some power, i.e. <span class="process-math">\((ax+b)^n\text{,}\)</span> then the partial fraction decomposition should contain the terms</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1099,13 +1280,17 @@ x-8 \amp=A(2x-1)+B(x+2)\\
 \frac{Ax+B}{ax^2+bx+c}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-6" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Differential_Equations_2-5-7"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="Differential_Equations_2-5-7-1">Find the partial fraction decomposition of <span class="process-math">\(\dfrac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}\text{.}\)</span>
+<div class="para" id="Differential_Equations_2-5-7-1">Find the partial fraction decomposition of <span class="process-math">\(\dfrac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-7-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="Differential_Equations_2-5-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\dfrac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}=\dfrac{2x}{x^2+2}-\dfrac{1}{(x-1)^2}\)</span></div></details><details id="Differential_Equations_2-5-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="Differential_Equations_2-5-7-3-1">
+<details id="Differential_Equations_2-5-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\dfrac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}=\dfrac{2x}{x^2+2}-\dfrac{1}{(x-1)^2}\)</span><div class="autopermalink" data-description="Answer 10.18.1"><a href="#Differential_Equations_2-5-7-2" title="Copy permalink for Answer 10.18.1">🔗</a></div>
+</div></details><details id="Differential_Equations_2-5-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Differential_Equations_2-5-7-3-1">
 <div class="para">Because the denominator contains a quadratic term a repeated linear term the partial fraction decomposition takes the form</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example12_5.html" id="Eqn_example12_5">
 \begin{equation}
@@ -1118,20 +1303,26 @@ x-8 \amp=A(2x-1)+B(x+2)\\
 2x^3-5x^2+2x-2=(A+C)x^3+(-2A+B-C+D)x^2+(A-2B+2C)x+(B-2C+2D)
 \end{equation*}
 </div>
-<div class="para">Equating the coefficients of the polynomials on each side gives <div class="para logical" id="Differential_Equations_2-5-7-3-1-5"><div class="displaymath process-math" id="Differential_Equations_2-5-7-3-1-5-1">
+<div class="para">Equating the coefficients of the polynomials on each side gives <div class="para logical" id="Differential_Equations_2-5-7-3-1-5">
+<div class="displaymath process-math" id="Differential_Equations_2-5-7-3-1-5-1">
 \begin{align*}
 A+C \amp =2\\
 -2A+B-C+D \amp=-5\\
 A-2B+2C \amp =2\\
 B-2C+2D \amp=-2
 \end{align*}
-</div></div> Solving these simultaneous equations gives <span class="process-math">\(A=2\text{,}\)</span> <span class="process-math">\(B=0\text{,}\)</span> <span class="process-math">\(C=0\text{,}\)</span> <span class="process-math">\(D=-1\)</span> and hence</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-7-3-1-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div> Solving these simultaneous equations gives <span class="process-math">\(A=2\text{,}\)</span> <span class="process-math">\(B=0\text{,}\)</span> <span class="process-math">\(C=0\text{,}\)</span> <span class="process-math">\(D=-1\)</span> and hence</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Eqn_example12_5.html">
 \begin{equation*}
 \frac{2x^3-5x^2+2x-2}{(x^2+2)(x-1)^2}=\frac{2x}{x^2+2}-\frac{1}{(x-1)^2}
 \end{equation*}
 </div>
-</div></div></details></article><section class="exercises" id="Differential_Equations_2-5-8"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-7-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.18.1"><a href="#Differential_Equations_2-5-7-3" title="Copy permalink for Solution 10.18.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 10.18"><a href="#Differential_Equations_2-5-7" title="Copy permalink for Example 10.18">🔗</a></div></article><section class="exercises" id="Differential_Equations_2-5-8"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Differential_Equations_2-5-8-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
@@ -1142,8 +1333,10 @@ B-2C+2D \amp=-2
 \int \frac{x^2-2x+3}{(x^2+1)(x-1)}\hspace{2mm} dx
 \end{equation*}
 </div>
-</div></article></section></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#Differential_Equations_2-5-8-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 10.3.1"><a href="#Differential_Equations_2-5-8-2" title="Copy permalink for Exercise 10.3.1">🔗</a></div></article><div class="autopermalink" data-description="Exercises 10.3: Example Tasks"><a href="#Differential_Equations_2-5-8" title="Copy permalink for Exercises 10.3: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 10.3: Appendix on Partial Fraction Decomposition"><a href="#Differential_Equations_2-5" title="Copy permalink for Section 10.3: Appendix on Partial Fraction Decomposition">🔗</a></div></section><div class="autopermalink" data-description="Chapter 10: DE2: First Order Separable DEs"><a href="#Differential_Equations_2" title="Copy permalink for Chapter 10: DE2: First Order Separable DEs">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Differential_Equations_1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Differential_Equations_3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

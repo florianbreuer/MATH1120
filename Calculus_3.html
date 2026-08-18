@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CA1: Functions of Several Variables</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,29 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -130,19 +123,33 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -187,7 +194,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -383,7 +390,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -497,8 +504,10 @@ f:D\rightarrow\mathbb{R}
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(D\subseteq\mathbb{R}\)</span> is called the domain. We used the notation <span class="process-math">\(y=f(x)\)</span>  to denote such functions where <span class="process-math">\(x\)</span> denotes the independent variable and <span class="process-math">\(y\)</span> the dependent variable.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Functions-of-Two-Variables-3">We have seen that functions of one variable are useful in practice but (of course) there are many real world relationships that are more complicated and can’t be well modelled by these functions.</div>
+<div class="para" id="Functions-of-Two-Variables-3">We have seen that functions of one variable are useful in practice but (of course) there are many real world relationships that are more complicated and can’t be well modelled by these functions.<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Functions-of-Two-Variables-4"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h4>
@@ -510,29 +519,40 @@ T(x,y)
 \end{equation*}
 </div>
 <div class="para">and say that <span class="process-math">\(T\)</span> is a function of two variables.</div>
-</div></article><article class="example example-like" id="Functions-of-Two-Variables-5"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.1"><a href="#Functions-of-Two-Variables-4" title="Copy permalink for Example 1.1">🔗</a></div></article><article class="example example-like" id="Functions-of-Two-Variables-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h4>
 <div class="para logical" id="Functions-of-Two-Variables-5-1">
 <div class="para">Many of the formulas you’ve come across in school are actually functions of several variables, such as:</div>
 <ol class="decimal" id="Functions-of-Two-Variables-5-1-1">
-<li id="Functions-of-Two-Variables-5-1-1-1"><div class="para logical" id="Functions-of-Two-Variables-5-1-1-1-1">
+<li id="Functions-of-Two-Variables-5-1-1-1">
+<div class="para logical" id="Functions-of-Two-Variables-5-1-1-1-1">
 <div class="para">The kinetic energy of an object of mass <span class="process-math">\(m\)</span> and velocity <span class="process-math">\(v\)</span> is given by the two-variable function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 E(m,v) = \frac{1}{2}mv^2.
 \end{equation*}
 </div>
-</div></li>
-<li id="Functions-of-Two-Variables-5-1-1-2"><div class="para logical" id="Functions-of-Two-Variables-5-1-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-5-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#Functions-of-Two-Variables-5-1-1-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-5-1-1-2">
+<div class="para logical" id="Functions-of-Two-Variables-5-1-1-2-1">
 <div class="para">The value of a <span class="process-math">\(\$100\)</span> investment compounded continuously at an annual rate of <span class="process-math">\(r\)</span> after <span class="process-math">\(t\)</span> years is given by the two-variable function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 V(t,r) = 100 e^{rt}.
 \end{equation*}
 </div>
-</div></li>
-<li id="Functions-of-Two-Variables-5-1-1-3"><div class="para logical" id="Functions-of-Two-Variables-5-1-1-3-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-5-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#Functions-of-Two-Variables-5-1-1-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-5-1-1-3">
+<div class="para logical" id="Functions-of-Two-Variables-5-1-1-3-1">
 <div class="para">The magnitude of the gravitational attraction between two objects of masses <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\text{,}\)</span> separated by a distance of <span class="process-math">\(r\text{,}\)</span> is given by the three variable function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -540,9 +560,14 @@ F(m_1, m_2, r) = G\frac{m_1 m_2}{r^2},
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(G \approx 6.674\times 10^{-11} \mathrm{N}\mathrm{m}^2\mathrm{kg}^{-2}\)</span> is the <em class="emphasis">universal gravitational constant</em>.</div>
-</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-5-1-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#Functions-of-Two-Variables-5-1-1-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
 </ol>
-</div></article><div class="para logical" id="Functions-of-Two-Variables-6">
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-5-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2"><a href="#Functions-of-Two-Variables-5" title="Copy permalink for Example 1.2">🔗</a></div></article><div class="para logical" id="Functions-of-Two-Variables-6">
 <div class="para">Note that functions of two variables are of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -550,11 +575,15 @@ f:D\rightarrow\mathbb{R}^2
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(D\subseteq\mathbb{R}^2\)</span> is again the domain. Formally, we define a function of two variables as:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-6" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="Functions-of-Two-Variables-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h4>
-<dfn class="terminology">A (real valued) function <span class="process-math">\(f\)</span> of two variables</dfn><span class="process-math">\((x,y)\)</span><span class="process-math">\(D\)</span><span class="process-math">\(f(x,y)\text{.}\)</span></article><div class="para logical" id="Functions-of-Two-Variables-8">
+<div class="para" id="Functions-of-Two-Variables-7-1-1">
+<dfn class="terminology">A (real valued) function <span class="process-math">\(f\)</span> of two variables</dfn> is a rule that assigns to each ordered pair of real numbers <span class="process-math">\((x,y)\)</span> in a set <span class="process-math">\(D\)</span> a unique (real) number denoted by <span class="process-math">\(f(x,y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-7-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.3"><a href="#Functions-of-Two-Variables-7" title="Copy permalink for Definition 1.3">🔗</a></div></article><div class="para logical" id="Functions-of-Two-Variables-8">
 <div class="para">Thus,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -567,38 +596,98 @@ h(x,y)=(x-y)^2e^{-(x+y)}+6
 \end{equation*}
 </div>
 <div class="para">are examples of functions of two variables.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-8" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Functions-of-Two-Variables-9">The set <span class="process-math">\(D\)</span> is called the <dfn class="terminology">domain</dfn> of the function. Unless specified otherwise, we take <span class="process-math">\(D\)</span> to be the largest possible set of inputs for which we can calculate <span class="process-math">\(f\text{.}\)</span> The <dfn class="terminology">range</dfn> of <span class="process-math">\(f\)</span> is the associated set of values that <span class="process-math">\(f\)</span> takes on.</div>
+<div class="para" id="Functions-of-Two-Variables-9">The set <span class="process-math">\(D\)</span> is called the <dfn class="terminology">domain</dfn> of the function. Unless specified otherwise, we take <span class="process-math">\(D\)</span> to be the largest possible set of inputs for which we can calculate <span class="process-math">\(f\text{.}\)</span> The <dfn class="terminology">range</dfn> of <span class="process-math">\(f\)</span> is the associated set of values that <span class="process-math">\(f\)</span> takes on.<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-9" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Functions-of-Two-Variables-10"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="Functions-of-Two-Variables-10-1">Consider the function <span class="process-math">\(f(x,y)=\ln(x-y-1)\text{.}\)</span>
+<div class="para" id="Functions-of-Two-Variables-10-1">Consider the function <span class="process-math">\(f(x,y)=\ln(x-y-1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="Functions-of-Two-Variables-10-2"><ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-10-2-1">
-<li id="Functions-of-Two-Variables-10-2-1-1"><div class="para" id="Functions-of-Two-Variables-10-2-1-1-1">Find the domain of <span class="process-math">\(f\)</span>
-</div></li>
-<li id="Functions-of-Two-Variables-10-2-1-2"><div class="para" id="Functions-of-Two-Variables-10-2-1-2-1">Find:</div></li>
-</ol></div>
-<div class="para logical" id="Functions-of-Two-Variables-10-3"><ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-10-3-1">
-<li id="Functions-of-Two-Variables-10-3-1-1"><div class="para" id="Functions-of-Two-Variables-10-3-1-1-1"><span class="process-math">\(\displaystyle f(3,1)\)</span></div></li>
-<li id="Functions-of-Two-Variables-10-3-1-2"><div class="para" id="Functions-of-Two-Variables-10-3-1-2-1"><span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})\)</span></div></li>
-<li id="Functions-of-Two-Variables-10-3-1-3"><div class="para" id="Functions-of-Two-Variables-10-3-1-3-1"><span class="process-math">\(\displaystyle f(1,3)\)</span></div></li>
-</ol></div>
+<div class="para logical" id="Functions-of-Two-Variables-10-2">
+<ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-10-2-1">
+<li id="Functions-of-Two-Variables-10-2-1-1">
+<div class="para" id="Functions-of-Two-Variables-10-2-1-1-1">Find the domain of <span class="process-math">\(f\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Functions-of-Two-Variables-10-2-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-2-1-2">
+<div class="para" id="Functions-of-Two-Variables-10-2-1-2-1">Find:<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Functions-of-Two-Variables-10-2-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Functions-of-Two-Variables-10-3">
+<ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-10-3-1">
+<li id="Functions-of-Two-Variables-10-3-1-1">
+<div class="para" id="Functions-of-Two-Variables-10-3-1-1-1">
+<span class="process-math">\(\displaystyle f(3,1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-3-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Functions-of-Two-Variables-10-3-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-3-1-2">
+<div class="para" id="Functions-of-Two-Variables-10-3-1-2-1">
+<span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-3-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Functions-of-Two-Variables-10-3-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-3-1-3">
+<div class="para" id="Functions-of-Two-Variables-10-3-1-3-1">
+<span class="process-math">\(\displaystyle f(1,3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-3-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Functions-of-Two-Variables-10-3-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <details id="Functions-of-Two-Variables-10-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para logical" id="Functions-of-Two-Variables-10-4-1"><ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-10-4-1-1">
-<li id="Functions-of-Two-Variables-10-4-1-1-1"><div class="para" id="Functions-of-Two-Variables-10-4-1-1-1-1"><span class="process-math">\(\displaystyle D=\{(x,y):y \lt x-1\}\)</span></div></li>
-<li id="Functions-of-Two-Variables-10-4-1-1-2"><div class="para" id="Functions-of-Two-Variables-10-4-1-1-2-1"></div></li>
-</ol></div>
-<div class="para logical" id="Functions-of-Two-Variables-10-4-2"><ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-10-4-2-1">
-<li id="Functions-of-Two-Variables-10-4-2-1-1"><div class="para" id="Functions-of-Two-Variables-10-4-2-1-1-1"><span class="process-math">\(\displaystyle f(3,1)=0\)</span></div></li>
-<li id="Functions-of-Two-Variables-10-4-2-1-2"><div class="para" id="Functions-of-Two-Variables-10-4-2-1-2-1">
-<span class="process-math">\(f(\frac{1}{2},-\sqrt{5})=0.5516\)</span> (to 4.d.p.).</div></li>
-<li id="Functions-of-Two-Variables-10-4-2-1-3"><div class="para" id="Functions-of-Two-Variables-10-4-2-1-3-1">
-<span class="process-math">\(f(1,3)\)</span> is not defined.</div></li>
-</ol></div>
+<div class="para logical" id="Functions-of-Two-Variables-10-4-1">
+<ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-10-4-1-1">
+<li id="Functions-of-Two-Variables-10-4-1-1-1">
+<div class="para" id="Functions-of-Two-Variables-10-4-1-1-1-1">
+<span class="process-math">\(\displaystyle D=\{(x,y):y \lt x-1\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Functions-of-Two-Variables-10-4-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-4-1-1-2">
+<div class="para" id="Functions-of-Two-Variables-10-4-1-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Item b"><a href="#Functions-of-Two-Variables-10-4-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Functions-of-Two-Variables-10-4-2">
+<ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-10-4-2-1">
+<li id="Functions-of-Two-Variables-10-4-2-1-1">
+<div class="para" id="Functions-of-Two-Variables-10-4-2-1-1-1">
+<span class="process-math">\(\displaystyle f(3,1)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Functions-of-Two-Variables-10-4-2-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-4-2-1-2">
+<div class="para" id="Functions-of-Two-Variables-10-4-2-1-2-1">
+<span class="process-math">\(f(\frac{1}{2},-\sqrt{5})=0.5516\)</span> (to 4.d.p.).<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Functions-of-Two-Variables-10-4-2-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-4-2-1-3">
+<div class="para" id="Functions-of-Two-Variables-10-4-2-1-3-1">
+<span class="process-math">\(f(1,3)\)</span> is not defined.<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-2-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Functions-of-Two-Variables-10-4-2-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-4-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.4.1"><a href="#Functions-of-Two-Variables-10-4" title="Copy permalink for Answer 1.4.1">🔗</a></div>
 </div></details><details id="Functions-of-Two-Variables-10-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="Functions-of-Two-Variables-10-5-1"><ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-10-5-1-1">
-<li id="Functions-of-Two-Variables-10-5-1-1-1"><div class="para logical" id="Functions-of-Two-Variables-10-5-1-1-1-1">
+<div class="para logical" id="Functions-of-Two-Variables-10-5-1">
+<ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-10-5-1-1">
+<li id="Functions-of-Two-Variables-10-5-1-1-1">
+<div class="para logical" id="Functions-of-Two-Variables-10-5-1-1-1-1">
 <div class="para">Since the argument of the log function has to be positive, the domain <span class="process-math">\(D\)</span> is the set of points in the plane satisfying</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-domain1.html">
 \begin{equation*}
@@ -608,59 +697,171 @@ D=\{(x,y):y \lt x-1\}\text{.}
 <div class="para">
 <a href="Calculus_3.html#fig-domain1" class="xref" data-knowl="./knowl/xref/fig-domain1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.5">Figure 1.5</a> shows a plot of this domain in <span class="process-math">\(\mathbb{R}^2\text{.}\)</span>
 </div>
-</div></li>
-<li id="Functions-of-Two-Variables-10-5-1-1-2"><div class="para" id="Functions-of-Two-Variables-10-5-1-1-2-1"></div></li>
-</ol></div>
-<div class="para logical" id="Functions-of-Two-Variables-10-5-2"><ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-10-5-2-1">
-<li id="Functions-of-Two-Variables-10-5-2-1-1"><div class="para" id="Functions-of-Two-Variables-10-5-2-1-1-1"><span class="process-math">\(\displaystyle f(3,1)=\ln(3-1-1)=\ln(1)=0\)</span></div></li>
-<li id="Functions-of-Two-Variables-10-5-2-1-2"><div class="para" id="Functions-of-Two-Variables-10-5-2-1-2-1">
-<span class="process-math">\(f(\frac{1}{2},-\sqrt{5})=\ln(\frac{1}{2}+\sqrt{5}-1)=\ln(\sqrt{5}-\frac{1}{2})=0.5516\)</span> (to 4.d.p.).</div></li>
-<li id="Functions-of-Two-Variables-10-5-2-1-3"><div class="para" id="Functions-of-Two-Variables-10-5-2-1-3-1">Since <span class="process-math">\((1,3)\)</span> is not in the domain of <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(f(1,3)\)</span> is not defined.</div></li>
-</ol></div>
-</div></details></article><figure class="figure figure-like" id="fig-domain1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Functions-of-Two-Variables-10-5-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-5-1-1-2">
+<div class="para" id="Functions-of-Two-Variables-10-5-1-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Item b"><a href="#Functions-of-Two-Variables-10-5-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Functions-of-Two-Variables-10-5-2">
+<ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-10-5-2-1">
+<li id="Functions-of-Two-Variables-10-5-2-1-1">
+<div class="para" id="Functions-of-Two-Variables-10-5-2-1-1-1">
+<span class="process-math">\(\displaystyle f(3,1)=\ln(3-1-1)=\ln(1)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Functions-of-Two-Variables-10-5-2-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-5-2-1-2">
+<div class="para" id="Functions-of-Two-Variables-10-5-2-1-2-1">
+<span class="process-math">\(f(\frac{1}{2},-\sqrt{5})=\ln(\frac{1}{2}+\sqrt{5}-1)=\ln(\sqrt{5}-\frac{1}{2})=0.5516\)</span> (to 4.d.p.).<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Functions-of-Two-Variables-10-5-2-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-10-5-2-1-3">
+<div class="para" id="Functions-of-Two-Variables-10-5-2-1-3-1">Since <span class="process-math">\((1,3)\)</span> is not in the domain of <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(f(1,3)\)</span> is not defined.<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-2-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Functions-of-Two-Variables-10-5-2-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-10-5-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.1"><a href="#Functions-of-Two-Variables-10-5" title="Copy permalink for Solution 1.4.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.4"><a href="#Functions-of-Two-Variables-10" title="Copy permalink for Example 1.4">🔗</a></div></article><figure class="figure figure-like" id="fig-domain1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
 <img src="external/Calculus/Images/3/domain_y_lt_x-1.svg" role="img" class="contained" alt="described in detail following the image" aria-describedby="domain_y_lt_x-1-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="domain_y_lt_x-1-description">A plot of the domain of the function <span class="process-math">\(f(x,y)=\ln(x-y-1)\text{.}\)</span>
 </div></details>
 </div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span>Domain of the function <span class="process-math">\(f(x,y)=\ln(x-y-1)\)</span></figcaption></figure><article class="example example-like" id="Functions-of-Two-Variables-12"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.5<span class="period">.</span></span><span class="space"> </span>Domain of the function <span class="process-math">\(f(x,y)=\ln(x-y-1)\)</span><div class="autopermalink" data-description="Figure 1.5"><a href="#fig-domain1" title="Copy permalink for Figure 1.5">🔗</a></div></figcaption></figure><article class="example example-like" id="Functions-of-Two-Variables-12"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="Functions-of-Two-Variables-12-1">Consider the function <span class="process-math">\(f(x,y)=y-xy\)</span>
+<div class="para" id="Functions-of-Two-Variables-12-1">Consider the function <span class="process-math">\(f(x,y)=y-xy\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="Functions-of-Two-Variables-12-2"><ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-12-2-1">
-<li id="Functions-of-Two-Variables-12-2-1-1"><div class="para" id="Functions-of-Two-Variables-12-2-1-1-1">Find the domain of <span class="process-math">\(f\)</span>
-</div></li>
-<li id="Functions-of-Two-Variables-12-2-1-2"><div class="para" id="Functions-of-Two-Variables-12-2-1-2-1">Find:</div></li>
-</ol></div>
-<div class="para logical" id="Functions-of-Two-Variables-12-3"><ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-12-3-1">
-<li id="Functions-of-Two-Variables-12-3-1-1"><div class="para" id="Functions-of-Two-Variables-12-3-1-1-1"><span class="process-math">\(\displaystyle f(3,1)\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-3-1-2"><div class="para" id="Functions-of-Two-Variables-12-3-1-2-1"><span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-3-1-3"><div class="para" id="Functions-of-Two-Variables-12-3-1-3-1"><span class="process-math">\(\displaystyle f(1,3)\)</span></div></li>
-</ol></div>
+<div class="para logical" id="Functions-of-Two-Variables-12-2">
+<ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-12-2-1">
+<li id="Functions-of-Two-Variables-12-2-1-1">
+<div class="para" id="Functions-of-Two-Variables-12-2-1-1-1">Find the domain of <span class="process-math">\(f\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Functions-of-Two-Variables-12-2-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-2-1-2">
+<div class="para" id="Functions-of-Two-Variables-12-2-1-2-1">Find:<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#Functions-of-Two-Variables-12-2-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Functions-of-Two-Variables-12-3">
+<ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-12-3-1">
+<li id="Functions-of-Two-Variables-12-3-1-1">
+<div class="para" id="Functions-of-Two-Variables-12-3-1-1-1">
+<span class="process-math">\(\displaystyle f(3,1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-3-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Functions-of-Two-Variables-12-3-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-3-1-2">
+<div class="para" id="Functions-of-Two-Variables-12-3-1-2-1">
+<span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-3-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Functions-of-Two-Variables-12-3-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-3-1-3">
+<div class="para" id="Functions-of-Two-Variables-12-3-1-3-1">
+<span class="process-math">\(\displaystyle f(1,3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-3-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Functions-of-Two-Variables-12-3-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <details id="Functions-of-Two-Variables-12-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<div class="para logical" id="Functions-of-Two-Variables-12-4-1"><ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-12-4-1-1">
-<li id="Functions-of-Two-Variables-12-4-1-1-1"><div class="para" id="Functions-of-Two-Variables-12-4-1-1-1-1"><span class="process-math">\(\displaystyle \mathbb{R}^2\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-4-1-1-2"><div class="para" id="Functions-of-Two-Variables-12-4-1-1-2-1"></div></li>
-</ol></div>
-<div class="para logical" id="Functions-of-Two-Variables-12-4-2"><ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-12-4-2-1">
-<li id="Functions-of-Two-Variables-12-4-2-1-1"><div class="para" id="Functions-of-Two-Variables-12-4-2-1-1-1"><span class="process-math">\(\displaystyle f(3,1)=-2\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-4-2-1-2"><div class="para" id="Functions-of-Two-Variables-12-4-2-1-2-1"><span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})=-\frac{\sqrt{5}}{2}\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-4-2-1-3"><div class="para" id="Functions-of-Two-Variables-12-4-2-1-3-1"><span class="process-math">\(\displaystyle f(1,3)=0\)</span></div></li>
-</ol></div>
+<div class="para logical" id="Functions-of-Two-Variables-12-4-1">
+<ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-12-4-1-1">
+<li id="Functions-of-Two-Variables-12-4-1-1-1">
+<div class="para" id="Functions-of-Two-Variables-12-4-1-1-1-1">
+<span class="process-math">\(\displaystyle \mathbb{R}^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Functions-of-Two-Variables-12-4-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-4-1-1-2">
+<div class="para" id="Functions-of-Two-Variables-12-4-1-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Item b"><a href="#Functions-of-Two-Variables-12-4-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Functions-of-Two-Variables-12-4-2">
+<ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-12-4-2-1">
+<li id="Functions-of-Two-Variables-12-4-2-1-1">
+<div class="para" id="Functions-of-Two-Variables-12-4-2-1-1-1">
+<span class="process-math">\(\displaystyle f(3,1)=-2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Functions-of-Two-Variables-12-4-2-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-4-2-1-2">
+<div class="para" id="Functions-of-Two-Variables-12-4-2-1-2-1">
+<span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})=-\frac{\sqrt{5}}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Functions-of-Two-Variables-12-4-2-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-4-2-1-3">
+<div class="para" id="Functions-of-Two-Variables-12-4-2-1-3-1">
+<span class="process-math">\(\displaystyle f(1,3)=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-2-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Functions-of-Two-Variables-12-4-2-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-4-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.6.1"><a href="#Functions-of-Two-Variables-12-4" title="Copy permalink for Answer 1.6.1">🔗</a></div>
 </div></details><details id="Functions-of-Two-Variables-12-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="Functions-of-Two-Variables-12-5-1"><ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-12-5-1-1">
-<li id="Functions-of-Two-Variables-12-5-1-1-1"><div class="para" id="Functions-of-Two-Variables-12-5-1-1-1-1">Since we can calculate <span class="process-math">\(f\)</span> for all values of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> the domain of <span class="process-math">\(f\)</span> is <span class="process-math">\(\mathbb{R}^2\)</span>
-</div></li>
-<li id="Functions-of-Two-Variables-12-5-1-1-2"><div class="para" id="Functions-of-Two-Variables-12-5-1-1-2-1"></div></li>
-</ol></div>
-<div class="para logical" id="Functions-of-Two-Variables-12-5-2"><ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-12-5-2-1">
-<li id="Functions-of-Two-Variables-12-5-2-1-1"><div class="para" id="Functions-of-Two-Variables-12-5-2-1-1-1"><span class="process-math">\(\displaystyle f(3,1)=1-3\times 1=-2\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-5-2-1-2"><div class="para" id="Functions-of-Two-Variables-12-5-2-1-2-1"><span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})=-\sqrt{5}+\frac{1}{2}\times\sqrt{5}=-\frac{\sqrt{5}}{2}\)</span></div></li>
-<li id="Functions-of-Two-Variables-12-5-2-1-3"><div class="para" id="Functions-of-Two-Variables-12-5-2-1-3-1"><span class="process-math">\(\displaystyle f(1,3)=3-1\times 3=0\)</span></div></li>
-</ol></div>
-</div></details></article></section><section class="section" id="graphs"><h3 class="heading hide-type">
+<div class="para logical" id="Functions-of-Two-Variables-12-5-1">
+<ol class="lower-alpha ol-marker-1" id="Functions-of-Two-Variables-12-5-1-1">
+<li id="Functions-of-Two-Variables-12-5-1-1-1">
+<div class="para" id="Functions-of-Two-Variables-12-5-1-1-1-1">Since we can calculate <span class="process-math">\(f\)</span> for all values of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> the domain of <span class="process-math">\(f\)</span> is <span class="process-math">\(\mathbb{R}^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#Functions-of-Two-Variables-12-5-1-1-1" title="Copy permalink for Item a">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-5-1-1-2">
+<div class="para" id="Functions-of-Two-Variables-12-5-1-1-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div></div>
+<div class="autopermalink" data-description="Item b"><a href="#Functions-of-Two-Variables-12-5-1-1-2" title="Copy permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Functions-of-Two-Variables-12-5-2">
+<ol class="lower-roman ol-marker-2" id="Functions-of-Two-Variables-12-5-2-1">
+<li id="Functions-of-Two-Variables-12-5-2-1-1">
+<div class="para" id="Functions-of-Two-Variables-12-5-2-1-1-1">
+<span class="process-math">\(\displaystyle f(3,1)=1-3\times 1=-2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Functions-of-Two-Variables-12-5-2-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-5-2-1-2">
+<div class="para" id="Functions-of-Two-Variables-12-5-2-1-2-1">
+<span class="process-math">\(\displaystyle f(\frac{1}{2},-\sqrt{5})=-\sqrt{5}+\frac{1}{2}\times\sqrt{5}=-\frac{\sqrt{5}}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Functions-of-Two-Variables-12-5-2-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Functions-of-Two-Variables-12-5-2-1-3">
+<div class="para" id="Functions-of-Two-Variables-12-5-2-1-3-1">
+<span class="process-math">\(\displaystyle f(1,3)=3-1\times 3=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-2-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Functions-of-Two-Variables-12-5-2-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Functions-of-Two-Variables-12-5-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.6.1"><a href="#Functions-of-Two-Variables-12-5" title="Copy permalink for Solution 1.6.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.6"><a href="#Functions-of-Two-Variables-12" title="Copy permalink for Example 1.6">🔗</a></div></article><div class="autopermalink" data-description="Section 1.1: Functions of Two Variables"><a href="#Functions-of-Two-Variables" title="Copy permalink for Section 1.1: Functions of Two Variables">🔗</a></div></section><section class="section" id="graphs"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Graphing functions of two variables</span>
 </h3>
-<div class="para" id="graphs-2">Now that we have an idea of what a function of two variables is and what its domain is, we would like a way to visualise it, similar to how we can visualise functions of a single variable by graphing them in the plane.</div>
+<div class="para" id="graphs-2">Now that we have an idea of what a function of two variables is and what its domain is, we would like a way to visualise it, similar to how we can visualise functions of a single variable by graphing them in the plane.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="graphs-3">
 <div class="para">The two main visualisations are graphs and contour plots. We deal with contour plots in the next section. The graph of a function of two variables <span class="process-math">\(f(x,y)\)</span> is the surface in <span class="process-math">\(\mathbb{R}^3\)</span> defined by</div>
 <div class="displaymath process-math">
@@ -670,85 +871,133 @@ z = f(x,y).
 </div>
 <div class="para">Thus, we imagine the "floor" to be the <span class="process-math">\(xy\)</span>-plane of inputs <span class="process-math">\((x,y)\)</span> to the function, and the height of the surface above (or below) this floor is the output <span class="process-math">\(z=f(x,y)\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#graphs-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="graphs-4">A surface in <span class="process-math">\(\mathbb{R}^3\)</span> is the graph of a function if and only if it passes the vertical line test, since a function only produces one output <span class="process-math">\(z=f(x,y)\)</span> for each input <span class="process-math">\((x,y)\)</span> in its domain.</div>
-<div class="para" id="graphs-5">In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. Various computer packages can produce such plots, such as Maple, Mathematica, Matlab, Wolfram Alpha and even GPT4 (which runs python code to produce the plots). The following plots are produced by SageMath - you can run the code cells to produce 3D plots which you can manipulate yourself.</div>
+<div class="para" id="graphs-4">A surface in <span class="process-math">\(\mathbb{R}^3\)</span> is the graph of a function if and only if it passes the vertical line test, since a function only produces one output <span class="process-math">\(z=f(x,y)\)</span> for each input <span class="process-math">\((x,y)\)</span> in its domain.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="graphs-5">In general it is hard to draw the graph of a function of two variables by hand and so usually we get a computer to do it. Various computer packages can produce such plots, such as Maple, Mathematica, Matlab, Wolfram Alpha and even GPT4 (which runs python code to produce the plots). The following plots are produced by SageMath - you can run the code cells to produce 3D plots which you can manipulate yourself.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="graphs-6"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="graphs-6-1">Produce the graph of the function <span class="process-math">\(z=f(x,y)=x^2+y^2\)</span>
+<div class="para" id="graphs-6-1">Produce the graph of the function <span class="process-math">\(z=f(x,y)=x^2+y^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-6-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <details id="graphs-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div id="graphs-6-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
 f = x^2+y^2
 plot3d(f, (x,-1,1), (y,-1,1))
 </script></div>
-<div class="para" id="graphs-6-2-2">This surface is an example of a <dfn class="terminology">paraboloid</dfn>. It is used for satellite antennas.</div>
-</div></details></article><article class="example example-like" id="graphs-7"><h4 class="heading">
+<div class="para" id="graphs-6-2-2">This surface is an example of a <dfn class="terminology">paraboloid</dfn>. It is used for satellite antennas.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-6-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.7.1"><a href="#graphs-6-2" title="Copy permalink for Solution 1.7.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.7"><a href="#graphs-6" title="Copy permalink for Example 1.7">🔗</a></div></article><article class="example example-like" id="graphs-7"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="graphs-7-1">Produce the graph of the function <span class="process-math">\(z=f(x,y)=xy\)</span>
+<div class="para" id="graphs-7-1">Produce the graph of the function <span class="process-math">\(z=f(x,y)=xy\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-7-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <details id="graphs-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div id="graphs-7-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
 f = x*y
 plot3d(f, (x,-1,1), (y,-1,1))
 </script></div>
-<div class="para" id="graphs-7-2-2">This surface is an example of a <dfn class="terminology">hyperbolic paraboloid</dfn>.</div>
-</div></details></article><article class="example example-like" id="graphs-8"><h4 class="heading">
+<div class="para" id="graphs-7-2-2">This surface is an example of a <dfn class="terminology">hyperbolic paraboloid</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-7-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.8.1"><a href="#graphs-7-2" title="Copy permalink for Solution 1.8.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.8"><a href="#graphs-7" title="Copy permalink for Example 1.8">🔗</a></div></article><article class="example example-like" id="graphs-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="graphs-8-1">Produce the graph of the function <span class="process-math">\(f(x,y)=x(3y-2)(5x+2)e^{-(x^2+y^2)/5}\)</span>
+<div class="para" id="graphs-8-1">Produce the graph of the function <span class="process-math">\(f(x,y)=x(3y-2)(5x+2)e^{-(x^2+y^2)/5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-8-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <details id="graphs-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div id="graphs-8-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
 f = x*(3*y-2)*(5*x+1)*exp(-(x^2+y^2)/5)
 plot3d(f, (x,-4,4), (y,-4,4), aspect_ratio=(5,5,1) )
 </script></div>
-<div class="para" id="graphs-8-2-2"><figure class="figure figure-like" id="graphs-8-2-2-1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/1_example5.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)=x(3y-2)(5x+1)e^{-(x^2+y^2)/5}\)</span></figcaption></figure></div>
-</div></details></article><article class="example example-like" id="Example-6-Calc-3"><h4 class="heading">
+<div class="para" id="graphs-8-2-2">
+<figure class="figure figure-like" id="graphs-8-2-2-1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/1_example5.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.10<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)=x(3y-2)(5x+1)e^{-(x^2+y^2)/5}\)</span><div class="autopermalink" data-description="Figure 1.10"><a href="#graphs-8-2-2-1" title="Copy permalink for Figure 1.10">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#graphs-8-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.9.1"><a href="#graphs-8-2" title="Copy permalink for Solution 1.9.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.9"><a href="#graphs-8" title="Copy permalink for Example 1.9">🔗</a></div></article><article class="example example-like" id="Example-6-Calc-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="Example-6-Calc-3-1">Produce the graph of the function <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span>
+<div class="para" id="Example-6-Calc-3-1">Produce the graph of the function <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Example-6-Calc-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <details id="Example-6-Calc-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div id="Example-6-Calc-3-2-1" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y = var('x y')
 f = sqrt(x^2+y^2)*exp(-(x^2+y^2))
 plot3d(f, (x,-4,4), (y,-4,4), aspect_ratio=(1,1,5) )
 </script></div>
-<div class="para" id="Example-6-Calc-3-2-2"><figure class="figure figure-like" id="Example-6-Calc-3-2-2-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./Calculus/Images/3/1_example6.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.12<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span></figcaption></figure></div>
-</div></details></article><div class="para" id="graphs-10">Not all surfaces in <span class="process-math">\(\mathbb{R}^3\)</span> represent the graph of a function of two variables.</div>
+<div class="para" id="Example-6-Calc-3-2-2">
+<figure class="figure figure-like" id="Example-6-Calc-3-2-2-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./Calculus/Images/3/1_example6.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.12<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span><div class="autopermalink" data-description="Figure 1.12"><a href="#Example-6-Calc-3-2-2-1" title="Copy permalink for Figure 1.12">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#Example-6-Calc-3-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.11.1"><a href="#Example-6-Calc-3-2" title="Copy permalink for Solution 1.11.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.11"><a href="#Example-6-Calc-3" title="Copy permalink for Example 1.11">🔗</a></div></article><div class="para" id="graphs-10">Not all surfaces in <span class="process-math">\(\mathbb{R}^3\)</span> represent the graph of a function of two variables.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-10" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="graphs-11"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
 </h4>
 <div class="para" id="graphs-11-1">The surface associated with the equation <span class="process-math">\(x^2+y^2+z^2=4\)</span> is a sphere of radius <span class="process-math">\(2\)</span> and whose centre is the origin. Clearly this surface does not pass the vertical line test. For example, when <span class="process-math">\((x,y)=(0,0)\text{,}\)</span> <span class="process-math">\(z\)</span> could be either <span class="process-math">\(+2\)</span> or <span class="process-math">\(-2\text{.}\)</span> <figure class="figure figure-like" id="graphs-11-1-7"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/1_example7.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.14<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(x^2+y^2+z^2=4\)</span></figcaption></figure>
-</div></article><section class="exercises" id="graphs-12"><h4 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.14<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(x^2+y^2+z^2=4\)</span><div class="autopermalink" data-description="Figure 1.14"><a href="#graphs-11-1-7" title="Copy permalink for Figure 1.14">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#graphs-11-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.13"><a href="#graphs-11" title="Copy permalink for Example 1.13">🔗</a></div></article><section class="exercises" id="graphs-12"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="graphs-12-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="graphs-12-2-1-1">Determine the domain of the function <span class="process-math">\(f(x,y)=\dfrac{\sin(y)}{xy-1}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="graphs-12-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="graphs-12-3-1-1">Sketch the graph of the following functions.</div> <div class="para logical" id="graphs-12-3-1-2"><ol class="lower-alpha ol-marker-1" id="graphs-12-3-1-2-1">
-<li id="graphs-12-3-1-2-1-1"><div class="para" id="graphs-12-3-1-2-1-1-1"><span class="process-math">\(\displaystyle f(x,y)=3\)</span></div></li>
-<li id="graphs-12-3-1-2-1-2"><div class="para" id="graphs-12-3-1-2-1-2-1"><span class="process-math">\(\displaystyle f(x,y)=-x-2y+2\)</span></div></li>
-</ol></div></article></section></section><section class="section" id="level-curves"><h3 class="heading hide-type">
+<div class="para" id="graphs-12-2-1-1">Determine the domain of the function <span class="process-math">\(f(x,y)=\dfrac{\sin(y)}{xy-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-12-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.2.1"><a href="#graphs-12-2" title="Copy permalink for Exercise 1.2.1">🔗</a></div></article><article class="exercise exercise-like" id="graphs-12-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="graphs-12-3-1-1">Sketch the graph of the following functions.<div class="autopermalink" data-description="Paragraph"><a href="#graphs-12-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="graphs-12-3-1-2">
+<ol class="lower-alpha ol-marker-1" id="graphs-12-3-1-2-1">
+<li id="graphs-12-3-1-2-1-1">
+<div class="para" id="graphs-12-3-1-2-1-1-1">
+<span class="process-math">\(\displaystyle f(x,y)=3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-12-3-1-2-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.2.2.a"><a href="#graphs-12-3-1-2-1-1" title="Copy permalink for Item 1.2.2.a">🔗</a></div>
+</li>
+<li id="graphs-12-3-1-2-1-2">
+<div class="para" id="graphs-12-3-1-2-1-2-1">
+<span class="process-math">\(\displaystyle f(x,y)=-x-2y+2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#graphs-12-3-1-2-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.2.2.b"><a href="#graphs-12-3-1-2-1-2" title="Copy permalink for Item 1.2.2.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#graphs-12-3-1-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.2.2"><a href="#graphs-12-3" title="Copy permalink for Exercise 1.2.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.2: Example Tasks"><a href="#graphs-12" title="Copy permalink for Exercises 1.2: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Graphing functions of two variables"><a href="#graphs" title="Copy permalink for Section 1.2: Graphing functions of two variables">🔗</a></div></section><section class="section" id="level-curves"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Level Curves and Contour Plots</span>
 </h3>
 <div class="para" id="level-curves-2">As we have seen, visualising the surface corresponding to the function <span class="process-math">\(z=f(x,y)\)</span> can be quite difficult, in particular if you’re limited to a static image in two dimensions (such as printed on paper). Another way to visualise a function of two variables is to use a <dfn class="terminology">contour plot</dfn>. Here one plots contours, also known as level curves, each of which consists of all the input points for which the output is a certain constant value. This is commonly used in topographic maps, where the contours show points on the map of a given altitude. With a bit of practise, you can visualise the shape of the landscape just from a topographic map. <figure class="figure figure-like" id="level-curves-2-3"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/2_topographicmap.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.15<span class="period">.</span></span><span class="space"> </span>Sample Topographic Map (Part of the Watagan Mountains)</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.15<span class="period">.</span></span><span class="space"> </span>Sample Topographic Map (Part of the Watagan Mountains)<div class="autopermalink" data-description="Figure 1.15"><a href="#level-curves-2-3" title="Copy permalink for Figure 1.15">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#level-curves-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="level-curves-3"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h4>
-<dfn class="terminology">level curves</dfn><span class="process-math">\(z=(x,y)\)</span><span class="process-math">\(xy\)</span><span class="process-math">\(z=k\text{,}\)</span><span class="process-math">\(k\)</span></article><div class="para" id="level-curves-4">Note: <div class="para logical" id="level-curves-4-1"><ol class="decimal ol-marker-3" id="level-curves-4-1-1">
-<li id="level-curves-4-1-1-1"><div class="para" id="level-curves-4-1-1-1-1">Each point in the domain of the function lies on exactly one level curve.</div></li>
-<li id="level-curves-4-1-1-2"><div class="para" id="level-curves-4-1-1-2-1">When a collection of level curves for a function are drawn on the same plane it is also called a contour plot.</div></li>
-<li id="level-curves-4-1-1-3"><div class="para" id="level-curves-4-1-1-3-1">We can also think of level curves as the intersection of the surface and the horizontal plane <span class="process-math">\(z=k\text{.}\)</span>
-</div></li>
-</ol></div>
+<div class="para" id="level-curves-3-1-1">The <dfn class="terminology">level curves</dfn> of a function <span class="process-math">\(z=(x,y)\)</span> are curves in the <span class="process-math">\(xy\)</span>-plane on which the function has the same value, i.e. on which <span class="process-math">\(z=k\text{,}\)</span> where <span class="process-math">\(k\)</span> is some constant.<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.16"><a href="#level-curves-3" title="Copy permalink for Definition 1.16">🔗</a></div></article><div class="para" id="level-curves-4">Note: <div class="para logical" id="level-curves-4-1">
+<ol class="decimal ol-marker-3" id="level-curves-4-1-1">
+<li id="level-curves-4-1-1-1">
+<div class="para" id="level-curves-4-1-1-1-1">Each point in the domain of the function lies on exactly one level curve.<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-4-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#level-curves-4-1-1-1" title="Copy permalink for Item 1">🔗</a></div>
+</li>
+<li id="level-curves-4-1-1-2">
+<div class="para" id="level-curves-4-1-1-2-1">When a collection of level curves for a function are drawn on the same plane it is also called a contour plot.<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-4-1-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#level-curves-4-1-1-2" title="Copy permalink for Item 2">🔗</a></div>
+</li>
+<li id="level-curves-4-1-1-3">
+<div class="para" id="level-curves-4-1-1-3-1">We can also think of level curves as the intersection of the surface and the horizontal plane <span class="process-math">\(z=k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#level-curves-4-1-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#level-curves-4-1-1-3" title="Copy permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="level-curves-5"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
@@ -760,8 +1009,10 @@ plot3d(f, (x,-4,4), (y,-4,4), aspect_ratio=(1,1,5) )
 z=xy
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-5-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="level-curves-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="level-curves-5-2-1">
+<details id="level-curves-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="level-curves-5-2-1">
 <div class="para">The level curves of a function satisfy the equation <span class="process-math">\(z=k\text{.}\)</span> So for this function the level curves are:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -769,14 +1020,18 @@ xy=k \textrm{ or }y=\frac{k}{x}
 \end{equation*}
 </div>
 <div class="para">Thus the level curves are rectangular hyperbolae (except for <span class="process-math">\(k=0\)</span>).  The level curves for <span class="process-math">\(k=-2,-1,0,1,2\)</span> are shown in following diagram. <figure class="figure figure-like" id="level-curves-5-2-1-5"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/2_example8.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.18<span class="period">.</span></span><span class="space"> </span>Rectangular hyperbolae <span class="process-math">\(y=\frac{k}{x}\)</span> for various values of <span class="process-math">\(k\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.18<span class="period">.</span></span><span class="space"> </span>Rectangular hyperbolae <span class="process-math">\(y=\frac{k}{x}\)</span> for various values of <span class="process-math">\(k\)</span><div class="autopermalink" data-description="Figure 1.18"><a href="#level-curves-5-2-1-5" title="Copy permalink for Figure 1.18">🔗</a></div></figcaption></figure>
 </div>
-</div></div></details></article><article class="example example-like" id="level-curves-6"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-5-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.17.1"><a href="#level-curves-5-2" title="Copy permalink for Solution 1.17.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.17"><a href="#level-curves-5" title="Copy permalink for Example 1.17">🔗</a></div></article><article class="example example-like" id="level-curves-6"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
 </h4>
-<div class="para" id="level-curves-6-1">Draw a contour plot for the function <span class="process-math">\(z=x^2+y^2\text{.}\)</span>
+<div class="para" id="level-curves-6-1">Draw a contour plot for the function <span class="process-math">\(z=x^2+y^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#level-curves-6-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="level-curves-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="level-curves-6-2-1">
+<details id="level-curves-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="level-curves-6-2-1">
 <div class="para">The contours (i.e. level curves) of a function satisfy the equation <span class="process-math">\(z=k\text{.}\)</span> So for this function the level curves are:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -784,8 +1039,11 @@ x^2+y^2=k
 \end{equation*}
 </div>
 <div class="para">that is, circles centred on the origin and whose radius is <span class="process-math">\(\sqrt{k}\text{.}\)</span> <figure class="figure figure-like" id="level-curves-6-2-1-4"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/2_example9.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20<span class="period">.</span></span><span class="space"> </span>Circles <span class="process-math">\(x^2+y^2=k\)</span> for various values of <span class="process-math">\(k\)</span></figcaption></figure> Notice that there are no level curves when <span class="process-math">\(k\lt 0\text{.}\)</span> This tells us that the surface does not go below the <span class="process-math">\(xy\)</span>-plane.</div>
-</div></div></details></article><div class="para" id="level-curves-7">Here is a SageMath cell that lets you compare graphs and contour plots of different functions. Note that if you fill in the regions between the contours with colours related to the output values you get a colourful plot known as a <dfn class="terminology">heat map</dfn>. <div id="level-curves-7-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x, y = var('x','y')
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.20<span class="period">.</span></span><span class="space"> </span>Circles <span class="process-math">\(x^2+y^2=k\)</span> for various values of <span class="process-math">\(k\)</span><div class="autopermalink" data-description="Figure 1.20"><a href="#level-curves-6-2-1-4" title="Copy permalink for Figure 1.20">🔗</a></div></figcaption></figure> Notice that there are no level curves when <span class="process-math">\(k\lt 0\text{.}\)</span> This tells us that the surface does not go below the <span class="process-math">\(xy\)</span>-plane.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-6-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.19.1"><a href="#level-curves-6-2" title="Copy permalink for Solution 1.19.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.19"><a href="#level-curves-6" title="Copy permalink for Example 1.19">🔗</a></div></article><div class="para" id="level-curves-7">Here is a SageMath cell that lets you compare graphs and contour plots of different functions. Note that if you fill in the regions between the contours with colours related to the output values you get a colourful plot known as a <dfn class="terminology">heat map</dfn>. <div id="level-curves-7-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x, y = var('x','y')
 Mx = 5
 My = 5
 colormaps = sage.plot.colors.colormaps.keys()
@@ -806,6 +1064,7 @@ def _(f=selector([x^2+y^2, x*y, sin(y)*exp(x/5)]),
                       cmap=colours,
                       fill=fill))
 </script></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-7" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <section class="exercises" id="level-curves-8"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
@@ -818,22 +1077,31 @@ def _(f=selector([x^2+y^2, x*y, sin(y)*exp(x/5)]),
 z=2x-x^2+y\text{.}
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="level-curves-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="level-curves-8-3-1-1">Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:</div> <figure class="figure figure-like" id="level-curves-8-3-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./Calculus/Images/3/2_ET2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.21<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><article class="exercise exercise-like" id="level-curves-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="level-curves-8-4-1-1">Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:</div> <figure class="figure figure-like" id="level-curves-8-4-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./Calculus/Images/3/2_ET3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.22<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article></section></section><section class="section" id="functions-of-3-or-more-variables"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-8-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.3.1"><a href="#level-curves-8-2" title="Copy permalink for Exercise 1.3.1">🔗</a></div></article><article class="exercise exercise-like" id="level-curves-8-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="level-curves-8-3-1-1">Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-8-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="level-curves-8-3-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./Calculus/Images/3/2_ET2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.21<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 1.21"><a href="#level-curves-8-3-1-2" title="Copy permalink for Figure 1.21">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Exercise 1.3.2"><a href="#level-curves-8-3" title="Copy permalink for Exercise 1.3.2">🔗</a></div></article><article class="exercise exercise-like" id="level-curves-8-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="level-curves-8-4-1-1">Make a rough sketch of the contour map (centred on the origin) for the function whose graph is:<div class="autopermalink" data-description="Paragraph"><a href="#level-curves-8-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="level-curves-8-4-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./Calculus/Images/3/2_ET3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.22<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 1.22"><a href="#level-curves-8-4-1-2" title="Copy permalink for Figure 1.22">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Exercise 1.3.3"><a href="#level-curves-8-4" title="Copy permalink for Exercise 1.3.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.3: Example Tasks"><a href="#level-curves-8" title="Copy permalink for Exercises 1.3: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 1.3: Level Curves and Contour Plots"><a href="#level-curves" title="Copy permalink for Section 1.3: Level Curves and Contour Plots">🔗</a></div></section><section class="section" id="functions-of-3-or-more-variables"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Functions of 3 (or more) Variables</span>
 </h3>
-<div class="para" id="functions-of-3-or-more-variables-2">Although we won’t do much with them in this course it is possible to define (real valued) functions in <span class="process-math">\(n\)</span> variables where <span class="process-math">\(n\)</span> is any natural number, that is functions of the form <span class="process-math">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\text{.}\)</span>
+<div class="para" id="functions-of-3-or-more-variables-2">Although we won’t do much with them in this course it is possible to define (real valued) functions in <span class="process-math">\(n\)</span> variables where <span class="process-math">\(n\)</span> is any natural number, that is functions of the form <span class="process-math">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-of-3-or-more-variables-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="functions-of-3-or-more-variables-3"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
 </h4>
-<div class="para" id="functions-of-3-or-more-variables-3-1">The function <span class="process-math">\(f(x,y,z)=x^2+y^2+z^2\)</span> is a function of the form <span class="process-math">\(f:\mathbb{R}^3\rightarrow\mathbb{R}\)</span> .</div></article><article class="example example-like" id="functions-of-3-or-more-variables-4"><h4 class="heading">
+<div class="para" id="functions-of-3-or-more-variables-3-1">The function <span class="process-math">\(f(x,y,z)=x^2+y^2+z^2\)</span> is a function of the form <span class="process-math">\(f:\mathbb{R}^3\rightarrow\mathbb{R}\)</span> .<div class="autopermalink" data-description="Paragraph"><a href="#functions-of-3-or-more-variables-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.23"><a href="#functions-of-3-or-more-variables-3" title="Copy permalink for Example 1.23">🔗</a></div></article><article class="example example-like" id="functions-of-3-or-more-variables-4"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span>
 </h4>
-<div class="para" id="functions-of-3-or-more-variables-4-1">The function <span class="process-math">\(f(w,x,y,z)=2wx^2+yz+\frac{w}{(x+z)}\)</span> is a function of the form <span class="process-math">\(f:\mathbb{R}^4\rightarrow\mathbb{R}\)</span> .</div></article><div class="para" id="functions-of-3-or-more-variables-5">Visualising such functions is difficult. One option to visualise a function <span class="process-math">\(f(x,y,z)\)</span> of three variables is to make 3D plots of its <dfn class="terminology">level surfaces</dfn>. These are the surfaces defined by <span class="process-math">\(f(x,y,z) = k\)</span> for various values of the constant <span class="process-math">\(k\text{.}\)</span> This is the same idea as plotting level curves, except now we’re in one dimension higher.</div>
+<div class="para" id="functions-of-3-or-more-variables-4-1">The function <span class="process-math">\(f(w,x,y,z)=2wx^2+yz+\frac{w}{(x+z)}\)</span> is a function of the form <span class="process-math">\(f:\mathbb{R}^4\rightarrow\mathbb{R}\)</span> .<div class="autopermalink" data-description="Paragraph"><a href="#functions-of-3-or-more-variables-4-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.24"><a href="#functions-of-3-or-more-variables-4" title="Copy permalink for Example 1.24">🔗</a></div></article><div class="para" id="functions-of-3-or-more-variables-5">Visualising such functions is difficult. One option to visualise a function <span class="process-math">\(f(x,y,z)\)</span> of three variables is to make 3D plots of its <dfn class="terminology">level surfaces</dfn>. These are the surfaces defined by <span class="process-math">\(f(x,y,z) = k\)</span> for various values of the constant <span class="process-math">\(k\text{.}\)</span> This is the same idea as plotting level curves, except now we’re in one dimension higher.<div class="autopermalink" data-description="Paragraph"><a href="#functions-of-3-or-more-variables-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="functions-of-3-or-more-variables-6"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
 </h4>
@@ -846,25 +1114,32 @@ f(x,y,z) = x^2 + 3y^2 + 5z^3
 </div>
 <div class="para">for <span class="process-math">\(k=-5,0,5.\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#functions-of-3-or-more-variables-6-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="functions-of-3-or-more-variables-6-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y,z = var('x y z')
 f = x^2 + 3*y^2 + 5*z^3
 M = 2
 Ks = [0, 5, -5]
 sum([implicit_plot3d(f == k, (x,-M,M), (y,-M,M), (z,-M,M), plot_points=100, opacity=0.6) for k in Ks])
-</script></div></article><div class="para" id="functions-of-3-or-more-variables-7">We will see later in the course that, rather than using level surfaces to gain understanding a given function, we can gain understanding of a given surface by viewing it as the level surface of a function.</div></section><section class="section" id="CA1-further-topics"><h3 class="heading hide-type">
+</script></div>
+<div class="autopermalink" data-description="Example 1.25"><a href="#functions-of-3-or-more-variables-6" title="Copy permalink for Example 1.25">🔗</a></div></article><div class="para" id="functions-of-3-or-more-variables-7">We will see later in the course that, rather than using level surfaces to gain understanding a given function, we can gain understanding of a given surface by viewing it as the level surface of a function.<div class="autopermalink" data-description="Paragraph"><a href="#functions-of-3-or-more-variables-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 1.4: Functions of 3 (or more) Variables"><a href="#functions-of-3-or-more-variables" title="Copy permalink for Section 1.4: Functions of 3 (or more) Variables">🔗</a></div></section><section class="section" id="CA1-further-topics"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Further Topics</span>
 </h3>
 <section class="subsection" id="surfaces-of-revolution"><h4 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="space"> </span><span class="title">Surfaces of Revolution</span>
 </h4>
-<div class="para" id="surfaces-of-revolution-2">The surface associated with the graph of <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span> (see <a href="Calculus_3.html#Example-6-Calc-3" class="xref" data-knowl="./knowl/xref/Example-6-Calc-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.11">Example 1.11</a>) is an example of a special kind of surface... a surface of revolution. <article class="definition definition-like" id="surfaces-of-revolution-2-3"><h5 class="heading">
+<div class="para" id="surfaces-of-revolution-2">The surface associated with the graph of <span class="process-math">\(f(x,y)=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span> (see <a href="Calculus_3.html#Example-6-Calc-3" class="xref" data-knowl="./knowl/xref/Example-6-Calc-3.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.11">Example 1.11</a>) is an example of a special kind of surface... a surface of revolution.<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="surfaces-of-revolution-3"><h5 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
 </h5>
-<div class="para" id="surfaces-of-revolution-2-3-1">A <dfn class="terminology">surface of revolution</dfn> is a surface in <span class="process-math">\(\mathbb{R}^3\)</span> obtained by rotating a curve about an axis.</div></article>
+<div class="para" id="surfaces-of-revolution-3-1-1">A <dfn class="terminology">surface of revolution</dfn> is a surface in <span class="process-math">\(\mathbb{R}^3\)</span> obtained by rotating a curve about an axis.<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="surfaces-of-revolution-3">Suppose we have a curve <span class="process-math">\(z = g(x), \; x\geq 0\)</span> in the <span class="process-math">\(xz\)</span>-plane, and we rotate this curve above the <span class="process-math">\(z\)</span>-axis. What would be an equation for the resulting surface of revolution?</div>
-<div class="para logical" id="surfaces-of-revolution-4">
+<div class="autopermalink" data-description="Definition 1.26"><a href="#surfaces-of-revolution-3" title="Copy permalink for Definition 1.26">🔗</a></div></article><div class="para" id="surfaces-of-revolution-4">Suppose we have a curve <span class="process-math">\(z = g(x), \; x\geq 0\)</span> in the <span class="process-math">\(xz\)</span>-plane, and we rotate this curve above the <span class="process-math">\(z\)</span>-axis. What would be an equation for the resulting surface of revolution?<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="surfaces-of-revolution-5">
 <div class="para">Consider a point <span class="process-math">\(P=(x,0,z)\)</span> on the curve above the <span class="process-math">\(x\)</span>-axis in 3D space. Its height above the <span class="process-math">\(xy\)</span>-plane is <span class="process-math">\(z = g(x)\text{.}\)</span> As we rotate the curve about the <span class="process-math">\(z\)</span>-axis, the point <span class="process-math">\(P\)</span> traces out a horizontal circle on the resulting surface of revolution. The radius <span class="process-math">\(r\)</span> of this circle equals the original <span class="process-math">\(x\)</span>-coordinate of the point when it started above the <span class="process-math">\(x\)</span>-axis, and the height of the circle above the <span class="process-math">\(xy\)</span>-plane equals <span class="process-math">\(g(r)\text{.}\)</span> The height of an arbitrary point <span class="process-math">\(Q=(x,y,z)\)</span> on the surface of revolution is thus <span class="process-math">\(z=g(r)\text{,}\)</span> where <span class="process-math">\(r=\sqrt{x^2+y^2}\)</span> is the radius of the circle on which the point <span class="process-math">\(Q\)</span> lies. This tells us that an equation for the surface of revolution is</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -872,9 +1147,11 @@ z = g(\sqrt{x^2+y^2}).
 \end{equation*}
 </div>
 <div class="para">Another way to see this is that, as a result of the rotational symmetry of the surface, the height of the surface above a point <span class="process-math">\((x,y)\)</span> on the <span class="process-math">\(xy\)</span>-plane depends only on the distance <span class="process-math">\(r=\sqrt{x^2+y^2}\)</span> of the point <span class="process-math">\((x,y)\)</span> from the origin.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-5" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="surfaces-of-revolution-5">The following SageMath code shows the partial surface of revolution obtained by rotating the curve <span class="process-math">\(z = g(x) = \sin(x)\)</span> about the <span class="process-math">\(z\)</span>-axis.</div>
-<div id="surfaces-of-revolution-6" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t, r, x = var('t r x')
+<div class="para" id="surfaces-of-revolution-6">The following SageMath code shows the partial surface of revolution obtained by rotating the curve <span class="process-math">\(z = g(x) = \sin(x)\)</span> about the <span class="process-math">\(z\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div id="surfaces-of-revolution-7" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">t, r, x = var('t r x')
 g = sin(x)
 R = 10
 p = line3d([(x,0,g(x=x)) for x in srange(0,R,0.1)], thickness=5, color='red')
@@ -886,15 +1163,21 @@ def _(theta=slider(0.0, 2*pi, 0.1, default = 1.0)):
         q = p
     show(q, frame=False)
 </script></div>
-<article class="example example-like" id="surfaces-of-revolution-7"><h5 class="heading">
+<article class="example example-like" id="surfaces-of-revolution-8"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span>
 </h5>
-<div class="para" id="surfaces-of-revolution-7-1">Determine the equation of the surface obtained by rotating the curve in the <span class="process-math">\(xz\)</span>-plane <span class="process-math">\(z=g(x)=2-3x, x\geq 0\)</span> about the <span class="process-math">\(z\)</span>-axis.</div>
-<figure class="figure figure-like" id="surfaces-of-revolution-7-2"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/3_example10.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.28<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(z=2-3x\)</span> in the <span class="process-math">\(xz\)</span>-plane for <span class="process-math">\(x\geq 0\text{.}\)</span></figcaption></figure><details id="surfaces-of-revolution-7-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="surfaces-of-revolution-7-3-1"><span class="process-math">\(f(x,y)=2-3\sqrt{x^2+y^2}\)</span></div></div></details></article><article class="example example-like" id="surfaces-of-revolution-8"><h5 class="heading">
+<div class="para" id="surfaces-of-revolution-8-1">Determine the equation of the surface obtained by rotating the curve in the <span class="process-math">\(xz\)</span>-plane <span class="process-math">\(z=g(x)=2-3x, x\geq 0\)</span> about the <span class="process-math">\(z\)</span>-axis.<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-8-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="surfaces-of-revolution-8-2"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/./Calculus/Images/3/3_example10.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.28<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(z=2-3x\)</span> in the <span class="process-math">\(xz\)</span>-plane for <span class="process-math">\(x\geq 0\text{.}\)</span><div class="autopermalink" data-description="Figure 1.28"><a href="#surfaces-of-revolution-8-2" title="Copy permalink for Figure 1.28">🔗</a></div></figcaption></figure><details id="surfaces-of-revolution-8-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="surfaces-of-revolution-8-3-1">
+<span class="process-math">\(f(x,y)=2-3\sqrt{x^2+y^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-8-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.27.1"><a href="#surfaces-of-revolution-8-3" title="Copy permalink for Answer 1.27.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.27"><a href="#surfaces-of-revolution-8" title="Copy permalink for Example 1.27">🔗</a></div></article><article class="example example-like" id="surfaces-of-revolution-9"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span>
 </h5>
-<div class="para logical" id="surfaces-of-revolution-8-1">
+<div class="para logical" id="surfaces-of-revolution-9-1">
 <div class="para">Determine the equation of the surface obtained by rotating the curve in the <span class="process-math">\(xz\)</span>-plane</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -902,11 +1185,18 @@ z=xe^{-x^2}, x\geq 0
 \end{equation*}
 </div>
 <div class="para">about the <span class="process-math">\(z\)</span>-axis.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-9-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<details id="surfaces-of-revolution-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="surfaces-of-revolution-8-2-1"><span class="process-math">\(z=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span></div></div></details><details id="surfaces-of-revolution-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="surfaces-of-revolution-8-3-1">
+<details id="surfaces-of-revolution-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="surfaces-of-revolution-9-2-1">
+<span class="process-math">\(z=\sqrt{x^2+y^2}e^{-(x^2+y^2)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-9-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.29.1"><a href="#surfaces-of-revolution-9-2" title="Copy permalink for Answer 1.29.1">🔗</a></div>
+</div></details><details id="surfaces-of-revolution-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="surfaces-of-revolution-9-3-1">
 <div class="para">
-<figure class="figure figure-like" id="surfaces-of-revolution-8-3-1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./Calculus/Images/3/3_example11.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.30<span class="period">.</span></span><span class="space"> </span></figcaption></figure> The equation of the surface of revolution will be</div>
+<figure class="figure figure-like" id="surfaces-of-revolution-9-3-1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./Calculus/Images/3/3_example11.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.30<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 1.30"><a href="#surfaces-of-revolution-9-3-1-1" title="Copy permalink for Figure 1.30">🔗</a></div></figcaption></figure> The equation of the surface of revolution will be</div>
 <div class="displaymath process-math">
 \begin{equation*}
 z=f(\sqrt{x^2+y^2}) \textrm{ where } f(x)=xe^{-x^2}
@@ -918,11 +1208,16 @@ z=f(\sqrt{x^2+y^2}) \textrm{ where } f(x)=xe^{-x^2}
 z=\sqrt{x^2+y^2}e^{-\left(\sqrt{x^2+y^2}\right)^2}=\sqrt{x^2+y^2}e^{-(x^2+y^2)}
 \end{equation*}
 </div>
-</div></div></details></article><article class="example example-like" id="surfaces-of-revolution-9"><h5 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-9-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.29.1"><a href="#surfaces-of-revolution-9-3" title="Copy permalink for Solution 1.29.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.29"><a href="#surfaces-of-revolution-9" title="Copy permalink for Example 1.29">🔗</a></div></article><article class="example example-like" id="surfaces-of-revolution-10"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
 </h5>
-<div class="para" id="surfaces-of-revolution-9-1">Is the graph of <span class="process-math">\(f(x,y)=4-x^2-y^2\)</span> a surface of revolution?</div>
-<details id="surfaces-of-revolution-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="surfaces-of-revolution-9-2-1">
+<div class="para" id="surfaces-of-revolution-10-1">Is the graph of <span class="process-math">\(f(x,y)=4-x^2-y^2\)</span> a surface of revolution?<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-10-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<details id="surfaces-of-revolution-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="surfaces-of-revolution-10-2-1">
 <div class="para">Since we can write the function as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -935,13 +1230,20 @@ f(x,y)=4-\left(\sqrt{x^2+y^2}\right)^2
 z=4-x^2, x\geq 0
 \end{equation*}
 </div>
-</div></div></details></article><section class="exercises" id="surfaces-of-revolution-10"><h5 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-10-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.31.1"><a href="#surfaces-of-revolution-10-2" title="Copy permalink for Solution 1.31.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 1.31"><a href="#surfaces-of-revolution-10" title="Copy permalink for Example 1.31">🔗</a></div></article><section class="exercises" id="surfaces-of-revolution-11"><h5 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h5>
-<article class="exercise exercise-like" id="surfaces-of-revolution-10-2"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<div class="para" id="surfaces-of-revolution-10-2-1-1">Determine the equation of the surface obtained by rotating the curve <span class="process-math">\(z=\sqrt{4-x^2}, x\geq 0\)</span> about the <span class="process-math">\(z\)</span>-axis. Make a sketch of the surface.</div></article><article class="exercise exercise-like" id="surfaces-of-revolution-10-3"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<div class="para" id="surfaces-of-revolution-10-3-1-1">Is the graph of <span class="process-math">\(f(x,y)=xy^2-y^3\)</span> a surface of revolution?</div></article></section></section></section></section></div>
-<div class="ptx-content-footer">
+<article class="exercise exercise-like" id="surfaces-of-revolution-11-2"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="para" id="surfaces-of-revolution-11-2-1-1">Determine the equation of the surface obtained by rotating the curve <span class="process-math">\(z=\sqrt{4-x^2}, x\geq 0\)</span> about the <span class="process-math">\(z\)</span>-axis. Make a sketch of the surface.<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-11-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.5.1.1"><a href="#surfaces-of-revolution-11-2" title="Copy permalink for Exercise 1.5.1.1">🔗</a></div></article><article class="exercise exercise-like" id="surfaces-of-revolution-11-3"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="para" id="surfaces-of-revolution-11-3-1-1">Is the graph of <span class="process-math">\(f(x,y)=xy^2-y^3\)</span> a surface of revolution?<div class="autopermalink" data-description="Paragraph"><a href="#surfaces-of-revolution-11-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 1.5.1.2"><a href="#surfaces-of-revolution-11-3" title="Copy permalink for Exercise 1.5.1.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.5.1: Example Tasks"><a href="#surfaces-of-revolution-11" title="Copy permalink for Exercises 1.5.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Subsection 1.5.1: Surfaces of Revolution"><a href="#surfaces-of-revolution" title="Copy permalink for Subsection 1.5.1: Surfaces of Revolution">🔗</a></div></section><div class="autopermalink" data-description="Section 1.5: Further Topics"><a href="#CA1-further-topics" title="Copy permalink for Section 1.5: Further Topics">🔗</a></div></section><div class="autopermalink" data-description="Chapter 1: CA1: Functions of Several Variables"><a href="#Calculus_3" title="Copy permalink for Chapter 1: CA1: Functions of Several Variables">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Part-Calculus.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Calculus_4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

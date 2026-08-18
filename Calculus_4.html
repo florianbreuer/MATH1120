@@ -6,15 +6,25 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CA2: Partial Differentiation</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Mathematics 1120">
-<meta property="book:author" content="Edited by: Florian Breuer">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -86,29 +96,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematics 1120">
+<meta property="book:author" content="Edited by: Florian Breuer">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -130,19 +123,33 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
+eBookConfig.runestone_version = '8.2.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.18d8728f6d56e11d.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b388362b5f43738a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120:</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
+<h1 class="heading"><a href="MATH1120-Course-Notes.html"><span class="title">Mathematics 1120</span> <span class="subtitle">Mathematics for Engineering, Science and Technology 2 [Revised Notes]</span></a></h1>
 <p class="byline">Edited by: Florian Breuer</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
@@ -187,7 +194,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Calculus_3.html#CA1-further-topics" class="internal"><span class="codenumber">1.5</span> <span class="title">Further Topics</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Surfaces of Revolution</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-10" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="Calculus_3.html#surfaces-of-revolution-11" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Example Tasks</span></a></div></li></ul>
 </li></ul>
 </li>
 </ul>
@@ -383,7 +390,7 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: An Application of Second Order Linear DEs with Constant Coefficients</span></a></div>
+<div class="toc-title-box"><a href="Differential_Equations_6.html" class="internal"><span class="codenumber">14</span> <span class="title">DE6: Applications of 2nd Order Linear DEs</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#A_Simple_Model" class="internal"><span class="codenumber">14.1</span> <span class="title">A Simple Model</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="Differential_Equations_6.html#Adding_Damping" class="internal"><span class="codenumber">14.2</span> <span class="title">Adding Damping</span></a></div></li>
@@ -489,26 +496,43 @@ eBookConfig.enable_chatcodes =  false;
 <section class="section" id="Sec-Partial_Differentiation"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Partial Differentiation</span>
 </h3>
-<div class="para" id="Sec-Partial_Differentiation-2">Firstly, let’s recall some of the important things that we know about the derivative of the function of one variable, <span class="process-math">\(f(x)\text{.}\)</span>
+<div class="para" id="Sec-Partial_Differentiation-2">Firstly, let’s recall some of the important things that we know about the derivative of the function of one variable, <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="Sec-Partial_Differentiation-3"><ol class="lower-roman ol-marker-4" id="Sec-Partial_Differentiation-3-1">
-<li id="Sec-Partial_Differentiation-3-1-1"><div class="para" id="Sec-Partial_Differentiation-3-1-1-1">At any given point <span class="process-math">\(x_0\text{,}\)</span> <span class="process-math">\(f'(x_0)\)</span> gives the slope of the tangent to the graph of the function at that point. <figure class="figure figure-like" id="Fig-Slope_of_tangent"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/./Calculus/Images/4/Slope_of_tangent.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(y=f(x)\)</span> (blue) and the tangent line (red) at <span class="process-math">\(x=x_0\text{.}\)</span></figcaption></figure>
-</div></li>
-<li id="Sec-Partial_Differentiation-3-1-2"><div class="para" id="Sec-Partial_Differentiation-3-1-2-1">At any given point <span class="process-math">\(x_0\text{,}\)</span> <span class="process-math">\(f'(x_0)\)</span> gives the instantaneous rate of change of the function at that point.</div></li>
-<li id="Sec-Partial_Differentiation-3-1-3"><div class="para" id="Sec-Partial_Differentiation-3-1-3-1">The derivative <span class="process-math">\(f'(x)\)</span> is itself a function of one variable, when it exists.</div></li>
-</ol></div>
-<div class="para" id="Sec-Partial_Differentiation-4">For a function of two variables, <span class="process-math">\(f(x,y)\text{,}\)</span> the rate at which the function is changing at any point as we vary the independent variables depends upon the direction in which we vary those variables.</div>
+<div class="para logical" id="Sec-Partial_Differentiation-3">
+<ol class="lower-roman ol-marker-4" id="Sec-Partial_Differentiation-3-1">
+<li id="Sec-Partial_Differentiation-3-1-1">
+<div class="para" id="Sec-Partial_Differentiation-3-1-1-1">At any given point <span class="process-math">\(x_0\text{,}\)</span> <span class="process-math">\(f'(x_0)\)</span> gives the slope of the tangent to the graph of the function at that point. <figure class="figure figure-like" id="Fig-Slope_of_tangent"><div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/./Calculus/Images/4/Slope_of_tangent.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1<span class="period">.</span></span><span class="space"> </span>Plot of <span class="process-math">\(y=f(x)\)</span> (blue) and the tangent line (red) at <span class="process-math">\(x=x_0\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1"><a href="#Fig-Slope_of_tangent" title="Copy permalink for Figure 2.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-3-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item i"><a href="#Sec-Partial_Differentiation-3-1-1" title="Copy permalink for Item i">🔗</a></div>
+</li>
+<li id="Sec-Partial_Differentiation-3-1-2">
+<div class="para" id="Sec-Partial_Differentiation-3-1-2-1">At any given point <span class="process-math">\(x_0\text{,}\)</span> <span class="process-math">\(f'(x_0)\)</span> gives the instantaneous rate of change of the function at that point.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-3-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item ii"><a href="#Sec-Partial_Differentiation-3-1-2" title="Copy permalink for Item ii">🔗</a></div>
+</li>
+<li id="Sec-Partial_Differentiation-3-1-3">
+<div class="para" id="Sec-Partial_Differentiation-3-1-3-1">The derivative <span class="process-math">\(f'(x)\)</span> is itself a function of one variable, when it exists.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-3-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item iii"><a href="#Sec-Partial_Differentiation-3-1-3" title="Copy permalink for Item iii">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Sec-Partial_Differentiation-4">For a function of two variables, <span class="process-math">\(f(x,y)\text{,}\)</span> the rate at which the function is changing at any point as we vary the independent variables depends upon the direction in which we vary those variables.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-Direction_and_rate_of_change"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-Direction_and_rate_of_change-1">Consider the function <span class="process-math">\(f(x,y) = x^2-y^2\text{.}\)</span> The graph of this function is shown below. At <span class="process-math">\((x,y)=(0,0)\text{,}\)</span> <span class="process-math">\(f=0\text{.}\)</span> As we can see by looking at the graph, as we move away from the origin along the positive <span class="process-math">\(x\)</span>-axis the value of <span class="process-math">\(f\)</span> is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive <span class="process-math">\(y\)</span>-axis the value of <span class="process-math">\(f\)</span> is decreasing, i.e. the rate of change of the function will be negative.</div>
+<div class="para" id="Ex-Direction_and_rate_of_change-1">Consider the function <span class="process-math">\(f(x,y) = x^2-y^2\text{.}\)</span> The graph of this function is shown below. At <span class="process-math">\((x,y)=(0,0)\text{,}\)</span> <span class="process-math">\(f=0\text{.}\)</span> As we can see by looking at the graph, as we move away from the origin along the positive <span class="process-math">\(x\)</span>-axis the value of <span class="process-math">\(f\)</span> is increasing, i.e. the rate of change of the function will be positive. However, if we move away from the origin along the positive <span class="process-math">\(y\)</span>-axis the value of <span class="process-math">\(f\)</span> is decreasing, i.e. the rate of change of the function will be negative.<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Direction_and_rate_of_change-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="Fig-Example_1_Contour_Plot"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/4/Ex1_Contour_Plot_Fig_1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= x^2-y^2\text{.}\)</span></figcaption></figure></article><div class="para" id="Sec-Partial_Differentiation-6">As a first step to analyzing more formally how a function of two variables can change with respect to its independent variables we will first consider the cases where we vary only one variable at a time.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= x^2-y^2\text{.}\)</span><div class="autopermalink" data-description="Figure 2.3"><a href="#Fig-Example_1_Contour_Plot" title="Copy permalink for Figure 2.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 2.2"><a href="#Ex-Direction_and_rate_of_change" title="Copy permalink for Example 2.2">🔗</a></div></article><div class="para" id="Sec-Partial_Differentiation-6">As a first step to analyzing more formally how a function of two variables can change with respect to its independent variables we will first consider the cases where we vary only one variable at a time.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-Direction_and_instantaneous_rate_of_change"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-Direction_and_instantaneous_rate_of_change-1">Consider the function <span class="process-math">\(f(x,y) = 5 - \dfrac{x^2+y^2}{2}\)</span> at the point <span class="process-math">\((2,1)\text{.}\)</span>
+<div class="para" id="Ex-Direction_and_instantaneous_rate_of_change-1">Consider the function <span class="process-math">\(f(x,y) = 5 - \dfrac{x^2+y^2}{2}\)</span> at the point <span class="process-math">\((2,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Direction_and_instantaneous_rate_of_change-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-Direction_and_instantaneous_rate_of_change-2">
 <div class="para">Firstly, let’s look at the instantaneous rate of change of <span class="process-math">\(f\)</span> in the direction of the positive <span class="process-math">\(x\)</span>-axis. As shown in the diagram below, if we hold <span class="process-math">\(y\)</span> constant at and vary <span class="process-math">\(x\)</span> we are actually moving along the curve</div>
@@ -517,9 +541,10 @@ eBookConfig.enable_chatcodes =  false;
 z=\frac{9}{2}-\frac{1}{2}x^2\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Direction_and_instantaneous_rate_of_change-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="Fig-Example_2_x_axis"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/4/Ex2_x_axis_rate_of_change.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= 5 - \dfrac{x^2+y^2}{2}\)</span> with a plane constant in <span class="process-math">\(y\)</span> through the point <span class="process-math">\((2,1)\text{.}\)</span></figcaption></figure><div class="para" id="Ex-Direction_and_instantaneous_rate_of_change-4">Along this curve <span class="process-math">\(\dfrac{dz}{dx}=-x\)</span> and at <span class="process-math">\(x=2\)</span> we have <span class="process-math">\(\dfrac{dz}{dx}=-2\text{.}\)</span> Thus, the instantaneous rate of change of <span class="process-math">\(f\)</span> in the direction of the positive <span class="process-math">\(x\)</span>-axis at the point <span class="process-math">\((2,1)\)</span> is <span class="process-math">\(-2\text{.}\)</span>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= 5 - \dfrac{x^2+y^2}{2}\)</span> with a plane constant in <span class="process-math">\(y\)</span> through the point <span class="process-math">\((2,1)\text{.}\)</span><div class="autopermalink" data-description="Figure 2.5"><a href="#Fig-Example_2_x_axis" title="Copy permalink for Figure 2.5">🔗</a></div></figcaption></figure><div class="para" id="Ex-Direction_and_instantaneous_rate_of_change-4">Along this curve <span class="process-math">\(\dfrac{dz}{dx}=-x\)</span> and at <span class="process-math">\(x=2\)</span> we have <span class="process-math">\(\dfrac{dz}{dx}=-2\text{.}\)</span> Thus, the instantaneous rate of change of <span class="process-math">\(f\)</span> in the direction of the positive <span class="process-math">\(x\)</span>-axis at the point <span class="process-math">\((2,1)\)</span> is <span class="process-math">\(-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Direction_and_instantaneous_rate_of_change-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-Direction_and_instantaneous_rate_of_change-5">
 <div class="para">Now consider the instantaneous rate of change of <span class="process-math">\(f\)</span> in the direction of the positive <span class="process-math">\(y\)</span>-axis. As shown in the diagram below, if we hold <span class="process-math">\(x\)</span> constant at <span class="process-math">\(x=2\)</span> and vary <span class="process-math">\(y\)</span> we are actually moving along the curve</div>
@@ -528,11 +553,12 @@ z=\frac{9}{2}-\frac{1}{2}x^2\text{.}
 z=3-\frac{1}{2}y^2\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Direction_and_instantaneous_rate_of_change-5" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Ex-Direction_and_instantaneous_rate_of_change-6">Along this curve <span class="process-math">\(\dfrac{dz}{dy}=-y\)</span> and at <span class="process-math">\(y=1\)</span> we have <span class="process-math">\(\dfrac{dz}{dy}=-1\text{.}\)</span> Thus, the instantaneous rate of change of <span class="process-math">\(f\)</span> in the direction of the positive <span class="process-math">\(y\)</span>-axis at the point <span class="process-math">\((2,1)\)</span> is <span class="process-math">\(-1\text{.}\)</span>
+<div class="para" id="Ex-Direction_and_instantaneous_rate_of_change-6">Along this curve <span class="process-math">\(\dfrac{dz}{dy}=-y\)</span> and at <span class="process-math">\(y=1\)</span> we have <span class="process-math">\(\dfrac{dz}{dy}=-1\text{.}\)</span> Thus, the instantaneous rate of change of <span class="process-math">\(f\)</span> in the direction of the positive <span class="process-math">\(y\)</span>-axis at the point <span class="process-math">\((2,1)\)</span> is <span class="process-math">\(-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Direction_and_instantaneous_rate_of_change-6" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="Fig-Example_2_y_axis"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/4/Ex2_y_axis_rate_of_change.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.6<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= 5 - \dfrac{x^2+y^2}{2}\)</span> with a plane constant in <span class="process-math">\(x\)</span> through the point <span class="process-math">\((2,1)\text{.}\)</span></figcaption></figure></article><div class="para logical" id="Sec-Partial_Differentiation-8">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.6<span class="period">.</span></span><span class="space"> </span>3D plot of <span class="process-math">\(f(x,y)= 5 - \dfrac{x^2+y^2}{2}\)</span> with a plane constant in <span class="process-math">\(x\)</span> through the point <span class="process-math">\((2,1)\text{.}\)</span><div class="autopermalink" data-description="Figure 2.6"><a href="#Fig-Example_2_y_axis" title="Copy permalink for Figure 2.6">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 2.4"><a href="#Ex-Direction_and_instantaneous_rate_of_change" title="Copy permalink for Example 2.4">🔗</a></div></article><div class="para logical" id="Sec-Partial_Differentiation-8">
 <div class="para">Consider a function of two variables, for example:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -540,6 +566,7 @@ f(x,y)=x^2(\sin(x+5y))\text{.}
 \end{equation*}
 </div>
 <div class="para">The following plots the graph of <span class="process-math">\(z=f(x,y)\text{,}\)</span> together with the vertical planes defined by <span class="process-math">\(y=y_0\)</span> (in orange) and <span class="process-math">\(x=x_0\)</span> (in red), and arrows representing the slope of the surface inside these planes.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-8" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Sec-Partial_Differentiation-9" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y,z = var('x y z')
 f = x^2*sin(x+5*y)
@@ -577,11 +604,12 @@ def _(
         p = p+plot3d(z0+fx(x=x0,y=y0)*(x-x0)+fy(x=x0,y=y0)*(y-y0), (x,x0-h,x0+h), (y,y0-h,y0+h), color='green', opacity=0.5)
     show(p)
 </script></div>
-<div class="para" id="Sec-Partial_Differentiation-10">The slopes of the surface inside the planes above are given by what is known as the <dfn class="terminology">partial derivatives</dfn> of the function. Where <span class="process-math">\(y=y_0\)</span> is kept constant (in the orange plane), the slope is given by the partial derivative <span class="process-math">\(f_x(x,y)\text{.}\)</span> Where <span class="process-math">\(x=x_0\)</span> is kept constant (in the red plane), the slope is given by the partial derivative <span class="process-math">\(f_y(x,y)\text{.}\)</span> Formally, partial derivatives are defined as follows.</div>
+<div class="para" id="Sec-Partial_Differentiation-10">The slopes of the surface inside the planes above are given by what is known as the <dfn class="terminology">partial derivatives</dfn> of the function. Where <span class="process-math">\(y=y_0\)</span> is kept constant (in the orange plane), the slope is given by the partial derivative <span class="process-math">\(f_x(x,y)\text{.}\)</span> Where <span class="process-math">\(x=x_0\)</span> is kept constant (in the red plane), the slope is given by the partial derivative <span class="process-math">\(f_y(x,y)\text{.}\)</span> Formally, partial derivatives are defined as follows.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-10" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="Sec-Partial_Differentiation-11"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Partial Derivative.</span>
 </h4>
-<div class="para" id="Sec-Partial_Differentiation-11-2-1">Consider the function of two variables, <span class="process-math">\(f(x,y)\)</span>
+<div class="para" id="Sec-Partial_Differentiation-11-2-1">Consider the function of two variables, <span class="process-math">\(f(x,y)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-11-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="Sec-Partial_Differentiation-11-2-2">
 <div class="para">The <dfn class="terminology">partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span></dfn> at the point <span class="process-math">\((x_0,y_0)\)</span> is given by the limit (if it exists)</div>
 <div class="displaymath process-math">
@@ -589,6 +617,7 @@ def _(
 \frac{\partial f}{\partial x} (x_0,y_0) = \lim_{h \to 0} \left[ \frac{f(x_0+h,y_0)-f(x_0,y_0)}{h} \right]\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-11-2-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="Sec-Partial_Differentiation-11-2-3">
 <div class="para">The <dfn class="terminology">partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(y\)</span></dfn> at the point <span class="process-math">\((x_0,y_0)\)</span> is given by the limit (if it exists)</div>
 <div class="displaymath process-math">
@@ -596,22 +625,29 @@ def _(
 \frac{\partial f}{\partial y} (x_0,y_0) = \lim_{h \to 0} \left[ \frac{f(x_0,y_0+h)-f(x_0,y_0)}{h} \right]\text{.}
 \end{equation*}
 </div>
-</div></article><article class="remark remark-like" id="Sec-Partial_Differentiation-12"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-11-2-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.7: Partial Derivative"><a href="#Sec-Partial_Differentiation-11" title="Copy permalink for Definition 2.7: Partial Derivative">🔗</a></div></article><article class="remark remark-like" id="Sec-Partial_Differentiation-12"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Notation.</span>
 </h4>
-<div class="para" id="Sec-Partial_Differentiation-12-2">The notation <span class="process-math">\(f_x\)</span> is often used to denote <span class="process-math">\(\dfrac{\partial f}{\partial x}\text{.}\)</span> Similarly, <span class="process-math">\(f_y\)</span> is often used to denote <span class="process-math">\(\dfrac{\partial f}{\partial y}\text{.}\)</span>
-</div></article><article class="example example-like" id="Ex-Calculating_partial_derivatives_at_particular_point"><h4 class="heading">
+<div class="para" id="Sec-Partial_Differentiation-12-2">The notation <span class="process-math">\(f_x\)</span> is often used to denote <span class="process-math">\(\dfrac{\partial f}{\partial x}\text{.}\)</span> Similarly, <span class="process-math">\(f_y\)</span> is often used to denote <span class="process-math">\(\dfrac{\partial f}{\partial y}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-12-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.8: Notation"><a href="#Sec-Partial_Differentiation-12" title="Copy permalink for Remark 2.8: Notation">🔗</a></div></article><article class="example example-like" id="Ex-Calculating_partial_derivatives_at_particular_point"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-1-1">Using the definition, calculate the partial derivatives of <span class="process-math">\(f(x,y) = 5 - \dfrac{x^2+y^2}{2}\)</span> at the point <span class="process-math">\((2,1)\text{.}\)</span>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-1-1">Using the definition, calculate the partial derivatives of <span class="process-math">\(f(x,y) = 5 - \dfrac{x^2+y^2}{2}\)</span> at the point <span class="process-math">\((2,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-Calculating_partial_derivatives_at_particular_point-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-2-1">
-<span class="process-math">\(\dfrac{\partial f}{\partial x}(2,1) = -2\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}(2,1) = -1\)</span>
-</div></div></details><details id="Ex-Calculating_partial_derivatives_at_particular_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-3-1">Firstly, calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> at <span class="process-math">\((2,1)\text{.}\)</span>
+<details id="Ex-Calculating_partial_derivatives_at_particular_point-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-2-1">
+<span class="process-math">\(\dfrac{\partial f}{\partial x}(2,1) = -2\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}(2,1) = -1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point-3-2"><div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_particular_point-3-2-1">
+<div class="autopermalink" data-description="Answer 2.9.1"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-2" title="Copy permalink for Answer 2.9.1">🔗</a></div>
+</div></details><details id="Ex-Calculating_partial_derivatives_at_particular_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-3-1">Firstly, calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> at <span class="process-math">\((2,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point-3-2">
+<div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_particular_point-3-2-1">
 \begin{align*}
 \frac{\partial f}{\partial x}(2,1) \amp = \lim_{h \to 0} \left[ \frac{f(2+h,1)-f(2,1)}{h} \right]\\
 \amp = \lim_{h \to 0} \left[\frac{1}{h} \left( \left( 5 - \frac{(2+h)^2 + 1^2}{2} \right) - \left( 5 - \frac{2^2+1^2}{2} \right) \right) \right]\\
@@ -619,10 +655,13 @@ def _(
 \amp = \lim_{h \to 0} \left[ \frac{1}{h} \left(-2h-\frac{1}{2}h^2 \right) \right]\\
 \amp = -2
 \end{align*}
-</div></div>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-3-3">Next, calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(y\)</span> at <span class="process-math">\((2,1)\text{.}\)</span>
 </div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point-3-4"><div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_particular_point-3-4-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point-3-3">Next, calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(y\)</span> at <span class="process-math">\((2,1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point-3-4">
+<div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_particular_point-3-4-1">
 \begin{align*}
 \frac{\partial f}{\partial y}(2,1) \amp = \lim_{h \to 0} \left[ \frac{f(2,1+h)-f(2,1)}{h} \right]\\
 \amp = \lim_{h \to 0} \left[\frac{1}{h} \left( \left( 5 - \frac{2^2 + (1+h)^2}{2} \right) - \left( 5 - \frac{2^2+1^2}{2} \right) \right) \right]\\
@@ -630,91 +669,136 @@ def _(
 \amp = \lim_{h \to 0} \left[ \frac{1}{h} \left(-h-\frac{1}{2}h^2 \right) \right]\\
 \amp = -1
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.9.1"><a href="#Ex-Calculating_partial_derivatives_at_particular_point-3" title="Copy permalink for Solution 2.9.1">🔗</a></div>
 </div></details>
-</div></article><div class="para" id="Sec-Partial_Differentiation-14">If we calculate the partial derivatives of a function at the general point <span class="process-math">\((x,y)\)</span> (as opposed to some specific point <span class="process-math">\((x_0,y_0)\)</span>) we will obtain (instead of two specific values) two new functions of two variables.</div>
+</div>
+<div class="autopermalink" data-description="Example 2.9"><a href="#Ex-Calculating_partial_derivatives_at_particular_point" title="Copy permalink for Example 2.9">🔗</a></div></article><div class="para" id="Sec-Partial_Differentiation-14">If we calculate the partial derivatives of a function at the general point <span class="process-math">\((x,y)\)</span> (as opposed to some specific point <span class="process-math">\((x_0,y_0)\)</span>) we will obtain (instead of two specific values) two new functions of two variables.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-14" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-Calculating_partial_derivatives_at_general_point"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-1-1">Using the definition, calculate the partial derivatives of <span class="process-math">\(f(x,y) = xy-1\text{.}\)</span>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-1-1">Using the definition, calculate the partial derivatives of <span class="process-math">\(f(x,y) = xy-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_general_point-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-Calculating_partial_derivatives_at_general_point-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-2-1">
-<span class="process-math">\(\dfrac{\partial f}{\partial x}(x,y) = y\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}(x,y) = x\)</span>
-</div></div></details><details id="Ex-Calculating_partial_derivatives_at_general_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-3-1">Calculating the partial derivative with respect to <span class="process-math">\(x\text{:}\)</span>
+<details id="Ex-Calculating_partial_derivatives_at_general_point-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-2-1">
+<span class="process-math">\(\dfrac{\partial f}{\partial x}(x,y) = y\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}(x,y) = x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_general_point-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_general_point-3-2"><div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_general_point-3-2-1">
+<div class="autopermalink" data-description="Answer 2.10.1"><a href="#Ex-Calculating_partial_derivatives_at_general_point-2" title="Copy permalink for Answer 2.10.1">🔗</a></div>
+</div></details><details id="Ex-Calculating_partial_derivatives_at_general_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-3-1">Calculating the partial derivative with respect to <span class="process-math">\(x\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_general_point-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_general_point-3-2">
+<div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_general_point-3-2-1">
 \begin{align*}
 \frac{\partial f}{\partial x}(x,y) \amp = \lim_{h \to 0} \left[ \frac{f(x+h,y)-f(x,y)}{h} \right]\\
 \amp = \lim_{h \to 0} \left[ \frac{\left( (x+h)y-1 \right)-(xy-1)}{h} \right]\\
 \amp = \lim_{h \to 0} \left[ \frac{hy}{h} \right]\\
 \amp = y
 \end{align*}
-</div></div>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-3-3">Now, calculating the partial derivative with respect to <span class="process-math">\(y\text{:}\)</span>
 </div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_general_point-3-4"><div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_general_point-3-4-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_general_point-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_general_point-3-3">Now, calculating the partial derivative with respect to <span class="process-math">\(y\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_general_point-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_general_point-3-4">
+<div class="displaymath process-math" id="Ex-Calculating_partial_derivatives_at_general_point-3-4-1">
 \begin{align*}
 \frac{\partial f}{\partial y}(x,y) \amp = \lim_{h \to 0} \left[ \frac{f(x,y+h)-f(x,y)}{h} \right]\\
 \amp = \lim_{h \to 0} \left[ \frac{\left( x(y+h)-1 \right)-(xy-1)}{h} \right]\\
 \amp = \lim_{h \to 0} \left[ \frac{hx}{h} \right]\\
 \amp = x
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_general_point-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.10.1"><a href="#Ex-Calculating_partial_derivatives_at_general_point-3" title="Copy permalink for Solution 2.10.1">🔗</a></div>
 </div></details>
-</div></article><div class="para" id="Sec-Partial_Differentiation-16">As can be seen in the above example, to calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> at the general point <span class="process-math">\((x,y)\)</span> all we have to do is treat <span class="process-math">\(y\)</span> as a constant and differentiate <span class="process-math">\(f(x,y)\)</span> with respect to <span class="process-math">\(x\)</span> (using all of the familiar rules of differentiation for functions of one variable). Similarly, to calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(y\)</span> at the general point <span class="process-math">\((x,y)\)</span> treat <span class="process-math">\(x\)</span> as a constant and differentiate <span class="process-math">\(f(x,y)\)</span> with respect to <span class="process-math">\(y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Example 2.10"><a href="#Ex-Calculating_partial_derivatives_at_general_point" title="Copy permalink for Example 2.10">🔗</a></div></article><div class="para" id="Sec-Partial_Differentiation-16">As can be seen in the above example, to calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> at the general point <span class="process-math">\((x,y)\)</span> all we have to do is treat <span class="process-math">\(y\)</span> as a constant and differentiate <span class="process-math">\(f(x,y)\)</span> with respect to <span class="process-math">\(x\)</span> (using all of the familiar rules of differentiation for functions of one variable). Similarly, to calculate the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(y\)</span> at the general point <span class="process-math">\((x,y)\)</span> treat <span class="process-math">\(x\)</span> as a constant and differentiate <span class="process-math">\(f(x,y)\)</span> with respect to <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-16" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-1-1">Find the partial derivatives of the function <span class="process-math">\(f(x,y) = 5 - \frac{x^2+y^2}{2}\)</span> at the point <span class="process-math">\((2,1)\)</span> using the above method.</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-1-1">Find the partial derivatives of the function <span class="process-math">\(f(x,y) = 5 - \frac{x^2+y^2}{2}\)</span> at the point <span class="process-math">\((2,1)\)</span> using the above method.<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <div class="solutions">
-<details id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-2-1">
-<span class="process-math">\(\dfrac{\partial f}{\partial x}(2,1) = -2\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}(2,1) = -1\)</span>
-</div></div></details><details id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-1">This function can be written as:</div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-2"><div class="displaymath process-math">
+<details id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-2-1">
+<span class="process-math">\(\dfrac{\partial f}{\partial x}(2,1) = -2\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}(2,1) = -1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.11.1"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-2" title="Copy permalink for Answer 2.11.1">🔗</a></div>
+</div></details><details id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-1">This function can be written as:<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-2">
+<div class="displaymath process-math">
 \begin{equation*}
 f(x,y) = 5 - \frac{1}{2}x^2 - \frac{1}{2}y^2.
 \end{equation*}
-</div></div>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-3">Now, thinking of <span class="process-math">\(y\)</span> as a constant (so that <span class="process-math">\(\frac{1}{2}y^2\)</span> is also constant) and treating the function as a function of <span class="process-math">\(x\)</span> only,</div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-4"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-3">Now, thinking of <span class="process-math">\(y\)</span> as a constant (so that <span class="process-math">\(\frac{1}{2}y^2\)</span> is also constant) and treating the function as a function of <span class="process-math">\(x\)</span> only,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-4">
+<div class="displaymath process-math">
 \begin{equation*}
 \dfrac{\partial f}{\partial x}(x,y) = 0 - 2 \times \frac{1}{2}x - 0 = -x.
 \end{equation*}
-</div></div>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-5">Thus,</div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-6"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-5">Thus,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-6">
+<div class="displaymath process-math">
 \begin{equation*}
 \dfrac{\partial f}{\partial x}(2,1) = -2.
 \end{equation*}
-</div></div>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-7">Next, think of <span class="process-math">\(x\)</span> as a constant (so that <span class="process-math">\(\frac{1}{2}x^2\)</span> is also constant) and treating the function as a function of <span class="process-math">\(y\)</span> only,</div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-8"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-7">Next, think of <span class="process-math">\(x\)</span> as a constant (so that <span class="process-math">\(\frac{1}{2}x^2\)</span> is also constant) and treating the function as a function of <span class="process-math">\(y\)</span> only,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-8">
+<div class="displaymath process-math">
 \begin{equation*}
 \dfrac{\partial f}{\partial y}(x,y) = 0-0-2\times \frac{1}{2} y = -y.
 \end{equation*}
-</div></div>
-<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-9">Thus,</div>
-<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-10"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-8" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-9">Thus,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-9" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-10">
+<div class="displaymath process-math">
 \begin{equation*}
 \dfrac{\partial f}{\partial y}(2,1) = -1.
 \end{equation*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3-10" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.11.1"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter-3" title="Copy permalink for Solution 2.11.1">🔗</a></div>
 </div></details>
-</div></article><div class="para" id="Sec-Partial_Differentiation-18">A shorter notation for the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> is <span class="process-math">\(f_x\text{.}\)</span> Similarly the partial derivative with respect to <span class="process-math">\(y\)</span> is written as <span class="process-math">\(f_y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Example 2.11"><a href="#Ex-Calculating_partial_derivatives_at_particular_point_shorter" title="Copy permalink for Example 2.11">🔗</a></div></article><div class="para" id="Sec-Partial_Differentiation-18">A shorter notation for the partial derivative of <span class="process-math">\(f\)</span> with respect to <span class="process-math">\(x\)</span> is <span class="process-math">\(f_x\text{.}\)</span> Similarly the partial derivative with respect to <span class="process-math">\(y\)</span> is written as <span class="process-math">\(f_y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-18" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="Ex-shorthand_computation_example-1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-shorthand_computation_example-1-1-1">Find <span class="process-math">\(f_x\)</span> and <span class="process-math">\(f_y\)</span> when <span class="process-math">\(f(x,y) = x^2y\text{.}\)</span>
+<div class="para" id="Ex-shorthand_computation_example-1-1-1">Find <span class="process-math">\(f_x\)</span> and <span class="process-math">\(f_y\)</span> when <span class="process-math">\(f(x,y) = x^2y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-shorthand_computation_example-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-shorthand_computation_example-1-2-1">
-<span class="process-math">\(f_x(x,y) = 2xy\)</span> and <span class="process-math">\(f_y(x,y) = x^2\text{.}\)</span>
-</div></div></details><details id="Ex-shorthand_computation_example-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Ex-shorthand_computation_example-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-shorthand_computation_example-1-2-1">
+<span class="process-math">\(f_x(x,y) = 2xy\)</span> and <span class="process-math">\(f_y(x,y) = x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-1-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.12.1"><a href="#Ex-shorthand_computation_example-1-2" title="Copy permalink for Answer 2.12.1">🔗</a></div>
+</div></details><details id="Ex-shorthand_computation_example-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-shorthand_computation_example-1-3-1">
 <div class="para">To find <span class="process-math">\(f_x (x,y)\text{,}\)</span> think of <span class="process-math">\(y\)</span> as a constant. Thus,</div>
 <div class="displaymath process-math">
@@ -722,6 +806,7 @@ f(x,y) = 5 - \frac{1}{2}x^2 - \frac{1}{2}y^2.
 f_x(x,y) = 2xy\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-1-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-shorthand_computation_example-1-3-2">
 <div class="para">To find <span class="process-math">\(f_y (x,y)\text{,}\)</span> think of <span class="process-math">\(x\)</span> as a constant. So,</div>
@@ -730,17 +815,23 @@ f_x(x,y) = 2xy\text{.}
 f_y(x,y) = x^2\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-1-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 2.12.1"><a href="#Ex-shorthand_computation_example-1-3" title="Copy permalink for Solution 2.12.1">🔗</a></div>
 </div></details>
-</div></article><article class="example example-like" id="Ex-shorthand_computation_example_arcsin"><h4 class="heading">
+</div>
+<div class="autopermalink" data-description="Example 2.12"><a href="#Ex-shorthand_computation_example-1" title="Copy permalink for Example 2.12">🔗</a></div></article><article class="example example-like" id="Ex-shorthand_computation_example_arcsin"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-shorthand_computation_example_arcsin-1-1">Find <span class="process-math">\(f_x\)</span> and <span class="process-math">\(f_y\)</span> when <span class="process-math">\(f(x,y) = \sin^{-1}\left(\dfrac{x}{y}\right) - 5x^2\text{.}\)</span>
+<div class="para" id="Ex-shorthand_computation_example_arcsin-1-1">Find <span class="process-math">\(f_x\)</span> and <span class="process-math">\(f_y\)</span> when <span class="process-math">\(f(x,y) = \sin^{-1}\left(\dfrac{x}{y}\right) - 5x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_arcsin-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-shorthand_computation_example_arcsin-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-shorthand_computation_example_arcsin-2-1">
-<span class="process-math">\(f_x(x,y) =\dfrac{1}{\sqrt{y^2 - x^2}} - 10x\)</span> and <span class="process-math">\(f_y(x,y)= \dfrac{-x}{y\sqrt{y^2-x^2}}.\)</span>
-</div></div></details><details id="Ex-shorthand_computation_example_arcsin-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Ex-shorthand_computation_example_arcsin-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-shorthand_computation_example_arcsin-2-1">
+<span class="process-math">\(f_x(x,y) =\dfrac{1}{\sqrt{y^2 - x^2}} - 10x\)</span> and <span class="process-math">\(f_y(x,y)= \dfrac{-x}{y\sqrt{y^2-x^2}}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_arcsin-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.13.1"><a href="#Ex-shorthand_computation_example_arcsin-2" title="Copy permalink for Answer 2.13.1">🔗</a></div>
+</div></details><details id="Ex-shorthand_computation_example_arcsin-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-shorthand_computation_example_arcsin-3-1">
 <div class="para">To find <span class="process-math">\(f_x (x,y)\text{,}\)</span> think of <span class="process-math">\(y\)</span> as a constant. Thus, using the chain rule:</div>
 <div class="displaymath process-math" id="Ex-shorthand_computation_example_arcsin-3-1-3">
@@ -749,6 +840,7 @@ f_x(x,y) \amp = \frac{1}{\sqrt{1 - \left(\dfrac{x}{y}\right)^2 }} \cdot \frac{1}
 \amp = \frac{1}{\sqrt{y^2 - x^2}} - 10x\text{.}
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_arcsin-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-shorthand_computation_example_arcsin-3-2">
 <div class="para">To find <span class="process-math">\(f_y (x,y)\text{,}\)</span> think of <span class="process-math">\(x\)</span> as a constant. Again, using the chain rule:</div>
@@ -758,38 +850,54 @@ f_y(x,y) \amp = \frac{1}{\sqrt{1 - \left(\dfrac{x}{y}\right)^2 }} \cdot \left( \
 \amp = \frac{-x}{y\sqrt{y^2-x^2}}.
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_arcsin-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 2.13.1"><a href="#Ex-shorthand_computation_example_arcsin-3" title="Copy permalink for Solution 2.13.1">🔗</a></div>
 </div></details>
-</div></article><article class="example example-like" id="Ex-shorthand_computation_example-3_variables_implicit"><h4 class="heading">
+</div>
+<div class="autopermalink" data-description="Example 2.13"><a href="#Ex-shorthand_computation_example_arcsin" title="Copy permalink for Example 2.13">🔗</a></div></article><article class="example example-like" id="Ex-shorthand_computation_example-3_variables_implicit"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-1-1">The equation <span class="process-math">\(xz + y^2z^3 = 2\)</span> can be thought of as implicitly defining <span class="process-math">\(z\)</span> as a function of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Find <span class="process-math">\(z_x\)</span> and <span class="process-math">\(z_y\text{.}\)</span>
+<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-1-1">The equation <span class="process-math">\(xz + y^2z^3 = 2\)</span> can be thought of as implicitly defining <span class="process-math">\(z\)</span> as a function of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> Find <span class="process-math">\(z_x\)</span> and <span class="process-math">\(z_y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-3_variables_implicit-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-shorthand_computation_example-3_variables_implicit-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-2-1">
-<span class="process-math">\(z_x = \dfrac{-z}{x+3y^2 z^2}\)</span> and <span class="process-math">\(z_y =\dfrac{-2yz^3}{x+3y^2 z^2}\)</span>
-</div></div></details><details id="Ex-shorthand_computation_example-3_variables_implicit-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-3-1">To find <span class="process-math">\(z_x\)</span> differentiate both sides of the defining equation with respect to <span class="process-math">\(x\text{,}\)</span> remembering that <span class="process-math">\(z\)</span> is some unknown function of <span class="process-math">\(x\text{.}\)</span> Also, remember to treat <span class="process-math">\(y\)</span> as a constant. Then, using the product rule and the chain rule,</div>
-<div class="para logical" id="Ex-shorthand_computation_example-3_variables_implicit-3-2"><div class="displaymath process-math" id="Ex-shorthand_computation_example-3_variables_implicit-3-2-1">
+<details id="Ex-shorthand_computation_example-3_variables_implicit-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-2-1">
+<span class="process-math">\(z_x = \dfrac{-z}{x+3y^2 z^2}\)</span> and <span class="process-math">\(z_y =\dfrac{-2yz^3}{x+3y^2 z^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-3_variables_implicit-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.14.1"><a href="#Ex-shorthand_computation_example-3_variables_implicit-2" title="Copy permalink for Answer 2.14.1">🔗</a></div>
+</div></details><details id="Ex-shorthand_computation_example-3_variables_implicit-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-3-1">To find <span class="process-math">\(z_x\)</span> differentiate both sides of the defining equation with respect to <span class="process-math">\(x\text{,}\)</span> remembering that <span class="process-math">\(z\)</span> is some unknown function of <span class="process-math">\(x\text{.}\)</span> Also, remember to treat <span class="process-math">\(y\)</span> as a constant. Then, using the product rule and the chain rule,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-3_variables_implicit-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-shorthand_computation_example-3_variables_implicit-3-2">
+<div class="displaymath process-math" id="Ex-shorthand_computation_example-3_variables_implicit-3-2-1">
 \begin{align*}
 \frac{\partial}{\partial x} \left(xz + y^2z^3 \right) \amp = \frac{\partial}{\partial x} (2)\\
 xz_x + z + 3y^2 z^2 z_x \amp = 0\\
 z_x (x+3y^2 z^2) \amp = -z\\
 z_x \amp = \frac{-z}{x+3y^2 z^2}
 \end{align*}
-</div></div>
-<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-3-3">Similarly, differentiating both sides of the defining equation with respect to <span class="process-math">\(y\text{,}\)</span>
 </div>
-<div class="para logical" id="Ex-shorthand_computation_example-3_variables_implicit-3-4"><div class="displaymath process-math" id="Ex-shorthand_computation_example-3_variables_implicit-3-4-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-3_variables_implicit-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-shorthand_computation_example-3_variables_implicit-3-3">Similarly, differentiating both sides of the defining equation with respect to <span class="process-math">\(y\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-3_variables_implicit-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-shorthand_computation_example-3_variables_implicit-3-4">
+<div class="displaymath process-math" id="Ex-shorthand_computation_example-3_variables_implicit-3-4-1">
 \begin{align*}
 \frac{\partial}{\partial y} \left(xz + y^2z^3 \right) \amp = \frac{\partial}{\partial y} (2)\\
 xz_y + 2yz^3 + 3y^2 z^2 z_y \amp = 0\\
 z_y (x+3y^2 z^2) \amp = -2yz^3\\
 z_y \amp = \frac{-2yz^3}{x+3y^2 z^2}
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example-3_variables_implicit-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.14.1"><a href="#Ex-shorthand_computation_example-3_variables_implicit-3" title="Copy permalink for Solution 2.14.1">🔗</a></div>
 </div></details>
-</div></article><div class="para" id="Sec-Partial_Differentiation-22">Partial derivatives can be found for functions of more than two variables.</div>
+</div>
+<div class="autopermalink" data-description="Example 2.14"><a href="#Ex-shorthand_computation_example-3_variables_implicit" title="Copy permalink for Example 2.14">🔗</a></div></article><div class="para" id="Sec-Partial_Differentiation-22">Partial derivatives can be found for functions of more than two variables.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-22" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-shorthand_computation_example_3_variables"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
 </h4>
@@ -800,11 +908,15 @@ z_y \amp = \frac{-2yz^3}{x+3y^2 z^2}
 f(x,y,z) = (2x+3y-z^2)e^{xz}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-shorthand_computation_example_3_variables-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-shorthand_computation_example_3_variables-2-1">
-<span class="process-math">\(f_x(x,y,z) = e^{xz} (2xz + 3yz - z^3 + 2)\text{,}\)</span> <span class="process-math">\(f_y(x,y,z) = 3e^{xz}\)</span> and <span class="process-math">\(f_z(x,y,z) = e^{xz} (2x^2 + 3xy - xz^2 - 2z)\)</span>
-</div></div></details><details id="Ex-shorthand_computation_example_3_variables-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Ex-shorthand_computation_example_3_variables-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-shorthand_computation_example_3_variables-2-1">
+<span class="process-math">\(f_x(x,y,z) = e^{xz} (2xz + 3yz - z^3 + 2)\text{,}\)</span> <span class="process-math">\(f_y(x,y,z) = 3e^{xz}\)</span> and <span class="process-math">\(f_z(x,y,z) = e^{xz} (2x^2 + 3xy - xz^2 - 2z)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.15.1"><a href="#Ex-shorthand_computation_example_3_variables-2" title="Copy permalink for Answer 2.15.1">🔗</a></div>
+</div></details><details id="Ex-shorthand_computation_example_3_variables-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-1">
 <div class="para">Write the function as</div>
 <div class="displaymath process-math">
@@ -812,54 +924,78 @@ f(x,y,z) = (2x+3y-z^2)e^{xz}\text{.}
 f(x,y,z) = 2xe^{xz} + 3ye^{xz} - z^2 e^{xz}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Ex-shorthand_computation_example_3_variables-3-2">To find <span class="process-math">\(f_x\)</span> treat <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> as constants and think of <span class="process-math">\(f\)</span> as a function of <span class="process-math">\(x\)</span> only. Thus,</div>
-<div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-3"><div class="displaymath process-math" id="Ex-shorthand_computation_example_3_variables-3-3-1">
+<div class="para" id="Ex-shorthand_computation_example_3_variables-3-2">To find <span class="process-math">\(f_x\)</span> treat <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> as constants and think of <span class="process-math">\(f\)</span> as a function of <span class="process-math">\(x\)</span> only. Thus,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-3">
+<div class="displaymath process-math" id="Ex-shorthand_computation_example_3_variables-3-3-1">
 \begin{align*}
 f_x(x,y,z) \amp = (2xz e^{xz} + 2e^{xz} ) + 3yze^{xz} - z^3 e^{xz}\\
 \amp = e^{xz} (2xz + 3yz - z^3 + 2)
 \end{align*}
-</div></div>
-<div class="para" id="Ex-shorthand_computation_example_3_variables-3-4">To find <span class="process-math">\(f_y\)</span> treat <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> as constants and think of <span class="process-math">\(f\)</span> as a function of <span class="process-math">\(y\)</span> only. Thus,</div>
-<div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-5"><div class="displaymath process-math" id="Ex-shorthand_computation_example_3_variables-3-5-1">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-shorthand_computation_example_3_variables-3-4">To find <span class="process-math">\(f_y\)</span> treat <span class="process-math">\(x\)</span> and <span class="process-math">\(z\)</span> as constants and think of <span class="process-math">\(f\)</span> as a function of <span class="process-math">\(y\)</span> only. Thus,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-5">
+<div class="displaymath process-math" id="Ex-shorthand_computation_example_3_variables-3-5-1">
 \begin{align*}
 f_y(x,y,z) \amp = 0 + 3e^{xz} - 0\\
 \amp = 3e^{xz}
 \end{align*}
-</div></div>
-<div class="para" id="Ex-shorthand_computation_example_3_variables-3-6">Finally, to find <span class="process-math">\(f_z\)</span> treat <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> as constants and think of <span class="process-math">\(f\)</span> as a function of <span class="process-math">\(z\)</span> only. Thus,</div>
-<div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-7"><div class="displaymath process-math" id="Ex-shorthand_computation_example_3_variables-3-7-1">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Ex-shorthand_computation_example_3_variables-3-6">Finally, to find <span class="process-math">\(f_z\)</span> treat <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> as constants and think of <span class="process-math">\(f\)</span> as a function of <span class="process-math">\(z\)</span> only. Thus,<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Ex-shorthand_computation_example_3_variables-3-7">
+<div class="displaymath process-math" id="Ex-shorthand_computation_example_3_variables-3-7-1">
 \begin{align*}
 f_z(x,y,z) \amp = 2x^2 e^{xz} + 3xye^{xz} - (xz^2e^{xz} + 2ze^{xz} )\\
 \amp = e^{xz} (2x^2 + 3xy - xz^2 - 2z)
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-shorthand_computation_example_3_variables-3-7" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.15.1"><a href="#Ex-shorthand_computation_example_3_variables-3" title="Copy permalink for Solution 2.15.1">🔗</a></div>
 </div></details>
-</div></article><section class="exercises" id="Sec-Partial_Differentiation-24"><h4 class="heading hide-type">
+</div>
+<div class="autopermalink" data-description="Example 2.15"><a href="#Ex-shorthand_computation_example_3_variables" title="Copy permalink for Example 2.15">🔗</a></div></article><section class="exercises" id="Sec-Partial_Differentiation-24"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Partial_Differentiation-24-2-1-1">Find both partial derivatives of the function <span class="process-math">\(f(x,y)=4-xy-y^2\)</span> at the point <span class="process-math">\((3,2)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Partial_Differentiation-24-3-1-1">Find <span class="process-math">\(\dfrac{\partial f}{\partial x}\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}\)</span> when <span class="process-math">\(f(x,y) = \ln(x^2-4xy^3)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Partial_Differentiation-24-4-1-1">If <span class="process-math">\(L(x,y) = \dfrac{e^{xy}}{(1-x)(1-y)}\text{,}\)</span> find <span class="process-math">\(L_x(2,3)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Partial_Differentiation-24-5-1-1">Find <span class="process-math">\(f_x(x,y)\)</span> and <span class="process-math">\(f_y(x,y)\)</span> when <span class="process-math">\(f(x,y) = x^y\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-6"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Partial_Differentiation-24-6-1-1">In the following contour plot the contours are for evenly spaced values of <span class="process-math">\(k\)</span> from <span class="process-math">\(-2\)</span> at the point <span class="process-math">\(X\)</span> to <span class="process-math">\(2\)</span> at the point <span class="process-math">\(Y\text{.}\)</span> Find the sign of <span class="process-math">\(f_x(x,y)\)</span> and <span class="process-math">\(f_y(x,y)\)</span> at the points <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> given the following contour plot for the function <span class="process-math">\(f(x,y)\text{.}\)</span> Explain your thinking.</div> <figure class="figure figure-like" id="Fig-Contour_plot"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/4/Contour_plot.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.16<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article></section></section><section class="section" id="Sec-Higher_Partial_Derivatives"><h3 class="heading hide-type">
+<div class="para" id="Sec-Partial_Differentiation-24-2-1-1">Find both partial derivatives of the function <span class="process-math">\(f(x,y)=4-xy-y^2\)</span> at the point <span class="process-math">\((3,2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-24-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.1.1"><a href="#Sec-Partial_Differentiation-24-2" title="Copy permalink for Exercise 2.1.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Partial_Differentiation-24-3-1-1">Find <span class="process-math">\(\dfrac{\partial f}{\partial x}\)</span> and <span class="process-math">\(\dfrac{\partial f}{\partial y}\)</span> when <span class="process-math">\(f(x,y) = \ln(x^2-4xy^3)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-24-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.1.2"><a href="#Sec-Partial_Differentiation-24-3" title="Copy permalink for Exercise 2.1.2">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Partial_Differentiation-24-4-1-1">If <span class="process-math">\(L(x,y) = \dfrac{e^{xy}}{(1-x)(1-y)}\text{,}\)</span> find <span class="process-math">\(L_x(2,3)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-24-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.1.3"><a href="#Sec-Partial_Differentiation-24-4" title="Copy permalink for Exercise 2.1.3">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Partial_Differentiation-24-5-1-1">Find <span class="process-math">\(f_x(x,y)\)</span> and <span class="process-math">\(f_y(x,y)\)</span> when <span class="process-math">\(f(x,y) = x^y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-24-5-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.1.4"><a href="#Sec-Partial_Differentiation-24-5" title="Copy permalink for Exercise 2.1.4">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Partial_Differentiation-24-6"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Partial_Differentiation-24-6-1-1">In the following contour plot the contours are for evenly spaced values of <span class="process-math">\(k\)</span> from <span class="process-math">\(-2\)</span> at the point <span class="process-math">\(X\)</span> to <span class="process-math">\(2\)</span> at the point <span class="process-math">\(Y\text{.}\)</span> Find the sign of <span class="process-math">\(f_x(x,y)\)</span> and <span class="process-math">\(f_y(x,y)\)</span> at the points <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> given the following contour plot for the function <span class="process-math">\(f(x,y)\text{.}\)</span> Explain your thinking.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Partial_Differentiation-24-6-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="Fig-Contour_plot"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Calculus/Images/4/Contour_plot.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.16<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 2.16"><a href="#Fig-Contour_plot" title="Copy permalink for Figure 2.16">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Exercise 2.1.5"><a href="#Sec-Partial_Differentiation-24-6" title="Copy permalink for Exercise 2.1.5">🔗</a></div></article><div class="autopermalink" data-description="Exercises 2.1: Example Tasks"><a href="#Sec-Partial_Differentiation-24" title="Copy permalink for Exercises 2.1: Example Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 2.1: Partial Differentiation"><a href="#Sec-Partial_Differentiation" title="Copy permalink for Section 2.1: Partial Differentiation">🔗</a></div></section><section class="section" id="Sec-Higher_Partial_Derivatives"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Higher Partial Derivatives</span>
 </h3>
-<div class="para" id="Sec-Higher_Partial_Derivatives-2">The partial derivatives of the function <span class="process-math">\(z=f(x,y)\)</span> are themselves functions of two variables. Thus they can be differentiated further, giving the second partial derivatives, the third partial derivatives etc. Common notations for the second partial derivatives include:</div>
-<div class="para logical" id="Sec-Higher_Partial_Derivatives-3"><div class="displaymath process-math" id="Sec-Higher_Partial_Derivatives-3-1">
+<div class="para" id="Sec-Higher_Partial_Derivatives-2">The partial derivatives of the function <span class="process-math">\(z=f(x,y)\)</span> are themselves functions of two variables. Thus they can be differentiated further, giving the second partial derivatives, the third partial derivatives etc. Common notations for the second partial derivatives include:<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Sec-Higher_Partial_Derivatives-3">
+<div class="displaymath process-math" id="Sec-Higher_Partial_Derivatives-3-1">
 \begin{alignat*}{2}
 \dfrac{\partial}{\partial x} \left( \dfrac{\partial f}{\partial x} \right) \amp = \dfrac{\partial^2 f}{\partial x^2} \amp = (f_x)_x \amp = f_{xx}\\
 \dfrac{\partial}{\partial y} \left( \dfrac{\partial f}{\partial x} \right) \amp = \dfrac{\partial^2 f}{\partial y \partial x} \amp = (f_x)_y \amp = f_{xy}\\
 \dfrac{\partial}{\partial x} \left( \dfrac{\partial f}{\partial y} \right) \amp = \dfrac{\partial^2 f}{\partial x \partial y} \amp = (f_y)_x \amp = f_{yx}\\
 \dfrac{\partial}{\partial y} \left( \dfrac{\partial f}{\partial y} \right) \amp = \dfrac{\partial^2 f}{\partial y^2} \amp = (f_y)_y \amp = f_{yy}
 \end{alignat*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-second_partial_derivatives"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
 </h4>
@@ -870,11 +1006,15 @@ f_z(x,y,z) \amp = 2x^2 e^{xz} + 3xye^{xz} - (xz^2e^{xz} + 2ze^{xz} )\\
 f(x,y) = \sin(x) \cos(y)\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-second_partial_derivatives-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-second_partial_derivatives-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-second_partial_derivatives-2-1">
-<span class="process-math">\(f_{xx}(x,y) = -\sin(x) \cos(y)\text{,}\)</span> <span class="process-math">\(f_{xy}(x,y) = -\cos(x) \sin(y)\text{,}\)</span> <span class="process-math">\(f_{yx}(x,y) = -\cos(x) \sin(y)\)</span> and <span class="process-math">\(f_{yy}(x,y) = -\sin(x) \cos(y).\)</span>
-</div></div></details><details id="Ex-second_partial_derivatives-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Ex-second_partial_derivatives-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-second_partial_derivatives-2-1">
+<span class="process-math">\(f_{xx}(x,y) = -\sin(x) \cos(y)\text{,}\)</span> <span class="process-math">\(f_{xy}(x,y) = -\cos(x) \sin(y)\text{,}\)</span> <span class="process-math">\(f_{yx}(x,y) = -\cos(x) \sin(y)\)</span> and <span class="process-math">\(f_{yy}(x,y) = -\sin(x) \cos(y).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-second_partial_derivatives-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.17.1"><a href="#Ex-second_partial_derivatives-2" title="Copy permalink for Answer 2.17.1">🔗</a></div>
+</div></details><details id="Ex-second_partial_derivatives-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-second_partial_derivatives-3-1">
 <div class="para">Begin by finding the first partial derivatives. Here</div>
 <div class="displaymath process-math" id="Ex-second_partial_derivatives-3-1-1">
@@ -882,6 +1022,7 @@ f(x,y) = \sin(x) \cos(y)\text{.}
 \amp f_x(x,y) = \cos(x)\cos(y) \amp \text{and} \amp \amp f_y(x,y) = - \sin(x) \sin(y)\text{.}
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-second_partial_derivatives-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-second_partial_derivatives-3-2">
 <div class="para">Now differentiate <span class="process-math">\(f_x(x,y)\)</span> firstly with respect to <span class="process-math">\(x\)</span> to find <span class="process-math">\(f_{xx}(x,y)\)</span> and then with respect to <span class="process-math">\(y\)</span> to find <span class="process-math">\(f_{xy}(x,y)\text{.}\)</span> Thus,</div>
@@ -891,6 +1032,7 @@ f_{xx}(x,y) \amp = -\sin(x) \cos(y), \, \, \text{and}\\
 f_{xy}(x,y) \amp = -\cos(x) \sin(y).
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-second_partial_derivatives-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-second_partial_derivatives-3-3">
 <div class="para">Next differentiate <span class="process-math">\(f_y(x,y)\)</span> with respect to <span class="process-math">\(x\)</span> to find <span class="process-math">\(f_{yx}(x,y)\)</span> and then with respect to <span class="process-math">\(y\)</span> to find <span class="process-math">\(f_{yy}(x,y)\text{.}\)</span> Thus,</div>
@@ -900,19 +1042,25 @@ f_{yx}(x,y) \amp = -\cos(x) \sin(y), \, \, \text{and}\\
 f_{yy}(x,y) \amp = -\sin(x) \cos(y).
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-second_partial_derivatives-3-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Ex-second_partial_derivatives-3-4">Notice that for this function <span class="process-math">\(f_{xy}(x,y) = f_{yx}(x,y)\text{.}\)</span>
+<div class="para" id="Ex-second_partial_derivatives-3-4">Notice that for this function <span class="process-math">\(f_{xy}(x,y) = f_{yx}(x,y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-second_partial_derivatives-3-4" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 2.17.1"><a href="#Ex-second_partial_derivatives-3" title="Copy permalink for Solution 2.17.1">🔗</a></div>
 </div></details>
-</div></article><article class="example example-like" id="Ex-third_partial_derivatives"><h4 class="heading">
+</div>
+<div class="autopermalink" data-description="Example 2.17"><a href="#Ex-second_partial_derivatives" title="Copy permalink for Example 2.17">🔗</a></div></article><article class="example example-like" id="Ex-third_partial_derivatives"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span>
 </h4>
-<div class="para" id="Ex-third_partial_derivatives-1-1">Calculate <span class="process-math">\(g_{xxy}\text{,}\)</span> <span class="process-math">\(g_{xyx}\)</span> and <span class="process-math">\(g_{yxx}\)</span> when <span class="process-math">\(g(x)=xy^2 + \dfrac{y}{x^2}\text{.}\)</span>
+<div class="para" id="Ex-third_partial_derivatives-1-1">Calculate <span class="process-math">\(g_{xxy}\text{,}\)</span> <span class="process-math">\(g_{xyx}\)</span> and <span class="process-math">\(g_{yxx}\)</span> when <span class="process-math">\(g(x)=xy^2 + \dfrac{y}{x^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-third_partial_derivatives-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="Ex-third_partial_derivatives-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="Ex-third_partial_derivatives-2-1">
-<span class="process-math">\(g_{xxy} = 6x^{-4}\text{,}\)</span> <span class="process-math">\(g_{xyx} = 6x^{-4}\)</span> and <span class="process-math">\(g_{yxx} = 6x^{-4}\text{.}\)</span>
-</div></div></details><details id="Ex-third_partial_derivatives-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="Ex-third_partial_derivatives-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="Ex-third_partial_derivatives-2-1">
+<span class="process-math">\(g_{xxy} = 6x^{-4}\text{,}\)</span> <span class="process-math">\(g_{xyx} = 6x^{-4}\)</span> and <span class="process-math">\(g_{yxx} = 6x^{-4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-third_partial_derivatives-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.18.1"><a href="#Ex-third_partial_derivatives-2" title="Copy permalink for Answer 2.18.1">🔗</a></div>
+</div></details><details id="Ex-third_partial_derivatives-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="Ex-third_partial_derivatives-3-1">
 <div class="para">Begin by writing the function in the form</div>
 <div class="displaymath process-math">
@@ -920,6 +1068,7 @@ f_{yy}(x,y) \amp = -\sin(x) \cos(y).
 g(x,y) = xy^2 + yx^{-2}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-third_partial_derivatives-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-third_partial_derivatives-3-2">
 <div class="para">Then the first partial derivatives are</div>
@@ -934,6 +1083,7 @@ g(x,y) = xy^2 + yx^{-2}\text{.}
 g_{xx}=6yx^{-4}, \;  g_{xy} = 2y-2x^{-3}, \;  g_{yx} = 2y-2x^{-3}, \; g_{yy} = 2x\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-third_partial_derivatives-3-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-third_partial_derivatives-3-3">
 <div class="para">Differentiating <span class="process-math">\(g_{xx}\)</span> with respect to <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(g_{xy}\)</span> with respect to <span class="process-math">\(x\)</span> and <span class="process-math">\(g_{yx}\)</span> with respect to <span class="process-math">\(x\)</span> gives</div>
@@ -942,9 +1092,13 @@ g_{xx}=6yx^{-4}, \;  g_{xy} = 2y-2x^{-3}, \;  g_{yx} = 2y-2x^{-3}, \; g_{yy} = 2
 g_{xxy} = 6x^{-4}, \; g_{xyx} = 6x^{-4}, \; g_{yxx} = 6x^{-4}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-third_partial_derivatives-3-3" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 2.18.1"><a href="#Ex-third_partial_derivatives-3" title="Copy permalink for Solution 2.18.1">🔗</a></div>
 </div></details>
-</div></article><div class="para" id="Sec-Higher_Partial_Derivatives-6">The above instances have provided examples of the following general result.</div>
+</div>
+<div class="autopermalink" data-description="Example 2.18"><a href="#Ex-third_partial_derivatives" title="Copy permalink for Example 2.18">🔗</a></div></article><div class="para" id="Sec-Higher_Partial_Derivatives-6">The above instances have provided examples of the following general result.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-6" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="Sec-Higher_Partial_Derivatives-7"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Clairaut’s Theorem.</span>
 </h4>
@@ -955,7 +1109,10 @@ g_{xxy} = 6x^{-4}, \; g_{xyx} = 6x^{-4}, \; g_{yxx} = 6x^{-4}\text{.}
 f_{xy}(x,y) = f_{yx}(x,y)\text{.}
 \end{equation*}
 </div>
-</div></article><div class="para" id="Sec-Higher_Partial_Derivatives-8">Clairaut’s Theorem can be extended to higher partial derivatives and to functions of more than two variables.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-7-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.19: Clairaut’s Theorem"><a href="#Sec-Higher_Partial_Derivatives-7" title="Copy permalink for Theorem 2.19: Clairaut’s Theorem">🔗</a></div></article><div class="para" id="Sec-Higher_Partial_Derivatives-8">Clairaut’s Theorem can be extended to higher partial derivatives and to functions of more than two variables.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-8" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="Ex-first_and_second_partials_of_3_variable_function"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
 </h4>
@@ -966,9 +1123,10 @@ f_{xy}(x,y) = f_{yx}(x,y)\text{.}
 g(x,y,z) = \dfrac{x^2 + 3y^2}{1+2z}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-first_and_second_partials_of_3_variable_function-1-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="Ex-first_and_second_partials_of_3_variable_function-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="Ex-first_and_second_partials_of_3_variable_function-2-1">Even though <span class="process-math">\(g\)</span> is a function of <span class="process-math">\(3\)</span> variables, Clairaut’s Theorem still holds. Thus there will be only 6 distinct second partial derivatives, i.e. <span class="process-math">\(g_{xx}\text{,}\)</span> <span class="process-math">\(g_{xy}\text{,}\)</span> <span class="process-math">\(g_{xz}\text{,}\)</span> <span class="process-math">\(g_{yy}\text{,}\)</span> <span class="process-math">\(g_{yz}\text{,}\)</span> <span class="process-math">\(g_{zz}\text{.}\)</span>
+<div class="para" id="Ex-first_and_second_partials_of_3_variable_function-2-1">Even though <span class="process-math">\(g\)</span> is a function of <span class="process-math">\(3\)</span> variables, Clairaut’s Theorem still holds. Thus there will be only 6 distinct second partial derivatives, i.e. <span class="process-math">\(g_{xx}\text{,}\)</span> <span class="process-math">\(g_{xy}\text{,}\)</span> <span class="process-math">\(g_{xz}\text{,}\)</span> <span class="process-math">\(g_{yy}\text{,}\)</span> <span class="process-math">\(g_{yz}\text{,}\)</span> <span class="process-math">\(g_{zz}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Ex-first_and_second_partials_of_3_variable_function-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Ex-first_and_second_partials_of_3_variable_function-2-2">
 <div class="para">Now</div>
@@ -988,15 +1146,20 @@ g_{xx} = \dfrac{2}{1+2z}, \,\, g_{xy} = 0, \,\, g_{xz} = \dfrac{-4x}{(1+2z)^2},
 g_{yz} = \dfrac{-12y}{(1+2z)^2}, \,\, g_{yy} = \dfrac{6}{1+2z}, \,\, g_{zz} = \dfrac{8(x^2+3y^2)}{(1+2z)^3}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Ex-first_and_second_partials_of_3_variable_function-2-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></div></article><section class="exercises" id="Sec-Higher_Partial_Derivatives-10"><h4 class="heading hide-type">
+<div class="autopermalink" data-description="Solution 2.20.1"><a href="#Ex-first_and_second_partials_of_3_variable_function-2" title="Copy permalink for Solution 2.20.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.20"><a href="#Ex-first_and_second_partials_of_3_variable_function" title="Copy permalink for Example 2.20">🔗</a></div></article><section class="exercises" id="Sec-Higher_Partial_Derivatives-10"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Example Tasks</span>
 </h4>
 <article class="exercise exercise-like" id="Sec-Higher_Partial_Derivatives-10-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Higher_Partial_Derivatives-10-2-1-1">Find the second partial derivatives for the function <span class="process-math">\(z=xye^y\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Higher_Partial_Derivatives-10-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="Sec-Higher_Partial_Derivatives-10-3-1-1">Calculate <span class="process-math">\(g_{xx},\,\)</span> <span class="process-math">\(g_{xy}\)</span> and <span class="process-math">\(g_{xyy}\)</span> for <span class="process-math">\(g(x,y) = \dfrac{y}{1+x^2}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="Sec-Higher_Partial_Derivatives-10-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Higher_Partial_Derivatives-10-2-1-1">Find the second partial derivatives for the function <span class="process-math">\(z=xye^y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-10-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.2.1"><a href="#Sec-Higher_Partial_Derivatives-10-2" title="Copy permalink for Exercise 2.2.1">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Higher_Partial_Derivatives-10-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="Sec-Higher_Partial_Derivatives-10-3-1-1">Calculate <span class="process-math">\(g_{xx},\,\)</span> <span class="process-math">\(g_{xy}\)</span> and <span class="process-math">\(g_{xyy}\)</span> for <span class="process-math">\(g(x,y) = \dfrac{y}{1+x^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-10-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.2.2"><a href="#Sec-Higher_Partial_Derivatives-10-3" title="Copy permalink for Exercise 2.2.2">🔗</a></div></article><article class="exercise exercise-like" id="Sec-Higher_Partial_Derivatives-10-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="Sec-Higher_Partial_Derivatives-10-4-1-1">
 <div class="para">Let <span class="process-math">\(u(x,t) = e^{-t} \sin \left(\dfrac{x}{c}\right)\)</span> where <span class="process-math">\(c\)</span> is a constant and <span class="process-math">\(c&gt;0\text{.}\)</span> Determine if <span class="process-math">\(u\)</span> satisfies</div>
 <div class="displaymath process-math">
@@ -1004,17 +1167,20 @@ g_{yz} = \dfrac{-12y}{(1+2z)^2}, \,\, g_{yy} = \dfrac{6}{1+2z}, \,\, g_{zz} = \d
 \dfrac{\partial u}{\partial t} = c^2 \dfrac{\partial^2 u}{\partial x^2}
 \end{equation*}
 </div>
-</div></article></section><article class="remark remark-like" id="Sec-Higher_Partial_Derivatives-11"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-10-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.2.3"><a href="#Sec-Higher_Partial_Derivatives-10-4" title="Copy permalink for Exercise 2.2.3">🔗</a></div></article><div class="autopermalink" data-description="Exercises 2.2: Example Tasks"><a href="#Sec-Higher_Partial_Derivatives-10" title="Copy permalink for Exercises 2.2: Example Tasks">🔗</a></div></section><article class="remark remark-like" id="Sec-Higher_Partial_Derivatives-11"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span><span class="space"> </span><span class="title">A little remark.</span>
 </h4>
-<div class="para" id="Sec-Higher_Partial_Derivatives-11-2">Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.</div>
+<div class="para" id="Sec-Higher_Partial_Derivatives-11-2">Computer algebra systems can also find partial derivatives. For example, here are some examples of a queries to Wolfram Alpha that will work.<div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-11-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="Fig-WA_1"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/4/WA_1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.22<span class="period">.</span></span><span class="space"> </span></figcaption></figure><figure class="figure figure-like" id="Fig-WA_2"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/4/WA_2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.23<span class="period">.</span></span><span class="space"> </span></figcaption></figure><figure class="figure figure-like" id="Fig-WA_3"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/4/WA_3.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.24<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><article class="remark remark-like" id="Sec-Higher_Partial_Derivatives-12"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.22<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 2.22"><a href="#Fig-WA_1" title="Copy permalink for Figure 2.22">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="Fig-WA_2"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/4/WA_2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.23<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 2.23"><a href="#Fig-WA_2" title="Copy permalink for Figure 2.23">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="Fig-WA_3"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/./Calculus/Images/4/WA_3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.24<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 2.24"><a href="#Fig-WA_3" title="Copy permalink for Figure 2.24">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Remark 2.21: A little remark"><a href="#Sec-Higher_Partial_Derivatives-11" title="Copy permalink for Remark 2.21: A little remark">🔗</a></div></article><article class="remark remark-like" id="Sec-Higher_Partial_Derivatives-12"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span>
 </h4>
-<div class="para" id="Sec-Higher_Partial_Derivatives-12-1">SageMath can also be used to compute partial derivatives. For example, the following Sage cell computes the partial derivatives of the function <span class="process-math">\(f(x,y)=x^2(\sin(x+5y))\text{.}\)</span>
+<div class="para" id="Sec-Higher_Partial_Derivatives-12-1">SageMath can also be used to compute partial derivatives. For example, the following Sage cell computes the partial derivatives of the function <span class="process-math">\(f(x,y)=x^2(\sin(x+5y))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Sec-Higher_Partial_Derivatives-12-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <div id="Sec-Higher_Partial_Derivatives-12-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">x,y,z = var('x y z')
 f = x^2*sin(x+5*y)
@@ -1024,8 +1190,9 @@ fy = diff(f,y)
 
 show(r'f_x(x,y) = '+latex(fx)+r'')
 show(r'f_y(x,y) = '+latex(fy)+r'')
-</script></div></article></section></section></div>
-<div class="ptx-content-footer">
+</script></div>
+<div class="autopermalink" data-description="Remark 2.25"><a href="#Sec-Higher_Partial_Derivatives-12" title="Copy permalink for Remark 2.25">🔗</a></div></article><div class="autopermalink" data-description="Section 2.2: Higher Partial Derivatives"><a href="#Sec-Higher_Partial_Derivatives" title="Copy permalink for Section 2.2: Higher Partial Derivatives">🔗</a></div></section><div class="autopermalink" data-description="Chapter 2: CA2: Partial Differentiation"><a href="#Calculus_4" title="Copy permalink for Chapter 2: CA2: Partial Differentiation">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Calculus_3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Chap-Calculus_5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
