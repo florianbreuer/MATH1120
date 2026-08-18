@@ -28,9 +28,25 @@ jobs:
                   project-root: "."
                   output-dir: "."
 
-            - name: Publish built site to gh-pages
+            - name: Stage site with PreTeXt
               uses: siefkenj/pretext-build-action@main
               with:
-                  pretext-command: deploy
+                  pretext-command: deploy --stage-only
                   project-root: "."
                   output-dir: "."
+
+            - name: Publish staged site to gh-pages
+              shell: bash
+              run: |
+                  git worktree add --detach /tmp/gh-pages origin/gh-pages
+                  rsync --archive --delete --exclude=.git output/stage/ /tmp/gh-pages/
+                  cd /tmp/gh-pages
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                  git add --all
+                  if git diff --cached --quiet; then
+                      echo "The generated website is already up to date."
+                      exit 0
+                  fi
+                  git commit -m "Latest build deployed."
+                  git push origin HEAD:gh-pages
